@@ -1,0 +1,299 @@
+.section {
+  &__home-intro {
+    position: relative;
+    width: 100vw;
+    margin-bottom: 100px;
+    h2 {
+      max-width: 770px;
+      margin-bottom: 30px;
+      line-height: 68px;
+      font-weight: 400;
+      color: #2d2e2f;
+      font-family: $secondary-font;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .inner {
+      // background-color: red;
+      min-height: 373px;
+      position: relative;
+      max-width: 1200px;
+      display: flex;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .info-text {
+      z-index: 10;
+    }
+    .primary-button {
+      padding: 12px 60px 12px 60px;
+      font-size: 18px;
+    }
+    @media screen and (max-width: $large-screen) {
+      padding: 0 5vw;
+    }
+    @media screen and (max-width: $medium-large-screen) {
+      padding: 0 5vw;
+      img {
+        display: none;
+      }
+      h2 {
+        font-size: 28px;
+        line-height: 35px;
+      }
+    }
+  }
+  &__home-logos {
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    .body-large {
+      color: $colors-grey-90;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      display: inline-grid;
+      grid-column-gap: 32px;
+      grid-row-gap: 32px;
+      margin: 40px 0 0 0;
+    }
+  }
+  &__home-services {
+    margin: 180px auto 0 auto;
+    max-width: 1200px;
+    h2 {
+      line-height: 68px;
+      font-weight: 400;
+      color: $colors-grey-90;
+      font-family: $secondary-font;
+      margin-bottom: 32px;
+      padding-top: 64px;
+    }
+    .body-large {
+      max-width: 780px;
+      color: $colors-grey-90;
+      margin-bottom: 24px;
+    }
+    .primary-button {
+      padding: 12px 60px 12px 60px;
+      font-size: 18px;
+      margin-bottom: 194px;
+    }
+    .service-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      display: inline-grid;
+      grid-column-gap: 32px;
+      grid-row-gap: 32px;
+      margin: 24px 0px 48px 0px;
+    }
+  }
+  &__home-case-studies {
+    margin: 64px auto 200px auto;
+    max-width: 1200px;
+    h2 {
+      max-width: 1000px;
+      line-height: 68px;
+      font-weight: 400;
+      color: $colors-grey-90;
+      font-family: $secondary-font;
+      margin-bottom: 32px;
+    }
+    .body-large {
+      max-width: 780px;
+      color: $colors-grey-90;
+      margin-bottom: 24px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      display: inline-grid;
+      grid-column-gap: 32px;
+      grid-row-gap: 32px;
+      margin: 40px 0 0 0;
+      .cta {
+        color: white;
+        font-family: $secondary-font;
+        background-color: rgba(27, 27, 27, 0.8);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        h3 {
+          margin-right: 24px;
+        }
+        &:hover {
+          background-color: rgba(27, 27, 27, 0.9);
+          img {
+            transform: translateX(20px);
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+  }
+  &__home-quote {
+    color: $colors-grey-90;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 210px;
+    display: flex;
+    flex-direction: row;
+    img {
+      margin-right: 32px;
+      display: inline-block;
+      align-self: flex-start;
+      margin-top: 12px;
+    }
+    .quote {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: start;
+      h4 {
+        font-family: $secondary-font;
+        padding-bottom: 24px;
+      }
+      .body {
+        padding-bottom: 8px;
+      }
+    }
+  }
+  &__home-learn-w-us {
+    color: $colors-grey-90;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+    h2 {
+      margin-bottom: 16px;
+    }
+    .body-large {
+      margin-bottom: 64px;
+    }
+    .primary-button {
+      font-family: $secondary-font;
+      font-weight: 600;
+      padding: 12px 54px;
+    }
+    .cases {
+      display: flex;
+      flex-direction: row;
+      height: 514px;
+      margin-bottom: 64px;
+
+      .img-cards {
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        div {
+          background: white;
+          box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
+          display: flex;
+          flex-direction: column;
+          max-width: 348px;
+          img {
+            max-height: 220px;
+            object-fit: cover;
+          }
+          h4 {
+            margin: auto 20px;
+            font-family: $secondary-font;
+          }
+          p {
+            margin: 0 20px auto 20px;
+          }
+          &:hover {
+            background-color: #f3f3f3;
+          }
+          &:active {
+            background-color: #f3f3f3;
+            box-shadow: none;
+          }
+        }
+        div:nth-of-type(2) {
+          margin-left: 16px;
+        }
+      }
+      .arrow-cards {
+        margin-left: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        div {
+          background: white;
+          box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          max-width: 348px;
+          padding: 85px 40px;
+          font-family: $secondary-font;
+          img {
+            filter: grayscale(100%) brightness(40%) sepia(100%)
+              hue-rotate(-50deg) saturate(600%) contrast(0.8);
+          }
+          &:hover {
+            background-color: #f3f3f3;
+          }
+          &:active {
+            background-color: #f3f3f3;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+  &__home-team {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    .row {
+      align-items: flex-start;
+    }
+    .column {
+      justify-content: start;
+      margin-right: 64px;
+      align-items: flex-start;
+      p {
+        margin-top: 16px;
+        margin-bottom: 32px;
+      }
+      .primary-button {
+        padding: 12px 27px;
+      }
+    }
+  }
+  &__home-hire-us-cta {
+    color: white;
+    background: #2d2e2f;
+
+    .inner {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    .column {
+      align-items: flex-start;
+    }
+    .row {
+      justify-content: space-between;
+    }
+    .secondary-button {
+      margin-left: 40px;
+      padding: 12px 30px;
+    }
+  }
+}
