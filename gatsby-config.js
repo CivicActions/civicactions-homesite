@@ -14,7 +14,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-node-fields`,
     `gatsby-plugin-client-side-redirect`,
-    `gatsby-plugin-ngrok-tunneling`,
     {
       resolve: `gatsby-source-strapi`,
       options: {
@@ -26,13 +25,6 @@ module.exports = {
           identifier: "",
           password: "",
         },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Nunito\:300,400,600,700`, `Work Sans\:300,400,600,700`],
-        display: "swap",
       },
     },
   ],
