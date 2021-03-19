@@ -65,11 +65,11 @@
       display: inline-grid;
       grid-column-gap: 32px;
       grid-row-gap: 32px;
-      margin: 40px 0 0 0;
+      margin: 40px 0 120px 0;
     }
   }
   &__home-services {
-    margin: 180px auto 0 auto;
+    margin: 0px auto 200px auto;
     max-width: 1200px;
     h2 {
       line-height: 68px;
@@ -87,7 +87,7 @@
     .primary-button {
       padding: 12px 60px 12px 60px;
       font-size: 18px;
-      margin-bottom: 194px;
+      margin-bottom: 50px;
     }
     .service-cards-grid {
       display: grid;
@@ -258,7 +258,7 @@
   &__home-team {
     max-width: 1200px;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
     .row {
       align-items: flex-start;
     }

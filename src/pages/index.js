@@ -1,5 +1,5 @@
 import "../sass/styles.scss";
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "../components/banner.js";
 import Header from "../components/header.js";
 import Footer from "../components/footer.js";
@@ -40,6 +40,24 @@ import workforceDevelopmentIcon from "../files/icons/workforce-dev-icon.svg";
 import arrowIcon from "../files/icons/arrow-icon.svg";
 
 const HomePage = ({ data }) => {
+  useEffect(() => {
+    const faders = document.querySelectorAll(".fade-in");
+    const appearOptions = { threshold: 0.25 };
+    const appearOnScroll = new IntersectionObserver(function (
+      entries,
+      appearOnScroll
+    ) {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("appear");
+        appearOnScroll.unobserve(entry.target);
+      });
+    },
+    appearOptions);
+    faders.forEach((fader) => {
+      appearOnScroll.observe(fader);
+    });
+  }, []);
   return (
     <div>
       <Banner
@@ -49,7 +67,10 @@ const HomePage = ({ data }) => {
       <Header />
       <section className="section__home-intro">
         <div className="inner">
-          <img src={homeIntroGraphic} alt="Civic Actions Logo"></img>
+          <img
+            src={homeIntroGraphic}
+            alt="Civic Actions Logo"
+            className="fade-in"></img>
           <div className="info-text">
             <h2>
               We help government deliver better public services through modern
@@ -61,7 +82,8 @@ const HomePage = ({ data }) => {
       </section>
       <section className="section__home-logos">
         <div class="body-large">
-          Trusted by organizations that serve the people.
+          Strategy, design, technology, consulting, and training services for
+          government agencies
         </div>
         <div class="grid">
           <img src={clientLogo1} alt="Client Logo"></img>
@@ -95,7 +117,7 @@ const HomePage = ({ data }) => {
             We can help you improve how people, process, and technology work
             together at your agency for lasting digital transformation.
           </p>
-          <div className="service-cards-grid">
+          <div className="service-cards-grid fade-in">
             <Card title="Web & CMS" icon={webCmsIcon} />
             <Card
               title="IT & Service Modernization"
@@ -119,7 +141,7 @@ const HomePage = ({ data }) => {
           to education and beyond, we partner with agencies to solve hard
           problems and improve outcomes for government and the public.
         </p>
-        <div className="grid">
+        <div className="grid fade-in">
           <CaseStudyTeaser
             title="CENTERS FOR MEDICARE AND MEDICAID SERVICES"
             description="Improving the online experience for Medicare beneficiaries"
@@ -136,7 +158,7 @@ const HomePage = ({ data }) => {
             image={caseStudyTeaserImg3}
           />
           <div className="cta">
-            <h3>View more Work</h3>
+            <h3>View more work</h3>
             <img src={arrowIcon} alt=""></img>
           </div>
         </div>

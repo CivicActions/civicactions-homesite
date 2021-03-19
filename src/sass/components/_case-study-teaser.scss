@@ -3,6 +3,14 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  .img-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: $colors-grey-90;
+  }
   &__info {
     max-height: 100px;
     transition: max-height 0.5s ease;
@@ -30,9 +38,14 @@
         margin-left: 16px;
       }
     }
-    &:hover {
-      background-color: rgba(27, 27, 27, 0.9);
-      max-height: 200px;
+  }
+  &:hover {
+    .img-overlay {
+      opacity: 0.15;
+    }
+    .case-study-teaser__info {
+      cursor: pointer;
+      background-color: rgba(27, 27, 27, 1);
     }
   }
 }
