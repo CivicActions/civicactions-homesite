@@ -2,34 +2,8 @@ import React, { useEffect } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
 const Team = ({ data }) => {
-  return <pre>{JSON.stringify(data, null, 4)}</pre>;
+  return <h3>Team</h3>;
 };
-
-export const query = graphql`
-  {
-    allStrapiStaffProfile {
-      nodes {
-        id
-        Name
-        Pronunciation
-        Personal_Pronouns
-        Role
-        Path
-        Location
-        Quote
-        Social {
-          Title
-          Url
-        }
-        Specialty {
-          Specialty
-          id
-        }
-        Body
-      }
-    }
-  }
-`;
 
 export default Team;
 
