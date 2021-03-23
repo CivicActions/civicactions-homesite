@@ -8,7 +8,7 @@ module.exports = {
     city: `Lafayette, CA 94549`,
     siteUrl: `https://civicactions.com`,
   },
-  pathPrefix: `/civicactions.com`,
+  pathPrefix: `/civicactions-homesite`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
