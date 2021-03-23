@@ -12,21 +12,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-source-jazz`,
     `gatsby-plugin-node-fields`,
-    `gatsby-plugin-client-side-redirect`,
-    {
-      resolve: `gatsby-source-strapi`,
-      options: {
-        apiURL: `https://strapi.prod.civicactions.dev`,
-        queryLimit: 1000,
-        contentTypes: [`case-study`, `staff-profile`, `press`, `press-release`],
-        singleTypes: [],
-        loginData: {
-          identifier: "",
-          password: "",
-        },
-      },
-    },
+    `gatsby-plugin-client-side-redirect`
   ],
 };
