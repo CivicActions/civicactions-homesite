@@ -73,4 +73,50 @@
       }
     }
   }
+
+  @media screen and (max-width: $large-screen) {
+    .inner {
+      margin: 0 5vw;
+    }
+  }
+
+  @media screen and (max-width: $medium-large-screen) {
+    .inner {
+      .scrollpsy {
+        display: none;
+      }
+      .content {
+        .title {
+          max-width: none;
+        }
+        .description {
+          max-width: none;
+        }
+        .cta {
+          background-color: #f5f5f0;
+          padding: 20px;
+          margin: 64px 0 64px 0;
+          ul {
+            margin-left: 20px;
+            columns: 1;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $small-screen) {
+    h4 {
+      font-size: 22px;
+    }
+    .inner {
+      .content {
+        .cta {
+          background-color: #f5f5f0;
+          padding: 20px;
+          margin: 32px 0 32px 0;
+        }
+      }
+    }
+  }
 }
