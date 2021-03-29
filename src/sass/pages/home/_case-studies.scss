@@ -111,40 +111,4 @@
       }
     }
   }
-  @media screen and (max-width: $large-screen) {
-    h4 {
-      font-size: 18px;
-      line-height: 22px;
-    }
-    h3 {
-      font-size: 18px;
-      line-height: 22px;
-    }
-    .inner {
-      margin: 0 5vw;
-      margin-top: 50px;
-    }
-    .grid {
-      row-gap: 32px;
-      .view-our-work-cta > .content > img {
-        width: 30px;
-      }
-      .cta > .info {
-        height: 35%;
-        padding: 24px;
-      }
-    }
-  }
-  @media screen and (max-width: $medium-screen) {
-    .grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      row-gap: 24px;
-
-      .cta > .info {
-        height: 45%;
-        padding: 14px;
-      }
-    }
-  }
 }

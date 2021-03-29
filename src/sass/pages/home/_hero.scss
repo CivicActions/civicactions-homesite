@@ -29,29 +29,4 @@
     padding: 12px 60px 12px 60px;
     font-size: 18px;
   }
-
-  @media screen and (max-width: $large-screen) {
-    margin-bottom: 50px;
-    img {
-      width: calc(250px + 5vw);
-    }
-    h2 {
-      max-width: 450px;
-    }
-    .primary-button {
-      padding: 12px 40px 12px 40px;
-      font-size: 18px;
-    }
-    .inner {
-      margin: 0 5vw;
-      min-height: 250px;
-      margin-top: 50px;
-    }
-  }
-
-  @media screen and (max-width: $small-screen) {
-    img {
-      display: none;
-    }
-  }
 }
