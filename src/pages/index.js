@@ -38,11 +38,30 @@ import arrowIcon from "../files/icons/arrow-icon.svg";
 import GeneralLayout from "../layouts/general";
 
 const HomePage = ({ data }) => {
+  const fadersRef = useRef([]);
+  useEffect(() => {
+    const faders = fadersRef.current;
+    const appearOnScroll = new IntersectionObserver(
+      function (entries, appearOnScroll) {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("appear");
+          appearOnScroll.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.25 }
+    );
+    faders.forEach((fader) => appearOnScroll.observe(fader));
+  }, []);
   return (
     <GeneralLayout>
       <section className="home__hero-section">
         <div className="inner">
-          <img src={homeIntroGraphic} alt="Civic Actions Logo"></img>
+          <img
+            src={homeIntroGraphic}
+            alt="Civic Actions Logo"
+            ref={(e) => (fadersRef.current[0] = e)}
+            className="fade-in"></img>
           <div className="info-text">
             <h2>
               We help government deliver better public services through modern
@@ -92,7 +111,9 @@ const HomePage = ({ data }) => {
               We can help you improve how people, process, and technology work
               together at your agency for lasting digital transformation.
             </p>
-            <div className="service-cards-grid">
+            <div
+              className="service-cards-grid fade-in"
+              ref={(e) => (fadersRef.current[1] = e)}>
               <Card title="Web & CMS" icon={webCmsIcon} />
               <Card
                 title="IT & Service Modernization"
@@ -120,7 +141,9 @@ const HomePage = ({ data }) => {
               welfare to education and beyond, we partner with agencies to solve
               hard problems and improve outcomes for government and the public.
             </p>
-            <div className="grid">
+            <div
+              className="grid fade-in"
+              ref={(e) => (fadersRef.current[2] = e)}>
               <div className="cta">
                 <img src={caseStudyTeaserImg1} alt="Client Logo"></img>
                 <div className="img-overlay"> </div>
