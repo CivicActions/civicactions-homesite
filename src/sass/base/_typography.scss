@@ -1,0 +1,143 @@
+@import "colors";
+$primary-font: "Nunito";
+$secondary-font: "Work Sans";
+$small-screen: 481px !default;
+$medium-screen: 600px !default;
+$medium-large-screen: 1000px !default;
+$large-screen: 1201px !default;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+.body,
+.body-large,
+.body-small {
+  font-family: $primary-font;
+  margin: 0;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 78px;
+}
+
+h2 {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 67px;
+  text-align: left;
+  font-family: $secondary-font;
+  @media screen and (max-width: $large-screen) {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  @media screen and (max-width: $small-screen) {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 50px;
+  @media screen and (max-width: $large-screen) {
+    font-size: 24px;
+    line-height: 40px;
+  }
+  @media screen and (max-width: $small-screen) {
+    font-size: 22px;
+    line-height: 34px;
+  }
+}
+h4 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39px;
+  @media screen and (max-width: $large-screen) {
+    font-size: 24px;
+    line-height: 33px;
+  }
+  @media screen and (max-width: $medium-screen) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+h5 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 34px;
+  @media screen and (max-width: $large-screen) {
+    font-size: 20px;
+    line-height: 34px;
+  }
+  @media screen and (max-width: $small-screen) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+h6 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 34px;
+  font-family: $secondary-font;
+  @media screen and (max-width: $large-screen) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+a {
+  color: $colors-mint-cool-60v;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    color: #0b4b3f;
+  }
+  &:active {
+    color: #123131;
+  }
+}
+
+.body {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 34px;
+  @media screen and (max-width: $medium-screen) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.body-large {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+  @media screen and (max-width: $large-screen) {
+    font-size: 20px;
+    line-height: 33px;
+  }
+  @media screen and (max-width: $small-screen) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.body-small {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
