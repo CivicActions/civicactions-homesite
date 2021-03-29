@@ -328,6 +328,48 @@ const ServicesPage = ({ data }) => {
           </div>
         </div>
       </section>
+      <section className="services__ellipses-section">
+        <div className="inner">
+          <h2>Open Standards. Inclusive Practices. Better Outcomes.</h2>
+          <div className="body-large">
+            No matter what problem we’re solving, our core practices and
+            communities power our work and align with current standards for
+            government digital services.
+          </div>
+          <div className="ellipses">
+            <span className="ellipse">
+              <h6>CUSTOMER EXPERIENCE</h6>
+            </span>
+            <span className="ellipse">
+              <h6>ACCESSIBILITY</h6>
+            </span>
+            <span className="ellipse">
+              <h6>DRUPAL</h6>
+            </span>
+            <span className="ellipse">
+              <h6>U.S. WEB DESIGN STANDARDS</h6>
+            </span>
+            <span className="ellipse">
+              <h6>AGILE</h6>
+            </span>
+            <span className="ellipse">
+              <h6>OPEN SOURCE</h6>
+            </span>
+            <span className="ellipse">
+              <h6>HUMAN CENTERED DESIGN</h6>
+            </span>
+            <span className="ellipse">
+              <h6>DISTRIBUTED TEAMS</h6>
+            </span>
+          </div>
+        </div>
+      </section>
+      <PrimaryPageCTA
+        title="Start building public trust."
+        subtitle="Let’s create better government services."
+        primaryButtonText="HIRE US"
+        secondaryButtonText="CONTRACTING INFO"
+      />
     </GeneralLayout>
   );
 };
