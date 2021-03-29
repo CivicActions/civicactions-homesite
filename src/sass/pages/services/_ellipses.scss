@@ -33,4 +33,21 @@
       }
     }
   }
+
+  @media screen and (max-width: $large-screen) {
+    .inner {
+      margin: 0 5vw;
+    }
+  }
+
+  @media screen and (max-width: $medium-large-screen) {
+    .inner {
+      h2 {
+        max-width: none;
+      }
+      .body-large {
+        max-width: none;
+      }
+    }
+  }
 }
