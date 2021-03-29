@@ -1,6 +1,7 @@
 import "../sass/styles.scss";
 import React, { useEffect, useRef } from "react";
 import GeneralLayout from "../layouts/general";
+import PrimaryPageCTA from "../components/primary-page-cta.js";
 
 const ServicesPage = ({ data }) => {
   const contentSectionsRef = useRef([]);
