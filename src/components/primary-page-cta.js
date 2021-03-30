@@ -1,7 +1,7 @@
 import "../sass/styles.scss";
 import React from "react";
 
-const PrimaryPageCTA = (props, { data }) => {
+const PrimaryPageCTA = (props) => {
   return (
     <section className="primary-page-cta">
       <div className="inner">

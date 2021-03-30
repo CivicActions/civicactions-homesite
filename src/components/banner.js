@@ -2,7 +2,7 @@ import "../sass/styles.scss";
 import React, { useState } from "react";
 import closeIcon from "../files/icons/close-icon.svg";
 
-const Banner = (props, { data }) => {
+const Banner = (props) => {
   const [hide, setHide] = useState(false);
   let close = () => setHide(true);
 

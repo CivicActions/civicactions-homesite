@@ -2,7 +2,7 @@ import "../sass/styles.scss";
 import React, { useState } from "react";
 import extendedLogo from "../files/icons/ca-extended-logo.svg";
 import menuIcon from "../files/icons/menu-icon.svg";
-const Header = (props, { data }) => {
+const Header = (props) => {
   return (
     <header className="header">
       <a href="/" className="logo">

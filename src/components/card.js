@@ -1,7 +1,7 @@
 import "../sass/styles.scss";
 import React from "react";
 
-const Card = (props, { data }) => {
+const Card = (props) => {
   return (
     <div className="card">
       <img src={props.icon} alt="Icon"></img>

@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import closeIcon from "../files/icons/close-icon.svg";
 import arrowIcon from "../files/icons/ios-arrow-icon.svg";
 
-const Sidebar = (props, { data }) => {
+const Sidebar = (props) => {
   const headingsRef = useRef([]);
   const onCollapseClick = (index) => {
     const current = headingsRef.current[index].className;
