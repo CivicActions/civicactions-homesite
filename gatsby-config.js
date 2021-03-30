@@ -12,6 +12,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `@danbruegge/gatsby-plugin-stylelint`,
+      options: {
+        files: [`src/**/*.(s(c|a)ss|css)`]
+      }
+    },
     `gatsby-plugin-node-fields`,
     `gatsby-plugin-client-side-redirect`,
     {
