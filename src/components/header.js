@@ -9,12 +9,12 @@ const Header = (props, { data }) => {
         <img src={extendedLogo} alt="Civic Actions Logo"></img>
       </a>
       <div className="header-nav">
-        <a href="">COMPANY</a>
-        <a href="/services">SERVICES</a>
-        <a href="">OUR WORK</a>
-        <a href="">INSIGHTS</a>
-        <a href="">CARREERS</a>
-        <div className="primary-button">CONTACT US</div>
+        <a href="">company</a>
+        <a href="/services">services</a>
+        <a href="">our work</a>
+        <a href="">insights</a>
+        <a href="">careers</a>
+        <div className="primary-button">contact us</div>
       </div>
       <div className="header-nav-mobile" onClick={props.onMenuClick}>
         <img src={menuIcon} alt="" onClick={props.onMenuClick}></img>
