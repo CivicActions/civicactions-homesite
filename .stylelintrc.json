@@ -1,0 +1,17 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "defaultSeverity": "warning",
+  "plugins": [
+    "stylelint-declaration-use-variable"
+  ],
+  "rules": {
+    "order/properties-alphabetical-order": null,
+    "max-nesting-depth": 2,
+    "sh-waqar/declaration-use-variable": [
+      "color",
+      {
+        "severity": "error"
+      }
+    ]
+  }
+}
