@@ -336,28 +336,28 @@ const ServicesPage = ({ data }) => {
           </div>
           <div className="ellipses">
             <span className="ellipse">
-              <h6>CUSTOMER EXPERIENCE</h6>
+              <h6>customer experience</h6>
             </span>
             <span className="ellipse">
-              <h6>ACCESSIBILITY</h6>
+              <h6>accessibility</h6>
             </span>
             <span className="ellipse">
-              <h6>DRUPAL</h6>
+              <h6>drupal</h6>
             </span>
             <span className="ellipse">
-              <h6>U.S. WEB DESIGN STANDARDS</h6>
+              <h6>u.s. web design standards</h6>
             </span>
             <span className="ellipse">
-              <h6>AGILE</h6>
+              <h6>agile</h6>
             </span>
             <span className="ellipse">
-              <h6>OPEN SOURCE</h6>
+              <h6>open source</h6>
             </span>
             <span className="ellipse">
-              <h6>HUMAN CENTERED DESIGN</h6>
+              <h6>human centered design</h6>
             </span>
             <span className="ellipse">
-              <h6>DISTRIBUTED TEAMS</h6>
+              <h6>distributed teams</h6>
             </span>
           </div>
         </div>
