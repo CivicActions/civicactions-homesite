@@ -13,6 +13,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-node-fields`,
-    `gatsby-plugin-client-side-redirect`
+    `gatsby-plugin-client-side-redirect`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Nunito\:300,400,600,700`, `Work Sans\:300,400,600,700`],
+        display: "swap",
+      },
+    },
   ],
 };
