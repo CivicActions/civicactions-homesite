@@ -1,6 +1,6 @@
 .primary-page-cta {
   width: 100vw;
-  color: white;
+  color: $colors-white;
   background: #2d2e2f;
   .inner {
     max-width: 1200px;
@@ -16,10 +16,10 @@
     align-items: flex-start;
     h3 {
       margin-bottom: 10px;
-      color: white;
+      color: $colors-white;
     }
     h5 {
-      color: white;
+      color: $colors-white;
     }
   }
   .row {
