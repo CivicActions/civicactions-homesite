@@ -101,10 +101,10 @@ a {
   text-decoration: underline;
   cursor: pointer;
   &:hover {
-    color: #0b4b3f;
+    color: $colors-mint-cool-80v;
   }
   &:active {
-    color: #123131;
+    color: $colors-mint-cool-100v;
   }
 }
 
