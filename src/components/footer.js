@@ -1,5 +1,6 @@
 import "../sass/styles.scss";
 import React, { useState } from "react";
+import { Link } from "gatsby";
 import extendedLogo from "../files/icons/ca-extended-logo.svg";
 import twitterIcon from "../files/icons/twitter-footer-icon.svg";
 import facebookIcon from "../files/icons/facebook-footer-icon.svg";
@@ -10,9 +11,9 @@ const Footer = (props) => {
     <footer className="footer">
       <div className="inner">
         <div className="grid-item-1">
-          <a href="/">
+          <Link to="/">
             <img src={extendedLogo} alt="Civic Actions Logo"></img>
-          </a>
+          </Link>
 
           <div className="social-icons">
             <img src={twitterIcon} alt="Civic Actions Twitter"></img>
@@ -43,30 +44,30 @@ const Footer = (props) => {
         <div className="grid-item-3">
           <div className="content">
             <div className="column">
-              <a href="">COMPANY</a>
-              <a className="body-small" href="">
+              <Link to="">COMPANY</Link>
+              <Link className="body-small" to="">
                 About
-              </a>
-              <a className="body-small" href="">
+              </Link>
+              <Link className="body-small" to="">
                 Team
-              </a>
-              <a className="body-small" href="">
+              </Link>
+              <Link className="body-small" to="">
                 Press
-              </a>
+              </Link>
             </div>
-            <a href="/services">SERVICES</a>
+            <Link to="/services">SERVICES</Link>
             <div className="column">
-              <a href="">OUR WORK</a>
-              <a className="body-small" href="">
+              <Link to="">OUR WORK</Link>
+              <Link className="body-small" to="">
                 Case studies
-              </a>
-              <a className="body-small" href="">
+              </Link>
+              <Link className="body-small" to="">
                 Approach
-              </a>
+              </Link>
             </div>
-            <a href="">INSIGHTS</a>
-            <a href="">CARREERS</a>
-            <a href="">CONTACT</a>
+            <Link to="">INSIGHTS</Link>
+            <Link to="">CARREERS</Link>
+            <Link to="">CONTACT</Link>
           </div>
         </div>
         <div className="grid-item-4">
