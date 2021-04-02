@@ -1,19 +1,20 @@
 import "../sass/styles.scss";
 import React, { useState } from "react";
+import { Link } from "gatsby";
 import extendedLogo from "../files/icons/ca-extended-logo.svg";
 import menuIcon from "../files/icons/menu-icon.svg";
 const Header = (props) => {
   return (
     <header className="header">
-      <a href="/" className="logo">
+      <Link to="/" className="logo">
         <img src={extendedLogo} alt="Civic Actions Logo"></img>
-      </a>
+      </Link>
       <div className="header-nav">
-        <a href="">company</a>
-        <a href="/services">services</a>
-        <a href="">our work</a>
-        <a href="">insights</a>
-        <a href="">careers</a>
+        <Link to="">company</Link>
+        <Link to="/services">services</Link>
+        <Link to="">our work</Link>
+        <Link to="">insights</Link>
+        <Link to="">careers</Link>
         <div className="primary-button">contact us</div>
       </div>
       <div className="header-nav-mobile" onClick={props.onMenuClick}>

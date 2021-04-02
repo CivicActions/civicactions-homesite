@@ -1,5 +1,6 @@
 import "../sass/styles.scss";
 import React, { useEffect, useRef } from "react";
+import { Link } from "gatsby";
 import closeIcon from "../files/icons/close-icon.svg";
 import arrowIcon from "../files/icons/ios-arrow-icon.svg";
 
@@ -21,9 +22,9 @@ const Sidebar = (props) => {
             </div>
             <div className="link" ref={(e) => (headingsRef.current[0] = e)}>
               <div className="heading" onClick={() => onCollapseClick(0)}>
-                <a href="/">
+                <Link to="/">
                   <h2>Company</h2>
-                </a>
+                </Link>
                 <img src={arrowIcon} alt=""></img>
               </div>
               <h3>About</h3>
@@ -32,16 +33,16 @@ const Sidebar = (props) => {
             </div>
             <div className="divisor"></div>
             <div className="link">
-              <a href="/services">
+              <Link to="/services">
                 <h2>Services</h2>
-              </a>
+              </Link>
             </div>
             <div className="divisor"></div>
             <div className="link" ref={(e) => (headingsRef.current[1] = e)}>
               <div className="heading" onClick={() => onCollapseClick(1)}>
-                <a href="/">
+                <Link to="/">
                   <h2>Our work</h2>
-                </a>
+                </Link>
                 <img src={arrowIcon} alt=""></img>
               </div>
               <h3>Case studies</h3>

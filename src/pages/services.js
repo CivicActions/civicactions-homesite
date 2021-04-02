@@ -1,6 +1,7 @@
 import "../sass/styles.scss";
 import React, { useEffect, useRef } from "react";
 import GeneralLayout from "../layouts/general";
+import { Link } from "gatsby";
 
 const ServicesPage = ({ data }) => {
   const contentSectionsRef = useRef([]);
@@ -85,34 +86,34 @@ const ServicesPage = ({ data }) => {
               </div>
               <h4>How we’ve helped others</h4>
               <div className="body">US Department of Veterans Affairs</div>
-              <a>
+              <Link>
                 <h5>Modern CMS to support veterans</h5>
-              </a>
+              </Link>
               <div className="body">
                 Centers for Medicare and Medicaid Services
               </div>
-              <a>
+              <Link>
                 <h5>Human-centered health care online</h5>
-              </a>
+              </Link>
               <div className="cta">
                 <h4> How we can help you</h4>
                 <ul>
                   <li>
-                    <a>Research and discovery</a>
+                    <Link>Research and discovery</Link>
                   </li>
                   <li>
-                    <a>CMS development and migration</a>
+                    <Link>CMS development and migration</Link>
                   </li>
                   <li>
-                    <a>User experience and visual design</a>
+                    <Link>User experience and visual design</Link>
                   </li>
                   <li>Custom front end development</li>
                   <li>Content design and strategy</li>
                   <li>
-                    <a>Maintenance and support</a>
+                    <Link>Maintenance and support</Link>
                   </li>
                   <li>
-                    <a>Accessibility consulting and training</a>
+                    <Link>Accessibility consulting and training</Link>
                   </li>
                   <li>Cloud infrastructure</li>
                   <li>Product management</li>
@@ -137,15 +138,15 @@ const ServicesPage = ({ data }) => {
               <div className="body">
                 California Child Welfare Digital Services
               </div>
-              <a>
+              <Link>
                 <h5>DevOps support for child welfare services</h5>
-              </a>
+              </Link>
               <div className="body">
                 New York Metropolitan Transit Authority
               </div>
-              <a>
+              <Link>
                 <h5>Connecting Drupal to the Internet of Things</h5>
-              </a>
+              </Link>
               <div className="cta">
                 <h4> How we can help you</h4>
                 <ul>
@@ -179,13 +180,13 @@ const ServicesPage = ({ data }) => {
               <div className="body">
                 Centers for Medicare and Medicaid Services
               </div>
-              <a>
+              <Link>
                 <h5>Persona-driven strategy for Medicare benefits</h5>
-              </a>
+              </Link>
               <div className="body">National Science Foundation</div>
-              <a>
+              <Link>
                 <h5>Improved user experience to support science research</h5>
-              </a>
+              </Link>
               <div className="cta">
                 <h4> How we can help you</h4>
                 <ul>
@@ -218,15 +219,15 @@ const ServicesPage = ({ data }) => {
               </div>
               <h4>How we’ve helped others</h4>
               <div className="body">Defense Security Cooperation Agency</div>
-              <a>
+              <Link>
                 <h5>Continuous compliance for international collaboration</h5>
-              </a>
+              </Link>
               <div className="body">
                 Centers for Medicare and Medicaid Services
               </div>
-              <a>
+              <Link>
                 <h5>Rapid ATO for federal health care websites</h5>
-              </a>
+              </Link>
               <div className="cta">
                 <h4> How we can help you</h4>
                 <ul>
@@ -256,15 +257,15 @@ const ServicesPage = ({ data }) => {
               </div>
               <h4>How we’ve helped others</h4>
               <div className="body">City of Louisville</div>
-              <a>
+              <Link>
                 <h5>Supporting local government transparency</h5>
-              </a>
+              </Link>
               <div className="body">
                 Georgia Governor's Office of Student Achievement
               </div>
-              <a>
+              <Link>
                 <h5>Tracking school performance in Georgia</h5>
-              </a>
+              </Link>
               <div className="cta">
                 <h4> How we can help you</h4>
                 <ul>
@@ -295,21 +296,21 @@ const ServicesPage = ({ data }) => {
               </div>
               <h4>How we’ve helped others</h4>
               <div className="body">Federal Acquisitions Institute</div>
-              <a>
+              <Link>
                 <h5>
                   Digital services education for federal procurement officers
                 </h5>
-              </a>
+              </Link>
               <div className="body">
                 California Government Operations Agency
               </div>
-              <a>
+              <Link>
                 <h5>Helping state employees adopt open source technologies</h5>
-              </a>
+              </Link>
               <div className="body">Various clients</div>
-              <a>
+              <Link>
                 <h5>Telework training for agencies post-COVID</h5>
-              </a>
+              </Link>
               <div className="cta">
                 <h4> How we can help you</h4>
                 <ul>
