@@ -33,35 +33,6 @@
     row-gap: 40px;
     column-gap: 16px;
     margin-bottom: 50px;
-    .grid-item-1,
-    .grid-item-2 {
-      height: 100%;
-      background-color: white;
-      box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
-      display: flex;
-      flex-direction: column;
-      img {
-        width: 100%;
-        height: 220px;
-        display: block;
-        position: relative;
-        object-fit: cover;
-      }
-      h4 {
-        padding: 20px 40px 16px 40px;
-        font-weight: 600;
-      }
-      .body {
-        padding: 0px 40px 40px 40px;
-      }
-      &:hover {
-        background-color: #f3f3f3;
-      }
-      &:active {
-        background-color: #f3f3f3;
-        box-shadow: none;
-      }
-    }
     .grid-item-3 {
       display: flex;
       flex-direction: column;
@@ -104,19 +75,6 @@
     }
     .cases {
       grid-template-columns: 1fr 1fr;
-
-      .grid-item-1,
-      .grid-item-2 {
-        h4 {
-          padding: 20px 20px;
-          font-weight: 600;
-          font-size: 24px;
-          line-height: 28px;
-        }
-        .body {
-          padding: 0px 20px 36px 20px;
-        }
-      }
       .grid-item-3 {
         grid-column: span 2;
         .grid-item-3-1,
@@ -133,7 +91,6 @@
       grid-template-rows: 1fr 1fr 1fr;
       .grid-item-3 {
         grid-column: span 1;
-
         .grid-item-3-1,
         .grid-item-3-2 {
           h4 {
