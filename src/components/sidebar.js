@@ -9,8 +9,8 @@ const Sidebar = (props) => {
   const onCollapseClick = (index) => {
     const current = headingsRef.current[index].className;
     headingsRef.current[index].className = current.includes("collapsed")
-      ? "link"
-      : "link collapsed";
+      ? "page-bundle"
+      : "page-bundle collapsed";
   };
   return (
     <div>
@@ -20,42 +20,44 @@ const Sidebar = (props) => {
             <div className="close">
               <img src={closeIcon} alt="" onClick={props.close}></img>
             </div>
-            <ul className="link" ref={(e) => (headingsRef.current[0] = e)}>
-              <li className="heading" onClick={() => onCollapseClick(0)}>
-                <Link to="/">
-                  <h2>Company</h2>
-                </Link>
-                <img src={arrowIcon} alt=""></img>
+            <ul className="pages">
+              <li
+                className="page-bundle"
+                ref={(e) => (headingsRef.current[0] = e)}>
+                <h2 onClick={() => onCollapseClick(0)} className="heading">
+                  Company
+                </h2>
+                <ul>
+                  <li>About</li>
+                  <li>Team</li>
+                  <li>Press</li>
+                </ul>
               </li>
-              <li>About</li>
-              <li>Team</li>
-              <li>Press</li>
-            </ul>
-            <ul className="link">
-              <li className="heading">
-                <a href="/services">
+              <li className="page-bundle">
+                <Link to="/services">
                   <h2>Services</h2>
-                </a>
-              </li>
-            </ul>
-            <ul className="link" ref={(e) => (headingsRef.current[1] = e)}>
-              <li className="heading" onClick={() => onCollapseClick(1)}>
-                <Link to="/">
-                  <h2>Our work</h2>
                 </Link>
-                <img src={arrowIcon} alt=""></img>
               </li>
-              <li>Case studies</li>
-              <li>Approach</li>
-            </ul>
-            <ul className="link">
-              <h2>Insight</h2>
-            </ul>
-            <ul className="link">
-              <h2>Careers</h2>
-            </ul>
-            <ul className="link">
-              <h2>Contact</h2>
+              <li
+                className="page-bundle"
+                ref={(e) => (headingsRef.current[1] = e)}>
+                <h2 onClick={() => onCollapseClick(1)} className="heading">
+                  Our work
+                </h2>
+                <ul>
+                  <li>Case studies</li>
+                  <li>Approach</li>
+                </ul>
+              </li>
+              <li className="page-bundle">
+                <h2>Insight</h2>
+              </li>
+              <li className="page-bundle">
+                <h2>Careers</h2>
+              </li>
+              <li className="page-bundle">
+                <h2>Contact</h2>
+              </li>
             </ul>
           </div>
         </div>
