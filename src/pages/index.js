@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import Card from "../components/card.js";
 import PrimaryPageCTA from "../components/primary-page-cta.js";
 import ClientsSection from "../components/clients.js";
+import CaseStudyTeaser from "../components/case-study-teaser.js";
 import homeIntroGraphic from "../files/images/home-intro-graphic.png";
 import homeTeamImage from "../files/images/home-team-img.png";
 import quotePatternGraphic from "../files/images/quote-pattern-graphic.png";
@@ -100,32 +101,23 @@ const HomePage = () => {
             <div
               className="grid fade-in"
               ref={(e) => (fadersRef.current[2] = e)}>
-              <div className="cta">
-                <img src={caseStudyTeaserImg1} alt="Client Logo"></img>
-                <div className="img-overlay"> </div>
-                <div className="info">
-                  <h6>CENTERS FOR MEDICARE AND MEDICAID SERVICES</h6>
-                  <h4>
-                    Improving the online experience for Medicare beneficiaries
-                  </h4>
-                </div>
-              </div>
-              <div className="cta">
-                <img src={caseStudyTeaserImg2} alt="Client Logo"></img>
-                <div className="img-overlay"> </div>
-                <div className="info">
-                  <h6>US DEPARTMENT OF VETERANS AFFAIRS</h6>
-                  <h4>Helping Veterans access care and benefits online</h4>
-                </div>
-              </div>
-              <div className="cta">
-                <img src={caseStudyTeaserImg3} alt="Client Logo"></img>
-                <div className="img-overlay"> </div>
-                <div className="info">
-                  <h6>US DEPARTMENT OF EDUCATION</h6>
-                  <h4>Supporting and expanding adult education</h4>
-                </div>
-              </div>
+              <CaseStudyTeaser
+                img={caseStudyTeaserImg1}
+                title={"CENTERS FOR MEDICARE AND MEDICAID SERVICES"}
+                description={
+                  "Improving the online experience for Medicare beneficiaries"
+                }
+              />
+              <CaseStudyTeaser
+                img={caseStudyTeaserImg2}
+                title={"US DEPARTMENT OF VETERANS AFFAIRS"}
+                description={"Helping Veterans access care and benefits online"}
+              />
+              <CaseStudyTeaser
+                img={caseStudyTeaserImg3}
+                title={"US DEPARTMENT OF EDUCATION"}
+                description={"Supporting and expanding adult education"}
+              />
               <div className="view-our-work-cta ">
                 <img src={caseStudyTeaserImg3} alt="" className="bg"></img>
                 <div className="content">
