@@ -24,9 +24,9 @@ const Sidebar = (props) => {
               <li
                 className="page-bundle"
                 ref={(e) => (headingsRef.current[0] = e)}>
-                <h2 onClick={() => onCollapseClick(0)} className="heading">
+                <span onClick={() => onCollapseClick(0)} className="heading">
                   Company
-                </h2>
+                </span>
                 <ul>
                   <li>About</li>
                   <li>Team</li>
@@ -35,28 +35,28 @@ const Sidebar = (props) => {
               </li>
               <li className="page-bundle">
                 <Link to="/services">
-                  <h2>Services</h2>
+                  <span>Services</span>
                 </Link>
               </li>
               <li
                 className="page-bundle"
                 ref={(e) => (headingsRef.current[1] = e)}>
-                <h2 onClick={() => onCollapseClick(1)} className="heading">
+                <span onClick={() => onCollapseClick(1)} className="heading">
                   Our work
-                </h2>
+                </span>
                 <ul>
                   <li>Case studies</li>
                   <li>Approach</li>
                 </ul>
               </li>
               <li className="page-bundle">
-                <h2>Insight</h2>
+                <span>Insight</span>
               </li>
               <li className="page-bundle">
-                <h2>Careers</h2>
+                <span>Careers</span>
               </li>
               <li className="page-bundle">
-                <h2>Contact</h2>
+                <span>Contact</span>
               </li>
             </ul>
           </div>
