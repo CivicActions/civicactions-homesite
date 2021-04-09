@@ -1,0 +1,42 @@
+.privacy__hero-section {
+  width: 100%;
+  color: $colors-grey-90;
+
+  .inner {
+    position: relative;
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  h2 {
+    width: 720px;
+    text-align: left;
+    text-align: left;
+  }
+  .body {
+    text-align: left;
+    width: 720px;
+    font-weight: 300;
+    padding: 24px 0px 0px 0px;
+  }
+
+  @media screen and (max-width: $large-screen) {
+    .inner {
+      margin: 0 5vw;
+    }
+  }
+  @media screen and (max-width: $medium-large-screen) {
+    .inner {
+      align-items: flex-start;
+    }
+    h2,
+    .body {
+      text-align: left;
+      width: auto;
+    }
+  }
+}
