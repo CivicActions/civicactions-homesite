@@ -32,6 +32,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    max-width: 56px;
   }
   .quote {
     display: flex;
@@ -54,5 +55,16 @@
   @media screen and (max-width: $tablet-screen) {
     padding: 55px 0px;
     margin: 64px 0px 0px 0px;
+    .picture {
+      display: none;
+    }
+    .quote {
+      margin-left: 20px;
+    }
+    .pattern {
+      max-width: 26px;
+      top: 10px;
+      left: 0;
+    }
   }
 }
