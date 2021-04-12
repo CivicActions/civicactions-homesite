@@ -39,4 +39,10 @@
       width: auto;
     }
   }
+  @media screen and (max-width: $tablet-screen) {
+    h2,
+    .body {
+      width: 100%;
+    }
+  }
 }
