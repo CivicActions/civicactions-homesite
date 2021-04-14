@@ -1,16 +1,19 @@
-.home__hero-section {
+.home--hero-section {
   position: relative;
   width: 100%;
   margin-bottom: 100px;
+
   h2 {
     max-width: 770px;
     margin-bottom: 30px;
   }
+
   img {
     position: absolute;
     top: 0;
     right: 0;
   }
+
   .inner {
     min-height: 373px;
     position: relative;
@@ -22,26 +25,32 @@
     justify-content: space-between;
     align-items: center;
   }
+
   .info-text {
     z-index: 1;
   }
+
   .primary-button {
-    padding: 12px 60px 12px 60px;
+    padding: 12px 60px;
     font-size: 18px;
   }
 
   @media screen and (max-width: $large-screen) {
     margin-bottom: 50px;
+
     img {
       width: calc(250px + 5vw);
     }
+
     h2 {
       max-width: 450px;
     }
+
     .primary-button {
-      padding: 12px 40px 12px 40px;
+      padding: 12px 40px;
       font-size: 18px;
     }
+
     .inner {
       margin: 0 5vw;
       min-height: 250px;

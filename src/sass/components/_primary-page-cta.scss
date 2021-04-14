@@ -2,6 +2,7 @@
   width: 100vw;
   color: $colors-white;
   background: #2d2e2f;
+
   .inner {
     max-width: 1200px;
     position: relative;
@@ -12,28 +13,35 @@
     padding-top: 80px;
     padding-bottom: 80px;
   }
+
   .column {
     align-items: flex-start;
+
     h3 {
       margin-bottom: 10px;
       color: $colors-white;
     }
+
     h5 {
       color: $colors-white;
     }
   }
+
   .row {
     justify-content: space-between;
   }
+
   .secondary-button {
     margin-left: 40px;
     padding: 12px 30px;
   }
+
   @media screen and (max-width: $large-screen) {
     .inner {
       flex-wrap: wrap;
       margin: 0 5vw;
     }
+
     .column > h {
       margin-bottom: 24px;
     }
@@ -43,15 +51,19 @@
       padding-top: 50px;
       padding-bottom: 50px;
     }
+
     .column {
       margin-bottom: 50px;
     }
+
     .column > h3 {
       margin-bottom: 24px;
     }
+
     .row {
       flex-wrap: wrap;
     }
+
     .secondary-button {
       margin-left: 40px;
     }
@@ -61,8 +73,9 @@
       flex-direction: column;
       align-items: flex-start;
     }
+
     .secondary-button {
-      margin-left: 0px;
+      margin-left: 0;
       margin-top: 24px;
       padding: 12px 30px;
     }
