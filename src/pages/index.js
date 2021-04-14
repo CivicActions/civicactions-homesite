@@ -4,6 +4,7 @@ import Card from "../components/card.js";
 import PrimaryPageCTA from "../components/primary-page-cta.js";
 import ClientsSection from "../components/clients.js";
 import CaseStudyTeaser from "../components/case-study-teaser.js";
+import PressReleaseTeaser from "../components/press-release-teaser.js";
 import homeIntroGraphic from "../files/images/home-intro-graphic.png";
 import homeTeamImage from "../files/images/home-team-img.png";
 import quotePatternGraphic from "../files/images/quote-pattern-graphic.png";
@@ -153,20 +154,20 @@ const HomePage = () => {
             Thoughts and takeaways from our work in the field.
           </div>
           <div className="cases">
-            <div className="grid-item-1">
-              <img src={caseStudyTeaserImg4} alt=""></img>
-              <h4>Government customer experience: A practical guide</h4>
-              <p className="body">
-                How to start bringing CX into the business of government
-              </p>
-            </div>
-            <div className="grid-item-2">
-              <img src={caseStudyTeaserImg5} alt=""></img>
-              <h4>WhiteHouse.gov: Beginning an accessibility journey</h4>
-              <p className="body">
-                Praise and recommendations for the new administration
-              </p>
-            </div>
+            <PressReleaseTeaser
+              img={caseStudyTeaserImg4}
+              title={"Government customer experience: A practical guide"}
+              description={
+                "How to start bringing CX into the business of government"
+              }
+            />
+            <PressReleaseTeaser
+              img={caseStudyTeaserImg5}
+              title={"WhiteHouse.gov: Beginning an accessibility journey"}
+              description={
+                "Praise and recommendations for the new administration"
+              }
+            />
             <div className="grid-item-3">
               <div className="grid-item-3-1">
                 <h4>The role of UX in an agile team</h4>
