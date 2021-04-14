@@ -26,15 +26,6 @@
       padding: 6px 0;
     }
 
-    .body:hover {
-      color: $colors-red-50;
-      cursor: pointer;
-    }
-
-    .body.in-view {
-      color: $colors-red-50;
-    }
-
     .content {
       flex: 2;
     }

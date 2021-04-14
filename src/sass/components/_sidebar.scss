@@ -1,5 +1,4 @@
 .background {
-  background-color: $colors-red-50;
   position: absolute;
   right: 0;
   left: 0;
@@ -9,86 +8,106 @@
   background-color: rgba(27, 27, 27, 0.8);
   display: none;
   width: 100vw;
+}
 
-  .sidebar {
-    background-color: rgba(255, 255, 255, 1);
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 3;
-    width: 60%;
-    display: none;
-    padding: 32px 64px 64px;
-  }
+.sidebar {
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  width: 60%;
+  display: none;
+  padding: 32px 64px 64px;
+}
 
-  .close {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-start;
-    margin: 0 0 24px;
-  }
+.close {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 0 0 24px;
 
   img {
     width: 25px;
     filter: grayscale(100%) brightness(40%);
   }
+}
 
-  .divisor {
-    width: 100%;
-    height: 1px;
-    width: 100%;
-    background: #c4c4c4;
+.pages {
+  padding: 0;
+
+  ul,
+  li {
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
   }
 
-  .link {
+  .page-bundle {
     padding: 24px 0;
+    margin: 0;
+    border-bottom: 1px solid #c4c4c4;
+
+    span {
+      @extend h2;
+    }
 
     a {
       text-decoration: none;
       color: $colors-grey-90;
     }
 
-    h3 {
+    li {
+      @extend h3;
       padding-top: 32px;
       font-weight: 300;
       display: none;
     }
+  }
 
-    .heading {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
+  .heading {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $colors-grey-90;
 
-    img {
-      width: 20px;
-      filter: grayscale(100%) brightness(40%);
+    &::after {
+      background-image: url('../files/icons/ios-arrow-icon.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      content: '';
+      width: 25px;
+      height: 25px;
+      vertical-align: middle;
     }
   }
 
   .collapsed {
-    h3 {
+    li {
       display: flex;
     }
 
-    img {
+    .heading::after {
       transform: rotate(90deg);
     }
   }
-  @media screen and (max-width: $large-screen) {
+}
+@media screen and (max-width: $large-screen) {
+  .background {
     display: flex;
-
-    .sidebar {
-      display: flex;
-      flex-direction: column;
-    }
   }
-  @media screen and (max-width: $medium-screen) {
-    .sidebar {
-      padding: 32px;
-    }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: $medium-screen) {
+  .sidebar {
+    padding: 32px;
   }
 }
