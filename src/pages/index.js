@@ -1,26 +1,26 @@
-import "../sass/styles.scss";
-import React, { useEffect, useRef } from "react";
-import Card from "../components/card.js";
-import PrimaryPageCTA from "../components/primary-page-cta.js";
-import ClientsSection from "../components/clients.js";
-import CaseStudyTeaser from "../components/case-study-teaser.js";
-import PressReleaseTeaser from "../components/press-release-teaser.js";
-import homeIntroGraphic from "../files/images/home-intro-graphic.png";
-import homeTeamImage from "../files/images/home-team-img.png";
-import quotePatternGraphic from "../files/images/quote-pattern-graphic.png";
-import caseStudyTeaserImg1 from "../files/images/case-study-teasers/case-study-teaser-img-1.png";
-import caseStudyTeaserImg2 from "../files/images/case-study-teasers/case-study-teaser-img-2.png";
-import caseStudyTeaserImg3 from "../files/images/case-study-teasers/case-study-teaser-img-3.png";
-import caseStudyTeaserImg4 from "../files/images/case-study-teasers/case-study-teaser-img-4.png";
-import caseStudyTeaserImg5 from "../files/images/case-study-teasers/case-study-teaser-img-5.png";
-import dataServicesIcon from "../files/icons/data-services-icon.svg";
-import itModernizationIcon from "../files/icons/it-modernization-icon.svg";
-import productDesignIcon from "../files/icons/product-design-icon.svg";
-import securityComplianceIcon from "../files/icons/security-compliance-icon.svg";
-import webCmsIcon from "../files/icons/web-cms-icon.svg";
-import workforceDevelopmentIcon from "../files/icons/workforce-dev-icon.svg";
-import arrowIcon from "../files/icons/arrow-icon.svg";
-import GeneralLayout from "../layouts/general";
+import '../sass/styles.scss';
+import React, { useEffect, useRef } from 'react';
+import Card from '../components/card.js';
+import PrimaryPageCTA from '../components/primary-page-cta.js';
+import ClientsSection from '../components/clients.js';
+import CaseStudyTeaser from '../components/case-study-teaser.js';
+import PressReleaseTeaser from '../components/press-release-teaser.js';
+import homeIntroGraphic from '../files/images/home-intro-graphic.png';
+import homeTeamImage from '../files/images/home-team-img.png';
+import quotePatternGraphic from '../files/images/quote-pattern-graphic.png';
+import caseStudyTeaserImg1 from '../files/images/case-study-teasers/case-study-teaser-img-1.png';
+import caseStudyTeaserImg2 from '../files/images/case-study-teasers/case-study-teaser-img-2.png';
+import caseStudyTeaserImg3 from '../files/images/case-study-teasers/case-study-teaser-img-3.png';
+import caseStudyTeaserImg4 from '../files/images/case-study-teasers/case-study-teaser-img-4.png';
+import caseStudyTeaserImg5 from '../files/images/case-study-teasers/case-study-teaser-img-5.png';
+import dataServicesIcon from '../files/icons/data-services-icon.svg';
+import itModernizationIcon from '../files/icons/it-modernization-icon.svg';
+import productDesignIcon from '../files/icons/product-design-icon.svg';
+import securityComplianceIcon from '../files/icons/security-compliance-icon.svg';
+import webCmsIcon from '../files/icons/web-cms-icon.svg';
+import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
+import arrowIcon from '../files/icons/arrow-icon.svg';
+import GeneralLayout from '../layouts/general';
 
 const HomePage = () => {
   const fadersRef = useRef([]);
@@ -104,24 +104,24 @@ const HomePage = () => {
               ref={(e) => (fadersRef.current[2] = e)}>
               <CaseStudyTeaser
                 img={caseStudyTeaserImg1}
-                title={"CENTERS FOR MEDICARE AND MEDICAID SERVICES"}
+                title={'CENTERS FOR MEDICARE AND MEDICAID SERVICES'}
                 description={
-                  "Improving the online experience for Medicare beneficiaries"
+                  'Improving the online experience for Medicare beneficiaries'
                 }
               />
               <CaseStudyTeaser
                 img={caseStudyTeaserImg2}
-                title={"US DEPARTMENT OF VETERANS AFFAIRS"}
-                description={"Helping Veterans access care and benefits online"}
+                title={'US DEPARTMENT OF VETERANS AFFAIRS'}
+                description={'Helping Veterans access care and benefits online'}
               />
               <CaseStudyTeaser
                 img={caseStudyTeaserImg3}
-                title={"US DEPARTMENT OF EDUCATION"}
-                description={"Supporting and expanding adult education"}
+                title={'US DEPARTMENT OF EDUCATION'}
+                description={'Supporting and expanding adult education'}
               />
-              <div className="view-our-work-cta ">
-                <img src={caseStudyTeaserImg3} alt="" className="bg"></img>
-                <div className="content">
+              <div className='view-our-work-cta '>
+                <img src={caseStudyTeaserImg3} alt='' className='bg'></img>
+                <div className='content'>
                   <h3>View more Work</h3>
                   <img src={arrowIcon} alt=''></img>
                 </div>
@@ -153,23 +153,23 @@ const HomePage = () => {
           <div className='body-large'>
             Thoughts and takeaways from our work in the field.
           </div>
-          <div className="cases">
+          <div className='cases'>
             <PressReleaseTeaser
               img={caseStudyTeaserImg4}
-              title={"Government customer experience: A practical guide"}
+              title={'Government customer experience: A practical guide'}
               description={
-                "How to start bringing CX into the business of government"
+                'How to start bringing CX into the business of government'
               }
             />
             <PressReleaseTeaser
               img={caseStudyTeaserImg5}
-              title={"WhiteHouse.gov: Beginning an accessibility journey"}
+              title={'WhiteHouse.gov: Beginning an accessibility journey'}
               description={
-                "Praise and recommendations for the new administration"
+                'Praise and recommendations for the new administration'
               }
             />
-            <div className="grid-item-3">
-              <div className="grid-item-3-1">
+            <div className='grid-item-3'>
+              <div className='grid-item-3-1'>
                 <h4>The role of UX in an agile team</h4>
                 <img width='32px' src={arrowIcon} alt=''></img>
               </div>
