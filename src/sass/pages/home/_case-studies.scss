@@ -1,14 +1,13 @@
 .home--services-and-cases-bg {
   padding-bottom: 10px;
-  background: linear-gradient(
-    to bottom,
+  background: linear-gradient
+    ( to bottom,
     $colors-grey-warm-4 0%,
     $colors-grey-warm-4 33%,
     $colors-white 33%,
     $colors-white 66%,
     $colors-mint-cool-40v 66%,
-    $colors-mint-cool-40v 100%
-  );
+    $colors-mint-cool-40v 100% );
 }
 
 .home--case-studies-section {
