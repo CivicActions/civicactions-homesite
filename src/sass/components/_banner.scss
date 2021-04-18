@@ -1,7 +1,9 @@
 .banner {
   background: $colors-mint-cool-40v;
   color: $colors-white;
-  box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3);
+  width: 100vw;
+
   .inner {
     max-width: 1200px;
     display: flex;
@@ -11,17 +13,21 @@
     justify-content: space-between;
     align-items: center;
   }
+
   .banner-text {
     margin-right: 25px;
   }
+
   .close-icon {
     cursor: pointer;
   }
+
   @media screen and (max-width: $large-screen) {
     .inner {
       margin: 0 5vw;
     }
   }
+
   @media screen and (max-width: $small-screen) {
     padding: 12px 0;
   }
