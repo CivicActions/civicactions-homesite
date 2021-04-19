@@ -1,8 +1,8 @@
 .secondary-button {
   align-items: center;
-  padding: 12px 24px 12px 24px;
+  padding: 12px 24px;
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid $colors-white;
   color: $colors-white;
   font-style: normal;
   font-weight: 600;
@@ -11,17 +11,20 @@
   display: inline-block;
   font-family: $secondary-font;
 }
+
 .secondary-button:hover {
-  background-color: white;
+  background-color: $colors-white;
   color: $colors-grey-90;
 }
+
 .secondary-button:active {
-  background-color: white;
+  background-color: $colors-white;
   color: $colors-grey-90;
   background-color: #c9c9c9;
 }
+
 .secondary-button:focus {
-  background-color: white;
+  background-color: $colors-white;
   color: $colors-grey-90;
   background-color: #c9c9c9;
 }

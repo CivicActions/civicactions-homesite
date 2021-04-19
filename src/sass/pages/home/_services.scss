@@ -1,10 +1,13 @@
-.home__services-section {
-  margin: 0px auto 200px auto;
+.home--services-section {
+  width: 100vw;
+  margin: 0 auto 200px;
+  
   h2 {
     color: $colors-grey-90;
     margin-bottom: 32px;
     padding-top: 64px;
   }
+
   .inner {
     max-width: 1200px;
     position: relative;
@@ -13,16 +16,19 @@
     align-items: flex-start;
     margin: 0 auto;
   }
+
   .body-large {
     max-width: 780px;
     color: $colors-grey-90;
     margin-bottom: 24px;
   }
+
   .primary-button {
-    padding: 12px 60px 12px 60px;
+    padding: 12px 60px;
     font-size: 18px;
     margin-bottom: 50px;
   }
+
   .service-cards-grid {
     width: 100%;
     display: grid;
@@ -30,28 +36,31 @@
     display: inline-grid;
     grid-column-gap: 32px;
     grid-row-gap: 32px;
-    margin: 24px 0px 48px 0px;
+    margin: 24px 0 48px;
   }
 
   @media screen and (max-width: $large-screen) {
     h2 {
       margin-bottom: 24px;
     }
+
     .body-large {
       max-width: none;
       margin-bottom: 16px;
     }
+
     .inner {
       margin: 0 5vw;
       margin-top: 50px;
     }
+
     .service-cards-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       display: inline-grid;
       grid-column-gap: 32px;
       grid-row-gap: 32px;
-      margin: 24px 0px 48px 0px;
+      margin: 24px 0 48px;
     }
   }
 
@@ -59,12 +68,14 @@
     h2 {
       padding-top: 48px;
     }
+
     .service-cards-grid {
       display: grid;
       grid-template-columns: 100%;
       display: inline-grid;
       grid-row-gap: 32px;
     }
+
     .primary-button {
       display: none;
     }
