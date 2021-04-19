@@ -19,7 +19,7 @@ import clientLogo16 from '../files/images/client-logos/client-logo-16.png';
 import clientLogo17 from '../files/images/client-logos/client-logo-17.png';
 import clientLogo18 from '../files/images/client-logos/client-logo-18.png';
 
-const ClientsSection = (props) => {
+const ClientsSection = () => {
   return (
     <section className='home--clients-section'>
       <div className='inner'>

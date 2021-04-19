@@ -3,7 +3,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import extendedLogo from '../files/icons/ca-extended-logo.svg';
 import menuIcon from '../files/icons/menu-icon.svg';
-const Header = (props) => {
+import PropTypes from 'prop-types';
+
+const Header = ({ onMenuClick }) => {
   return (
     <header className='header'>
       <Link to='/' className='logo'>
@@ -19,7 +21,7 @@ const Header = (props) => {
       </div>
       <div
         className='header-nav-mobile'
-        onClick={props.onMenuClick}
+        onClick={onMenuClick}
         role='button'
         tabIndex={0}
         onKeyDown={() => {}}>
@@ -30,3 +32,7 @@ const Header = (props) => {
 };
 
 export default Header;
+
+Header.propTypes = {
+  onMenuClick: PropTypes.func,
+};

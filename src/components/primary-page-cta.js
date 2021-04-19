@@ -1,17 +1,23 @@
-import "../sass/styles.scss";
-import React from "react";
+import '../sass/styles.scss';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const PrimaryPageCTA = (props) => {
+const PrimaryPageCTA = ({
+  title,
+  subtitle,
+  primaryButtonText,
+  secondaryButtonText,
+}) => {
   return (
-    <section className="primary-page-cta">
-      <div className="inner">
-        <div className="column">
-          <h3>{props.title}</h3>
-          <h5>{props.subtitle}</h5>
+    <section className='primary-page-cta'>
+      <div className='inner'>
+        <div className='column'>
+          <h3>{title}</h3>
+          <h5>{subtitle}</h5>
         </div>
-        <div className="row">
-          <div className="primary-button">{props.primaryButtonText}</div>
-          <div className="secondary-button">{props.secondaryButtonText}</div>
+        <div className='row'>
+          <div className='primary-button'>{primaryButtonText}</div>
+          <div className='secondary-button'>{secondaryButtonText}</div>
         </div>
       </div>
     </section>
@@ -19,3 +25,10 @@ const PrimaryPageCTA = (props) => {
 };
 
 export default PrimaryPageCTA;
+
+PrimaryPageCTA.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
+  primaryButtonText: PropTypes.string.isRequired,
+  secondaryButtonText: PropTypes.string.isRequired,
+};
