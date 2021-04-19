@@ -1,5 +1,5 @@
 .header {
-  padding: 50px 0 90px 0;
+  padding: 50px 0 90px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -14,6 +14,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
     a {
       text-transform: uppercase;
       color: $colors-grey-90;
@@ -25,19 +26,23 @@
       font-family: $secondary-font;
     }
   }
+
   .header-nav-mobile {
     display: none;
     max-width: 20px;
   }
+
   @media screen and (max-width: $large-screen) {
-    padding: 50px 5vw 50px 5vw;
+    padding: 50px 5vw 0;
     .header-nav {
       display: none;
     }
+
     .header-nav-mobile {
       display: flex;
     }
   }
+
   @media screen and (max-width: $small-screen) {
     img {
       width: 220px;

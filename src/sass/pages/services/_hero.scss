@@ -1,8 +1,8 @@
-.services__hero-section {
+.services--hero-section {
   width: 100%;
   background-color: $colors-mint-cool-60v;
   color: $colors-white;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 
   .inner {
     position: relative;
@@ -13,18 +13,20 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: 40px 0px;
+    padding: 40px 0;
   }
+
   h2 {
     max-width: 850px;
     text-align: center;
     margin-bottom: 26px;
     font-weight: 300;
   }
+
   .body {
     max-width: 700px;
     font-weight: 300;
-    padding: 6px 0px;
+    padding: 6px 0;
   }
 
   @media screen and (max-width: $large-screen) {
@@ -32,19 +34,21 @@
       margin: 0 5vw;
     }
   }
+
   @media screen and (max-width: $medium-large-screen) {
-    background-color: white;
+    background-color: $colors-white;
     color: $colors-grey-90;
+
     .inner {
       align-items: flex-start;
     }
+
     h2,
     .body {
       text-align: left;
       max-width: none;
     }
   }
-
   @media screen and (max-width: $tablet-screen) {
     h2,
     .body {

@@ -3,6 +3,7 @@
   transform: translateY(10px);
   transition: opacity 300ms ease-in, transform 400ms ease-in;
 }
+
 .fade-in.appear {
   opacity: 1;
   transform: translateY(0);

@@ -1,6 +1,6 @@
 .primary-button {
   align-items: center;
-  padding: 12px 24px 12px 24px;
+  padding: 12px 24px;
   background-color: $colors-red-50;
   color: $colors-white;
   font-style: normal;
@@ -11,12 +11,15 @@
   font-family: $secondary-font;
   text-transform: uppercase;
 }
+
 .primary-button:hover {
   background-color: $colors-red-60;
 }
+
 .primary-button:active {
   background-color: #6f3331;
 }
+
 .primary-button:focus {
   background-color: #6f3331;
 }
