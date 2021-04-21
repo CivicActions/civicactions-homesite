@@ -12,16 +12,18 @@
     align-items: center;
     text-align: center;
   }
+
   h2 {
     width: 720px;
     text-align: left;
     text-align: left;
   }
+
   .body {
     text-align: left;
     width: 720px;
     font-weight: 300;
-    padding: 24px 0px 0px 0px;
+    padding: 24px 0 0;
   }
 
   @media screen and (max-width: $large-screen) {
@@ -29,10 +31,12 @@
       margin: 0 5vw;
     }
   }
+
   @media screen and (max-width: $medium-large-screen) {
     .inner {
       align-items: flex-start;
     }
+
     h2,
     .body {
       text-align: left;

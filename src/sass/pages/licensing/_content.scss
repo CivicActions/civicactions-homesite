@@ -17,18 +17,22 @@
     width: 720px;
     text-align: left;
     padding-top: 64px;
+    padding: 1rem;
   }
+
   h4 {
     width: 720px;
     text-align: left;
     padding-top: 64px;
   }
+
   .body {
     text-align: left;
     width: 720px;
     font-weight: 300;
-    padding: 24px 0px 0px 0px;
+    padding: 24px 0 0;
   }
+
   ul {
     margin: 0;
   }
@@ -38,16 +42,19 @@
       margin: 0 5vw;
     }
   }
+
   @media screen and (max-width: $medium-large-screen) {
     .inner {
       align-items: flex-start;
     }
+
     h2,
     h3 .body {
       text-align: left;
       width: auto;
     }
   }
+
   @media screen and (max-width: $tablet-screen) {
     h3,
     h4,
