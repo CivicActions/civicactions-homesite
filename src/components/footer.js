@@ -22,27 +22,21 @@ const Footer = (props) => {
           </div>
         </div>
         <div className='grid-item-2'>
-          <div className='info'>
-            <div className='body-small'>
-              We're a mid-size professional services firm providing design,
-              technology, consulting, and training services to government.
-            </div>
-            <div style={{ height: '24px' }}></div>
-            <div className='body-small'>We’re always hiring!</div>
-            <div style={{ height: '24px' }}></div>
-            <div className='body-small'>
-              Check out our open positions or <br />
-              learn about contracting with us.
-            </div>
-            <div style={{ height: '24px' }}></div>
-            <div className='body-small'>
-              Our team is fully distributed, but our mailing address is:3527 Mt.
-              Diablo Blvd., Unit 269Lafayette, CA 94549
-            </div>
+          <div className='body-small'>
+            We're a mid-size professional services firm providing design,
+            technology, consulting, and training services to government.
+          </div>
+          <div className='body-small'>
+            Check out our open positions or <br />
+            learn about contracting with us.
+          </div>
+          <div className='body-small'>
+            Our team is fully distributed, but our mailing address is:3527 Mt.
+            Diablo Blvd., Unit 269Lafayette, CA 94549
           </div>
         </div>
         <div className='grid-item-3'>
-          <div className='content'>
+          <nav>
             <div className='column'>
               <Link to=''>COMPANY</Link>
               <Link className='body-small' to=''>
@@ -68,22 +62,20 @@ const Footer = (props) => {
             <Link to=''>INSIGHTS</Link>
             <Link to=''>CARREERS</Link>
             <Link to=''>CONTACT</Link>
-          </div>
+          </nav>
         </div>
         <div className='grid-item-4'>
-          <div className='content'>
-            <div className='body-small'>
-              Get in touch via phone or email:
-              <br />
-              510-408-7510
-              <br />
-              contact@civicactions.com
-            </div>
-            <div className='bottom-links'>
-              <div className='body-small'> © 2010 — 2021</div>
-              <div className='body-small'> Accessibility</div>
-              <div className='body-small'>Privacy — Terms</div>
-            </div>
+          <div className='body-small'>
+            Get in touch via phone or email:
+            <br />
+            510-408-7510
+            <br />
+            contact@civicactions.com
+          </div>
+          <div className='bottom-links'>
+            <div className='body-small'> © 2010 — 2021</div>
+            <div className='body-small'> Accessibility</div>
+            <div className='body-small'>Privacy — Terms</div>
           </div>
         </div>
       </div>
