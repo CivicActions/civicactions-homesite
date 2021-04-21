@@ -6,7 +6,7 @@ import twitterIcon from '../files/icons/twitter-footer-icon.svg';
 import facebookIcon from '../files/icons/facebook-footer-icon.svg';
 import linkedinIcon from '../files/icons/linkedin-footer-icon.svg';
 
-const Footer = (props) => {
+const Footer = () => {
   return (
     <footer className='footer'>
       <div className='inner'>

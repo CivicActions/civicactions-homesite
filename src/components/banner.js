@@ -1,8 +1,9 @@
 import '../sass/styles.scss';
 import React, { useState } from 'react';
 import closeIcon from '../files/icons/close-icon.svg';
+import PropTypes from 'prop-types';
 
-const Banner = (props) => {
+const Banner = ({ boldText, regularText }) => {
   const [hide, setHide] = useState(false);
   let close = () => setHide(true);
 
@@ -12,7 +13,7 @@ const Banner = (props) => {
     <div className='banner body-small'>
       <div className='inner'>
         <p className='banner-text'>
-          <strong>{props.boldText}</strong> <span>{props.regularText}</span>
+          <strong>{boldText}</strong> <span>{regularText}</span>
         </p>
         <div
           onKeyDown={() => {}}
@@ -28,3 +29,8 @@ const Banner = (props) => {
 };
 
 export default Banner;
+
+Banner.propTypes = {
+  boldText: PropTypes.string,
+  regularText: PropTypes.string,
+};

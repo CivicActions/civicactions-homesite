@@ -1,14 +1,21 @@
-import "../sass/styles.scss";
-import React from "react";
+import '../sass/styles.scss';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const PressReleaseTeaser = (props) => {
+const PressReleaseTeaser = ({ img, title, description }) => {
   return (
-    <div className="press-release-teaser">
-      <img src={props.img} alt=""></img>
-      <h4>{props.title}</h4>
-      <p className="body">{props.description}</p>
+    <div className='press-release-teaser'>
+      <img src={img} alt=''></img>
+      <h4>{title}</h4>
+      <p className='body'>{description}</p>
     </div>
   );
 };
 
 export default PressReleaseTeaser;
+
+PressReleaseTeaser.propTypes = {
+  img: PropTypes.any.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+};

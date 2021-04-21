@@ -2,8 +2,9 @@ import '../sass/styles.scss';
 import React, { useRef } from 'react';
 import { Link } from 'gatsby';
 import closeIcon from '../files/icons/close-icon.svg';
+import PropTypes from 'prop-types';
 
-const Sidebar = (props) => {
+const Sidebar = ({ hidden, close }) => {
   const headingsRef = useRef([]);
   const onCollapseClick = (index) => {
     const current = headingsRef.current[index].className;
@@ -13,7 +14,7 @@ const Sidebar = (props) => {
   };
   return (
     <div>
-      {props.hidden === false ? (
+      {hidden === false ? (
         <div className='background'>
           <div className='sidebar'>
             <div
@@ -22,7 +23,7 @@ const Sidebar = (props) => {
               role='button'
               onKeyDown={() => {}}
               tabIndex={0}
-              onClick={props.close}>
+              onClick={close}>
               <img src={closeIcon} alt='Close Icon'></img>
             </div>
             <ul className='pages'>
@@ -84,3 +85,8 @@ const Sidebar = (props) => {
 };
 
 export default Sidebar;
+
+Sidebar.propTypes = {
+  hidden: PropTypes.bool.isRequired,
+  close: PropTypes.func.isRequired,
+};
