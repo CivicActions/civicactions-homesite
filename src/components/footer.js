@@ -60,7 +60,7 @@ const Footer = (props) => {
               </Link>
             </div>
             <Link to=''>INSIGHTS</Link>
-            <Link to=''>CARREERS</Link>
+            <Link to=''>CAREERS</Link>
             <Link to=''>CONTACT</Link>
           </nav>
         </div>

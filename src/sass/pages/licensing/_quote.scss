@@ -1,0 +1,82 @@
+.licensing__quote-section {
+  width: 100%;
+  color: $colors-grey-90;
+  background-color: $colors-grey-warm-4;
+  padding: 85px 0;
+  margin: 80px 0;
+
+  h4,
+  .body {
+    text-align: left;
+  }
+
+  h4 {
+    margin-bottom: 32px;
+  }
+
+  .inner {
+    position: relative;
+    max-width: 720px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .picture {
+    width: 173px;
+    height: 223px;
+    object-fit: cover;
+    margin-right: 32px;
+  }
+
+  .pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 56px;
+  }
+
+  .quote {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  @media screen and (max-width: $large-screen) {
+    .inner {
+      margin: 0 5vw;
+    }
+  }
+
+  @media screen and (max-width: $medium-large-screen) {
+    .inner {
+      align-items: flex-start;
+    }
+  }
+
+  @media screen and (max-width: $tablet-screen) {
+    padding: 55px 0;
+    margin: 64px 0 0;
+
+    .picture {
+      display: none;
+    }
+
+    .quote {
+      margin-left: 20px;
+    }
+
+    .pattern {
+      max-width: 26px;
+      top: 10px;
+      left: 0;
+    }
+  }
+}
