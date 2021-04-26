@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import GeneralLayout from '../layouts/general';
 import { Link } from 'gatsby';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
+import HeroImg from '../files/images/services-hero.svg';
 
 const ServicesPage = ({ data }) => {
   const contentSectionsRef = useRef([]);
@@ -16,20 +17,16 @@ const ServicesPage = ({ data }) => {
     <GeneralLayout>
       <section className='services--hero-section'>
         <div className='inner'>
-          <h2>Government services that build public trust</h2>
-          <div className='body'>
-            <p>
+          <div>
+            <h2>Government services that build public trust</h2>
+            <p className='body'>
               At its core, digital transformation is about improving the
-              customer experience of government. Public services should be
-              accessible and secure, with human needs at the forefront.
-            </p>
-            <p>
-              Using technology and design as a means to that end, we partner
-              with your agency to help you plan and build modern systems that
-              work efficiently for your staff and the public, increasing trust
-              and satisfaction for those you serve.
+              customer experience of government. We use thoughtful design and
+              open source technologies to help you deliver modern public
+              services that put people first.
             </p>
           </div>
+          <img src={HeroImg} alt=''></img>
         </div>
       </section>
       <section className='services--content-section'>
