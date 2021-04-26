@@ -1,0 +1,74 @@
+.careers--we-section {
+  width: 100%;
+  background: linear-gradient(
+    $colors-white 25%,
+    $colors-grey-warm-4 25%,
+    $colors-grey-warm-4 75%,
+    $colors-white 75%
+  );
+
+  .inner {
+    position: relative;
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: start;
+    row-gap: 90px;
+  }
+
+  h3 {
+    max-width: 850px;
+    font-weight: 300;
+  }
+
+  .body {
+    max-width: 720px;
+    font-weight: 300;
+    margin: 24px 0 40px;
+  }
+
+  .what-we-look-for,
+  .who-we-are {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    row-gap: 40px;
+    justify-content: space-between;
+  }
+
+  .who-we-are > .left-aligned {
+    max-width: 584px;
+  }
+
+  .what-we-look-for > .right-aligned {
+    max-width: 584px;
+  }
+
+  @media screen and (max-width: $large-screen) {
+    .inner {
+      margin: 0 5vw;
+    }
+  }
+
+  @media screen and (max-width: $medium-large-screen) {
+    .inner {
+      align-items: flex-start;
+    }
+
+    .who-we-are {
+      flex-wrap: wrap-reverse;
+    }
+
+    .what-we-look-for {
+      flex-wrap: wrap;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

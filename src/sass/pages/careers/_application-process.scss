@@ -1,0 +1,83 @@
+.careers--application-process-section {
+  width: 100%;
+  margin-bottom: 200px;
+
+  .inner {
+    position: relative;
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: start;
+  }
+
+  h3 {
+    max-width: 850px;
+    font-weight: 300;
+    margin-bottom: 24px;
+  }
+
+  h6 {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+
+  h5 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+  }
+
+  .body {
+    max-width: 720px;
+    font-weight: 300;
+  }
+
+  .steps-grid {
+    margin: 56px 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: inline-grid;
+    grid-column-gap: 56px;
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 24px;
+  }
+
+  .step > h3 {
+    margin: 0;
+    background-color: $colors-mint-cool-40v;
+    color: $colors-white;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .step > h6 {
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: $large-screen) {
+    .inner {
+      margin: 0 5vw;
+    }
+  }
+
+  @media screen and (max-width: $medium-large-screen) {
+    .inner {
+      align-items: flex-start;
+    }
+  }
+}
