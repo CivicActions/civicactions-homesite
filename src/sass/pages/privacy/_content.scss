@@ -18,17 +18,20 @@
     text-align: left;
     padding-top: 64px;
   }
+
   h4 {
     width: 720px;
     text-align: left;
     padding-top: 64px;
   }
+
   .body {
     text-align: left;
     width: 720px;
     font-weight: 300;
-    padding: 24px 0px 0px 0px;
+    padding: 24px 0 0;
   }
+
   ul {
     margin: 0;
   }
@@ -42,6 +45,7 @@
     .inner {
       align-items: flex-start;
     }
+
     h2,
     h3 .body {
       text-align: left;

@@ -1,6 +1,6 @@
-.privacy__hero-section {
+.careers--video-section {
   width: 100%;
-  color: $colors-grey-90;
+  margin: 140px 0;
 
   .inner {
     position: relative;
@@ -8,22 +8,20 @@
     display: flex;
     margin: 0 auto;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-  }
-
-  h2 {
-    width: 720px;
-    text-align: left;
-    text-align: left;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: start;
   }
 
   .body {
-    text-align: left;
-    width: 720px;
+    max-width: 720px;
     font-weight: 300;
-    padding: 24px 0 0;
+    margin: 24px 0 40px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 700px;
   }
 
   @media screen and (max-width: $large-screen) {
@@ -31,21 +29,15 @@
       margin: 0 5vw;
     }
   }
+
   @media screen and (max-width: $medium-large-screen) {
     .inner {
       align-items: flex-start;
     }
 
-    h2,
-    .body {
+    body {
       text-align: left;
-      width: auto;
-    }
-  }
-  @media screen and (max-width: $tablet-screen) {
-    h2,
-    .body {
-      width: 100%;
+      max-width: none;
     }
   }
 }
