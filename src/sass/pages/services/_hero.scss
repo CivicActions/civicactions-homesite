@@ -1,7 +1,6 @@
 .services--hero-section {
   width: 100%;
-  background-color: $colors-mint-cool-60v;
-  color: $colors-white;
+  color: $colors-grey-90;
   margin-bottom: 0;
 
   .inner {
@@ -9,22 +8,20 @@
     max-width: 1200px;
     display: flex;
     margin: 0 auto;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
-    padding: 40px 0;
+    padding: 40px 0 100px;
   }
 
   h2 {
-    max-width: 850px;
-    text-align: center;
+    max-width: 720px;
     margin-bottom: 26px;
     font-weight: 300;
   }
 
   .body {
-    max-width: 700px;
+    max-width: 525px;
     font-weight: 300;
     padding: 6px 0;
   }
@@ -32,6 +29,10 @@
   @media screen and (max-width: $large-screen) {
     .inner {
       margin: 0 5vw;
+    }
+
+    img {
+      width: calc(250px + 5vw);
     }
   }
 
@@ -53,6 +54,10 @@
     h2,
     .body {
       width: 100%;
+    }
+
+    img {
+      display: none;
     }
   }
 }
