@@ -15,8 +15,8 @@ module.exports = {
     {
       resolve: `@danbruegge/gatsby-plugin-stylelint`,
       options: {
-        files: [`src/**/*.(s(c|a)ss|css)`]
-      }
+        files: [`src/**/*.(s(c|a)ss|css)`],
+      },
     },
     `gatsby-plugin-node-fields`,
     `gatsby-plugin-client-side-redirect`,
@@ -24,7 +24,16 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Nunito\:300,400,600,700`, `Work Sans\:300,400,600,700`],
-        display: "swap",
+        display: 'swap',
+      },
+    },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `https://civicactions-content.civicactions-content.app.civicactions.net`,
+        queryLimit: 1000,
+        contentTypes: [`case-study`, `press`, `press-release`, `staff-profile`],
+        singleTypes: [],
       },
     },
   ],
