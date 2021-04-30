@@ -29,9 +29,9 @@
     "sass": "^1.32.8"
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0",
     "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
-    "gatsby-source-strapi": "github:strapi/gatsby-source-strapi#master",
+    "gatsby-source-strapi": "^0.0.12",
+    "gh-pages": "^3.1.0",
     "stylelint": "^13.12.0",
     "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-declaration-use-variable": "^1.7.2"
