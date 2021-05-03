@@ -24,6 +24,7 @@ import caseStudyTeaserImg7 from '../files/images/case-study-teasers/case-study-t
 const CareersPage = () => {
   return (
     <GeneralLayout>
+      {/** @todo Create a Hero component and style this to match the design comp */}
       <section className='careers--hero-section'>
         <div className='inner'>
           <h2>Work for the public good.</h2>
@@ -34,6 +35,7 @@ const CareersPage = () => {
           <div className='primary-button'>see open positions</div>
         </div>
       </section>
+      {/* @todo Create a video player component */}
       <section className='careers--video-section'>
         <div className='inner'>
           <iframe
@@ -158,7 +160,9 @@ const CareersPage = () => {
         name='Michelle Kang'
         role='Product Designer'
       />
-      <section className='careers--open-positions-section'>
+
+      {/** @todo Enable this section when the JazzHR integration has been implemented */}
+      {/* <section className='careers--open-positions-section'>
         <div className='inner'>
           <h3>Open positions</h3>
           <p className='body'>
@@ -172,7 +176,8 @@ const CareersPage = () => {
             <div className='body job'>Quality assurance engineer</div>
           </div>
         </div>
-      </section>
+      </section> */}
+
       <section className='careers--application-process-section'>
         <div className='inner'>
           <h3>Decided to apply? We’re rooting for you!</h3>
