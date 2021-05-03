@@ -66,11 +66,13 @@
     }
 
     &:hover {
-      background-color: #f3f3f3;
+      // @todo switch to a different arrow icon on hover.
+      // background-color: #f3f3f3;
     }
 
     &:active {
-      background-color: #f3f3f3;
+      // @todo switch to a different arrow icon when active.
+      // background-color: #f3f3f3;
       box-shadow: none;
     }
   }
