@@ -1,11 +1,24 @@
 .header {
-  padding: 50px 0 90px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+
+  // box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3); // TODO 1. Add this when we have an event telling us that the item is at the top of the page.
+  padding: 50px 0 20px;
+  position: sticky;
+  top: 0;
+  background: $colors-white; // TODO 2. We only really want this once this is sticking, othewise it should be transparent.
+  z-index: 11;
+  max-width: 1200px; // TODO 3.  This will be full width once sticky at top.
+  margin: 0 auto 30px auto;
+
+  &.mobile-menu-open {
+    position: static;
+  }
+
+  > .inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .header-nav {
     width: 650px;
@@ -49,4 +62,9 @@
       width: 220px;
     }
   }
+
+  @media screen and (min-width: $large-screen) {
+    margin: 0 auto 70px auto;
+  }
+
 }

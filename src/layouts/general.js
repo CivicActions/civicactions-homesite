@@ -16,7 +16,7 @@ const GeneralLayout = ({ children }) => {
           boldText='We’re hiring! '
           regularText='View open positions here'
         />
-        <Header onMenuClick={openSidebar} />
+        <Header onMenuClick={openSidebar} mobileMenuHiddenBool={hideSidebar} />
         <main>
           <div>{children}</div>
         </main>
