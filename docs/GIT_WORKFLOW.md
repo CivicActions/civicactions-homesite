@@ -31,33 +31,30 @@ remote. *Replace `GITHUB_USERNAME` with your Github username.*
 
 1. Enter `cd ~/workspace/civicactions-homesite` (or the location of the repo on your local sandbox) in your terminal to change your work
 directory to the repo.
-1. Enter `git remote rename origin prime` to rename the original remote.
-1. Enter `git remote set-url --push prime no-pushing` to disable pushing to the prime remote.
+1. Enter `git remote set-url --push origin no-pushing` to disable pushing to the origin remote.
 1. Enter `git remote -v` to verify your remotes.
-1. See `fetch` and `push` returned for `myfork`, and `fetch` only for `prime` (prime push should return `no-pushing`).
+1. See `fetch` and `push` returned for `myfork`, and `fetch` only for `origin` (origin push should return `no-pushing`).
 
-## Workflow
+## GIT Workflow
 
-The Gitflow branching model is used, which employs two parallel long-running branches:
+We have two branches in the repo: 
 
-* Main
-    * Always production ready
-    * Fully tested
-* Develop
-    * The branch to which all feature branches are merged
-    * Where tests are performed
+#### Main: 
+This is the branch to which all feature branches are merged. We tag this branch each time there's a deployment.
+Tag naming structure: `sprint-name-v[release-number]` where `[release-number]` is a count of the number of deployments done in the sprint.
 
-There is also a static deployment branch, gh-pages where the static site is periodically pushed. It contains Gatsby's public folder. See [Deployment Instructions](./MANUAL_DEPLOYMENT.md) for more details.
+ #### gh-pages 
+ This is where the static site is periodically pushed. It contains Gatsby's public folder. See [Deployment Instructions](./MANUAL_DEPLOYMENT.md) for more details.
 
-In addition to the long-running branches there are feature branches that correspond to each Jira ticket.
+In addition to these long-running branches there are feature branches created locally and pushed to individual forks. These correspond to each Jira ticket.
 
 ### Feature Branch
 
 Before you start work create a feature branch.
 
-1. Enter `git checkout develop` in your terminal to check out the develop branch.
+1. Enter `git checkout main` in your terminal to check out the main branch.
 1. Enter `git fetch --all` to fetch all the most recent changes.
-1. Enter `git pull prime develop` to apply the most recently merged changes into your local develop branch.
+1. Enter `git pull origin main` to apply the most recently merged changes into your local main branch.
 1. Enter `git checkout -b homer-##-ticket-init`. (e.g., `homer-99-homehero-ii`) *Replace:*
     1. `##` with `the Jira ticket number`
     1. `ticket` with `a brief description of the ticket`
@@ -79,7 +76,7 @@ you wish to stage`.
 When you are finished with a ticket create a merge request. 
 
 1. Enter `git fetch --all` in your terminal to fetch the most recent changes.
-1. Enter `git pull --rebase prime develop` to include any changes that have been merged in since creating your branch.
+1. Enter `git pull --rebase origin main` to include any changes that have been merged in since creating your branch.
 1. Enter `git push -u myfork homer-##-ticket-init` (e.g., homer-99-home-hero-ii) to write changes to your remote fork.
 *Replace:*
     1. `##` with `the Jira ticket number`
@@ -92,6 +89,6 @@ When you are finished with a ticket create a merge request.
     1. `##` with `the Jira ticket number`
     1. `Jira summary` with `the Jira ticket summary`
 1. Verify that the source branch is the one you have been working on in your remote fork `myfork`.
-1. Verify that the target branch is `develop` in the `nsf` repo.
+1. Verify that the target branch is `main`.
 1. Review the merge request and make any necessary changes.
 1. Press the `Submit merge request` button.
