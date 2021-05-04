@@ -1,9 +1,8 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 import GeneralLayout from '../layouts/general';
 
-const CaseStudyTemplate = () => {
-  const data = useStaticQuery(query);
+const CaseStudyTemplate = ({ data }) => {
   const caseStudy = data.allStrapiCaseStudy.nodes[0];
   return (
     <GeneralLayout>

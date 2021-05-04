@@ -1,9 +1,9 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 import GeneralLayout from '../layouts/general';
 
-const StaffProfileTemplate = () => {
-  const data = useStaticQuery(query);
+const StaffProfileTemplate = ({ data }) => {
+
   const staffProfile = data.allStrapiStaffProfile.nodes[0];
   return (
     <GeneralLayout>

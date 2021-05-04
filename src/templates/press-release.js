@@ -1,9 +1,8 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 import GeneralLayout from '../layouts/general';
 
-const PressReleaseTemplate = () => {
-  const data = useStaticQuery(query);
+const PressReleaseTemplate = ({ data }) => {
   const pressRelease = data.allStrapiPressRelease.nodes[0];
   return (
     <GeneralLayout>
