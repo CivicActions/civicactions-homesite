@@ -47,7 +47,7 @@ The Gitflow branching model is used, which employs two parallel long-running bra
     * The branch to which all feature branches are merged
     * Where tests are performed
 
-There is also a static depolyment branch, gh-pages where the static site is periodically pushed. It contains Gatsby's public folder.
+There is also a static deployment branch, gh-pages where the static site is periodically pushed. It contains Gatsby's public folder. See [Deployment Instructions](./MANUAL_DEPLOYMENT.md) for more details.
 
 In addition to the long-running branches there are feature branches that correspond to each Jira ticket.
 
