@@ -1,0 +1,29 @@
+.video {
+  .inner {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    @media(min-width: 1024px) {
+      padding: 40px 0 100px;
+    }
+  }
+  .video-container {
+    iframe {
+
+      @media(min-width: 1024px) {
+        height: 675px;
+      }
+    }
+  }
+  .video--text {
+    padding: 1rem 0;
+    font-size: 1rem;
+    @media(min-width: 768px) {
+      width: 60%;
+      padding: 2rem 0;
+      font-size: 20px;
+    }
+
+  }
+}
