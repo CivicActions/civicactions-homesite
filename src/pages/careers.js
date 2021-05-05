@@ -6,6 +6,7 @@ import { Link } from 'gatsby';
 import whoWeArePicture from '../files/images/who-we-are.png';
 import whatWeLookForPicture from '../files/images/what-we-look-for.png';
 import Offering from '../components/offering.js';
+import Video from '../components/video.js';
 import HealthBenefitsIcon from '../files/icons/health-benefits-icon.svg';
 import FourOneKProgramIcon from '../files/icons/401k-program-icon.svg';
 import TimeOffIcon from '../files/icons/time-off-icon.svg';
@@ -35,23 +36,11 @@ const CareersPage = () => {
           <div className='primary-button'>see open positions</div>
         </div>
       </section>
-      {/* @todo Create a video player component */}
-      <section className='careers--video-section'>
-        <div className='inner'>
-          <iframe
-            title='CA Promo Video'
-            src='https://player.vimeo.com/video/76979871'
-            frameborder='0'
-            allow='autoplay; fullscreen'
-            allowfullscreen></iframe>
-          <p className='body'>
-            CivicActions is a place to learn and grow with others who are
-            passionate about putting people first. Learn how our
-            multi-disciplinary teams use technology and design to bring
-            government services up to today’s standards.
-          </p>
-        </div>
-      </section>
+      <Video
+          videolink='https://player.vimeo.com/video/310174855'
+          videotitle='Why join Civicactions video'
+          videotext='CivicActions is a place to learn and grow with others who are passionate about putting people first. Learn how our multi-disciplinary teams use technology and design to bring government services up to today’s standards.'
+      />
       <section className='careers--we-section'>
         <div className='inner'>
           <div className='who-we-are'>

@@ -15,7 +15,8 @@ const Video = ({
                         mozallowfullscreen allowFullScreen></iframe>
                 </div>
                 <div class="video--text">
-                    {videotext}
+                    <p class="body">{videotext}</p>
+
                 </div>
             </div>
         </section>
