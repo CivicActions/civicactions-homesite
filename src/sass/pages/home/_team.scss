@@ -1,3 +1,18 @@
+.team-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  button {
+    padding: 10px 20px;
+    border-radius: 14px;
+    font-weight: 110%;
+    background: $colors-white;
+    margin-right: 20px;
+    &.selected {
+      background: #eeeeee; // TODO Change to selected color.
+    }
+  }
+}
+
 .home--team-section {
   width: 100vw;
   margin-bottom: 120px;
