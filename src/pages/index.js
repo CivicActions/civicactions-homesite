@@ -1,10 +1,16 @@
 import '../sass/styles.scss';
 import React, { useEffect, useRef } from 'react';
+
+import GeneralLayout from '../layouts/general';
+
 import Card from '../components/card.js';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
 import ClientsSection from '../components/clients.js';
 import CaseStudyTeaser from '../components/case-study-teaser.js';
 import PressReleaseTeaser from '../components/press-release-teaser.js';
+import LinkButton from '../components/link-button'
+
+// Images
 import homeIntroGraphic from '../files/images/home-intro-graphic.png';
 import homeTeamImage from '../files/images/home-team-img.png';
 import quotePatternGraphic from '../files/images/quote-pattern-graphic.png';
@@ -20,7 +26,6 @@ import securityComplianceIcon from '../files/icons/security-compliance-icon.svg'
 import webCmsIcon from '../files/icons/web-cms-icon.svg';
 import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 import arrowIcon from '../files/icons/arrow-icon.svg';
-import GeneralLayout from '../layouts/general';
 
 const HomePage = () => {
   const fadersRef = useRef([]);
@@ -52,12 +57,19 @@ const HomePage = () => {
               We help government deliver better public services through modern
               technology and design.
             </h2>
-            <h6 className='primary-button'>SEE OUR WORK</h6>
+            <LinkButton
+              src='/'
+              size='large'
+              type='primary'
+              text='See our work'
+            />
           </div>
         </div>
       </section>
+
+      {/* ======== Clients Section ========== */}
       <ClientsSection />
-      <div className='home--services-and-cases-bg'>
+      <div className='home--section home--services-and-cases-bg'>
         <section className='home--services-section'>
           <div className='inner'>
             <h2>Digital first. Data driven. Human centered.</h2>
@@ -88,10 +100,17 @@ const HomePage = () => {
                 icon={workforceDevelopmentIcon}
               />
             </div>
-            <div className='primary-button'>EXPLORE SERVICES</div>
+            <LinkButton
+              src='/services'
+              size='large'
+              type='primary'
+              text='Explore Services'
+            />
           </div>
         </section>
-        <section className='home--case-studies-section'>
+
+        {/* ======== Case Studies Section ========== */}
+        <section className='home--section home--case-studies-section'>
           <div className='inner'>
             <h2>Resilient agencies. Accessible services. Happier people.</h2>
             <p className='body-large'>
@@ -104,33 +123,35 @@ const HomePage = () => {
               ref={(e) => (fadersRef.current[2] = e)}>
               <CaseStudyTeaser
                 img={caseStudyTeaserImg1}
-                title={'CENTERS FOR MEDICARE AND MEDICAID SERVICES'}
+                title={'Centers for medicare and medicaid services'}
                 description={
                   'Improving the online experience for Medicare beneficiaries'
                 }
               />
               <CaseStudyTeaser
                 img={caseStudyTeaserImg2}
-                title={'US DEPARTMENT OF VETERANS AFFAIRS'}
+                title={'US Department of veteran affairs'}
                 description={'Helping Veterans access care and benefits online'}
               />
               <CaseStudyTeaser
                 img={caseStudyTeaserImg3}
-                title={'US DEPARTMENT OF EDUCATION'}
+                title={'US Department of Education'}
                 description={'Supporting and expanding adult education'}
               />
               <div className='view-our-work-cta '>
                 <img src={caseStudyTeaserImg3} alt='' className='bg'></img>
                 <div className='content'>
                   <h3>View more Work</h3>
-                  <img src={arrowIcon} alt=''></img>
+                  <img className="view-our-work-cta__icon" src={arrowIcon} alt=''></img>
                 </div>
               </div>
             </div>
           </div>
         </section>
       </div>
-      <section className='home--quote-section'>
+
+      {/* ======== Quote Section ========== */}
+      <section className='home--section home--quote-section'>
         <div className='inner'>
           <img src={quotePatternGraphic} alt=''></img>
           <div className='quote'>
@@ -147,7 +168,9 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className='home--learn-w-us-section'>
+
+      {/* ======== Learn With Us Section ========== */}
+      <section className='home--section home--learn-w-us-section'>
         <div className='inner'>
           <h2>Learn with us.</h2>
           <div className='body-large'>
@@ -179,12 +202,16 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className='primary-button'>
-            <h6>EXPLORE POSTS & VIDEOS</h6>
-          </div>
+          <LinkButton
+            src='/'
+            type='primary'
+            text='Explore Posts & Videos'
+          />
         </div>
       </section>
-      <section className='home--team-section'>
+
+      {/* ======== Team Section ========== */}
+      <section className='home--section home--team-section'>
         <div className='inner'>
           <div className='column'>
             <h2>Our people make the difference.</h2>
@@ -192,15 +219,14 @@ const HomePage = () => {
               We are leaders in civic tech and design, committed to working in
               ways that make life better for our clients and each other.
             </p>
-            <div className='primary-button'>
-              <h6>MEET OUR TEAM</h6>
-            </div>
+            <LinkButton
+              src='/team'
+              type='primary'
+              text='Meet our team'
+            />
           </div>
           <div className='team-picture-column'>
             <img src={homeTeamImage} alt=''></img>
-            <div className='primary-button'>
-              <h6>MEET OUR TEAM</h6>
-            </div>
           </div>
         </div>
       </section>
