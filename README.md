@@ -16,3 +16,9 @@ CivicActions home site
 ## Gatsby and Strapi integration
 
 [Strapi Quick-start guide](https://strapi.io/documentation/developer-docs/latest/getting-started/quick-start.html#_1-install-strapi-and-create-a-new-project)
+
+## Getting Started
+1. First follow the instructions in the [Git Workflow Doc](docs/GIT_WORKFLOW.md).
+1. Run `yarn install`
+1. Run `yarn develop`
+
