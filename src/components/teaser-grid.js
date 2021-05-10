@@ -7,16 +7,18 @@ const TeaserGrid = ({ image, link, name, title }) => {
   return (
     <div className="teaser-grid--wrapper">
       <div className="teaser-grid">
-        <div className="teaser-grid__text">
-          <div className="teaser-grid__name teaser__link">
+        <div className="teaser-grid__name teaser__link">
+          <Link to={link} title={`Link to ${name}'s profile page`}>
+            <div className="teaser-grid__image">
+              <GatsbyImage image={getImage(image)} alt={name} />
+            </div>
+          </Link>
+          <div className="teaser-grid__text">
             <Link to={link} title={`Link to ${name}'s profile page`}>
-              {name}
-              <div className="teaser-grid__image">
-                <GatsbyImage image={getImage(image)} alt={name} />
-              </div>
+              <div className="teaser-grid__title">{name}</div>
             </Link>
+            <div className="teaser-grid__title">{title}</div>
           </div>
-          <div className="teaser-grid__title">{title}</div>
         </div>
       </div>
     </div>
