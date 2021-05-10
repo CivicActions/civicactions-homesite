@@ -1,0 +1,13 @@
+//====== Typography ===========
+@mixin header6 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 34px;
+  font-family: $secondary-font;
+
+  @media screen and (max-width: $large-screen) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

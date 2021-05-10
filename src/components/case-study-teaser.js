@@ -8,7 +8,7 @@ const CaseStudyTeaser = ({ img, title, description }) => {
       <img src={img} alt='Client Logo'></img>
       <div className='img-overlay'> </div>
       <div className='info'>
-        <h6>{title}</h6>
+        <h3 className="header--small">{title}</h3>
         <h4>{description}</h4>
       </div>
     </div>
