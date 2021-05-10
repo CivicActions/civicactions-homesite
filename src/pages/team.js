@@ -46,7 +46,7 @@ const TeamPage = () => {
   return (
     <GeneralLayout>
       <div className="team-page">
-        <section className="placeholder">
+        <section className="inner">
           <div className="">
             <div>
               <h2>You've never met a team like this one</h2>
