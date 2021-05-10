@@ -2,7 +2,9 @@ import '../sass/styles.scss';
 import React, { useState } from 'react';
 import GeneralLayout from '../layouts/general';
 import TeaserGrid from '../components/teaser-grid.js';
+import StaffQuote from '../components/staff-quote.js';
 import { graphql, useStaticQuery } from 'gatsby';
+import alanaCaseyProfilePicture from '../files/images/alanna_casey_profile.jpg';
 
 const TeamPage = () => {
   const data = useStaticQuery(graphql`
@@ -70,26 +72,31 @@ const TeamPage = () => {
           </div>
         </div>
       </div>
+      <StaffQuote
+        quote="My teammates are brilliant innovators, high performers, and conscientious human beings. Together we’re working to improve lives."
+        name="Alanna Casey"
+        role="Technical Writer"
+        img={alanaCaseyProfilePicture}
+      />
     </GeneralLayout>
   );
 };
 
-
 const TeamTeasers = ({ team }) => {
   return team.map((person, index) => {
     const { Path, Name, Role, Image } = person;
-    return (<TeaserGrid image={Image} name={Name} link={Path} title={Role} />);
+    return <TeaserGrid image={Image} name={Name} link={Path} title={Role} />;
   });
 };
 
 const FilterButtons = ({ team, parentCallback, filterState }) => {
   const roles = [...new Set(team.map((item) => item.Role))];
   return roles.map((role, index) => {
-    const selected = (role === filterState) ? true : false;
+    const selected = role === filterState ? true : false;
     return (
       <button
         key={index}
-        className={selected ? "team-filter-btn selected" : "team-filter-btn"}
+        className={selected ? 'team-filter-btn selected' : 'team-filter-btn'}
         onClick={(e) => {
           parentCallback(e);
         }}
