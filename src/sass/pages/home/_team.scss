@@ -6,6 +6,21 @@
     position: relative;
     margin: 0 auto;
   }
+
+  button.team-filter-btn {
+    border-radius: 100px;
+    padding: 10px 20px;
+    background: $colors-white;
+    border: 1px solid $colors-grey-90;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    &.selected {
+      border: 1px solid $colors-red-50;
+      color: $colors-red-50;
+    }
+
+  }
 }
 
 .home--team-section {

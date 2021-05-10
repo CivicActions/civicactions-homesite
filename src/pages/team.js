@@ -56,7 +56,7 @@ const TeamPage = () => {
         </section>
 
         <div class="inner">
-          <FilterButtons parentCallback={callback} team={teamDataNodes} />
+          <FilterButtons parentCallback={callback} team={teamDataNodes} filterState={filterState} />
           <p />
           <div className="section__teaser-grid">
             <TeamTeasers team={team} />
@@ -75,12 +75,14 @@ const TeamTeasers = ({ team }) => {
   });
 };
 
-const FilterButtons = ({ team, parentCallback }) => {
+const FilterButtons = ({ team, parentCallback, filterState }) => {
   const roles = [...new Set(team.map((item) => item.Role))];
   return roles.map((role, index) => {
+    const selected = (role === filterState) ? true : false;
     return (
       <button
         key={index}
+        className={selected ? "team-filter-btn selected" : "team-filter-btn"}
         onClick={(e) => {
           parentCallback(e);
         }}
