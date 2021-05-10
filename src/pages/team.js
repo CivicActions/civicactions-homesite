@@ -1,40 +1,43 @@
 import '../sass/styles.scss';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import GeneralLayout from '../layouts/general';
 import TeaserGrid from '../components/teaser-grid.js';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const TeamPage = () => {
-
   const data = useStaticQuery(graphql`
-      {
-        allStrapiStaffProfile {
-          nodes {
-            Name
-            Role
-            Path
-            Image {
-              childImageSharp {
-                gatsbyImageData(
-                  width: 264
-                  height: 264
-                  placeholder: BLURRED
-                  formats: [AUTO, WEBP, AVIF]
-                )
-              }
+    {
+      allStrapiStaffProfile {
+        nodes {
+          Name
+          Role
+          Path
+          Image {
+            childImageSharp {
+              gatsbyImageData(
+                width: 264
+                height: 264
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
         }
       }
-    `);
-
+    }
+  `);
 
   const teamDataNodes = data.allStrapiStaffProfile.nodes;
   const [filterState, setFilterState] = useState(null);
 
   const callback = (e) => {
-    if (e.target.textContent !== "undefined") {
-      setFilterState(e.target.textContent);
+    if (e.target.textContent !== 'undefined') {
+      if (filterState === e.target.textContent) {
+        // The button was already selected.
+        setFilterState(null);
+      } else {
+        setFilterState(e.target.textContent);
+      }
     }
   };
   let team;
@@ -56,7 +59,11 @@ const TeamPage = () => {
         </section>
 
         <div class="inner">
-          <FilterButtons parentCallback={callback} team={teamDataNodes} filterState={filterState} />
+          <FilterButtons
+            parentCallback={callback}
+            team={teamDataNodes}
+            filterState={filterState}
+          />
           <p />
           <div className="section__teaser-grid">
             <TeamTeasers team={team} />
