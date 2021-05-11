@@ -79,7 +79,7 @@ const TeamPage = () => {
       </section>
 
       <section className="team--filter-btns-section">
-        <div class="inner">
+        <div className="inner">
           <FilterButtons
             parentCallback={callback}
             team={teamDataNodes}

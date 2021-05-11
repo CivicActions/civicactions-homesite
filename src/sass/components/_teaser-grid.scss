@@ -2,14 +2,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-  max-width: 1020px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .teaser-grid {
   &--wrapper {
-    width: 20%;
-    max-width: 240px;
+    max-width: 223px;
+    margin-right: 1%;
+    @media screen and (min-width: $large-screen) {
+      width: 19%;
+    }
     &:focus {
       //outline: none; Accesibility?
     }
@@ -42,6 +45,6 @@
 @media all and (max-width: $small-screen) {
   .teaser-grid__text,
   .teaser-grid__image {
-  // TODO  @include span-columns(6);
+  //  float: left;
   }
 }

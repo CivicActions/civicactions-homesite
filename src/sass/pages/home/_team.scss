@@ -65,10 +65,9 @@
 .team--staff-teasers-grid-section {
   .inner {
     max-width: 1200px;
-    position: relative;
-    margin: 0 5vw;
+    margin: 20px 0 20px 5vw;
     @media screen and (min-width: $large-screen) {
-      margin: 0 auto;
+      margin: 48px auto 60px auto;
     }
   }
 }
