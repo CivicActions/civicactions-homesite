@@ -77,19 +77,25 @@ const TeamPage = () => {
           </div>
         </div>
       </section>
-      <div className="team-page">
+
+      <section className="team--filter-btns-section">
         <div class="inner">
           <FilterButtons
             parentCallback={callback}
             team={teamDataNodes}
             filterState={filterState}
           />
-          <p />
+        </div>
+      </section>
+
+      <section className="team--staff-teasers-grid-section">
+        <div class="inner">
           <div className="section__teaser-grid">
             <TeamTeasers team={team} />
           </div>
         </div>
-      </div>
+      </section>
+
       <StaffQuote
         quote="My teammates are brilliant innovators, high performers, and conscientious human beings. Together we’re working to improve lives."
         name="Alanna Casey"
