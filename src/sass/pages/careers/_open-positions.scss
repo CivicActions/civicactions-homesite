@@ -28,6 +28,17 @@
     color: $colors-white;
   }
 
+  .no-job {
+    padding: 32px;
+    background-color: #2c7773;
+    width: 100%;
+
+    p {
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+
   .jobs-grid {
     width: 100%;
     margin: 0;
@@ -43,16 +54,19 @@
     background-color: $colors-white;
     padding: 56px 32px;
     margin: 0;
+    position: relative;
 
-    &::after {
-      background-image: url('../files/icons/ios-arrow-icon.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      content: '';
-      width: 25px;
-      height: 25px;
-      vertical-align: middle;
+
+    img {
+      position: absolute;
+      right: 30px;
+      top: 45%;
+      filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(
+                      -50deg
+      ) saturate(600%) contrast(0.8);
     }
+
+
   }
 
   @media screen and (max-width: $large-screen) {

@@ -1,5 +1,4 @@
 import '../sass/styles.scss';
-import React from 'react';
 import GeneralLayout from '../layouts/general';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
 import { Link } from 'gatsby';
@@ -20,8 +19,24 @@ import arrowIcon from '../files/icons/arrow-icon.svg';
 import PressReleaseTeaser from '../components/press-release-teaser.js';
 import caseStudyTeaserImg6 from '../files/images/case-study-teasers/case-study-teaser-img-6.png';
 import caseStudyTeaserImg7 from '../files/images/case-study-teasers/case-study-teaser-img-7.png';
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+
 
 const CareersPage = () => {
+  const data = useStaticQuery(graphql`
+      {
+    allJob {
+      nodes {
+        title
+      }
+    }
+  }
+    `);
+  const jobNodes = data.allJob.nodes;
+
+  const job = jobNodes;
+  console.log(job);
   return (
     <GeneralLayout>
       {/** @todo Create a Hero component and style this to match the design comp */}
@@ -162,21 +177,28 @@ const CareersPage = () => {
       />
 
       {/** @todo Enable this section when the JazzHR integration has been implemented */}
-      {/* <section className='careers--open-positions-section'>
+       <section className='careers--open-positions-section'>
         <div className='inner'>
           <h3>Open positions</h3>
           <p className='body'>
             We actively seek to broaden the diversity of our team, and strongly
             encourage people from underrepresented groups to apply.
           </p>
+          {!job && <p></p>}
+          <div className='no-job'>
+            <p className="body">No positions are currently open. Please check back again soon!</p></div>
           <div className='jobs-grid'>
-            <div className='body job'>Data scientist</div>
-            <div className='body job'>Help desk support manager</div>
-            <div className='body job'>Product designer</div>
-            <div className='body job'>Quality assurance engineer</div>
-          </div>
+            {job.map(({title}, index) => (
+                <div className="body job">
+                  <p>{title}</p>
+                  <img width='32px' src={arrowIcon} alt=''></img>
+                </div>
+            ))}
+         </div>
         </div>
-      </section> */}
+      </section>
+
+
 
       <section className='careers--application-process-section'>
         <div className='inner'>
@@ -269,5 +291,6 @@ const CareersPage = () => {
     </GeneralLayout>
   );
 };
+
 
 export default CareersPage;

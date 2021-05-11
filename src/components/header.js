@@ -19,7 +19,7 @@ const Header = ({ onMenuClick, mobileMenuHiddenBool }) => {
           <Link to='/services'>services</Link>
           <Link to=''>our work</Link>
           <Link to=''>insights</Link>
-          <Link to=''>careers</Link>
+          <Link to='/careers'>careers</Link>
           <div className='primary-button'>contact us</div>
         </div>
         <div

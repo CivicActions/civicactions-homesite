@@ -18,6 +18,7 @@ module.exports = {
         files: [`src/**/*.(s(c|a)ss|css)`],
       },
     },
+    `gatsby-source-jazz`,
     `gatsby-plugin-node-fields`,
     `gatsby-plugin-client-side-redirect`,
     {

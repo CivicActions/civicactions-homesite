@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "babel-preset-gatsby": "^1.0.0",
+    "env-cmd": "^10.1.0",
     "gatsby": "^3.0.1",
     "gatsby-plugin-client-side-redirect": "^1.1.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
