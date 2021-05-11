@@ -50,16 +50,34 @@ const TeamPage = () => {
   }
   return (
     <GeneralLayout>
-      <div className="team-page">
-        <section className="inner">
-          <div className="">
-            <div>
+      <section className="team--content-section">
+        <div className="inner">
+          <div className="layout-div">
+            <div className="content">
               <h2>You've never met a team like this one</h2>
-              <p className="body">Lorem ipsum</p>
+              <p className="body">
+                We are leaders in technology, design, and strategy for
+                government digital services. We combine our diverse expertise
+                and backgrounds to bring value to our customers and each other.
+              </p>
+            </div>
+            <div className="content">
+              <h3>Purpose driven. Uniquely talented. Remarkably human.</h3>
+              <p className="body">
+                People who work with us say there’s “something magical” about
+                our team. We are good listeners, strategic thinkers, honest
+                communicators, and problem solvers. (We’re also cheerful and
+                kind, which is a nice bonus.) We each care deeply about the
+                impact we have on those around us.{' '}
+              </p>
+              <p className="body">
+                We are the humans of CivicActions. It’s nice to meet you!
+              </p>
             </div>
           </div>
-        </section>
-
+        </div>
+      </section>
+      <div className="team-page">
         <div class="inner">
           <FilterButtons
             parentCallback={callback}
