@@ -1,4 +1,4 @@
-@import 'colors';
+
 $primary-font: 'Nunito';
 $secondary-font: 'Work Sans';
 $small-screen: 481px !default;
@@ -100,17 +100,14 @@ h5 {
   }
 }
 
-h6 {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 34px;
-  font-family: $secondary-font;
+h6,
+%h6 {
+  @include header6;
+}
 
-  @media screen and (max-width: $large-screen) {
-    font-size: 14px;
-    line-height: 22px;
-  }
+.header--small {
+  @include header6;
+  text-transform: uppercase;
 }
 
 a {

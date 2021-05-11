@@ -43,16 +43,19 @@
   }
 }
 @media screen and (max-width: $large-screen) {
-  .case-study-teaser > h4 {
+  .case-study-teaser {
+    > h4 {
     font-size: 18px;
     line-height: 22px;
-  }
+    }
 
-  .case-study-teaser > .info {
-    height: 35%;
-    padding: 24px;
+    > .info {
+      height: 35%;
+      padding: 24px;
+    }
   }
 }
+
 @media screen and (max-width: $medium-screen) {
   .case-study-teaser > .info {
     height: 45%;
