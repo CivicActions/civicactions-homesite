@@ -244,7 +244,7 @@ const CareersPage = () => {
         </div>
       </section>
       <StaffQuote
-        img={irisIbekweProfilePicture}
+        image={irisIbekweProfilePicture}
         quote='“I love the honest, collaborative atmosphere, and the way CivicActions prioritizes the well-being of team members.”'
         name='Iris Ibekwe'
         role='Engineer'
