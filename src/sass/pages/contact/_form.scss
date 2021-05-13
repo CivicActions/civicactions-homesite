@@ -15,6 +15,10 @@
         font-size: 20px;
         color: $colors-white;
       }
+      .submitted-message {
+        font-size: 20px;
+        box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
+      }
       .hs_submit hs-submit {
         input {
           text-transform: uppercase;
