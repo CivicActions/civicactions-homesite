@@ -1,0 +1,47 @@
+.contact--ways-to-contact--section {
+  background-color: #0F6460;
+  .inner {
+    max-width: 955px;
+    margin: 0 auto;
+    padding: 72px 20px;
+    & > .body {
+      padding: 24px 0 29px;
+    }
+    .contact-grid {
+      @media(min-width: 1024px){
+        display: flex;
+      }
+
+    }
+    div.grid {
+      background-color: #2C7773;
+      padding: 23px;
+      margin-bottom: 40px;
+
+      @media(min-width: 1024px){
+        width: 290px;
+        margin-right: 45px;
+        margin-left: 0;
+        margin-bottom: 0;
+
+      }
+      .label {
+        font-weight: 600;
+        padding-top: 12px;
+      }
+      a {
+        text-decoration: none;
+      }
+      img {
+        margin-top: 20px;
+      }
+    }
+    div.grid:last-child {
+      margin-bottom: 0;
+      @media(min-width: 1024px) {
+        margin-right: 0;
+      }
+
+    }
+  }
+}
