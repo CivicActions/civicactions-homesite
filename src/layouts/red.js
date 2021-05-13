@@ -20,10 +20,6 @@ const RedLayout = ({ children }) => {
                 }}
             />
             <div>
-                <Banner
-                    boldText='We’re hiring! '
-                    regularText='View open positions here'
-                />
                 <img className='red-rectangle' src={redRectangle} alt='background red color'></img>
                 <Header onMenuClick={openSidebar} mobileMenuHiddenBool={hideSidebar} />
                 <main>
