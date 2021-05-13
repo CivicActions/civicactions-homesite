@@ -26,6 +26,7 @@ import securityComplianceIcon from '../files/icons/security-compliance-icon.svg'
 import webCmsIcon from '../files/icons/web-cms-icon.svg';
 import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 import arrowIcon from '../files/icons/arrow-icon.svg';
+import {Helmet} from "react-helmet";
 
 const HomePage = () => {
   const fadersRef = useRef([]);
@@ -45,6 +46,9 @@ const HomePage = () => {
   }, []);
   return (
     <GeneralLayout>
+      <Helmet>
+        <title data-react-helmet="true">CivicActions</title>
+      </Helmet>
       <section className='home--hero-section'>
         <div className='inner'>
           <img

@@ -1,10 +1,11 @@
 import '../sass/styles.scss';
 import React, { useState } from 'react';
-import GeneralLayout from '../layouts/general';
+import RedLayout from '../layouts/red';
 import TeaserGrid from '../components/teaser-grid.js';
 import StaffQuote from '../components/staff-quote.js';
 import { graphql, useStaticQuery } from 'gatsby';
 import alanaCaseyProfilePicture from '../files/images/alanna_casey_profile.jpg';
+import {Helmet} from "react-helmet";
 
 const TeamPage = () => {
   const data = useStaticQuery(graphql`
@@ -49,7 +50,10 @@ const TeamPage = () => {
     team = teamDataNodes;
   }
   return (
-    <GeneralLayout>
+    <RedLayout>
+      <Helmet>
+        <title data-react-helmet="true">Civicactions Team Member Page</title>
+      </Helmet>
       <section className="team--content-section">
         <div className="inner">
           <div className="layout-div">
@@ -102,7 +106,7 @@ const TeamPage = () => {
         role="Technical Writer"
         img={alanaCaseyProfilePicture}
       />
-    </GeneralLayout>
+    </RedLayout>
   );
 };
 

@@ -1,14 +1,18 @@
 import '../sass/styles.scss';
 import React from 'react';
-import GeneralLayout from '../layouts/general';
+import RedLayout from '../layouts/red';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
 import StaffQuote from '../components/staff-quote.js';
 import henryPooleProfilePicture from '../files/images/henry-poole.png';
 import { Link } from 'gatsby';
+import {Helmet} from "react-helmet";
 
 const LicensingPage = () => {
   return (
-    <GeneralLayout>
+    <RedLayout>
+      <Helmet>
+        <title data-react-helmet="true">Civicactions Licensing Page</title>
+      </Helmet>
       <section className='licensing__hero-section'>
         <div className='inner'>
           <h2>Licensing policy</h2>
@@ -98,7 +102,7 @@ const LicensingPage = () => {
         primaryButtonText='PUT US TO WORK'
         secondaryButtonText='JOIN OUR TEAM'
       />
-    </GeneralLayout>
+    </RedLayout>
   );
 };
 

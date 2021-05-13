@@ -1,11 +1,15 @@
 import "../sass/styles.scss";
 import React from "react";
-import GeneralLayout from "../layouts/general";
+import RedLayout from "../layouts/red";
 import PrimaryPageCTA from "../components/primary-page-cta.js";
+import {Helmet} from "react-helmet";
 
 const PrivacyPage = () => {
   return (
-    <GeneralLayout>
+    <RedLayout>
+      <Helmet>
+        <title data-react-helmet="true">Civicactions Privacy Page</title>
+      </Helmet>
       <section className="privacy__hero-section">
         <div className="inner">
           <h2>Privacy policy for civicactions.com</h2>
@@ -195,7 +199,7 @@ const PrivacyPage = () => {
         primaryButtonText="PUT US TO WORK"
         secondaryButtonText="JOIN OUR TEAM"
       />
-    </GeneralLayout>
+    </RedLayout>
   );
 };
 

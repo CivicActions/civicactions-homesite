@@ -11,7 +11,7 @@ const RedLayout = ({ children }) => {
     const [hideSidebar, setHideSidebar] = useState(true);
     let openSidebar = () => setHideSidebar(false);
     let closeSidebar = () => setHideSidebar(true);
-    
+
     return (
         <div style={{ position: 'relative' }}>
             <Helmet
