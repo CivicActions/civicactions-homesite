@@ -6,8 +6,7 @@
   top: 0;
   background: $colors-white; // TODO 2. We only really want this once this is sticking, othewise it should be transparent.
   z-index: 11;
-  max-width: 1200px; // TODO 3.  This will be full width once sticky at top.
-  margin: 0 auto 30px auto;
+
 
   &.mobile-menu-open {
     position: static;
@@ -18,6 +17,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px; // TODO 3.  This will be full width once sticky at top.
+    margin: 0 auto 30px auto;
   }
 
   .header-nav {
