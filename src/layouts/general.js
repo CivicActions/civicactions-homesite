@@ -4,6 +4,7 @@ import Banner from '../components/banner.js';
 import Header from '../components/header.js';
 import Footer from '../components/footer.js';
 import Sidebar from '../components/sidebar.js';
+import {Helmet} from "react-helmet";
 
 const GeneralLayout = ({ children }) => {
   const [hideSidebar, setHideSidebar] = useState(true);
@@ -11,6 +12,11 @@ const GeneralLayout = ({ children }) => {
   let closeSidebar = () => setHideSidebar(true);
   return (
     <div style={{ position: 'relative' }}>
+      <Helmet
+          htmlAttributes={{
+            lang: 'en',
+          }}
+      />
       <div>
         <Banner
           boldText='We’re hiring! '

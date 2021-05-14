@@ -3,6 +3,7 @@ import '../sass/styles.scss';
 import GeneralLayout from "../layouts/general";
 import PrimaryPageCTA from '../components/primary-page-cta.js';
 import FrozenImg from '../files/images/frozen-404.png';
+import {Helmet} from "react-helmet";
 
 
 // styles
@@ -31,8 +32,10 @@ const imgStyles = {
 const NotFoundPage = () => {
   return (
       <GeneralLayout>
+        <Helmet>
+          <title data-react-helmet="true">404 Page not found</title>
+        </Helmet>
         <main style={pageStyles}>
-          <title>Page Not found</title>
           <h1 style={headingStyles}>404</h1>
           <h2 style={heading2Styles}>Well, that's awkward.</h2>
           <img alt="image of frozen zoom screens" style={imgStyles} src={FrozenImg}/>

@@ -1,9 +1,10 @@
 import '../sass/styles.scss';
 import React, { useRef } from 'react';
-import GeneralLayout from '../layouts/general';
+import RedLayout from '../layouts/red';
 import { Link } from 'gatsby';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
 import HeroImg from '../files/images/services-hero.svg';
+import { Helmet } from "react-helmet"
 
 const ServicesPage = ({ data }) => {
   const contentSectionsRef = useRef([]);
@@ -14,7 +15,10 @@ const ServicesPage = ({ data }) => {
     scrollpsyItemRef.current[index].className = 'body in-view';
   };
   return (
-    <GeneralLayout>
+    <RedLayout>
+      <Helmet>
+        <title data-react-helmet="true">Services</title>
+      </Helmet>
       <section className='services--hero-section'>
         <div className='inner'>
           <div>
@@ -386,7 +390,7 @@ const ServicesPage = ({ data }) => {
         primaryButtonText='HIRE US'
         secondaryButtonText='CONTRACTING INFO'
       />
-    </GeneralLayout>
+    </RedLayout>
   );
 };
 

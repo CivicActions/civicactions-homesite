@@ -1,6 +1,6 @@
 import '../sass/styles.scss';
 import React from 'react';
-import GeneralLayout from '../layouts/general';
+import RedLayout from '../layouts/red';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
 import { Link } from 'gatsby';
 import whoWeArePicture from '../files/images/who-we-are.png';
@@ -21,10 +21,14 @@ import arrowIcon from '../files/icons/arrow-icon.svg';
 import PressReleaseTeaser from '../components/press-release-teaser.js';
 import caseStudyTeaserImg6 from '../files/images/case-study-teasers/case-study-teaser-img-6.png';
 import caseStudyTeaserImg7 from '../files/images/case-study-teasers/case-study-teaser-img-7.png';
+import {Helmet} from "react-helmet";
 
 const CareersPage = () => {
   return (
-    <GeneralLayout>
+    <RedLayout>
+      <Helmet>
+        <title data-react-helmet="true">Careers</title>
+      </Helmet>
       {/** @todo Create a Hero component and style this to match the design comp */}
       <section className='careers--hero-section'>
         <div className='inner'>
@@ -255,7 +259,7 @@ const CareersPage = () => {
         primaryButtonText='See open positions'
         secondaryButtonText='Meet our team'
       />
-    </GeneralLayout>
+    </RedLayout>
   );
 };
 

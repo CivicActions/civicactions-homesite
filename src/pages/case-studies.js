@@ -1,14 +1,18 @@
 import '../sass/styles.scss';
 import React from 'react';
-import GeneralLayout from '../layouts/general';
+import RedLayout from '../layouts/red';
 import { graphql, useStaticQuery } from 'gatsby';
+import {Helmet} from "react-helmet";
 
-const CaseStudiesPage = () => {
+const CaseStudyPage = () => {
   const data = useStaticQuery(query);
   return (
-    <GeneralLayout>
+    <RedLayout>
+        <Helmet>
+            <title data-react-helmet="true">Case Study Landing page</title>
+        </Helmet>
       <pre>{JSON.stringify(data, null, 4)}</pre>
-    </GeneralLayout>
+    </RedLayout>
   );
 };
 
@@ -26,4 +30,4 @@ export const query = graphql`
   }
 `;
 
-export default CaseStudiesPage;
+export default CaseStudyPage;

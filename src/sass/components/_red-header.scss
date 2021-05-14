@@ -1,0 +1,55 @@
+.red-header {
+  background-color: #D83933;
+  max-width: none;
+  padding: 50px 0 0;
+  position: sticky;
+  top: 0;
+  z-index: 11;
+  // box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3); // TODO 1. Add this when we have an event telling us that the item is at the top of the page.
+  @media(min-width: 1024px) {
+    padding: 50px 0 20px;
+  }
+
+
+  .red-header--header {
+    max-width: 1200px; // TODO 3.  This will be full width once sticky at top.
+    padding: 0 20px 1px;
+    @media(min-width: 1024px) {
+      margin: 0 auto 30px auto;
+    }
+  }
+  .inner {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @media(min-width: 1024px) {
+      padding-bottom: 0;
+    }
+  }
+
+  .header-nav {
+    a {
+      color: $colors-white;
+    }
+    .primary-button {
+      background-color: $colors-white;
+      color: $colors-black;
+    }
+  }
+}
+.red-header.mobile-menu-open {
+  position: static;
+}
+img.red-rectangle {
+  display: none;
+  @media(min-width: 1024px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+  }
+
+}
