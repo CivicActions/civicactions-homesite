@@ -1,2 +1,0 @@
-(self.webpackChunkcivic_actions_homesite=self.webpackChunkcivic_actions_homesite||[]).push([[678],{7704:function(e,t,i){"use strict";i.r(t);var n=i(7294),s={color:"#232129",padding:96,fontFamily:"-apple-system, Roboto, sans-serif, serif"},c={marginTop:0,marginBottom:64,maxWidth:320};t.default=function(){return n.createElement("main",{style:s},n.createElement("title",null,"CivicActions"),n.createElement("h1",{style:c},"CivicActions Homesite Redesign"))}}}]);
-//# sourceMappingURL=component---src-pages-index-js-b94e8dff4ed8251ddade.js.map
