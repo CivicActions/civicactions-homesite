@@ -25,19 +25,19 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 
 const CareersPage = () => {
-  const data = useStaticQuery(graphql`
-      {
-    allJob {
-      nodes {
-        title
-      }
-    }
-  }
-    `);
-  const jobNodes = data.allJob.nodes;
+  // const data = useStaticQuery(graphql`
+  //     {
+  //   allJob {
+  //     nodes {
+  //       title
+  //     }
+  //   }
+  // }
+  //   `);
+  // const jobNodes = data.allJob.nodes;
 
-  const job = jobNodes;
-  console.log(job);
+  // const job = jobNodes;
+  // console.log(job);
   return (
     <GeneralLayout>
       {/** @todo Create a Hero component and style this to match the design comp */}
@@ -173,17 +173,17 @@ const CareersPage = () => {
             We actively seek to broaden the diversity of our team, and strongly
             encourage people from underrepresented groups to apply.
           </p>
-          {!job && <p></p>}
-          <div className='no-job'>
-            <p className="body">No positions are currently open. Please check back again soon!</p></div>
-          <div className='jobs-grid'>
-            {job.map(({title}, index) => (
-                <div className="body job">
-                  <p>{title}</p>
-                  <img width='32px' src={arrowIcon} alt=''></img>
-                </div>
-            ))}
-         </div>
+          {/*{!job && <p></p>}*/}
+          {/*<div className='no-job'>*/}
+          {/*  <p className="body">No positions are currently open. Please check back again soon!</p></div>*/}
+          {/*<div className='jobs-grid'>*/}
+          {/*  {job.map(({title}, index) => (*/}
+          {/*      <div className="body job">*/}
+          {/*        <p>{title}</p>*/}
+          {/*        <img width='32px' src={arrowIcon} alt=''></img>*/}
+          {/*      </div>*/}
+          {/*  ))}*/}
+         {/*</div>*/}
         </div>
       </section>
 
