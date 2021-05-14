@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export const Section = ({ content }) => {
-  const { title, desc, subSections, sectionClasses, additionalClasses } = content;
+export const Section = ({ content, classes }) => {
+  const { title, desc, subSections } = content;
+  const {sectionClasses, additionalClasses} = classes;
   return (
     <section className={sectionClasses}>
       <div class="inner">
@@ -27,8 +29,14 @@ export const SubSections = ({ subSections }) => {
   });
 };
 
-export const Sections = ({ sections }) => {
+export const Sections = ({ sections, classes }) => {
   return sections.map((item, index) => {
-    return <Section key={index} content={item} />;
+    return <Section key={index} content={item} classes={classes} />;
   });
+};
+
+
+Sections.propTypes = {
+  sections: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired,
 };
