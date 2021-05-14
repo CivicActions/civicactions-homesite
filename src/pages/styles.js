@@ -2,8 +2,6 @@ import React from 'react';
 import '../sass/styles.scss';
 import GeneralLayout from '../layouts/general';
 
-// Using inline styling as a temporary option for modularity.
-
 // Styles just for the styleguide.
 const styleGuideStyles = {
   background: '#eeeeee',
