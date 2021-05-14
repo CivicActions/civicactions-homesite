@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 export const Section = ({ content, classes }) => {
   const { title, desc, subSections } = content;
-  const {sectionClasses, additionalClasses} = classes;
+  const {sectionClasses, additionalClasses, innerClasses} = classes;
   return (
     <section className={sectionClasses}>
-      <div class="inner">
+      <div class={`inner ${innerClasses}`}>
         <div className={additionalClasses}>
           <h2>{title}</h2>
           <p>{desc}</p>
