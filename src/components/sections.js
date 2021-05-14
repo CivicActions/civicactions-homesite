@@ -1,14 +1,15 @@
 import React from 'react';
 
 export const Section = ({ content }) => {
-  const { title, desc, subSections } = content;
-  console.log('sub', subSections);
+  const { title, desc, subSections, sectionClasses, additionalClasses } = content;
   return (
-    <section>
+    <section className={sectionClasses}>
       <div class="inner">
-        <h2>{title}</h2>
-        <p>{desc}</p>
-        {subSections ? <SubSections subSections={subSections} /> : null}
+        <div className={additionalClasses}>
+          <h2>{title}</h2>
+          <p>{desc}</p>
+          {subSections ? <SubSections subSections={subSections} /> : null}
+          </div>
       </div>
     </section>
   );
@@ -17,8 +18,6 @@ export const Section = ({ content }) => {
 export const SubSections = ({ subSections }) => {
   return subSections.map((subSection, index) => {
     const { title, desc } = subSection;
-    console.log('here Ia am', subSection);
-    console.log('SubSection Title', title);
     return (
       <div key={index} className="subsection">
         <h3>{title}</h3>
