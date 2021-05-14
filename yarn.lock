@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@aaronhayes/react-use-hubspot-form@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@aaronhayes/react-use-hubspot-form/-/react-use-hubspot-form-1.2.5.tgz#b93daa5c67c51867f0358ffd86ccdffe106c9099"
+  integrity sha512-so0RgkH4dC64ZO7rCyNrD3Hfsy68kDBOWS8jrDn7XEaKSaaYGtQy3/Ab7HaLurHXjdAB5V+uv2uedDZGK9Oz0A==
+
 "@ardatan/aggregate-error@0.0.6":
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/@ardatan/aggregate-error/-/aggregate-error-0.0.6.tgz#fe6924771ea40fc98dc7a7045c2e872dc8527609"
@@ -1002,6 +1007,13 @@
   version "7.13.10"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.10.tgz#47d42a57b6095f4468da440388fdbad8bebf0d7d"
   integrity sha512-4QPkjJq6Ns3V/RgpEahRk+AGfL0eO6RHHtTWoNNr5mO49G6B5+X6d6THgWEAvTrznU5xYpbAlVKRYcsCgh/Akw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
+"@babel/runtime@^7.9.2":
+  version "7.14.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.0.tgz#46794bc20b612c5f75e62dd071e24dfd95f1cbe6"
+  integrity sha512-JELkvo/DlpNdJ7dlyw/eY7E0suy5i5GQH+Vlxaq1nsNJ+H7f4Vtv3jMeCEgRhZZQFXTjldYfQgv2qmM6M1v5wA==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -6323,6 +6335,13 @@ gatsby-plugin-image@^1.4.1:
     gatsby-core-utils "^2.4.0"
     objectFitPolyfill "^2.3.0"
     prop-types "^15.7.2"
+
+gatsby-plugin-load-script@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-load-script/-/gatsby-plugin-load-script-1.1.0.tgz#b73dc8248ad0e3565d3f848bfd1ecd64f2b7aad2"
+  integrity sha512-EoXUtWX4aBO4zD61xMHIIlQti4FNYmH0KgBkhac+kNMLI64cjzLc0iD7zPrFnzjYR454XAN/GJBa7M7N/VYSpw==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
 
 gatsby-plugin-node-fields@^3.1.0:
   version "3.1.0"

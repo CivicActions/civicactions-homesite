@@ -1,0 +1,43 @@
+.contact--form {
+  .inner {
+    margin: 0 20px;
+    @media(min-width: 1024px) {
+      max-width: 955px;
+      margin: 0 auto;
+    }
+
+    #contact-hubspot-form {
+      padding-bottom: 103px;
+      iframe {
+        width: 100%;
+      }
+      label {
+        font-size: 20px;
+        color: $colors-white;
+      }
+      .submitted-message {
+        font-size: 20px;
+        box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
+      }
+      .hs_submit hs-submit {
+        input {
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 600;
+          border: none;
+          background-color: #C8473C;
+          &:hover,
+          &:focus {
+            background-color: #A23737
+          }
+        }
+
+      }
+      input {
+        background-color: $colors-white;
+        border: 1px solid #1B1B1B;
+        border-radius: 0;
+      }
+    }
+  }
+}
