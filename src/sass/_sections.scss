@@ -1,0 +1,15 @@
+section {
+
+  margin-bottom: 48px;
+  .inner {
+    margin: 0 5vw;
+  }
+  .subsection {
+    padding: 0 0 32px; // mobile-padding - paragraph-padding
+  }
+
+  @media screen and (min-width: $large-screen) {
+    margin-bottom: 64px;
+  }
+
+}
