@@ -40,9 +40,25 @@
       font-size: 24px;
       line-height: 28px;
     }
-
+    a {
+      text-decoration: none;
+    }
     .body {
       padding: 0 20px 36px;
     }
+  }
+}
+.secondary-press-releases {
+  a:hover,
+  a:focus {
+    background-color: #f3f3f3 !important;
+    text-decoration: underline;
+  }
+  img:hover,
+  img:focus {
+    background-color: transparent !important;
+  }
+  .grid-item-3-1:last-child {
+    margin-bottom: 0 !important;
   }
 }

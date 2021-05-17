@@ -72,3 +72,12 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 };
+exports.sourceNodes = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type JobLists implements Node {
+      title: String
+    }
+  `
+  createTypes(typeDefs)
+}

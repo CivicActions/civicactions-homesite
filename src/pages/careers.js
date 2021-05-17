@@ -2,7 +2,7 @@ import '../sass/styles.scss';
 import React from 'react';
 import RedLayout from '../layouts/red';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
-import { Link } from 'gatsby';
+import {graphql, Link, useStaticQuery} from 'gatsby';
 import whoWeArePicture from '../files/images/who-we-are.png';
 import whatWeLookForPicture from '../files/images/what-we-look-for.png';
 import Offering from '../components/offering.js';
@@ -24,22 +24,26 @@ import caseStudyTeaserImg7 from '../files/images/case-study-teasers/case-study-t
 import {Helmet} from "react-helmet";
 
 const CareersPage = () => {
+  const data = useStaticQuery(query);
+  console.log(data.allFeedJobList);
+  const job = data.allFeedJobList.edges;
+
   return (
     <RedLayout>
       <Helmet>
         <title data-react-helmet="true">Careers</title>
       </Helmet>
       {/** @todo Create a Hero component and style this to match the design comp */}
-      <section className='careers--hero-section'>
-        <div className='inner'>
-          <h2>Work for the public good.</h2>
-          <p className='body'>
-            Join our team of talented and open-minded people working to build
-            modern and accessible government services for all.
-          </p>
-          <div className='primary-button'>see open positions</div>
-        </div>
-      </section>
+      {/*<section className='careers--hero-section'>*/}
+      {/*  <div className='inner'>*/}
+      {/*    <h2>Work for the public good.</h2>*/}
+      {/*    <p className='body'>*/}
+      {/*      Join our team of talented and open-minded people working to build*/}
+      {/*      modern and accessible government services for all.*/}
+      {/*    </p>*/}
+      {/*    <div className='primary-button'>see open positions</div>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
       <Video
           videolink='https://player.vimeo.com/video/310174855'
           videotitle='Why join Civicactions video'
@@ -155,7 +159,7 @@ const CareersPage = () => {
       />
 
       {/** @todo Enable this section when the JazzHR integration has been implemented */}
-      {/* <section className='careers--open-positions-section'>
+       <section className='careers--open-positions-section'>
         <div className='inner'>
           <h3>Open positions</h3>
           <p className='body'>
@@ -163,13 +167,18 @@ const CareersPage = () => {
             encourage people from underrepresented groups to apply.
           </p>
           <div className='jobs-grid'>
-            <div className='body job'>Data scientist</div>
-            <div className='body job'>Help desk support manager</div>
-            <div className='body job'>Product designer</div>
-            <div className='body job'>Quality assurance engineer</div>
+            {!job && <div className="no-job"><p>No positions are currently open. Please check back again soon!</p></div>}
+            {job.map(({node}, index) => (
+                <div className='body job'>
+                  <a href={node.link}>
+                    <p>{node.title}</p>
+                    <img src={arrowIcon} alt="red right arrow icon"></img>
+                  </a>
+                </div>
+            ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       <section className='careers--application-process-section'>
         <div className='inner'>
@@ -226,23 +235,25 @@ const CareersPage = () => {
           <div className='cases'>
             <PressReleaseTeaser
               img={caseStudyTeaserImg6}
+              teaserlink='https://medium.com/civicactions/quickly-shifting-to-distributed-teams-in-government-54bd79b912c3'
               title='Quickly shifting to distributed teams in government'
               description='Best practices for agency teams transitioning to telework'
             />
             <PressReleaseTeaser
               img={caseStudyTeaserImg7}
+              teaserlink='https://medium.com/civicactions/improving-scrum-team-flow-on-digital-service-projects-6723d95eaad8'
               title='Improving scrum team flow on digital service projects'
               description='The 30-second ritual that helps us work better together'
             />
-            <div className='grid-item-3'>
-              <div className='grid-item-3-1'>
+            <div className='grid-item-3 secondary-press-releases'>
+              <a href="https://medium.com/civicactions/how-our-distributed-team-makes-up-for-a-year-apart-c68503192d26 " className='grid-item-3-1'>
                 <h4>How our distributed team makes up for a year apart</h4>
                 <img width='32px' src={arrowIcon} alt=''></img>
-              </div>
-              <div className='grid-item-3-2'>
+              </a>
+              <a href="" className='grid-item-3-2'>
                 <h4>Meet the humans of CivicActions</h4>
                 <img width='32px' src={arrowIcon} alt=''></img>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -262,5 +273,18 @@ const CareersPage = () => {
     </RedLayout>
   );
 };
+
+export const query = graphql` 
+  {
+    allFeedJobList {
+      edges {
+        node {
+          title
+          link
+        }
+      }
+    }
+  }
+`;
 
 export default CareersPage;
