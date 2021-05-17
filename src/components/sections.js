@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 
 export const Section = ({ content, classes, withH1, i }) => {
   const { title, desc, subSections } = content;
-  const {sectionClasses, additionalClasses, innerClasses} = classes;
+  const { sectionClasses, additionalClasses, innerClasses } = classes;
 
   return (
     <section className={sectionClasses}>
       <div class={`inner ${innerClasses}`}>
         <div className={additionalClasses}>
-          {(withH1 && (i === 0)) ? <h1>{title}</h1> : <h2>{title}</h2>}
+          <h2>{title}</h2>
           <p>{desc}</p>
           {subSections ? <SubSections subSections={subSections} /> : null}
-          </div>
+        </div>
       </div>
     </section>
   );
@@ -36,9 +36,7 @@ export const Sections = ({ sections, classes, withH1 }) => {
   });
 };
 
-
 Sections.propTypes = {
   sections: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
-  withH1: PropTypes.bool
 };
