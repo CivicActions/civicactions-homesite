@@ -19,7 +19,7 @@ const NotFoundPage = () => {
               <div class='list'>
                   <p className="body"><a href="/">Visit our homepage</a></p>
                   <p className="body"><a href="/careers">View our job listings</a></p>
-                  <p className="body"><a href="/blog">Read our blog</a></p>
+                  <p className="body"><a href="">Read our blog</a></p>
               </div>
 
             </div>

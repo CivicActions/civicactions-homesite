@@ -9,6 +9,7 @@ import ClientsSection from '../components/clients.js';
 import CaseStudyTeaser from '../components/case-study-teaser.js';
 import PressReleaseTeaser from '../components/press-release-teaser.js';
 import LinkButton from '../components/link-button'
+import Helmet from "react-helmet"
 
 // Images
 import homeIntroGraphic from '../files/images/home-intro-graphic.png';
@@ -45,6 +46,9 @@ const HomePage = () => {
   }, []);
   return (
     <HomepageLayout>
+      <Helmet>
+        <title data-react-helmet="true">CivicActions</title>
+      </Helmet>
       <section className='home--hero-section'>
         <div className='inner'>
           <img
