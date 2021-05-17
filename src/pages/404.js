@@ -29,7 +29,7 @@ const imgStyles = {
 }
 
 // markup
-const NotFoundPage = () => {
+const NotFound = () => {
   return (
       <GeneralLayout>
         <Helmet>
@@ -58,4 +58,4 @@ const NotFoundPage = () => {
   )
 }
 
-export default NotFoundPage
+export default NotFound

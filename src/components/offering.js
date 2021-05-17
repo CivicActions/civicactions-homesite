@@ -8,7 +8,7 @@ const Offering = ({ icon, title, description }) => {
       <img
         src={icon}
         alt='Icon'
-        style={{ marginBottom: 40, height: 90, width: 90 }}></img>
+        style={{ marginBottom: 40 }}></img>
       <h4>{title}</h4>
       <p className='body'>{description}</p>
     </div>

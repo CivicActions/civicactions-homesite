@@ -2,7 +2,11 @@
   width: 100%;
   padding: 70px 0;
   background-color: $colors-mint-cool-60v;
-  margin: 120px 0 70px;
+
+  margin: 48px 0;
+  @media(min-width: 1024px) {
+    margin: 120px 0 70px;
+  }
 
   .inner {
     position: relative;
@@ -20,7 +24,12 @@
     font-weight: 300;
     color: $colors-white;
   }
-
+  .jobs-grid {
+    display: block !important;
+    @media(min-width: 1024px) {
+      display: grid !important;
+    }
+  }
   .body {
     max-width: 720px;
     font-weight: 300;
@@ -28,31 +37,64 @@
     color: $colors-white;
   }
 
+  .no-job {
+    padding: 32px;
+    background-color: #2c7773;
+    width: 100%;
+
+    p {
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+
   .jobs-grid {
     width: 100%;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    display: inline-grid;
-    grid-column-gap: 24px;
-    grid-row-gap: 24px;
+
+    @media(min-width: 1024px) {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      display: inline-grid;
+      grid-column-gap: 24px;
+      grid-row-gap: 24px;
+    }
+
   }
 
   .job {
     color: $colors-grey-90;
     background-color: $colors-white;
     padding: 56px 32px;
-    margin: 0;
+    position: relative;
+    margin-bottom: 20px;
+    a {
+      text-decoration: none;
+      color: $colors-black;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
 
-    &::after {
-      background-image: url('../files/icons/ios-arrow-icon.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      content: '';
-      width: 25px;
-      height: 25px;
-      vertical-align: middle;
+      }
     }
+
+    @media(min-width: 1024px) {
+      margin-bottom: 0;
+    }
+    p {
+      width: 85%;
+      margin: auto 0 ;
+    }
+
+    img {
+      position: absolute;
+      right: 30px;
+      top: 45%;
+      filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(
+                      -50deg
+      ) saturate(600%) contrast(0.8);
+    }
+
+
   }
 
   @media screen and (max-width: $large-screen) {
