@@ -21,6 +21,21 @@ module.exports = {
         files: [`src/**/*.(s(c|a)ss|css)`],
       },
     },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `https://app.jazz.co/feeds/rss/jobs/ampifire`, //For testing only
+        // url: `https://app.jazz.co/feeds/rss/jobs/civicactions`,
+        name: `JobList`,
+        // Optional
+        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
+        parserOption: {
+          customFields: {
+            item: ['itunes:duration']
+          }
+        }
+      }
+    },
     `gatsby-plugin-node-fields`,
     `gatsby-plugin-client-side-redirect`,
     {
