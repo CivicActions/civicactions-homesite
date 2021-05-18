@@ -25,8 +25,7 @@ import {Helmet} from "react-helmet";
 
 const CareersPage = () => {
   const data = useStaticQuery(query);
-  console.log(data.allFeedJobList);
-  const job = data.allFeedJobList.edges;
+  const job = data.allFeedJobLists.edges;
 
   return (
     <RedLayout>
@@ -276,7 +275,7 @@ const CareersPage = () => {
 
 export const query = graphql` 
   {
-    allFeedJobList {
+    allFeedJobLists {
       edges {
         node {
           title
