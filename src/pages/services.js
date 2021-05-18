@@ -4,8 +4,13 @@ import RedLayout from '../layouts/red';
 import { Link } from 'gatsby';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
 import Hero from '../components/hero.js';
-import HeroImg from '../files/images/services-hero.svg';
 import { Helmet } from "react-helmet"
+import dataServicesIcon from '../files/icons/data-services-icon.svg';
+import itModernizationIcon from '../files/icons/it-modernization-icon.svg';
+import productDesignIcon from '../files/icons/product-design-icon.svg';
+import securityComplianceIcon from '../files/icons/security-compliance-icon.svg';
+import webCmsIcon from '../files/icons/web-cms-icon.svg';
+import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 
 const ServicesPage = ({ data }) => {
   const contentSectionsRef = useRef([]);
@@ -83,10 +88,12 @@ const ServicesPage = ({ data }) => {
             </div>
           </div>
           <div className='content'>
+            <img className="services-content--icon" src={webCmsIcon}/>
+            <div className="services-content--label">WEB & CMS</div>
             <div ref={(e) => (contentSectionsRef.current[0] = e)}>
-              <h3 className='title'>
+              <h2 className='h3 title'>
                 Accessible and secure government websites at scale
-              </h3>
+              </h2>
               <div className='body description'>
                 Government websites have complex information and diverse user
                 groups, but they can be made surprisingly usable and
@@ -95,19 +102,19 @@ const ServicesPage = ({ data }) => {
                 your staff!) then build a flexible and secure content management
                 system that will grow with you into the future.
               </div>
-              <h4>How we’ve helped others</h4>
+              <h3 className="h4">How we’ve helped others</h3>
               <div className='body'>US Department of Veterans Affairs</div>
               <Link>
-                <h5>Modern CMS to support veterans</h5>
+                Modern CMS to support veterans
               </Link>
               <div className='body'>
                 Centers for Medicare and Medicaid Services
               </div>
               <Link>
-                <h5>Human-centered health care online</h5>
+                Human-centered health care online
               </Link>
               <div className='cta'>
-                <h4> How we can help you</h4>
+                <h3 className="h4"> How we can help you</h3>
                 <ul>
                   <li>
                     <Link>Research and discovery</Link>
@@ -133,92 +140,13 @@ const ServicesPage = ({ data }) => {
                 <div className='primary-button'>IMPROVE YOUR WEBSITE</div>
               </div>
             </div>
-            <div ref={(e) => (contentSectionsRef.current[1] = e)}>
-              <h3 className='title'>
-                Modernization of legacy government systems and services
-              </h3>
-              <div className='body description'>
-                Outdated systems and paper-based processes make it hard for
-                agency staff to efficiently meet the needs of people who depend
-                on you for critical government services. We help you transform
-                your legacy applications and improve your workflows using
-                human-centered design, automation, and scalable, secure
-                infrastructure.
-              </div>
-              <h4>How we’ve helped others</h4>
-              <div className='body'>
-                California Child Welfare Digital Services
-              </div>
-              <Link>
-                <h5>DevOps support for child welfare services</h5>
-              </Link>
-              <div className='body'>
-                New York Metropolitan Transit Authority
-              </div>
-              <Link>
-                <h5>Connecting Drupal to the Internet of Things</h5>
-              </Link>
-              <div className='cta'>
-                <h4> How we can help you</h4>
-                <ul>
-                  <li>Research and discovery</li>
-                  <li>Service design</li>
-                  <li>Cloud adoption and migration</li>
-                  <li>DevSecOps</li>
-                  <li>Site Reliability Engineering (SRE)</li>
-                  <li>Custom front end development</li>
-                  <li>Infrastructure and platform modernization</li>
-                  <li>Accessibility consulting and training</li>
-                  <li>API design and development</li>
-                  <li>Technology strategy consulting</li>
-                </ul>
-                <div className='primary-button'>WORK SMARTER</div>
-              </div>
-            </div>
-            <div ref={(e) => (contentSectionsRef.current[2] = e)}>
-              <h3 className='title'>
-                Human-centered problem solving and strategy
-              </h3>
-              <div className='body description'>
-                No matter what the challenge is, technology is only one part of
-                the solution. Before building anything new, we work with you to
-                define problems and desired outcomes, understand the customer
-                and stakeholder ecosystem, decide on an approach that serves
-                business goals and user needs, and make plans for facilitating
-                adoption and measuring success.
-              </div>
-              <h4>How we’ve helped others</h4>
-              <div className='body'>
-                Centers for Medicare and Medicaid Services
-              </div>
-              <Link>
-                <h5>Persona-driven strategy for Medicare benefits</h5>
-              </Link>
-              <div className='body'>National Science Foundation</div>
-              <Link>
-                <h5>Improved user experience to support science research</h5>
-              </Link>
-              <div className='cta'>
-                <h4> How we can help you</h4>
-                <ul>
-                  <li>Research and discovery</li>
-                  <li>Product management</li>
-                  <li>Service design</li>
-                  <li>Accessibility consulting and training</li>
-                  <li>User experience and visual design</li>
-                  <li>Content design and strategy</li>
-                  <li>Business and impact analysis</li>
-                  <li>Agile and Human Centered Design training</li>
-                  <li>Change management consulting</li>
-                </ul>
-                <div className='primary-button'>DESIGN A BETTER FUTURE</div>
-              </div>
-            </div>
             <div ref={(e) => (contentSectionsRef.current[3] = e)}>
-              <h3 className='title'>
+              <img className="services-content--icon" src={securityComplianceIcon}/>
+              <div className="services-content--label">SECURITY & COMPLIANCE</div>
+              <h2 className='h3 title'>
                 Modern security practices for continuous compliance and
                 reliability
-              </h3>
+              </h2>
               <div className='body description'>
                 People want to know their government will keep sensitive
                 information safe—but traditional compliance regulations are
@@ -228,19 +156,19 @@ const ServicesPage = ({ data }) => {
                 compliance woven in from the start, for faster deployment of
                 secure and stable code.
               </div>
-              <h4>How we’ve helped others</h4>
+              <h3 className="h4">How we’ve helped others</h3>
               <div className='body'>Defense Security Cooperation Agency</div>
               <Link>
-                <h5>Continuous compliance for international collaboration</h5>
+                Continuous compliance for international collaboration
               </Link>
               <div className='body'>
                 Centers for Medicare and Medicaid Services
               </div>
               <Link>
-                <h5>Rapid ATO for federal health care websites</h5>
+                Rapid ATO for federal health care websites
               </Link>
               <div className='cta'>
-                <h4> How we can help you</h4>
+                <h3 className="h4"> How we can help you</h3>
                 <ul>
                   <li>DevSecOps</li>
                   <li>Continuous integration / deployment (CI / CD)</li>
@@ -255,9 +183,11 @@ const ServicesPage = ({ data }) => {
               </div>
             </div>
             <div ref={(e) => (contentSectionsRef.current[4] = e)}>
-              <h3 className='title'>
+              <img className="services-content--icon" src={dataServicesIcon}/>
+              <div className="services-content--label">DATA SCIENCES</div>
+              <h2 className='h3 title'>
                 Open data sharing to drive evidence-based decisions
-              </h3>
+              </h2>
               <div className='body description'>
                 Government can serve people best when public data is open,
                 discoverable, and usable. We can help you create a data strategy
@@ -266,19 +196,19 @@ const ServicesPage = ({ data }) => {
                 to use, by your staff or the public, to make informed decisions,
                 track metrics, and power useful apps.
               </div>
-              <h4>How we’ve helped others</h4>
+              <h3 className="h4">How we’ve helped others</h3>
               <div className='body'>City of Louisville</div>
               <Link>
-                <h5>Supporting local government transparency</h5>
+                Supporting local government transparency
               </Link>
               <div className='body'>
                 Georgia Governor's Office of Student Achievement
               </div>
               <Link>
-                <h5>Tracking school performance in Georgia</h5>
+                Tracking school performance in Georgia
               </Link>
               <div className='cta'>
-                <h4> How we can help you</h4>
+                <h3 className="h4"> How we can help you</h3>
                 <ul>
                   <li>Data program strategy</li>
                   <li>Open data compliance</li>
@@ -294,9 +224,51 @@ const ServicesPage = ({ data }) => {
               </div>
             </div>
             <div ref={(e) => (contentSectionsRef.current[5] = e)}>
-              <h3 className='title'>
+              <img className="services-content--icon" src={securityComplianceIcon}/>
+              <div className="services-content--label">SERCURITY & COMPLIANCE</div>
+              <h2 className='h2 title'>
                 Modern skills for an adaptable government workforce
-              </h3>
+              </h2>
+              <div className='body description'>
+                People want to know their government will keep sensitive information safe—but traditional compliance regulations are cumbersome and don’t provide an accurate measure of security. We help you “shift left” with automated processes that keep development and operations teams in sync, with security and compliance woven in from the start, for faster deployment of secure and stable code.
+              </div>
+              <h3 className="h4">How we’ve helped others</h3>
+              <div className='body'>Federal Acquisitions Institute</div>
+              <Link>
+                
+                  Digital services education for federal procurement officers
+                
+              </Link>
+              <div className='body'>
+                California Government Operations Agency
+              </div>
+              <Link>
+                Helping state employees adopt open source technologies
+              </Link>
+              <div className='body'>Various clients</div>
+              <Link>
+                Telework training for agencies post-COVID
+              </Link>
+              <div className='cta'>
+                <h3 className="h4"> How we can help you</h3>
+                <ul>
+                  <li>DITAP program certification</li>
+                  <li>Telework consulting and training</li>
+                  <li>Agile and Human Centered Design coaching</li>
+                  <li>Team culture and performance coaching</li>
+                  <li>Technology strategy consulting</li>
+                  <li>Free and open source software (FOSS) education</li>
+                  <li>Change management consulting</li>
+                </ul>
+                <div className='primary-button'>UPSKILL YOUR TEAM</div>
+              </div>
+            </div>
+            <div ref={(e) => (contentSectionsRef.current[5] = e)}>
+              <img className="services-content--icon" src={workforceDevelopmentIcon}/>
+              <div className="services-content--label">WORKFORCE DEVELOPMENT</div>
+              <h2 className='h2 title'>
+                Modern skills for an adaptable government workforce
+              </h2>
               <div className='body description'>
                 Lasting transformation in government happens from the inside
                 out. Organizational change is hard, but not impossible. We offer
@@ -305,25 +277,25 @@ const ServicesPage = ({ data }) => {
                 save taxpayer dollars, and serve the public better in the
                 digital age.
               </div>
-              <h4>How we’ve helped others</h4>
+              <h3 className="h4">How we’ve helped others</h3>
               <div className='body'>Federal Acquisitions Institute</div>
               <Link>
-                <h5>
+                
                   Digital services education for federal procurement officers
-                </h5>
+                
               </Link>
               <div className='body'>
                 California Government Operations Agency
               </div>
               <Link>
-                <h5>Helping state employees adopt open source technologies</h5>
+                Helping state employees adopt open source technologies
               </Link>
               <div className='body'>Various clients</div>
               <Link>
-                <h5>Telework training for agencies post-COVID</h5>
+                Telework training for agencies post-COVID
               </Link>
               <div className='cta'>
-                <h4> How we can help you</h4>
+                <h3 className="h4"> How we can help you</h3>
                 <ul>
                   <li>DITAP program certification</li>
                   <li>Telework consulting and training</li>
@@ -349,28 +321,28 @@ const ServicesPage = ({ data }) => {
           </div>
           <div className='ellipses'>
             <span className='ellipse'>
-              <h6>customer experience</h6>
+              customer experience
             </span>
             <span className='ellipse'>
-              <h6>accessibility</h6>
+              accessibility
             </span>
             <span className='ellipse'>
-              <h6>drupal</h6>
+              drupal
             </span>
             <span className='ellipse'>
-              <h6>u.s. web design standards</h6>
+              u.s. web design standards
             </span>
             <span className='ellipse'>
-              <h6>agile</h6>
+              agile
             </span>
             <span className='ellipse'>
-              <h6>open source</h6>
+              open source
             </span>
             <span className='ellipse'>
-              <h6>human centered design</h6>
+              human centered design
             </span>
             <span className='ellipse'>
-              <h6>distributed teams</h6>
+              distributed teams
             </span>
           </div>
         </div>
