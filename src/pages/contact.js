@@ -1,6 +1,6 @@
 import '../sass/styles.scss';
 import React, { Component } from "react"
-import GeneralLayout from '../layouts/general';
+import RedLayout from '../layouts/red';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
 import Hero from '../components/hero.js';
 import { useHubspotForm } from '@aaronhayes/react-use-hubspot-form';
@@ -20,7 +20,7 @@ const Contact = () => {
 
 
     return (
-        <GeneralLayout>
+        <RedLayout>
             <Hero
                 title='Put us to work'
                 description='We love solving hard problems. Tell us about your challenge or idea,
@@ -65,7 +65,7 @@ const Contact = () => {
                 primaryButtonText='HIRE US'
                 secondaryButtonText='EXPLORE SERVICES'
             />
-        </GeneralLayout>
+        </RedLayout>
     );
 };
 
