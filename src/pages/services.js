@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import RedLayout from '../layouts/red';
 import { Link } from 'gatsby';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
+import Hero from '../components/hero.js';
 import HeroImg from '../files/images/services-hero.svg';
 import { Helmet } from "react-helmet"
 
@@ -19,20 +20,10 @@ const ServicesPage = ({ data }) => {
       <Helmet>
         <title data-react-helmet="true">Services</title>
       </Helmet>
-      <section className='services--hero-section'>
-        <div className='inner'>
-          <div>
-            <h2>Government services that build public trust</h2>
-            <p className='body'>
-              At its core, digital transformation is about improving the
-              customer experience of government. We use thoughtful design and
-              open source technologies to help you deliver modern public
-              services that put people first.
-            </p>
-          </div>
-          <img src={HeroImg} alt=''></img>
-        </div>
-      </section>
+      <Hero
+          title='Government services that build public trust'
+          description='At its core, digital transformation is about improving the customer experience of government. We use thoughtful design and open source technologies to help you deliver modern public services that put people first. '
+        />
       <section className='services--content-section'>
         <div className='inner'>
           <div className='scrollpsy'>

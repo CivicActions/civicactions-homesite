@@ -2,6 +2,7 @@ import '../sass/styles.scss';
 import React, { Component } from "react"
 import GeneralLayout from '../layouts/general';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
+import Hero from '../components/hero.js';
 import { useHubspotForm } from '@aaronhayes/react-use-hubspot-form';
 import emailIcon from '../files/icons/email.png';
 import mailIcon from '../files/icons/mail.png';
@@ -20,17 +21,11 @@ const Contact = () => {
 
     return (
         <GeneralLayout>
-            <section className='services--hero-section'>
-                <div className='inner'>
-                    <div>
-                        <h2>Put us to work</h2>
-                        <p className='body'>
-                            We love solving hard problems. Tell us about your challenge or idea,
-                            and we’ll get in touch to discuss a plan of action.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <Hero
+                title='Put us to work'
+                description='We love solving hard problems. Tell us about your challenge or idea,
+                            and we’ll get in touch to discuss a plan of action.'
+                />
             <section className='contact--form'>
                 <div className='inner'>
                     <div id='contact-hubspot-form'></div>
