@@ -2,6 +2,7 @@ import "../sass/styles.scss";
 import React from "react";
 import RedLayout from "../layouts/red";
 import PrimaryPageCTA from "../components/primary-page-cta.js";
+import Hero from "../components/hero.js";
 import {Helmet} from "react-helmet";
 
 const PrivacyPage = () => {
@@ -10,17 +11,13 @@ const PrivacyPage = () => {
       <Helmet>
         <title data-react-helmet="true">Civicactions Privacy Page</title>
       </Helmet>
-      <section className="privacy__hero-section">
-        <div className="inner">
-          <h2>Privacy policy for civicactions.com</h2>
-          <p className="body">
-            This is a plain-language statement explaining how we collect
+      <Hero
+          title='Privacy policy for civicactions.com'
+          description='This is a plain-language statement explaining how we collect
             information on our website, and how we use it. Our pledge is to be
             responsible stewards of any information we collect, and to protect
-            the rights of our site visitors.
-          </p>
-        </div>
-      </section>
+            the rights of our site visitors.'
+      />
       <section className="privacy__content-section">
         <div className="inner">
           <h3>Have questions? Drop us a line.</h3>
