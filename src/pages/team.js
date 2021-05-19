@@ -18,12 +18,7 @@ const TeamPage = () => {
           Path
           Image {
             childImageSharp {
-              gatsbyImageData(
-                width: 264
-                height: 264
-                placeholder: BLURRED
-                formats: [AUTO, WEBP, AVIF]
-              )
+              gatsbyImageData(width: 264, height: 264, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
             }
           }
         }
@@ -64,11 +59,7 @@ const TeamPage = () => {
 
       <section className="team--filter-btns-section">
         <div className="inner">
-          <FilterButtons
-            parentCallback={callback}
-            team={teamDataNodes}
-            filterState={filterState}
-          />
+          <FilterButtons parentCallback={callback} team={teamDataNodes} filterState={filterState} />
         </div>
       </section>
 
