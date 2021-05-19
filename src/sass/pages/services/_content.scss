@@ -2,21 +2,24 @@
   position: relative;
   width: 100%;
   color: $colors-grey-90;
+  margin-top: 48px;
 
   .inner {
     position: relative;
-    max-width: 1200px;
-    display: flex;
-    margin: 0 auto;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+
+    @media (min-width: 1024px) {
+      max-width: 1200px;
+      display: flex;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
 
     .scrollpsy {
       position: sticky;
-      padding-top: 32px;
       margin-bottom: 112px;
-      top: 0;
+      top: 185px;
       flex: 1;
     }
 
@@ -28,6 +31,10 @@
 
     .content {
       flex: 2;
+      padding: 0 20px;
+      @media(min-width: 1024px) {
+        padding: 0;
+      }
     }
 
     .primary-button {
@@ -35,10 +42,26 @@
       font-size: 18px;
     }
 
+    .services-content--icon {
+      width: 57px;
+      height: 57px;
+      margin-right: 20px;
+      float: left;
+
+    }
+
+    .services-content--label {
+      font-weight: bold;
+      font-size: 18px;
+      float: left;
+      padding-top: 20px;
+    }
+
     .title {
       max-width: 640px;
       margin-bottom: 24px;
       padding-top: 32px;
+      clear: both;
     }
 
     .description {
@@ -49,14 +72,22 @@
     .cta {
       background-color: #f5f5f0;
       padding: 40px;
-      margin: 64px 0 112px;
+      @media(min-width: 1024px) {
+        margin: 64px 0 112px;
+      }
+
     }
 
     ul {
-      padding: 0;
-      margin-left: 20px;
-      columns: 2;
-      column-gap: 80px;
+      margin: 0;
+      padding: 0px 20px;
+      @media(min-width: 1024px) {
+        padding: 0;
+        margin-left: 20px;
+        columns: 2;
+        column-gap: 80px;
+      }
+
     }
 
     li {
@@ -75,11 +106,6 @@
     }
   }
 
-  @media screen and (max-width: $large-screen) {
-    .inner {
-      margin: 0 5vw;
-    }
-  }
 
   @media screen and (max-width: $medium-large-screen) {
     .scrollpsy {
