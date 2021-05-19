@@ -1,0 +1,12 @@
+.social-icon {
+  padding: px-to-rem(32px) 0 px-to-rem(16px);
+
+  &__item {
+    display: inline-block;
+    padding: 0 px-to-rem(12px);
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}

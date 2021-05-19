@@ -1,25 +1,22 @@
 import '../sass/styles.scss';
 import React from 'react';
 import { Link } from 'gatsby';
+import SocialIcons from './social-icons/social-icons';
 import extendedLogo from '../files/icons/ca-extended-logo.svg';
-import twitterIcon from '../files/icons/twitter-footer-icon.svg';
-import facebookIcon from '../files/icons/facebook-footer-icon.svg';
-import linkedinIcon from '../files/icons/linkedin-footer-icon.svg';
+
+
 
 const Footer = () => {
   return (
     <footer className='footer'>
       <div className='inner'>
-        <div className='grid-item-1'>
+        <div className='grid-item-1 footer__branding '>
           <Link to='/'>
             <img src={extendedLogo} alt='Civic Actions Logo'></img>
           </Link>
 
-          <div className='social-icons'>
-            <img src={twitterIcon} alt='Civic Actions Twitter'></img>
-            <img src={facebookIcon} alt='Civic Actions Facebook'></img>
-            <img src={linkedinIcon} alt='Civic Actions LinkedIn'></img>
-          </div>
+          <SocialIcons />
+
         </div>
         <div className='grid-item-2'>
           <div className='body-small'>
