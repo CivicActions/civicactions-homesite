@@ -5,12 +5,11 @@ import PropTypes from 'prop-types';
 const PressReleaseTeaser = ({ teaserlink, img, title, description }) => {
   return (
     <div className='press-release-teaser'>
-        <a href={teaserlink}>
-            <img src={img} alt=''></img>
-            <h4>{title}</h4>
-            <p className='body'>{description}</p>
-        </a>
-
+      <a href={teaserlink}>
+        <img src={img} alt=''></img>
+        <h3>{title}</h3>
+        <p className='body'>{description}</p>
+      </a>
     </div>
   );
 };
@@ -18,8 +17,8 @@ const PressReleaseTeaser = ({ teaserlink, img, title, description }) => {
 export default PressReleaseTeaser;
 
 PressReleaseTeaser.propTypes = {
-    teaserlink: PropTypes.string,
-    img: PropTypes.any.isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string,
+  teaserlink: PropTypes.string,
+  img: PropTypes.any.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
 };
