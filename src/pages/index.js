@@ -197,11 +197,11 @@ const HomePage = () => {
             />
             <div className='grid-item-3'>
               <div className='grid-item-3-1'>
-                <h4>The role of UX in an agile team</h4>
+                <h3>The role of UX in an agile team</h3>
                 <img width='32px' src={arrowIcon} alt=''></img>
               </div>
               <div className='grid-item-3-2'>
-                <h4>What “fierce openness” can do for government</h4>
+                <h3>What “fierce openness” can do for government</h3>
                 <img width='32px' src={arrowIcon} alt=''></img>
               </div>
             </div>
