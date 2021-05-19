@@ -19,8 +19,10 @@ const GeneralLayout = ({ children }) => {
         }}
       />
       <div>
+
         <Banner boldText="We’re hiring! " regularText="View open positions here" />
         <SkipNavLink id="main-content" />
+
         <Header onMenuClick={openSidebar} mobileMenuHiddenBool={hideSidebar} />
         <main id="main-content">
           <div>{children}</div>

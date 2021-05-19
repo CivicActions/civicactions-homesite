@@ -1,7 +1,7 @@
 import '../sass/styles.scss';
 import React, { useEffect, useRef } from 'react';
 
-import GeneralLayout from '../layouts/general';
+import HomepageLayout from '../layouts/homepage';
 
 import Card from '../components/card.js';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
@@ -9,6 +9,7 @@ import ClientsSection from '../components/clients.js';
 import CaseStudyTeaser from '../components/case-study-teaser.js';
 import PressReleaseTeaser from '../components/press-release-teaser.js';
 import LinkButton from '../components/link-button'
+import Helmet from "react-helmet"
 
 // Images
 import homeIntroGraphic from '../files/images/home-intro-graphic.png';
@@ -26,7 +27,6 @@ import securityComplianceIcon from '../files/icons/security-compliance-icon.svg'
 import webCmsIcon from '../files/icons/web-cms-icon.svg';
 import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 import arrowIcon from '../files/icons/arrow-icon.svg';
-import {Helmet} from "react-helmet";
 
 const HomePage = () => {
   const fadersRef = useRef([]);
@@ -45,7 +45,7 @@ const HomePage = () => {
     faders.forEach((fader) => appearOnScroll.observe(fader));
   }, []);
   return (
-    <GeneralLayout>
+    <HomepageLayout>
       <Helmet>
         <title data-react-helmet="true">CivicActions</title>
       </Helmet>
@@ -240,7 +240,7 @@ const HomePage = () => {
         primaryButtonText='HIRE US'
         secondaryButtonText='EXPLORE SERVICES'
       />
-    </GeneralLayout>
+    </HomepageLayout>
   );
 };
 
