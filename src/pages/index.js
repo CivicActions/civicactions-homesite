@@ -160,12 +160,12 @@ const HomePage = () => {
         <div className='inner'>
           <img src={quotePatternGraphic} alt=''></img>
           <div className='quote'>
-            <h4>
+            <h2>
               “It was a pleasure to work with the CivicActions team. Their
               experience with government clients and agile processes helped us
               reach our user base sooner than expected with a product that met
               their needs.”
-            </h4>
+            </h2>
             <div className='body'>
               Lisa Berry, Senior GlobalNET Liaison Officer
             </div>
