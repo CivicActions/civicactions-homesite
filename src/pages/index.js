@@ -8,8 +8,8 @@ import PrimaryPageCTA from '../components/primary-page-cta.js';
 import ClientsSection from '../components/clients.js';
 import CaseStudyTeaser from '../components/case-study-teaser.js';
 import PressReleaseTeaser from '../components/press-release-teaser.js';
-import LinkButton from '../components/link-button'
-import Helmet from "react-helmet"
+import LinkButton from '../components/link-button';
+import Helmet from 'react-helmet';
 
 // Images
 import homeIntroGraphic from '../files/images/home-intro-graphic.png';
@@ -47,7 +47,7 @@ const HomePage = () => {
   return (
     <HomepageLayout>
       <Helmet>
-        <title data-react-helmet="true">CivicActions</title>
+        <title data-react-helmet='true'>CivicActions</title>
       </Helmet>
       <section className='home--hero-section'>
         <div className='inner'>
@@ -70,7 +70,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* ======== Clients Section ========== */}
       <ClientsSection />
       <div className='home--section home--services-and-cases-bg'>
@@ -146,14 +145,16 @@ const HomePage = () => {
                 <img src={caseStudyTeaserImg3} alt='' className='bg'></img>
                 <div className='content'>
                   <h3>View more Work</h3>
-                  <img className="view-our-work-cta__icon" src={arrowIcon} alt=''></img>
+                  <img
+                    className='view-our-work-cta__icon'
+                    src={arrowIcon}
+                    alt=''></img>
                 </div>
               </div>
             </div>
           </div>
         </section>
       </div>
-
       {/* ======== Quote Section ========== */}
       <section className='home--section home--quote-section'>
         <div className='inner'>
@@ -172,7 +173,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* ======== Learn With Us Section ========== */}
       <section className='home--section home--learn-w-us-section'>
         <div className='inner'>
@@ -206,14 +206,9 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <LinkButton
-            src='/'
-            type='primary'
-            text='Explore Posts & Videos'
-          />
+          <LinkButton src='/' type='primary' text='Explore Posts & Videos' />
         </div>
       </section>
-
       {/* ======== Team Section ========== */}
       <section className='home--section home--team-section'>
         <div className='inner'>
@@ -223,11 +218,7 @@ const HomePage = () => {
               We are leaders in civic tech and design, committed to working in
               ways that make life better for our clients and each other.
             </p>
-            <LinkButton
-              src='/team'
-              type='primary'
-              text='Meet our team'
-            />
+            <LinkButton src='/team' type='primary' text='Meet our team' />
           </div>
           <div className='team-picture-column'>
             <img src={homeTeamImage} alt=''></img>
