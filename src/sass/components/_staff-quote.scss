@@ -1,9 +1,11 @@
 .staff-quote {
   width: 100%;
   color: $colors-grey-90;
-  background-color: $colors-grey-warm-4;
+  background-color: $colors-white;
   padding: 85px 0;
-
+  @media (min-width: 1024px) {
+    background-color: $colors-grey-warm-4;
+  }
   h4,
   .body {
     text-align: left;

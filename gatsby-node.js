@@ -72,3 +72,13 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 };
+exports.sourceNodes = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type FeedJobLists implements Node {
+      title: String,
+      link: String
+    }
+  `
+  createTypes(typeDefs)
+}

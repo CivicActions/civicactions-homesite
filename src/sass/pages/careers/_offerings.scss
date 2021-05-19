@@ -1,6 +1,9 @@
 .careers--offerings-section {
   width: 100%;
-  padding: 120px 0;
+  padding: 48px 0;
+  @media (min-width: 1024px) {
+    padding: 120px 0;
+  }
 
   .inner {
     position: relative;
@@ -25,12 +28,35 @@
   }
 
   .offerings-grid {
-    margin: 64px 0 120px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    display: inline-grid;
-    grid-column-gap: 60px;
-    grid-row-gap: 60px;
+    @media(min-width: 1024px) {
+      margin: 64px 0 120px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      display: inline-grid;
+      grid-column-gap: 60px;
+      grid-row-gap: 60px;
+    }
+
+    .offering {
+      h4 {
+        float: left;
+        padding-left: 20px;
+        padding-top: 15px;
+      }
+      img {
+        float: left;
+        width: 57px;
+        height: 57px;
+        padding-left: 10px;
+        @media(min-width: 1024px) {
+          width: 90px;
+          height: 90px;
+        }
+      }
+      .body {
+        clear: both;
+      }
+    }
   }
 
   img {
