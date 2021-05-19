@@ -27,12 +27,16 @@ const Footer = () => {
             technology, consulting, and training services to government.
           </div>
           <div className='body-small'>
-            Check out our open positions or <br />
-            learn about contracting with us.
+            We're always hiring!
           </div>
           <div className='body-small'>
-            Our team is fully distributed, but our mailing address is:3527 Mt.
-            Diablo Blvd., Unit 269Lafayette, CA 94549
+            <a href='/careers'>Check out our open positions</a> or <br />
+            <a href="">learn about contracting with us.</a>
+          </div>
+          <div className='body-small'>
+            Our team is fully distributed, but our mailing address is:<br />
+            3527 Mt. Diablo Blvd., Unit 269<br />
+            Lafayette, CA 94549
           </div>
         </div>
         <div className='grid-item-3'>
@@ -49,7 +53,7 @@ const Footer = () => {
                 Press
               </Link>
             </div>
-            <Link to='/services'>SERVICES</Link>
+            <Link className='footer--services-link' to='/services'>SERVICES</Link>
             <div className='column'>
               <Link to=''>OUR WORK</Link>
               <Link className='body-small' to=''>
@@ -60,7 +64,7 @@ const Footer = () => {
               </Link>
             </div>
             <Link to=''>INSIGHTS</Link>
-            <Link to='/careers'>CAREERS</Link>
+            <Link className='footer--careers-link' to='/careers'>CAREERS</Link>
             <Link to=''>CONTACT</Link>
           </nav>
         </div>
@@ -73,8 +77,8 @@ const Footer = () => {
             contact@civicactions.com
           </div>
           <div className='bottom-links'>
-            <div className='body-small'> © 2010 — 2021</div>
-            <div className='body-small'> Accessibility</div>
+            <div className='body-small'>© 2010 — 2021</div>
+            <div className='body-small'><a href="">Accessibility</a></div>
             <div className='body-small'>Privacy — Terms</div>
           </div>
         </div>
