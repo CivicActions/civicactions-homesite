@@ -30,28 +30,21 @@ const PressReleases = () => {
                         <span>FCW: March 22, 2021</span>
                         <h2 className='h4'>Recommendations for a Federal Compliance Library</h2>
                         <p className='body'>To help federal agencies achieve security compliance faster, a systems-thinking approach is required. CivicActions Director of Federal Strategy Mary Lazzeri shows how a library of reusable components can save time and money on the ATO process.</p>
-                        <p className='body'>Full story: <a href=''>ATO ASAP: Streamlining government security with a Federal Compliance Library</a>
-                        </p>
-                    </div>
-                    <div className='press-release--items'>
-                        <span>FCW: February 4, 2021</span>
-                        <h2 className='h4'>Recommendations for a Federal Compliance Library</h2>
-                        <p className='body'>To help federal agencies achieve security compliance faster, a systems-thinking approach is required. CivicActions Director of Federal Strategy Mary Lazzeri shows how a library of reusable components can save time and money on the ATO process.</p>
-                        <p className='body'>Full story: <a href=''>ATO ASAP: Streamlining government security with a Federal Compliance Library</a>
+                        <p className='body'>Full story: <a href='https://gcn.com/articles/2021/02/04/accessibility-compliance-as-code.aspx'>ATO ASAP: Streamlining government security with a Federal Compliance Library</a>
                         </p>
                     </div>
                     <div className='press-release--items'>
                         <span>FCW: February 4, 2021</span>
                         <h2 className='h4'>Fixing government security compliance with rapid ATO</h2>
                         <p className='body'>The process to get an Authority to Operate is outdated and is causing security risks to the federal government. Director of Federal Strategy Mary Lazerri shows the way toward a modern and agile approach to ATO.</p>
-                        <p className='body'>Full story: <a href=''>ATO ASAP: Let’s finally fix the security compliance problem</a>
+                        <p className='body'>Full story: <a href='https://fcw.com/articles/2021/02/04/comment-lazzeri-automate-ato.aspx'>ATO ASAP: Let’s finally fix the security compliance problem</a>
                         </p>
                     </div>
                     <div className='press-release--items'>
                         <span>News Release: January 7, 2021</span>
                         <h2 className='h4'>CivicActions named to 2021 GovTech 100 top government technology companies list</h2>
                         <p className='body'>For the fifth year in a row, we’re honored to be listed among leading digital services firms serving state and local agencies during these unprecedented times — when modern and accessible government services matter more than ever.</p>
-                        <p className='body'>Full story: <a href=''>2021 GovTech 100 List</a>
+                        <p className='body'>Full story: <a href='https://www.govtech.com/100/2021/'>2021 GovTech 100 List</a>
                         </p>
                     </div>
                     <div className='press-release--items'>
