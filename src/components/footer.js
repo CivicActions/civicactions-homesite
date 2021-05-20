@@ -4,80 +4,73 @@ import { Link } from 'gatsby';
 import SocialIcons from './social-icons/social-icons';
 import extendedLogo from '../files/icons/ca-extended-logo.svg';
 
-
-
 const Footer = () => {
   return (
     <footer className='footer'>
-      <div className='inner'>
-        <div className='grid-item-1 footer__branding '>
+      <div className='inner grid-container'>
+        <div className='grid-container__item footer__branding '>
           <Link to='/'>
             <img src={extendedLogo} alt='Civic Actions Logo'></img>
           </Link>
-
-          <SocialIcons />
-
         </div>
-        <div className='grid-item-2'>
-          <div className='body-small'>
-            We're a mid-size professional services firm providing design,
-            technology, consulting, and training services to government.
-          </div>
-          <div className='body-small'>
-            We're always hiring!
-          </div>
-          <div className='body-small'>
-            <a href='/careers'>Check out our open positions</a> or <br />
-            <a href="">learn about contracting with us.</a>
-          </div>
-          <div className='body-small'>
-            Our team is fully distributed, but our mailing address is:<br />
+        <div className='grid-container__item footer__social '>
+          <SocialIcons />
+        </div>
+        <div className='grid-container__item footer__about-text'>
+          <div>
+            <p>We're a mid-size professional services firm providing design,
+            technology, consulting, and training services to government.</p>
+
+            <p>We're always hiring!</p>
+
+            <Link to='/careers'>Check out our open positions</Link> or <br />
+            <Link to='/contracting'>learn about contracting with us.</Link>
+
+            <p>Our team is fully distributed, but our mailing address is:<br />
+              {/* @todo pull this in from the site metaData */}
             3527 Mt. Diablo Blvd., Unit 269<br />
             Lafayette, CA 94549
+            </p>
           </div>
         </div>
-        <div className='grid-item-3'>
-          <nav>
-            <div className='column'>
-              <Link to=''>COMPANY</Link>
-              <Link className='body-small' to=''>
-                About
-              </Link>
-              <Link className='body-small' to=''>
-                Team
-              </Link>
-              <Link className='body-small' to=''>
-                Press
-              </Link>
-            </div>
-            <Link className='footer--services-link' to='/services'>SERVICES</Link>
-            <div className='column'>
-              <Link to=''>OUR WORK</Link>
-              <Link className='body-small' to=''>
-                Case studies
-              </Link>
-              <Link className='body-small' to=''>
-                Approach
-              </Link>
-            </div>
-            <Link to=''>INSIGHTS</Link>
-            <Link className='footer--careers-link' to='/careers'>CAREERS</Link>
-            <Link to=''>CONTACT</Link>
-          </nav>
-        </div>
-        <div className='grid-item-4'>
-          <div className='body-small'>
+        <div className='grid-container__item footer__contact'>
+          <div className='footer__about-text'>
             Get in touch via phone or email:
             <br />
             510-408-7510
             <br />
             contact@civicactions.com
           </div>
-          <div className='bottom-links'>
-            <div className='body-small'>© 2010 — 2021</div>
-            <div className='body-small'><a href="">Accessibility</a></div>
-            <div className='body-small'>Privacy — Terms</div>
-          </div>
+        </div>
+        <div className='grid-container__item footer__menu--wrapper'>
+          <nav aria-labelledby="Civicactions Footer menu" className="footer__menu">
+            <ul className="footer__menu--list">
+              <li className="child-menu--wrapper top-link">
+                <Link className="parent-link" to=''>Company</Link>
+                <ul>
+                  <li><Link to=''>About</Link></li>
+                  <li><Link to=''>Team</Link></li>
+                  <li><Link to=''>Press</Link></li>
+                </ul>
+              </li>
+              <li className="top-link"><Link className="parent-link" to='/services'>Services</Link></li>
+              <li className="child-menu--wrapper top-link">
+                <Link className="parent-link" to=''>Our work</Link>
+                <ul>
+                  <li><Link to=''>Case Studies</Link></li>
+                  <li><Link to=''>Approach</Link></li>
+                </ul>
+              </li>
+              <li className="top-link"><Link className="parent-link" to='/'>Insights</Link></li>
+              <li className="top-link"><Link className="parent-link" to='/careers'>Careers</Link></li>
+              <li className="top-link"><Link className="parent-link" to='/contact'>Contact</Link></li>
+            </ul>
+          </nav>
+        </div>
+        <div className='grid-container__item footer__bottom-links'>
+          <p><Link to='/accessibility'>Accessibility</Link></p>
+          <p><Link to='/privacy'>Privacy —- Terms</Link></p>
+          <p>© 2010 —- 2021</p>
         </div>
       </div>
     </footer>
