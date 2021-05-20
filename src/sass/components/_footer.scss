@@ -1,201 +1,151 @@
 .footer {
+  @include small-text;
+
   background-color: #f5f5f0;
 
+  //=========== Mobile-first styles ============
+
+  // @todo Site-wide inner containers should be consistently sized.
   .inner {
-    padding: 48px 0 ;
-    max-width: 1200px;
-    position: relative;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2.5fr 7fr;
-    grid-template-rows: 0.6fr 1fr 0.8fr;
-    column-gap: 5%;
+    margin: 0 5vw;
+    padding: px-to-rem(48px) 0;
   }
 
-  .grid-item-1 {
-    grid-column: span 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .social-icons {
-    display: flex;
-    flex-direction: row;
-    column-gap: 24px;
-  }
-
-  .grid-item-2 {
-    grid-row: span 2;
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-    justify-content: space-between;
-    margin-bottom: 90px;
-    @media(min-width: 768px) {
-      margin-bottom: 0;
-    }
-  }
-
-  .grid-item-3 {
-    nav {
-      position: relative;
-      @media(min-width: 1024px) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: start;
-      }
-      & > a {
-
-        @media (min-width: 768px) {
-          position: absolute;
-          top: 0;
-          right: 0;
-        }
-        @media (min-width: 1024px) {
-          position: relative;
-        }
-      }
-      a.footer--services-link {
-        @media (min-width: 768px) {
-          position: relative !important;
-        }
-
-      }
-
-      a.footer--careers-link {
-        @media(min-width: 768px) {
-          top: 39px;
-        }
-        @media(min-width: 1024px) {
-          top: 0;
-        }
-
-      }
-      & > a:last-child {
-        @media(min-width: 768px) {
-          top: 78px;
-        }
-        @media(min-width: 1024px) {
-          top: 0;
-        }
-      }
-
-
+  &__menu {
+    // @todo Standardize ul and li styles sitewide
+    ul {
+      padding-left: 0;
     }
 
-    .column {
-      align-items: flex-start;
-      justify-content: start;
-    }
-
-    .body-small {
-      font-weight: normal;
-      padding: 8px 0;
+    li {
+      list-style: none;
+      padding: px-to-rem(16px) 0;
     }
 
     a {
       color: $colors-grey-90;
       text-decoration: none;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 14px;
-      font-family: $secondary-font;
-      padding: 16px 0;
-      display: block;
-      @media(min-width: 1024px) {
 
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .child-menu--wrapper {
+      padding: px-to-rem(16px) 0 0;
+      break-inside: avoid;
+    }
+  }
+
+  .footer__about-text {
+    max-width: px-to-rem(360px);
+  }
+
+  //=========== Tablet styles ============
+
+  @media (min-width: $tablet-screen) {
+    // Name the footer areas.
+    .footer__branding { grid-area: branding; }
+    .footer__social { grid-area: social; }
+    .footer__about-text { grid-area: about; }
+    .footer__contact { grid-area: contact; }
+    .footer__menu--wrapper { grid-area: menu_wrapper; }
+    .footer__bottom-links { grid-area: links; }
+
+    .grid-container {
+      grid-template-columns: 1fr 40%;
+      grid-template-rows: auto;
+      grid-template-areas: 
+      "branding branding"
+      "social social"
+      "about menu_wrapper"
+      "contact menu_wrapper"
+      "links menu_wrapper";
+    }
+
+    .footer__menu {
+      columns: 2;
+
+      .child-menu--wrapper {
+        &:first-child {
+          padding-top: 0;
+        }
       }
     }
   }
 
-  .grid-item-4 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
+  //=========== Desktop Styles ===========
 
-    .bottom-links {
+  @media (min-width: $large-screen) {
+    .grid-container {
+      grid-template-columns: 35% 1.5fr repeat(3, 1fr);
+      grid-template-areas :
+        "branding branding branding . ."
+        "about menu_wrapper menu_wrapper menu_wrapper menu_wrapper"
+        "about contact . social social"
+        "about contact links links links"
+    }
+
+    .footer__menu {
+      columns: 1;
+
+      &--list {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+
+        .top-link {
+          padding: 0;
+        }
+      }
+
+      li {
+        padding: px-to-rem(14px) 0;
+      }
+    }
+
+    .footer__about-text {
+      p {
+        margin: px-to-rem(24px) 0;
+
+        &:first-child {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    .footer__bottom-links {
       display: flex;
-      flex-direction: column-reverse;
-      align-items: flex-end;
-      column-gap: 36px;
-      @media(min-width: 1024px) {
-        flex-direction: row;
+      flex-direction: row-reverse;
+      gap: px-to-rem(36px);
+      align-self: end;
+
+      p {
+        margin: 0;
       }
     }
-    & > .body-small {
-      position: absolute;
-      top: 42%;
-      @media(min-width: 768px) {
-        position: relative;
-        top: 0;
-      }
-    }
-    .body-small {
-      font-weight: normal;
 
+    .footer__contact,
+    .footer__social {
+      align-self: end;
+    }
+
+    .social-icon {
+      text-align: right;
+      padding: 0;
     }
   }
 
-  @media screen and (max-width: $large-screen) {
-    .inner {
-      margin: 0 5vw;
-    }
+}
+
+.grid-container {
+  @media (min-width: 768px) {
+    display: grid;
   }
+}
 
-  @media screen and (max-width: $tablet-screen) {
-    .inner {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 0.5fr 1fr 0.8fr;
-      column-gap: 5%;
-    }
-
-    .grid-item-1 {
-      grid-column: span 2;
-      flex-direction: column;
-      justify-content: start;
-      align-items: flex-start;
-      row-gap: 33px;
-      margin-bottom: 32px;
-    }
-
-    .grid-item-3 {
-      grid-row: span 3;
-    }
-
-    nav {
-      column-gap: 50px;
-      margin: 0 20px;
-      //row-gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .grid-item-4 {
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-between;
-      row-gap: 24px;
-      margin-top: 24px;
-    }
-
-    .grid-item-4 > .bottom-links {
-
-      align-items: flex-start;
-      row-gap: 16px;
-    }
-  }
-
-  @media screen and (max-width: $small-screen) {
-    .grid-item-2,
-    .grid-item-3,
-    .grid-item-4 {
-      grid-column: span 2;
-    }
-
-    nav {
-      margin: 24px 50% 0 0;
-    }
-  }
+.parent-link {
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0;
 }
