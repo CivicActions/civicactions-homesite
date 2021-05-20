@@ -1,9 +1,16 @@
-section {
-
+section,
+.section {
   margin-bottom: 48px;
+
   .inner {
     margin: 0 5vw;
   }
+
+  // Sections right above the footer should have no bottom margin.
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   .subsection {
     padding: 0 0 32px; // mobile-padding - paragraph-padding
   }

@@ -5,6 +5,14 @@ $medium-screen: 600px !default;
 $medium-large-screen: 1000px !default;
 $large-screen: 1201px !default;
 
+// Mixins
+@mixin small-text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+} 
+
 h1,
 h2,
 h3,
@@ -163,8 +171,5 @@ a {
 }
 
 .body-small {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
+  @include small-text
 }
