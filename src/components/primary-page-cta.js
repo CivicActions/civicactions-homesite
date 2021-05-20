@@ -1,6 +1,7 @@
 import '../sass/styles.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
+import LinkButton from '../components/link-button';
 
 const PrimaryPageCTA = ({
   title,
@@ -16,8 +17,12 @@ const PrimaryPageCTA = ({
           <h5>{subtitle}</h5>
         </div>
         <div className='row'>
-          <div className='primary-button'>{primaryButtonText}</div>
-          <div className='secondary-button'>{secondaryButtonText}</div>
+          <LinkButton src='/contact' type='primary' text={primaryButtonText} />
+          <LinkButton
+            src='/services'
+            type='secondary'
+            text={secondaryButtonText}
+          />
         </div>
       </div>
     </section>

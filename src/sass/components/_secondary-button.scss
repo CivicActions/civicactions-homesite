@@ -1,4 +1,5 @@
-.secondary-button {
+.secondary-button,
+.button__secondary {
   align-items: center;
   padding: 12px 24px;
   background-color: transparent;
@@ -11,21 +12,22 @@
   display: inline-block;
   font-family: $secondary-font;
   text-transform: uppercase;
-}
+  text-decoration: none;
 
-.secondary-button:hover {
-  background-color: $colors-white;
-  color: $colors-grey-90;
-}
+  &:hover {
+    background-color: $colors-white;
+    color: $colors-grey-90;
+  }
 
-.secondary-button:active {
-  background-color: $colors-white;
-  color: $colors-grey-90;
-  background-color: #c9c9c9;
-}
+  &:active {
+    background-color: $colors-white;
+    color: $colors-grey-90;
+    background-color: #c9c9c9;
+  }
 
-.secondary-button:focus {
-  background-color: $colors-white;
-  color: $colors-grey-90;
-  background-color: #c9c9c9;
+  &:focus {
+    background-color: $colors-white;
+    color: $colors-grey-90;
+    background-color: #c9c9c9;
+  }
 }

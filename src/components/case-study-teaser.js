@@ -1,17 +1,20 @@
 import '../sass/styles.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
 const CaseStudyTeaser = ({ img, title, description }) => {
   return (
-    <div className='case-study-teaser'>
-      <img src={img} alt='Client Logo'></img>
-      <div className='img-overlay'> </div>
-      <div className='info'>
-        <h3 className="header--small">{title}</h3>
-        <h4>{description}</h4>
+    <Link to='/'>
+      <div className='case-study-teaser'>
+        <img src={img} alt='Client Logo'></img>
+        <div className='img-overlay'> </div>
+        <div className='info'>
+          <h3 className='header--small'>{title}</h3>
+          <h4>{description}</h4>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
