@@ -39,3 +39,17 @@
 
   }
 }
+.single--press-releases--main {
+  margin-bottom: 120px;
+  .inner {
+    max-width: 720px;
+    margin: 0 auto;
+    span {
+      display: block;
+      padding-bottom: 20px;
+    }
+    .body {
+      padding-bottom: 16px;
+    }
+  }
+}
