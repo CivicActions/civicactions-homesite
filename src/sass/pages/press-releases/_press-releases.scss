@@ -1,0 +1,41 @@
+.temp-press-releases--main-section {
+  margin-bottom: 120px !important;
+  margin-top: 10px;
+  .inner {
+    max-width:720px;
+    margin: 0 auto;
+    .press-release--items {
+      margin-top: 56px;
+      display: grid;
+      span {
+        grid-area: 1/4;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-bottom: 16px;
+        display: block;
+      }
+      h2 {
+        font-size: 18px;
+        grid-area: 2/4;
+        padding-bottom: 16px;
+        line-height: 22px;
+        @media(min-width: 768px) {
+          font-size: 20px;
+          line-height: 34px;
+        }
+        @media(min-width: 1024px) {
+          font-size: 28px;
+        }
+
+      }
+      p {
+        grid-area: 3/4;
+      }
+      p:last-child {
+        padding-top: 16px;
+        grid-area: 4/4;
+      }
+    }
+
+  }
+}
