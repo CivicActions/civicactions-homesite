@@ -100,7 +100,7 @@ internal: Internal!
 Path: String
 Name: String
 Role: String
-Image: String
+Image: File
     }
   `;
   createTypes(typeDefs);
