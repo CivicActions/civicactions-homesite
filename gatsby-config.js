@@ -31,10 +31,10 @@ module.exports = {
         // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
         parserOption: {
           customFields: {
-            item: ['itunes:duration']
-          }
-        }
-      }
+            item: ['itunes:duration'],
+          },
+        },
+      },
     },
     `gatsby-plugin-node-fields`,
     `gatsby-plugin-client-side-redirect`,
@@ -48,7 +48,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://civicactions-content.civicactions-content.app.civicactions.net`,
+        apiURL: `http://localhost:1337`,
         queryLimit: 1000,
         contentTypes: [`case-study`, `press`, `press-release`, `staff-profile`],
         singleTypes: [],

@@ -73,12 +73,35 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 };
 exports.sourceNodes = ({ actions }) => {
-  const { createTypes } = actions
+  const { createTypes } = actions;
   const typeDefs = `
     type FeedJobLists implements Node {
       title: String,
-      link: String
+      link: String,
     }
-  `
-  createTypes(typeDefs)
-}
+    type allStrapiCaseStudy implements Node {
+id: ID!
+parent: Node
+children: [Node!]!
+internal: Internal!
+Path: String
+Name: String
+Title: String
+Style: String
+Client_Name: String
+    }
+
+    type allStrapiStaffProfile implements Node {
+title: String
+id: ID!
+parent: Node
+children: [Node!]!
+internal: Internal!
+Path: String
+Name: String
+Role: String
+Image: String
+    }
+  `;
+  createTypes(typeDefs);
+};

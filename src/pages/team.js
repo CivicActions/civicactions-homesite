@@ -6,28 +6,38 @@ import StaffQuote from '../components/staff-quote.js';
 import Hero from '../components/hero.js';
 import { graphql, useStaticQuery } from 'gatsby';
 import alanaCaseyProfilePicture from '../files/images/alanna_casey_profile.jpg';
-import {Helmet} from "react-helmet";
+import { Helmet } from 'react-helmet';
 
 const TeamPage = () => {
+  const [filterState, setFilterState] = useState(null);
   const data = useStaticQuery(graphql`
     {
       allStrapiStaffProfile {
-        nodes {
-          Name
-          Role
-          Path
-          Image {
-            childImageSharp {
-              gatsbyImageData(width: 264, height: 264, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-            }
+        Name
+        Role
+        Path
+        Image {
+          childImageSharp {
+            gatsbyImageData(
+              width: 264
+              height: 264
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
       }
     }
   `);
 
+  if (
+    data.allStrapiStaffProfile === 'undefined' ||
+    data.allStrapiStaffProfile.team === 'undefined'
+  ) {
+    return 'No team nodes available';
+  }
+
   const teamDataNodes = data.allStrapiStaffProfile.nodes;
-  const [filterState, setFilterState] = useState(null);
 
   const callback = (e) => {
     if (e.target.textContent !== 'undefined') {
@@ -48,33 +58,37 @@ const TeamPage = () => {
   return (
     <RedLayout>
       <Helmet>
-        <title data-react-helmet="true">Civicactions Team Member Page</title>
+        <title data-react-helmet='true'>Civicactions Team Member Page</title>
       </Helmet>
       <Hero
-          title="You've never met a team like this one"
-          description='We are leaders in technology, design, and strategy for
+        title="You've never met a team like this one"
+        description='We are leaders in technology, design, and strategy for
                 government digital services. We combine our diverse expertise
                 and backgrounds to bring value to our customers and each other.'
-        />
+      />
 
-      <section className="team--filter-btns-section">
-        <div className="inner">
-          <FilterButtons parentCallback={callback} team={teamDataNodes} filterState={filterState} />
+      <section className='team--filter-btns-section'>
+        <div className='inner'>
+          <FilterButtons
+            parentCallback={callback}
+            team={teamDataNodes}
+            filterState={filterState}
+          />
         </div>
       </section>
 
-      <section className="team--staff-teasers-grid-section">
-        <div class="inner">
-          <div className="section__teaser-grid">
+      <section className='team--staff-teasers-grid-section'>
+        <div class='inner'>
+          <div className='section__teaser-grid'>
             <TeamTeasers team={team} />
           </div>
         </div>
       </section>
 
       <StaffQuote
-        quote="My teammates are brilliant innovators, high performers, and conscientious human beings. Together we’re working to improve lives."
-        name="Alanna Casey"
-        role="Technical Writer"
+        quote='My teammates are brilliant innovators, high performers, and conscientious human beings. Together we’re working to improve lives.'
+        name='Alanna Casey'
+        role='Technical Writer'
         img={alanaCaseyProfilePicture}
       />
     </RedLayout>
@@ -98,8 +112,7 @@ const FilterButtons = ({ team, parentCallback, filterState }) => {
         className={selected ? 'team-filter-btn selected' : 'team-filter-btn'}
         onClick={(e) => {
           parentCallback(e);
-        }}
-      >
+        }}>
         {role}
       </button>
     );
