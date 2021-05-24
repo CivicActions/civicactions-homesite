@@ -32,19 +32,6 @@ exports.createPages = async ({ graphql, actions }) => {
     throw result.errors;
   }
 
-  const pressReleases = result.data.pressReleases.edges;
-  const PressReleaseTemplate = require.resolve(
-    './src/templates/press-release.js'
-  );
-  pressReleases.forEach((release, index) => {
-    createPage({
-      path: `${release.node.Path}`,
-      component: PressReleaseTemplate,
-      context: {
-        pagePath: release.node.Path,
-      },
-    });
-  });
 
   const caseStudies = result.data.caseStudies.edges;
   const CaseStudyTemplate = require.resolve('./src/templates/case-study.js');

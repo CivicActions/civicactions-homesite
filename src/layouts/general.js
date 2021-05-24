@@ -1,6 +1,5 @@
 import '../sass/styles.scss';
 import React, { useState } from 'react';
-import Banner from '../components/banner.js';
 import Header from '../components/header.js';
 import Footer from '../components/footer.js';
 import Sidebar from '../components/sidebar.js';
@@ -20,7 +19,7 @@ const GeneralLayout = ({ children }) => {
       />
       <div>
 
-        <Banner boldText="We’re hiring! " regularText="View open positions here" />
+
         <SkipNavLink id="main-content" />
 
         <Header onMenuClick={openSidebar} mobileMenuHiddenBool={hideSidebar} />
