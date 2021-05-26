@@ -22,19 +22,22 @@ const CaseStudyTemplate = ({data}) => {
                 description={caseStudy.Summary}
             />
 
-
-        <div className='case-study--hero-image'>
-            <img src={caseStudy.Hero_Image.relativePath}></img>
-        </div>
+            {caseStudy.Hero_Image &&
+            <div className='case-study--hero-image'>
+                <img src={caseStudy.Hero_Image.relativePath}></img>
+            </div>
+            }
 
         <section className='section--case-study--stats'>
+            <div className='inner'>
             {caseStudy.Stats.map(({stat}, index) => (
-                <div>
-                    <p>{caseStudy.Stats[index].Numerical_Element}</p>
-                    <p>{caseStudy.Stats[index].Content_Element}</p>
+                <div className='single-stat'>
+                    <p className='stat--number'>{caseStudy.Stats[index].Numerical_Element}</p>
+                    <p className='body stat--text'>{caseStudy.Stats[index].Content_Element}</p>
                 </div>
 
             ))}
+            </div>
         </section>
 
         <Quote
