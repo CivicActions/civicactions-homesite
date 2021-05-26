@@ -25,7 +25,7 @@
     align-items: flex-start;
     justify-content: start;
 
-    h4 {
+    h2 {
       font-family: $secondary-font;
       padding-bottom: 24px;
     }
@@ -45,6 +45,15 @@
       margin: 0 5vw;
       margin-top: 50px;
     }
+  }
+
+  // Override the heading style, but just for large screens.
+  @media screen and (min-width: $large-screen) {
+    h2 {
+      font-size: 28px;
+      line-height: 39px;
+    }
+
   }
   @media screen and (max-width: $medium-screen) {
     margin: 50px 0;
