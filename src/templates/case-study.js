@@ -138,10 +138,11 @@ const CaseStudyTemplate = ({data}) => {
             </div>
         </section>
         <section className='section--case-study--related'>
+            <h2>Related case studies</h2>
             <div className='inner'>
-                <h2>Related case studies</h2>
+
                 {caseStudy.Related_Case_Studies.map(({node}, index) => (
-                    <div>
+                    <div className='related-case-study'>
                         {caseStudy.Related_Case_Studies[index].Image && <img src={caseStudy.Related_Case_Studies[index].Image.relativePath}/>}
                         <a href={caseStudy.Related_Case_Studies[index].Path}>
                             {caseStudy.Related_Case_Studies[index].Title}

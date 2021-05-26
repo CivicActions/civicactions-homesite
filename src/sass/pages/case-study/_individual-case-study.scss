@@ -161,6 +161,7 @@
   .section--case-study--outcomes {
     background-color: #0F6460;
     padding: 64px 0;
+    margin-bottom: 0;
     h2 {
       color: $colors-white;
       text-align: center;
@@ -210,6 +211,23 @@
 
       .staff-role {
         font-size: 16px;
+      }
+    }
+  }
+  .section--case-study--related {
+    max-width: 1200px;
+    margin: 0 auto;
+    h2 {
+      padding-bottom: 23px;
+    }
+    .inner {
+      display: flex;
+      margin: 0;
+      .related-case-study {
+        margin-right: 35px;
+      }
+      .related-case-study:last-child {
+        margin-right: 0;
       }
     }
   }
