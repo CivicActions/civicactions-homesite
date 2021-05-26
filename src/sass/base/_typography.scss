@@ -89,6 +89,11 @@ h4,
 .h4 {
   font-style: normal;
   font-weight: 300;
+  font-size: 16px;
+  @media screen and (min-width: $medium-screen) {
+    font-size: 20px;
+    line-height: 33px;
+  }
 }
 
 h5,
