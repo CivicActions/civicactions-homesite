@@ -5,7 +5,6 @@ import GeneralLayout from '../layouts/general';
 import {Helmet} from "react-helmet";
 import CaseStudyHero from "../components/case-study-hero";
 import Quote from "../components/quote";
-import CoverImage from '../files/images/case-study-teasers/case-study-teaser-img-2.png';
 
 const CaseStudyTemplate = ({data}) => {
   const caseStudy = data.allStrapiCaseStudy.edges[0].node;
@@ -50,23 +49,23 @@ const CaseStudyTemplate = ({data}) => {
                 <div className='case-study-challenge-goal'>
                     <div className='challenge'>
                         <h2>The challenge</h2>
-                        <ReactMarkdown source={caseStudy.Challenge_Goal.Challenge} />
+                        <ReactMarkdown className='body' source={caseStudy.Challenge_Goal.Challenge} />
                         <p className='body'>{caseStudy.Challenge_Goal.Challenge}</p>
                     </div>
                     <div className='goal'>
                         <h3>Client goal</h3>
-                        <ReactMarkdown children={caseStudy.Challenge_Goal.Client_Goal} />
+                        <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Client_Goal} />
 
                     </div>
                 </div>
                 <div className='case-study--expertise-tools'>
                     <div className='expertise'>
                         <h3>Expertise</h3>
-                        <ReactMarkdown children={caseStudy.Expertise[0].Expertise_Content} />
+                        <ReactMarkdown className='body' children={caseStudy.Expertise[0].Expertise_Content} />
                     </div>
                     <div className='tools'>
                         <h3>Tools and technologies</h3>
-                        <ReactMarkdown children={caseStudy.Tools_Technologies[0].Tools_Technologies_Content} />
+                        <ReactMarkdown className='body' children={caseStudy.Tools_Technologies[0].Tools_Technologies_Content} />
                     </div>
                 </div>
             </div>
@@ -81,7 +80,7 @@ const CaseStudyTemplate = ({data}) => {
                         {index === 0 &&
                             <div className='first-approach'>
                                 <h2>{caseStudy.Approach[index].Title}</h2>
-                                <ReactMarkdown  children={caseStudy.Approach[index].Text}/>
+                                <ReactMarkdown className='body' children={caseStudy.Approach[index].Text}/>
                             </div>
                         }
                         {index != 0 &&
@@ -89,16 +88,15 @@ const CaseStudyTemplate = ({data}) => {
 
                                 <div className='title-text--wrapper'>
                                     <h3>{caseStudy.Approach[index].Title}</h3>
-                                    <ReactMarkdown children={caseStudy.Approach[index].Text}/>
+                                    <ReactMarkdown className='body' children={caseStudy.Approach[index].Text}/>
                                 </div>
-                            <div className='image--wrapper'>
-                                <img src={CoverImage}></img>
-                                {/*{index != 0 &&
+                            {caseStudy.Approach[index].Image && <div className='image--wrapper'>
+                                {index != 0 &&
                                 <div>{caseStudy.Approach[index].Image &&
                                 <img src={caseStudy.Approach[index].Image.relativePath} alt={caseStudy.Approach[index].Image.alt}></img>}
                                 {caseStudy.Approach[index].Image.caption && <span className='caption'>{caseStudy.Approach[index].Image.caption}</span>}
-                                </div> }*/}
-                            </div>
+                                </div> }
+                            </div>}
 
                         </div>
                         }
@@ -110,12 +108,13 @@ const CaseStudyTemplate = ({data}) => {
 
         {/* Todo Key outcomes*/}
         {caseStudy.Key_Outcome && <section className='section--case-study--outcomes'>
+            <h2>Key outcomes</h2>
             <div className='inner'>
-                <h2>Key outcomes</h2>
+
                 {caseStudy.Key_Outcome.map(({node}, index) => (
-                    <div>
-                        <p className='body label'>{caseStudy.Key_Outcome[index].Title}</p>
-                        <ReactMarkdown children={caseStudy.Key_Outcome[index].Text} />
+                    <div className='key-outcome'>
+                        <p className='label'>{caseStudy.Key_Outcome[index].Title}</p>
+                        <ReactMarkdown className='body' children={caseStudy.Key_Outcome[index].Text} />
                     </div>
                 ))}
             </div>

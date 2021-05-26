@@ -158,6 +158,34 @@
       }
     }
   }
+  .section--case-study--outcomes {
+    background-color: #0F6460;
+    padding: 64px 0;
+    h2 {
+      color: $colors-white;
+      text-align: center;
+      padding-bottom: 48px;
+    }
+    .inner {
+      @media(min-width: 1024px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 0 120px !important;
+      }
+      .key-outcome {
+        background-color: #E7EFEF;
+        padding: 32px 24px;
+        .label {
+          font-weight: bold;
+          text-transform: uppercase;
+
+        }
+
+      }
+
+    }
+  }
   .section--case-study--staff {
     background-color: #F5F5F0;
     margin-bottom: 60px;
