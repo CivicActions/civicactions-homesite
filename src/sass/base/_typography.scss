@@ -70,12 +70,12 @@ h3,
 %h3,
 .h3 {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 18px;
   line-height: 22px;
 
   @media screen and (min-width: $medium-screen) {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 33px;
   }
 
@@ -85,21 +85,14 @@ h3,
   }
 }
 
-h4
+h4,
 .h4 {
   font-style: normal;
   font-weight: 300;
-  font-size: 28px;
-  line-height: 39px;
-
-  @media screen and (max-width: $large-screen) {
-    font-size: 24px;
+  font-size: 16px;
+  @media screen and (min-width: $medium-screen) {
+    font-size: 20px;
     line-height: 33px;
-  }
-
-  @media screen and (max-width: $medium-screen) {
-    font-size: 16px;
-    line-height: 22px;
   }
 }
 

@@ -57,10 +57,10 @@ const HomePage = () => {
             ref={(e) => (fadersRef.current[0] = e)}
             className='fade-in'></img>
           <div className='info-text'>
-            <h2>
+            <h1>
               We help government deliver better public services through modern
               technology and design.
-            </h2>
+            </h1>
             <LinkButton
               src='/'
               size='large'
