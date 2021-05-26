@@ -1,0 +1,147 @@
+.case-studies {
+  .hero-component {
+    box-shadow: none;
+    .inner {
+      display: grid;
+      .client-name {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 18px;
+        grid-area: 1/3;
+      }
+      h1 {
+        grid-area: 2/3;
+      }
+      p {
+        grid-area: 3/3;
+      }
+    }
+
+  }
+  .case-study--hero-image {
+    img {
+      width: 100%;
+      margin-bottom: 127px;
+    }
+    @media(min-width: 1200px) {
+      margin: 0 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+  .staff-quote.quote {
+    padding: 221px 0 72px;
+    .inner {
+      max-width: 916px;
+      padding: 0;
+    }
+    .source {
+      padding-top: 23px;
+      font-weight: 300;
+    }
+    .quote {
+      margin-left: 75px;
+    }
+  }
+  .section--case-study--challenge-to-tools {
+    padding: 72px;
+    margin-bottom: 0;
+    .inner {
+
+      .case-study-challenge-goal {
+        max-width: 720px;
+        margin: 0 auto;
+        h2 {
+          padding-bottom: 24px;
+        }
+        .challenge,
+        .goal {
+          padding-bottom: 64px;
+        }
+      }
+      .case-study--expertise-tools {
+        @media (min-width: 1024px) {
+          display: flex;
+        }
+        .expertise,
+        .tools {
+          background-color: #F5F5F0;
+          width: 100%;
+          padding: 48px 82px;
+        }
+        .tools {
+          @media (min-width: 1024px) {
+            margin-left: 24px;
+          }
+        }
+      }
+    }
+  }
+  .section--case-study--approaches {
+    .inner {
+      overflow: auto;
+    }
+    .first-approach {
+      margin-top: 0 !important;
+    }
+    .approach,
+    .first-approach {
+      max-width: 720px;
+      margin: 60px auto;
+      h2 {
+        padding-bottom: 8px;
+      }
+      h3 {
+        padding-bottom: 14px;
+      }
+      p {
+        padding-bottom: 10px;
+      }
+    }
+    .approach--with-image {
+      margin: 60px 0;
+      @media(min-width: 1024px) {
+        display: flex;
+
+      }
+      img {
+        @media(min-width: 1024px) {
+          min-width: 640px;
+        }
+      }
+      .title-text--wrapper {
+        @media(min-width: 1024px) {
+          margin-right: 45px;
+        }
+      }
+    }
+  }
+  .section--case-study--staff {
+    background-color: #F5F5F0;
+    margin-bottom: 60px;
+    h2 {
+      text-align: center;
+      padding-top: 64px;
+    }
+    .related-staff--wrapper {
+      @media(min-width: 768px) {
+        display: flex;
+        justify-content: center;
+      }
+      .related-staff {
+        padding: 20px;
+        @media(min-width: 768px) {
+          padding: 28px;
+        }
+        @media(min-width: 1024px) {
+          padding: 48px;
+        }
+      }
+
+      .staff-role {
+        font-size: 16px;
+      }
+    }
+  }
+
+}
