@@ -6,10 +6,11 @@ import {Helmet} from "react-helmet";
 import CaseStudyHero from "../components/case-study-hero";
 import Quote from "../components/quote";
 import PrimaryPageCTA from "../components/primary-page-cta";
+import {GatsbyImage, getImage} from "gatsby-plugin-image";
 
 const CaseStudyTemplate = ({data}) => {
   const caseStudy = data.allStrapiCaseStudy.edges[0].node;
-    console.log(caseStudy.Related_Case_Studies);
+    console.log(caseStudy.staff_profiles);
   return (
     <GeneralLayout>
         <Helmet>
@@ -133,7 +134,9 @@ const CaseStudyTemplate = ({data}) => {
                 <div className='related-staff--wrapper'>
                 {caseStudy.staff_profiles.map(({node}, index) => (
                     <div className='related-staff'>
-                        {caseStudy.staff_profiles[index].Image && <img src={caseStudy.staff_profiles[index].Image.relativePath}/>}
+                        {caseStudy.staff_profiles[index].Image &&
+                        <GatsbyImage image={getImage(caseStudy.staff_profiles[index].Image)} alt={''} />
+                        }
                         <p className='body staff-name'><a href={caseStudy.staff_profiles[index].Path}>
                             {caseStudy.staff_profiles[index].Name}
                         </a></p>
@@ -233,6 +236,11 @@ query CaseStudyQuery($pagePath: String!) {
           Name
           Role
           Path
+          Image {
+            childImageSharp {
+              gatsbyImageData(width: 264, height: 264, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            }
+          }
         }
       }
     }
