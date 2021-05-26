@@ -149,7 +149,7 @@ const CaseStudyTemplate = ({data}) => {
 
                 {caseStudy.Related_Case_Studies.map(({node}, index) => (
                     <div className='related-case-study'>
-                        <a className='body' href={caseStudy.Related_Case_Studies[index].Path}>
+                        <a href={caseStudy.Related_Case_Studies[index].Path}>
                         {caseStudy.Related_Case_Studies[index].Cover_Image[0] && <img src={caseStudy.Related_Case_Studies[index].Cover_Image[0].url} alt={caseStudy.Related_Case_Studies[index].Cover_Image[0].alternativeText}/>}
 
                             {caseStudy.Related_Case_Studies[index].Title}
