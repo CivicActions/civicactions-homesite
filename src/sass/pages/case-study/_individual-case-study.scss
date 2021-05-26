@@ -216,15 +216,28 @@
   }
   .section--case-study--related {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 120px;
     h2 {
       padding-bottom: 23px;
     }
     .inner {
-      display: flex;
       margin: 0;
+      @media(min-width:1024px) {
+        display: flex;
+      }
       .related-case-study {
-        margin-right: 35px;
+        display: grid;
+        max-width: 373px;
+        @media(min-width: 1024px) {
+          margin-right: 35px;
+        }
+        img {
+          max-width: 373px;
+        }
+        a {
+          padding-top: 22px;
+          text-decoration: none;
+        }
       }
       .related-case-study:last-child {
         margin-right: 0;

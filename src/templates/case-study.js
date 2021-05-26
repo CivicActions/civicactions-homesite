@@ -5,10 +5,11 @@ import GeneralLayout from '../layouts/general';
 import {Helmet} from "react-helmet";
 import CaseStudyHero from "../components/case-study-hero";
 import Quote from "../components/quote";
+import PrimaryPageCTA from "../components/primary-page-cta";
 
 const CaseStudyTemplate = ({data}) => {
   const caseStudy = data.allStrapiCaseStudy.edges[0].node;
-
+    console.log(caseStudy.Related_Case_Studies);
   return (
     <GeneralLayout>
         <Helmet>
@@ -23,7 +24,8 @@ const CaseStudyTemplate = ({data}) => {
 
             {caseStudy.Hero_Image &&
             <div className='case-study--hero-image'>
-                <img src={caseStudy.Hero_Image.relativePath}></img>
+                <img src={caseStudy.Hero_Image[0].url} alt={caseStudy.Hero_Image[0].alternativeText}></img>
+                {caseStudy.Hero_Image[0].caption && <span className='caption'>{caseStudy.Hero_Image[0].caption}</span> }
             </div>
             }
 
@@ -91,12 +93,16 @@ const CaseStudyTemplate = ({data}) => {
                                     <ReactMarkdown className='body' children={caseStudy.Approach[index].Text}/>
                                 </div>
                             {caseStudy.Approach[index].Image && <div className='image--wrapper'>
-                                {index != 0 &&
-                                <div>{caseStudy.Approach[index].Image &&
-                                <img src={caseStudy.Approach[index].Image.relativePath} alt={caseStudy.Approach[index].Image.alt}></img>}
-                                {caseStudy.Approach[index].Image.caption && <span className='caption'>{caseStudy.Approach[index].Image.caption}</span>}
-                                </div> }
-                            </div>}
+                                <div>
+                                    <img src={caseStudy.Approach[index].Image[0].url}
+                                         alt={caseStudy.Approach[index].Image[0].alternativeText}></img>
+                                        {caseStudy.Approach[index].Image[0].caption &&
+                                        <span className='caption'>{caseStudy.Approach[index].Image[0].caption}</span>
+                                        }
+                                </div>
+
+                            </div>
+                            }
 
                         </div>
                         }
@@ -143,8 +149,9 @@ const CaseStudyTemplate = ({data}) => {
 
                 {caseStudy.Related_Case_Studies.map(({node}, index) => (
                     <div className='related-case-study'>
-                        {caseStudy.Related_Case_Studies[index].Image && <img src={caseStudy.Related_Case_Studies[index].Image.relativePath}/>}
-                        <a href={caseStudy.Related_Case_Studies[index].Path}>
+                        <a className='body' href={caseStudy.Related_Case_Studies[index].Path}>
+                        {caseStudy.Related_Case_Studies[index].Cover_Image[0] && <img src={caseStudy.Related_Case_Studies[index].Cover_Image[0].url} alt={caseStudy.Related_Case_Studies[index].Cover_Image[0].alternativeText}/>}
+
                             {caseStudy.Related_Case_Studies[index].Title}
                         </a>
 
@@ -152,7 +159,12 @@ const CaseStudyTemplate = ({data}) => {
                 ))}
             </div>
         </section>
-
+            <PrimaryPageCTA
+                title='Let’s build a public success story.'
+                subtitle='Get in touch to start.'
+                primaryButtonText='Put us to work'
+                secondaryButtonText='Join our team'
+            />
         </div>
 
 
@@ -167,8 +179,10 @@ query CaseStudyQuery($pagePath: String!) {
       node {
         Approach {
           Text
-          Image {
-            relativePath
+          Image  {
+            url
+            alternativeText
+            caption
           }
           Title
         }
@@ -182,8 +196,10 @@ query CaseStudyQuery($pagePath: String!) {
           Expertise_Content
         }
         Hero_Image {
-          relativePath
-        }
+            url
+            alternativeText
+            caption
+          }
         Key_Outcome {
           Text
           Title
@@ -195,6 +211,10 @@ query CaseStudyQuery($pagePath: String!) {
         Related_Case_Studies {
           Path
           Title
+          Cover_Image {
+            url
+            alternativeText
+          }
         }
         Service_Category {
           Category
@@ -210,9 +230,6 @@ query CaseStudyQuery($pagePath: String!) {
           Tools_Technologies_Content
         }
         staff_profiles {
-          Image {
-            relativePath
-          }
           Name
           Role
           Path
