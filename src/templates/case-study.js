@@ -5,11 +5,12 @@ import GeneralLayout from '../layouts/general';
 import {Helmet} from "react-helmet";
 import CaseStudyHero from "../components/case-study-hero";
 import Quote from "../components/quote";
-import CoverImage from '../files/images/case-study-teasers/case-study-teaser-img-2.png';
+import PrimaryPageCTA from "../components/primary-page-cta";
+import {GatsbyImage, getImage} from "gatsby-plugin-image";
 
 const CaseStudyTemplate = ({data}) => {
   const caseStudy = data.allStrapiCaseStudy.edges[0].node;
-
+    console.log(caseStudy);
   return (
     <GeneralLayout>
         <Helmet>
@@ -22,52 +23,63 @@ const CaseStudyTemplate = ({data}) => {
                 description={caseStudy.Summary}
             />
 
-
-        <div className='case-study--hero-image'>
-            <img src={caseStudy.Hero_Image.relativePath}></img>
-        </div>
+            {caseStudy.Hero_Image[0] &&
+            <div className='case-study--hero-image'>
+                <img src={caseStudy.Hero_Image[0].url} alt={caseStudy.Hero_Image[0].alternativeText}></img>
+                {caseStudy.Hero_Image[0].caption && <span className='caption'>{caseStudy.Hero_Image[0].caption}</span> }
+            </div>
+            }
 
         <section className='section--case-study--stats'>
-            {caseStudy.Stats.map(({stat}, index) => (
-                <div>
-                    <p>{caseStudy.Stats[index].Numerical_Element}</p>
-                    <p>{caseStudy.Stats[index].Content_Element}</p>
-                </div>
+            <div className='stats--wrapper'>
+                <div className='inner'>
+                    {caseStudy.Stats.map(({stat}, index) => (
+                        <div className='single-stat'>
+                            <p className='stat--number'>{caseStudy.Stats[index].Numerical_Element}</p>
+                            <p className='body stat--text'>{caseStudy.Stats[index].Content_Element}</p>
+                        </div>
 
-            ))}
-        </section>
-
-        <Quote
-            quote={caseStudy.Quote.Quote}
-            source={caseStudy.Quote.Source}
-            />
-
-        <section className='section--case-study--challenge-to-tools'>
-            <div className='inner'>
-                <div className='case-study-challenge-goal'>
-                    <div className='challenge'>
-                        <h2>The challenge</h2>
-                        <ReactMarkdown source={caseStudy.Challenge_Goal.Challenge} />
-                        <p className='body'>{caseStudy.Challenge_Goal.Challenge}</p>
-                    </div>
-                    <div className='goal'>
-                        <h3>Client goal</h3>
-                        <ReactMarkdown children={caseStudy.Challenge_Goal.Client_Goal} />
-
-                    </div>
-                </div>
-                <div className='case-study--expertise-tools'>
-                    <div className='expertise'>
-                        <h3>Expertise</h3>
-                        <ReactMarkdown children={caseStudy.Expertise[0].Expertise_Content} />
-                    </div>
-                    <div className='tools'>
-                        <h3>Tools and technologies</h3>
-                        <ReactMarkdown children={caseStudy.Tools_Technologies[0].Tools_Technologies_Content} />
-                    </div>
+                    ))}
                 </div>
             </div>
+
         </section>
+            {caseStudy.Quote &&
+            <Quote
+                quote={caseStudy.Quote.Quote}
+                source={caseStudy.Quote.Source}
+            />
+            }
+
+            {caseStudy.Challenge_Goal &&
+            <section className='section--case-study--challenge-to-tools'>
+                <div className='inner'>
+                    <div className='case-study-challenge-goal'>
+                        <div className='challenge'>
+                            <h2>The challenge</h2>
+                            <ReactMarkdown className='body' source={caseStudy.Challenge_Goal.Challenge}/>
+                            <p className='body'>{caseStudy.Challenge_Goal.Challenge}</p>
+                        </div>
+                        <div className='goal'>
+                            <h3>Client goal</h3>
+                            <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Client_Goal}/>
+
+                        </div>
+                    </div>
+                    <div className='case-study--expertise-tools'>
+                        <div className='expertise'>
+                            <h3>Expertise</h3>
+                            <ReactMarkdown className='body' children={caseStudy.Expertise[0].Expertise_Content}/>
+                        </div>
+                        <div className='tools'>
+                            <h3>Tools and technologies</h3>
+                            <ReactMarkdown className='body'
+                                           children={caseStudy.Tools_Technologies[0].Tools_Technologies_Content}/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            }
 
 
 
@@ -78,7 +90,7 @@ const CaseStudyTemplate = ({data}) => {
                         {index === 0 &&
                             <div className='first-approach'>
                                 <h2>{caseStudy.Approach[index].Title}</h2>
-                                <ReactMarkdown  children={caseStudy.Approach[index].Text}/>
+                                <ReactMarkdown className='body' children={caseStudy.Approach[index].Text}/>
                             </div>
                         }
                         {index != 0 &&
@@ -86,16 +98,19 @@ const CaseStudyTemplate = ({data}) => {
 
                                 <div className='title-text--wrapper'>
                                     <h3>{caseStudy.Approach[index].Title}</h3>
-                                    <ReactMarkdown children={caseStudy.Approach[index].Text}/>
+                                    <ReactMarkdown className='body' children={caseStudy.Approach[index].Text}/>
                                 </div>
-                            <div className='image--wrapper'>
-                                <img src={CoverImage}></img>
-                                {/*{index != 0 &&
-                                <div>{caseStudy.Approach[index].Image &&
-                                <img src={caseStudy.Approach[index].Image.relativePath} alt={caseStudy.Approach[index].Image.alt}></img>}
-                                {caseStudy.Approach[index].Image.caption && <span className='caption'>{caseStudy.Approach[index].Image.caption}</span>}
-                                </div> }*/}
+                            {caseStudy.Approach[index].Image && <div className='image--wrapper'>
+                                <div>
+                                    <img src={caseStudy.Approach[index].Image[0].url}
+                                         alt={caseStudy.Approach[index].Image[0].alternativeText}></img>
+                                        {caseStudy.Approach[index].Image[0].caption &&
+                                        <span className='caption'>{caseStudy.Approach[index].Image[0].caption}</span>
+                                        }
+                                </div>
+
                             </div>
+                            }
 
                         </div>
                         }
@@ -107,12 +122,13 @@ const CaseStudyTemplate = ({data}) => {
 
         {/* Todo Key outcomes*/}
         {caseStudy.Key_Outcome && <section className='section--case-study--outcomes'>
+            <h2>Key outcomes</h2>
             <div className='inner'>
-                <h2>Key outcomes</h2>
+
                 {caseStudy.Key_Outcome.map(({node}, index) => (
-                    <div>
-                        <p className='body label'>{caseStudy.Key_Outcome[index].Title}</p>
-                        <ReactMarkdown children={caseStudy.Key_Outcome[index].Text} />
+                    <div className='key-outcome'>
+                        <p className='label'>{caseStudy.Key_Outcome[index].Title}</p>
+                        <ReactMarkdown className='body' children={caseStudy.Key_Outcome[index].Text} />
                     </div>
                 ))}
             </div>
@@ -125,7 +141,9 @@ const CaseStudyTemplate = ({data}) => {
                 <div className='related-staff--wrapper'>
                 {caseStudy.staff_profiles.map(({node}, index) => (
                     <div className='related-staff'>
-                        {caseStudy.staff_profiles[index].Image && <img src={caseStudy.staff_profiles[index].Image.relativePath}/>}
+                        {caseStudy.staff_profiles[index].Image &&
+                        <GatsbyImage image={getImage(caseStudy.staff_profiles[index].Image)} alt={''} />
+                        }
                         <p className='body staff-name'><a href={caseStudy.staff_profiles[index].Path}>
                             {caseStudy.staff_profiles[index].Name}
                         </a></p>
@@ -136,12 +154,14 @@ const CaseStudyTemplate = ({data}) => {
             </div>
         </section>
         <section className='section--case-study--related'>
+            <h2>Related case studies</h2>
             <div className='inner'>
-                <h2>Related case studies</h2>
+
                 {caseStudy.Related_Case_Studies.map(({node}, index) => (
-                    <div>
-                        {caseStudy.Related_Case_Studies[index].Image && <img src={caseStudy.Related_Case_Studies[index].Image.relativePath}/>}
+                    <div className='related-case-study'>
                         <a href={caseStudy.Related_Case_Studies[index].Path}>
+                        {caseStudy.Related_Case_Studies[index].Cover_Image[0] && <img src={caseStudy.Related_Case_Studies[index].Cover_Image[0].url} alt={caseStudy.Related_Case_Studies[index].Cover_Image[0].alternativeText}/>}
+
                             {caseStudy.Related_Case_Studies[index].Title}
                         </a>
 
@@ -149,7 +169,12 @@ const CaseStudyTemplate = ({data}) => {
                 ))}
             </div>
         </section>
-
+            <PrimaryPageCTA
+                title='Let’s build a public success story.'
+                subtitle='Get in touch to start.'
+                primaryButtonText='Put us to work'
+                secondaryButtonText='Join our team'
+            />
         </div>
 
 
@@ -164,8 +189,10 @@ query CaseStudyQuery($pagePath: String!) {
       node {
         Approach {
           Text
-          Image {
-            relativePath
+          Image  {
+            url
+            alternativeText
+            caption
           }
           Title
         }
@@ -179,8 +206,10 @@ query CaseStudyQuery($pagePath: String!) {
           Expertise_Content
         }
         Hero_Image {
-          relativePath
-        }
+            url
+            alternativeText
+            caption
+          }
         Key_Outcome {
           Text
           Title
@@ -192,6 +221,10 @@ query CaseStudyQuery($pagePath: String!) {
         Related_Case_Studies {
           Path
           Title
+          Cover_Image {
+            url
+            alternativeText
+          }
         }
         Service_Category {
           Category
@@ -207,12 +240,14 @@ query CaseStudyQuery($pagePath: String!) {
           Tools_Technologies_Content
         }
         staff_profiles {
-          Image {
-            relativePath
-          }
           Name
           Role
           Path
+          Image {
+            childImageSharp {
+              gatsbyImageData(width: 264, height: 264, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            }
+          }
         }
       }
     }
