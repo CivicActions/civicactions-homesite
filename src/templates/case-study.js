@@ -10,7 +10,7 @@ import {GatsbyImage, getImage} from "gatsby-plugin-image";
 
 const CaseStudyTemplate = ({data}) => {
   const caseStudy = data.allStrapiCaseStudy.edges[0].node;
-    console.log(caseStudy.staff_profiles);
+    console.log(caseStudy);
   return (
     <GeneralLayout>
         <Helmet>
@@ -23,7 +23,7 @@ const CaseStudyTemplate = ({data}) => {
                 description={caseStudy.Summary}
             />
 
-            {caseStudy.Hero_Image &&
+            {caseStudy.Hero_Image[0] &&
             <div className='case-study--hero-image'>
                 <img src={caseStudy.Hero_Image[0].url} alt={caseStudy.Hero_Image[0].alternativeText}></img>
                 {caseStudy.Hero_Image[0].caption && <span className='caption'>{caseStudy.Hero_Image[0].caption}</span> }
@@ -41,38 +41,42 @@ const CaseStudyTemplate = ({data}) => {
             ))}
             </div>
         </section>
-
-        <Quote
-            quote={caseStudy.Quote.Quote}
-            source={caseStudy.Quote.Source}
+            {caseStudy.Quote &&
+            <Quote
+                quote={caseStudy.Quote.Quote}
+                source={caseStudy.Quote.Source}
             />
+            }
 
-        <section className='section--case-study--challenge-to-tools'>
-            <div className='inner'>
-                <div className='case-study-challenge-goal'>
-                    <div className='challenge'>
-                        <h2>The challenge</h2>
-                        <ReactMarkdown className='body' source={caseStudy.Challenge_Goal.Challenge} />
-                        <p className='body'>{caseStudy.Challenge_Goal.Challenge}</p>
+            {caseStudy.Challenge_Goal &&
+            <section className='section--case-study--challenge-to-tools'>
+                <div className='inner'>
+                    <div className='case-study-challenge-goal'>
+                        <div className='challenge'>
+                            <h2>The challenge</h2>
+                            <ReactMarkdown className='body' source={caseStudy.Challenge_Goal.Challenge}/>
+                            <p className='body'>{caseStudy.Challenge_Goal.Challenge}</p>
+                        </div>
+                        <div className='goal'>
+                            <h3>Client goal</h3>
+                            <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Client_Goal}/>
+
+                        </div>
                     </div>
-                    <div className='goal'>
-                        <h3>Client goal</h3>
-                        <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Client_Goal} />
-
+                    <div className='case-study--expertise-tools'>
+                        <div className='expertise'>
+                            <h3>Expertise</h3>
+                            <ReactMarkdown className='body' children={caseStudy.Expertise[0].Expertise_Content}/>
+                        </div>
+                        <div className='tools'>
+                            <h3>Tools and technologies</h3>
+                            <ReactMarkdown className='body'
+                                           children={caseStudy.Tools_Technologies[0].Tools_Technologies_Content}/>
+                        </div>
                     </div>
                 </div>
-                <div className='case-study--expertise-tools'>
-                    <div className='expertise'>
-                        <h3>Expertise</h3>
-                        <ReactMarkdown className='body' children={caseStudy.Expertise[0].Expertise_Content} />
-                    </div>
-                    <div className='tools'>
-                        <h3>Tools and technologies</h3>
-                        <ReactMarkdown className='body' children={caseStudy.Tools_Technologies[0].Tools_Technologies_Content} />
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+            }
 
 
 
