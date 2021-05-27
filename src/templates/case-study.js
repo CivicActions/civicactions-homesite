@@ -31,15 +31,18 @@ const CaseStudyTemplate = ({data}) => {
             }
 
         <section className='section--case-study--stats'>
-            <div className='inner'>
-            {caseStudy.Stats.map(({stat}, index) => (
-                <div className='single-stat'>
-                    <p className='stat--number'>{caseStudy.Stats[index].Numerical_Element}</p>
-                    <p className='body stat--text'>{caseStudy.Stats[index].Content_Element}</p>
-                </div>
+            <div className='stats--wrapper'>
+                <div className='inner'>
+                    {caseStudy.Stats.map(({stat}, index) => (
+                        <div className='single-stat'>
+                            <p className='stat--number'>{caseStudy.Stats[index].Numerical_Element}</p>
+                            <p className='body stat--text'>{caseStudy.Stats[index].Content_Element}</p>
+                        </div>
 
-            ))}
+                    ))}
+                </div>
             </div>
+
         </section>
             {caseStudy.Quote &&
             <Quote
