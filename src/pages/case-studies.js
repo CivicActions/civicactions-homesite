@@ -62,8 +62,8 @@ const CaseStudyPage = () => {
   const [filterState, setFilterState] = useState(null);
 
   const callback = (e) => {
-    // console.log(e);
-
+    console.log(e);
+    console.log(filterState);
     if (e.target.name !== 'undefined') {
       if (filterState === e.target.name) {
         // The button was already selected.
@@ -74,17 +74,26 @@ const CaseStudyPage = () => {
     }
   };
   let cases;
+  let arry;
+  console.log(filterState);
   if (filterState) {
-    cases = caseStudies.filter((caseStudy) => {
-      // console.log('caseStudy', caseStudy.Title);
-      caseStudy.Service_Category.map(
-        (category) => category.Category === filterState
-      );
+    caseStudies.map((nodex, index) => {
+      if (caseStudies[index].Service_Category[0]) {
+        const category = caseStudies.filter((item) => item.Service_Category > 0);
+        cases = category.filter((caseStudy) =>
+            caseStudy.Service_Category[0].Category === filterState
+        );
+        console.log('test');
+        console.log(category);
+        console.log(caseStudies[index].Service_Category[0].Category === filterState);
+      }
     });
+
+
   } else {
     cases = caseStudies;
   }
-
+  console.log(cases);
   return (
     <RedLayout>
       <Hero
