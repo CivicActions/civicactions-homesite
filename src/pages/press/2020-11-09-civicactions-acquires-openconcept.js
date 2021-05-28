@@ -10,7 +10,7 @@ const OpenConcept = () => {
     return (
         <RedLayout>
             <Helmet>
-                <title data-react-helmet="true">CivicActions expands accessibility capabilities with Open Concept</title>
+                <title data-react-helmet="true">CivicActions expands accessibility capabilities with OpenConcept</title>
             </Helmet>
             <Hero
                 title='CivicActions expands accessibility capabilities with Open Concept'
@@ -18,7 +18,7 @@ const OpenConcept = () => {
             <div className='single--press-releases--main'>
                 <div className='inner'>
                     <span className='body'>Date: Monday, November 9, 2020</span>
-                    <p className='body'><strong>Lafayette, Calif.</strong> – <a href=''>CivicActions</a>, a professional services firm modernizing government technologies and services, today announced it has acquired <a href='https://openconcept.ca/drupal'>OpenConcept</a>, a development firm specializing in web accessibility through open source tools and community.</p>
+                    <p className='body'><strong>Lafayette, Calif.</strong> – <a href='/'>CivicActions</a>, a professional services firm modernizing government technologies and services, today announced it has acquired <a href='https://openconcept.ca/drupal'>OpenConcept</a>, a development firm specializing in web accessibility through open source tools and community.</p>
                     <p className='body'>“CivicActions creates digital services that work for everyone, and that means people of all abilities,” said Owen Barton, Director of Engineering at CivicActions. “By having OpenConcept join us, we’re strengthening our capacity to help government agencies innovate in ways that are inclusive from the onset.”</p>
                     <p className='body'>Both CivicActions and OpenConcept are longtime providers of and contributors to Drupal, an open source content management platform that helps organizations meet accessibility standards as they evolve. Specifically, Drupal supports compliance with the newly-updated Section 508, a law requiring federal agencies to make their information and communication technology (ICT) accessible to people of varying abilities.</p>
                     <p className='body'>“People tend to think of web accessibility as a checklist — but the web is now evolving so quickly that today’s checklist could be outdated next year,” said OpenConcept founder Mike Gifford, who will now serve as a Senior Strategist at CivicActions, advising on and identifying opportunities for improving accessibility compliance in government.</p>

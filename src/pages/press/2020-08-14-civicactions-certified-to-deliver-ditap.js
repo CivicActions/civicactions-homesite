@@ -26,7 +26,7 @@ const CertDeliverDitap = () => {
                     <p className='body'><ul>
                             <li><a href='/ditap'>Request DITAP training</a></li>
                             <li>Reflections on DITAP: <a href='https://medium.com/civicactions/what-we-learned-from-training-procurement-officers-to-buy-modern-government-it-cc6309df4103'>What we learned from training procurement officers to buy modern government IT</a></li>
-                            <li>Learn more about DITAP at the TechFAR Hub</li>
+                        <li>Learn more about DITAP at the <a href='https://techfarhub.cio.gov/initiatives/ditap/'>TechFAR Hub</a></li>
                         </ul>
                     </p>
                 </div>
