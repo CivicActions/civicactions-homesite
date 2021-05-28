@@ -11,6 +11,8 @@
 }
 
 .home--case-studies-section {
+  @include top-clip;
+  background: $colors-mint-cool-40v;
   background-repeat: no-repeat;
   width: 100%;
   margin-bottom: 100px;
