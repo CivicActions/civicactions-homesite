@@ -28,7 +28,7 @@ const CaseStudyPage = () => {
     }
   `);
 
-  const caseStudies = data.allStrapiCaseStudy.nodes;
+
 
   const categories = [
     { id: 1, value: 'Web & CMS', name: 'Web_CMS', isChecked: false },
@@ -60,10 +60,8 @@ const CaseStudyPage = () => {
   ];
 
   const [filterState, setFilterState] = useState(null);
-
+  // Handle onChange from Filters
   const callback = (e) => {
-    console.log(e);
-    console.log(filterState);
     if (e.target.name !== 'undefined') {
       if (filterState === e.target.name) {
         // The button was already selected.
@@ -73,27 +71,21 @@ const CaseStudyPage = () => {
       }
     }
   };
+
   let cases;
-  let arry;
-  console.log(filterState);
+  const caseStudies = data.allStrapiCaseStudy.nodes;
+
+  // Handle filter states
   if (filterState) {
-    caseStudies.map((nodex, index) => {
-      if (caseStudies[index].Service_Category[0]) {
-        const category = caseStudies.filter((item) => item.Service_Category > 0);
-        cases = category.filter((caseStudy) =>
+        // Todo: Only handles one input filter at a time, not multiple
+        cases = caseStudies.filter((caseStudy) =>
             caseStudy.Service_Category[0].Category === filterState
         );
-        console.log('test');
-        console.log(category);
-        console.log(caseStudies[index].Service_Category[0].Category === filterState);
-      }
-    });
-
-
   } else {
     cases = caseStudies;
   }
-  console.log(cases);
+
+
   return (
     <RedLayout>
       <Hero
@@ -134,8 +126,12 @@ const CaseStudyPage = () => {
 //
 const CaseStudyTeasers = ({ cases }) => {
   return cases.map((item, index) => {
-    const { Title, Client_Name, Sort_Order, Service_Category, Image } = item;
-    return <div>{Title}</div>;
+    const { Title, Client_Name, Sort_Order, Service_Category } = item;
+    return <div className={Sort_Order}>
+      <img src={item.Cover_Image[0].url} alt={item.Cover_Image[0].alternativeText}/>
+      <h2 className='h3'>{Title}</h2>
+      <span>{Client_Name}</span>
+    </div>;
   });
 };
 export default CaseStudyPage;
