@@ -6,7 +6,7 @@ import StaffQuote from '../components/staff-quote.js';
 import Hero from '../components/hero.js';
 import { graphql, useStaticQuery } from 'gatsby';
 import alanaCaseyProfilePicture from '../files/images/alanna_casey_profile.jpg';
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 const TeamPage = () => {
   const data = useStaticQuery(graphql`
@@ -51,11 +51,11 @@ const TeamPage = () => {
         <title data-react-helmet="true">Civicactions Team Member Page</title>
       </Helmet>
       <Hero
-          title="You've never met a team like this one"
-          description='We are leaders in technology, design, and strategy for
+        title="You've never met a team like this one"
+        description='We are leaders in technology, design, and strategy for
                 government digital services. We combine our diverse expertise
                 and backgrounds to bring value to our customers and each other.'
-        />
+      />
 
       <section className="team--filter-btns-section">
         <div className="inner">
@@ -64,7 +64,7 @@ const TeamPage = () => {
       </section>
 
       <section className="team--staff-teasers-grid-section">
-        <div class="inner">
+        <div className="inner">
           <div className="section__teaser-grid">
             <TeamTeasers team={team} />
           </div>

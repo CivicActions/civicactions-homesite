@@ -12,10 +12,10 @@ const NotFoundPage = () => {
         <h1>404</h1>
         <h2>Well, that's awkward.</h2>
         <img alt="image of frozen zoom screens" src={FrozenImg} />
-        <div class="not-found--body">
-          <p class="body">We’re frozen on Zoom and can’t find the page you’re looking for.</p>
-          <p class="body">While we sign back on, here are some quick links for you:</p>
-          <div class="list">
+        <div className="not-found--body">
+          <p className="body">We’re frozen on Zoom and can’t find the page you’re looking for.</p>
+          <p className="body">While we sign back on, here are some quick links for you:</p>
+          <div className="list">
             <p className="body">
               <a href="/">Visit our homepage</a>
             </p>
