@@ -53,7 +53,7 @@ const HomePage = () => {
         <div className='inner'>
           <img
             src={homeIntroGraphic}
-            alt='Civic Actions Logo'
+            alt='Graphic image of people working together'
             ref={(e) => (fadersRef.current[0] = e)}
             className='fade-in'></img>
           <div className='info-text'>
@@ -128,6 +128,7 @@ const HomePage = () => {
               ref={(e) => (fadersRef.current[2] = e)}>
               <CaseStudyTeaser
                 img={caseStudyTeaserImg1}
+                alt={'elderly man and women leaning on each other outside in fall'}
                 title={'Centers for medicare and medicaid services'}
                 description={
                   'Improving the online experience for Medicare beneficiaries'
@@ -136,12 +137,14 @@ const HomePage = () => {
               />
               <CaseStudyTeaser
                 img={caseStudyTeaserImg2}
+                alt={'veteran saluting facing a crowd'}
                 title={'US Department of veteran affairs'}
                 description={'Helping Veterans access care and benefits online'}
                 teaserLink={'/case-study/va-cms-modernization'}
               />
               <CaseStudyTeaser
                 img={caseStudyTeaserImg3}
+                alt={'architecture sketch with calculations and pencil on paper'}
                 title={'US Department of Education'}
                 description={'Supporting and expanding adult education'}
                 // teaserLink={''}
