@@ -22,7 +22,8 @@ const RedLayout = ({ children }) => {
       />
       <div>
         <SkipNavLink id="main-content" />
-        <img className="red-rectangle" src={redRectangle} alt="background red color"></img>
+        <div className="red-rectangle" ></div>
+        {/*<img className="red-rectangle" src={redRectangle} alt="background red color"></img>*/}
         <Header onMenuClick={openSidebar} mobileMenuHiddenBool={hideSidebar} />
         <main id="main-content">
           <div>{children}</div>

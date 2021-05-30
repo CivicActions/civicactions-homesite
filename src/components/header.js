@@ -17,10 +17,10 @@ const Header = ({ onMenuClick, mobileMenuHiddenBool }) => {
         <div className='header-nav'>
           <Link to=''>company</Link>
           <Link to='/services'>services</Link>
-          <Link to=''>our work</Link>
+          <Link to='/case-studies'>our work</Link>
           <Link to=''>insights</Link>
           <Link to='/careers'>careers</Link>
-          <div className='primary-button'>contact us</div>
+          <a href={'/contact/'}><div className='primary-button'>contact us</div></a>
         </div>
         <div
           className='header-nav-mobile'

@@ -15,13 +15,14 @@
 
   .column {
     align-items: flex-start;
+    max-width: 600px;
 
-    h3 {
+    h2 {
       margin-bottom: 10px;
       color: $colors-white;
     }
 
-    h5 {
+    span {
       color: $colors-white;
     }
   }
