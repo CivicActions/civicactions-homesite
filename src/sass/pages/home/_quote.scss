@@ -1,9 +1,10 @@
 .home--quote-section {
   color: $colors-grey-90;
   margin: 100px 0;
+  padding-top: 50px;
 
   .inner {
-    max-width: 1200px;
+    max-width: 750px;
     position: relative;
     display: flex;
     flex-direction: row;

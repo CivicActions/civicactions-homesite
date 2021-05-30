@@ -3,9 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-const CaseStudyTeaser = ({ img, title, description }) => {
+const CaseStudyTeaser = ({ img, title, description, teaserLink }) => {
   return (
-    <Link to='/'>
+    <Link to={teaserLink}>
       <div className='case-study-teaser'>
         <img src={img} alt='Client Logo'></img>
         <div className='img-overlay'> </div>
@@ -24,4 +24,5 @@ CaseStudyTeaser.propTypes = {
   img: PropTypes.any.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
+  teaserLink: PropTypes.string,
 };

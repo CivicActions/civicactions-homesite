@@ -8,7 +8,7 @@ const PressReleaseTeaser = ({ teaserlink, img, title, description }) => {
       <a href={teaserlink}>
         <img src={img} alt=''></img>
         <h3>{title}</h3>
-        <h4>{description}</h4>
+        <p className='body'>{description}</p>
       </a>
     </div>
   );

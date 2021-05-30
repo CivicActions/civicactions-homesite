@@ -62,7 +62,7 @@ const HomePage = () => {
               technology and design.
             </h1>
             <LinkButton
-              src='/'
+              src='/case-studies'
               size='large'
               type='primary'
               text='See our work'
@@ -74,6 +74,7 @@ const HomePage = () => {
       <ClientsSection />
       <div className='home--section home--services-and-cases-bg'>
         <section className='home--services-section'>
+          <div className='background-wrapper'></div>
           <div className='inner'>
             <h2>Digital first. Data driven. Human centered.</h2>
             <p className='body-large'>
@@ -109,11 +110,12 @@ const HomePage = () => {
               type='primary'
               text='Explore Services'
             />
-          </div>
+        </div>
         </section>
 
         {/* ======== Case Studies Section ========== */}
         <section className='home--section home--case-studies-section'>
+          <div className='background-wrapper'></div>
           <div className='inner'>
             <h2>Resilient agencies. Accessible services. Happier people.</h2>
             <p className='body-large'>
@@ -130,18 +132,21 @@ const HomePage = () => {
                 description={
                   'Improving the online experience for Medicare beneficiaries'
                 }
+                // teaserLink={''}
               />
               <CaseStudyTeaser
                 img={caseStudyTeaserImg2}
                 title={'US Department of veteran affairs'}
                 description={'Helping Veterans access care and benefits online'}
+                teaserLink={'/case-study/va-cms-modernization'}
               />
               <CaseStudyTeaser
                 img={caseStudyTeaserImg3}
                 title={'US Department of Education'}
                 description={'Supporting and expanding adult education'}
+                // teaserLink={''}
               />
-              <div className='view-our-work-cta '>
+              <div className='view-our-work-cta '><a href={'/case-studies/'}>
                 <img src={caseStudyTeaserImg3} alt='' className='bg'></img>
                 <div className='content'>
                   <h3>View more Work</h3>
@@ -149,7 +154,7 @@ const HomePage = () => {
                     className='view-our-work-cta__icon'
                     src={arrowIcon}
                     alt=''></img>
-                </div>
+                </div></a>
               </div>
             </div>
           </div>
@@ -187,6 +192,7 @@ const HomePage = () => {
               description={
                 'How to start bringing CX into the business of government'
               }
+              teaserlink={'https://medium.com/civicactions/government-accessibility-and-the-cms-problem-588a07088c65 '}
             />
             <PressReleaseTeaser
               img={caseStudyTeaserImg5}
@@ -194,15 +200,22 @@ const HomePage = () => {
               description={
                 'Praise and recommendations for the new administration'
               }
+              teaserLink={'https://medium.com/civicactions/government-customer-experience-a-practical-guide-59b602815e3f '}
             />
             <div className='grid-item-3'>
               <div className='grid-item-3-1'>
-                <h3>The role of UX in an agile team</h3>
-                <img width='32px' src={arrowIcon} alt=''></img>
+                <a href={'https://medium.com/civicactions/what-fierce-openness-can-do-for-government-dd1d3ed518af'}>
+                  <h3>The role of UX in an agile team</h3>
+                  <img  width='32px' src={arrowIcon} alt=''></img>
+                </a>
+
               </div>
               <div className='grid-item-3-2'>
-                <h3>What “fierce openness” can do for government</h3>
-                <img width='32px' src={arrowIcon} alt=''></img>
+                <a href={'https://medium.com/civicactions/policy-recommendations-for-improving-the-ato-process-through-compliance-as-code-524e3005fceb '}>
+                  <h3>What “fierce openness” can do for government</h3>
+                  <img width='32px' src={arrowIcon} alt=''></img>
+                </a>
+
               </div>
             </div>
           </div>
@@ -211,25 +224,28 @@ const HomePage = () => {
       </section>
       {/* ======== Team Section ========== */}
       <section className='home--section home--team-section'>
-        <div className='inner'>
-          <div className='column'>
-            <h2>Our people make the difference.</h2>
-            <p className='body-large'>
-              We are leaders in civic tech and design, committed to working in
-              ways that make life better for our clients and each other.
-            </p>
-            <LinkButton src='/team' type='primary' text='Meet our team' />
-          </div>
-          <div className='team-picture-column'>
-            <img src={homeTeamImage} alt=''></img>
+        <div>
+          <div className='inner'>
+            <div className='column'>
+              <h2>Our people make the difference.</h2>
+              <p className='body-large'>
+                We are leaders in civic tech and design, committed to working in
+                ways that make life better for our clients and each other.
+              </p>
+              <LinkButton src='/team' type='primary' text='Meet our team' />
+            </div>
+            <div className='team-picture-column'>
+              <img src={homeTeamImage} alt=''></img>
+            </div>
           </div>
         </div>
+
       </section>
       <PrimaryPageCTA
         title='Let’s build a public success story.'
         subtitle='Get in touch to start.'
-        primaryButtonText='HIRE US'
-        secondaryButtonText='EXPLORE SERVICES'
+        primaryButtonText='Put us to work'
+        secondaryButtonText='Join our team'
       />
     </HomepageLayout>
   );

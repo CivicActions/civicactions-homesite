@@ -1,8 +1,15 @@
 .home--services-section {
-  @include bottom-clip;
-  background: $colors-grey-warm-4;
-  width: 100vw;
-  margin: 0 auto;
+  //@include bottom-clip;
+  .background-wrapper {
+    height: 150px;
+    background: $colors-grey-warm-4;
+  }
+  position: relative;
+  //background-image: $colors-grey-warm-4;
+  //background-image: linear-gradient(45deg, $colors-grey-warm-4, $colors-grey-warm-4);
+  //width: 100vw;
+  //margin: 0 auto;
+
 
   h2 {
     color: $colors-grey-90;
@@ -11,12 +18,12 @@
   }
 
   .inner {
-    max-width: 12Diagonal backgrounds in the homepage sections Diagonal backgrounds in the homepage sections 00px;
+    max-width: 1200px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 0 auto;
+    margin: -150px auto 0;
   }
 
   .body-large {
@@ -39,6 +46,9 @@
     grid-column-gap: 32px;
     grid-row-gap: 32px;
     margin: 24px 0 48px;
+    img {
+      margin-right: 32px;
+    }
   }
 
   @media screen and (max-width: $large-screen) {
@@ -52,8 +62,8 @@
     }
 
     .inner {
-      margin: 0 5vw;
-      margin-top: 50px;
+      margin: -150px 20px 0;
+
     }
 
     .service-cards-grid {
@@ -82,4 +92,16 @@
       display: none;
     }
   }
+}
+
+.home--services-section::before {
+  position: absolute;
+  top: 87px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(45deg, $colors-grey-warm-4, $colors-grey-warm-4);
+  transform: skewY(-5deg);
+  content: '';
+  height: 85%;
 }

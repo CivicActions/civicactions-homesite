@@ -13,13 +13,13 @@ const PrimaryPageCTA = ({
     <section className='primary-page-cta'>
       <div className='inner'>
         <div className='column'>
-          <h3>{title}</h3>
-          <h5>{subtitle}</h5>
+          <h2>{title}</h2>
+          <span className={'h3'}>{subtitle}</span>
         </div>
         <div className='row'>
           <LinkButton src='/contact' type='primary' text={primaryButtonText} />
           <LinkButton
-            src='/services'
+            src='/careers'
             type='secondary'
             text={secondaryButtonText}
           />

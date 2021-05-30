@@ -5,6 +5,7 @@ import Header from '../components/header.js';
 import Footer from '../components/footer.js';
 import Sidebar from '../components/sidebar.js';
 import { SkipNavLink } from '../components/skip-nav';
+import {Helmet} from "react-helmet";
 
 const HomepageLayout = ({ children }) => {
   const [hideSidebar, setHideSidebar] = useState(true);
@@ -12,6 +13,11 @@ const HomepageLayout = ({ children }) => {
   let closeSidebar = () => setHideSidebar(true);
   return (
     <div style={{ position: 'relative' }}>
+      <Helmet
+          htmlAttributes={{
+            lang: 'en',
+          }}
+      />
       <div>
         <Banner
           boldText='We’re hiring! '

@@ -130,6 +130,10 @@
   }
 
   @media screen and (max-width: $medium-large-screen) {
+    .button__primary {
+      position: absolute;
+      bottom: -102px;
+    }
     .primary-button:nth-child(3) {
       display: none;
     }
@@ -139,7 +143,9 @@
     }
 
     h2 {
-      padding-top: 48px;
+      padding-top: 0;
+      font-size: 26px;
+      margin-bottom: 0;
     }
 
     img {

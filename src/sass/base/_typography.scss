@@ -153,10 +153,9 @@ a {
 
 .body-large {
   font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 34px;
-  font-weight: 400;
+  font-weight: 300;
 
   @media screen and (max-width: $large-screen) {
     font-size: 20px;
