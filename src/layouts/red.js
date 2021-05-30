@@ -1,6 +1,5 @@
 import '../sass/styles.scss';
 import React, { useState } from 'react';
-import Banner from '../components/banner.js';
 import Header from '../components/red-header.js';
 import Footer from '../components/footer.js';
 import Sidebar from '../components/sidebar.js';
@@ -24,7 +23,7 @@ const RedLayout = ({ children }) => {
         <SkipNavLink id="main-content" />
         <div className="red-rectangle" ></div>
         {/*<img className="red-rectangle" src={redRectangle} alt="background red color"></img>*/}
-        <Header onMenuClick={openSidebar} mobileMenuHiddenBool={hideSidebar} />
+        <Header />
         <main id="main-content">
           <div>{children}</div>
         </main>

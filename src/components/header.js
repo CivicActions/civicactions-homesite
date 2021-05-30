@@ -3,13 +3,14 @@ import React from 'react';
 import { Link } from 'gatsby';
 import extendedLogo from '../files/icons/ca-extended-logo.svg';
 import menuIcon from '../files/icons/menu-icon.svg';
+import closeIcon from '../files/icons/close-icon.svg';
 import PropTypes from 'prop-types';
+import MobileMenu from '../components/mobile-menu/mobile-menu';
 
-const Header = ({ onMenuClick, mobileMenuHiddenBool }) => {
+const Header = () => {
 
-  const menuVisibility = mobileMenuHiddenBool ? 'mobile-menu-closed' : 'mobile-menu-open';
   return (
-    <header className={`header ${menuVisibility}`}>
+    <header className={`header`}>
       <div className='inner'>
         <Link to='/' className='logo'>
           <img src={extendedLogo} alt='Civic Actions Logo'></img>
@@ -22,14 +23,14 @@ const Header = ({ onMenuClick, mobileMenuHiddenBool }) => {
           <Link to='/careers'>careers</Link>
           <a href={'/contact/'}><div className='primary-button'>contact us</div></a>
         </div>
-        <div
-          className='header-nav-mobile'
-          onClick={onMenuClick}
-          role='button'
-          tabIndex={0}
-          onKeyDown={() => {}}>
-          <img src={menuIcon} alt=''></img>
-        </div>
+
+        <MobileMenu
+          right
+          noTransition
+          width={'75%'}
+          customBurgerIcon={<img src={menuIcon} />}
+          customCrossIcon={<img src={closeIcon} />}
+        />
       </div>
     </header>
   );

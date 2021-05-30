@@ -3,7 +3,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import extendedLogo from '../files/icons/CA-white.svg';
 import menuIcon from '../files/icons/menu-icon.svg';
+import closeIcon from '../files/icons/close-icon.svg';
 import PropTypes from 'prop-types';
+import MobileMenu from '../components/mobile-menu/mobile-menu';
 
 const RedHeader = ({ onMenuClick, mobileMenuHiddenBool }) => {
 
@@ -24,14 +26,13 @@ const RedHeader = ({ onMenuClick, mobileMenuHiddenBool }) => {
                     <Link to=''>careers</Link>
                     <div className='primary-button'>contact us</div>
                 </div>
-                <div
-                    className='header-nav-mobile'
-                    onClick={onMenuClick}
-                    role='button'
-                    tabIndex={0}
-                    onKeyDown={() => {}}>
-                    <img src={menuIcon} alt=''></img>
-                </div>
+                <MobileMenu
+                    right
+                    noTransition
+                    width={'75%'}
+                    customBurgerIcon={<img src={menuIcon} />}
+                    customCrossIcon={<img src={closeIcon} />}
+                />
             </div></div>
 
         </header>

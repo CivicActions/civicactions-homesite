@@ -24,6 +24,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+
     @media(min-width: 1024px) {
       padding-bottom: 0;
     }
