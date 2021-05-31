@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../sass/styles.scss';
 import RedLayout from '../layouts/red';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -27,8 +27,6 @@ const CaseStudyPage = () => {
       }
     }
   `);
-
-
 
   const categories = [
     { id: 1, value: 'Web & CMS', name: 'Web_CMS', isChecked: false },
@@ -59,32 +57,45 @@ const CaseStudyPage = () => {
     },
   ];
 
-  const [filterState, setFilterState] = useState(null);
+  const [filterState, setFilterState] = useState([]);
+
   // Handle onChange from Filters
   const callback = (e) => {
     if (e.target.name !== 'undefined') {
-      if (filterState === e.target.name) {
-        // The button was already selected.
-        setFilterState(null);
+      if (!(filterState.includes(e.target.name))) {
+        // If the filter has not been selected, add it to the array of selected items.
+        setFilterState([...filterState, e.target.name]);
       } else {
-        setFilterState(e.target.name);
+        // If the filter has already been selected, remove it from the array
+        filterState.splice(filterState.indexOf(e.target.name), 1)
+        setFilterState([...filterState]);
       }
     }
   };
 
+  // Re-renders when filter is clicked and state is updated because useState is async.
+  useEffect(() => { }, [filterState.length]);
+
   let cases;
   const caseStudies = data.allStrapiCaseStudy.nodes;
 
-  // Handle filter states
-  if (filterState) {
-        // Todo: Only handles one input filter at a time, not multiple
-        cases = caseStudies.filter((caseStudy) =>
-            caseStudy.Service_Category[0].Category === filterState
-        );
-  } else {
-    cases = caseStudies;
+  if (caseStudies) {
+    // If no filters are selected show all case studies
+    if (!filterState.length) {
+      cases = caseStudies;
+    } else {
+      cases = caseStudies.filter((caseStudy) => {
+        let category = caseStudy.Service_Category[0].Category;
+        // For each case study, loop through the selected filters and only 
+        // return results that match the selected categories.
+        for (let filter of filterState) {
+          if (category === filter) {
+            return true
+          }
+        }
+      });
+    }
   }
-
 
   return (
     <RedLayout>
@@ -128,7 +139,7 @@ const CaseStudyTeasers = ({ cases }) => {
   return cases.map((item, index) => {
     const { Title, Client_Name, Sort_Order, Service_Category } = item;
     return <div className={Sort_Order}>
-      <img src={item.Cover_Image[0].url} alt={item.Cover_Image[0].alternativeText}/>
+      <img src={item.Cover_Image[0].url} alt={item.Cover_Image[0].alternativeText} />
       <h2 className='h3'>{Title}</h2>
       <span>{Client_Name}</span>
     </div>;
