@@ -19,12 +19,12 @@ const HomepageLayout = ({ children }) => {
           }}
       />
       <div>
+        <SkipNavLink id='main-content' />
         <Banner
           boldText='We’re hiring! '
           regularText='View open positions here'
         />
-        <SkipNavLink id='main-content' />
-        <Header onMenuClick={openSidebar} mobileMenuHiddenBool={hideSidebar} />
+        <Header />
         <main id='main-content'>
           <div>{children}</div>
         </main>

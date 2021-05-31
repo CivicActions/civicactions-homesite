@@ -1,0 +1,149 @@
+// ================== Default Mobile menu styles  ===========
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  right: 0;
+  top: 0;
+
+  @media screen and (min-width: $large-screen) {
+    display: none;
+  }
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: $colors-black;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: $colors-red-60;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 25px;
+  width: 25px;
+  right: 32px !important;
+  top: 32px !important;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  filter: grayscale(100%) brightness(40%);
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  max-width: 540px;
+  min-width: 320px;
+  top: 0;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: $colors-white;
+  padding: 32px;
+  font-size: 1.15em;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: $colors-grey-warm-4;
+  padding: 0.8em;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  right: 0;
+}
+
+/* Individual item */
+.mmenu--list {
+  padding: 0;
+  color: $colors-black;
+  display: inline-block;
+  @extend %h2;
+  padding-top: 32px;
+  font-weight: 300;
+  text-decoration: none;
+
+  ul {
+    padding: 0;
+  }
+
+  &__item {
+    padding: 24px 0;
+    margin: 0;
+    border-bottom: 1px solid #c4c4c4;
+    list-style-type: none;
+
+    a {
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
+    &.expanded {
+      .heading {
+        &::after {
+          transform: rotate(90deg)
+        }
+      }
+      li {
+        display: block;
+      }
+    }
+
+    span,
+    button {
+      @extend %h2;
+    }
+
+    a {
+      text-decoration: none;
+      color: $colors-grey-90;
+    }
+
+    li {
+      @extend %h3;
+      padding-top: 32px;
+      font-weight: 300;
+      display: none;
+    }
+  }
+
+  .heading {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $colors-grey-90;
+    width: 100%;
+    border: 0;
+    background: transparent;
+
+    &::after {
+      background-image: url('../files/icons/ios-arrow-icon.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      content: '';
+      width: 25px;
+      height: 25px;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+

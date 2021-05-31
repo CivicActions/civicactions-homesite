@@ -7,7 +7,7 @@ export const Section = ({ content, classes, withH1, i }) => {
 
   return (
     <section className={sectionClasses}>
-      <div class={`inner ${innerClasses}`}>
+      <div className={`inner ${innerClasses}`}>
         <div className={additionalClasses}>
           <h2>{title}</h2>
           <p>{desc}</p>

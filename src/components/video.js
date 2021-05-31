@@ -9,13 +9,13 @@ const Video = ({
 }) => {
     return (
         <section className='video'>
-            <div class="inner">
-                <div class="video-container">
+            <div className="inner">
+                <div className="video-container">
                     <iframe title={videotitle} src={videolink} width="100%" frameBorder="0" webkitallowfullscreen
                         mozallowfullscreen allowFullScreen></iframe>
                 </div>
-                <div class="video--text">
-                    <p class="body">{videotext}</p>
+                <div className="video--text">
+                    <p className="body">{videotext}</p>
 
                 </div>
             </div>

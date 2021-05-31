@@ -23,11 +23,11 @@ const ClientsSection = () => {
   return (
     <section className='home--clients-section'>
       <div className='inner'>
-        <div class='body-large'>
+        <div className='body-large'>
           Strategy, design, technology, consulting, and training services for
           government agencies
         </div>
-        <div class='grid'>
+        <div className='grid'>
           <img src={clientLogo1} alt='Logo for the State of Georgia'></img>
           <img src={clientLogo2} alt='Logo for U.S. Veterans Affairs'></img>
           <img
