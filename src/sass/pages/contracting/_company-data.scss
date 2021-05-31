@@ -1,0 +1,25 @@
+.section--company-data-diff {
+  background-color: $colors-mint-cool-60v;
+  padding: 48px 0;
+  .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    @media(min-width: 1024px) {
+      display: flex;
+    }
+    h2,
+    ul {
+      color: $colors-white;
+    }
+    h2 {
+      padding-bottom: 16px;
+      @media(min-width: 1024px) {
+        font-size: 36px;
+      }
+    }
+    .company-data,
+    .differentiators {
+      width: 100%;
+    }
+  }
+}

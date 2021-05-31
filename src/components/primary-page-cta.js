@@ -7,7 +7,7 @@ const PrimaryPageCTA = ({
   title,
   subtitle,
   primaryButtonText,
-  secondaryButtonText,
+  secondaryButtonText, secondaryButtonLink,
 }) => {
   return (
     <section className='primary-page-cta'>
@@ -19,7 +19,7 @@ const PrimaryPageCTA = ({
         <div className='row'>
           <LinkButton src='/contact' type='primary' text={primaryButtonText} />
           <LinkButton
-            src='/careers'
+            src={secondaryButtonLink}
             type='secondary'
             text={secondaryButtonText}
           />
@@ -36,4 +36,5 @@ PrimaryPageCTA.propTypes = {
   subtitle: PropTypes.string,
   primaryButtonText: PropTypes.string.isRequired,
   secondaryButtonText: PropTypes.string.isRequired,
+  secondaryButtonLink: PropTypes.string.isRequired,
 };
