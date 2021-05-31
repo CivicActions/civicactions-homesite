@@ -55,32 +55,32 @@ const ServicesPage = ({ data }) => {
               className={`body`}
               href='#menu2'
               >
-              IT & service modernization
+              IT & Service Modernization
             </a></li>
               <li><a
                   className={`body`}
                   href='#menu3'
               >
-                Product & design
+                Product & Design
               </a></li>
             <li><a
               className={`body`}
               href='#menu4'
               >
-              Security & compliance
+              Security & Compliance
             </a></li>
 
             <li><a
               className={`body`}
               href='#menu5'
               >
-              Data services
+              Data Services
             </a></li>
             <li><a
               className={`body`}
               href='#menu6'
               >
-              Workforce development
+              Workforce Development
             </a></li>
         </Scrollspy>
 

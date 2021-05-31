@@ -66,6 +66,7 @@
       font-size: 18px;
       float: left;
       padding-top: 11px;
+      text-transform: uppercase;
     }
 
     .title {
@@ -81,6 +82,7 @@
         font-size: 28px;
       }
       @media(min-width: 1024px) {
+        display: block;
         font-size: 36px;
         line-height: 50px;
       }
