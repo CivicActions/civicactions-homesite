@@ -13,7 +13,7 @@ const OpenConcept = () => {
                 <title data-react-helmet="true">CivicActions expands accessibility capabilities with OpenConcept</title>
             </Helmet>
             <Hero
-                title='CivicActions expands accessibility capabilities with Open Concept'
+                title='CivicActions expands accessibility capabilities with OpenConcept'
                 />
             <div className='single--press-releases--main'>
                 <div className='inner'>
