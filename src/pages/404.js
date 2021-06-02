@@ -23,7 +23,7 @@ const NotFoundPage = () => {
               <a href="/careers">View our job listings</a>
             </p>
             <p className="body">
-              <a href="">Read our blog</a>
+              <a href="https://medium.com/civicactions">Read our blog</a>
             </p>
           </div>
         </div>
