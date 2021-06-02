@@ -38,6 +38,7 @@ module.exports = {
     },
     `gatsby-plugin-node-fields`,
     `gatsby-plugin-client-side-redirect`,
+    `gatsby-remark-autolink-headers`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
