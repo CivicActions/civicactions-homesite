@@ -13,9 +13,7 @@ const Footer = () => {
             <img src={extendedLogo} alt='Civic Actions Logo'></img>
           </Link>
         </div>
-        <div className='grid-container__item footer__social '>
-          <SocialIcons />
-        </div>
+
         <div className='grid-container__item footer__about-text'>
           <div>
             <p>We're a mid-size professional services firm providing design,
@@ -33,31 +31,25 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className='grid-container__item footer__contact'>
-          <div className='footer__about-text'>
-            Get in touch via phone or email:
-            <br />
-            510-408-7510
-            <br />
-            contact@civicactions.com
-          </div>
-        </div>
+
         <div className='grid-container__item footer__menu--wrapper'>
-          <nav aria-labelledby="Civicactions Footer menu" className="footer__menu">
+          <h2 class="visually-hidden" id="footer">
+            CivicActions footer menu</h2>
+          <nav aria-labelledby="footer" className="footer__menu">
             <ul className="footer__menu--list">
               <li className="child-menu--wrapper top-link">
                 <Link className="parent-link" to=''>Company</Link>
                 <ul>
                   <li><Link to=''>About</Link></li>
-                  <li><Link to=''>Team</Link></li>
-                  <li><Link to=''>Press</Link></li>
+                  <li><Link to='/team'>Team</Link></li>
+                  <li><Link to='/press'>Press</Link></li>
                 </ul>
               </li>
               <li className="top-link"><Link className="parent-link" to='/services'>Services</Link></li>
               <li className="child-menu--wrapper top-link">
                 <Link className="parent-link" to=''>Our work</Link>
                 <ul>
-                  <li><Link to=''>Case Studies</Link></li>
+                  <li><Link to='/case-studies'>Case Studies</Link></li>
                   <li><Link to=''>Approach</Link></li>
                 </ul>
               </li>
@@ -67,10 +59,23 @@ const Footer = () => {
             </ul>
           </nav>
         </div>
+        <div className='grid-container__item footer__contact'>
+          <div className='footer__about-text'>
+            Get in touch via phone or email:
+            <br />
+            <a href='tel:510-408-7510'>510-408-7510</a>
+            <br />
+            <a href='mailto:contact@civicactions.com'>contact@civicactions.com</a>
+          </div>
+        </div>
+        <div className='grid-container__item footer__social '>
+          <SocialIcons />
+        </div>
         <div className='grid-container__item footer__bottom-links'>
+          <p>© 2010 —- 2021</p>
           <p><Link to='/accessibility'>Accessibility</Link></p>
           <p><Link to='/privacy'>Privacy —- Terms</Link></p>
-          <p>© 2010 —- 2021</p>
+
         </div>
       </div>
     </footer>

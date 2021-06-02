@@ -10,7 +10,11 @@
     margin: 0 5vw;
     padding: px-to-rem(48px) 0;
   }
-
+  .footer__bottom-links {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
   &__menu {
     // @todo Standardize ul and li styles sitewide
     ul {
@@ -115,10 +119,10 @@
     }
 
     .footer__bottom-links {
-      display: flex;
-      flex-direction: row-reverse;
       gap: px-to-rem(36px);
       align-self: end;
+      flex-direction: row;
+      justify-content: flex-end;
 
       p {
         margin: 0;
