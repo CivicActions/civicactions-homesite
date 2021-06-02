@@ -151,7 +151,10 @@ a {
     line-height: 22px;
   }
 }
-
+.visually-hidden {
+  visibility: hidden;
+  height: 0;
+}
 .body-large {
   font-style: normal;
   font-size: 24px;

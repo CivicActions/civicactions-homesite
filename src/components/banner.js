@@ -10,7 +10,8 @@ const Banner = ({ boldText, regularText }) => {
   return hide ? (
     <div></div>
   ) : (
-    <div className='banner body-small'>
+    <div role='banner' aria-label='homepage banner' className='banner body-small'>
+
       <div className='inner'>
         <p className='banner-text'>
           <strong>{boldText}</strong> <span>{regularText}</span>
