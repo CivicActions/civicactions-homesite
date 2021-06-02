@@ -2,6 +2,24 @@ import twitterIcon from './files/icons/twitter-footer-icon.svg';
 import facebookIcon from './files/icons/facebook-footer-icon.svg';
 import linkedinIcon from './files/icons/linkedin-footer-icon.svg';
 
+export const socialMediaData = [
+  {
+    link: "'https://twitter.com/civicactions?lang=en",
+    alt: "Follow us on Facebook",
+    icon: facebookIcon
+  },
+  {
+    link: "https://business.facebook.com/CivicActions/",
+    alt: "Follow us on Twitter",
+    icon: twitterIcon
+  },
+  {
+    link: "https://www.linkedin.com/company/civicactions/mycompany/",
+    alt: "Follow us on LinkedIn",
+    icon: linkedinIcon
+  },
+]
+
 export const servicesData = [
   {
     title: "Accessible and secure government websites at scale",
@@ -45,21 +63,3 @@ export const teamData = [
     desc: "People who work with us say there’s “something magical” about our team. We are good listeners, strategic thinkers, honest communicators, and problem solvers. (We’re also cheerful and kind, which is a nice bonus.) We each care deeply about the impact we have on those around us."
   }
 ];
-
-export const socialMediaData = [
-  {
-    link: "/",
-    alt: "Follow us on Facebook",
-    icon: facebookIcon
-  },
-  {
-    link: "/",
-    alt: "Follow us on Twitter",
-    icon: twitterIcon
-  },
-  {
-    link: "/",
-    alt: "Follow us on LinkedIn",
-    icon: linkedinIcon
-  },
-]
