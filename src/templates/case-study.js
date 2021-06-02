@@ -30,7 +30,7 @@ const CaseStudyTemplate = ({data}) => {
             </div>
             }
 
-        <section className='section--case-study--stats'>
+            {caseStudy.Stats.length  && <section className='section--case-study--stats'>
             <div className='stats--wrapper'>
                 <div className='inner'>
                     {caseStudy.Stats.map(({stat}, index) => (
@@ -43,7 +43,7 @@ const CaseStudyTemplate = ({data}) => {
                 </div>
             </div>
 
-        </section>
+        </section>}
             {caseStudy.Quote &&
             <Quote
                 quote={caseStudy.Quote.Quote}
@@ -82,7 +82,7 @@ const CaseStudyTemplate = ({data}) => {
             }
 
 
-
+{caseStudy.Approach.length &&
         <section className='section--case-study--approaches'>
 
                 {caseStudy.Approach.map(({node}, index) => (
@@ -118,10 +118,10 @@ const CaseStudyTemplate = ({data}) => {
                     </div>
                 ))}
 
-        </section>
+        </section>}
 
-        {/* Todo Key outcomes*/}
-        {caseStudy.Key_Outcome && <section className='section--case-study--outcomes'>
+
+        {caseStudy.Key_Outcome.length && <section className='section--case-study--outcomes'>
             <h2>Key outcomes</h2>
             <div className='inner'>
 
@@ -134,7 +134,7 @@ const CaseStudyTemplate = ({data}) => {
             </div>
         </section> }
 
-
+            {caseStudy.staff_profiles.length &&
         <section className='section--case-study--staff'>
             <div className='inner'>
                 <h2>Meet the team</h2>
@@ -152,7 +152,8 @@ const CaseStudyTemplate = ({data}) => {
                 ))}
                 </div>
             </div>
-        </section>
+        </section>}
+            {caseStudy.Related_Case_Studies.length &&
         <section className='section--case-study--related'>
             <h2>Related case studies</h2>
             <div className='inner'>
@@ -168,7 +169,7 @@ const CaseStudyTemplate = ({data}) => {
                     </div>
                 ))}
             </div>
-        </section>
+        </section>}
             <PrimaryPageCTA
                 title='Let’s build a public success story.'
                 subtitle='Get in touch to start.'
