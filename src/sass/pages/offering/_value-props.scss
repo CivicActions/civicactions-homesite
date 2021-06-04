@@ -1,33 +1,52 @@
 .section--offering--value-props {
   background-color: $colors-grey-warm-4;
-  padding-top: 219px;
+  padding-top: 48px;
   padding-bottom: 24px;
+
   @media(min-width: 768px) {
     padding-bottom: 40px;
   }
-  @media(min-width: 1024px) {
+  @media(min-width: 1200px) {
+    padding-top: 219px;
     padding-bottom: 64px;
   }
   .inner {
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 40px;
     display: flex;
+    @media(min-width: 1024px) {
+      padding: 40px;
+      margin: 0;
+    }
+    @media(min-width: 1200px) {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
     h2,
     .icon {
       float: left;
     }
     h2 {
       padding-bottom: 24px;
+      padding-top: 32px;
+      @media(min-width: 1200px) {
+        padding-top: 10px;
+      }
     }
     .icon {
       margin-left: 16px;
     }
     .value-props--left {
-    padding-right: 113px;
-  }
+      @media(min-width: 1024px) {
+        padding-right: 50px;
+      }
+      @media(min-width: 1200px) {
+        padding-right: 113px;
+      }
+
+    }
     .value-props--right {
       display: none;
-      @media(min-width: 768px) {
+      @media(min-width: 1024px) {
         display: block;
       }
       caption {

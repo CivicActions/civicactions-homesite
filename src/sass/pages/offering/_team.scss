@@ -1,7 +1,15 @@
 .section--offering--staff {
   .inner {
+    margin: 0;
+    @media(min-width: 768px) {
+      margin: 0 5vw;
+    }
     h2 {
       padding-bottom: 32px;
+      margin: 0 20px;
+      @media(min-width: 768px) {
+        margin: 0;
+      }
     }
     .related-staff--wrapper {
       margin-bottom: 16px;
@@ -14,12 +22,41 @@
       .related-staff {
         padding: 24px;
         background-color: $colors-grey-warm-4;
+        margin-bottom: 16px;
+        overflow: auto;
+        position: relative;
+        @media(min-width: 1024px) {
+          margin-bottom: 0;
+        }
+        .staff-image {
+          width: 56px;
+          height: 56px;
+          float: left;
+          margin-right: 16px;
+          @media(min-width: 768px) {
+            width: 124px;
+            height: 124px;
+            margin-right: 24px;
+          }
+
+        }
         .linkedin-icon {
-          margin-left: 16px;
+          position: absolute;
+          top: 17px;
+          right: 24px;
+          @media(min-width: 768px) {
+            position: relative;
+            margin-left: 16px;
+            top: unset;
+            right: unset;
+          }
+
         }
         .staff-name {
           margin-bottom: 0;
           margin-top: 0;
+          font-weight: 500;
+
         }
         .open-modal--btn {
           padding: 0;
@@ -28,10 +65,28 @@
           color: $colors-mint-cool-60v;
           text-decoration: underline;
           font-weight: 300 !important;
+          background: none;
+          cursor: pointer;
         }
       }
     }
   }
+}
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1B1B1B;
+  opacity: 0.85;
+}
+.Modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
 }
 .ReactModal__Content--after-open {
   max-width: 854px;
@@ -42,5 +97,23 @@
   @media(min-width: 1024px) {
     padding: 64px;
   }
-
+  .staff-image {
+    width: 124px;
+    height: 124px;
+    float: left;
+    margin-right: 24px;
+  }
+  .staff-name {
+    float: left;
+    margin-right: 16px;
+  }
+  .staff-body {
+    clear: both;
+    padding-top: 40px;
+  }
+  button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 }

@@ -108,7 +108,8 @@
       }
       img {
         @media(min-width: 1024px) {
-          min-width: 640px;
+          width: 640px;
+          height: 341px;
         }
       }
       .title-text--wrapper {

@@ -24,7 +24,8 @@ const OfferingTemplate = ({data}) => {
     const offering = data.allStrapiOffering.nodes[0];
     console.log(offering);
     const [modalIsOpen,setIsOpen] = React.useState(false);
-    function openModal() {
+    function openModal(e) {
+        console.log(e);
         setIsOpen(true);
     }
     function closeModal(){
@@ -86,15 +87,24 @@ const OfferingTemplate = ({data}) => {
             // TODO Tabs
             <section className='section--offering--tabs'>
                 <div className='inner'>
-                    <div>
-                        <h3>Tabs Demo</h3>
-                        {/*<Tabs> // Tabs component comes from https://www.digitalocean.com/community/tutorials/react-tabs-component*/}
-                        {/*    <h4 label="Gator">*/}
-                        {/*        See ya later, <em>Alligator</em>!*/}
-                        {/*    </h4>*/}
-                        {/*<ReactMarkdown className='body' children={offering.value_prop.body_text}/>*/}
-                        {/*</Tabs>*/}
-                    </div>
+                    {offering.tabs.map((tab, index) => (
+                        <div>
+                            <h3>{tab.tab_header}</h3>
+                            {/*<Tabs>*/}
+                            {/*// Tabs component comes from https://www.digitalocean.com/community/tutorials/react-tabs-component*/}
+                            {/*    {tab.tabs_section.map((section, index) => (*/}
+                            {/*        <div label={section.header}>*/}
+                            {/*            <ReactMarkdown className='body' children={section.body}/>*/}
+                            {/*        </div>*/}
+                            {/*    ))}*/}
+
+                            {/*    <div label={tab.cta_tab.header}>*/}
+                            {/*        <LinkButton text={tab.cta_tab.button_text}*/}
+                            {/*        src={tab.cta_tab.button_link}/>*/}
+                            {/*    </div>*/}
+                            {/*</Tabs>*/}
+                        </div>
+                    ))}
                 </div>
             </section>
 
@@ -110,21 +120,24 @@ const OfferingTemplate = ({data}) => {
                     <div className='related-staff--wrapper'>
                         {offering.team_members.map((member, index) => (
                             <div className='related-staff'>
-                                {/*<GatsbyImage image={getImage(member.Image)} alt={''} />*/}
-                                <p className='h3 staff-name'>
-                                    {offering.team_members[index].Name}
-                                    <a className='linkedin-icon' href='/'><img src={linkedinIcon}/></a>
-                                </p>
-                                <p className='body staff-role'>{offering.team_members[index].Role}</p>
-                                <button className='open-modal--btn' onClick={openModal}>Read bio</button>
+                                <img className='staff-image' src={offering.team_members[index].image[0].url} alt={offering.team_members[index].image[0].alternativeText}/>
+                                <div className='staff-info'>
+                                    <p className='h3 staff-name'>
+                                        {offering.team_members[index].Name}
+                                        <a className='linkedin-icon' href={offering.team_members[index].Linkedin}><img src={linkedinIcon}/></a>
+                                    </p>
+                                    <p className='body staff-role'>{offering.team_members[index].Role}</p>
+                                    <button className={`body open-modal--btn ${index}`} onClick={openModal}>Read bio</button>
+                                </div>
                                 <Modal
                                     isOpen={modalIsOpen}
                                     onRequestClose={closeModal}
                                     contentLabel="Staff member modal"
+                                    overlayClassName="Overlay"
                                     aria-label="staff-modal-biography">
-
+                                    <img className='staff-image' src={offering.team_members[index].image[0].url} alt={offering.team_members[index].image[0].alternativeText}/>
                                     <h2 className='h3 staff-name'>{offering.team_members[index].Name}</h2>
-                                    <a className='linkedin-icon' href='/'><img src={linkedinIcon}/></a>
+                                    <a className='linkedin-icon' href={offering.team_members[index].Linkedin}><img src={linkedinIcon}/></a>
                                     <p className='body staff-role'>{offering.team_members[index].Role}</p>
 
                                     <button onClick={closeModal}>close</button>
@@ -139,14 +152,15 @@ const OfferingTemplate = ({data}) => {
 
             {offering.text_section.Header &&
             <section className='section--offering--text'>
+                <div className='background-mint'></div>
                 <div className='inner'>
+
                     <h2>{offering.text_section.Header}</h2>
                     <ReactMarkdown className='body' children={offering.text_section.body}/>
                     {offering.text_section.button.map((btn, index) => (
                         <LinkButton
                             text={btn.button_text}
-                            // src={btn.button_link}
-
+                            src={btn.button_link}
                         />
                     ))}
 
@@ -263,6 +277,11 @@ query offeringQuery {
         Body
         Name
         Role
+        Linkedin
+        image {
+          alternativeText
+          url
+        }
       }
     }
   }

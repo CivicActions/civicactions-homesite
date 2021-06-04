@@ -42,19 +42,28 @@
 
   .pattern {
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 0;
-    max-width: 56px;
+    max-width: 26px;
+    @media(min-width: 768px) {
+      max-width: 56px;
+    }
+
   }
 
   .quote {
-    display: flex;
-    margin: 0 auto;
+
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     text-align: center;
-    padding-left: 50px;
+    @media(min-width: 768px) {
+      padding-left: 32px;
+    }
+    @media(min-width: 1024px) {
+      padding-left: 50px;
+    }
+
   }
   .source {
 
@@ -82,13 +91,6 @@
 
     .quote {
       margin-left: 20px;
-    }
-
-    .pattern {
-      max-width: 26px;
-      top: 10px;
-      left: 0;
-      margin-top: 5px;
     }
   }
 }

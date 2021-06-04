@@ -1,0 +1,14 @@
+.offering--content-type {
+  .primary-page-cta {
+    .row a.button__primary:nth-child(2n) {
+      background-color: transparent;
+      border: 1px solid $colors-white;
+      color: $colors-white;
+      &:hover,
+      &:focus {
+        background: $colors-white;
+        color: $colors-black;
+      }
+    }
+  }
+}
