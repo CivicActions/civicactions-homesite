@@ -30,6 +30,7 @@ const CaseStudyPage = () => {
           }
           Sort_Order
           Summary
+          id
         }
       }
     }
@@ -69,7 +70,6 @@ const CaseStudyPage = () => {
   // Handle onChange from Filters
   const callback = (e) => {
     checked = e.target.checked;
-    console.log(checked);
     if (e.target.name !== 'undefined') {
 
       if (!(filterState.includes(e.target.name))) {
@@ -122,22 +122,26 @@ const CaseStudyPage = () => {
       <section className='section--case-studies--filter'>
         <h2 className='body'>Filter by service category</h2>
         <div className={`checkboxes ${filterState}`}>
-          {categories.map((item, index) => (
-              <div className='checkbox body'>
+          {categories.map((item, index) => {
+            const { id, name, value } = item;
+
+            return (
+              <div key={id} className='checkbox body'>
                 <input
-                    type='checkbox'
-                    id={categories[index].id}
-                    name={categories[index].name}
-                    value={categories[index].value}
-                    onChange={(e) => {
-                      callback(e);
-                    }}
-                    class={checked && 'checked'}
+                  type='checkbox'
+                  id={id}
+                  name={name}
+                  value={value}
+                  onChange={(e) => {
+                    callback(e);
+                  }}
+                  className={checked && 'checked'}
 
                 />
-                <label for={categories[index].id}>{categories[index].value}</label>
+                <label htmlFor={categories[index].id}>{categories[index].value}</label>
               </div>
-          ))}
+            )
+          })}
         </div>
       </section>
       <section className='section--case-studies--teasers'>
@@ -146,7 +150,7 @@ const CaseStudyPage = () => {
       <section className={`section--more-clients ${filterState}`}>
         <h2>More clients</h2>
         <div className='inner'><div className='web-cms'>
-          <img alt='' className="case-studies--icon" src={webCmsIcon}/>
+          <img alt='' className="case-studies--icon" src={webCmsIcon} />
           <label>Web & CMS</label>
           <ul className='body'>
             <li>Defense Security Cooperation Agency</li>
@@ -161,72 +165,72 @@ const CaseStudyPage = () => {
           </ul>
 
         </div>
-        <div className='it-service'>
-          <img alt=''  className="case-studies--icon" src={itModernizationIcon}/>
-          <label>IT & Service Modernization</label>
-          <ul className='body'>
-            <li>U.S. Department of Veterans Affairs</li>
-            <li>General Services Administration (data.gov)</li>
-            <li>California Health and Human Services Agency</li>
-            <li>California Department of Motor Vehicles</li>
-            <li>California Child Welfare Digital Services</li>
-            <li>City of Los Angeles</li>
+          <div className='it-service'>
+            <img alt='' className="case-studies--icon" src={itModernizationIcon} />
+            <label>IT & Service Modernization</label>
+            <ul className='body'>
+              <li>U.S. Department of Veterans Affairs</li>
+              <li>General Services Administration (data.gov)</li>
+              <li>California Health and Human Services Agency</li>
+              <li>California Department of Motor Vehicles</li>
+              <li>California Child Welfare Digital Services</li>
+              <li>City of Los Angeles</li>
 
-          </ul>
-        </div>
-        <div className='product-design'>
-          <img alt=''  className="case-studies--icon" src={productDesignIcon}/>
-          <label>Product & Design</label>
-          <ul className='body'>
-            <li>Defense Security Cooperation Agency</li>
-            <li>U.S. Executive Office of the President</li>
-            <li>U.S. House of Representatives</li>
-            <li>Doctors Without Borders</li>
-            <li>City and County of San Francisco Human Services Agency</li>
-            <li>San Francisco Department of the Environment</li>
-            <li>City of Los Angeles</li>
-            <li>Southern Poverty Law Center</li>
-          </ul>
-        </div>
-        <div className='security'>
-          <img alt=''  className="case-studies--icon" src={securityComplianceIcon}/>
-          <label>Security & Compliance</label>
-          <ul className='body'>
-            <li>Centers for Medicare and Medicaid Services</li>
-            <li> Defense Security Cooperation Agency</li>
-            <li>Federal Communications Commission</li>
-            <li>U.S. Department of Veterans Affairs</li>
-            <li>U.S. Department of Justice</li>
-            <li>General Services Administration (data.gov</li>
-            <li>California Department of Technology</li>
-          </ul>
-        </div>
-        <div className='data-services'>
-          <img alt=''  className="case-studies--icon" src={dataServicesIcon}/>
-          <label>Data Services</label>
-          <ul className='body'>
-            <li>U.S. Department of Agriculture</li>
-            <li>State of North Dakota</li>
-            <li>State of Rhode Island</li>
-            <li>Georgia Governor’s Office of Student Achievement</li>
-            <li>Centers for Medicare and Medicaid Services</li>
-          </ul>
-        </div>
-        <div className='development'>
-          <img alt=''  className="case-studies--icon" src={workforceDevelopmentIcon}/>
-          <label>Workforce Development</label>
-          <ul className='body'>
-            <li>U.S. Department of Veterans Affairs</li>
-            <li>U.S. Department of Housing and Urban Development</li>
-            <li>U.S. Department of Energy</li>
-            <li>U.S. Department of Homeland Security</li>
-            <li>Federal Acquisitions Institute</li>
-            <li>U.S. Citizenship and Immigration Services</li>
-            <li>California Department of General Services</li>
-            <li>California Department of Technology</li>
-            <li>Transport Canada</li>
-          </ul>
-        </div>
+            </ul>
+          </div>
+          <div className='product-design'>
+            <img alt='' className="case-studies--icon" src={productDesignIcon} />
+            <label>Product & Design</label>
+            <ul className='body'>
+              <li>Defense Security Cooperation Agency</li>
+              <li>U.S. Executive Office of the President</li>
+              <li>U.S. House of Representatives</li>
+              <li>Doctors Without Borders</li>
+              <li>City and County of San Francisco Human Services Agency</li>
+              <li>San Francisco Department of the Environment</li>
+              <li>City of Los Angeles</li>
+              <li>Southern Poverty Law Center</li>
+            </ul>
+          </div>
+          <div className='security'>
+            <img alt='' className="case-studies--icon" src={securityComplianceIcon} />
+            <label>Security & Compliance</label>
+            <ul className='body'>
+              <li>Centers for Medicare and Medicaid Services</li>
+              <li> Defense Security Cooperation Agency</li>
+              <li>Federal Communications Commission</li>
+              <li>U.S. Department of Veterans Affairs</li>
+              <li>U.S. Department of Justice</li>
+              <li>General Services Administration (data.gov</li>
+              <li>California Department of Technology</li>
+            </ul>
+          </div>
+          <div className='data-services'>
+            <img alt='' className="case-studies--icon" src={dataServicesIcon} />
+            <label>Data Services</label>
+            <ul className='body'>
+              <li>U.S. Department of Agriculture</li>
+              <li>State of North Dakota</li>
+              <li>State of Rhode Island</li>
+              <li>Georgia Governor’s Office of Student Achievement</li>
+              <li>Centers for Medicare and Medicaid Services</li>
+            </ul>
+          </div>
+          <div className='development'>
+            <img alt='' className="case-studies--icon" src={workforceDevelopmentIcon} />
+            <label>Workforce Development</label>
+            <ul className='body'>
+              <li>U.S. Department of Veterans Affairs</li>
+              <li>U.S. Department of Housing and Urban Development</li>
+              <li>U.S. Department of Energy</li>
+              <li>U.S. Department of Homeland Security</li>
+              <li>Federal Acquisitions Institute</li>
+              <li>U.S. Citizenship and Immigration Services</li>
+              <li>California Department of General Services</li>
+              <li>California Department of Technology</li>
+              <li>Transport Canada</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -242,20 +246,19 @@ const CaseStudyPage = () => {
 //
 const CaseStudyTeasers = ({ cases }) => {
   return cases.map((item, index) => {
-    const { Title, Client_Name, Sort_Order, Summary } = item;
-    return <div className={`wrapper--case-study--teaser ${Sort_Order}`}>
-      <img src={item.Cover_Image[0].url} alt={item.Cover_Image[0].alternativeText} />
-      <div className='teaser-content'>
-        <div className='title-wrapper'>
-          <span aria-label='client name'>{Client_Name}</span>
-          <h2 className='h3'>{Title}</h2>
-
+    const { Title, Client_Name, Sort_Order, Summary, id } = item;
+    return (
+      <div key={id} className={`wrapper--case-study--teaser ${Sort_Order}`}>
+        <img src={item.Cover_Image[0].url} alt={item.Cover_Image[0].alternativeText} />
+        <div className='teaser-content'>
+          <div className='title-wrapper'>
+            <span aria-label='client name'>{Client_Name}</span>
+            <h2 className='h3'>{Title}</h2>
+          </div>
         </div>
-
-
+        <p aria-label='summary' className='summary body'>{Summary}</p>
       </div>
-      <p aria-label='summary' className='summary body'>{Summary}</p>
-    </div>;
+    );
   });
 };
 export default CaseStudyPage;
