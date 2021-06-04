@@ -1,0 +1,46 @@
+.section--offering--staff {
+  .inner {
+    h2 {
+      padding-bottom: 32px;
+    }
+    .related-staff--wrapper {
+      margin-bottom: 16px;
+      @media(min-width: 1024px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+
+      .related-staff {
+        padding: 24px;
+        background-color: $colors-grey-warm-4;
+        .linkedin-icon {
+          margin-left: 16px;
+        }
+        .staff-name {
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+        .open-modal--btn {
+          padding: 0;
+          border: 0;
+          font-size: 20px;
+          color: $colors-mint-cool-60v;
+          text-decoration: underline;
+          font-weight: 300 !important;
+        }
+      }
+    }
+  }
+}
+.ReactModal__Content--after-open {
+  max-width: 854px;
+  margin: 0 auto;
+  border: 0;
+  padding: 20px;
+  position: absolute;
+  @media(min-width: 1024px) {
+    padding: 64px;
+  }
+
+}

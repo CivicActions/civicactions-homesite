@@ -7,7 +7,6 @@ import Hero from "../components/hero-with-buttons";
 import Quote from "../components/quote";
 import PrimaryPageCTA from "../components/ditap-page-cta";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
-import ClientsSection from "../components/clients";
 import Tabs from "../components/Tabs";
 import LinkButton from "../components/link-button";
 import {
@@ -17,19 +16,27 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
 } from 'react-accessible-accordion';
-import linkedinIcon from "../files/icons/linkedin-footer-icon.svg"; // TODO need to change the icon
+import linkedinIcon from "../files/icons/linkedin.svg";
 import squareCircle from "../files/icons/square-circle.svg";
+import Modal from 'react-modal';
 
 const OfferingTemplate = ({data}) => {
     const offering = data.allStrapiOffering.nodes[0];
     console.log(offering);
+    const [modalIsOpen,setIsOpen] = React.useState(false);
+    function openModal() {
+        setIsOpen(true);
+    }
+    function closeModal(){
+        setIsOpen(false);
+    }
 
     return (
         <RedLayout>
             <Helmet>
                 <title data-react-helmet="true">{offering.Title}</title>
             </Helmet>
-
+            <div className='offering--content-type'>
                 <Hero
                     title={offering.Title}
                     description={offering.Body}
@@ -90,31 +97,45 @@ const OfferingTemplate = ({data}) => {
                     </div>
                 </div>
             </section>
-            // TODO Quote 1
-            {offering.Quote[0] && <Quote
+
+            {offering.Quote[0] && <Quote classes='staff-quote--first'
                 quote={offering.Quote[0].Quote}
                 source={offering.Quote[0].Source}
             /> }
-            // TODO team
+
+            {offering.team_members.length &&
             <section className='section--offering--staff'>
                 <div className='inner'>
                     <h2>Meet the team</h2>
                     <div className='related-staff--wrapper'>
-
+                        {offering.team_members.map((member, index) => (
                             <div className='related-staff'>
+                                {/*<GatsbyImage image={getImage(member.Image)} alt={''} />*/}
+                                <p className='h3 staff-name'>
+                                    {offering.team_members[index].Name}
+                                    <a className='linkedin-icon' href='/'><img src={linkedinIcon}/></a>
+                                </p>
+                                <p className='body staff-role'>{offering.team_members[index].Role}</p>
+                                <button className='open-modal--btn' onClick={openModal}>Read bio</button>
+                                <Modal
+                                    isOpen={modalIsOpen}
+                                    onRequestClose={closeModal}
+                                    contentLabel="Staff member modal"
+                                    aria-label="staff-modal-biography">
 
-                                {/*<GatsbyImage image={getImage()} alt={''} />*/}
+                                    <h2 className='h3 staff-name'>{offering.team_members[index].Name}</h2>
+                                    <a className='linkedin-icon' href='/'><img src={linkedinIcon}/></a>
+                                    <p className='body staff-role'>{offering.team_members[index].Role}</p>
 
-                                <p className='body staff-name'>
-                                    <a href='' aria-label='link to staff member linkedin profile' alt=''>
-                                    <img src={linkedinIcon}/></a></p>
-                                <p className='body staff-role'></p>
-                                <a href=''>Read bio</a>
+                                    <button onClick={closeModal}>close</button>
+                                    <div><p className='body staff-body'>{offering.team_members[index].Body}</p></div>
+                                </Modal>
+
                             </div>
-
+                        ))}
                     </div>
                 </div>
-            </section>
+            </section>}
 
             {offering.text_section.Header &&
             <section className='section--offering--text'>
@@ -161,7 +182,7 @@ const OfferingTemplate = ({data}) => {
             />
 
 
-
+</div>
         </RedLayout>
     );
 };
@@ -237,6 +258,11 @@ query offeringQuery {
           caption
           url
         }
+      }
+      team_members {
+        Body
+        Name
+        Role
       }
     }
   }
