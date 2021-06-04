@@ -1,0 +1,107 @@
+.section--more-clients {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 20px 120px;
+  @media(min-width: 1024px) {
+    padding: 48px 0 120px;
+  }
+
+  .inner {
+    margin: 0;
+    padding-top: 40px;
+    @media(min-width: 1024px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 32px;
+    }
+
+    & > div {
+      background-color: $colors-grey-warm-4;
+      padding: 33px 20px;
+      margin-bottom: 32px;
+      @media(min-width: 1024px) {
+        padding: 53px 37px;
+      }
+    }
+    .case-studies--icon {
+      width: 53px;
+      height: 53px;
+      float: left;
+    }
+    label {
+      font-size: 28px;
+      padding-left: 16px;
+      float: left;
+      padding-top: 9px;
+      font-weight: 300;
+      width: 80%;
+    }
+    ul {
+      clear: both;
+      padding-top: 24px;
+
+
+    }
+  }
+
+}
+.section--more-clients[class*="Web_CMS"] {
+  .inner {
+    & > div {
+      display: none;
+    }
+    .web-cms {
+      display: block;
+    }
+  }
+}
+.section--more-clients[class*="IT_Service_Modernization"] {
+  .inner {
+    & > div {
+      display: none;
+    }
+    .it-service {
+      display: block;
+    }
+  }
+}
+.section--more-clients[class*="Product_Design"] {
+  .inner {
+    & > div {
+      display: none;
+    }
+    .product-design {
+      display: block;
+    }
+  }
+}
+.section--more-clients[class*="Security_Compliance"] {
+  .inner {
+    & > div {
+      display: none;
+    }
+    .security {
+      display: block;
+    }
+  }
+}
+.section--more-clients[class*="Data_Services"] {
+  .inner {
+    & > div {
+      display: none;
+    }
+    .data-services {
+      display: block;
+    }
+  }
+}
+.section--more-clients[class*="Workforce_Development"] {
+  .inner {
+    & > div {
+      display: none;
+    }
+    .development {
+      display: block;
+    }
+  }
+}

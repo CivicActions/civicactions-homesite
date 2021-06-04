@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
 
         <div className='grid-container__item footer__menu--wrapper'>
-          <h2 class="visually-hidden" id="footer">
+          <h2 className="visually-hidden" id="footer">
             CivicActions footer menu</h2>
           <nav aria-labelledby="footer" className="footer__menu">
             <ul className="footer__menu--list">

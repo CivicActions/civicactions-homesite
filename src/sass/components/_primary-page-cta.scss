@@ -20,10 +20,13 @@
     h2 {
       margin-bottom: 10px;
       color: $colors-white;
+      font-size: 36px;
     }
 
     span {
       color: $colors-white;
+      font-size: 28px;
+      font-weight: 300;
     }
   }
 
@@ -34,7 +37,12 @@
   .button__primary {
     margin-right: 32px;
   }
-
+  .button__secondary {
+    margin-top: 24px;
+    @media(min-width: 768px) {
+      margin-top: 0;
+    }
+  }
   .secondary-button {
     margin-left: 40px;
     padding: 12px 30px;
@@ -49,6 +57,7 @@
     .column > h {
       margin-bottom: 24px;
     }
+
   }
   @media screen and (max-width: $medium-large-screen) {
     .inner {

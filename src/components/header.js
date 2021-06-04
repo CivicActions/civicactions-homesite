@@ -21,15 +21,15 @@ const Header = () => {
           <Link to='/case-studies'>our work</Link>
           <Link to=''>insights</Link>
           <Link to='/careers'>careers</Link>
-          <a href={'/contact/'}><div className='primary-button'>contact us</div></a>
+          <Link to='/contact/'><div className='primary-button'>contact us</div></Link>
         </div>
 
         <MobileMenu
           right
           noTransition
           width={'75%'}
-          customBurgerIcon={<img src={menuIcon} alt='mobile menu'/>}
-          customCrossIcon={<img src={closeIcon} alt='close button'/>}
+          customBurgerIcon={<img src={menuIcon} alt='mobile menu' />}
+          customCrossIcon={<img src={closeIcon} alt='close button' />}
         />
       </div>
     </header>

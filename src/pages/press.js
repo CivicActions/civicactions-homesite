@@ -1,7 +1,8 @@
 import '../sass/styles.scss';
 import React from 'react';
+import { Link } from 'gatsby';
 import RedLayout from '../layouts/red';
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 import Hero from "../components/hero";
 import PrimaryPageCTA from "../components/primary-page-cta";
 
@@ -22,14 +23,14 @@ const Press = () => {
                         <h2 className='h4'>Department of Education Awards CivicActions 5-Year Contract to Advance Adult Literacy</h2>
                         <span>Press Release: May 11, 2021</span>
                         <p className='body'>We are proud to continue our work with the Department of Education to modernize the online experience of thousands of educators and learners. Under the newly awarded 5-year contract, we will apply agile and human-centered processes to improve technology systems powering the adult education community.</p>
-                        <p className='body'>Full story: <a href='/press/2021-05-11-civicactions-wins-department-of-ed-recompete'>Department of Education Awards CivicActions 5-Year Contract to Advance Adult Literacy</a>
+                        <p className='body'>Full story: <Link to='/press/2021-05-11-civicactions-wins-department-of-ed-recompete'>Department of Education Awards CivicActions 5-Year Contract to Advance Adult Literacy</Link>
                         </p>
                     </div>
                     <div className='press-release--items'>
                         <h2 className='h4'>NSF awards CivicActions $44M contract for CMS support and improvement of federal science research website</h2>
                         <span>News Release: May 3, 2021</span>
                         <p className='body'>We are delighted to be continuing our partnership with the National Science Foundation through a newly awarded 5-year contract. Our research-based approach to the improvement of NSF’s website helps science researchers obtain funding for world-changing work.</p>
-                        <p className='body'>Full story: <a href='/press/2021-05-03-civicactions-wins-nsf-recompete'>NSF Awards CivicActions $44M Contract for CMS Support and Improvement of Federal Science Research Website</a>
+                        <p className='body'>Full story: <Link to='/press/2021-05-03-civicactions-wins-nsf-recompete'>NSF Awards CivicActions $44M Contract for CMS Support and Improvement of Federal Science Research Website</Link>
                         </p>
                     </div>
                     <div className='press-release--items'>
@@ -57,21 +58,21 @@ const Press = () => {
                         <h2 className='h4'>CivicActions expands accessibility capabilities with OpenConcept</h2>
                         <span>News Release: November 9, 2020</span>
                         <p className='body'>With the acquisition of OpenConcept, an industry leader in web accessibility through open source, we are increasing our commitment and ability to create government digital services that are accessible to people of all abilities.</p>
-                        <p className='body'>Full story: <a href='/press/2020-11-09-civicactions-acquires-openconcept'>CivicActions Expands Accessibility Capabilities With OpenConcept</a>
+                        <p className='body'>Full story: <Link to='/press/2020-11-09-civicactions-acquires-openconcept'>CivicActions Expands Accessibility Capabilities With OpenConcept</Link>
                         </p>
                     </div>
                     <div className='press-release--items'>
                         <h2 className='h4'>CivicActions certified to deliver DITAP training to federal acquisition professionals</h2>
                         <span>News Release: August 14, 2020</span>
                         <p className='body'>As an approved certified vendor of the Digital IT Acquisition Professional (DITAP) training, we are thrilled to be helping federal contracting officers learn how to effectively buy modern IT services that best serve government and the public in today’s digital world.</p>
-                        <p className='body'>Full story: <a href='/press/2020-08-14-civicactions-certified-to-deliver-ditap'>CivicActions Certified to Deliver DITAP Procurement Training to Federal Acquisition Professionals</a>
+                        <p className='body'>Full story: <Link to='/press/2020-08-14-civicactions-certified-to-deliver-ditap'>CivicActions Certified to Deliver DITAP Procurement Training to Federal Acquisition Professionals</Link>
                         </p>
                     </div>
                     <div className='press-release--items'>
                         <h2 className='h4'>CivicActions wins $18M contract to migrate and redesign CMS websites</h2>
                         <span>News Release: March 3, 2020</span>
                         <p className='body'>We are excited to be working with the Centers for Medicare & Medicaid Services to provide user centered design, agile development, and open data to improve the online health care experience for millions of people.</p>
-                        <p className='body'>Full story: <a href='/press/2020-03-02-civicactions-wins-cms-contract'>CivicActions Wins $18M Contract to Migrate, Redesign CMS Websites</a>
+                        <p className='body'>Full story: <Link to='/press/2020-03-02-civicactions-wins-cms-contract'>CivicActions Wins $18M Contract to Migrate, Redesign CMS Websites</Link>
                         </p>
                     </div>
 
