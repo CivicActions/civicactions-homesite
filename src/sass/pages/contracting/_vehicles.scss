@@ -1,0 +1,44 @@
+.section--contracting-vehicles {
+  max-width: 1200px;
+  margin: 0 auto 64px;
+  h2 {
+    padding: 42px 20px 24px;
+    @media(min-width: 1024px) {
+      font-size: 36px;
+      padding: 0 0 24px;
+    }
+  }
+  .inner {
+    @media(min-width: 1024px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 23px;
+      grid-auto-rows: minmax(100px, auto);
+      margin: 0;
+    }
+    .contact-vehicle--component {
+      padding: 24px 24px 60px ;
+      background-color: $colors-grey-warm-4;
+      position: relative;
+      margin-bottom: 24px;
+      @media(min-width: 1024px) {
+        margin-bottom: 0;
+      }
+      img {
+        margin-bottom: 32px;
+      }
+      h3 {
+        padding-bottom: 16px;
+      }
+      a {
+        font-size: 20px;
+        font-weight: 300;
+        position: absolute;
+        bottom: 24px;
+      }
+      p:last-child {
+        padding-bottom: 24px;
+      }
+    }
+  }
+}
