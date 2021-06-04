@@ -1,5 +1,6 @@
 import * as React from 'react';
 import '../sass/styles.scss';
+import { Link } from 'gatsby';
 import GeneralLayout from '../layouts/general';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
 import FrozenImg from '../files/images/zoom-image.png';
@@ -17,10 +18,10 @@ const NotFoundPage = () => {
           <p className="body">While we sign back on, here are some quick links for you:</p>
           <div className="list">
             <p className="body">
-              <a href="/">Visit our homepage</a>
+              <Link to="/">Visit our homepage</Link>
             </p>
             <p className="body">
-              <a href="/careers">View our job listings</a>
+              <Link to="/careers">View our job listings</Link>
             </p>
             <p className="body">
               <a href="https://medium.com/civicactions">Read our blog</a>
