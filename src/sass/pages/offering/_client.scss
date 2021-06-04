@@ -1,4 +1,16 @@
 .section--offering--client-logos {
+  padding-top: 42px;
+  margin-bottom: 30px;
+  @media(min-width: 1024px) {
+    padding-top: 0;
+    margin-bottom: 48px;
+  }
+  h2 {
+    margin: 0 20px;
+    @media(min-width: 1024px) {
+      margin: 0;
+    }
+  }
   .grid {
     column-gap: 24px;
     img {

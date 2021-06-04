@@ -19,7 +19,6 @@ const PrimaryPageCTA = ({
           {buttons.length && buttons.map((btn, index) => (
                 <LinkButton
                     src={btn.button_link}
-                    type='secondary'
                     text={btn.button_text}
                 />
             ))}
