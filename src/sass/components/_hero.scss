@@ -17,5 +17,12 @@
     h1 {
       padding-bottom: 24px;
     }
+    .button__secondary {
+      margin-left: 24px;
+      background-color: white;
+      border: 1px solid $colors-black;
+      color: $colors-black;
+    }
   }
+
 }

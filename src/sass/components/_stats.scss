@@ -1,0 +1,44 @@
+.section--case-study--stats,
+.section--offering--stats {
+  margin-bottom: 0;
+  position: relative;
+  .stats--wrapper {
+    box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
+    background-color: $colors-white;
+    @media(min-width: 1200px) {
+      max-width: 1200px;
+      margin: 0 auto -100px;
+    }
+  }
+
+  .inner {
+    @media(min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      margin: 0 20px;
+    }
+    @media(min-width: 1024px) {
+      padding: 47px 113px;
+    }
+    .single-stat:last-child {
+      @media(min-width: 1024px) {
+        margin-right: 0;
+      }
+    }
+    .single-stat {
+      text-align: center;
+      @media(min-width: 1024px) {
+        margin-right: 50px;
+      }
+      .stat--number {
+        color: $colors-mint-cool-40v;
+        font-size: 56px;
+        font-weight: 400;
+        margin: 0;
+      }
+      .stat--text {
+        margin: auto;
+      }
+    }
+  }
+}

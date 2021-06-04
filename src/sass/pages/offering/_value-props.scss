@@ -1,0 +1,44 @@
+.section--offering--value-props {
+  background-color: $colors-grey-warm-4;
+  padding-top: 219px;
+  padding-bottom: 24px;
+  @media(min-width: 768px) {
+    padding-bottom: 40px;
+  }
+  @media(min-width: 1024px) {
+    padding-bottom: 64px;
+  }
+  .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    h2,
+    .icon {
+      float: left;
+    }
+    h2 {
+      padding-bottom: 24px;
+    }
+    .icon {
+      margin-left: 16px;
+    }
+    .value-props--left {
+    padding-right: 113px;
+  }
+    .value-props--right {
+      display: none;
+      @media(min-width: 768px) {
+        display: block;
+      }
+      caption {
+        display: inline-block;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+    .body {
+      clear: both;
+    }
+  }
+}
