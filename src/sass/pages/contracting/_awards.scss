@@ -1,31 +1,46 @@
 .section--recent-work-awards {
   max-width: 1200px;
   margin: 0 auto;
+
   .inner {
     margin: 0;
+    padding: px-to-rem(20px);
+
     & > div {
-      @media(min-width: 768px) {
+      padding: px-to-rem(10px) 0;
+
+      @media(min-width: $tablet-screen) {
         display: flex;
         padding: 40px 0;
-        border-bottom: 1px solid #c4c4c4;
+        border-bottom: 1px solid $light-gray;
+  
+        &:last-child {
+          border-bottom: 0;
+        }
       }
     }
+
     a {
       font-size: 20px;
       font-weight: 300;
     }
+
     .work-awards--component {
-      padding-bottom: 32px;
+      @media(min-width: $tablet-screen) {
+        padding-bottom: 32px;
+      }
     }
+
     h2 {
       padding-bottom: 40px;
-      @media(min-width: 1024px) {
+
+      @media(min-width: $medium-large-screen) {
         font-size: 36px;
       }
 
     }
+
     .year {
-      float: left;
       margin-right: 64px;
       font-weight: 700;
       font-size: 20px;
