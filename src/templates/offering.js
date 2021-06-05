@@ -168,21 +168,32 @@ const OfferingTemplate = ({data}) => {
             </section> }
             {/*// Accordion comes from https://www.npmjs.com/package/react-accessible-accordion*/}
             {offering.FAQ_Accordion_Section.list_questions.length &&
-            <Accordion id='faq'>
-                {offering.FAQ_Accordion_Section.list_questions.map((faq, index) => (
-                    <AccordionItem>
-                        <AccordionItemHeading>
-                            <AccordionItemButton>
-                                {faq.question}
-                            </AccordionItemButton>
-                        </AccordionItemHeading>
-                        <AccordionItemPanel>
-                            <ReactMarkdown className='body' children={faq.body}/>
-                        </AccordionItemPanel>
-                    </AccordionItem>
-                ))}
+                <section className='section--offering--faqs'>
+                    <div className='inner'>
+                        <h2>Frequently asked questions</h2>
+                        <Accordion
+                            id='faq'
+                            allowZeroExpanded={true}
+                            allowMultipleExpanded={true}>
+                            {offering.FAQ_Accordion_Section.list_questions.map((faq, index) => (
+                                <AccordionItem>
+                                    <AccordionItemHeading>
+                                        <AccordionItemButton>
+                                            <div className="arrow-down"></div>
+                                            <div className="arrow-right"></div>
+                                            <h3>{faq.question}</h3>
 
-            </Accordion>}
+                                        </AccordionItemButton>
+                                    </AccordionItemHeading>
+                                    <AccordionItemPanel>
+                                        <ReactMarkdown className='body' children={faq.body}/>
+                                    </AccordionItemPanel>
+                                </AccordionItem>
+                            ))}
+
+                        </Accordion>
+                    </div>
+                </section>}
 
             {offering.Quote[1] && <Quote
                 quote={offering.Quote[1].Quote}
