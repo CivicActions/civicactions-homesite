@@ -1,3 +1,28 @@
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type StrapiCaseStudy implements Node {
+      Cover_Image: File!,
+      Hero_Image: File!,
+      Related_Case_Studies: RelatedStudies
+    }
+    type StrapiCaseStudyApproach implements Node {
+      Image: File!
+    }
+    type RelatedStudies {
+      Path: String
+      Title: String
+      Cover_Image : File!
+    }
+    type File {
+      url: String,
+      alternativeText: String,
+      caption: String
+    }
+  `
+  createTypes(typeDefs);
+}
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const result = await graphql(
