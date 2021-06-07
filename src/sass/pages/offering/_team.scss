@@ -78,8 +78,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #1B1B1B;
-  opacity: 0.85;
+  background-color: rgb(27,27,27, .85);
+  //opacity: 0.85;
 }
 .Modal {
   position: absolute;
@@ -94,8 +94,19 @@
   border: 0;
   padding: 20px;
   position: absolute;
+  top: 120px !important;
   @media(min-width: 1024px) {
     padding: 64px;
+  }
+  button {
+    padding: 8px;
+    background-color: transparent;
+    -webkit-appearance: none;
+    border: 0;
+    cursor: pointer;
+    p {
+      margin: 0;
+    }
   }
   .staff-image {
     width: 124px;
