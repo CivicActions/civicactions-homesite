@@ -4,15 +4,14 @@ import LinkButton from "./link-button";
 import PropTypes from "prop-types";
 
 const TabMobile = ({ tabs }) => {
-    console.log(tabs);
+
     let check;
     const [checked,setIsChecked] = React.useState(false);
     const toggleClass = () => {
         setIsChecked(!checked);
     };
     const callback = (e) => {
-        console.log('test');
-        console.log(e);
+
         if (e.target.value !== 'undefined') {
             if (checked === e.target.value) {
                 // The button was already selected.
@@ -23,7 +22,7 @@ const TabMobile = ({ tabs }) => {
                 check = `_${e.target.value}`;
             }
         }
-        console.log(checked);
+
     };
     // useEffect(checked);
     return (

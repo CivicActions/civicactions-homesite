@@ -175,21 +175,14 @@
             }
           }
           .link-button {
-            position: absolute;
-            bottom: 46%;
-            left: 23%;
+            width: 100%;
+            text-align: center;
+            margin-top: 24px;
           }
 
         }
       }
-      #react-tabs-3 {
-        .cta-tab-section {
-          .link-button {
-            left: 21%;
-            bottom: 32%;
-          }
-        }
-      }
+
       .react-tabs__tab-panel:last-child {
         .tab-section:nth-child(3n) {
           @media(min-width: 768px) {
