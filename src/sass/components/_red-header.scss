@@ -2,7 +2,7 @@
   background-color: #D83933;
   max-width: none;
   padding: 50px 0 0;
-  position: sticky;
+  position: sticky !important;
   top: 0;
   z-index: 11;
   // box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3); // TODO 1. Add this when we have an event telling us that the item is at the top of the page.
@@ -15,7 +15,7 @@
     max-width: 1200px; // TODO 3.  This will be full width once sticky at top.
     padding: 0 20px 1px;
     @media(min-width: 1024px) {
-      margin: 0 auto 30px auto;
+      margin: 0 auto;
     }
   }
   .inner {
@@ -40,9 +40,6 @@
       color: $colors-black;
     }
   }
-}
-.red-header.mobile-menu-open {
-  position: static;
 }
 .red-rectangle {
   display: none;
