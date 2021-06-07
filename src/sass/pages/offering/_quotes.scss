@@ -1,5 +1,10 @@
 .offering--content-type {
   .staff-quote--first{
     background-color: $colors-white !important;
+    padding-top: 22px;
+  }
+  .staff-quote:nth-child(2n) {
+    background-color: #f5f5f0;
+    margin-top: 0;
   }
 }

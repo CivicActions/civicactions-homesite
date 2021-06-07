@@ -1,7 +1,7 @@
 .section--case-study--stats,
 .section--offering--stats {
   position: relative;
-  margin: 0 40px;
+  margin: 0 20px;
 
   .stats--wrapper {
     box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
@@ -39,6 +39,9 @@
         font-size: 56px;
         font-weight: 400;
         margin: 0;
+        text-align: center;
+        line-height: 50px;
+        padding-bottom: 8px;
       }
       .stat--text {
         margin: auto;
