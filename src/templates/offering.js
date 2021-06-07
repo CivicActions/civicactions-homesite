@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {graphql} from 'gatsby';
+import React, { useState, useEffect } from 'react';
+import { graphql } from 'gatsby';
 import ReactMarkdown from "react-markdown";
 import Modal from 'react-modal';
 import { Helmet } from "react-helmet";
@@ -20,6 +20,8 @@ import LinkButton from "../components/link-button";
 import Bio from '../components/offering/bio'
 import linkedinIcon from "../files/icons/linkedin.svg";
 import squareCircle from "../files/icons/square-circle.svg";
+import TabSection from '../components/tabsection';
+import TabMobile from '../components/tabmobile';
 
 const OfferingTemplate = ({ data }) => {
   Modal.setAppElement('#___gatsby')
@@ -106,34 +108,27 @@ const OfferingTemplate = ({ data }) => {
             </div>
           </section>}
 
-            <section className='section--offering--value-props'>
-                <div className='inner'>
-                    <div className='wrapper'>
-                    <div className='value-props--left'>
-                        <h2>{offering.value_prop.header_text}</h2><img className='icon' src={squareCircle} alt=''/>
-                        <ReactMarkdown className='body' children={offering.value_prop.body_text}/>
+        <section className='section--offering--value-props'>
+          <div className='inner'>
+            <div className='wrapper'>
+              <div className='value-props--left'>
+                <h2>{offering.value_prop.header_text}</h2>
+                <img className='icon' src={squareCircle} alt='' />
+                <ReactMarkdown className='body' children={offering.value_prop.body_text} />
 
+              </div>
+              <div className='value-props--right'>
+                <img src={offering.value_prop.image[0].url} alt={offering.value_prop.image[0].alternativeText} />
+                <caption>{offering.value_prop.image[0].caption}</caption>
+              </div>
             </div>
-            <div className='value-props--right'>
-              <img src={offering.value_prop.image[0].url} alt={offering.value_prop.image[0].alternativeText} />
-              <caption>{offering.value_prop.image[0].caption}</caption>
-            </div>
-                    </div>
           </div>
         </section>
 
-            <section className='section--offering--tabs'>
-                <div className='inner'>
-                    {/*<TabSection tabs={offering.tabs}/>*/}
-                    <TabMobile tabs={offering.tabs}/>
-
-                {/*    <div label={tab.cta_tab.header}>*/}
-                {/*        <LinkButton text={tab.cta_tab.button_text}*/}
-                {/*        src={tab.cta_tab.button_link}/>*/}
-                {/*    </div>*/}
-                {/*</Tabs>*/}
-              </div>
-            ))}
+        <section className='section--offering--tabs'>
+          <div className='inner'>
+            {/*<TabSection tabs={offering.tabs}/>*/}
+            <TabMobile tabs={offering.tabs} />
           </div>
         </section>
 
@@ -150,8 +145,6 @@ const OfferingTemplate = ({ data }) => {
                 {teamMemberList}
               </div>
             </div>
-                </div>
-            </section>
 
             {/* 
               Load just one Modal wrapper per page and update its content with the
@@ -169,10 +162,12 @@ const OfferingTemplate = ({ data }) => {
               <button onClick={closeModal}>close</button>
 
             </Modal>
-          </section>}
+          </section >
+        }
 
 
-        {offering.text_section.Header &&
+        {
+          offering.text_section.Header &&
           <section className='section--offering--text'>
             <div className='background-mint'></div>
             <div className='inner'>
@@ -186,41 +181,46 @@ const OfferingTemplate = ({ data }) => {
                 />
               ))}
 
-                </div>
-            </section> }
-            {/*// Accordion comes from https://www.npmjs.com/package/react-accessible-accordion*/}
-            {offering.FAQ_Accordion_Section.list_questions.length &&
-                <section className='section--offering--faqs'>
-                    <div className='inner'>
-                        <h2>Frequently asked questions</h2>
-                        <Accordion
-                            id='faq'
-                            allowZeroExpanded={true}
-                            allowMultipleExpanded={true}>
-                            {offering.FAQ_Accordion_Section.list_questions.map((faq, index) => (
-                                <AccordionItem>
-                                    <AccordionItemHeading>
-                                        <AccordionItemButton>
-                                            <div className="arrow-down"></div>
-                                            <div className="arrow-right"></div>
-                                            <h3>{faq.question}</h3>
+            </div>
+          </section>
+        }
+        {/*// Accordion comes from https://www.npmjs.com/package/react-accessible-accordion*/}
+        {
+          offering.FAQ_Accordion_Section.list_questions.length &&
+          <section className='section--offering--faqs'>
+            <div className='inner'>
+              <h2>Frequently asked questions</h2>
+              <Accordion
+                id='faq'
+                allowZeroExpanded={true}
+                allowMultipleExpanded={true}>
+                {offering.FAQ_Accordion_Section.list_questions.map((faq, index) => (
+                  <AccordionItem>
+                    <AccordionItemHeading>
+                      <AccordionItemButton>
+                        <div className="arrow-down"></div>
+                        <div className="arrow-right"></div>
+                        <h3>{faq.question}</h3>
 
-                                        </AccordionItemButton>
-                                    </AccordionItemHeading>
-                                    <AccordionItemPanel>
-                                        <ReactMarkdown className='body' children={faq.body}/>
-                                    </AccordionItemPanel>
-                                </AccordionItem>
-                            ))}
+                      </AccordionItemButton>
+                    </AccordionItemHeading>
+                    <AccordionItemPanel>
+                      <ReactMarkdown className='body' children={faq.body} />
+                    </AccordionItemPanel>
+                  </AccordionItem>
+                ))}
 
-                        </Accordion>
-                    </div>
-                </section>}
+              </Accordion>
+            </div>
+          </section>
+        }
 
-        {offering.Quote[1] && <Quote
-          quote={offering.Quote[1].Quote}
-          source={offering.Quote[1].Source}
-        />}
+        {
+          offering.Quote[1] && <Quote
+            quote={offering.Quote[1].Quote}
+            source={offering.Quote[1].Source}
+          />
+        }
 
         <PrimaryPageCTA
           title={offering.CTA.Header}
@@ -229,8 +229,8 @@ const OfferingTemplate = ({ data }) => {
         />
 
 
-      </div>
-    </RedLayout>
+      </div >
+    </RedLayout >
   );
 };
 
