@@ -1,0 +1,351 @@
+import React, { useState, useEffect } from 'react';
+import { graphql } from 'gatsby';
+import ReactMarkdown from "react-markdown";
+import Modal from 'react-modal';
+import { Helmet } from "react-helmet";
+import {
+    Accordion,
+    AccordionItem,
+    AccordionItemHeading,
+    AccordionItemButton,
+    AccordionItemPanel,
+} from 'react-accessible-accordion';
+
+// Components
+import RedLayout from '../layouts/red';
+import Hero from "../components/hero-with-buttons";
+import Quote from "../components/quote";
+import PrimaryPageCTA from "../components/ditap-page-cta";
+import LinkButton from "../components/link-button";
+import Bio from '../components/offering/bio'
+import linkedinIcon from "../files/icons/linkedin.svg";
+import squareCircle from "../files/icons/square-circle.svg";
+import TabMobile from '../components/tabmobile';
+import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
+import closeButton from '../files/icons/grey-close-icon.svg';
+
+const OfferingTemplate = ({ data }) => {
+    Modal.setAppElement('#___gatsby')
+
+    const offering = data.allStrapiOffering.nodes[0];
+
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const [modalRef, setModalRef] = useState(false);
+
+    // Initialize the modal content.
+    let modalContent
+
+    function openModal(currentMemberName) {
+        setIsOpen(true);
+        // Set the clicked member name in state.
+        setModalRef(currentMemberName)
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
+    // If the modal is open, load the bio information for the clicked team member.
+    if (modalIsOpen === true) {
+        modalContent = offering.team_members.filter((item) => {
+            if (item.Name === modalRef) {
+                return true;
+            };
+        })
+    }
+
+    //=== Get the list of all team members. (@todo: Place in a new component) ====
+    let teamMemberList = offering.team_members.length ?
+        offering.team_members.map((member, index) => (
+
+            <div key={member.id} className='related-staff'>
+                <img className='staff-image' src={member.image[0].url} alt={member.image[0].alternativeText} />
+                <div className='staff-info'>
+                    <p className='h3 staff-name'>
+                        {member.Name}
+                        <a className='linkedin-icon' href={member.Linkedin}><img src={linkedinIcon} /></a>
+                    </p>
+                    <p className='body staff-role'>{member.Role}</p>
+                    <button className={`body open-modal--btn ${index}`} onClick={() => openModal(member.Name)}>Read bio</button>
+                </div></div>
+
+
+        )) : null;
+
+    return (
+        <RedLayout>
+            <Helmet>
+                <title data-react-helmet="true">{offering.Title}</title>
+            </Helmet>
+            <div className='offering--content-type'>
+                <Hero
+                    title={offering.Title}
+                    description={offering.Body}
+                    button={offering.hero_button}
+                />
+
+                <section className='section--offering--client-logos'>
+                    <div className='inner'>
+                        <h2 className='body'>{offering.client_logo.text}</h2>
+                        <div className='grid'>
+                            {offering.client_logo.client_logo.map((img) => (
+                                <img key={img.id} src={img.url} alt={img.alternativeText} />
+                            ))}
+                        </div>
+
+                    </div>
+                </section>
+                {offering.Stats.length &&
+                <section className='section--offering--stats'>
+                    <div className='stats--wrapper'>
+                        <div className='inner'>
+                            {offering.Stats.map((stat, index) => (
+                                <div className='single-stat'>
+                                    <p className='stat--number'>{offering.Stats[index].Numerical_Element}</p>
+                                    <p className='body stat--text'>{offering.Stats[index].Content_Element}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>}
+
+                <section className='section--offering--value-props'>
+                    <div className='inner'>
+                        <div className='wrapper'>
+                            <div className='value-props--left'>
+                                <h2>{offering.value_prop.header_text}</h2>
+                                <img className='icon' src={squareCircle} alt='' />
+                                <ReactMarkdown className='body' children={offering.value_prop.body_text} />
+
+                            </div>
+                            <div className='value-props--right'>
+                                <img src={offering.value_prop.image[0].url} alt={offering.value_prop.image[0].alternativeText} />
+                                <caption>{offering.value_prop.image[0].caption}</caption>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className='section--offering--tabs'>
+                    <div className='inner'>
+
+                        <TabMobile tabs={offering.tabs} />
+                        <Tabs>
+                            <TabList >
+                                {offering.tabs.map((tab, index) => (
+                                    <Tab><h2>{tab.tab_header}</h2>
+                                    </Tab>
+                                ))}
+
+                            </TabList>
+                            {offering.tabs.map((tab, index) => (
+                                <TabPanel>
+                                    {/*// Tabs component comes from https://www.digitalocean.com/community/tutorials/react-tabs-component*/}
+                                    {tab.tabs_section.map((section, index) => (
+                                        <div className='tab-section' label={section.header}>
+                                            <h3 className='h5'>{section.header}</h3>
+                                            <ReactMarkdown className='body' children={section.body}/>
+                                        </div>
+                                    ))}
+                                    <div className='cta-tab-section' label={tab.cta_tab.header}>
+                                        <h3 className='h5'>{tab.cta_tab.header}</h3>
+                                        <div className='link-button'><LinkButton text={tab.cta_tab.button_text}
+                                                                                 src={tab.cta_tab.button_link}/></div>
+                                    </div>
+                                </TabPanel>
+                            ))}
+                        </Tabs>
+                    </div>
+                </section>
+
+                {offering.Quote[0] && <Quote classes='staff-quote--first'
+                                             quote={offering.Quote[0].Quote}
+                                             source={offering.Quote[0].Source}
+                />}
+
+                {offering.team_members.length &&
+                <section className='section--offering--staff'>
+                    <div className='inner'>
+                        <h2>Meet the team</h2>
+                        <div className='related-staff--wrapper'>
+                            {teamMemberList}
+                        </div>
+                    </div>
+
+                    {/*
+              Load just one Modal wrapper per page and update its content with the
+              clicked team member's bio.
+             */}
+                    <Modal
+                        isOpen={modalIsOpen}
+                        onRequestClose={closeModal}
+                        contentLabel="Staff member modal"
+                        overlayClassName="Overlay"
+                        aria-label="staff-modal-biography"
+                    >
+
+                        <Bio member={modalContent} closeModal={closeModal} />
+                        <button onClick={closeModal}><img src={closeButton}/><p className='visually-hidden'>Close</p></button>
+
+                    </Modal>
+                </section >
+                }
+
+
+                {
+                    offering.text_section.Header &&
+                    <section className='section--offering--text'>
+                        <div className='background-mint'></div>
+                        <div className='inner'>
+
+                            <h2>{offering.text_section.Header}</h2>
+                            <ReactMarkdown className='body' children={offering.text_section.body} />
+                            {offering.text_section.button.map((btn, index) => (
+                                <LinkButton
+                                    text={btn.button_text}
+                                    src={btn.button_link}
+                                />
+                            ))}
+
+                        </div>
+                    </section>
+                }
+                {/*// Accordion comes from https://www.npmjs.com/package/react-accessible-accordion*/}
+                {
+                    offering.FAQ_Accordion_Section.list_questions.length &&
+                    <section className='section--offering--faqs'>
+                        <div className='inner'>
+                            <h2>Frequently asked questions</h2>
+                            <Accordion
+                                id='faq'
+                                allowZeroExpanded={true}
+                                allowMultipleExpanded={true}>
+                                {offering.FAQ_Accordion_Section.list_questions.map((faq, index) => (
+                                    <AccordionItem>
+                                        <AccordionItemHeading>
+                                            <AccordionItemButton>
+                                                <div className="arrow-down"></div>
+                                                <div className="arrow-right"></div>
+                                                <h3>{faq.question}</h3>
+
+                                            </AccordionItemButton>
+                                        </AccordionItemHeading>
+                                        <AccordionItemPanel>
+                                            <ReactMarkdown className='body' children={faq.body} />
+                                        </AccordionItemPanel>
+                                    </AccordionItem>
+                                ))}
+
+                            </Accordion>
+                        </div>
+                    </section>
+                }
+
+                {
+                    offering.Quote[1] && <Quote
+                        quote={offering.Quote[1].Quote}
+                        source={offering.Quote[1].Source}
+                    />
+                }
+
+                <PrimaryPageCTA
+                    title={offering.CTA.Header}
+                    subtitle={offering.CTA.body}
+                    buttons={offering.CTA.cta_button}
+                />
+
+
+            </div >
+        </RedLayout >
+    );
+};
+
+export const query = graphql`
+query offeringQuery {
+  allStrapiOffering {
+    nodes {
+      id
+      Body
+      CTA {
+        Header
+        body
+        cta_button {
+          button_link
+          button_text
+        }
+      }
+      Path
+      Quote {
+        Quote
+        Source
+      }
+      Stats {
+        Content_Element
+        Numerical_Element
+      }
+      Summary
+      Title
+      client_logo {
+        text
+        client_logo {
+          url
+          alternativeText
+          caption
+          id
+        }
+      }
+      hero_button {
+        button_link
+        button_text
+      }
+      text_section {
+        Header
+        body
+        button {
+          button_link
+          button_text
+        }
+      }
+      FAQ_Accordion_Section {
+        list_questions {
+          body
+          question
+        }
+      }
+      tabs {
+        cta_tab {
+          button_link
+          button_text
+          header
+        }
+        tab_header
+        tabs_section {
+          body
+          header
+        }
+      }
+      value_prop {
+        body_text
+        header_text
+        image {
+          alternativeText
+          caption
+          url
+        }
+      }
+      team_members {
+        Body
+        Name
+        Role
+        Linkedin
+        image {
+          alternativeText
+          url
+        }
+      }
+    }
+  }
+}
+`;
+
+export default OfferingTemplate;

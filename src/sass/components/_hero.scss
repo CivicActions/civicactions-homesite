@@ -15,7 +15,35 @@
       padding: 42px 64px 67px;
     }
     h1 {
-      padding-bottom: 24px;
+      padding-bottom: 18px;
+      padding-top: 24px;
+      @media(min-width: 768px) {
+        padding-top: inherit;
+        padding-bottom: 35px;
+      }
+    }
+    .body {
+      padding-bottom: 16px;
+    }
+    .button__secondary {
+      margin-left: 24px;
+      background-color: white;
+      border: 1px solid $colors-black;
+      color: $colors-black;
+    }
+    .button-wrapper {
+      & > div {
+        margin-bottom: 24px;
+        a {
+          padding: 12px 0;
+          width: 100%;
+          text-align: center;
+        }
+        a.button__secondary {
+          margin-left: 0;
+        }
+      }
     }
   }
+
 }

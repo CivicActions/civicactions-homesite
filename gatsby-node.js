@@ -49,6 +49,13 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+        offering: allStrapiOffering {
+          edges {
+            node {
+              Path
+            }
+          }
+        }
       }
     `
   );
@@ -80,6 +87,18 @@ exports.createPages = async ({ graphql, actions }) => {
       component: StaffProfileTemplate,
       context: {
         pagePath: profile.node.Path,
+      },
+    });
+  });
+
+  const offerings = result.data.offering.edges;
+  const OfferingTemplate = require.resolve('./src/templates/offering.js');
+  offerings.forEach((offering, index) => {
+    createPage({
+      path: `${offering.node.Path}`,
+      component: OfferingTemplate,
+      context: {
+        pagePath: offering.node.Path,
       },
     });
   });

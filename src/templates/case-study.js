@@ -34,7 +34,7 @@ const CaseStudyTemplate = ({ data }) => {
             <div className='inner'>
               {caseStudy.Stats.map(({ stat }, index) => (
                 <div className='single-stat'>
-                  <p className='stat--number'>{caseStudy.Stats[index].Numerical_Element}</p>
+                  <h2 className='stat--number'>{caseStudy.Stats[index].Numerical_Element}</h2>
                   <p className='body stat--text'>{caseStudy.Stats[index].Content_Element}</p>
                 </div>
 
@@ -173,6 +173,7 @@ const CaseStudyTemplate = ({ data }) => {
           subtitle='Get in touch to start.'
           primaryButtonText='Put us to work'
           secondaryButtonText='Join our team'
+          secondaryButtonLink='/careers/'
         />
       </div>
 
@@ -183,7 +184,7 @@ const CaseStudyTemplate = ({ data }) => {
 
 export const query = graphql`
 query CaseStudyQuery($pagePath: String!) {
-  allStrapiCaseStudy(filter: { Path: { eq: $pagePath } }) { 
+  allStrapiCaseStudy(filter: { Path: { eq: $pagePath } }) {
     edges {
       node {
         Approach {

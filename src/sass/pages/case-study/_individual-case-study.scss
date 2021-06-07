@@ -29,49 +29,7 @@
       margin: 0 auto;
     }
   }
-  .section--case-study--stats {
-    margin-bottom: 0;
-    position: relative;
-    .stats--wrapper {
-      box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
-      background-color: $colors-white;
-      @media(min-width: 1200px) {
-        max-width: 1200px;
-        margin: 0 auto -100px;
-      }
-    }
 
-    .inner {
-      @media(min-width: 768px) {
-        display: flex;
-        justify-content: center;
-        margin: 0 20px;
-      }
-      @media(min-width: 1024px) {
-        padding: 0 120px;
-      }
-      .single-stat:last-child {
-        @media(min-width: 1024px) {
-          margin-right: 0;
-        }
-      }
-      .single-stat {
-        display: flex;
-        @media(min-width: 1024px) {
-          margin-right: 50px;
-        }
-        .stat--number {
-          color: $colors-mint-cool-40v;
-          font-size: 56px;
-          font-weight: 400;
-          margin-right: 24px;
-        }
-        .stat--text {
-          margin: auto;
-        }
-      }
-    }
-  }
 
   .staff-quote.quote {
     padding: 221px 0 72px;
@@ -150,7 +108,8 @@
       }
       img {
         @media(min-width: 1024px) {
-          min-width: 640px;
+          width: 640px;
+          height: 341px;
         }
       }
       .title-text--wrapper {

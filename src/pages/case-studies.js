@@ -99,7 +99,7 @@ const CaseStudyPage = () => {
     } else {
       cases = caseStudies.filter((caseStudy) => {
         let category = caseStudy.Service_Category[0].Category;
-        // For each case study, loop through the selected filters and only 
+        // For each case study, loop through the selected filters and only
         // return results that match the selected categories.
         for (let filter of filterState) {
           if (category === filter) {

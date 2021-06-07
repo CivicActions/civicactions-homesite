@@ -14,6 +14,12 @@
   h4 {
     margin-bottom: 32px;
   }
+  .h3 {
+    padding: 0;
+    text-align: left;
+    font-weight: 300;
+    margin-top: 0;
+  }
 
   .inner {
     position: relative;
@@ -24,7 +30,7 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: 10px 20px;
+    padding: 0 20px;
   }
 
   .picture {
@@ -36,18 +42,25 @@
 
   .pattern {
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 0;
-    max-width: 56px;
-  }
+    max-width: 26px;
+    @media(min-width: 768px) {
+      max-width: 56px;
+    }
 
+  }
   .quote {
-    display: flex;
-    margin: 0 auto;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     text-align: center;
+    @media(min-width: 768px) {
+      padding-left: 32px;
+    }
+    @media(min-width: 1024px) {
+      padding-left: 50px;
+    }
   }
 
   @media screen and (max-width: $large-screen) {
@@ -72,12 +85,6 @@
 
     .quote {
       margin-left: 20px;
-    }
-
-    .pattern {
-      max-width: 26px;
-      top: 10px;
-      left: 0;
     }
   }
 }

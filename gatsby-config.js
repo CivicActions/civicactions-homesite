@@ -59,7 +59,7 @@ module.exports = {
       options: {
         apiURL: `https://civicactions-content.civicactions-content.app.civicactions.net`,
         queryLimit: 1000,
-        contentTypes: [`case-study`, `press`, `press-release`, `staff-profile`],
+        contentTypes: [`case-study`, `offering`, `press`, `press-release`, `staff-profile`],
         singleTypes: [],
       },
     },
