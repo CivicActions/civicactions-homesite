@@ -28,20 +28,18 @@ const TeamPage = () => {
       }
     }
   `);
-  
+
   const teamDataNodes = data.allStrapiStaffProfile.nodes;
   const [filterState, setFilterState] = useState(null);
 
   const callback = (e) => {
-
-
-    if (e.target.textContent !== 'undefined') {
-
-      if (filterState === e.target.textContent) {
+      console.log(e);
+    if (e.target.name !== 'undefined') {
+      if (filterState === e.target.name) {
         // The button was already selected.
         setFilterState(null);
       } else {
-        setFilterState(e.target.textContent);
+        setFilterState(e.target.name);
       }
     }
   };
@@ -50,9 +48,13 @@ const TeamPage = () => {
   if (filterState != null) {
       team = teamDataNodes.filter((person) => {
           const checkedCategory = person.Category.map((member) => member.Category);
-              if (!checkedCategory.indexOf(filterState)) {
-                  return true
-              }
+          console.log(checkedCategory);
+          if (!checkedCategory.indexOf(filterState)) {
+              return true
+          }
+          if (checkedCategory.includes(filterState)) {
+              return true
+          }
       });
 
   } else {
@@ -122,8 +124,9 @@ const FilterButtons = ({ team, parentCallback, filterState }) => {
         onClick={(e) => {
           parentCallback(e);
         }}
+        name={role.name}
       >
-        {role.name}
+        {role.value}
       </button>
     );
   });

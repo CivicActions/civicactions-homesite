@@ -22,6 +22,7 @@ import PressReleaseTeaser from '../components/press-release-teaser.js';
 import caseStudyTeaserImg6 from '../files/images/case-study-teasers/case-study-teaser-img-6.png';
 import caseStudyTeaserImg7 from '../files/images/case-study-teasers/case-study-teaser-img-7.png';
 import {Helmet} from "react-helmet";
+import Hero from "../components/hero";
 
 const CareersPage = () => {
   const data = useStaticQuery(query);
@@ -32,17 +33,14 @@ const CareersPage = () => {
       <Helmet>
         <title data-react-helmet="true">Careers</title>
       </Helmet>
-      {/** @todo Create a Hero component and style this to match the design comp */}
-      {/*<section className='careers--hero-section'>*/}
-      {/*  <div className='inner'>*/}
-      {/*    <h2>Work for the public good.</h2>*/}
-      {/*    <p className='body'>*/}
-      {/*      Join our team of talented and open-minded people working to build*/}
-      {/*      modern and accessible government services for all.*/}
-      {/*    </p>*/}
-      {/*    <div className='primary-button'>see open positions</div>*/}
-      {/*  </div>*/}
-      {/*</section>*/}
+
+      <Hero
+          title="Work for the public good."
+          description='Join our team of talented and open-minded people working to build
+            modern and accessible government services for all.'
+      />
+          {/*<div className='primary-button'>see open positions</div>*/}
+
       <Video
           videolink='https://player.vimeo.com/video/310174855'
           videotitle='Why join Civicactions video'
@@ -157,7 +155,7 @@ const CareersPage = () => {
         role='Product Designer'
       />
 
-      {/** @todo Enable this section when the JazzHR integration has been implemented */}
+
        <section className='careers--open-positions-section'>
         <div className='inner'>
           <h3>Open positions</h3>

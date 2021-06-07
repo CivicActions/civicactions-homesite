@@ -28,10 +28,10 @@ const RedHeader = ({ onMenuClick, mobileMenuHiddenBool }) => {
                 <div className='header-nav'>
                     <Link to=''>company</Link>
                     <Link to='/services'>services</Link>
-                    <Link to=''>our work</Link>
+                    <Link to='/case-studies/'>our work</Link>
                     <Link to=''>insights</Link>
-                    <Link to=''>careers</Link>
-                    <div className='primary-button'>contact us</div>
+                    <Link to='/careers/'>careers</Link>
+                    <a href='/contact' className='primary-button'>contact us</a>
                 </div>
                 <MobileMenu
                     right
