@@ -21,6 +21,9 @@ const TeamPage = () => {
               gatsbyImageData(width: 264, height: 264, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
             }
           }
+          Category {
+            Category
+          }
         }
       }
     }
@@ -30,6 +33,8 @@ const TeamPage = () => {
   const [filterState, setFilterState] = useState(null);
 
   const callback = (e) => {
+      console.log(e);
+
     if (e.target.textContent !== 'undefined') {
       if (filterState === e.target.textContent) {
         // The button was already selected.
@@ -39,12 +44,26 @@ const TeamPage = () => {
       }
     }
   };
+  console.log(filterState);
   let team;
-  if (filterState) {
-    team = teamDataNodes.filter((person) => person.Role === filterState);
+  if (filterState != null) {
+      team = teamDataNodes.filter((person) => {
+          let category = person.Category.map((type) => type.Category);
+          console.log(category);
+          // For each case study, loop through the selected filters and only
+          // return results that match the selected categories.
+          for (let filter of filterState) {
+              if (category === filter) {
+                  return true
+              }
+          }
+      });
+    team = teamDataNodes.filter((person) => person.Category.map((category) => category.Category === filterState));
+      console.log(team);
   } else {
     team = teamDataNodes;
   }
+
   return (
     <RedLayout>
       <Helmet>
@@ -89,9 +108,19 @@ const TeamTeasers = ({ team }) => {
 };
 
 const FilterButtons = ({ team, parentCallback, filterState }) => {
-  const roles = [...new Set(team.map((item) => item.Role))];
-  return roles.map((role, index) => {
-    const selected = role === filterState ? true : false;
+
+  // const roles = [...new Set(team.map((item) => item.Category.map((category) => category.Category)))];
+
+  const category = [
+      {id: 1, value: 'Leadership', name: 'Leadership'},
+      {id: 2, value: 'Growth Strategy', name: 'Growth_Strategy'},
+      {id: 3, value: 'People Operations', name: 'Poeple_Operations'},
+      {id: 4, value: 'Product Design', name: 'Product_Design'},
+      {id: 5, value: 'Engineering', name: 'Engineering'},
+      {id: 6, value: 'Client Services', name: 'Client_Services'},
+  ]
+  return category.map((role, index) => {
+    const selected = role.name === filterState ? true : false;
     return (
       <button
         key={index}
@@ -100,7 +129,7 @@ const FilterButtons = ({ team, parentCallback, filterState }) => {
           parentCallback(e);
         }}
       >
-        {role}
+        {role.value}
       </button>
     );
   });
