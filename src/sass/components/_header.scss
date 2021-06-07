@@ -69,4 +69,21 @@
     margin: 0 auto 70px auto;
   }
 
+
+
+}
+.header.scrolled {
+  transition: padding-top 0.20s linear;
+  transition: padding-bottom 0.20s linear;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
+  .inner {
+    transition: margin-bottom 0.25s linear;
+    margin-bottom: 0;
+  }
+  .logo img {
+    transition: max-width 0.25s linear;
+    max-width: 216px;
+  }
 }

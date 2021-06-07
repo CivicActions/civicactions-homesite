@@ -1,5 +1,5 @@
 import '../sass/styles.scss';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'gatsby';
 import extendedLogo from '../files/icons/ca-extended-logo.svg';
 import menuIcon from '../files/icons/menu-icon.svg';
@@ -9,30 +9,37 @@ import MobileMenu from '../components/mobile-menu/mobile-menu';
 
 const Header = () => {
 
+  
+  const [scroll, setScroll] = useState(false)
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 5)
+    })
+  }, []);
   return (
-    <header className={`header`}>
-      <div className='inner'>
-        <Link to='/' className='logo'>
-          <img src={extendedLogo} alt='Civic Actions Logo'></img>
-        </Link>
-        <div className='header-nav'>
-          <Link to=''>company</Link>
-          <Link to='/services'>services</Link>
-          <Link to='/case-studies'>our work</Link>
-          <Link to=''>insights</Link>
-          <Link to='/careers'>careers</Link>
-          <Link to='/contact/'><div className='primary-button'>contact us</div></Link>
-        </div>
-
-        <MobileMenu
+      <header className={scroll ? "header scrolled" : "header"}>
+        <div className='inner'>
+          <Link to='/' className='logo'>
+            <img src={extendedLogo} alt='Civic Actions Logo'></img>
+          </Link>
+          <div className='header-nav'>
+            <Link to=''>company</Link>
+            <Link to='/services'>services</Link>
+            <Link to='/case-studies'>our work</Link>
+            <Link to=''>insights</Link>
+            <Link to='/careers'>careers</Link>
+            <a href='/contact/'><div className='primary-button'>contact us</div></a>
+          </div>
+          <MobileMenu
           right
           noTransition
           width={'75%'}
-          customBurgerIcon={<img src={menuIcon} alt='mobile menu' />}
-          customCrossIcon={<img src={closeIcon} alt='close button' />}
-        />
-      </div>
-    </header>
+          customBurgerIcon={<img src={menuIcon} />}
+          customCrossIcon={<img src={closeIcon} />}
+          />
+        </div>
+      </header>
+
   );
 };
 
