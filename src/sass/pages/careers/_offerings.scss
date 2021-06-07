@@ -2,7 +2,7 @@
   width: 100%;
   padding: 48px 0;
   @media (min-width: 1024px) {
-    padding: 120px 0;
+    padding: 36px 0;
   }
 
   .inner {
@@ -16,7 +16,7 @@
     text-align: start;
   }
 
-  h3 {
+  h2 {
     max-width: 850px;
     font-weight: 300;
   }
@@ -38,10 +38,14 @@
     }
 
     .offering {
-      h4 {
+      h3 {
         float: left;
-        padding-left: 20px;
+        padding-left: 22px;
         padding-top: 15px;
+        @media(min-width: 1024px) {
+          clear: both;
+          padding: 0;
+        }
       }
       img {
         float: left;

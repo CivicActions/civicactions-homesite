@@ -22,7 +22,8 @@ import PressReleaseTeaser from '../components/press-release-teaser.js';
 import caseStudyTeaserImg6 from '../files/images/case-study-teasers/case-study-teaser-img-6.png';
 import caseStudyTeaserImg7 from '../files/images/case-study-teasers/case-study-teaser-img-7.png';
 import {Helmet} from "react-helmet";
-import Hero from "../components/hero";
+import LinkButton from "../components/link-button";
+import squareCircle from "../files/icons/square-circle.svg";
 
 const CareersPage = () => {
   const data = useStaticQuery(query);
@@ -33,13 +34,20 @@ const CareersPage = () => {
       <Helmet>
         <title data-react-helmet="true">Careers</title>
       </Helmet>
+      <section className='careers--hero-section hero-component'>
+        <div className='inner'>
+          <h1>Work for the public good.</h1>
+          <p className='body'>
+            Join our team of talented and open-minded people working to build
+            modern and accessible government services for all.
+          </p>
+          <LinkButton
+              src='/careers#open-positions'
+              text='See all open positions'
+            />
 
-      <Hero
-          title="Work for the public good."
-          description='Join our team of talented and open-minded people working to build
-            modern and accessible government services for all.'
-      />
-          {/*<div className='primary-button'>see open positions</div>*/}
+        </div>
+      </section>
 
       <Video
           videolink='https://player.vimeo.com/video/310174855'
@@ -50,7 +58,7 @@ const CareersPage = () => {
         <div className='inner'>
           <div className='who-we-are'>
             <div className='left-aligned'>
-              <h3>Who we are</h3>
+              <h2>Who we are</h2><img className='icon' src={squareCircle} alt='' />
               <p className='body'>
                 CivicActions is built on a culture of openness, authenticity,
                 and appreciation. We find inspiration in the things that make
@@ -72,7 +80,7 @@ const CareersPage = () => {
               <img src={whatWeLookForPicture} alt=''></img>
             </div>
             <div className='right-aligned'>
-              <h3>What we look for</h3>
+              <h2>What we look for</h2><img className='icon' src={squareCircle} alt='' />
               <p className='body'>
                 Hiring smart and friendly people is the most important thing we
                 do for ourselves and our clients. We look for folks with high
@@ -90,7 +98,7 @@ const CareersPage = () => {
       </section>
       <section className='careers--offerings-section'>
         <div className='inner'>
-          <h3>What we offer</h3>
+          <h2>What we offer</h2>
           <p className='body'>
             We believe people do their best work when they can be balanced,
             healthy, and happy. Our work environment is designed to support your
@@ -153,18 +161,19 @@ const CareersPage = () => {
         quote='“I appreciate the kindness of people at CivicActions, no matter the role or position. We really take care of each other.”'
         name='Michelle Kang'
         role='Product Designer'
+        classes='first-quote'
       />
 
 
        <section className='careers--open-positions-section'>
         <div className='inner'>
-          <h3>Open positions</h3>
+          <h2 id='open-positions'>Open positions</h2>
           <p className='body'>
             We actively seek to broaden the diversity of our team, and strongly
             encourage people from underrepresented groups to apply.
           </p>
           <div className='jobs-grid'>
-            {!job && <div className="no-job"><p>No positions are currently open. Please check back again soon!</p></div>}
+            {!job.length && <div className="no-job"><p className='body'>No positions are currently open. Please check back again soon!</p></div>}
             {job.map(({node}, index) => (
                 <div className='body job'>
                   <a href={node.link}>
@@ -179,7 +188,7 @@ const CareersPage = () => {
 
       <section className='careers--application-process-section'>
         <div className='inner'>
-          <h3>Decided to apply? We’re rooting for you!</h3>
+          <h2>Decided to apply? We’re rooting for you!</h2>
           <p className='body'>
             Here’s what to expect from our hiring process. We do our best to
             respect your time as we explore the possibility of adding you to our
@@ -188,47 +197,49 @@ const CareersPage = () => {
           </p>
           <div className='steps-grid'>
             <div className='step'>
-              <h3>1</h3>
-              <h6>Application Review</h6>
+              <span className='h2'>1</span>
+              <h3 className='h5'>Application Review</h3>
               <p className='body'>
                 Your application is reviewed by our hiring team and the folks
                 who will be working with you.
               </p>
             </div>
             <div className='step'>
-              <h3>2</h3>
-              <h6>Workstyle Interview</h6>
+              <span className='h2'>2</span>
+              <h3 className='h5'>Workstyle Interview</h3>
               <p className='body'>
                 The first interview helps us learn how you collaborate,
                 problem-solve, and work as a team player.
               </p>
             </div>
             <div className='step'>
-              <h3>3</h3>
-              <h6>Skills-based Interview</h6>
+              <span className='h2'>3</span>
+              <h3 className='h5'>Skills-based Interview</h3>
               <p className='body'>
                 This interview evaluates your qualifications for the specific
                 role (technical, design, etc.)
               </p>
             </div>
             <div className='step'>
-              <h3>4</h3>
-              <h6>Deeper Dive</h6>
+              <span className='h2'>4</span>
+              <h3 className='h5'>Deeper Dive</h3>
               <p className='body'>
                 You may be asked to do a take-home assignment, simulation,
                 challenge, or interview with a client.
               </p>
             </div>
           </div>
-          <h5>
+          <p className='h5'>
             If all goes well, we will answer any questions you may have and
             welcome you to the CivicActions family!
-          </h5>
+          </p>
         </div>
       </section>
       <section className='home--learn-w-us-section'>
+        <div className='grey-background'></div>
         <div className='inner'>
           <h2 style={{ marginBottom: 56 }}>Explore our culture</h2>
+
           <div className='cases'>
             <PressReleaseTeaser
               img={caseStudyTeaserImg6}
@@ -244,15 +255,16 @@ const CareersPage = () => {
             />
             <div className='grid-item-3 secondary-press-releases'>
               <a href="https://medium.com/civicactions/how-our-distributed-team-makes-up-for-a-year-apart-c68503192d26 " className='grid-item-3-1'>
-                <h4>How our distributed team makes up for a year apart</h4>
+                <h3>How our distributed team makes up for a year apart</h3>
                 <img width='32px' src={arrowIcon} alt=''></img>
               </a>
-              <a href="" className='grid-item-3-2'>
-                <h4>Meet the humans of CivicActions</h4>
+              <a href="/team" className='grid-item-3-2'>
+                <h3>Meet the humans of CivicActions</h3>
                 <img width='32px' src={arrowIcon} alt=''></img>
               </a>
             </div>
           </div>
+          <LinkButton text='More posts & videos'/>
         </div>
       </section>
       <StaffQuote
@@ -260,6 +272,7 @@ const CareersPage = () => {
         quote='“I love the honest, collaborative atmosphere, and the way CivicActions prioritizes the well-being of team members.”'
         name='Iris Ibekwe'
         role='Engineer'
+        classes='second-quote'
       />
       <PrimaryPageCTA
         title='Help us build the future.'

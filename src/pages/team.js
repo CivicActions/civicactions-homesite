@@ -7,6 +7,7 @@ import Hero from '../components/hero.js';
 import { graphql, useStaticQuery } from 'gatsby';
 import alanaCaseyProfilePicture from '../files/images/alanna_casey_profile.jpg';
 import { Helmet } from "react-helmet";
+import LinkButton from "../components/link-button";
 
 const TeamPage = () => {
   const data = useStaticQuery(graphql`
@@ -65,12 +66,20 @@ const TeamPage = () => {
       <Helmet>
         <title data-react-helmet="true">Civicactions Team Member Page</title>
       </Helmet>
-      <Hero
-        title="You've never met a team like this one"
-        description='We are leaders in technology, design, and strategy for
-                government digital services. We combine our diverse expertise
-                and backgrounds to bring value to our customers and each other.'
-      />
+
+        <section className='careers--hero-section hero-component'>
+          <div className='inner'>
+            <h1>Work for the public good.</h1>
+            <p className='body'>
+              Join our team of talented and open-minded people working to build
+              modern and accessible government services for all.
+            </p>
+            <LinkButton
+                src='/careers#open-positions'
+                text='See open positions'
+                />
+          </div>
+        </section>
 
       <section className="team--filter-btns-section">
         <div className="inner">

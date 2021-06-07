@@ -2,7 +2,7 @@
   width: 100%;
   margin-bottom: 48px;
   @media(min-width: 1024px) {
-    margin-bottom: 200px;
+    margin-bottom: 120px;
   }
 
 
@@ -17,7 +17,7 @@
     text-align: start;
   }
 
-  h3 {
+  .h3 {
     max-width: 850px;
     font-weight: 300;
     margin-bottom: 24px;
@@ -29,7 +29,7 @@
     padding: 0;
   }
 
-  h5 {
+  .h5 {
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -73,7 +73,7 @@
     }
   }
 
-  .step > h3 {
+  .step > .h2 {
     margin: 0;
     background-color: $colors-mint-cool-40v;
     color: $colors-white;
@@ -84,6 +84,7 @@
     border-radius: 50%;
     text-align: center;
     float: left;
+    padding-bottom: 3px;
 
     @media(min-width: 1024px) {
       height: 60px;
@@ -91,7 +92,7 @@
     }
   }
 
-  .step > h6 {
+  .step > .h5 {
     text-transform: uppercase;
     float: left;
     padding-top: 8px;

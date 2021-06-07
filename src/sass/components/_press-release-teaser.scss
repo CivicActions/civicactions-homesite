@@ -15,14 +15,19 @@
 
   h3 {
     padding: 20px 40px 16px;
+    text-decoration: none;
   }
 
   .body {
     padding: 0 40px 40px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #f3f3f3;
+    h3 {
+      text-decoration: underline;
+    }
   }
 
   &:active {
@@ -44,6 +49,9 @@
   }
 
 .secondary-press-releases {
+  a {
+    text-decoration: none;
+  }
   a:hover,
   a:focus {
     background-color: #f3f3f3 !important;

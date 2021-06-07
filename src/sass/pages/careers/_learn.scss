@@ -1,0 +1,21 @@
+.home--learn-w-us-section {
+  margin-bottom: 0;
+  padding-bottom: 64px;
+  @media(min-width: 1024px) {
+    padding-bottom: 0;
+    margin-bottom: 60px;
+  }
+  .grey-background {
+    background-color: $colors-grey-warm-4;
+    position: absolute;
+    width: 100%;
+
+    @media(min-width: 768px) {
+      height: 9%;
+      width: 70%;
+    }
+    @media(min-width: 1024px){
+      height: 577px;
+    }
+  }
+}
