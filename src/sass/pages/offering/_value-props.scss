@@ -2,6 +2,7 @@
   background-color: $colors-grey-warm-4;
   padding-top: 48px;
   padding-bottom: 24px;
+  margin-bottom: 0;
 
   @media(min-width: 768px) {
     padding-bottom: 40px;
@@ -12,14 +13,15 @@
   }
   .inner {
     margin: 0 40px;
-    display: flex;
     @media(min-width: 1024px) {
-      padding: 40px;
       margin: 0;
     }
     @media(min-width: 1200px) {
       max-width: 1200px;
       margin: 0 auto;
+    }
+    .wrapper {
+      display: flex;
     }
     h2,
     .icon {

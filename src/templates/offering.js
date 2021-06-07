@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {graphql} from 'gatsby';
 import ReactMarkdown from "react-markdown";
 import RedLayout from '../layouts/red';
@@ -6,8 +6,6 @@ import {Helmet} from "react-helmet";
 import Hero from "../components/hero-with-buttons";
 import Quote from "../components/quote";
 import PrimaryPageCTA from "../components/ditap-page-cta";
-import {GatsbyImage, getImage} from "gatsby-plugin-image";
-import Tabs from "../components/Tabs";
 import LinkButton from "../components/link-button";
 import {
     Accordion,
@@ -19,18 +17,21 @@ import {
 import linkedinIcon from "../files/icons/linkedin.svg";
 import squareCircle from "../files/icons/square-circle.svg";
 import Modal from 'react-modal';
+import TabSection from '../components/tabsection';
+import TabMobile from '../components/tabmobile';
 
 const OfferingTemplate = ({data}) => {
     const offering = data.allStrapiOffering.nodes[0];
-    console.log(offering);
+    console.log(offering.tabs);
     const [modalIsOpen,setIsOpen] = React.useState(false);
     function openModal(e) {
-        console.log(e);
         setIsOpen(true);
     }
     function closeModal(){
         setIsOpen(false);
     }
+
+
 
     return (
         <RedLayout>
@@ -61,7 +62,7 @@ const OfferingTemplate = ({data}) => {
                     <div className='inner'>
                         {offering.Stats.map((stat, index) => (
                             <div className='single-stat'>
-                                <p className='stat--number'>{offering.Stats[index].Numerical_Element}</p>
+                                <h2 className='stat--number'>{offering.Stats[index].Numerical_Element}</h2>
                                 <p className='body stat--text'>{offering.Stats[index].Content_Element}</p>
                             </div>
                         ))}
@@ -71,6 +72,7 @@ const OfferingTemplate = ({data}) => {
 
             <section className='section--offering--value-props'>
                 <div className='inner'>
+                    <div className='wrapper'>
                     <div className='value-props--left'>
                         <h2>{offering.value_prop.header_text}</h2><img className='icon' src={squareCircle} alt=''/>
                         <ReactMarkdown className='body' children={offering.value_prop.body_text}/>
@@ -80,31 +82,14 @@ const OfferingTemplate = ({data}) => {
                         <img src={offering.value_prop.image[0].url} alt={offering.value_prop.image[0].alternativeText}/>
                         <caption>{offering.value_prop.image[0].caption}</caption>
                     </div>
-
-
+                    </div>
                 </div>
             </section>
-            // TODO Tabs
+
             <section className='section--offering--tabs'>
                 <div className='inner'>
-                    {offering.tabs.map((tab, index) => (
-                        <div>
-                            <h3>{tab.tab_header}</h3>
-                            {/*<Tabs>*/}
-                            {/*// Tabs component comes from https://www.digitalocean.com/community/tutorials/react-tabs-component*/}
-                            {/*    {tab.tabs_section.map((section, index) => (*/}
-                            {/*        <div label={section.header}>*/}
-                            {/*            <ReactMarkdown className='body' children={section.body}/>*/}
-                            {/*        </div>*/}
-                            {/*    ))}*/}
-
-                            {/*    <div label={tab.cta_tab.header}>*/}
-                            {/*        <LinkButton text={tab.cta_tab.button_text}*/}
-                            {/*        src={tab.cta_tab.button_link}/>*/}
-                            {/*    </div>*/}
-                            {/*</Tabs>*/}
-                        </div>
-                    ))}
+                    {/*<TabSection tabs={offering.tabs}/>*/}
+                    <TabMobile tabs={offering.tabs}/>
                 </div>
             </section>
 
@@ -122,10 +107,11 @@ const OfferingTemplate = ({data}) => {
                             <div className='related-staff'>
                                 <img className='staff-image' src={offering.team_members[index].image[0].url} alt={offering.team_members[index].image[0].alternativeText}/>
                                 <div className='staff-info'>
-                                    <p className='h3 staff-name'>
+                                    <h3 className='staff-name'>
                                         {offering.team_members[index].Name}
-                                        <a className='linkedin-icon' href={offering.team_members[index].Linkedin}><img src={linkedinIcon}/></a>
-                                    </p>
+                                        <a className='linkedin-icon' href={offering.team_members[index].Linkedin}>
+                                            <img src={linkedinIcon} alt={`linkedin profile link for ${member.Name}`}/></a>
+                                    </h3>
                                     <p className='body staff-role'>{offering.team_members[index].Role}</p>
                                     <button className={`body open-modal--btn ${index}`} onClick={openModal}>Read bio</button>
                                 </div>
@@ -137,7 +123,7 @@ const OfferingTemplate = ({data}) => {
                                     aria-label="staff-modal-biography">
                                     <img className='staff-image' src={offering.team_members[index].image[0].url} alt={offering.team_members[index].image[0].alternativeText}/>
                                     <h2 className='h3 staff-name'>{offering.team_members[index].Name}</h2>
-                                    <a className='linkedin-icon' href={offering.team_members[index].Linkedin}><img src={linkedinIcon}/></a>
+                                    <a className='linkedin-icon' href={offering.team_members[index].Linkedin}><img alt='' src={linkedinIcon}/></a>
                                     <p className='body staff-role'>{offering.team_members[index].Role}</p>
 
                                     <button onClick={closeModal}>close</button>
@@ -208,6 +194,7 @@ const OfferingTemplate = ({data}) => {
 
 
 </div>
+
         </RedLayout>
     );
 };
