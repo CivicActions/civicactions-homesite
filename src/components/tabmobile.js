@@ -6,20 +6,24 @@ import PropTypes from "prop-types";
 const TabMobile = ({ tabs }) => {
     console.log(tabs);
     let check;
-    const [checked,setIsChecked] = React.useState('0');
+    const [checked,setIsChecked] = React.useState(false);
+    const toggleClass = () => {
+        setIsChecked(!checked);
+    };
     const callback = (e) => {
         console.log('test');
         console.log(e);
         if (e.target.value !== 'undefined') {
             if (checked === e.target.value) {
                 // The button was already selected.
-                this.setIsChecked('0');
-                check = false;
+                setIsChecked('_0');
+                check = '_0';
             } else {
-                setIsChecked(e.target.value);
-                check = true;
+                setIsChecked(`_${e.target.value}`);
+                check = `_${e.target.value}`;
             }
         }
+        console.log(checked);
     };
     // useEffect(checked);
     return (
@@ -28,10 +32,12 @@ const TabMobile = ({ tabs }) => {
                     {tabs.map((tab, index) => (
                         <option value={index}>{tab.tab_header}</option>
                     ))}
+
                 </select>
+                 <div className='arrow-down'></div>
 
             {tabs.map((tab, index) => (
-                <div className={checked === index ? 'checked' : 'not-checked'}>
+                <div className={checked ? checked : '_0'}>
                     {/*// Tabs component comes from https://www.digitalocean.com/community/tutorials/react-tabs-component*/}
                     {tab.tabs_section.map((section, index) => (
                         <div className='tab-section' label={section.header}>

@@ -19,6 +19,7 @@ import squareCircle from "../files/icons/square-circle.svg";
 import Modal from 'react-modal';
 import TabSection from '../components/tabsection';
 import TabMobile from '../components/tabmobile';
+import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
 
 const OfferingTemplate = ({data}) => {
     const offering = data.allStrapiOffering.nodes[0];
@@ -90,6 +91,31 @@ const OfferingTemplate = ({data}) => {
                 <div className='inner'>
                     {/*<TabSection tabs={offering.tabs}/>*/}
                     <TabMobile tabs={offering.tabs}/>
+                    <Tabs>
+                        <TabList >
+                            {offering.tabs.map((tab, index) => (
+                                <Tab><h2>{tab.tab_header}</h2>
+                                </Tab>
+                            ))}
+
+                        </TabList>
+                        {offering.tabs.map((tab, index) => (
+                            <TabPanel>
+                                {/*// Tabs component comes from https://www.digitalocean.com/community/tutorials/react-tabs-component*/}
+                                {tab.tabs_section.map((section, index) => (
+                                    <div className='tab-section' label={section.header}>
+                                        <h3 className='h5'>{section.header}</h3>
+                                        <ReactMarkdown className='body' children={section.body}/>
+                                    </div>
+                                ))}
+                                <div className='cta-tab-section' label={tab.cta_tab.header}>
+                                    <h3 className='h5'>{tab.cta_tab.header}</h3>
+                                    <div className='link-button'><LinkButton text={tab.cta_tab.button_text}
+                                                                             src={tab.cta_tab.button_link}/></div>
+                                </div>
+                            </TabPanel>
+                        ))}
+                    </Tabs>
                 </div>
             </section>
 

@@ -50,9 +50,7 @@
     }
 
   }
-
   .quote {
-
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
@@ -63,10 +61,6 @@
     @media(min-width: 1024px) {
       padding-left: 50px;
     }
-
-  }
-  .source {
-
   }
 
   @media screen and (max-width: $large-screen) {

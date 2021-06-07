@@ -7,11 +7,18 @@
       max-width: 1200px;
       margin: 0 auto;
     }
+    .tab-mobile {
+      @media(min-width: 768px) {
+        display: none;
+      }
+    }
     .react-tabs {
       position: relative;
       padding: 0 20px;
+      display: none;
       @media(min-width: 768px) {
         padding: 0 0 32px;
+        display: block;
       }
       .checked {
         .react-tabs__tab {
@@ -41,31 +48,10 @@
         }
         .react-tabs__tab {
           position: relative;
-          h2.checked {
-            display: block;
-          }
-          h2.checked + .arrow-up {
-            display: block;
-          }
-          h2.checked + .arrow-down {
-            display: none;
-          }
-          h2 {
-            padding: 14px;
-            display: none;
-          }
-          .arrow-down {
-            display: block;
-          }
-          .arrow-up {
-            display: none;
-          }
           h2 {
             font-size: 20px;
             line-height: 33px;
-            @media(min-width: 768px) {
-
-            }
+            color: $colors-grey-60;
             @media(min-width: 1024px) {
               font-size: 24px;
             }
@@ -104,7 +90,10 @@
           display: flex;
           background-color: $colors-white;
           border: 0;
-          color: $colors-black;
+          h2 {
+            color: $colors-black;
+          }
+
         }
       }
       .react-tabs__tab-panel,
@@ -239,12 +228,4 @@
       }
     }
   }
-}
-.arrow-up {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-
-  border-bottom: 10px solid black;
 }
