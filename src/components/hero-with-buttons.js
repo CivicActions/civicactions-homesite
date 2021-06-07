@@ -11,11 +11,10 @@ const Hero = ({ title, description, button }) => {
                 <h1>{title}</h1>
                 <ReactMarkdown className='body' children={description}/>
                 {button.length &&
-                <div>
-                    <LinkButton src={button[0].button_link} text={button[0].button_text}/>
-                    <LinkButton type='secondary' src={button[1].button_link} text={button[1].button_text}/>
-                </div>
-                }
+                    <div className='button-wrapper'>
+                <div><LinkButton src={button[0].button_link} text={button[0].button_text}/></div>
+                    <div><LinkButton type='secondary' src={button[1].button_link} text={button[1].button_text}/></div>
+                    </div> }
             </div>
 
         </div>

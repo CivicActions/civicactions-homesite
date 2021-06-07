@@ -1,4 +1,5 @@
 .section--offering--faqs {
+  margin-bottom: 0;
   .inner {
     max-width: 845px;
     margin: 0 auto;
@@ -14,26 +15,7 @@
       .accordion__item {
         margin-bottom: 40px;
       }
-      .arrow-down {
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 15px solid $colors-grey-90;
-        display: none;
-        margin-right: 16px;
-        margin-top: 8px;
-      }
 
-      .arrow-right {
-        width: 0;
-        height: 0;
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        border-left: 15px solid $colors-grey-90;
-        margin-right: 16px;
-        margin-top: 5px;
-      }
       .accordion__button[aria-expanded='true'] .arrow-right {
         display: none;
       }
@@ -42,4 +24,24 @@
       }
     }
   }
+}
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid $colors-grey-90;
+  display: none;
+  margin-right: 16px;
+  margin-top: 8px;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid $colors-grey-90;
+  margin-right: 16px;
+  margin-top: 5px;
 }
