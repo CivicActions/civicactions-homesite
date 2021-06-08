@@ -13,11 +13,19 @@ const Header = () => {
   const [scroll, setScroll] = useState(false)
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 5)
+      setScroll(window.scrollY > 500)
     })
+
+  }, []);
+  const [scrollMobile, setScrollMobile] = useState(false)
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrollMobile(window.scrollY > 320)
+    })
+
   }, []);
   return (
-      <header className={scroll ? "header scrolled" : "header"}>
+      <header className={`${scroll ? "header scrolled" : "header"} ${scrollMobile ? "scrolled-mobile" : ''}`}>
         <div className='inner'>
           <Link to='/' className='logo'>
             <img src={extendedLogo} alt='Civic Actions Logo'></img>

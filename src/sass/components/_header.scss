@@ -1,12 +1,8 @@
 .header {
-
-  // box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3); // TODO 1. Add this when we have an event telling us that the item is at the top of the page.
   padding: 50px 0 20px;
-  position: sticky;
   top: 0;
-  background: $colors-white; // TODO 2. We only really want this once this is sticking, othewise it should be transparent.
+  background: $colors-white;
   z-index: 11;
-
 
   &.mobile-menu-open {
     position: static;
@@ -72,12 +68,28 @@
 
 
 }
-.header.scrolled {
-  transition: padding-top 0.20s linear;
-  transition: padding-bottom 0.20s linear;
+.header.scrolled-mobile {
+  position: sticky;
+  @media(min-width: 768px) {
+    position: relative;
+  }
+}
+@keyframes scroll {
+  from {padding: 50px 0 20px;}
+  to {padding: 15px 22px;}
+}
+.header.scrolled,
+.header.scrolled-mobile{
+  transition: padding-top 0.25s ease-in;
+  transition: padding-bottom 0.25s ease-in;
   padding-top: 15px;
   padding-bottom: 15px;
   box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
+  animation-name: scroll;
+  animation-duration: 4s;
+  @media(min-width: 768px) {
+    position: sticky;
+  }
   .inner {
     transition: margin-bottom 0.25s linear;
     margin-bottom: 0;
