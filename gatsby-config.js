@@ -24,8 +24,8 @@ module.exports = {
     {
       resolve: `gatsby-source-rss-feed`,
       options: {
-        url: `https://app.jazz.co/feeds/rss/jobs/ampifire`, //For testing only
-        // url: `https://app.jazz.co/feeds/rss/jobs/civicactions`,
+        // url: `https://app.jazz.co/feeds/rss/jobs/ampifire`, //For testing only
+        url: `https://app.jazz.co/feeds/rss/jobs/civicactions`,
         name: `JobList`,
         // Optional
         // Read parser document: https://github.com/bobby-brennan/rss-parser#readme

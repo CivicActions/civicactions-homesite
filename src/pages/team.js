@@ -7,6 +7,7 @@ import Hero from '../components/hero.js';
 import { graphql, useStaticQuery } from 'gatsby';
 import alanaCaseyProfilePicture from '../files/images/alanna_casey_profile.jpg';
 import { Helmet } from "react-helmet";
+import LinkButton from "../components/link-button";
 
 const TeamPage = () => {
   const data = useStaticQuery(graphql`
@@ -21,6 +22,9 @@ const TeamPage = () => {
               gatsbyImageData(width: 264, height: 264, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
             }
           }
+          Category {
+            Category
+          }
         }
       }
     }
@@ -30,18 +34,30 @@ const TeamPage = () => {
   const [filterState, setFilterState] = useState(null);
 
   const callback = (e) => {
-    if (e.target.textContent !== 'undefined') {
-      if (filterState === e.target.textContent) {
+      console.log(e);
+    if (e.target.name !== 'undefined') {
+      if (filterState === e.target.name) {
         // The button was already selected.
         setFilterState(null);
       } else {
-        setFilterState(e.target.textContent);
+        setFilterState(e.target.name);
       }
     }
   };
+
   let team;
-  if (filterState) {
-    team = teamDataNodes.filter((person) => person.Role === filterState);
+  if (filterState != null) {
+      team = teamDataNodes.filter((person) => {
+          const checkedCategory = person.Category.map((member) => member.Category);
+          console.log(checkedCategory);
+          if (!checkedCategory.indexOf(filterState)) {
+              return true
+          }
+          if (checkedCategory.includes(filterState)) {
+              return true
+          }
+      });
+
   } else {
     team = teamDataNodes;
   }
@@ -50,12 +66,20 @@ const TeamPage = () => {
       <Helmet>
         <title data-react-helmet="true">Civicactions Team Member Page</title>
       </Helmet>
-      <Hero
-        title="You've never met a team like this one"
-        description='We are leaders in technology, design, and strategy for
-                government digital services. We combine our diverse expertise
-                and backgrounds to bring value to our customers and each other.'
-      />
+
+        <section className='careers--hero-section hero-component'>
+          <div className='inner'>
+            <h1>Work for the public good.</h1>
+            <p className='body'>
+              Join our team of talented and open-minded people working to build
+              modern and accessible government services for all.
+            </p>
+            <LinkButton
+                src='/careers#open-positions'
+                text='See open positions'
+                />
+          </div>
+        </section>
 
       <section className="team--filter-btns-section">
         <div className="inner">
@@ -89,9 +113,19 @@ const TeamTeasers = ({ team }) => {
 };
 
 const FilterButtons = ({ team, parentCallback, filterState }) => {
-  const roles = [...new Set(team.map((item) => item.Role))];
-  return roles.map((role, index) => {
-    const selected = role === filterState ? true : false;
+
+  // const roles = [...new Set(team.map((item) => item.Category.map((category) => category.Category)))];
+
+  const category = [
+      {id: 1, value: 'Leadership', name: 'Leadership'},
+      {id: 2, value: 'Growth Strategy', name: 'Growth_Strategy'},
+      {id: 3, value: 'People Operations', name: 'People_Operations'},
+      {id: 4, value: 'Product Design', name: 'Product_Design'},
+      {id: 5, value: 'Engineering', name: 'Engineering'},
+      {id: 6, value: 'Client Services', name: 'Client_Services'},
+  ];
+  return category.map((role, index) => {
+    const selected = role.name === filterState ? true : false;
     return (
       <button
         key={index}
@@ -99,8 +133,9 @@ const FilterButtons = ({ team, parentCallback, filterState }) => {
         onClick={(e) => {
           parentCallback(e);
         }}
+        name={role.name}
       >
-        {role}
+        {role.value}
       </button>
     );
   });

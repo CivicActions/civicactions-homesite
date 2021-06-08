@@ -3,9 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import quotePatternGraphic from '../files/images/quote-pattern-graphic.png';
 
-const StaffQuote = ({ img, quote, name, role }) => {
+const StaffQuote = ({ img, quote, name, role, classes }) => {
   return (
-    <div className='staff-quote'>
+    <div className={`staff-quote quote ${classes}`}>
       <div className='inner'>
         <img src={img} alt='' className='picture'></img>
         <div className='quote'>
@@ -26,4 +26,5 @@ StaffQuote.propTypes = {
   quote: PropTypes.string,
   name: PropTypes.string,
   role: PropTypes.string,
+  classes: PropTypes.string,
 };

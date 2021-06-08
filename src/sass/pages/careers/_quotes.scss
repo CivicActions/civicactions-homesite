@@ -1,0 +1,12 @@
+.second-quote {
+  background-color: $colors-white;
+  @media(min-width: 768px) {
+    background-color: $colors-grey-warm-4;
+  }
+}
+.first-quote {
+  background-color: $colors-grey-warm-4;
+  @media(min-width: 768px) {
+    background-color: $colors-white$colors-grey-warm-4;
+  }
+}
