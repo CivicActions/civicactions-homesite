@@ -10,6 +10,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const CaseStudyTemplate = ({ data }) => {
   const caseStudy = data.allStrapiCaseStudy.edges[0].node;
+  const { Client_Name, Related_Case_Studies } = caseStudy
+
   return (
     <GeneralLayout>
       <Helmet>
@@ -17,7 +19,7 @@ const CaseStudyTemplate = ({ data }) => {
       </Helmet>
       <div className='case-studies'>
         <CaseStudyHero
-          client={caseStudy.Client_Name}
+          client={Client_Name}
           title={caseStudy.Title}
           description={caseStudy.Summary}
         />
@@ -84,27 +86,30 @@ const CaseStudyTemplate = ({ data }) => {
 
         <section className='section--case-study--approaches'>
 
-          {caseStudy.Approach.map(({ node }, index) => (
+          {caseStudy.Approach.map((approachItem, index) => (
             <div className='inner'>
               {index === 0 &&
                 <div className='first-approach'>
-                  <h2>{caseStudy.Approach[index].Title}</h2>
-                  <ReactMarkdown className='body' children={caseStudy.Approach[index].Text} />
+                  <h2>{approachItem.Title}</h2>
+                  <ReactMarkdown className='body' children={approachItem.Text} />
                 </div>
               }
               {index != 0 &&
-                <div className={caseStudy.Approach[index].Image ? 'approach--with-image' : 'approach'}>
+                <div className={approachItem.Image ? 'approach--with-image' : 'approach'}>
 
                   <div className='title-text--wrapper'>
-                    <h3>{caseStudy.Approach[index].Title}</h3>
-                    <ReactMarkdown className='body' children={caseStudy.Approach[index].Text} />
+                    <h3>{approachItem.Title}</h3>
+                    <ReactMarkdown className='body' children={approachItem.Text} />
                   </div>
-                  {caseStudy.Approach[index].Image && <div className='image--wrapper'>
+                  {approachItem.Image && <div className='image--wrapper'>
                     <div>
-                      <img src={caseStudy.Approach[index].Image[0].url}
-                        alt={caseStudy.Approach[index].Image[0].alternativeText}></img>
-                      {caseStudy.Approach[index].Image[0].caption &&
-                        <span className='caption'>{caseStudy.Approach[index].Image[0].caption}</span>
+                      {approachItem.Image.url &&
+                        <img src={approachItem.Image[0].url}
+                          alt={approachItem.Image[0].alternativeText}>
+                        </img>
+                      }
+                      {approachItem.Image.caption &&
+                        <span className='caption'>{approachItem.Image[0].caption}</span>
                       }
                     </div>
 
@@ -152,22 +157,24 @@ const CaseStudyTemplate = ({ data }) => {
             </div>
           </div>
         </section>
-        <section className='section--case-study--related'>
-          <h2>Related case studies</h2>
-          <div className='inner'>
+        {Related_Case_Studies.length > 0 &&
+          <section className='section--case-study--related'>
+            <h2>Related case studies</h2>
+            <div className='inner'>
 
-            {caseStudy.Related_Case_Studies.map(({ node }, index) => (
-              <div className='related-case-study'>
-                <a href={caseStudy.Related_Case_Studies[index].Path}>
-                  {caseStudy.Related_Case_Studies[index].Cover_Image[0] && <img src={caseStudy.Related_Case_Studies[index].Cover_Image[0].url} alt={caseStudy.Related_Case_Studies[index].Cover_Image[0].alternativeText} />}
+              {caseStudy.Related_Case_Studies.map(({ node }, index) => (
+                <div className='related-case-study'>
+                  <a href={caseStudy.Related_Case_Studies[index].Path}>
+                    {caseStudy.Related_Case_Studies[index].Cover_Image[0] && <img src={caseStudy.Related_Case_Studies[index].Cover_Image[0].url} alt={caseStudy.Related_Case_Studies[index].Cover_Image[0].alternativeText} />}
 
-                  {caseStudy.Related_Case_Studies[index].Title}
-                </a>
+                    {caseStudy.Related_Case_Studies[index].Title}
+                  </a>
 
-              </div>
-            ))}
-          </div>
-        </section>
+                </div>
+              ))}
+            </div>
+          </section>
+        }
         <PrimaryPageCTA
           title='Let’s build a public success story.'
           subtitle='Get in touch to start.'
