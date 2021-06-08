@@ -63,5 +63,14 @@ module.exports = {
         singleTypes: [],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `CivicActions`,
+        short_name: `CA`,
+        start_url: `/`,
+        icon: 'src/favicon-32x32.png',
+      },
+    },
   ],
 };
