@@ -246,10 +246,10 @@ const CaseStudyPage = () => {
 //
 const CaseStudyTeasers = ({ cases }) => {
   return cases.map((item, index) => {
-    const { Title, Client_Name, Sort_Order, Summary, id } = item;
+    const { Title, Client_Name, Sort_Order, Summary, id, Cover_Image } = item;
     return (
       <div key={id} className={`wrapper--case-study--teaser ${Sort_Order}`}>
-        <img src={item.Cover_Image[0].url} alt={item.Cover_Image[0].alternativeText} />
+        { Cover_Image.url && <img src={Cover_Image[0].url} alt={Cover_Image[0].alternativeText} />}
         <div className='teaser-content'>
           <div className='title-wrapper'>
             <span aria-label='client name'>{Client_Name}</span>

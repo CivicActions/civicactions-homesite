@@ -2,17 +2,17 @@ exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
     type StrapiCaseStudy implements Node {
-      Cover_Image: File!,
-      Hero_Image: File!,
+      Cover_Image: File,
+      Hero_Image: File,
       Related_Case_Studies: RelatedStudies
     }
     type StrapiCaseStudyApproach implements Node {
-      Image: File!
+      Image: File
     }
     type RelatedStudies {
       Path: String
       Title: String
-      Cover_Image : File!
+      Cover_Image : File
     }
     type File {
       url: String,
