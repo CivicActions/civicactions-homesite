@@ -1,0 +1,49 @@
+.section--case-study--approaches {
+  .inner {
+    overflow: auto;
+    @media(min-width: 768px) {
+      margin: 0 48px;
+    }
+  }
+  .first-approach {
+    margin-top: 0 !important;
+  }
+  .approach,
+  .first-approach {
+    max-width: 720px;
+
+    @media(min-width: 1024px) {
+      margin: 60px auto;
+    }
+    h2 {
+      padding-bottom: 8px;
+    }
+    h3 {
+      padding-bottom: 14px;
+    }
+    p {
+      padding-bottom: 10px;
+    }
+  }
+  .approach--with-image {
+    margin: 24px 0 0;
+    @media(min-width: 768px) {
+      margin: 20px 0 0;
+    }
+    @media(min-width: 1024px) {
+      display: flex;
+      margin: 60px 0 0;
+    }
+    img {
+      @media(min-width: 1024px) {
+        width: 640px;
+        height: 341px;
+      }
+    }
+    .title-text--wrapper {
+      @media(min-width: 1024px) {
+        margin-right: 45px;
+      }
+    }
+  }
+}
