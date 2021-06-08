@@ -9,17 +9,17 @@ import MobileMenu from '../components/mobile-menu/mobile-menu';
 
 const RedHeader = ({ onMenuClick, mobileMenuHiddenBool }) => {
 
-    const menuVisibility = mobileMenuHiddenBool ? 'mobile-menu-closed' : 'mobile-menu-open';
+
     const [scroll, setScroll] = useState(false)
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            setScroll(window.scrollY > 5)
+            setScroll(window.scrollY > 450)
         })
     }, []);
 
     return (
 
-        <header className={`${menuVisibility} ${scroll ? "header red-header scrolled" : "header red-header"}`}>
+        <header className={scroll ? "header red-header scrolled" : "header red-header"}>
 
             <div className='red-header--header'><div className='inner'>
                 <Link to='/' className='logo'>
