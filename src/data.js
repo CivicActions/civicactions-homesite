@@ -4,12 +4,12 @@ import linkedinIcon from './files/icons/linkedin-footer-icon.svg';
 
 export const socialMediaData = [
   {
-    link: "'https://twitter.com/civicactions?lang=en",
+    link: "https://business.facebook.com/CivicActions/",
     alt: "Follow us on Facebook",
     icon: facebookIcon
   },
   {
-    link: "https://business.facebook.com/CivicActions/",
+    link: "https://twitter.com/civicactions?lang=en",
     alt: "Follow us on Twitter",
     icon: twitterIcon
   },
