@@ -31,98 +31,17 @@
   }
 
 
-  .staff-quote.quote {
-    padding: 221px 0 72px;
-    .inner {
-      max-width: 916px;
-      padding: 0;
-    }
-    .source {
-      padding-top: 23px;
-      font-weight: 300;
-    }
-    .quote {
-      margin-left: 75px;
-    }
-  }
-  .section--case-study--challenge-to-tools {
-    padding: 72px;
-    margin-bottom: 0;
-    .inner {
 
-      .case-study-challenge-goal {
-        max-width: 720px;
-        margin: 0 auto;
-        h2 {
-          padding-bottom: 24px;
-        }
-        .challenge,
-        .goal {
-          padding-bottom: 64px;
-        }
-      }
-      .case-study--expertise-tools {
-        @media (min-width: 1024px) {
-          display: flex;
-        }
-        .expertise,
-        .tools {
-          background-color: #F5F5F0;
-          width: 100%;
-          padding: 48px 82px;
-        }
-        .tools {
-          @media (min-width: 1024px) {
-            margin-left: 24px;
-          }
-        }
-      }
-    }
-  }
-  .section--case-study--approaches {
-    .inner {
-      overflow: auto;
-    }
-    .first-approach {
-      margin-top: 0 !important;
-    }
-    .approach,
-    .first-approach {
-      max-width: 720px;
-      margin: 60px auto;
-      h2 {
-        padding-bottom: 8px;
-      }
-      h3 {
-        padding-bottom: 14px;
-      }
-      p {
-        padding-bottom: 10px;
-      }
-    }
-    .approach--with-image {
-      margin: 60px 0;
-      @media(min-width: 1024px) {
-        display: flex;
-
-      }
-      img {
-        @media(min-width: 1024px) {
-          width: 640px;
-          height: 341px;
-        }
-      }
-      .title-text--wrapper {
-        @media(min-width: 1024px) {
-          margin-right: 45px;
-        }
-      }
-    }
-  }
   .section--case-study--outcomes {
     background-color: #0F6460;
-    padding: 64px 0;
+    padding: 32px 0;
     margin-bottom: 0;
+    @media(min-width: 1024px) {
+      padding: 48px 0;
+    }
+    @media(min-width: 1024px) {
+      padding: 64px 0;
+    }
     h2 {
       color: $colors-white;
       text-align: center;
@@ -138,6 +57,10 @@
       .key-outcome {
         background-color: #E7EFEF;
         padding: 32px 24px;
+        margin-bottom: 16px;
+        @media(min-width: 1024px) {
+          margin-bottom: 0;
+        }
         .label {
           font-weight: bold;
           text-transform: uppercase;
@@ -150,20 +73,29 @@
   }
   .section--case-study--staff {
     background-color: #F5F5F0;
-    margin-bottom: 60px;
+    margin-bottom: 0;
     h2 {
-      text-align: center;
-      padding-top: 64px;
+      padding-top: 32px;
+      @media(min-width: 768px) {
+        padding-top: 48px;
+      }
+      @media(min-width: 1024px) {
+        text-align: center;
+        padding-top: 64px;
+      }
     }
     .related-staff--wrapper {
       @media(min-width: 768px) {
         display: flex;
+        flex-flow: row wrap;
+      }
+      @media(min-width: 1024px) {
         justify-content: center;
       }
       .related-staff {
         padding: 20px;
         @media(min-width: 768px) {
-          padding: 28px;
+          padding: 28px 28px 28px 0;
         }
         @media(min-width: 1024px) {
           padding: 48px;
@@ -180,7 +112,13 @@
   }
   .section--case-study--related {
     max-width: 1200px;
-    margin: 0 auto 120px;
+    margin: 32px auto;
+    @media(min-width: 768px) {
+      margin: 48px auto 56px;
+    }
+    @media(min-width: 1024px) {
+      margin: 64px auto 147px;
+    }
     h2 {
       padding-bottom: 23px;
     }

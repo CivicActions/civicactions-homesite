@@ -49,6 +49,7 @@ const CaseStudyTemplate = ({ data }) => {
           <Quote
             quote={caseStudy.Quote.Quote}
             source={caseStudy.Quote.Source}
+            classes='first-quote'
           />
         }
 
