@@ -11,11 +11,13 @@ const Banner = ({ boldText, regularText, link }) => {
     <div></div>
   ) : (
     <div role='banner' aria-label='homepage banner' className='banner body-small'>
-    <a href={link}>
+
       <div className='inner'>
+        <a href={link}>
         <p className='banner-text'>
           <strong>{boldText}</strong> <span>{regularText}</span>
         </p>
+        </a>
         <div
           onKeyDown={() => {}}
           tabIndex={0}
@@ -25,7 +27,7 @@ const Banner = ({ boldText, regularText, link }) => {
           <img src={closeIcon} alt='Close'></img>
         </div>
       </div>
-    </a>
+
     </div>
   );
 };
