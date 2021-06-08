@@ -149,9 +149,12 @@ const CaseStudyTemplate = ({ data }) => {
                   {caseStudy.staff_profiles[index].Image &&
                     <GatsbyImage image={getImage(caseStudy.staff_profiles[index].Image)} alt={''} />
                   }
-                  <p className='body staff-name'><a href={caseStudy.staff_profiles[index].Path}>
+                  <p className='body staff-name'>
+                    {/*// Unlinked for MVP soft launch*/}
+                    {/*<a href={caseStudy.staff_profiles[index].Path}>*/}
                     {caseStudy.staff_profiles[index].Name}
-                  </a></p>
+                  {/*</a>*/}
+                </p>
                   <p className='body staff-role'>{caseStudy.staff_profiles[index].Role}</p>
                 </div>
               ))}

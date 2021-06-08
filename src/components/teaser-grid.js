@@ -8,15 +8,17 @@ const TeaserGrid = ({ image, link, name, title }) => {
     <div className="teaser-grid--wrapper">
       <div className="teaser-grid">
         <div className="teaser-grid__name teaser__link">
-          <Link to={link} title={`Link to ${name}'s profile page`}>
+          {/*// Unlinked for MVP soft launch*/}
+          {/*<Link to={link} title={`Link to ${name}'s profile page`}>*/}
             <div className="teaser-grid__image">
               <GatsbyImage image={getImage(image)} alt={name} />
             </div>
-          </Link>
+          {/*</Link>*/}
           <div className="teaser-grid__text">
-            <Link to={link} title={`Link to ${name}'s profile page`}>
+            {/*// Unlinked for MVP soft launch*/}
+            {/*<Link to={link} title={`Link to ${name}'s profile page`}>*/}
               <div className="teaser-grid__title">{name}</div>
-            </Link>
+            {/*</Link>*/}
             <div className="teaser-grid__title">{title}</div>
           </div>
         </div>
