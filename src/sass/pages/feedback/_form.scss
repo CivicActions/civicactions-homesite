@@ -1,0 +1,17 @@
+.section--feedback--form {
+  .inner {
+    @media(min-width: 1024px) {
+      margin: 0 auto;
+      max-width: 915px;
+    }
+    iframe {
+      margin-top: 48px;
+      height: 650px;
+      width: 100%;
+      .freebirdFormviewerViewCenteredContent {
+        width:915px;
+        max-width: 100%;
+      }
+    }
+  }
+}
