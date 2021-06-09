@@ -14,13 +14,6 @@ import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 import Scrollspy from 'react-scrollspy';
 
 const ServicesPage = ({ data }) => {
-  // const contentSectionsRef = useRef([]);
-  // const scrollpsyItemRef = useRef([]);
-  // const onScrollpsyClick = (index) => {
-  //   scrollpsyItemRef.current.forEach((item) => (item.className = 'body'));
-  //   contentSectionsRef.current[index].scrollIntoView();
-  //   scrollpsyItemRef.current[index].className = 'body in-view';
-  // };
   const [scroll, setScroll] = useState(false)
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -45,43 +38,38 @@ const ServicesPage = ({ data }) => {
                 currentClassName="is-current"
                 >
 
-            <li><a
+            <li><Link className={`body`} to='#menu1'>Web & CMS</Link></li>
+            <li><Link
               className={`body`}
-              href='#menu1'
-              >
-              Web & CMS
-            </a></li>
-            <li><a
-              className={`body`}
-              href='#menu2'
+              to='#menu2'
               >
               IT & Service Modernization
-            </a></li>
-              <li><a
+            </Link></li>
+              <li><Link
                   className={`body`}
-                  href='#menu3'
+                  to='#menu3'
               >
                 Product & Design
-              </a></li>
-            <li><a
+              </Link></li>
+            <li><Link
               className={`body`}
-              href='#menu4'
+              to='#menu4'
               >
               Security & Compliance
-            </a></li>
+            </Link></li>
 
-            <li><a
+            <li><Link
               className={`body`}
-              href='#menu5'
+              to='#menu5'
               >
               Data Services
-            </a></li>
-            <li><a
+            </Link></li>
+            <li><Link
               className={`body`}
-              href='#menu6'
+              to='#menu6'
               >
               Workforce Development
-            </a></li>
+            </Link></li>
         </Scrollspy>
 
           <div>

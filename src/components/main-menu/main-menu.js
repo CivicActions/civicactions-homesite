@@ -10,9 +10,9 @@ const MainMenu = ({ redHeader }) => (
     <a href='https://medium.com/civicactions'>Insights</a>
     <Link to='/careers/'>Careers</Link>
     { redHeader ?
-      <a href='/contact' className='primary-button'>Contact us</a>
+      <Link to='/contact' className='primary-button'>Contact us</Link>
       :
-      <a href='/contact'><div className='primary-button'>Contact us</div></a>
+      <Link to='/contact'><div className='primary-button'>Contact us</div></Link>
     }
   </div>
 )
