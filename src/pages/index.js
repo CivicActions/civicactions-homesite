@@ -1,8 +1,6 @@
 import '../sass/styles.scss';
 import React, { useEffect, useRef } from 'react';
-
 import HomepageLayout from '../layouts/homepage';
-
 import Card from '../components/card.js';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
 import ClientsSection from '../components/clients.js';

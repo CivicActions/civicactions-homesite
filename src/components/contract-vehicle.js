@@ -6,8 +6,8 @@ const ContactVehicle = ({ icon, alt, name, info, contract, link }) => {
     return (
         <div className='contact-vehicle--component'>
 
-                <img src={icon} alt={alt}/>
-                <h3>{name}</h3>
+                <div className='contracting--logo'><img src={icon} alt={alt}/></div>
+            <h3>{name}</h3>
                 <p className='body'>{info}</p>
                 {contract && <p className='body'>{contract}</p>}
                 {link &&

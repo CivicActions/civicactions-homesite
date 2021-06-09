@@ -2,11 +2,11 @@ import '../sass/styles.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ContactVehiclePdf = ({ icon, name, info, contract, period, link }) => {
+const ContactVehiclePdf = ({ icon, alt, name, info, contract, period, link }) => {
     return (
         <div className='contact-vehicle--component'>
 
-                <img src={icon} alt=''/>
+            <div className='contracting--logo'><img src={icon} alt={alt}/></div>
                 <h3>{name}</h3>
                 <p className='body'>{info}</p>
                 {contract && <p className='body'>{contract}</p>}
@@ -22,6 +22,7 @@ export default ContactVehiclePdf;
 
 ContactVehiclePdf.propTypes = {
     icon: PropTypes.any,
+    alt: PropTypes.any,
     title: PropTypes.string,
     info: PropTypes.string,
     contract: PropTypes.string,

@@ -7,7 +7,7 @@ import Hero from "../components/hero";
 import ContractVehicle from "../components/contract-vehicle";
 import ContractVehiclePdf from "../components/contract-vehicle-pdf";
 import WorkAwards from "../components/work-awards";
-
+import { Link } from 'gatsby';
 import cio from "../files/images/client-logos/cio.svg";
 import dgs from "../files/images/client-logos/dgs.svg";
 import doi from "../files/images/client-logos/doi.svg";
@@ -95,14 +95,14 @@ const ContractingPage = () => {
           <div className='differentiators list--wrapper'>
             <h2>Differentiators</h2>
             <ul className='body'>
-              <li>Founding members of Digital Services Coalition</li>
-              <li>Contributors to industry press (Government Matters, FedScoop, StateScoop, FCW, NextGov, GCN, Federal Times)</li>
-              <li>Certified small-business provider of DITAP program certification training</li>
+              <li>Founding members of <a href='https://digitalservicescoalition.org/#/'>Digital Services Coalition</a></li>
+              <li>Contributors to <Link to='/press/'>industry press</Link> (Government Matters, FedScoop, StateScoop, FCW, NextGov, GCN, Federal Times)</li>
+              <li>Certified small-business provider of <Link to='/services/ditap'>DITAP</Link> program certification training</li>
               <li>U.S. Digital Service (USDS) alumni team members</li>
-              <li>Maintainers of U.S. Web Design System (USWDS) base theme in Drupal</li>
-              <li>Founders of AGL Association to support government innovators</li>
-              <li>Core maintainers of the open source open data platform DKAN</li>
-              <li>Named to GovTech 100 list five years in a row, 2017 - 2021</li>
+              <li>Maintainers of U.S. Web Design System (USWDS) <a href='https://www.drupal.org/project/uswds'>base theme in Drupal</a></li>
+              <li>Founders of <a href='https://www.agilegovleaders.org/'>AGL Association</a> to support government innovators</li>
+              <li>Core maintainers of the open source open data platform <a href='https://getdkan.org/'>DKAN</a></li>
+              <li>Named to <a href='https://www.govtech.com/100/2021'>GovTech 100</a> list five years in a row, 2017 - 2021</li>
             </ul>
           </div>
         </div>
