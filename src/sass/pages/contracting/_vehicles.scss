@@ -24,8 +24,19 @@
       @media(min-width: 1024px) {
         margin-bottom: 0;
       }
+      .contracting--logo {
+        position: relative;
+        @media(min-width: 1024px) {
+          min-height: 144px;
+        }
+      }
       img {
         margin-bottom: 32px;
+        @media(min-width: 1024px) {
+          position: absolute;
+          bottom: 0;
+        }
+
       }
       h3 {
         padding-bottom: 16px;

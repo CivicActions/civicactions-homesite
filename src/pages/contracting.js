@@ -7,7 +7,7 @@ import Hero from "../components/hero";
 import ContractVehicle from "../components/contract-vehicle";
 import ContractVehiclePdf from "../components/contract-vehicle-pdf";
 import WorkAwards from "../components/work-awards";
-
+import { Link } from 'gatsby';
 import cio from "../files/images/client-logos/cio.svg";
 import dgs from "../files/images/client-logos/dgs.svg";
 import doi from "../files/images/client-logos/doi.svg";
@@ -35,6 +35,7 @@ const ContractingPage = () => {
             name='GSA MAS'
             info='General Services Administration Multiple Award Schedule (prime)'
             contract='Contract number: GS-35F-337BA'
+            link='https://civicactions.com/static/GSA-Schedule-4e514f0b565633ef0deb324b31abb6e9.pdf'
           />
           <ContractVehiclePdf
             icon={dgs}
@@ -42,12 +43,14 @@ const ContractingPage = () => {
             name='CMAS'
             info='California Multiple Award Schedule (prime)'
             contract='Contract number: 3-16-70-3298A'
+            link='https://civicactions.com/static/CMAS-Schedule-9ecdcdc84c448e4141d16f6a38499073.pdf'
           />
           <ContractVehicle
             icon={govuk}
             alt='GOV.UK logo'
             name='GOV.UK Digital Marketplace G-Cloud'
             info='Framework agreement: RM1557.12'
+            link='https://www.digitalmarketplace.service.gov.uk/g-cloud/supplier/708558'
 
           />
           <ContractVehicle
@@ -63,6 +66,7 @@ const ContractingPage = () => {
             name='CIO SP3 (RIVA)'
             info='General Services Administration Multiple Award Schedule (prime) Contract number: GS-35F-337BA'
             contract='Contract number: 75N98120D00070'
+            link='https://nitaac.nih.gov/services/cio-sp3'
           />
           <ContractVehicle
             icon={doi}
@@ -91,14 +95,14 @@ const ContractingPage = () => {
           <div className='differentiators list--wrapper'>
             <h2>Differentiators</h2>
             <ul className='body'>
-              <li>Founding members of Digital Services Coalition</li>
-              <li>Contributors to industry press (Government Matters, FedScoop, StateScoop, FCW, NextGov, GCN, Federal Times)</li>
-              <li>Certified small-business provider of DITAP program certification training</li>
+              <li>Founding members of <a href='https://digitalservicescoalition.org/#/'>Digital Services Coalition</a></li>
+              <li>Contributors to <Link to='/press/'>industry press</Link> (Government Matters, FedScoop, StateScoop, FCW, NextGov, GCN, Federal Times)</li>
+              <li>Certified small-business provider of <Link to='/services/ditap'>DITAP</Link> program certification training</li>
               <li>U.S. Digital Service (USDS) alumni team members</li>
-              <li>Maintainers of U.S. Web Design System (USWDS) base theme in Drupal</li>
-              <li>Founders of AGL Association to support government innovators</li>
-              <li>Core maintainers of the open source open data platform DKAN</li>
-              <li>Named to GovTech 100 list five years in a row, 2017 - 2021</li>
+              <li>Maintainers of U.S. Web Design System (USWDS) <a href='https://www.drupal.org/project/uswds'>base theme in Drupal</a></li>
+              <li>Founders of <a href='https://www.agilegovleaders.org/'>AGL Association</a> to support government innovators</li>
+              <li>Core maintainers of the open source open data platform <a href='https://getdkan.org/'>DKAN</a></li>
+              <li>Named to <a href='https://www.govtech.com/100/2021'>GovTech 100</a> list five years in a row, 2017 - 2021</li>
             </ul>
           </div>
         </div>
@@ -113,10 +117,12 @@ const ContractingPage = () => {
               <WorkAwards
                 client='U.S. Department of Education'
                 title='Improvement of systems for advancing adult literacy'
+                link='/press/2021-05-11-civicactions-wins-department-of-ed-recompete'
               />
               <WorkAwards
                 client='National Science Foundation'
                 title='Ongoing support and improvement of federal science research website'
+                link='/press/2021-05-03-civicactions-wins-nsf-recompete'
               />
             </div>
           </div>
@@ -124,17 +130,19 @@ const ContractingPage = () => {
             <div className='year'>2020</div>
             <div className='content'>
               <WorkAwards
+                  client='DistributedGov'
+                  title='Remote / telework training and consulting'
+                  link='https://distributedgov.com/news/distributedgov-launches'
+              />
+              <WorkAwards
                 client='U.S. Digital Service / Office of Federal Procurement Policy'
                 title='Certified small business provider of DITAP program training'
                 link='/press/2020-08-14-civicactions-certified-to-deliver-ditap'
               />
               <WorkAwards
-                client='DistributedGov'
-                title='Remote / telework training and consulting'
-              />
-              <WorkAwards
                 client='Centers for Medicare and Medicaid Services'
                 title='Agile development website modernization and open data migration'
+                link='press/2020-03-02-civicactions-wins-cms-contract'
               />
             </div>
           </div>
@@ -144,10 +152,12 @@ const ContractingPage = () => {
               <WorkAwards
                 client='Centers for Medicare and Medicaid Services'
                 title='Design challenge to improve health care experience for seniors'
+                link='/case-study/cms-design-challenge-mvp'
               />
               <WorkAwards
                 client='U.S. Department of Veterans Affairs'
                 title='VA.gov modernization using Drupal and human-centered design'
+                link='/case-study/va-cms-modernization'
               />
             </div>
           </div>
