@@ -31,16 +31,37 @@
       border: 1px solid $colors-black;
       color: $colors-black;
     }
+    .button__primary {
+      border: 1px solid $colors-red-50;
+      &:hover,
+      &:focus {
+        border-color: $colors-red-60;
+      }
+    }
     .button-wrapper {
+
       & > div {
         margin-bottom: 24px;
+        @media(min-width: 768px) {
+          float: left;
+          margin-bottom: 0;
+        }
+
         a {
           padding: 12px 0;
           width: 100%;
           text-align: center;
+          @media(min-width: 768px) {
+            width: auto;
+            padding: 12px 24px;
+          }
         }
         a.button__secondary {
           margin-left: 0;
+          @media(min-width: 768px) {
+            margin-left: 32px;
+          }
+
         }
       }
     }

@@ -23,6 +23,7 @@ const HomepageLayout = ({ children }) => {
         <Banner
           boldText='We’re hiring! '
           regularText='View open positions here'
+          link='/careers#open-positions'
         />
         <Header />
         <main id='main-content'>
