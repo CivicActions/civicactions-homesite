@@ -8,7 +8,8 @@ import FrozenImg from '../files/images/zoom-image.png';
 const NotFoundPage = () => {
   return (
     <GeneralLayout>
-      <main className="not-found">
+
+        <div className="not-found">
         <title>Page Not found</title>
         <h1>404</h1>
         <h2>Well, that's awkward.</h2>
@@ -28,9 +29,11 @@ const NotFoundPage = () => {
             </p>
           </div>
         </div>
-      </main>
+        </div>
+      
       <PrimaryPageCTA title="Let’s build a public success story." subtitle="Get in touch to start." primaryButtonText="PUT US TO WORK" secondaryButtonText="JOIN OUR TEAM" />
-    </GeneralLayout>
+
+      </GeneralLayout>
   );
 };
 
