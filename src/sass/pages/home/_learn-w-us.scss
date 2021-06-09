@@ -2,7 +2,26 @@
   color: $colors-grey-90;
   margin-bottom: 60px;
   width: 100%;
-
+  background-color: $colors-grey-warm-4;
+  padding-bottom: 0 !important;
+  @media(min-width: 768px) {
+    background-color: transparent;
+    position: relative;
+  }
+  .background-color--wrapper {
+    display: none;
+    background-color: $colors-grey-warm-4;
+    @media(min-width: 768px) {
+      display: block;
+      height: 100%;
+      width: 75%;
+      position: absolute;
+    }
+    @media(min-width: 1024px) {
+      width: 80%;
+      height: 65%;
+    }
+  }
   .inner {
     max-width: 1200px;
     position: relative;

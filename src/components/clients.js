@@ -24,8 +24,7 @@ const ClientsSection = () => {
     <section className='home--clients-section'>
       <div className='inner'>
         <div className='body-large'>
-          Strategy, design, technology, consulting, and training services for
-          government agencies
+          Trusted by organizations that serve the people.
         </div>
         <div className='grid'>
           <img src={clientLogo1} alt='Logo for the State of Georgia'></img>

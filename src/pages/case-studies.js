@@ -12,6 +12,7 @@ import securityComplianceIcon from '../files/icons/security-compliance-icon.svg'
 import webCmsIcon from '../files/icons/web-cms-icon.svg';
 import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 
+
 const CaseStudyPage = () => {
   const data = useStaticQuery(graphql`
     {
@@ -243,7 +244,7 @@ const CaseStudyPage = () => {
     </RedLayout>
   );
 };
-//
+
 const CaseStudyTeasers = ({ cases }) => {
   return cases.map((item, index) => {
     const { Title, Client_Name, Sort_Order, Summary, id, Cover_Image } = item;

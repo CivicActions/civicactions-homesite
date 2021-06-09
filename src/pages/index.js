@@ -10,7 +10,7 @@ import LinkButton from '../components/link-button';
 import Helmet from 'react-helmet';
 
 // Images
-import homeIntroGraphic from '../files/images/home-intro-graphic.png';
+import homeIntroGraphic from '../files/images/homepage-hero.png';
 import homeTeamImage from '../files/images/home-team-img.png';
 import quotePatternGraphic from '../files/images/quote-pattern-graphic.png';
 import caseStudyTeaserImg1 from '../files/images/case-study-teasers/case-study-teaser-img-1.png';
@@ -86,20 +86,27 @@ const HomePage = () => {
             <div
               className='service-cards-grid fade-in'
               ref={(e) => (fadersRef.current[1] = e)}>
-              <Card title='Web & CMS' icon={webCmsIcon} />
+              <Card
+                  title='Web & CMS'
+                  icon={webCmsIcon}
+                  link='/services#web-cms'
+              />
               <Card
                 title='IT & Service Modernization'
                 icon={itModernizationIcon}
+                link='/services#it-service'
               />
-              <Card title='Product & Design' icon={productDesignIcon} />
+              <Card title='Product & Design' icon={productDesignIcon} link='/services#product-design'/>
               <Card
                 title='Security & Compliance'
                 icon={securityComplianceIcon}
+                link='/services#security'
               />
-              <Card title='Data Services' icon={dataServicesIcon} />
+              <Card title='Data Services' icon={dataServicesIcon} link='/services#data-services' />
               <Card
                 title='Workforce Development'
                 icon={workforceDevelopmentIcon}
+                link='/services#development'
               />
             </div>
             <LinkButton
@@ -121,14 +128,12 @@ const HomePage = () => {
               welfare to education and beyond, we partner with agencies to solve
               hard problems and improve outcomes for government and the public.
             </p>
-            <div
-              className='grid fade-in'
-              ref={(e) => (fadersRef.current[2] = e)}>
+            <div className='teasers'>
               <CaseStudyTeaser
                 img={caseStudyTeaserImg1}
                 alt={'elderly man and women leaning on each other outside in fall'}
-                title={'Centers for medicare and medicaid services'}
-                description={
+                client={'Centers for medicare and medicaid services'}
+                title={
                   'Improving the online experience for Medicare beneficiaries'
                 }
                 // teaserLink={''}
@@ -136,15 +141,15 @@ const HomePage = () => {
               <CaseStudyTeaser
                 img={caseStudyTeaserImg2}
                 alt={'veteran saluting facing a crowd'}
-                title={'US Department of veteran affairs'}
-                description={'Helping Veterans access care and benefits online'}
+                client={'US Department of veteran affairs'}
+                title={'Helping Veterans access care and benefits online'}
                 teaserLink={'/case-study/va-cms-modernization'}
               />
               <CaseStudyTeaser
                 img={caseStudyTeaserImg3}
                 alt={'architecture sketch with calculations and pencil on paper'}
-                title={'US Department of Education'}
-                description={'Supporting and expanding adult education'}
+                client={'US Department of Education'}
+                title={'Supporting and expanding adult education'}
                 // teaserLink={''}
               />
               <div className='view-our-work-cta '><a href={'/case-studies/'}>
@@ -181,6 +186,7 @@ const HomePage = () => {
       </section>
       {/* ======== Learn With Us Section ========== */}
       <section className='home--section home--learn-w-us-section'>
+        <div className='background-color--wrapper'></div>
         <div className='inner'>
           <h2>Learn with us.</h2>
           <div className='body-large'>
