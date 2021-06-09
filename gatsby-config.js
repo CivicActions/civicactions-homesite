@@ -1,12 +1,16 @@
 module.exports = {
   siteMetadata: {
     title: `CivicActions | Open and Agile Digital Government Services`,
+    titleTemplate: `CivicActions | Open and Agile Digital Government Services`,
+    description: `We use Agile and DevOps, open source software, and human-centered design to elevate government digital services.`,
     email: `contact@civicactions.com`,
     phone: `(510) 408-7510`,
     address: `3527 Mt Diablo Blvd,`,
     address_line_2: `Unit 269,`,
     city: `Lafayette, CA 94549`,
-    siteUrl: `https://civicactions.com`,
+    url: `https://civicactions.com/`,
+    twitterUsername: '@CivicActions',
+    image: 'logo.png', // TODO Update me.
   },
   pathPrefix: `/civicactions-homesite`,
   plugins: [
@@ -31,10 +35,10 @@ module.exports = {
         // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
         parserOption: {
           customFields: {
-            item: ['itunes:duration']
-          }
-        }
-      }
+            item: ['itunes:duration'],
+          },
+        },
+      },
     },
     `gatsby-plugin-node-fields`,
     `gatsby-plugin-client-side-redirect`,
@@ -49,7 +53,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-1170467-1",
+        trackingId: 'UA-1170467-1',
         // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: false,
       },
@@ -59,7 +63,13 @@ module.exports = {
       options: {
         apiURL: `https://civicactions-content.civicactions-content.app.civicactions.net`,
         queryLimit: 1000,
-        contentTypes: [`case-study`, `offering`, `press`, `press-release`, `staff-profile`],
+        contentTypes: [
+          `case-study`,
+          `offering`,
+          `press`,
+          `press-release`,
+          `staff-profile`,
+        ],
         singleTypes: [],
       },
     },
