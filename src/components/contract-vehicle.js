@@ -10,7 +10,8 @@ const ContactVehicle = ({ icon, alt, name, info, contract, link }) => {
                 <h3>{name}</h3>
                 <p className='body'>{info}</p>
                 {contract && <p className='body'>{contract}</p>}
-                {link && <a href={link}>View details</a>}
+                {link &&
+                <a href={link}>View details</a>}
 
 
 
