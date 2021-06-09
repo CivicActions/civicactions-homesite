@@ -1,15 +1,16 @@
 import '../sass/styles.scss';
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import extendedLogo from '../files/icons/ca-extended-logo.svg';
 import menuIcon from '../files/icons/menu-icon.svg';
 import closeIcon from '../files/icons/close-icon.svg';
 import PropTypes from 'prop-types';
 import MobileMenu from '../components/mobile-menu/mobile-menu';
+import MainMenu from '../components/main-menu/main-menu'
 
 const Header = () => {
 
-  
+
   const [scroll, setScroll] = useState(false)
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -25,28 +26,21 @@ const Header = () => {
 
   }, []);
   return (
-      <header className={`${scroll ? "header scrolled" : "header"} ${scrollMobile ? "scrolled-mobile" : ''}`}>
-        <div className='inner'>
-          <Link to='/' className='logo'>
-            <img src={extendedLogo} alt='Civic Actions Logo'></img>
-          </Link>
-          <div className='header-nav'>
-            <Link to=''>company</Link>
-            <Link to='/services'>services</Link>
-            <Link to='/case-studies'>our work</Link>
-            <Link to=''>insights</Link>
-            <Link to='/careers'>careers</Link>
-            <a href='/contact/'><div className='primary-button'>contact us</div></a>
-          </div>
-          <MobileMenu
+    <header className={`${scroll ? "header scrolled" : "header"} ${scrollMobile ? "scrolled-mobile" : ''}`}>
+      <div className='inner'>
+        <Link to='/' className='logo'>
+          <img src={extendedLogo} alt='Civic Actions Logo'></img>
+        </Link>
+        <MainMenu redHeader={false} />
+        <MobileMenu
           right
           noTransition
           width={'75%'}
           customBurgerIcon={<img src={menuIcon} />}
           customCrossIcon={<img src={closeIcon} />}
-          />
-        </div>
-      </header>
+        />
+      </div>
+    </header>
 
   );
 };

@@ -1,13 +1,14 @@
 import '../sass/styles.scss';
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import extendedLogo from '../files/icons/CA-white.svg';
 import menuIcon from '../files/icons/menu-icon.svg';
 import closeIcon from '../files/icons/close-icon.svg';
 import PropTypes from 'prop-types';
+import MainMenu from '../components/main-menu/main-menu'
 import MobileMenu from '../components/mobile-menu/mobile-menu';
 
-const RedHeader = ({ onMenuClick, mobileMenuHiddenBool }) => {
+const RedHeader = () => {
 
 
     const [scroll, setScroll] = useState(false)
@@ -25,14 +26,7 @@ const RedHeader = ({ onMenuClick, mobileMenuHiddenBool }) => {
                 <Link to='/' className='logo'>
                     <img src={extendedLogo} alt='Civic Actions Logo'></img>
                 </Link>
-                <div className='header-nav'>
-                    <Link to=''>company</Link>
-                    <Link to='/services'>services</Link>
-                    <Link to='/case-studies/'>our work</Link>
-                    <Link to=''>insights</Link>
-                    <Link to='/careers/'>careers</Link>
-                    <a href='/contact' className='primary-button'>contact us</a>
-                </div>
+                <MainMenu redHeader={true} />
                 <MobileMenu
                     right
                     noTransition
