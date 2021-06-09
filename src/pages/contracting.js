@@ -2,33 +2,32 @@ import '../sass/styles.scss';
 import React from 'react';
 import RedLayout from '../layouts/red';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
-import { Helmet } from "react-helmet";
-import Hero from "../components/hero";
-import ContractVehicle from "../components/contract-vehicle";
-import ContractVehiclePdf from "../components/contract-vehicle-pdf";
-import WorkAwards from "../components/work-awards";
+import Hero from '../components/hero';
+import ContractVehicle from '../components/contract-vehicle';
+import ContractVehiclePdf from '../components/contract-vehicle-pdf';
+import WorkAwards from '../components/work-awards';
 import { Link } from 'gatsby';
-import cio from "../files/images/client-logos/cio.svg";
-import dgs from "../files/images/client-logos/dgs.svg";
-import doi from "../files/images/client-logos/doi.svg";
-import govuk from "../files/images/client-logos/govuk.svg";
-import gsa from "../files/images/client-logos/gsa.svg";
-import library from "../files/images/client-logos/library.svg";
+import SEO from '../components/seo';
+import cio from '../files/images/client-logos/cio.svg';
+import dgs from '../files/images/client-logos/dgs.svg';
+import doi from '../files/images/client-logos/doi.svg';
+import govuk from '../files/images/client-logos/govuk.svg';
+import gsa from '../files/images/client-logos/gsa.svg';
+import library from '../files/images/client-logos/library.svg';
 
 const ContractingPage = () => {
   return (
     <RedLayout className='contracting-page'>
-      <Helmet>
-        <title data-react-helmet="true">Civicactions Contracting Page</title>
-      </Helmet>
+      <SEO title='Contracting information' />
       <Hero
         title={'Your strategic partner for modernizing government services'}
-        description={'We apply Agile and DevOps, open source software, and human-centered design to elevate digital platforms for organizations serving the public. As an innovative small business, we solve long-standing modernization challenges by creating automated compliance models for system security plans and bringing accessibility to the forefront of design and development. Let’s work together to make government services that build public trust.'}
+        description={
+          'We apply Agile and DevOps, open source software, and human-centered design to elevate digital platforms for organizations serving the public. As an innovative small business, we solve long-standing modernization challenges by creating automated compliance models for system security plans and bringing accessibility to the forefront of design and development. Let’s work together to make government services that build public trust.'
+        }
       />
       <section className='section--contracting-vehicles'>
         <h2>Contacting Vehicles</h2>
         <div className='inner'>
-
           <ContractVehiclePdf
             icon={gsa}
             alt='GSA logo'
@@ -51,7 +50,6 @@ const ContractingPage = () => {
             name='GOV.UK Digital Marketplace G-Cloud'
             info='Framework agreement: RM1557.12'
             link='https://www.digitalmarketplace.service.gov.uk/g-cloud/supplier/708558'
-
           />
           <ContractVehicle
             icon={library}
@@ -87,7 +85,10 @@ const ContractingPage = () => {
               <li>CAGE Code: 65FK1</li>
               <li>NAICS Codes: 519190, 541511, 541512, 541513, 541519</li>
               <li>Standard Product Code: 80101507</li>
-              <li>Certified Small Business (Micro), State of California DGS, No. 2003474</li>
+              <li>
+                Certified Small Business (Micro), State of California DGS, No.
+                2003474
+              </li>
               <li>Incorporated: 2004 (California)</li>
               <li>CivicActions Digital Service ULC (Canadian entity)</li>
             </ul>
@@ -95,14 +96,43 @@ const ContractingPage = () => {
           <div className='differentiators list--wrapper'>
             <h2>Differentiators</h2>
             <ul className='body'>
-              <li>Founding members of <a href='https://digitalservicescoalition.org/#/'>Digital Services Coalition</a></li>
-              <li>Contributors to <Link to='/press/'>industry press</Link> (Government Matters, FedScoop, StateScoop, FCW, NextGov, GCN, Federal Times)</li>
-              <li>Certified small-business provider of <Link to='/services/ditap'>DITAP</Link> program certification training</li>
+              <li>
+                Founding members of{' '}
+                <a href='https://digitalservicescoalition.org/#/'>
+                  Digital Services Coalition
+                </a>
+              </li>
+              <li>
+                Contributors to <Link to='/press/'>industry press</Link>{' '}
+                (Government Matters, FedScoop, StateScoop, FCW, NextGov, GCN,
+                Federal Times)
+              </li>
+              <li>
+                Certified small-business provider of{' '}
+                <Link to='/services/ditap'>DITAP</Link> program certification
+                training
+              </li>
               <li>U.S. Digital Service (USDS) alumni team members</li>
-              <li>Maintainers of U.S. Web Design System (USWDS) <a href='https://www.drupal.org/project/uswds'>base theme in Drupal</a></li>
-              <li>Founders of <a href='https://www.agilegovleaders.org/'>AGL Association</a> to support government innovators</li>
-              <li>Core maintainers of the open source open data platform <a href='https://getdkan.org/'>DKAN</a></li>
-              <li>Named to <a href='https://www.govtech.com/100/2021'>GovTech 100</a> list five years in a row, 2017 - 2021</li>
+              <li>
+                Maintainers of U.S. Web Design System (USWDS){' '}
+                <a href='https://www.drupal.org/project/uswds'>
+                  base theme in Drupal
+                </a>
+              </li>
+              <li>
+                Founders of{' '}
+                <a href='https://www.agilegovleaders.org/'>AGL Association</a>{' '}
+                to support government innovators
+              </li>
+              <li>
+                Core maintainers of the open source open data platform{' '}
+                <a href='https://getdkan.org/'>DKAN</a>
+              </li>
+              <li>
+                Named to{' '}
+                <a href='https://www.govtech.com/100/2021'>GovTech 100</a> list
+                five years in a row, 2017 - 2021
+              </li>
             </ul>
           </div>
         </div>
@@ -111,7 +141,6 @@ const ContractingPage = () => {
         <div className='inner'>
           <h2>Recent work and contract awards</h2>
           <div>
-
             <div className='year'>2021</div>
             <div className='content'>
               <WorkAwards
@@ -130,9 +159,9 @@ const ContractingPage = () => {
             <div className='year'>2020</div>
             <div className='content'>
               <WorkAwards
-                  client='DistributedGov'
-                  title='Remote / telework training and consulting'
-                  link='https://distributedgov.com/news/distributedgov-launches'
+                client='DistributedGov'
+                title='Remote / telework training and consulting'
+                link='https://distributedgov.com/news/distributedgov-launches'
               />
               <WorkAwards
                 client='U.S. Digital Service / Office of Federal Procurement Policy'

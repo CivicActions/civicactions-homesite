@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `CivicActions | Open and Agile Digital Government Services`,
-    titleTemplate: `CivicActions | Open and Agile Digital Government Services`,
+    titleTemplate: `%s | CivicActions`,
     description: `We use Agile and DevOps, open source software, and human-centered design to elevate government digital services.`,
     email: `contact@civicactions.com`,
     phone: `(510) 408-7510`,

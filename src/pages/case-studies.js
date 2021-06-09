@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import '../sass/styles.scss';
 import RedLayout from '../layouts/red';
 import { graphql, useStaticQuery } from 'gatsby';
-import { Helmet } from 'react-helmet';
 import Hero from '../components/hero.js';
 import PrimaryPageCTA from '../components/primary-page-cta';
 import dataServicesIcon from '../files/icons/data-services-icon.svg';
@@ -11,12 +10,13 @@ import productDesignIcon from '../files/icons/product-design-icon.svg';
 import securityComplianceIcon from '../files/icons/security-compliance-icon.svg';
 import webCmsIcon from '../files/icons/web-cms-icon.svg';
 import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
+import SEO from '../components/seo';
 
 
 const CaseStudyPage = () => {
   const data = useStaticQuery(graphql`
     {
-      allStrapiCaseStudy(sort: {fields: Sort_Order}) {
+      allStrapiCaseStudy(sort: { fields: Sort_Order }) {
         nodes {
           Title
           Cover_Image {
@@ -72,14 +72,13 @@ const CaseStudyPage = () => {
   const callback = (e) => {
     checked = e.target.checked;
     if (e.target.name !== 'undefined') {
-
-      if (!(filterState.includes(e.target.name))) {
+      if (!filterState.includes(e.target.name)) {
         // If the filter has not been selected, add it to the array of selected items.
         setFilterState([...filterState, e.target.name]);
         checked = false;
       } else {
         // If the filter has already been selected, remove it from the array
-        filterState.splice(filterState.indexOf(e.target.name), 1)
+        filterState.splice(filterState.indexOf(e.target.name), 1);
         setFilterState([...filterState]);
         checked = true;
       }
@@ -87,8 +86,7 @@ const CaseStudyPage = () => {
   };
 
   // Re-renders when filter is clicked and state is updated because useState is async.
-  useEffect(() => { }, [filterState.length]);
-
+  useEffect(() => {}, [filterState.length]);
 
   let cases;
   const caseStudies = data.allStrapiCaseStudy.nodes;
@@ -104,7 +102,7 @@ const CaseStudyPage = () => {
         // return results that match the selected categories.
         for (let filter of filterState) {
           if (category === filter) {
-            return true
+            return true;
           }
         }
       });
@@ -113,9 +111,7 @@ const CaseStudyPage = () => {
 
   return (
     <RedLayout>
-      <Helmet>
-        <title data-react-helmet='true'>Case Studies Landing page</title>
-      </Helmet>
+      <SEO title='Case Studies' />
       <Hero
         title='Work that makes a difference'
         description='Our work impacts the daily lives of millions of people. See how we’ve helped agencies build resilient services at scale.'
@@ -137,11 +133,12 @@ const CaseStudyPage = () => {
                     callback(e);
                   }}
                   className={checked && 'checked'}
-
                 />
-                <label htmlFor={categories[index].id}>{categories[index].value}</label>
+                <label htmlFor={categories[index].id}>
+                  {categories[index].value}
+                </label>
               </div>
-            )
+            );
           })}
         </div>
       </section>
@@ -150,24 +147,27 @@ const CaseStudyPage = () => {
       </section>
       <section className={`section--more-clients ${filterState}`}>
         <h2>More clients</h2>
-        <div className='inner'><div className='web-cms'>
-          <img alt='' className="case-studies--icon" src={webCmsIcon} />
-          <label>Web & CMS</label>
-          <ul className='body'>
-            <li>Defense Security Cooperation Agency</li>
-            <li>U.S. Executive Office of the President</li>
-            <li>U.S. House of Representatives</li>
-            <li>U.S. Department of the Interior</li>
-            <li>California Polytechnic State University</li>
-            <li>San Francisco Department of the Environment</li>
-            <li>City of Los Angeles</li>
-            <li>Doctors Without Borders</li>
-
-          </ul>
-
-        </div>
+        <div className='inner'>
+          <div className='web-cms'>
+            <img alt='' className='case-studies--icon' src={webCmsIcon} />
+            <label>Web & CMS</label>
+            <ul className='body'>
+              <li>Defense Security Cooperation Agency</li>
+              <li>U.S. Executive Office of the President</li>
+              <li>U.S. House of Representatives</li>
+              <li>U.S. Department of the Interior</li>
+              <li>California Polytechnic State University</li>
+              <li>San Francisco Department of the Environment</li>
+              <li>City of Los Angeles</li>
+              <li>Doctors Without Borders</li>
+            </ul>
+          </div>
           <div className='it-service'>
-            <img alt='' className="case-studies--icon" src={itModernizationIcon} />
+            <img
+              alt=''
+              className='case-studies--icon'
+              src={itModernizationIcon}
+            />
             <label>IT & Service Modernization</label>
             <ul className='body'>
               <li>U.S. Department of Veterans Affairs</li>
@@ -176,11 +176,14 @@ const CaseStudyPage = () => {
               <li>California Department of Motor Vehicles</li>
               <li>California Child Welfare Digital Services</li>
               <li>City of Los Angeles</li>
-
             </ul>
           </div>
           <div className='product-design'>
-            <img alt='' className="case-studies--icon" src={productDesignIcon} />
+            <img
+              alt=''
+              className='case-studies--icon'
+              src={productDesignIcon}
+            />
             <label>Product & Design</label>
             <ul className='body'>
               <li>Defense Security Cooperation Agency</li>
@@ -194,7 +197,11 @@ const CaseStudyPage = () => {
             </ul>
           </div>
           <div className='security'>
-            <img alt='' className="case-studies--icon" src={securityComplianceIcon} />
+            <img
+              alt=''
+              className='case-studies--icon'
+              src={securityComplianceIcon}
+            />
             <label>Security & Compliance</label>
             <ul className='body'>
               <li>Centers for Medicare and Medicaid Services</li>
@@ -207,7 +214,7 @@ const CaseStudyPage = () => {
             </ul>
           </div>
           <div className='data-services'>
-            <img alt='' className="case-studies--icon" src={dataServicesIcon} />
+            <img alt='' className='case-studies--icon' src={dataServicesIcon} />
             <label>Data Services</label>
             <ul className='body'>
               <li>U.S. Department of Agriculture</li>
@@ -218,7 +225,11 @@ const CaseStudyPage = () => {
             </ul>
           </div>
           <div className='development'>
-            <img alt='' className="case-studies--icon" src={workforceDevelopmentIcon} />
+            <img
+              alt=''
+              className='case-studies--icon'
+              src={workforceDevelopmentIcon}
+            />
             <label>Workforce Development</label>
             <ul className='body'>
               <li>U.S. Department of Veterans Affairs</li>
@@ -250,14 +261,18 @@ const CaseStudyTeasers = ({ cases }) => {
     const { Title, Client_Name, Sort_Order, Summary, id, Cover_Image } = item;
     return (
       <div key={id} className={`wrapper--case-study--teaser ${Sort_Order}`}>
-        { Cover_Image.url && <img src={Cover_Image[0].url} alt={Cover_Image[0].alternativeText} />}
+        {Cover_Image.url && (
+          <img src={Cover_Image[0].url} alt={Cover_Image[0].alternativeText} />
+        )}
         <div className='teaser-content'>
           <div className='title-wrapper'>
             <span aria-label='client name'>{Client_Name}</span>
             <h2 className='h3'>{Title}</h2>
           </div>
         </div>
-        <p aria-label='summary' className='summary body'>{Summary}</p>
+        <p aria-label='summary' className='summary body'>
+          {Summary}
+        </p>
       </div>
     );
   });

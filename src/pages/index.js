@@ -7,7 +7,7 @@ import ClientsSection from '../components/clients.js';
 import CaseStudyTeaser from '../components/case-study-teaser.js';
 import PressReleaseTeaser from '../components/press-release-teaser.js';
 import LinkButton from '../components/link-button';
-import Helmet from 'react-helmet';
+import SEO from '../components/seo';
 
 // Images
 import homeIntroGraphic from '../files/images/homepage-hero.png';
@@ -44,9 +44,7 @@ const HomePage = () => {
   }, []);
   return (
     <HomepageLayout>
-      <Helmet>
-        <title data-react-helmet='true'>CivicActions</title>
-      </Helmet>
+      <SEO title='Home' />
       <section className='home--hero-section'>
         <div className='inner'>
           <img
@@ -87,22 +85,30 @@ const HomePage = () => {
               className='service-cards-grid fade-in'
               ref={(e) => (fadersRef.current[1] = e)}>
               <Card
-                  title='Web & CMS'
-                  icon={webCmsIcon}
-                  link='/services#web-cms'
+                title='Web & CMS'
+                icon={webCmsIcon}
+                link='/services#web-cms'
               />
               <Card
                 title='IT & Service Modernization'
                 icon={itModernizationIcon}
                 link='/services#it-service'
               />
-              <Card title='Product & Design' icon={productDesignIcon} link='/services#product-design'/>
+              <Card
+                title='Product & Design'
+                icon={productDesignIcon}
+                link='/services#product-design'
+              />
               <Card
                 title='Security & Compliance'
                 icon={securityComplianceIcon}
                 link='/services#security'
               />
-              <Card title='Data Services' icon={dataServicesIcon} link='/services#data-services' />
+              <Card
+                title='Data Services'
+                icon={dataServicesIcon}
+                link='/services#data-services'
+              />
               <Card
                 title='Workforce Development'
                 icon={workforceDevelopmentIcon}
@@ -115,7 +121,7 @@ const HomePage = () => {
               type='primary'
               text='Explore Services'
             />
-        </div>
+          </div>
         </section>
 
         {/* ======== Case Studies Section ========== */}
@@ -131,7 +137,9 @@ const HomePage = () => {
             <div className='teasers'>
               <CaseStudyTeaser
                 img={caseStudyTeaserImg1}
-                alt={'elderly man and women leaning on each other outside in fall'}
+                alt={
+                  'elderly man and women leaning on each other outside in fall'
+                }
                 client={'Centers for medicare and medicaid services'}
                 title={
                   'Improving the online experience for Medicare beneficiaries'
@@ -147,20 +155,24 @@ const HomePage = () => {
               />
               <CaseStudyTeaser
                 img={caseStudyTeaserImg3}
-                alt={'architecture sketch with calculations and pencil on paper'}
+                alt={
+                  'architecture sketch with calculations and pencil on paper'
+                }
                 client={'US Department of Education'}
                 title={'Supporting and expanding adult education'}
                 // teaserLink={''}
               />
-              <div className='view-our-work-cta '><a href={'/case-studies/'}>
-                <img src={caseStudyTeaserImg3} alt='' className='bg'></img>
-                <div className='content'>
-                  <h3>View more Work</h3>
-                  <img
-                    className='view-our-work-cta__icon'
-                    src={arrowIcon}
-                    alt=''></img>
-                </div></a>
+              <div className='view-our-work-cta '>
+                <a href={'/case-studies/'}>
+                  <img src={caseStudyTeaserImg3} alt='' className='bg'></img>
+                  <div className='content'>
+                    <h3>View more Work</h3>
+                    <img
+                      className='view-our-work-cta__icon'
+                      src={arrowIcon}
+                      alt=''></img>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -199,7 +211,9 @@ const HomePage = () => {
               description={
                 'How to start bringing CX into the business of government'
               }
-              teaserlink={'https://medium.com/civicactions/government-accessibility-and-the-cms-problem-588a07088c65 '}
+              teaserlink={
+                'https://medium.com/civicactions/government-accessibility-and-the-cms-problem-588a07088c65 '
+              }
             />
             <PressReleaseTeaser
               img={caseStudyTeaserImg5}
@@ -207,22 +221,28 @@ const HomePage = () => {
               description={
                 'Praise and recommendations for the new administration'
               }
-              teaserLink={'https://medium.com/civicactions/government-customer-experience-a-practical-guide-59b602815e3f '}
+              teaserLink={
+                'https://medium.com/civicactions/government-customer-experience-a-practical-guide-59b602815e3f '
+              }
             />
             <div className='grid-item-3'>
               <div className='grid-item-3-1'>
-                <a href={'https://medium.com/civicactions/what-fierce-openness-can-do-for-government-dd1d3ed518af'}>
+                <a
+                  href={
+                    'https://medium.com/civicactions/what-fierce-openness-can-do-for-government-dd1d3ed518af'
+                  }>
                   <h3>The role of UX in an agile team</h3>
-                  <img  width='32px' src={arrowIcon} alt=''></img>
+                  <img width='32px' src={arrowIcon} alt=''></img>
                 </a>
-
               </div>
               <div className='grid-item-3-2'>
-                <a href={'https://medium.com/civicactions/policy-recommendations-for-improving-the-ato-process-through-compliance-as-code-524e3005fceb '}>
+                <a
+                  href={
+                    'https://medium.com/civicactions/policy-recommendations-for-improving-the-ato-process-through-compliance-as-code-524e3005fceb '
+                  }>
                   <h3>What “fierce openness” can do for government</h3>
                   <img width='32px' src={arrowIcon} alt=''></img>
                 </a>
-
               </div>
             </div>
           </div>
@@ -246,7 +266,6 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-
       </section>
       <PrimaryPageCTA
         title='Let’s build a public success story.'
