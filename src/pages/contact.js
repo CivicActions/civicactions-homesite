@@ -36,7 +36,7 @@ const Contact = () => {
 
             <section className='contact--ways-to-contact--section'>
                 <div className='inner'>
-                  <h3 style={fontStyles}>More ways to reach us</h3>
+                  <h2 className='h3' style={fontStyles}>More ways to reach us</h2>
                   <p className='body' style={fontStyles}>
                       Feel free to connect with us about work opportunities,
                       speaking engagements, potential partnerships, or just to say hi.

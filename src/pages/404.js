@@ -8,11 +8,12 @@ import FrozenImg from '../files/images/zoom-image.png';
 const NotFoundPage = () => {
   return (
     <GeneralLayout>
-      <main className="not-found">
+
+      <div className="not-found">
         <title>Page Not found</title>
         <h1>404</h1>
         <h2>Well, that's awkward.</h2>
-        <img alt="image of frozen zoom screens" src={FrozenImg} />
+        <img alt="Funny photo of CivicActions frozen in a Zoom call" src={FrozenImg} />
         <div className="not-found--body">
           <p className="body">We’re frozen on Zoom and can’t find the page you’re looking for.</p>
           <p className="body">While we sign back on, here are some quick links for you:</p>
@@ -28,8 +29,10 @@ const NotFoundPage = () => {
             </p>
           </div>
         </div>
-      </main>
+      </div>
+
       <PrimaryPageCTA title="Let’s build a public success story." subtitle="Get in touch to start." primaryButtonText="PUT US TO WORK" secondaryButtonText="JOIN OUR TEAM" />
+
     </GeneralLayout>
   );
 };

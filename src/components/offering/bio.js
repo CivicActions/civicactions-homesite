@@ -11,7 +11,7 @@ const Bio = ({ member }) => {
       <div key={id}>
         <img className='staff-image' src={image[0].url} alt={image[0].alternativeText} />
         <h2 className='h3 staff-name'>{Name}</h2>
-        <a className='linkedin-icon' href={Linkedin}><img src={linkedinIcon} /></a>
+        <a className='linkedin-icon' href={Linkedin}><img src={linkedinIcon} alt=''/></a>
         <p className='body staff-role'>{Role}</p>
         <div><p className='body staff-body'>{Body}</p></div>
       </div>

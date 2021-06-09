@@ -61,10 +61,10 @@ const OfferingTemplate = ({ data }) => {
             <div key={member.id} className='related-staff'>
                 <img className='staff-image' src={member.image[0].url} alt={member.image[0].alternativeText} />
                 <div className='staff-info'>
-                    <p className='h3 staff-name'>
+                    <h3 className='staff-name'>
                         {member.Name}
-                        <a className='linkedin-icon' href={member.Linkedin}><img src={linkedinIcon} /></a>
-                    </p>
+                        <a className='linkedin-icon' href={member.Linkedin}><img alt={`linkedin profile for ${member.Name}`} src={linkedinIcon} /></a>
+                    </h3>
                     <p className='body staff-role'>{member.Role}</p>
                     <button className={`body open-modal--btn ${index}`} onClick={() => openModal(member.Name)}>Read bio</button>
                 </div></div>
@@ -101,7 +101,7 @@ const OfferingTemplate = ({ data }) => {
                         <div className='inner'>
                             {offering.Stats.map((stat, index) => (
                                 <div className='single-stat'>
-                                    <p className='stat--number'>{offering.Stats[index].Numerical_Element}</p>
+                                    <h2 className='stat--number'>{offering.Stats[index].Numerical_Element}</h2>
                                     <p className='body stat--text'>{offering.Stats[index].Content_Element}</p>
                                 </div>
                             ))}
@@ -148,7 +148,7 @@ const OfferingTemplate = ({ data }) => {
                                         </div>
                                     ))}
                                     <div className='cta-tab-section' label={tab.cta_tab.header}>
-                                        <h3 className='h5'>{tab.cta_tab.header}</h3>
+                                        {tab.cta_tab.header && <h3 className='h5'>{tab.cta_tab.header}</h3>}
                                         <div className='link-button'><LinkButton text={tab.cta_tab.button_text}
                                                                                  src={tab.cta_tab.button_link}/></div>
                                     </div>
@@ -185,7 +185,7 @@ const OfferingTemplate = ({ data }) => {
                     >
 
                         <Bio member={modalContent} closeModal={closeModal} />
-                        <button onClick={closeModal}><img src={closeButton}/><p className='visually-hidden'>Close</p></button>
+                        <button onClick={closeModal}><img alt='close modal button'src={closeButton}/><p className='visually-hidden'>Close</p></button>
 
                     </Modal>
                 </section >
