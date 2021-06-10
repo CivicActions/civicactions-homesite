@@ -31,8 +31,9 @@
     margin-bottom: 32px;
   }
 
-  h4 {
+  h3 {
     margin-top: 8px;
+
   }
 
   h3,
@@ -47,17 +48,23 @@
     flex-direction: column;
     align-items: flex-start;
     margin: 0 auto;
-  }
-
-  .grid {
-    margin-top: 40px;
-    position: relative;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 48px;
-    column-gap: 32px;
+    .teasers {
+      a {
+        &:hover,
+        &:focus,
+        &:focus-within {
+          .wrapper--case-study--teaser {
+            .teaser-content {
+              background: #1B1B1B;
+              opacity: 1;
+              .h3 {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .view-our-work-cta {
@@ -86,6 +93,9 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      @media(min-width: 768px) {
+        margin-bottom: 40px;
+      }
     }
 
     &__icon {
@@ -140,11 +150,17 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 40px;
+    padding: 16px;
     height: 30%;
     color: $colors-white;
     transition: 0.5s ease;
     background-color: rgba(27, 27, 27, 0.8);
+    @media(min-width: 768px) {
+      padding: 24px;
+    }
+    @media(min-width: 1024px) {
+      padding: 40px;
+    }
   }
 
   @media screen and (max-width: $large-screen) {
