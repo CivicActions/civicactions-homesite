@@ -1,6 +1,25 @@
+.home--clients-section {
+  margin-bottom: 24px;
+  @media(min-width: 768px) {
+    margin-bottom: 29px;
+  }
+  @media(min-width: 1024px) {
+    margin-bottom: 20px;
+  }
+  .grid {
+    margin-top: 24px;
+    @media(min-width: 768px) {
+      margin-top: 28px;
+    }
+    @media(min-width: 1024px) {
+      margin-top: 41px;
+    }
+  }
+}
 .home--clients-section,
 .section--offering--client-logos {
   width: 100vw;
+
 
   .body-large {
     color: $colors-grey-90;
@@ -20,6 +39,9 @@
 
     &::-webkit-scrollbar {
       display: none;
+    }
+    img {
+      margin: auto;
     }
   }
 

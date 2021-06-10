@@ -36,7 +36,6 @@
   }
 
   .inner {
-    min-height: 373px;
     position: relative;
     max-width: 1200px;
     display: flex;
@@ -49,6 +48,9 @@
 
   .info-text {
     z-index: 1;
+    .button {
+      margin-bottom: 56px;
+    }
   }
 
   .primary-button {
@@ -74,7 +76,6 @@
 
     .inner {
       margin: 0 5vw;
-      min-height: 250px;
       margin-top: 50px;
     }
   }

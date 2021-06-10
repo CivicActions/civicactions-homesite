@@ -1,5 +1,6 @@
 .home--team-section{
   .inner {
+    margin-top: 56px !important;
     .team-section--title {
       margin-bottom: 14px;
       line-height: 22px;
@@ -72,7 +73,10 @@
 
 .home--team-section {
   width: 100vw;
-  margin-bottom: 120px;
+  margin-bottom: 98px;
+  @media(min-width: 1024px) {
+    margin-bottom: 120px;
+  }
 
   .primary-button:nth-child(2) {
     display: none;

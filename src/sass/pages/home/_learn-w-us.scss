@@ -29,13 +29,28 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin: 0 auto;
+    margin: 48px 24px 0;
+    @media(min-width: 768px) {
+      margin-top: 64px 48px 0;
+    }
+    @media(min-width: 1024px) {
+      margin: 120px auto 0;
+    }
+
+    .button {
+      margin-bottom: 56px;
+    }
   }
 
   h2 {
-    margin-top: 32px;
+    margin-top: 48px;
     margin-bottom: 16px;
-
+    @media(min-width: 768px) {
+      margin-top: 56px;
+    }
+    @media(min-width: 1024px) {
+      margin-top: 80px;
+    }
   }
 
 
@@ -117,14 +132,33 @@
       height: 100%;
       background-color: $colors-white;
       box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3);
-      display: flex;
       flex-direction: row;
-      justify-content: center;
       align-items: center;
-      padding: 40px;
-      a {
+      padding: 32px;
+      @media(min-width: 1024px) {
+        padding: 40px;
         display: flex;
+      }
+      a {
+        width: 100%;
         text-decoration: none;
+        @media(min-width: 1024px) {
+          display: flex;
+        }
+        h3 {
+          float: left;
+          width: 87%;
+          @media(min-width: 1024px) {
+            width: auto;
+            float: unset;
+          }
+        }
+        img {
+          float: right;
+          @media(min-width: 1024px) {
+            float: unset;
+          }
+        }
       }
       &:hover,
       &:focus,
@@ -149,10 +183,7 @@
     }
   }
   @media screen and (max-width: $large-screen) {
-    .inner {
-      margin: 0 5vw;
-      margin-top: 50px;
-    }
+
 
     .cases {
       grid-template-columns: 1fr 1fr;

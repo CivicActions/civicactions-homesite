@@ -1,7 +1,13 @@
 .home--quote-section {
   color: $colors-grey-90;
-  margin: 100px 0;
-  padding-top: 50px;
+  margin: 0;
+  padding-top: 24px;
+  @media(min-width: 768px) {
+    padding-top: 64px;
+  }
+  @media(min-width: 1024px) {
+    padding-top: 120px;
+  }
 
   .inner {
     max-width: 750px;

@@ -17,10 +17,16 @@
   position: relative;
   .background-wrapper {
     position: absolute;
-    bottom: -80px;
+    bottom: -56px;
     height: 150px;
     width: 100%;
     background: $colors-mint-cool-40v;
+    @media(min-width: 768px) {
+      bottom: -48px;
+    }
+    @media(min-width: 1024px) {
+      bottom: -80px;
+    }
   }
   width: 100%;
   margin-bottom: 100px;
@@ -50,6 +56,19 @@
     align-items: flex-start;
     margin: 0 auto;
     .teasers {
+      .teaser-content {
+        padding: 0 !important;
+        width: 100%;
+        .title-wrapper {
+          padding: 16px !important;
+          @media(min-width: 768px) {
+            padding: 24px !important;
+          }
+          @media(min-width: 1024px) {
+            padding: 40px !important;
+          }
+        }
+      }
       a {
         &:hover,
         &:focus,
@@ -70,7 +89,20 @@
 
   .view-our-work-cta {
     position: relative;
+    h3 {
+      font-size: 16px;
+      @media(min-width: 1024px) {
+        font-size: 36px;
+      }
+    }
+    a:hover,
+    a:focus,
+    a:focus-within {
+      h3 {
+        text-decoration: underline;
+      }
 
+    }
     .bg {
       width: 100%;
       height: 100%;

@@ -1,8 +1,14 @@
 .header {
-  padding: 50px 0 20px;
+  padding: 40px 0 20px;
   top: 0;
   background: $colors-white;
   z-index: 11;
+  @media(min-width: 768px) {
+    padding: 48px 0 20px;
+  }
+  @media(min-width: 768px) {
+    padding: 78px 0 20px;
+  }
 
   &.mobile-menu-open {
     position: static;
