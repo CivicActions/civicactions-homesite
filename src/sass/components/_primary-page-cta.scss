@@ -3,102 +3,182 @@
   background: #2d2e2f;
 
   .inner {
-    max-width: 1200px;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: px-to-rem(48px) 0;
   }
 
-  .column {
-    align-items: flex-start;
-    max-width: 600px;
+  h2 {
+    color: $colors-white;
+  }
+
+  .h3 {
+    margin-top: $small-spacing;
+    display: block;
+    font-size: 16px;
+  }
+
+  &__buttons {
+    margin-top: px-to-rem(32px);
+  }
+
+  .button {
+    display: block;
+    max-width: fit-content;
+    font-size: 18px;
+    font-weight: normal;
+
+    &:last-child {
+      margin-top: $small-spacing;
+    }
+  }
+
+  //======= Tablet styles ======
+  @media screen and (min-width: $tablet-screen){
+    .inner {
+      padding: px-to-rem(80px) 0;
+    }
 
     h2 {
-      margin-bottom: 10px;
-      color: $colors-white;
+      font-size: 28px;
+    }
+
+    .h3 {
+      font-size: 24px;
+    }
+
+    .button {
+      display: inline-block;
+
+      &:last-child {
+        margin-top: 0;
+        margin-left: px-to-rem(32px);
+      }
+    }
+
+    &__buttons {
+      margin-top: px-to-rem(48px);
+    }
+  }
+
+  //========= Desktop styles ==========
+
+  @media screen and (min-width: $medium-large-screen){
+    .inner {
+      padding: px-to-rem(80px) 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h2 {
       font-size: 36px;
     }
 
-    span {
-      color: $colors-white;
+    .h3 {
       font-size: 28px;
-      font-weight: 300;
+    }
 
+    &__buttons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 40%;
+    }
+
+    .button {
+      display: inline-block;
+
+      &:last-child {
+        margin-top: 0;
+        margin-left: px-to-rem(32px);
+      }
     }
   }
 
-  .row {
-    justify-content: space-between;
-  }
+  // .column {
+  //   align-items: flex-start;
+  //   max-width: 600px;
 
-  .button__primary {
-    margin-right: 32px;
-  }
-  .button__secondary {
-    margin-top: 24px;
-    @media(min-width: 768px) {
-      margin-top: 0;
-    }
-  }
-  .secondary-button {
-    margin-left: 40px;
-    padding: 12px 30px;
-  }
+  //   h2 {
+  //     margin-bottom: 10px;
+  //     color: $colors-white;
+  //   }
 
-  @media screen and (max-width: $large-screen) {
-    .inner {
-      flex-wrap: wrap;
-      margin: 0 5vw;
-    }
+  //   span {
+  //     color: $colors-white;
+  //     font-weight: 300;
 
-    .column > h {
-      margin-bottom: 24px;
-    }
+  //   }
+  // }
 
-  }
-  @media screen and (max-width: $medium-large-screen) {
-    .inner {
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
+  // .row {
+  //   justify-content: space-between;
+  // }
 
-    .column {
-      margin-bottom: 50px;
-    }
+  // .button__primary {
+  //   margin-right: 32px;
+  // }
+  // .button__secondary {
+  //   margin-top: 24px;
+  //   @media(min-width: 768px) {
+  //     margin-top: 0;
+  //   }
+  // }
+  // .secondary-button {
+  //   margin-left: 40px;
+  //   padding: 12px 30px;
+  // }
 
-    .column > h3 {
-      margin-bottom: 24px;
-    }
+  // @media screen and (max-width: $large-screen) {
+  //   .inner {
+  //     flex-wrap: wrap;
+  //     margin: 0 5vw;
+  //   }
 
-    .row {
-      flex-wrap: wrap;
-    }
+  //   .column { 
+  //     h2 {
+  //     margin-bottom: 24px;
+  //     font-size: 32px;
+  //   }
+  // }
 
-    .secondary-button {
-      margin-left: 40px;
-    }
-  }
-  @media screen and (max-width: $small-screen) {
-    .row {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+  // }
+  // @media screen and (max-width: $medium-large-screen) {
+  //   .inner {
+  //     padding-top: 50px;
+  //     padding-bottom: 50px;
+  //   }
 
-    .secondary-button {
-      margin-left: 0;
-      margin-top: 24px;
-      padding: 12px 30px;
-    }
-  }
+  //   .column {
+  //     margin-bottom: 50px;
+  //   }
+
+  //   .column > h3 {
+  //     margin-bottom: 24px;
+  //   }
+
+  //   .row {
+  //     flex-wrap: wrap;
+  //   }
+
+  //   .secondary-button {
+  //     margin-left: 40px;
+  //   }
+  // }
+  // @media screen and (max-width: $small-screen) {
+  //   .row {
+  //     flex-direction: column;
+  //     align-items: flex-start;
+  //   }
+
+  //   .secondary-button {
+  //     margin-left: 0;
+  //     margin-top: 24px;
+  //     padding: 12px 30px;
+  //   }
+  // }
+
+  // .button {
+  //   font-size: 18px;
+  //   font-weight: 400;
+  // }
 }
-.offering--content-type {
-  .primary-page-cta {
-    .button:first-child {
 
-    }
-  }
-}
