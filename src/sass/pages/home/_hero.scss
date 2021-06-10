@@ -1,17 +1,38 @@
 .home--hero-section {
   position: relative;
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 0;
 
   h1 {
     max-width: 770px;
-    margin-bottom: 60px;
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 33px;
+    @media(min-width: 768px) {
+      font-size: 28px;
+      line-height: 39px;
+      max-width: 430px;
+
+    }
+    @media(min-width: 1024px) {
+      font-size: 48px;
+      line-height: 67px;
+      margin-bottom: 100px;
+    }
   }
 
   img {
     position: absolute;
     top: 0;
     right: 0;
+    display: none;
+    @media(min-width: 768px) {
+      display: block;
+      top: -34px;
+    }
+    @media(min-width: 1024px) {
+      top: 0;
+    }
   }
 
   .inner {
@@ -36,7 +57,7 @@
   }
 
   @media screen and (max-width: $large-screen) {
-    margin-bottom: 50px;
+
 
     img {
       width: calc(250px + 5vw);
@@ -58,9 +79,5 @@
     }
   }
 
-  @media screen and (max-width: $tablet-screen) {
-    img {
-      display: none;
-    }
-  }
+
 }

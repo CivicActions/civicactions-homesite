@@ -1,7 +1,14 @@
-.team--content-section {
+.home--team-section{
   .inner {
-    h2 {
-      margin-bottom: 14px; // TODO Global?
+    .team-section--title {
+      margin-bottom: 14px;
+      line-height: 22px;
+      @media(min-width: 768px) {
+        line-height: 29px;
+      }
+      @media(min-width: 1024px) {
+        line-height: 50.4px !important;
+      }
     }
     h3 {
       margin-bottom: 18px; // TODO global.

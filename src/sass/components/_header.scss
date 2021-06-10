@@ -80,8 +80,8 @@
 }
 .header.scrolled,
 .header.scrolled-mobile{
-  transition: padding-top 0.25s ease-in;
-  transition: padding-bottom 0.25s ease-in;
+  transition: padding-top 0.15ms ease-in;
+  transition: padding-bottom 0.15ms ease-in;
   padding-top: 15px;
   padding-bottom: 15px;
   box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
@@ -91,11 +91,11 @@
     position: sticky;
   }
   .inner {
-    transition: margin-bottom 0.25s linear;
+    transition: margin-bottom 0.15ms linear;
     margin-bottom: 0;
   }
   .logo img {
-    transition: max-width 0.25s linear;
+    transition: max-width 0.15ms linear;
     max-width: 216px;
   }
 }
