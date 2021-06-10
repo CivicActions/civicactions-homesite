@@ -1,8 +1,14 @@
 .header {
-  padding: 50px 0 20px;
+  padding: 40px 0 20px;
   top: 0;
   background: $colors-white;
   z-index: 11;
+  @media(min-width: 768px) {
+    padding: 48px 0 20px;
+  }
+  @media(min-width: 768px) {
+    padding: 78px 0 20px;
+  }
 
   &.mobile-menu-open {
     position: static;
@@ -80,8 +86,8 @@
 }
 .header.scrolled,
 .header.scrolled-mobile{
-  transition: padding-top 0.25s ease-in;
-  transition: padding-bottom 0.25s ease-in;
+  transition: padding-top 0.15ms ease-in;
+  transition: padding-bottom 0.15ms ease-in;
   padding-top: 15px;
   padding-bottom: 15px;
   box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
@@ -91,11 +97,11 @@
     position: sticky;
   }
   .inner {
-    transition: margin-bottom 0.25s linear;
+    transition: margin-bottom 0.15ms linear;
     margin-bottom: 0;
   }
   .logo img {
-    transition: max-width 0.25s linear;
+    transition: max-width 0.15ms linear;
     max-width: 216px;
   }
 }

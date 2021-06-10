@@ -5,7 +5,7 @@
   width: 20px;
   height: 30px;
   right: 0;
-  top: 5px;
+  top: 0;
 
   @media screen and (min-width: $large-screen) {
     display: none;
@@ -80,6 +80,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
   ul {
     padding: 0;
   }
+  .logo img {
+    max-width: 159px;
+    @media(min-width: 768px) {
+      max-width: 294px;
+    }
+  }
 
   &__item {
     padding: 24px 0;
@@ -132,6 +138,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     width: 100%;
     border: 0;
     background: transparent;
+    padding-left: 0;
 
     &::after {
       background-image: url('../files/icons/ios-arrow-icon.svg');

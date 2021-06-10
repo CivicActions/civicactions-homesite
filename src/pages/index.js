@@ -82,8 +82,7 @@ const HomePage = () => {
               together at your agency for lasting digital transformation.
             </p>
             <div
-              className='service-cards-grid fade-in'
-              ref={(e) => (fadersRef.current[1] = e)}>
+              className='service-cards-grid'>
               <Card
                 title='Web & CMS'
                 icon={webCmsIcon}
@@ -162,6 +161,7 @@ const HomePage = () => {
                 title={'Supporting and expanding adult education'}
                 // teaserLink={''}
               />
+
               <div className='view-our-work-cta '>
                 <a href={'/case-studies/'}>
                   <img src={caseStudyTeaserImg3} alt='' className='bg'></img>
@@ -173,6 +173,8 @@ const HomePage = () => {
                       alt=''></img>
                   </div>
                 </a>
+
+
               </div>
             </div>
           </div>
@@ -254,7 +256,7 @@ const HomePage = () => {
         <div>
           <div className='inner'>
             <div className='column'>
-              <h2>Our people make the difference.</h2>
+              <h2 className='team-section--title'>Our people make the difference.</h2>
               <p className='body-large'>
                 We are leaders in civic tech and design, committed to working in
                 ways that make life better for our clients and each other.
