@@ -5,14 +5,15 @@ import PrimaryPageCTA from '../components/primary-page-cta.js';
 import StaffQuote from '../components/staff-quote.js';
 import henryPooleProfilePicture from '../files/images/henry-poole.png';
 import { Link } from 'gatsby';
-import {Helmet} from "react-helmet";
+import SEO from '../components/seo';
 
 const LicensingPage = () => {
   return (
     <RedLayout>
-      <Helmet>
-        <title data-react-helmet="true">Civicactions Licensing Page</title>
-      </Helmet>
+      <SEO
+        title='Licensing policy'
+        description='Open source is just the beginning. Our open licensing policies allow our company to thrive while helping others to do the same.'
+      />
       <section className='licensing__hero-section'>
         <div className='inner'>
           <h2>Licensing policy</h2>

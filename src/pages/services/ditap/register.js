@@ -10,7 +10,7 @@ const Register = () => {
     <RedLayout>
       <SEO
         title='Digital IT Acquisition Professional (DITAP) certification program'
-        description='We are the only approved Small Business provider of DITAP training. Learn how we help you gain the skills for successful digital service procurements.'
+        description='Register for the Digital IT Acquisition Professional (DITAP) certification program.'
       />
       <Hero
         title='Request DITAP training'

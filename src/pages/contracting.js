@@ -18,7 +18,10 @@ import library from '../files/images/client-logos/library.svg';
 const ContractingPage = () => {
   return (
     <RedLayout className='contracting-page'>
-      <SEO title='Contracting information' />
+      <SEO
+        title='Contracting information'
+        description='We are a Small Business helping government agencies make digital services that build public trust. Learn about contracting with us.'
+      />
       <Hero
         title={'Your strategic partner for modernizing government services'}
         description={

@@ -21,7 +21,7 @@ const Contact = () => {
 
   return (
     <RedLayout>
-      <SEO title='contact' />
+      <SEO title='contact' description='Get in touch.' />
       <Hero
         title='Put us to work'
         description='We love solving hard problems. Tell us about your challenge or idea,
