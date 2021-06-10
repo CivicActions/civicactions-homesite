@@ -1,12 +1,11 @@
 .home--quote-section {
   color: $colors-grey-90;
   margin: 0;
-  padding-top: 24px;
   @media(min-width: 768px) {
-    padding-top: 64px;
+    margin-top: 64px;
   }
   @media(min-width: 1024px) {
-    padding-top: 120px;
+    margin-top: 120px;
   }
 
   .inner {
@@ -16,7 +15,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0 5vw !important;
+    @media(min-width: 1024px) {
+      margin: 0 auto !important;
+    }
   }
 
   img {

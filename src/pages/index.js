@@ -82,7 +82,7 @@ const HomePage = () => {
               together at your agency for lasting digital transformation.
             </p>
             <div
-              className='service-cards-grid fade-in'>
+              className='service-cards-grid'>
               <Card
                 title='Web & CMS'
                 icon={webCmsIcon}

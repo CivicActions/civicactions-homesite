@@ -11,10 +11,15 @@
 }
 
 .home--case-studies-section {
-  //@include top-clip;
-  //background: $colors-mint-cool-40v;
-  //background-repeat: no-repeat;
   position: relative;
+  width: 100%;
+  margin-bottom: 80px !important;
+  @media(min-width: 768px) {
+    margin-bottom: 48px !important;
+  }
+  @media(min-width: 768px) {
+    margin-bottom: 80px !important;
+  }
   .background-wrapper {
     position: absolute;
     bottom: -56px;
@@ -28,8 +33,7 @@
       bottom: -80px;
     }
   }
-  width: 100%;
-  margin-bottom: 100px;
+
 
   h2 {
     max-width: 1000px;
