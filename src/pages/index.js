@@ -81,8 +81,7 @@ const HomePage = () => {
               We can help you improve how people, process, and technology work
               together at your agency for lasting digital transformation.
             </p>
-            <div
-              className='service-cards-grid'>
+            <div className='service-cards-grid'>
               <Card
                 title='Web & CMS'
                 icon={webCmsIcon}
@@ -143,6 +142,7 @@ const HomePage = () => {
                 title={
                   'Improving the online experience for Medicare beneficiaries'
                 }
+                teaserLink='/'
                 // teaserLink={''}
               />
               <CaseStudyTeaser
@@ -159,6 +159,7 @@ const HomePage = () => {
                 }
                 client={'US Department of Education'}
                 title={'Supporting and expanding adult education'}
+                teaserLink='/'
                 // teaserLink={''}
               />
 
@@ -173,8 +174,6 @@ const HomePage = () => {
                       alt=''></img>
                   </div>
                 </a>
-
-
               </div>
             </div>
           </div>
@@ -256,7 +255,9 @@ const HomePage = () => {
         <div>
           <div className='inner'>
             <div className='column'>
-              <h2 className='team-section--title'>Our people make the difference.</h2>
+              <h2 className='team-section--title'>
+                Our people make the difference.
+              </h2>
               <p className='body-large'>
                 We are leaders in civic tech and design, committed to working in
                 ways that make life better for our clients and each other.
