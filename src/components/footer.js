@@ -10,16 +10,14 @@ const Footer = () => {
       <div className='inner grid-container'>
         <div className='grid-container__item footer__branding '>
           <Link to='/'>
-            <img src={extendedLogo} alt='Civic Actions Logo'></img>
+            <img className='footer__branding--logo' src={extendedLogo} alt='Civic Actions Logo'></img>
           </Link>
         </div>
 
         <div className='grid-container__item footer__about-text'>
           <div>
-            <p>We're a mid-size professional services firm providing design,
+            <p>We're a professional services firm providing design,
             technology, consulting, and training services to government.</p>
-
-            <p>We're always hiring!</p>
 
             <Link to='/careers'>Check out our open positions</Link> or <br />
             <Link to='/contracting'>learn about contracting with us.</Link>
@@ -50,7 +48,6 @@ const Footer = () => {
                 <Link className="parent-link" to=''>Our work</Link>
                 <ul>
                   <li><Link to='/case-studies'>Case Studies</Link></li>
-                  <li><Link to=''>Approach</Link></li>
                 </ul>
               </li>
               <li className="top-link"><Link className="parent-link" to='/'>Insights</Link></li>
@@ -74,7 +71,7 @@ const Footer = () => {
         <div className='grid-container__item footer__bottom-links'>
           <p>© 2010 —- 2021</p>
           <p><Link to='/accessibility'>Accessibility</Link></p>
-          <p><Link to='/privacy'>Privacy —- Terms</Link></p>
+          <p><Link to='/privacy'>Privacy</Link></p>
 
         </div>
       </div>

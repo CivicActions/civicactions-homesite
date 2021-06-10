@@ -15,6 +15,11 @@
     display: flex;
     flex-direction: column-reverse;
   }
+
+  .footer__branding--logo {
+    max-width: 218px;
+  }
+
   &__menu {
     // @todo Standardize ul and li styles sitewide
     ul {
@@ -81,6 +86,10 @@
   //=========== Desktop Styles ===========
 
   @media (min-width: $large-screen) {
+    .inner {
+      padding: px-to-rem(120px) 0 px-to-rem(60px);
+    }
+
     .grid-container {
       grid-template-columns: 35% 1.5fr repeat(3, 1fr);
       grid-template-areas :
@@ -88,6 +97,10 @@
         "about menu_wrapper menu_wrapper menu_wrapper menu_wrapper"
         "about contact . social social"
         "about contact links links links"
+    }
+
+    .footer__branding--logo {
+      max-width: 300px;
     }
 
     .footer__menu {
@@ -106,9 +119,15 @@
       li {
         padding: px-to-rem(14px) 0;
       }
+
+      &--wrapper {
+        margin-top: px-to-rem(56px);
+      }
     }
 
     .footer__about-text {
+      margin-top: px-to-rem(40px); // Set to 40px isntead of 56px bc the nested paragraph has a top margin of 1rem=16px.
+
       p {
         margin: px-to-rem(24px) 0;
 
