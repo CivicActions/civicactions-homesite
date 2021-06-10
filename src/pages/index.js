@@ -82,8 +82,7 @@ const HomePage = () => {
               together at your agency for lasting digital transformation.
             </p>
             <div
-              className='service-cards-grid fade-in'
-              ref={(e) => (fadersRef.current[1] = e)}>
+              className='service-cards-grid fade-in'>
               <Card
                 title='Web & CMS'
                 icon={webCmsIcon}
@@ -175,7 +174,7 @@ const HomePage = () => {
                   </div>
                 </a>
 
-              
+
               </div>
             </div>
           </div>
