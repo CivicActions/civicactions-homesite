@@ -6,8 +6,8 @@ import StaffQuote from '../components/staff-quote.js';
 import Hero from '../components/hero.js';
 import { graphql, useStaticQuery } from 'gatsby';
 import alanaCaseyProfilePicture from '../files/images/alanna_casey_profile.jpg';
-import { Helmet } from "react-helmet";
-import LinkButton from "../components/link-button";
+import LinkButton from '../components/link-button';
+import SEO from '../components/seo';
 
 const TeamPage = () => {
   const data = useStaticQuery(graphql`
@@ -19,7 +19,12 @@ const TeamPage = () => {
           Path
           Image {
             childImageSharp {
-              gatsbyImageData(width: 264, height: 264, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+              gatsbyImageData(
+                width: 264
+                height: 264
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
           Category {
@@ -34,7 +39,6 @@ const TeamPage = () => {
   const [filterState, setFilterState] = useState(null);
 
   const callback = (e) => {
-      console.log(e);
     if (e.target.name !== 'undefined') {
       if (filterState === e.target.name) {
         // The button was already selected.
@@ -47,58 +51,55 @@ const TeamPage = () => {
 
   let team;
   if (filterState != null) {
-      team = teamDataNodes.filter((person) => {
-          const checkedCategory = person.Category.map((member) => member.Category);
-          console.log(checkedCategory);
-          if (!checkedCategory.indexOf(filterState)) {
-              return true
-          }
-          if (checkedCategory.includes(filterState)) {
-              return true
-          }
-      });
-
+    team = teamDataNodes.filter((person) => {
+      const checkedCategory = person.Category.map((member) => member.Category);
+      console.log(checkedCategory);
+      if (!checkedCategory.indexOf(filterState)) {
+        return true;
+      }
+      if (checkedCategory.includes(filterState)) {
+        return true;
+      }
+    });
   } else {
     team = teamDataNodes;
   }
   return (
     <RedLayout>
-      <Helmet>
-        <title data-react-helmet="true">Civicactions Team Member Page</title>
-      </Helmet>
-
-        <section className='careers--hero-section hero-component'>
-          <div className='inner'>
-            <h1>Work for the public good.</h1>
-            <p className='body'>
-              Join our team of talented and open-minded people working to build
-              modern and accessible government services for all.
-            </p>
-            <LinkButton
-                src='/careers#open-positions'
-                text='See open positions'
-                />
-          </div>
-        </section>
-
-      <section className="team--filter-btns-section">
-        <div className="inner">
-          <FilterButtons parentCallback={callback} team={teamDataNodes} filterState={filterState} />
+      <SEO title='Team' />
+      <section className='careers--hero-section hero-component'>
+        <div className='inner'>
+          <h1>Work for the public good.</h1>
+          <p className='body'>
+            Join our team of talented and open-minded people working to build
+            modern and accessible government services for all.
+          </p>
+          <LinkButton src='/careers#open-positions' text='See open positions' />
         </div>
       </section>
 
-      <section className="team--staff-teasers-grid-section">
-        <div className="inner">
-          <div className="section__teaser-grid">
+      <section className='team--filter-btns-section'>
+        <div className='inner'>
+          <FilterButtons
+            parentCallback={callback}
+            team={teamDataNodes}
+            filterState={filterState}
+          />
+        </div>
+      </section>
+
+      <section className='team--staff-teasers-grid-section'>
+        <div className='inner'>
+          <div className='section__teaser-grid'>
             <TeamTeasers team={team} />
           </div>
         </div>
       </section>
 
       <StaffQuote
-        quote="My teammates are brilliant innovators, high performers, and conscientious human beings. Together we’re working to improve lives."
-        name="Alanna Casey"
-        role="Technical Writer"
+        quote='My teammates are brilliant innovators, high performers, and conscientious human beings. Together we’re working to improve lives.'
+        name='Alanna Casey'
+        role='Technical Writer'
         img={alanaCaseyProfilePicture}
       />
     </RedLayout>
@@ -113,16 +114,15 @@ const TeamTeasers = ({ team }) => {
 };
 
 const FilterButtons = ({ team, parentCallback, filterState }) => {
-
   // const roles = [...new Set(team.map((item) => item.Category.map((category) => category.Category)))];
 
   const category = [
-      {id: 1, value: 'Leadership', name: 'Leadership'},
-      {id: 2, value: 'Growth Strategy', name: 'Growth_Strategy'},
-      {id: 3, value: 'People Operations', name: 'People_Operations'},
-      {id: 4, value: 'Product Design', name: 'Product_Design'},
-      {id: 5, value: 'Engineering', name: 'Engineering'},
-      {id: 6, value: 'Client Services', name: 'Client_Services'},
+    { id: 1, value: 'Leadership', name: 'Leadership' },
+    { id: 2, value: 'Growth Strategy', name: 'Growth_Strategy' },
+    { id: 3, value: 'People Operations', name: 'People_Operations' },
+    { id: 4, value: 'Product Design', name: 'Product_Design' },
+    { id: 5, value: 'Engineering', name: 'Engineering' },
+    { id: 6, value: 'Client Services', name: 'Client_Services' },
   ];
   return category.map((role, index) => {
     const selected = role.name === filterState ? true : false;
@@ -133,8 +133,7 @@ const FilterButtons = ({ team, parentCallback, filterState }) => {
         onClick={(e) => {
           parentCallback(e);
         }}
-        name={role.name}
-      >
+        name={role.name}>
         {role.value}
       </button>
     );
