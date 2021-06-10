@@ -12,7 +12,6 @@ import webCmsIcon from '../files/icons/web-cms-icon.svg';
 import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 import SEO from '../components/seo';
 
-
 const CaseStudyPage = () => {
   const data = useStaticQuery(graphql`
     {
@@ -111,7 +110,10 @@ const CaseStudyPage = () => {
 
   return (
     <RedLayout>
-      <SEO title='Case Studies' />
+      <SEO
+        title='Case Studies'
+        description="From large-scale federal CMS modernization to automating security compliance, see how we've helped government deliver better services to the public."
+      />
       <Hero
         title='Work that makes a difference'
         description='Our work impacts the daily lives of millions of people. See how we’ve helped agencies build resilient services at scale.'

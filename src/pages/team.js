@@ -66,7 +66,7 @@ const TeamPage = () => {
   }
   return (
     <RedLayout>
-      <SEO title='Team' />
+      <SEO title='Team' description='Meet the humans of CivicActions.' />
       <section className='careers--hero-section hero-component'>
         <div className='inner'>
           <h1>Work for the public good.</h1>
