@@ -3,7 +3,7 @@
   background: #2d2e2f;
 
   .inner {
-    padding: px-to-rem(48px) 0;
+    @include section-inner-padding;
   }
 
   h2 {
@@ -33,9 +33,6 @@
 
   //======= Tablet styles ======
   @media screen and (min-width: $tablet-screen){
-    .inner {
-      padding: px-to-rem(80px) 0;
-    }
 
     h2 {
       font-size: 28px;
@@ -61,11 +58,11 @@
 
   //========= Desktop styles ==========
 
-  @media screen and (min-width: $medium-large-screen){
+  @media screen and (min-width: $medium-large-screen) {
     .inner {
-      padding: px-to-rem(80px) 0;
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
 
     h2 {
@@ -92,5 +89,7 @@
       }
     }
   }
+
+
 }
 

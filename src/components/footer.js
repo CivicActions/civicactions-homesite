@@ -17,15 +17,15 @@ const Footer = () => {
         <div className='grid-container__item footer__about-text'>
           <div>
             <p>We're a professional services firm providing design,
-            technology, consulting, and training services to government.</p>
+              technology, consulting, and training services to government.</p>
 
             <Link to='/careers'>Check out our open positions</Link> or <br />
             <Link to='/contracting'>learn about contracting with us.</Link>
 
             <p>Our team is fully distributed, but our mailing address is:<br />
               {/* @todo pull this in from the site metaData */}
-            3527 Mt. Diablo Blvd., Unit 269<br />
-            Lafayette, CA 94549
+              3527 Mt. Diablo Blvd., Unit 269<br />
+              Lafayette, CA 94549
             </p>
           </div>
         </div>
@@ -38,7 +38,7 @@ const Footer = () => {
               <li className="child-menu--wrapper top-link">
                 <Link className="parent-link" to=''>Company</Link>
                 <ul>
-                  <li><Link to=''>About</Link></li>
+                  <li><Link to='/'>About</Link></li>
                   <li><Link to='/team'>Team</Link></li>
                   <li><Link to='/press'>Press</Link></li>
                 </ul>

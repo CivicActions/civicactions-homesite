@@ -7,9 +7,10 @@
 
   // @todo Site-wide inner containers should be consistently sized.
   .inner {
-    margin: 0 5vw;
-    padding: px-to-rem(48px) 0;
+    @include section-inner-padding;
+    margin-top: 0 !important; // override the section top margins in the footer.
   }
+
   .footer__bottom-links {
     padding-top: 16px;
     display: flex;
