@@ -3,7 +3,7 @@
 
   .inner {
     position: relative;
-    max-width: 1200px;
+    max-width: $max-width;
     display: flex;
     margin: 0 auto;
     flex-direction: column;

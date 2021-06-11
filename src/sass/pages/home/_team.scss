@@ -7,7 +7,7 @@
       @media(min-width: 768px) {
         line-height: 29px;
       }
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         line-height: 50.4px !important;
       }
     }
@@ -37,7 +37,7 @@
 
 .team--filter-btns-section {
   .inner {
-    max-width: 1200px;
+    max-width: $max-width;
     position: relative;
     margin: 0 5vw;
     @media screen and (min-width: $large-screen) {
@@ -63,7 +63,7 @@
 
 .team--staff-teasers-grid-section {
   .inner {
-    max-width: 1200px;
+    max-width: $max-width;
     margin: 20px 0 20px 5vw;
     @media screen and (min-width: $large-screen) {
       margin: 48px auto 60px auto;
@@ -74,7 +74,7 @@
 .home--team-section {
   width: 100vw;
   margin-bottom: 98px;
-  @media(min-width: 1024px) {
+  @media(min-width: $medium-large-screen) {
     margin-bottom: 120px;
   }
 
@@ -83,7 +83,7 @@
   }
 
   .inner {
-    max-width: 1200px;
+    max-width: $max-width;
     position: relative;
     display: flex;
     flex-direction: row;

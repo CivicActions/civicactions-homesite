@@ -12,7 +12,7 @@
   }
 
   .inner {
-    max-width: 1200px;
+    max-width: $max-width;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@
     @media(min-width: 768px) {
       margin: -250px 48px 0;
     }
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       margin: -250px auto 0;
     }
   }

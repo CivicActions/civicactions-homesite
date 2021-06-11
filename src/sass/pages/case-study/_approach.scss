@@ -12,7 +12,7 @@
   .first-approach {
     max-width: 720px;
 
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       margin: 60px auto;
     }
     h2 {
@@ -30,18 +30,18 @@
     @media(min-width: 768px) {
       margin: 20px 0 0;
     }
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       display: flex;
       margin: 60px 0 0;
     }
     img {
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         width: 640px;
         height: 341px;
       }
     }
     .title-text--wrapper {
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         margin-right: 45px;
       }
     }

@@ -39,7 +39,7 @@ h1,
     font-size: 36px;
     line-height: 50.4px;
   }
-  @media(min-width: 1024px) {
+  @media(min-width: $medium-large-screen) {
     font-size: 48px;
     line-height: 78px;
   }

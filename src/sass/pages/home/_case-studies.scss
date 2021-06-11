@@ -14,23 +14,32 @@
   position: relative;
   width: 100%;
   margin-bottom: 80px !important;
+
   @media(min-width: 768px) {
     margin-bottom: 48px !important;
   }
+
   @media(min-width: 768px) {
     margin-bottom: 80px !important;
   }
+
   .background-wrapper {
     position: absolute;
     bottom: -56px;
     height: 150px;
     width: 100%;
     background: $colors-mint-cool-40v;
+
     @media(min-width: 768px) {
       bottom: -48px;
     }
-    @media(min-width: 1024px) {
+
+    @media(min-width: $medium-large-screen) {
       bottom: -80px;
+    }
+
+    @media(min-width: 1400px) {
+      height: 200px;
     }
   }
 
@@ -53,7 +62,7 @@
   }
 
   .inner {
-    max-width: 1200px;
+    max-width: $max-width;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -68,7 +77,7 @@
           @media(min-width: 768px) {
             padding: 24px !important;
           }
-          @media(min-width: 1024px) {
+          @media(min-width: $medium-large-screen) {
             padding: 40px !important;
           }
         }
@@ -95,7 +104,7 @@
     position: relative;
     h3 {
       font-size: 16px;
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         font-size: 36px;
       }
     }
@@ -195,7 +204,7 @@
     @media(min-width: 768px) {
       padding: 24px;
     }
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       padding: 40px;
     }
   }

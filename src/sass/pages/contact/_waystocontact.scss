@@ -8,7 +8,7 @@
       padding: 24px 0 29px;
     }
     .contact-grid {
-      @media(min-width: 1024px){
+      @media(min-width: $medium-large-screen){
         display: flex;
       }
 
@@ -18,7 +18,7 @@
       padding: 23px;
       margin-bottom: 40px;
 
-      @media(min-width: 1024px){
+      @media(min-width: $medium-large-screen){
         width: 290px;
         margin-right: 45px;
         margin-left: 0;
@@ -38,7 +38,7 @@
     }
     div.grid:last-child {
       margin-bottom: 0;
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         margin-right: 0;
       }
 

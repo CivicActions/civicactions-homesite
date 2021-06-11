@@ -4,37 +4,45 @@
   width: 100%;
   background-color: $colors-grey-warm-4;
   padding-bottom: 0 !important;
+
   @media(min-width: 768px) {
     background-color: transparent;
     position: relative;
   }
+
   .background-color--wrapper {
     display: none;
     background-color: $colors-grey-warm-4;
+
     @media(min-width: 768px) {
       display: block;
       height: 100%;
       width: 75%;
       position: absolute;
     }
-    @media(min-width: 1024px) {
+
+    @media(min-width: $medium-large-screen) {
       width: 80%;
       height: 65%;
     }
   }
+
   .inner {
-    max-width: 1200px;
+    max-width: $max-width;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     margin: 48px 24px 0;
+
     @media(min-width: 768px) {
-      margin-top: 64px 48px 0;
+      margin: 64px 48px 0;
     }
-    @media(min-width: 1024px) {
+
+    @media(min-width: $medium-large-screen) {
       margin: 120px auto 0;
+      padding: 0 48px;
     }
 
     .button {
@@ -48,7 +56,7 @@
     @media(min-width: 768px) {
       margin-top: 56px;
     }
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       margin-top: 80px;
     }
   }
@@ -135,27 +143,27 @@
       flex-direction: row;
       align-items: center;
       padding: 32px;
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         padding: 40px;
         display: flex;
       }
       a {
         width: 100%;
         text-decoration: none;
-        @media(min-width: 1024px) {
+        @media(min-width: $medium-large-screen) {
           display: flex;
         }
         h3 {
           float: left;
           width: 87%;
-          @media(min-width: 1024px) {
+          @media(min-width: $medium-large-screen) {
             width: auto;
             float: unset;
           }
         }
         img {
           float: right;
-          @media(min-width: 1024px) {
+          @media(min-width: $medium-large-screen) {
             float: unset;
           }
         }

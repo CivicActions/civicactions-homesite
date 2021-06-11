@@ -23,3 +23,19 @@
   border: 0 solid transparent;
   border-width: 0 0 6.5em;
 }
+
+// Sizing & layouts
+@mixin section-inner-padding {
+  padding: px-to-rem(48px) 0;
+  max-width: $max-width;
+  margin: 48px 24px 0;
+
+  @media(min-width: 768px) {
+    margin: 64px 48px 0;
+  }
+
+  @media(min-width: $medium-large-screen) {
+    margin: 120px auto 0;
+    padding: px-to-rem(80px) 48px;
+  }
+}

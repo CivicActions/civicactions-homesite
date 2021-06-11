@@ -13,11 +13,11 @@
   }
   .inner {
     margin: 0 40px;
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       margin: 0;
     }
     @media(min-width: 1200px) {
-      max-width: 1200px;
+      max-width: $max-width;
       margin: 0 auto;
     }
     .wrapper {
@@ -38,7 +38,7 @@
       margin-left: 16px;
     }
     .value-props--left {
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         padding-right: 50px;
       }
       @media(min-width: 1200px) {
@@ -48,7 +48,7 @@
     }
     .value-props--right {
       display: none;
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         display: block;
       }
       caption {

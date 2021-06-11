@@ -8,10 +8,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 32px;
-    max-width: 1200px;
+    max-width: $max-width;
     margin: 40px auto 0;
   }
-  @media(min-width: 1024px) {
+  @media(min-width: $medium-large-screen) {
     margin: 80px auto 0;
   }
   .wrapper--case-study--teaser {
@@ -60,7 +60,7 @@
       @media(min-width: 768px) {
         padding: 24px;
       }
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         padding: 40px;
       }
       h2,
@@ -70,7 +70,7 @@
       }
       .client-name {
         font-size: 14px;
-        @media(min-width: 1024px) {
+        @media(min-width: $medium-large-screen) {
           font-size: 18px;
         }
 
@@ -84,7 +84,7 @@
         @media(min-width: 768px) {
           margin-top: 0;
         }
-        @media(min-width: 1024px) {
+        @media(min-width: $medium-large-screen) {
           font-size: 28px;
           line-height: 39px;
           margin-top: 16px;

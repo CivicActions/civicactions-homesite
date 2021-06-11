@@ -4,15 +4,15 @@
   padding: 50px 0 0;
   top: 0;
   z-index: 11;
-  @media(min-width: 1024px) {
+  @media(min-width: $medium-large-screen) {
     padding: 50px 0 20px;
   }
 
 
   .red-header--header {
-    max-width: 1200px;
+    max-width: $max-width;
     padding: 0 20px 1px;
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       margin: 0 auto;
     }
   }
@@ -24,7 +24,7 @@
     align-items: center;
     position: relative;
 
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       padding-bottom: 0;
     }
   }
@@ -44,7 +44,7 @@
 }
 .red-rectangle {
   display: none;
-  @media(min-width: 1024px) {
+  @media(min-width: $medium-large-screen) {
     display: block;
   }
 

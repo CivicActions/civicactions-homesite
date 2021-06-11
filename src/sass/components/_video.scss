@@ -1,17 +1,17 @@
 .video {
   .inner {
     position: relative;
-    max-width: 1200px;
+    max-width: $max-width;
     margin: 0 auto;
     padding: 0 1rem;
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       padding: 40px 0 100px;
     }
   }
   .video-container {
     iframe {
 
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         height: 675px;
       }
       .vp-center {

@@ -1,6 +1,6 @@
 .staff-quote.quote {
   padding: 228px 0 72px;
-  @media(min-width: 1024px) {
+  @media(min-width: $medium-large-screen) {
     padding: 140px 0 72px;
   }
 
@@ -14,7 +14,7 @@
   }
   .quote {
     margin-left: 50px;
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       margin-left: 20px;
     }
   }
@@ -25,7 +25,7 @@
 .section--case-study--stats {
   .stats--wrapper {
     margin-bottom: -241px;
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       margin-bottom: -100px;
     }
   }

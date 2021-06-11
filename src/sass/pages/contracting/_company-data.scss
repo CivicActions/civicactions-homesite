@@ -3,7 +3,7 @@
   padding: 48px 20px;
 
   .inner {
-    max-width: 1200px;
+    max-width: $max-width;
     margin: 0 auto;
 
     @media(min-width: $medium-large-screen) {
@@ -17,7 +17,7 @@
 
     h2 {
       padding-bottom: 16px;
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         font-size: 36px;
       }
     }
