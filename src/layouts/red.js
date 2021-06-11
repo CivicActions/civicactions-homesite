@@ -20,11 +20,11 @@ const RedLayout = ({ children }) => {
         }}
       />
       <div>
-        <SkipNavLink id="main-content" />
-        <div className="red-rectangle" ></div>
+        <SkipNavLink />
+        <div className='red-rectangle'></div>
         {/*<img className="red-rectangle" src={redRectangle} alt="background red color"></img>*/}
         <Header />
-        <main id="main-content">
+        <main id='main-content'>
           <div>{children}</div>
         </main>
         <Footer />

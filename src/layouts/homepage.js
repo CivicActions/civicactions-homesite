@@ -13,7 +13,7 @@ const HomepageLayout = ({ children }) => {
   return (
     <div style={{ position: 'relative' }}>
       <div>
-        <SkipNavLink id='main-content' />
+        <SkipNavLink />
         <Banner
           boldText='We’re hiring! '
           regularText='View open positions here'
