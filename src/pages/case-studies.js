@@ -11,6 +11,7 @@ import securityComplianceIcon from '../files/icons/security-compliance-icon.svg'
 import webCmsIcon from '../files/icons/web-cms-icon.svg';
 import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 import SEO from '../components/seo';
+import { Link } from 'gatsby';
 
 const CaseStudyPage = () => {
   const data = useStaticQuery(graphql`
@@ -107,7 +108,7 @@ const CaseStudyPage = () => {
       });
     }
   }
-
+  console.log(cases);
   return (
     <RedLayout>
       <SEO
@@ -260,9 +261,10 @@ const CaseStudyPage = () => {
 
 const CaseStudyTeasers = ({ cases }) => {
   return cases.map((item, index) => {
-    const { Title, Client_Name, Sort_Order, Summary, id, Cover_Image } = item;
+    const { Title, Client_Name, Sort_Order, Summary, id, Cover_Image, Path } = item;
     return (
-      <div key={id} className={`wrapper--case-study--teaser ${Sort_Order}`}>
+      <Link to={Path}>
+        <div key={id} className={`wrapper--case-study--teaser ${Sort_Order} ${!Cover_Image && 'no-img-teaser'}`}>
         {Cover_Image.url && (
           <img src={Cover_Image[0].url} alt={Cover_Image[0].alternativeText} />
         )}
@@ -275,7 +277,7 @@ const CaseStudyTeasers = ({ cases }) => {
         <p aria-label='summary' className='summary body'>
           {Summary}
         </p>
-      </div>
+      </div></Link>
     );
   });
 };

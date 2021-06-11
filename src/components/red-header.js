@@ -1,7 +1,8 @@
 import '../sass/styles.scss';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
-import extendedLogo from '../files/icons/CA-white.svg';
+import whiteLogo from '../files/icons/CA-white.svg';
+import redLogo from '../files/icons/ca-extended-logo.svg';
 import menuIcon from '../files/icons/menu-icon.svg';
 import closeIcon from '../files/icons/close-icon.svg';
 import PropTypes from 'prop-types';
@@ -24,7 +25,8 @@ const RedHeader = () => {
 
             <div className='red-header--header'><div className='inner'>
                 <Link to='/' className='logo'>
-                    <img src={extendedLogo} alt='Civic Actions Logo'></img>
+                    <img className='white-logo' src={whiteLogo} alt='Civic Actions Logo'></img>
+                    <img className='red-logo' src={redLogo} alt='Civic Actions Logo'></img>
                 </Link>
                 <MainMenu redHeader={true} />
                 <MobileMenu

@@ -45,8 +45,9 @@
     }
 
     .button {
-      p {
-        margin-top: 24px;
+      margin-top: 24px;
+      padding: 12px 0;
+      a {
         font-size: 18px;
         text-align: center;
         padding: 12px 24px;
@@ -54,9 +55,9 @@
         border: 1px solid #d83933;
         color: $colors-white;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 600 !important;
         text-transform: uppercase;
-        text-decoration: none;
+        text-decoration: none !important;
         line-height: 33px;
       }
       @media(min-width: 768px) {
