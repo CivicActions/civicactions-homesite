@@ -1,6 +1,6 @@
 import '../sass/styles.scss';
 import React from 'react';
-import RedLayout from '../layouts/red';
+import GeneralLayout from '../layouts/general';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
 import StaffQuote from '../components/staff-quote.js';
 import henryPooleProfilePicture from '../files/images/henry-poole.png';
@@ -9,7 +9,7 @@ import SEO from '../components/seo';
 
 const LicensingPage = () => {
   return (
-    <RedLayout>
+    <GeneralLayout>
       <SEO
         title='Licensing policy'
         description='Open source is just the beginning. Our open licensing policies allow our company to thrive while helping others to do the same.'
@@ -103,7 +103,7 @@ const LicensingPage = () => {
         primaryButtonText='PUT US TO WORK'
         secondaryButtonText='JOIN OUR TEAM'
       />
-    </RedLayout>
+    </GeneralLayout>
   );
 };
 
