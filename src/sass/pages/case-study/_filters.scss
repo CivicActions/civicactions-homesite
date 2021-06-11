@@ -6,6 +6,11 @@
     margin: 0 auto;
     padding: 40px 0 64px;
   }
+  .inner {
+    @media(min-width: 1024px) {
+      margin: 0;
+    }
+  }
   h2 {
     font-size: 18px;
     font-weight: 700;
