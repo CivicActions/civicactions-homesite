@@ -12,13 +12,13 @@ const PrimaryPageCTA = ({
   return (
     <section className='primary-page-cta'>
       <div className='inner'>
-        <div className='column'>
+        <div className='cta-column primary-page-cta__text'>
 
           <h2>{title}</h2>
           <span className={'h3'}>{subtitle}</span>
 
         </div>
-        <div className='row'>
+        <div className='cta-column primary-page-cta__buttons'>
           <LinkButton src='/contact' type='primary' text={primaryButtonText} />
           <LinkButton
             src={secondaryButtonLink}
