@@ -264,10 +264,11 @@ const CaseStudyTeasers = ({ cases }) => {
     const { Title, Client_Name, Sort_Order, Summary, id, Cover_Image, Path } = item;
     return (
       <Link to={Path}>
-        <div key={id} className={`wrapper--case-study--teaser ${Sort_Order} ${!Cover_Image && 'no-img-teaser'}`}>
-        {Cover_Image.url && (
-          <img src={Cover_Image[0].url} alt={Cover_Image[0].alternativeText} />
-        )}
+        <div key={id} className={`wrapper--case-study--teaser ${Sort_Order} `}>
+        {Cover_Image.url ?
+          <img src={Cover_Image[0].url} alt={Cover_Image[0].alternativeText} /> : <div className='no-img-teaser'></div>
+        }
+
         <div className='teaser-content'>
           <div className='title-wrapper'>
             <span aria-label='client name'>{Client_Name}</span>
