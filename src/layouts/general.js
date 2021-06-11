@@ -18,9 +18,9 @@ const GeneralLayout = ({ children }) => {
         }}
       />
       <div>
-        <SkipNavLink id="main-content" />
+        <SkipNavLink />
         <Header />
-        <main id="main-content">
+        <main id='main-content'>
           <div>{children}</div>
         </main>
         <Footer />

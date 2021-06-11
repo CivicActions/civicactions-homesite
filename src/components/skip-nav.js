@@ -2,8 +2,13 @@ import React from 'react';
 
 export const SkipNavLink = ({ id, children = 'Skip to content', ...props }) => {
   return (
-    <a {...props} href={`#${id}`} className="skip-nav-link">
-      {children}
-    </a>
+    <div>
+      <a {...props} href='#main-content' className='skip-nav-link'>
+        Skip to content
+      </a>
+      <a {...props} href='#footer' className='skip-nav-link'>
+        Skip to footer
+      </a>
+    </div>
   );
 };
