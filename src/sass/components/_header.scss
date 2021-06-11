@@ -1,13 +1,16 @@
 .header {
-  padding: 40px 0 20px;
+  padding: 40px 24px 20px;
   top: 0;
   background: $colors-white;
   z-index: 11;
   @media(min-width: 768px) {
-    padding: 48px 0 20px;
+    padding: 48px 48px 55px;
   }
-  @media(min-width: 768px) {
-    padding: 78px 0 20px;
+  @media(min-width: 1024px) {
+    padding: 45px 5vw 20px;
+  }
+  @media(min-width: 1200px) {
+    padding: 45px 0 20px;
   }
 
   &.mobile-menu-open {
@@ -50,7 +53,7 @@
   }
 
   @media screen and (max-width: $large-screen) {
-    padding: 50px 5vw 0;
+
 
     .header-nav {
       display: none;
@@ -86,22 +89,25 @@
 }
 .header.scrolled,
 .header.scrolled-mobile{
-  transition: padding-top 0.15ms ease-in;
-  transition: padding-bottom 0.15ms ease-in;
+  //transition: padding-top 0.15ms ease-out;
+  //transition: padding-bottom 0.15ms linear;
   padding-top: 15px;
   padding-bottom: 15px;
   box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
   animation-name: scroll;
-  animation-duration: 4s;
+  //animation-duration: 1s;
   @media(min-width: 768px) {
     position: sticky;
   }
   .inner {
-    transition: margin-bottom 0.15ms linear;
+
     margin-bottom: 0;
   }
   .logo img {
-    transition: max-width 0.15ms linear;
+
     max-width: 216px;
   }
+}
+html {
+  scroll-padding-top: 110px;
 }

@@ -34,43 +34,43 @@ const ServicesPage = ({ data }) => {
         <div className={scroll ? 'inner scroll' : 'inner'}>
           <Scrollspy
             className={'services--sidebar'}
-            items={['menu1', 'menu2', 'menu3', 'menu4', 'menu5', 'menu6']}
+            items={['web-cms', 'it-service', 'product-design', 'security', 'data-services', 'development']}
             currentClassName='is-current'>
             <li>
-              <Link className={`body`} to='#menu1'>
+              <Link className={`body`} to='#web-cms'>
                 Web & CMS
               </Link>
             </li>
             <li>
-              <Link className={`body`} to='#menu2'>
+              <Link className={`body`} to='#it-service'>
                 IT & Service Modernization
               </Link>
             </li>
             <li>
-              <Link className={`body`} to='#menu3'>
+              <Link className={`body`} to='#product-design'>
                 Product & Design
               </Link>
             </li>
             <li>
-              <Link className={`body`} to='#menu4'>
+              <Link className={`body`} to='#security'>
                 Security & Compliance
               </Link>
             </li>
 
             <li>
-              <Link className={`body`} to='#menu5'>
+              <Link className={`body`} to='#data-services'>
                 Data Services
               </Link>
             </li>
             <li>
-              <Link className={`body`} to='#menu6'>
+              <Link className={`body`} to='#development'>
                 Workforce Development
               </Link>
             </li>
           </Scrollspy>
 
           <div>
-            <section id={'menu1'}>
+            <section id={'web-cms'}>
               <img alt='' className='services-content--icon' src={webCmsIcon} />
               <div className='h6 services-content--label'>WEB & CMS</div>
               <h2 className='title'>
@@ -117,10 +117,10 @@ const ServicesPage = ({ data }) => {
                   <li>Product management</li>
                   <li>Agile delivery management</li>
                 </ul>
-                <div className='h6 button'><p>IMPROVE YOUR WEBSITE</p></div>
+                <div className='h6 button'><Link to='/contact'>IMPROVE YOUR WEBSITE</Link></div>
               </div>
             </section>
-            <section id={'menu2'}>
+            <section id={'it-service'}>
               <img alt='' className='services-content--icon' src={itModernizationIcon} />
               <div className='h6 services-content--label'>
                 IT & service modernization
@@ -164,10 +164,10 @@ const ServicesPage = ({ data }) => {
                   <li>API design and cloud native development</li>
                   <li>Technology strategy consulting</li>
                 </ul>
-                <div className='h6 button'><p>WORK SMARTER</p></div>
+                <div className='h6 button'><Link to='/contact'>WORK SMARTER</Link></div>
               </div>
             </section>
-            <section id={'menu3'}>
+            <section id={'product-design'}>
               <img
                 alt=''
                 className='services-content--icon'
@@ -209,10 +209,10 @@ const ServicesPage = ({ data }) => {
                   <li>Agile and Human Centered Design training</li>
                   <li>Change management consulting</li>
                 </ul>
-                <div className='h6 button'><p>Design a better future</p></div>
+                <div className='h6 button'><Link to='/contact'>Design a better future</Link></div>
               </div>
             </section>
-            <section id={'menu4'}>
+            <section id={'security'}>
               <img
                 alt=''
                 className='services-content--icon'
@@ -259,10 +259,10 @@ const ServicesPage = ({ data }) => {
                   <li>Security consulting and training</li>
                   <li>Free and open source software (FOSS) security</li>
                 </ul>
-                <div className='h6 button'><p>Re-think security</p></div>
+                <div className='h6 button'><Link to='/contact'>Re-think security</Link></div>
               </div>
             </section>
-            <section id={'menu5'}>
+            <section id={'data-services'}>
               <img
                 alt=''
                 className='services-content--icon'
@@ -304,10 +304,10 @@ const ServicesPage = ({ data }) => {
                   <li>Helpdesk support for your data platform</li>
                   <li>Data science and analysis</li>
                 </ul>
-                <div className='h6 button'><p>BE DATA-DRIVEN</p></div>
+                <div className='h6 button'><Link to='/contact'>BE DATA-DRIVEN</Link></div>
               </div>
             </section>
-            <section id={'menu6'}>
+            <section id={'development'}>
               <img
                 alt=''
                 className='services-content--icon'
@@ -353,7 +353,7 @@ const ServicesPage = ({ data }) => {
                   <li>Free and open source software (FOSS) education</li>
                   <li>Change management consulting</li>
                 </ul>
-                <div className='h6 button'><p>UPSKILL YOUR TEAM</p></div>
+                <div className='h6 button'><Link to='/contact'>UPSKILL YOUR TEAM</Link></div>
               </div>
             </section>
           </div>
