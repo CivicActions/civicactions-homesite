@@ -24,10 +24,10 @@ const CaseStudyTemplate = ({ data }) => {
           description={caseStudy.Summary}
         />
 
-        {caseStudy.Hero_Image[0] &&
+        {caseStudy.Hero_Image &&
           <div className='case-study--hero-image'>
-            <img src={caseStudy.Hero_Image[0].url} alt={caseStudy.Hero_Image[0].alternativeText}></img>
-            {caseStudy.Hero_Image[0].caption && <span className='caption'>{caseStudy.Hero_Image[0].caption}</span>}
+            <img src={caseStudy.Hero_Image.url} alt={caseStudy.Hero_Image.alternativeText}></img>
+            {caseStudy.Hero_Image.caption && <span className='caption'>{caseStudy.Hero_Image.caption}</span>}
           </div>
         }
 
@@ -105,12 +105,12 @@ const CaseStudyTemplate = ({ data }) => {
                   {approachItem.Image && <div className='image--wrapper'>
                     <div>
                       {approachItem.Image.url &&
-                        <img src={approachItem.Image[0].url}
-                          alt={approachItem.Image[0].alternativeText}>
+                        <img src={approachItem.Image.url}
+                          alt={approachItem.Image.alternativeText}>
                         </img>
                       }
                       {approachItem.Image.caption &&
-                        <span className='caption'>{approachItem.Image[0].caption}</span>
+                        <span className='caption'>{approachItem.Image.caption}</span>
                       }
                     </div>
 

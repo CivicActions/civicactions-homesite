@@ -108,7 +108,7 @@ const CaseStudyPage = () => {
       });
     }
   }
-
+  console.log(cases);
   return (
     <RedLayout>
       <SEO
@@ -269,7 +269,7 @@ const CaseStudyTeasers = ({ cases }) => {
       <Link to={Path}>
         <div key={id} className={`wrapper--case-study--teaser ${Sort_Order} `}>
         {Cover_Image.url ?
-          <img src={Cover_Image[0].url} alt={Cover_Image[0].alternativeText} /> : <div className='no-img-teaser'></div>
+          <img src={Cover_Image.url} alt={Cover_Image.alternativeText} /> : <div className='no-img-teaser'></div>
         }
 
         <div className='teaser-content'>

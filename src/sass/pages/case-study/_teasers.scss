@@ -31,13 +31,7 @@
 
     }
   }
-  .wrapper--case-study--teaser {
-    position: relative;
-    margin-bottom: 40px;
-    img {
-      height: 100%;
-      width: 100%;
-    }
+  a {
     &:hover,
     &:focus,
     &:focus-within {
@@ -58,9 +52,36 @@
         position: absolute;
         background: #1B1B1B;
         opacity: 0.75;
-        padding: 40px 40px 0;
+        padding: 16px;
         color: $colors-white;
         height: 100%;
+        @media(min-width: 768px) {
+          font-size: 16px;
+          line-height: 24px;
+          padding: 24px;
+        }
+        @media(min-width: 1024px) {
+          padding: 40px;
+          font-size: 20px;
+          line-height: 33px;
+        }
+      }
+    }
+    .wrapper--case-study--teaser {
+      height: 252px;
+      position: relative;
+      margin-bottom: 40px;
+      overflow: hidden;
+      @media(min-width: 768px) {
+        height: 280px;
+      }
+      @media(min-width: 1024px) {
+        height: 395px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
       }
     }
 
