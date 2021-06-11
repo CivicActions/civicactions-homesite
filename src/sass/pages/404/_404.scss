@@ -3,7 +3,7 @@
   text-align: center;
   padding-top: 50px;
   padding-bottom: 60px;
-  @media(min-width: 1024px) {
+  @media(min-width: $medium-large-screen) {
     padding-top: 30px;
     padding-bottom: 100px;
   }
@@ -30,7 +30,7 @@
     @media(min-width: 768px) {
       max-width: 576px;
     }
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       max-width: 759px;
     }
   }

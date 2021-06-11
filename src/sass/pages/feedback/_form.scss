@@ -1,6 +1,6 @@
 .section--feedback--form {
   .inner {
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       margin: 0 auto;
       max-width: 915px;
     }

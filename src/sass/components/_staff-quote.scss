@@ -3,7 +3,7 @@
   color: $colors-grey-90;
   background-color: $colors-white;
   padding: 85px 0;
-  @media (min-width: 1024px) {
+  @media (min-width: $medium-large-screen) {
     background-color: $colors-grey-warm-4;
   }
   h4,
@@ -58,7 +58,7 @@
     @media(min-width: 768px) {
       padding-left: 32px;
     }
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       padding-left: 50px;
     }
   }

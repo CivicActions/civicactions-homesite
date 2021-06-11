@@ -3,7 +3,7 @@
   @media(min-width: 768px) {
     margin-bottom: 29px;
   }
-  @media(min-width: 1024px) {
+  @media(min-width: $medium-large-screen) {
     margin-bottom: 20px;
   }
   .grid {
@@ -11,7 +11,7 @@
     @media(min-width: 768px) {
       margin-top: 28px;
     }
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       margin-top: 41px;
     }
   }
@@ -46,7 +46,7 @@
   }
 
   .inner {
-    max-width: 1200px;
+    max-width: $max-width;
     position: relative;
     display: flex;
     flex-direction: column;

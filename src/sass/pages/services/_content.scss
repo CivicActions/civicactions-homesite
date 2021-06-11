@@ -3,16 +3,12 @@
   width: 100%;
   color: $colors-grey-90;
   margin-top: 48px;
-  .inner.scroll {
-    //& > div {
-    //  padding-top: 85px;
-    //}
-  }
+
   .inner {
     position: relative;
 
-    @media (min-width: 1024px) {
-      max-width: 1200px;
+    @media (min-width: $medium-large-screen) {
+      max-width: $max-width;
       display: flex;
       margin: 0 auto;
       flex-direction: row;
@@ -29,7 +25,7 @@
       flex: 1;
       list-style-type: none;
       display: none;
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         display: block;
       }
     }
@@ -43,7 +39,7 @@
     .content {
       flex: 2;
       padding: 0 20px;
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         padding: 0;
       }
     }
@@ -96,7 +92,7 @@
       @media(min-width: 768px) {
         font-size: 28px;
       }
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         display: block;
         font-size: 36px;
         line-height: 50px;
@@ -108,7 +104,7 @@
       @media(min-width: 768px) {
         font-size: 18px;
       }
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         font-size: 16px;
       }
     }
@@ -126,7 +122,7 @@
         font-size: 24px;
         padding-bottom: 24px;
       }
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         font-size: 28px;
         padding-bottom: 32px;
       }
@@ -146,7 +142,7 @@
       @media(min-width: 768px) {
         margin-bottom: 72px;
       }
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         margin: 24px 0 112px;
       }
       a {
@@ -154,7 +150,7 @@
         font-weight: 300;
       }
       ul {
-        @media(min-width: 1024px) {
+        @media(min-width: $medium-large-screen) {
           columns: 2;
           column-gap: 20px;
         }
@@ -175,7 +171,7 @@
     ul {
       margin: 0;
       padding: 0px 20px;
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         padding: 0;
         margin-left: 20px;
         //columns: 2;

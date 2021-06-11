@@ -25,7 +25,7 @@
     }
     @media(min-width: 1200px) {
       margin: 0 20px;
-      max-width: 1200px;
+      max-width: $max-width;
       margin: 0 auto;
     }
   }
@@ -36,10 +36,10 @@
     background-color: #0F6460;
     padding: 32px 0;
     margin-bottom: 0;
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       padding: 48px 0;
     }
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       padding: 64px 0;
     }
     h2 {
@@ -48,7 +48,7 @@
       padding-bottom: 48px;
     }
     .inner {
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
@@ -58,7 +58,7 @@
         background-color: #E7EFEF;
         padding: 32px 24px;
         margin-bottom: 16px;
-        @media(min-width: 1024px) {
+        @media(min-width: $medium-large-screen) {
           margin-bottom: 0;
         }
         .label {
@@ -79,7 +79,7 @@
       @media(min-width: 768px) {
         padding-top: 48px;
       }
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         text-align: center;
         padding-top: 64px;
       }
@@ -89,7 +89,7 @@
         display: flex;
         flex-flow: row wrap;
       }
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         justify-content: center;
       }
       .related-staff {
@@ -97,7 +97,7 @@
         @media(min-width: 768px) {
           padding: 28px 28px 28px 0;
         }
-        @media(min-width: 1024px) {
+        @media(min-width: $medium-large-screen) {
           padding: 48px;
         }
         img {
@@ -111,12 +111,12 @@
     }
   }
   .section--case-study--related {
-    max-width: 1200px;
+    max-width: $max-width;
     margin: 32px auto;
     @media(min-width: 768px) {
       margin: 48px auto 56px;
     }
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       margin: 64px auto 147px;
     }
     h2 {
@@ -124,13 +124,13 @@
     }
     .inner {
       margin: 0;
-      @media(min-width:1024px) {
+      @media(min-width:$medium-large-screen) {
         display: flex;
       }
       .related-case-study {
         display: grid;
         max-width: 373px;
-        @media(min-width: 1024px) {
+        @media(min-width: $medium-large-screen) {
           margin-right: 35px;
         }
         img {

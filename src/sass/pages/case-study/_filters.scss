@@ -1,8 +1,8 @@
 .section--case-studies--filter {
   padding: 40px 0 64px;
-  @media(min-width: 1024px) {
+  @media(min-width: $medium-large-screen) {
     padding-top: 0;
-    max-width: 1200px;
+    max-width: $max-width;
     margin: 0 auto;
   }
   h2 {
@@ -14,7 +14,7 @@
   }
 
   .checkboxes {
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
     }
@@ -54,7 +54,7 @@
       label {
         margin-top: 7px;
         padding-left: 6px;
-        @media(min-width: 1024px) {
+        @media(min-width: $medium-large-screen) {
           margin-top: 0;
         }
       }

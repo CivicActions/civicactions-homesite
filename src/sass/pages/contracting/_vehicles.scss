@@ -1,15 +1,15 @@
 .section--contracting-vehicles {
-  max-width: 1200px;
+  max-width: $max-width;
   margin: 0 auto 64px;
   h2 {
     padding: 42px 20px 24px;
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       font-size: 36px;
       padding: 0 0 24px;
     }
   }
   .inner {
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 23px;
@@ -21,18 +21,18 @@
       background-color: $colors-grey-warm-4;
       position: relative;
       margin-bottom: 24px;
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         margin-bottom: 0;
       }
       .contracting--logo {
         position: relative;
-        @media(min-width: 1024px) {
+        @media(min-width: $medium-large-screen) {
           min-height: 144px;
         }
       }
       img {
         margin-bottom: 32px;
-        @media(min-width: 1024px) {
+        @media(min-width: $medium-large-screen) {
           position: absolute;
           bottom: 0;
         }

@@ -14,7 +14,7 @@
       max-width: 430px;
 
     }
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       font-size: 48px;
       line-height: 67px;
       margin-bottom: 100px;
@@ -31,14 +31,14 @@
       display: block;
       top: -34px;
     }
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       top: 0;
     }
   }
 
   .inner {
     position: relative;
-    max-width: 1200px;
+    max-width: $max-width;
     display: flex;
     margin: 0 auto;
     display: flex;

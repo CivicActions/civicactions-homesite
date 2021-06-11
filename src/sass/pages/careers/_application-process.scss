@@ -1,14 +1,14 @@
 .careers--application-process-section {
   width: 100%;
   margin-bottom: 48px;
-  @media(min-width: 1024px) {
+  @media(min-width: $medium-large-screen) {
     margin-bottom: 120px;
   }
 
 
   .inner {
     position: relative;
-    max-width: 1200px;
+    max-width: $max-width;
     display: flex;
     margin: 0 auto;
     flex-direction: column;
@@ -33,7 +33,7 @@
     font-size: 16px;
     margin: 0;
     padding: 0;
-    @media (min-width: 1024px) {
+    @media (min-width: $medium-large-screen) {
       font-size: 18px;
       font-weight: bold;
       text-transform: uppercase;
@@ -47,7 +47,7 @@
 
   .steps-grid {
     margin: 48px 0 24px;
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       margin: 56px 0;
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -58,7 +58,7 @@
   }
 
   .step {
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -67,7 +67,7 @@
     .body {
       clear: both;
       padding: 16px 0;
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         padding: 0;
       }
     }
@@ -86,7 +86,7 @@
     float: left;
     padding-bottom: 3px;
 
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       height: 60px;
       width: 60px;
     }
@@ -98,7 +98,7 @@
     padding-top: 8px;
     padding-left: 16px;
     font-weight: normal;
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       font-weight: bold;
       padding-left: 0;
       padding-top: 0;

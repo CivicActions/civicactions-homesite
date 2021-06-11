@@ -1,13 +1,13 @@
 .careers--offerings-section {
   width: 100%;
   padding: 48px 0;
-  @media (min-width: 1024px) {
+  @media (min-width: $medium-large-screen) {
     padding: 36px 0;
   }
 
   .inner {
     position: relative;
-    max-width: 1200px;
+    max-width: $max-width;
     display: flex;
     margin: 0 auto;
     flex-direction: column;
@@ -28,7 +28,7 @@
   }
 
   .offerings-grid {
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       margin: 64px 0 120px;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -42,7 +42,7 @@
         float: left;
         padding-left: 22px;
         padding-top: 15px;
-        @media(min-width: 1024px) {
+        @media(min-width: $medium-large-screen) {
           clear: both;
           padding: 0;
         }
@@ -52,7 +52,7 @@
         width: 57px;
         height: 57px;
         padding-left: 10px;
-        @media(min-width: 1024px) {
+        @media(min-width: $medium-large-screen) {
           width: 90px;
           height: 90px;
         }

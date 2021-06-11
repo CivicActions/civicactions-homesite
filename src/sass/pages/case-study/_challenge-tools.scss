@@ -3,7 +3,7 @@
   @media(min-width: 768px) {
     padding: 56px 0 0;
   }
-  @media(min-width: 1024px) {
+  @media(min-width: $medium-large-screen) {
     padding: 72px 72px 20px;
   }
 
@@ -22,14 +22,14 @@
       .challenge,
       .goal {
         padding-bottom: 56px;
-        @media(min-width: 1024px) {
+        @media(min-width: $medium-large-screen) {
           padding-bottom: 64px;
         }
 
       }
     }
     .case-study--expertise-tools {
-      @media (min-width: 1024px) {
+      @media (min-width: $medium-large-screen) {
         display: flex;
       }
       .expertise,
@@ -41,7 +41,7 @@
         @media(min-width: 768px) {
           padding: 48px 0;
         }
-        @media(min-width: 1024px) {
+        @media(min-width: $medium-large-screen) {
           padding: 48px 82px;
         }
         h3 {
@@ -50,7 +50,7 @@
             font-size: 28px;
             padding-left: 48px;
           }
-          @media (min-width: 1024px) {
+          @media (min-width: $medium-large-screen) {
             padding-left: 0;
           }
         }
@@ -58,13 +58,13 @@
           @media(min-width: 768px) {
             padding-left: 48px;
           }
-          @media (min-width: 1024px) {
+          @media (min-width: $medium-large-screen) {
             padding-left: 0;
           }
         }
       }
       .tools {
-        @media (min-width: 1024px) {
+        @media (min-width: $medium-large-screen) {
           margin-left: 24px;
         }
       }
@@ -73,7 +73,7 @@
         @media (min-width: 768px) {
           margin-bottom: 32px;
         }
-        @media (min-width: 1024px) {
+        @media (min-width: $medium-large-screen) {
           margin-bottom: 0;
         }
       }
