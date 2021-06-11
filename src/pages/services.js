@@ -117,11 +117,11 @@ const ServicesPage = ({ data }) => {
                   <li>Product management</li>
                   <li>Agile delivery management</li>
                 </ul>
-                <div className='h6 primary-button'>IMPROVE YOUR WEBSITE</div>
+                <div className='h6 button'><p>IMPROVE YOUR WEBSITE</p></div>
               </div>
             </section>
             <section id={'menu2'}>
-              <img alt='' className='services-content--icon' src={webCmsIcon} />
+              <img alt='' className='services-content--icon' src={itModernizationIcon} />
               <div className='h6 services-content--label'>
                 IT & service modernization
               </div>
@@ -164,14 +164,14 @@ const ServicesPage = ({ data }) => {
                   <li>API design and cloud native development</li>
                   <li>Technology strategy consulting</li>
                 </ul>
-                <div className='h6 primary-button'>WORK SMARTER</div>
+                <div className='h6 button'><p>WORK SMARTER</p></div>
               </div>
             </section>
             <section id={'menu3'}>
               <img
                 alt=''
                 className='services-content--icon'
-                src={securityComplianceIcon}
+                src={productDesignIcon}
               />
               <div className='h6 services-content--label'>Product & design</div>
               <h2 className='h3 title'>
@@ -209,7 +209,7 @@ const ServicesPage = ({ data }) => {
                   <li>Agile and Human Centered Design training</li>
                   <li>Change management consulting</li>
                 </ul>
-                <div className='h6 primary-button'>Design a better future</div>
+                <div className='h6 button'><p>Design a better future</p></div>
               </div>
             </section>
             <section id={'menu4'}>
@@ -259,7 +259,7 @@ const ServicesPage = ({ data }) => {
                   <li>Security consulting and training</li>
                   <li>Free and open source software (FOSS) security</li>
                 </ul>
-                <div className='h6 primary-button'>Re-think security</div>
+                <div className='h6 button'><p>Re-think security</p></div>
               </div>
             </section>
             <section id={'menu5'}>
@@ -304,7 +304,7 @@ const ServicesPage = ({ data }) => {
                   <li>Helpdesk support for your data platform</li>
                   <li>Data science and analysis</li>
                 </ul>
-                <div className='h6 primary-button'>BE DATA-DRIVEN</div>
+                <div className='h6 button'><p>BE DATA-DRIVEN</p></div>
               </div>
             </section>
             <section id={'menu6'}>
@@ -353,7 +353,7 @@ const ServicesPage = ({ data }) => {
                   <li>Free and open source software (FOSS) education</li>
                   <li>Change management consulting</li>
                 </ul>
-                <div className='h6 primary-button'>UPSKILL YOUR TEAM</div>
+                <div className='h6 button'><p>UPSKILL YOUR TEAM</p></div>
               </div>
             </section>
           </div>

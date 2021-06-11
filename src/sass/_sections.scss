@@ -3,7 +3,11 @@ section,
   margin-bottom: 48px;
 
   .inner {
-    margin: 0 5vw;
+    margin: 0 24px;
+    @media(min-width: 768px) {
+      margin: 0 5vw;
+    }
+
   }
 
   // Sections right above the footer should have no bottom margin.
