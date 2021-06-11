@@ -6,7 +6,7 @@ import extendedLogo from '../files/icons/ca-extended-logo.svg';
 
 const Footer = () => {
   return (
-    <footer className='footer'>
+    <footer id='footer' className='footer'>
       <div className='inner grid-container'>
         <div className='grid-container__item footer__branding '>
           <Link to='/'>
