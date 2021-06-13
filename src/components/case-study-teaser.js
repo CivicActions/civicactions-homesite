@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 const CaseStudyTeaser = ({ img, alt, client, title, teaserLink }) => {
-  console.log(teaserLink);
+
   return (
     <Link to={teaserLink}>
       <div className='case-study-teaser'>

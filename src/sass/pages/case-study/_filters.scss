@@ -1,9 +1,15 @@
 .section--case-studies--filter {
-  padding: 40px 0 64px;
+  padding: 40px 0 0;
   @media(min-width: $medium-large-screen) {
     padding-top: 0;
     max-width: $max-width;
     margin: 0 auto;
+    padding: 40px 0 64px;
+  }
+  .inner {
+    @media(min-width: 1024px) {
+      margin: 0;
+    }
   }
   h2 {
     font-size: 18px;
@@ -14,8 +20,11 @@
   }
 
   .checkboxes {
-    @media(min-width: $medium-large-screen) {
+    @media(min-width: 768px) {
       display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media(min-width: $medium-large-screen) {
       grid-template-columns: repeat(4, 1fr);
     }
     .checkbox {
@@ -52,11 +61,7 @@
         background-position: center;
       }
       label {
-        margin-top: 7px;
         padding-left: 6px;
-        @media(min-width: $medium-large-screen) {
-          margin-top: 0;
-        }
       }
     }
   }

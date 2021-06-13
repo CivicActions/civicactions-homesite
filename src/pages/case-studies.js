@@ -120,6 +120,7 @@ const CaseStudyPage = () => {
         description='Our work impacts the daily lives of millions of people. See how we’ve helped agencies build resilient services at scale.'
       />
       <section className='section--case-studies--filter'>
+        <div className='inner'>
         <h2 className='body'>Filter by service category</h2>
         <div className={`checkboxes ${filterState}`}>
           {categories.map((item, index) => {
@@ -143,10 +144,12 @@ const CaseStudyPage = () => {
               </div>
             );
           })}
-        </div>
+        </div></div>
       </section>
       <section className='section--case-studies--teasers'>
-        <CaseStudyTeasers cases={cases} />
+        <div className='inner'>
+          <CaseStudyTeasers cases={cases} />
+        </div>
       </section>
       <section className={`section--more-clients ${filterState}`}>
         <h2>More clients</h2>
@@ -266,7 +269,7 @@ const CaseStudyTeasers = ({ cases }) => {
       <Link to={Path}>
         <div key={id} className={`wrapper--case-study--teaser ${Sort_Order} `}>
         {Cover_Image.url ?
-          <img src={Cover_Image[0].url} alt={Cover_Image[0].alternativeText} /> : <div className='no-img-teaser'></div>
+          <img src={Cover_Image.url} alt={Cover_Image.alternativeText} /> : <div className='no-img-teaser'></div>
         }
 
         <div className='teaser-content'>

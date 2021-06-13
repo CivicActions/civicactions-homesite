@@ -1,4 +1,4 @@
-.section--case-studies--teasers,
+.section--case-studies--teasers .inner,
 .home--case-studies-section .teasers {
 
   //@media(min-width: 768px) {
@@ -9,24 +9,29 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 32px;
     max-width: $max-width;
-    margin: 40px auto 0;
+    margin: 40px 5vw 0;
   }
-  @media(min-width: $medium-large-screen) {
-    margin: 80px auto 0;
+  @media(min-width: 1200px) {
+    margin: 0 auto ;
   }
+
   .no-img-teaser {
-    width: 584px;
-    height: 426px;
+    width: 100%;
+    height: 235px;
     background-color: #1B1B1B;
     opacity: .85;
-  }
-  .wrapper--case-study--teaser {
-    position: relative;
-    margin-bottom: 40px;
-    img {
-      height: 100%;
-      width: 100%;
+    @media(min-width: 768px) {
+      height: 230px;
     }
+    @media(min-width: 768px) {
+      height: 426px;
+    }
+    @media(min-width: 1200px) {
+      min-width: 584px;
+
+    }
+  }
+  a {
     &:hover,
     &:focus,
     &:focus-within {
@@ -47,9 +52,36 @@
         position: absolute;
         background: #1B1B1B;
         opacity: 0.75;
-        padding: 40px 40px 0;
+        padding: 16px;
         color: $colors-white;
         height: 100%;
+        @media(min-width: 768px) {
+          font-size: 16px;
+          line-height: 24px;
+          padding: 24px;
+        }
+        @media(min-width: 1024px) {
+          padding: 40px;
+          font-size: 20px;
+          line-height: 33px;
+        }
+      }
+    }
+    .wrapper--case-study--teaser {
+      height: 300px;
+      position: relative;
+      margin-bottom: 40px;
+      overflow: hidden;
+      @media(min-width: 768px) {
+        height: 280px;
+      }
+      @media(min-width: 1024px) {
+        height: 395px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
       }
     }
 
@@ -61,13 +93,17 @@
       bottom: 0;
       background: #1B1B1B;
       opacity: 0.75;
-      padding: 16px;
+      width: 100%;
       box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
-      @media(min-width: 768px) {
-        padding: 24px;
-      }
-      @media(min-width: $medium-large-screen) {
-        padding: 40px;
+
+      .title-wrapper {
+        padding: 16px;
+        @media(min-width: 768px) {
+          padding: 24px;
+        }
+        @media(min-width: $medium-large-screen) {
+          padding: 40px;
+        }
       }
       h2,
       span,
