@@ -54,12 +54,10 @@
   }
 
   @media screen and (max-width: $large-screen) {
-    .body-large {
-      margin: 0 5vw;
-    }
+
 
     .grid {
-      margin: 40px 0;
+      margin: 24px 0;
     }
   }
   @media screen and (max-width: $small-screen) {

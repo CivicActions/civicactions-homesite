@@ -1,5 +1,4 @@
 .home--services-and-cases-bg {
-  padding-bottom: 10px;
   background: linear-gradient
     ( to bottom,
     $colors-grey-warm-4 0%,
@@ -13,13 +12,13 @@
 .home--case-studies-section {
   position: relative;
   width: 100%;
-  margin-bottom: 80px !important;
+  margin-bottom: 56px !important;
 
   @media(min-width: 768px) {
     margin-bottom: 48px !important;
   }
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     margin-bottom: 80px !important;
   }
 

@@ -31,12 +31,14 @@
     .ellipse {
       text-transform: uppercase;
       padding: 10px 24px;
-      
       box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3);
       border-radius: 100px;
       background-color: $colors-white;
       margin-right: 16px;
       margin-bottom: 24px;
+    }
+    .ellipse.us-design {
+      padding: 10px 23px;
     }
   }
 

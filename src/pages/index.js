@@ -47,11 +47,7 @@ const HomePage = () => {
       <SEO title='Home' />
       <section className='home--hero-section'>
         <div className='inner'>
-          <img
-            src={homeIntroGraphic}
-            alt='Graphic image of people working together'
-            ref={(e) => (fadersRef.current[0] = e)}
-            className='fade-in'></img>
+
           <div className='info-text'>
             <h1>
               We help government deliver better public services through modern
@@ -64,6 +60,11 @@ const HomePage = () => {
               text='See our work'
             />
           </div>
+          <img
+              src={homeIntroGraphic}
+              alt='Graphic image of people working together'
+              ref={(e) => (fadersRef.current[0] = e)}
+              className='fade-in'></img>
         </div>
       </section>
       {/* ======== Clients Section ========== */}
@@ -143,7 +144,6 @@ const HomePage = () => {
                   'Improving the online experience for Medicare beneficiaries'
                 }
                 teaserLink='/'
-                // teaserLink={''}
               />
               <CaseStudyTeaser
                 img={caseStudyTeaserImg2}
@@ -160,7 +160,6 @@ const HomePage = () => {
                 client={'US Department of Education'}
                 title={'Supporting and expanding adult education'}
                 teaserLink='/'
-                // teaserLink={''}
               />
 
               <div className='view-our-work-cta '>
@@ -209,30 +208,20 @@ const HomePage = () => {
             <PressReleaseTeaser
               img={caseStudyTeaserImg4}
               title={'Government customer experience: A practical guide'}
-              description={
-                'How to start bringing CX into the business of government'
-              }
-              teaserlink={
-                'https://medium.com/civicactions/government-accessibility-and-the-cms-problem-588a07088c65 '
-              }
+              description={'How to start bringing CX into the business of government'}
+              teaserlink={'https://medium.com/civicactions/government-accessibility-and-the-cms-problem-588a07088c65'}
             />
             <PressReleaseTeaser
               img={caseStudyTeaserImg5}
               title={'WhiteHouse.gov: Beginning an accessibility journey'}
-              description={
-                'Praise and recommendations for the new administration'
-              }
-              teaserLink={
-                'https://medium.com/civicactions/government-customer-experience-a-practical-guide-59b602815e3f '
-              }
+              description={'Praise and recommendations for the new administration'}
+              teaserlink={'https://medium.com/civicactions/government-customer-experience-a-practical-guide-59b602815e3f'}
+
             />
             <div className='grid-item-3'>
 
-                <a
-                    className='grid-item-3-1'
-                  href={
-                    'https://medium.com/civicactions/what-fierce-openness-can-do-for-government-dd1d3ed518af'
-                  }>
+                <a className='grid-item-3-1'
+                  href={'https://medium.com/civicactions/what-fierce-openness-can-do-for-government-dd1d3ed518af'}>
                   <h3>The role of UX in an agile team</h3>
                   <img width='32px' src={arrowIcon} alt=''></img>
                 </a>
@@ -249,7 +238,7 @@ const HomePage = () => {
 
             </div>
           </div>
-          <LinkButton src='/' type='primary' text='Explore Posts & Videos' />
+          <LinkButton src='https://medium.com/civicactions' type='primary' text='Explore Posts & Videos' />
         </div>
       </section>
       {/* ======== Team Section ========== */}

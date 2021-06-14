@@ -4,21 +4,18 @@
   margin-bottom: 0;
 
   h1 {
-    max-width: 770px;
     margin-bottom: 24px;
     font-size: 24px;
     line-height: 33px;
     @media(min-width: 768px) {
       font-size: 28px;
       line-height: 39px;
-      max-width: 430px;
 
     }
     @media(min-width: $medium-large-screen) {
       font-size: 48px;
       line-height: 67px;
       margin-bottom: 100px;
-      max-width: 767px;
     }
   }
 
@@ -29,10 +26,13 @@
     display: none;
     @media(min-width: 768px) {
       display: block;
-      top: -34px;
+      width: 222px;
+      height: 195px;
     }
     @media(min-width: $medium-large-screen) {
-      top: 0;
+    //  top: -55px;
+      width: 411px;
+      height: 378px;
     }
   }
 
@@ -47,6 +47,12 @@
 
   .info-text {
     z-index: 1;
+    @media(min-width: 768px) {
+      width: 64%;
+    }
+    @media(min-width: 1024px) {
+      width: 62%;
+    }
     .button {
       margin-bottom: 56px;
     }
@@ -60,9 +66,6 @@
   @media screen and (max-width: $large-screen) {
 
 
-    img {
-      width: calc(250px + 5vw);
-    }
 
     h2 {
       max-width: 450px;
@@ -73,9 +76,7 @@
       font-size: 18px;
     }
 
-    .inner {
-      margin-top: 50px;
-    }
+
   }
 
 
