@@ -3,8 +3,17 @@
   color: $colors-grey-90;
   background-color: $colors-white;
   padding: 85px 0;
-  @media (min-width: $medium-large-screen) {
+  @media (min-width: 1024px) {
     background-color: $colors-grey-warm-4;
+  }
+  .inner {
+    margin: 0 24px;
+    @media(min-width: 768px) {
+      margin: 0 48px;
+    }
+    @media(min-width: 1024px) {
+      margin: 0 auto;
+    }
   }
   h4,
   .body {
@@ -71,7 +80,7 @@
 
   @media screen and (max-width: $tablet-screen) {
     padding: 55px 0;
-    margin: 64px 0 0;
+    margin: 48px 0;
 
     .picture {
       display: none;
