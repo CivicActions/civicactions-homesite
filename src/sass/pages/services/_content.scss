@@ -10,7 +10,6 @@
     @media (min-width: $medium-large-screen) {
       max-width: $max-width;
       display: flex;
-      margin: 0 auto;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
@@ -70,7 +69,7 @@
       height: 50px;
       margin-right: 20px;
       float: left;
-      margin-bottom: 12px;
+      //margin-bottom: 12px;
     }
 
     .services-content--label {
@@ -88,7 +87,7 @@
       font-size: 20px;
       line-height: 33px;
       font-weight: 400;
-      margin-top: 14px;
+      margin-top: 8px;
       display: inline-block;
       @media(min-width: 768px) {
         font-size: 28px;

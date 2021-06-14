@@ -7,7 +7,6 @@
     position: relative;
     max-width: $max-width;
     display: flex;
-    margin: 0 auto;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -27,9 +26,6 @@
   }
 
   @media screen and (max-width: $large-screen) {
-    .inner {
-      margin: 0 5vw;
-    }
 
     img {
       width: calc(250px + 5vw);

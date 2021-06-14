@@ -39,10 +39,6 @@
   .inner {
     max-width: $max-width;
     position: relative;
-    margin: 0 5vw;
-    @media screen and (min-width: $large-screen) {
-      margin: 0 auto;
-    }
   }
 
   button.team-filter-btn {
@@ -65,9 +61,11 @@
 .team--staff-teasers-grid-section {
   .inner {
     max-width: $max-width;
-    margin: 20px 0 20px 5vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
     @media screen and (min-width: $large-screen) {
-      margin: 48px auto 60px auto;
+      margin-top: 48px;
+      margin-bottom: 60px;
     }
   }
 }
@@ -90,7 +88,6 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    margin: 0 auto;
   }
 
   .column {
@@ -136,7 +133,6 @@
 
     .inner {
       flex-wrap: wrap;
-      margin: 0 5vw;
       margin-top: 50px;
     }
   }

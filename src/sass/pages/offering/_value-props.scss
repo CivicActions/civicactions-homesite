@@ -12,13 +12,8 @@
     padding-bottom: 64px;
   }
   .inner {
-    margin: 0 40px;
-    @media(min-width: $medium-large-screen) {
-      margin: 0;
-    }
     @media(min-width: 1200px) {
       max-width: $max-width;
-      margin: 0 auto;
     }
     .wrapper {
       display: flex;

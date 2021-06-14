@@ -2,8 +2,6 @@
   .inner {
     position: relative;
     max-width: $max-width;
-    margin: 0 auto;
-    padding: 0 1rem;
     @media(min-width: $medium-large-screen) {
       padding: 40px 0 100px;
     }
@@ -24,7 +22,7 @@
   }
   .video--text {
     padding: 1rem 0;
-    @media(min-width: 768px) {
+    @media(min-width: 1024px) {
       width: 60%;
       padding: 2rem 0;
     }

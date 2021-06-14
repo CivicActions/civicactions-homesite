@@ -1,9 +1,7 @@
 .contact--form {
   .inner {
-    margin: 0 20px;
     @media(min-width: $medium-large-screen) {
       max-width: 955px;
-      margin: 0 auto;
     }
 
     #contact-hubspot-form {
