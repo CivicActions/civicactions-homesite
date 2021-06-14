@@ -41,9 +41,15 @@ const Footer = () => {
                   <li><Link to='/'>About</Link></li>
                   <li><Link to='/team'>Team</Link></li>
                   <li><Link to='/press'>Press</Link></li>
+                  <li><Link to='/contracting'>Contracting</Link></li>
                 </ul>
               </li>
-              <li className="top-link"><Link className="parent-link" to='/services'>Services</Link></li>
+              <li className="child-menu--wrapper top-link">
+                <Link className="parent-link" to='/services'>Services</Link>
+                <ul>
+                  <li><Link to='/services/ditap'>DITAP</Link></li>
+                </ul>
+              </li>
               <li className="child-menu--wrapper top-link">
                 <Link className="parent-link" to=''>Our work</Link>
                 <ul>
@@ -72,6 +78,7 @@ const Footer = () => {
           <p>© 2010 —- 2021</p>
           <p><Link to='/accessibility'>Accessibility</Link></p>
           <p><Link to='/privacy'>Privacy</Link></p>
+          <p><Link to='/feedback'>Feedback</Link></p>
 
         </div>
       </div>
