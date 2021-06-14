@@ -46,7 +46,7 @@ const HomePage = () => {
 
   const data = useStaticQuery(graphql`
     {
-      allStrapiCaseStudy(filter: {Featured: {eq: "True"}}) {
+      allStrapiCaseStudy(filter: {Featured: {eq: "True"}}, sort: {fields: Sort_Order}) {
         nodes {
           Title
           Cover_Image {
@@ -56,6 +56,7 @@ const HomePage = () => {
           }
           Client_Name
           Path
+          Sort_Order
           Service_Category {
             Category
           }
