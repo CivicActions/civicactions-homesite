@@ -7,13 +7,13 @@
     position: relative;
     max-width: $max-width;
     display: flex;
-    margin: 0 auto;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
 
     h2 {
       max-width: 900px;
+      font-weight: 400;
     }
 
     .body-large {
@@ -40,11 +40,7 @@
     }
   }
 
-  @media screen and (max-width: $large-screen) {
-    .inner {
-      margin: 0 5vw;
-    }
-  }
+
 
   @media screen and (max-width: $medium-large-screen) {
     h2 {

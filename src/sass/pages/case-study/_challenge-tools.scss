@@ -9,10 +9,6 @@
 
   margin-bottom: 0;
   .inner {
-    margin: 0;
-    @media(min-width: 768px) {
-      margin: 48px;
-    }
     .case-study-challenge-goal {
       max-width: 720px;
       margin: 0 auto;

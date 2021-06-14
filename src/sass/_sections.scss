@@ -5,7 +5,10 @@ section,
   .inner {
     margin: 0 24px;
     @media(min-width: 768px) {
-      margin: 0 5vw;
+      margin: 0 48px;
+    }
+    @media(min-width: 1024px) {
+      margin: 0 auto;
     }
 
   }

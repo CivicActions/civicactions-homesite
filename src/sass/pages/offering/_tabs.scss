@@ -5,7 +5,6 @@
   .inner {
     @media(min-width: 1200px) {
       max-width: $max-width;
-      margin: 0 auto;
     }
     .tab-mobile {
       @media(min-width: 768px) {

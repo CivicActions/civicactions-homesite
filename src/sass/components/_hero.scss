@@ -9,9 +9,8 @@
     max-width: 825px;
   }
   .inner {
-    padding: 0 20px;
     @media(min-width: 768px) {
-      padding: 0 40px;
+      padding: 40px;
     }
     @media(min-width: 1024px) {
 

@@ -1,7 +1,11 @@
 .second-quote {
   background-color: $colors-white;
-  @media(min-width: 768px) {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  @media(min-width: 1024px) {
     background-color: $colors-grey-warm-4;
+    padding-top: 76px !important;
+    padding-bottom: 71px !important;
   }
 }
 .first-quote {

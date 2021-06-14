@@ -4,7 +4,6 @@
 
   .inner {
     max-width: $max-width;
-    margin: 0 auto;
 
     @media(min-width: $medium-large-screen) {
       display: flex;

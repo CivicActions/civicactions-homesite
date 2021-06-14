@@ -6,7 +6,6 @@
     position: relative;
     max-width: $max-width;
     display: flex;
-    margin: 0 auto;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -24,11 +23,6 @@
     height: 700px;
   }
 
-  @media screen and (max-width: $large-screen) {
-    .inner {
-      margin: 0 5vw;
-    }
-  }
 
   @media screen and (max-width: $medium-large-screen) {
     .inner {
