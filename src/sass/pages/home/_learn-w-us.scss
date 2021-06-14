@@ -34,14 +34,14 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-top: 48px;
+    margin-top: 40px;
 
     @media(min-width: 768px) {
-      margin-top: 64px;
+      margin-top: 56px;
     }
 
     @media(min-width: $medium-large-screen) {
-      margin-top: 120px;
+      margin-top: 112px;
       padding: 0 48px;
     }
 
@@ -110,14 +110,7 @@
       padding: 0 40px 40px;
     }
 
-    &:hover {
-      // @todo switch to a different arrow icon on hover.
-      // background-color: #f3f3f3;
-    }
-
     &:active {
-      // @todo switch to a different arrow icon when active.
-      // background-color: #f3f3f3;
       box-shadow: none;
     }
   }
@@ -138,33 +131,21 @@
     .grid-item-3-1,
     .grid-item-3-2 {
       height: 100%;
-
-      //a {
-        //height: 100%;
+      display: flex;
         background-color: $colors-white;
         box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3);
-        //width: 100%;
         text-decoration: none;
         padding: 32px;
         flex-direction: row;
 
         @media(min-width: $medium-large-screen) {
           padding: 40px;
-          display: flex;
+
         }
         h3 {
-          float: left;
-          width: 87%;
           margin: auto;
           @media(min-width: $medium-large-screen) {
             width: auto;
-            float: unset;
-          }
-        }
-        img {
-          float: right;
-          @media(min-width: $medium-large-screen) {
-            float: unset;
           }
         }
         &:hover,
@@ -173,7 +154,6 @@
           background-color: #f3f3f3;
           text-decoration: underline;
         }
-      //}
 
     }
 
@@ -183,9 +163,6 @@
         saturate(600%) contrast(0.8);
     }
 
-    img:hover {
-      //background-color: #f3f3f3;
-    }
 
     img:active {
       background-color: #f3f3f3;
@@ -202,7 +179,7 @@
 
 
     .body {
-      padding: 0 20px 36px;
+      padding: 0 24px 36px;
     }
 
     .grid-item-3 {

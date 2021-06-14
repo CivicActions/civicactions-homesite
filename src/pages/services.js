@@ -371,7 +371,7 @@ const ServicesPage = ({ data }) => {
             <span className='ellipse'>customer experience</span>
             <span className='ellipse'>accessibility</span>
             <span className='ellipse'>drupal</span>
-            <span className='ellipse'>u.s. web design standards</span>
+            <span className='ellipse us-design'>u.s. web design standards</span>
             <span className='ellipse'>agile</span>
             <span className='ellipse'>open source</span>
             <span className='ellipse'>human centered design</span>

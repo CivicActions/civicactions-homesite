@@ -78,6 +78,10 @@
       float: left;
       padding-top: 11px;
       text-transform: uppercase;
+      width: 73%;
+      @media(min-width: 392px) {
+        width: auto;
+      }
     }
 
     .title {
@@ -141,12 +145,14 @@
 
     .cta {
       background-color: #f5f5f0;
-      padding: 40px;
-      margin-top: 0;
-      margin-bottom: 48px;
+      padding: 24px;
+      //margin-top: 0;
+      //margin-bottom: 48px;
+      margin: 0 -24px 48px;
       overflow: auto;
       @media(min-width: 768px) {
-        margin-bottom: 72px;
+        margin: 0 0 72px;
+        padding: 40px;
       }
       @media(min-width: $medium-large-screen) {
         margin: 24px 0 112px;
@@ -257,6 +263,13 @@
       background-color: #f5f5f0;
       padding: 20px;
       margin: 32px 0;
+    }
+  }
+}
+#product-design {
+  .cta {
+    .button a {
+      padding: 12px 10px;
     }
   }
 }
