@@ -227,24 +227,26 @@ const HomePage = () => {
               }
             />
             <div className='grid-item-3'>
-              <div className='grid-item-3-1'>
+
                 <a
+                    className='grid-item-3-1'
                   href={
                     'https://medium.com/civicactions/what-fierce-openness-can-do-for-government-dd1d3ed518af'
                   }>
                   <h3>The role of UX in an agile team</h3>
                   <img width='32px' src={arrowIcon} alt=''></img>
                 </a>
-              </div>
-              <div className='grid-item-3-2'>
+
+
                 <a
+                    className='grid-item-3-2'
                   href={
                     'https://medium.com/civicactions/policy-recommendations-for-improving-the-ato-process-through-compliance-as-code-524e3005fceb '
                   }>
                   <h3>What “fierce openness” can do for government</h3>
                   <img width='32px' src={arrowIcon} alt=''></img>
                 </a>
-              </div>
+
             </div>
           </div>
           <LinkButton src='/' type='primary' text='Explore Posts & Videos' />
