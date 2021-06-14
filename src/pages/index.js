@@ -167,7 +167,7 @@ const HomePage = () => {
                 <a href={'/case-studies/'}>
                   <img src={caseStudyTeaserImg3} alt='' className='bg'></img>
                   <div className='content'>
-                    <h3>View more Work</h3>
+                    <h3>View more work</h3>
                     <img
                       className='view-our-work-cta__icon'
                       src={arrowIcon}
