@@ -8,6 +8,12 @@
     max-width: $max-width;
     margin-top: 40px;
   }
+  @media(min-width: 1200px) {
+    margin: 0 auto ;
+  }
+  @media(min-width: 1200px) {
+    margin-top: 80px;
+  }
 
   .no-img-teaser {
     width: 100%;
