@@ -10,14 +10,14 @@
   }
   .video-container {
     iframe {
-
+        height: 400px;
       @media(min-width: $medium-large-screen) {
         height: 675px;
       }
       .vp-center {
         display: block;
         .player {
-          max-width: 100%;
+          max-width: 100% !important;
         }
       }
     }
