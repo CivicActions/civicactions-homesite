@@ -17,7 +17,7 @@ import caseStudyTeaserImg1 from '../files/images/case-study-teasers/case-study-t
 import caseStudyTeaserImg2 from '../files/images/case-study-teasers/case-study-teaser-img-2.png';
 import caseStudyTeaserImg3 from '../files/images/case-study-teasers/case-study-teaser-img-3.png';
 import caseStudyTeaserImg4 from '../files/images/case-study-teasers/case-study-teaser-img-4.png';
-import caseStudyTeaserImg5 from '../files/images/case-study-teasers/case-study-teaser-img-5.png';
+import caseStudyTeaserImg5 from '../files/images/case-study-teasers/blogpostimage.png';
 import dataServicesIcon from '../files/icons/data-services-icon.svg';
 import itModernizationIcon from '../files/icons/it-modernization-icon.svg';
 import productDesignIcon from '../files/icons/product-design-icon.svg';
@@ -184,10 +184,7 @@ const HomePage = () => {
           <img src={quotePatternGraphic} alt=''></img>
           <div className='quote'>
             <h2>
-              “It was a pleasure to work with the CivicActions team. Their
-              experience with government clients and agile processes helped us
-              reach our user base sooner than expected with a product that met
-              their needs.”
+              “It was a pleasure to work with the CivicActions team. Their experience with agile processes helped us reach our user base with a product that met their needs.”
             </h2>
             <div className='body'>
               Lisa Berry, Senior GlobalNET Liaison Officer
@@ -212,41 +209,41 @@ const HomePage = () => {
                 'How to start bringing CX into the business of government'
               }
               teaserlink={
-                'https://medium.com/civicactions/government-accessibility-and-the-cms-problem-588a07088c65 '
+                'https://medium.com/civicactions/government-customer-experience-a-practical-guide-59b602815e3f'
               }
             />
             <PressReleaseTeaser
               img={caseStudyTeaserImg5}
-              title={'WhiteHouse.gov: Beginning an accessibility journey'}
+              title={'Improving the ATO process with Compliance as Code'}
               description={
-                'Praise and recommendations for the new administration'
+                'Better and faster security for government IT systems'
               }
               teaserLink={
-                'https://medium.com/civicactions/government-customer-experience-a-practical-guide-59b602815e3f '
+                'https://medium.com/civicactions/policy-recommendations-for-improving-the-ato-process-through-compliance-as-code-524e3005fceb'
               }
             />
             <div className='grid-item-3'>
               <div className='grid-item-3-1'>
                 <a
                   href={
-                    'https://medium.com/civicactions/what-fierce-openness-can-do-for-government-dd1d3ed518af'
+                    'https://medium.com/civicactions/what-is-data-science-really-232552fc080a'
                   }>
-                  <h3>The role of UX in an agile team</h3>
+                  <h3>What is data science, really?</h3>
                   <img width='32px' src={arrowIcon} alt=''></img>
                 </a>
               </div>
               <div className='grid-item-3-2'>
                 <a
                   href={
-                    'https://medium.com/civicactions/policy-recommendations-for-improving-the-ato-process-through-compliance-as-code-524e3005fceb '
+                    'https://medium.com/civicactions/launching-a-community-of-practice-for-accessibility-in-government-services-b0b085cd90d6'
                   }>
-                  <h3>What “fierce openness” can do for government</h3>
+                  <h3>A community of practice for government accessibility</h3>
                   <img width='32px' src={arrowIcon} alt=''></img>
                 </a>
               </div>
             </div>
           </div>
-          <LinkButton src='/' type='primary' text='Explore Posts & Videos' />
+          <LinkButton src='https://medium.com/civicactions' type='primary' text='Explore posts and videos' />
         </div>
       </section>
       {/* ======== Team Section ========== */}

@@ -14,11 +14,16 @@ const HomepageLayout = ({ children }) => {
     <div style={{ position: 'relative' }}>
       <div>
         <SkipNavLink />
-        <Banner
-          boldText='We’re hiring! '
-          regularText='View open positions here'
-          link='/careers#open-positions'
-        />
+          <Banner
+            boldText='We’re hiring! '
+            regularText='View open positions here'
+            link='/services/ditap'
+          />
+        {/*<Banner*/}
+        {/*  boldText='Looking for DITAP training? '*/}
+        {/*  regularText='Start here.'*/}
+        {/*  link='/careers#open-positions'*/}
+        {/*/>*/}
         <Header />
         <main id='main-content'>
           <div>{children}</div>
