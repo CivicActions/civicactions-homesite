@@ -369,7 +369,7 @@ const ServicesPage = ({ data }) => {
             <span className='ellipse'>open source</span>
             <span className='ellipse'>open data</span>
             <span className='ellipse'>u.s. web design standards</span>
-            
+
           </div>
         </div>
       </section>

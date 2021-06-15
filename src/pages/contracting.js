@@ -22,14 +22,17 @@ const ContractingPage = () => {
         title='Contracting information'
         description='We are a Small Business helping government agencies make digital services that build public trust. Learn about contracting with us.'
       />
-      <Hero
-        title={'Your strategic partner for modernizing government services'}
-        description={
-          'We apply Agile and DevOps, open source software, and human-centered design to elevate digital platforms for organizations serving the public. As an innovative small business, we solve long-standing modernization challenges by creating automated compliance models for system security plans and bringing accessibility to the forefront of design and development. Let’s work together to make government services that build public trust.'
-        }
-      />
+      <div className='hero-component'>
+        <div className='inner'>
+          <h1>Your strategic partner for modernizing government services</h1>
+          <p className='body'>
+            We apply Agile and DevOps, open source software, and human-centered design to elevate digital platforms for organizations serving the public. As an <strong>innovative small business</strong>, we solve long-standing modernization challenges by creating automated compliance models for system security plans and bringing <strong>accessibility to the forefront</strong> of design and development. Let’s work together to make government services that <strong>build public trust.</strong>
+          </p>
+        </div>
+
+      </div>
       <section className='section--contracting-vehicles'>
-        <h2>Contacting Vehicles</h2>
+        <h2>Contracting vehicles</h2>
         <div className='inner'>
           <ContractVehiclePdf
             icon={gsa}
@@ -55,7 +58,7 @@ const ContractingPage = () => {
             link='https://www.digitalmarketplace.service.gov.uk/g-cloud/supplier/708558'
           />
           <ContractVehicle
-            icon={library}
+            icon={doi}
             alt='Library of Congress logo'
             name='LOC IDIQ'
             info='Library of Congress Agile Development and System Integration Modernization (subcontractor to Ad Hoc)'
@@ -65,15 +68,15 @@ const ContractingPage = () => {
             icon={cio}
             alt='NIH Information Technology Acquisition and Assessment Center and Chief Information Officer Solutions and Partners 3 logo'
             name='CIO SP3 (RIVA)'
-            info='General Services Administration Multiple Award Schedule (prime) Contract number: GS-35F-337BA'
+            info='Chief Information Officer - Solutions and Partners 3'
             contract='Contract number: 75N98120D00070'
             link='https://nitaac.nih.gov/services/cio-sp3'
           />
           <ContractVehicle
-            icon={doi}
+            icon={library}
             alt='U.S. Department of the Interior logo'
             name='DOI IDIQ'
-            info='General Services Administration Multiple Award Schedule (prime) Contract number: GS-35F-337BA'
+            info='Drupal Web Developer BPA'
             contract='Contract number: 140D0419A0010'
             period='Contract period: 02/06/2019  - 11/30/2023'
           />
@@ -117,7 +120,7 @@ const ContractingPage = () => {
               </li>
               <li>U.S. Digital Service (USDS) alumni team members</li>
               <li>
-                Maintainers of U.S. Web Design System (USWDS){' '}
+                Co-maintainers of U.S. Web Design System (USWDS){' '}
                 <a href='https://www.drupal.org/project/uswds'>
                   base theme in Drupal
                 </a>
@@ -174,7 +177,7 @@ const ContractingPage = () => {
               <WorkAwards
                 client='Centers for Medicare and Medicaid Services'
                 title='Agile development website modernization and open data migration'
-                link='press/2020-03-02-civicactions-wins-cms-contract'
+                link='/press/2020-03-02-civicactions-wins-cms-contract'
               />
             </div>
           </div>
@@ -184,12 +187,12 @@ const ContractingPage = () => {
               <WorkAwards
                 client='Centers for Medicare and Medicaid Services'
                 title='Design challenge to improve health care experience for seniors'
-                link='/case-study/cms-design-challenge-mvp'
+                link='/case-studies/cms-design-challenge-mvp'
               />
               <WorkAwards
                 client='U.S. Department of Veterans Affairs'
                 title='VA.gov modernization using Drupal and human-centered design'
-                link='/case-study/va-cms-modernization'
+                link='/case-studies/va-cms-modernization'
               />
             </div>
           </div>
