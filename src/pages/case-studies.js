@@ -17,7 +17,7 @@ import CaseStudyTeaser from '../components/case-study-teaser.js';
 const CaseStudyPage = () => {
   const data = useStaticQuery(graphql`
     {
-      allStrapiCaseStudy(filter: {Featured: {eq: "True"}}) {
+      allStrapiCaseStudy(sort: { fields: Sort_Order }) {
         nodes {
           Title
           Cover_Image {
