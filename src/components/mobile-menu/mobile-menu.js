@@ -35,7 +35,7 @@ const MobileMenu = (props) => {
             Company
         </button>
           <ul>
-            <li><Link to="/">About</Link></li>
+            {/*<li><Link to="/">About</Link></li>*/}
             <li><Link to="/team">Team</Link></li>
             <li><Link to="/press">Press</Link></li>
           </ul>
@@ -59,12 +59,12 @@ const MobileMenu = (props) => {
         </button>
           <ul>
             <li><Link to="/case-studies">Case Studies</Link></li>
-            <li><Link to="/">Approach</Link></li>
+            {/*<li><Link to="/">Approach</Link></li>*/}
           </ul>
         </li>
 
         <li className='mmenu--list__item'>
-          <Link to="/">Insight</Link>
+          <Link to="/">Insights</Link>
         </li>
 
         <li className='mmenu--list__item'>

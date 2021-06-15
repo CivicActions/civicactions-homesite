@@ -38,7 +38,7 @@ const Footer = () => {
               <li className="child-menu--wrapper top-link">
                 <Link className="parent-link" to=''>Company</Link>
                 <ul>
-                  <li><Link to='/'>About</Link></li>
+                  {/*<li><Link to='/'>About</Link></li>*/}
                   <li><Link to='/team'>Team</Link></li>
                   <li><Link to='/press'>Press</Link></li>
                   <li><Link to='/contracting'>Contracting</Link></li>
