@@ -117,7 +117,7 @@ const HomePage = () => {
               <Card
                 title='IT & Service Modernization'
                 icon={itModernizationIcon}
-                link='/services#it-service'
+                link='/services#service-modernization'
               />
               <Card
                 title='Product & Design'

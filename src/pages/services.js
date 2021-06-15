@@ -34,7 +34,7 @@ const ServicesPage = ({ data }) => {
         <div className={scroll ? 'inner scroll' : 'inner'}>
           <Scrollspy
             className={'services--sidebar'}
-            items={['web-cms', 'it-service', 'product-design', 'security', 'data-services', 'development']}
+            items={['web-cms', 'service-modernization', 'product-design', 'security', 'data-services', 'development']}
             currentClassName='is-current'>
             <li>
               <Link className={`body`} to='#web-cms'>
@@ -42,7 +42,7 @@ const ServicesPage = ({ data }) => {
               </Link>
             </li>
             <li>
-              <Link className={`body`} to='#it-service'>
+              <Link className={`body`} to='#service-modernization'>
                 IT & Service Modernization
               </Link>
             </li>
@@ -85,34 +85,35 @@ const ServicesPage = ({ data }) => {
                 system that will grow with you into the future.
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
-              <div className='body'>US Department of Veterans Affairs</div>
-              <Link className='body-large'>Modern CMS to support veterans</Link>
+              <div className='body'>U.S. Department of Veterans Affairs</div>
+              <Link to='/case-studies/va-cms-modernization' className='body-large'>Built a modern CMS for VA.gov</Link>
               <div className='body'>
                 Centers for Medicare and Medicaid Services
               </div>
-              <Link className='body-large'>
-                Human-centered health care online
+              <Link to='/case-studies/cms-web-experience-services' className='body-large'>
+                Designed a user-friendly health journey for seniors
               </Link>
               <div className='cta'>
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
                   <li>
-                    <Link>Research and discovery</Link>
+                    <Link to='https://accessibility.civicactions.com/posts/heart-accessibility '>Accessibility consulting and training</Link>
                   </li>
                   <li>
-                    <Link>CMS development and migration</Link>
+                    Research and discovery
                   </li>
                   <li>
-                    <Link>User experience and visual design</Link>
+                    CMS development and migration
+                  </li>
+                  <li>
+                    User experience and visual design
                   </li>
                   <li>Custom front end development</li>
                   <li>Content design and strategy</li>
                   <li>
-                    <Link>Maintenance and support</Link>
+                    Maintenance and support
                   </li>
-                  <li>
-                    <Link>Accessibility consulting and training</Link>
-                  </li>
+
                   <li>Cloud infrastructure</li>
                   <li>Product management</li>
                   <li>Agile delivery management</li>
@@ -120,7 +121,7 @@ const ServicesPage = ({ data }) => {
                 <div className='h6 button'><Link to='/contact'>IMPROVE YOUR WEBSITE</Link></div>
               </div>
             </section>
-            <section id={'it-service'}>
+            <section id={'service-modernization'}>
               <img alt='' className='services-content--icon' src={itModernizationIcon} />
               <div className='h6 services-content--label'>
                 IT & service modernization
@@ -138,15 +139,15 @@ const ServicesPage = ({ data }) => {
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
               <div className='body'>
-                California Child Welfare Digital Service
+                California Child Welfare Digital Services
               </div>
-              <Link className='body-large'>
+              <Link to='https://cwds.ca.gov/ ' className='body-large'>
                 Provided DevOps support for child welfare systems
               </Link>
               <div className='body'>
                 New York Metropolitan Transit Authority
               </div>
-              <Link className='body-large'>
+              <Link to='/case-studies/nyc-metro-transit-digital-clocks ' className='body-large'>
                 Connected Drupal and the Internet of Things to power digital
                 signage
               </Link>
@@ -189,11 +190,11 @@ const ServicesPage = ({ data }) => {
               <div className='body'>
                 Centers for Medicare and Medicaid Services
               </div>
-              <Link className='body-large'>
+              <Link to='/case-studies/cms-design-challenge-mvp' className='body-large'>
                 Designed a persona-driven strategy for Medicare benefits
               </Link>
               <div className='body'>National Science Foundation</div>
-              <Link className='body-large'>
+              <Link to='/case-studies/nsf-website-redesign' className='body-large'>
                 Improved user experience to support science research
               </Link>
               <div className='cta'>
@@ -206,7 +207,7 @@ const ServicesPage = ({ data }) => {
                   <li>User experience and visual design</li>
                   <li>Content design and strategy</li>
                   <li>Business and impact analysis</li>
-                  <li>Agile and Human Centered Design training</li>
+                  <li>Agile and Human-Centered Design training</li>
                   <li>Change management consulting</li>
                 </ul>
                 <div className='h6 button'><Link to='/contact'>Design a better future</Link></div>
