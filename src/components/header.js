@@ -10,23 +10,33 @@ import MainMenu from '../components/main-menu/main-menu'
 
 const Header = () => {
 
+  const [scrolled,setScrolled]=React.useState(false);
+  const [scrolledMobile,setScrolledMobile]=React.useState(false);
+  const handleScroll=() => {
+    const offset=window.scrollY;
+    if(offset > 500 ){
+      setScrolled(true);
+    }
+    else if(offset > 300) {
+      setScrolledMobile(true);
+    }
+    else{
+      setScrolled(false);
+      setScrolledMobile(false);
+    }
+  }
 
-  const [scroll, setScroll] = useState(false)
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 500)
-    })
+    window.addEventListener('scroll',handleScroll)
+  })
+  let headerClasses=['header'];
+  if(scrolled){
+    headerClasses.push('scrolled');
+  }
 
-  }, []);
-  const [scrollMobile, setScrollMobile] = useState(false)
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScrollMobile(window.scrollY > 320)
-    })
 
-  }, []);
   return (
-    <header className={`${scroll ? "header scrolled" : "header"} ${scrollMobile ? "scrolled-mobile" : ''}`}>
+    <header className={`${scrolled ? "header scrolled" : "header"} ${scrolledMobile ? "scrolled-mobile" : ""}`}>
       <div className='inner'>
         <Link to='/' className='logo'>
           <img src={extendedLogo} alt='Civic Actions Logo'></img>
