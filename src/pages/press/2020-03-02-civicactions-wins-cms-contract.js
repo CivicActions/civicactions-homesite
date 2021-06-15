@@ -3,7 +3,7 @@ import React from 'react';
 import RedLayout from '../../layouts/red';
 import {Helmet} from "react-helmet";
 import Hero from '../../components/hero.js';
-import PressPageCTA from "../../components/press-page-cta";
+import PrimaryPageCTA from "../../components/primary-page-cta";
 
 const CMSContract = () => {
 
@@ -28,11 +28,13 @@ const CMSContract = () => {
                     <p className='body'><a href='https://www.usaspending.gov/#/award/CONT_AWD_75FCMC20F0025_7530_GS35F337BA_4732'>Award information on USASpending.gov</a></p>
                 </div>
             </div>
-            <PressPageCTA
+            <PrimaryPageCTA
                 title='Inspired by newsworthy work?'
                 subtitle='See what we can do together.'
                 primaryButtonText='EXPLORE SERVICES'
+                primaryButtonLink='/services'
                 secondaryButtonText='CONTRACTING INFO'
+                secondaryButtonLink='/contracting'
             />
         </RedLayout>
     );

@@ -15,7 +15,7 @@ import {
 import RedLayout from '../layouts/red';
 import Hero from "../components/hero-with-buttons";
 import Quote from "../components/quote";
-import PrimaryPageCTA from "../components/ditap-page-cta";
+import PrimaryPageCTA from "../components/primary-page-cta";
 import LinkButton from "../components/link-button";
 import Bio from '../components/offering/bio'
 import linkedinIcon from "../files/icons/linkedin.svg";
@@ -71,7 +71,7 @@ const OfferingTemplate = ({ data }) => {
 
 
         )) : null;
-
+    console.log(offering);
     return (
         <RedLayout>
             <Helmet>
@@ -251,7 +251,11 @@ const OfferingTemplate = ({ data }) => {
                 <PrimaryPageCTA
                     title={offering.CTA.Header}
                     subtitle={offering.CTA.body}
-                    buttons={offering.CTA.cta_button}
+                    primaryButtonText={offering.CTA.cta_button[0] && offering.CTA.cta_button[0].button_text}
+                    primaryButtonLink={offering.CTA.cta_button[0] && offering.CTA.cta_button[0].button_link}
+                    secondaryButtonText={offering.CTA.cta_button[1] && offering.CTA.cta_button[1].button_text}
+                    secondaryButtonLink={offering.CTA.cta_button[1] && offering.CTA.cta_button[1].button_link}
+
                 />
 
 

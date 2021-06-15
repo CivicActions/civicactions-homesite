@@ -3,8 +3,8 @@ import React from 'react';
 import RedLayout from '../../layouts/red';
 import {Helmet} from "react-helmet";
 import Hero from '../../components/hero.js';
-import PressPageCTA from "../../components/press-page-cta";
 import { Link } from 'gatsby';
+import PrimaryPageCTA from "../../components/primary-page-cta";
 
 const NSFRecomplete = () => {
 
@@ -26,11 +26,13 @@ const NSFRecomplete = () => {
                     <p className='body'>To learn more about how we’re advancing public service, read our <Link to='/case-studies'>latest case studies.</Link><br/></p>
                 </div>
             </div>
-            <PressPageCTA
+            <PrimaryPageCTA
                 title='Inspired by newsworthy work?'
                 subtitle='See what we can do together.'
                 primaryButtonText='EXPLORE SERVICES'
+                primaryButtonLink='/services'
                 secondaryButtonText='CONTRACTING INFO'
+                secondaryButtonLink='/contracting'
             />
         </RedLayout>
     );

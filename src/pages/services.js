@@ -382,8 +382,8 @@ const ServicesPage = ({ data }) => {
       <PrimaryPageCTA
         title='Start building public trust.'
         subtitle='Let’s create better government services.'
-        primaryButtonText='HIRE US'
         secondaryButtonText='CONTRACTING INFO'
+        secondaryButtonLink='/contracting'
       />
     </RedLayout>
   );

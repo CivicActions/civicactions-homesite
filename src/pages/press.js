@@ -3,8 +3,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 import RedLayout from '../layouts/red';
 import Hero from '../components/hero';
-import PrimaryPageCTA from '../components/primary-page-cta';
 import SEO from '../components/seo';
+import PrimaryPageCTA from "../components/primary-page-cta";
 
 const Press = () => {
   return (
@@ -179,10 +179,12 @@ const Press = () => {
         </div>
       </section>
       <PrimaryPageCTA
-        title='Inspired by newsworthy work?'
-        subtitle='See what we can do together.'
-        primaryButtonText='EXPLORE SERVICES'
-        secondaryButtonText='CONTRACTING INFO'
+          title='Inspired by newsworthy work?'
+          subtitle='See what we can do together.'
+          primaryButtonText='EXPLORE SERVICES'
+          primaryButtonLink='/services'
+          secondaryButtonText='CONTRACTING INFO'
+          secondaryButtonLink='/contracting'
       />
     </RedLayout>
   );

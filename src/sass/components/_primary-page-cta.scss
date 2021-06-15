@@ -18,13 +18,13 @@
 
   &__buttons {
     margin-top: px-to-rem(32px);
+
   }
 
   .button {
     display: block;
     max-width: fit-content;
     font-size: 18px;
-    font-weight: normal;
 
     &:last-child {
       margin-top: $small-spacing;
@@ -77,7 +77,7 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      width: 40%;
+      width: 45%;
     }
 
     .button {
