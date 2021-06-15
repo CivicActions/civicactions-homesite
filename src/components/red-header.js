@@ -12,17 +12,33 @@ import MobileMenu from '../components/mobile-menu/mobile-menu';
 const RedHeader = () => {
 
 
-    const [scroll, setScroll] = useState(false)
+    const [scrolled,setScrolled]=React.useState(false);
+    const [scrolledMobile,setScrolledMobile]=React.useState(false);
+    const handleScroll=() => {
+        const offset=window.scrollY;
+        if(offset > 500 ){
+            setScrolled(true);
+        }
+        else if(offset > 300) {
+            setScrolledMobile(true);
+        }
+        else{
+            setScrolled(false);
+            setScrolledMobile(false);
+        }
+    }
+
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            setScroll(window.scrollY > 450)
-        })
-    }, []);
+        window.addEventListener('scroll',handleScroll)
+    })
+    let headerClasses=['header'];
+    if(scrolled){
+        headerClasses.push('scrolled');
+    }
 
     return (
 
-        <header className={scroll ? "header red-header scrolled" : "header red-header"}>
-
+        <header className={`${scrolled ? "header red-header scrolled" : "header red-header"} ${scrolledMobile ? "scrolled-mobile" : ""}`}>
             <div className='red-header--header'><div className='inner'>
                 <Link to='/' className='logo'>
                     <img className='white-logo' src={whiteLogo} alt='Civic Actions Logo'></img>
