@@ -1,16 +1,16 @@
 .header {
-  padding: 40px 24px 18px;
+  padding: 40px 24px 0;
   top: 0;
   background: $colors-white;
   z-index: 11;
   @media(min-width: $tablet-screen) {
-    padding: 48px 48px 55px;
+    padding: 48px 48px 15px;
   }
   @media(min-width: $medium-large-screen) {
-    padding: 45px 5vw 20px;
+    padding: 45px 5vw 15px;
   }
   @media(min-width: 1200px) {
-    padding: 45px 0 20px;
+    padding: 45px 0 15px;
   }
 
   &.mobile-menu-open {
@@ -74,7 +74,7 @@
   }
 
   @media screen and (min-width: $large-screen) {
-    margin: 0 auto 70px auto;
+    margin: 0 auto ;
   }
 
 
@@ -90,20 +90,16 @@
   from {padding: 50px 0 20px;}
   to {padding: 15px 22px;}
 }
+.header.scrolled {
+  position: sticky ;
+}
 .header.scrolled,
 .header.scrolled-mobile{
-  //transition: padding-top 0.15ms ease-out;
-  //transition: padding-bottom 0.15ms linear;
   padding-top: 15px;
   padding-bottom: 15px;
   box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
   animation-name: scroll;
-  //animation-duration: 1s;
-  @media(min-width: $tablet-screen) {
-    position: sticky;
-  }
   .inner {
-
     margin-bottom: 0;
   }
   .logo img {

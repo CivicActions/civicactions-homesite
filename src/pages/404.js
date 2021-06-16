@@ -9,7 +9,8 @@ const NotFoundPage = () => {
   return (
     <GeneralLayout>
 
-      <div className="not-found">
+      <section className="not-found">
+        <div className='inner'>
         <title>Page Not found</title>
         <h1>404</h1>
         <h2>Well, that's awkward.</h2>
@@ -29,7 +30,8 @@ const NotFoundPage = () => {
             </p>
           </div>
         </div>
-      </div>
+        </div>
+      </section>
 
       <PrimaryPageCTA
           title='Let’s build a public success story.'
