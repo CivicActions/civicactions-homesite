@@ -127,7 +127,7 @@ const HomePage = () => {
               <Card
                 title='Security & Compliance'
                 icon={securityComplianceIcon}
-                link='/services#security'
+                link='/services#security-compliance'
               />
               <Card
                 title='Data Services'
@@ -137,7 +137,7 @@ const HomePage = () => {
               <Card
                 title='Workforce Development'
                 icon={workforceDevelopmentIcon}
-                link='/services#development'
+                link='/services#workforce-development'
               />
             </div>
             <LinkButton

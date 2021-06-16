@@ -34,7 +34,7 @@ const ServicesPage = ({ data }) => {
         <div className={scroll ? 'inner scroll' : 'inner'}>
           <Scrollspy
             className={'services--sidebar'}
-            items={['web-cms', 'service-modernization', 'product-design', 'security', 'data-services', 'development']}
+            items={['web-cms', 'service-modernization', 'product-design', 'security-compliance', 'data-services', 'workforce-development']}
             currentClassName='is-current'>
             <li>
               <Link className={`body`} to='#web-cms'>
@@ -52,7 +52,7 @@ const ServicesPage = ({ data }) => {
               </Link>
             </li>
             <li>
-              <Link className={`body`} to='#security'>
+              <Link className={`body`} to='#security-compliance'>
                 Security & Compliance
               </Link>
             </li>
@@ -63,7 +63,7 @@ const ServicesPage = ({ data }) => {
               </Link>
             </li>
             <li>
-              <Link className={`body`} to='#development'>
+              <Link className={`body`} to='#workforce-development'>
                 Workforce Development
               </Link>
             </li>
@@ -213,7 +213,7 @@ const ServicesPage = ({ data }) => {
                 <div className='h6 button'><Link to='/contact'>Design a better future</Link></div>
               </div>
             </section>
-            <section id={'security'}>
+            <section id={'security-compliance'}>
               <img
                 alt=''
                 className='services-content--icon'
@@ -237,19 +237,19 @@ const ServicesPage = ({ data }) => {
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
               <div className='body'>Defense Security Cooperation Agency</div>
-              <Link className='body-large'>
+              <Link to='/case-studies/globalnet-platform-support' className='body-large'>
                 Supporting international peace partners with continuous
                 compliance
               </Link>
               <div className='body'>
-                Centers for Medicare and Medicaid Services
+                Various agencies
               </div>
-              <Link className='body-large'>
-                Enabling rapid ATO for federal health care websites
+              <Link to='https://www.youtube.com/watch?v=jsdUYUiKM3U&list=PLbbanFptQWaKZp8_IFnZmJbsa2UGuj3ax&index=6' className='body-large'>
+                Helping government automate federal compliance
               </Link>
 
               <div className='cta'>
-                <h3 className='h4'> How we can help you</h3>
+                <h3 className='h4'>How we can help you</h3>
                 <ul>
                   <li>DevSecOps</li>
                   <li>Continuous integration / deployment (CI / CD)</li>
@@ -283,15 +283,15 @@ const ServicesPage = ({ data }) => {
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
               <div className='body'>City of Louisville</div>
-              <Link className='body-large'>
+              <Link to='/case-studies/louisville-open-data' className='body-large'>
                 Supporting local government transparency
               </Link>
               <div className='body'>
-                Georgia Governor's Office of Student Achievement
+                Georgia Board of Healthcare Workforce
               </div>
-              <Link className='body-large'>
-                Tracking school performance in Georgia
-              </Link>
+              <div className='body-large'>
+                Open data dashboards to serve healthcare workers in Georgia
+              </div>
               <div className='cta'>
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
@@ -308,7 +308,7 @@ const ServicesPage = ({ data }) => {
                 <div className='h6 button'><Link to='/contact'>BE DATA-DRIVEN</Link></div>
               </div>
             </section>
-            <section id={'development'}>
+            <section id={'workforce-development'}>
               <img
                 alt=''
                 className='services-content--icon'
@@ -330,25 +330,15 @@ const ServicesPage = ({ data }) => {
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
               <div className='body'>Federal Acquisitions Institute</div>
-              <Link className='body-large'>
-                Digital services education for federal procurement officers
-              </Link>
-              <div className='body'>
-                California Government Operations Agency
-              </div>
-              <Link className='body-large'>
-                Helping state employees adopt open source technologies
-              </Link>
-              <div className='body'>Various clients</div>
-              <Link className='body-large'>
-                Telework training for agencies post-COVID
-              </Link>
+              <a href='https://medium.com/civicactions/what-we-learned-from-training-procurement-officers-to-buy-modern-government-it-cc6309df4103' className='body-large'>
+                DITAP program certification for federal procurement officers
+              </a>
               <div className='cta'>
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
-                  <li>DITAP program certification</li>
+                  <li><Link to='/services/ditap'>DITAP program certification</Link></li>
                   <li>Telework consulting and training</li>
-                  <li>Agile and Human Centered Design coaching</li>
+                  <li>Agile and Human-Centered Design coaching</li>
                   <li>Team culture and performance coaching</li>
                   <li>Technology strategy consulting</li>
                   <li>Free and open source software (FOSS) education</li>
@@ -369,22 +359,25 @@ const ServicesPage = ({ data }) => {
             government digital services.
           </div>
           <div className='ellipses'>
-            <span className='ellipse'>customer experience</span>
+
             <span className='ellipse'>accessibility</span>
-            <span className='ellipse'>drupal</span>
-            <span className='ellipse us-design'>u.s. web design standards</span>
             <span className='ellipse'>agile</span>
-            <span className='ellipse'>open source</span>
-            <span className='ellipse'>human centered design</span>
+            <span className='ellipse'>DevSecOps</span>
             <span className='ellipse'>distributed teams</span>
+            <span className='ellipse'>drupal</span>
+            <span className='ellipse'>human-centered design</span>
+            <span className='ellipse'>open source</span>
+            <span className='ellipse'>open data</span>
+            <span className='ellipse'>u.s. web design standards</span>
+            
           </div>
         </div>
       </section>
       <PrimaryPageCTA
         title='Start building public trust.'
         subtitle='Let’s create better government services.'
+        primaryButtonText='HIRE US'
         secondaryButtonText='CONTRACTING INFO'
-        secondaryButtonLink='/contracting'
       />
     </RedLayout>
   );
