@@ -52,9 +52,6 @@ const FeedbackPage = () => {
       <PrimaryPageCTA
         title='Let’s build a public success story.'
         subtitle='Get in touch to start.'
-        primaryButtonText='Put us to work'
-        secondaryButtonText='Join our team'
-        secondaryButtonLink='/careers'
       />
     </RedLayout>
   );

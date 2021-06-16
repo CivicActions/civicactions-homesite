@@ -87,8 +87,6 @@ const Contact = () => {
       <PrimaryPageCTA
         title='Let’s build a public success story.'
         subtitle='Get in touch to start.'
-        primaryButtonText='HIRE US'
-        secondaryButtonText='EXPLORE SERVICES'
       />
     </RedLayout>
   );

@@ -31,7 +31,10 @@ const NotFoundPage = () => {
         </div>
       </div>
 
-      <PrimaryPageCTA title="Let’s build a public success story." subtitle="Get in touch to start." primaryButtonText="PUT US TO WORK" secondaryButtonText="JOIN OUR TEAM" />
+      <PrimaryPageCTA
+          title='Let’s build a public success story.'
+          subtitle='Get in touch to start.'
+      />
 
     </GeneralLayout>
   );

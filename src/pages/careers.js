@@ -287,7 +287,9 @@ const CareersPage = () => {
         title='Help us build the future.'
         subtitle='Let’s create better government services together.'
         primaryButtonText='See open positions'
+        primaryButtonLink='/careers#open-positions'
         secondaryButtonText='Meet our team'
+        secondaryButtonLink='/team'
       />
     </RedLayout>
   );

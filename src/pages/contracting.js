@@ -199,7 +199,6 @@ const ContractingPage = () => {
       <PrimaryPageCTA
         title='Let’s build a public success story.'
         subtitle='Get in touch to start.'
-        primaryButtonText='PUT US TO WORK'
         secondaryButtonText='Explore Services'
         secondaryButtonLink='/services/'
       />

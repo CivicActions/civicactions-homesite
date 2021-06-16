@@ -98,10 +98,8 @@ const LicensingPage = () => {
         </div>
       </section>
       <PrimaryPageCTA
-        title='Want to build a more open world?'
-        subtitle='Let’s work together.'
-        primaryButtonText='PUT US TO WORK'
-        secondaryButtonText='JOIN OUR TEAM'
+          title='Let’s build a public success story.'
+          subtitle='Get in touch to start.'
       />
     </GeneralLayout>
   );

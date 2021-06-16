@@ -8,6 +8,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import alanaCaseyProfilePicture from '../files/images/alanna_casey_profile.jpg';
 import LinkButton from '../components/link-button';
 import SEO from '../components/seo';
+import PrimaryPageCTA from "../components/primary-page-cta";
 
 const TeamPage = () => {
   const data = useStaticQuery(graphql`
@@ -101,6 +102,10 @@ const TeamPage = () => {
         name='Alanna Casey'
         role='Technical Writer'
         img={alanaCaseyProfilePicture}
+      />
+      <PrimaryPageCTA
+          title='Let’s build a public success story.'
+          subtitle='Get in touch to start.'
       />
     </RedLayout>
   );
