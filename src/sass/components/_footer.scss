@@ -166,7 +166,7 @@
 }
 
 .grid-container {
-  @media (min-width: $tablet-screenpx) {
+  @media (min-width: $tablet-screen) {
     display: grid;
   }
 }
