@@ -3,9 +3,11 @@
   width: 100%;
   margin-bottom: 56px;
   @media(min-width: $tablet-screen) {
-    margin-bottom: 48px;
+    margin-bottom: 12px;
+    margin-top: 30px;
   }
   @media(min-width: $medium-large-screen) {
+    margin-top: 70px;
     margin-bottom: 100px;
   }
 

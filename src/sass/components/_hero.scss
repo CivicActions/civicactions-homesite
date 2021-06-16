@@ -4,10 +4,13 @@
     margin: 0 auto 86px;
     background-color: $colors-white;
     box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
+    margin-top: 33px;
   }
   @media(min-width: $medium-large-screen) {
     max-width: 825px;
+    margin-top: 75px;
   }
+
   .inner {
     padding: 0 24px;
     @media(min-width: $tablet-screen) {
