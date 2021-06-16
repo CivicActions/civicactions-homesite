@@ -8,7 +8,7 @@
     max-width: $max-width;
     margin-top: 40px;
   }
-  
+
   @media(min-width: 1200px) {
     margin: 0 auto ;
   }
@@ -144,5 +144,11 @@
       }
 
     }
+  }
+}
+
+.home--case-studies-section .teasers {
+  @media(min-width: $large-screen) {
+    margin-top: 40px;
   }
 }
