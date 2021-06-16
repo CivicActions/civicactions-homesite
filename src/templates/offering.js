@@ -71,7 +71,7 @@ const OfferingTemplate = ({ data }) => {
 
 
         )) : null;
-    console.log(offering);
+    
     return (
         <RedLayout>
             <Helmet>
