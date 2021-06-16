@@ -7,12 +7,15 @@
   color: $colors-white;
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 34px;
   display: inline-block;
   font-family: $secondary-font;
   text-transform: uppercase;
   text-decoration: none;
+  @media(min-width: $tablet-screen) {
+    font-size: 18px;
+  }
 
   &:hover {
     background-color: $colors-red-60;

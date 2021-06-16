@@ -6,11 +6,6 @@
     margin: 0 auto;
     padding: 40px 0 64px;
   }
-  .inner {
-    @media(min-width: 1024px) {
-      margin: 0;
-    }
-  }
   h2 {
     font-size: 18px;
     font-weight: 700;
@@ -20,7 +15,7 @@
   }
 
   .checkboxes {
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
@@ -37,6 +32,7 @@
         -webkit-appearance: none;
         margin-top: 5px;
         position: relative;
+        cursor: pointer;
       }
       input[type="checkbox"]::before {
         position: relative;

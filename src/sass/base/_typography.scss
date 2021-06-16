@@ -35,7 +35,7 @@ h1,
   line-height: 33.6px;
 
   font-size: 24px;
-  @media(min-width: 768px) {
+  @media(min-width: $tablet-screen) {
     font-size: 36px;
     line-height: 50.4px;
   }

@@ -10,9 +10,10 @@
     position: absolute;
     width: 100%;
 
-    @media(min-width: 768px) {
-      height: 9%;
+
+    @media(min-width: $tablet-screen) {
       width: 70%;
+      height: 100%;
     }
     @media(min-width: $medium-large-screen){
       height: 577px;

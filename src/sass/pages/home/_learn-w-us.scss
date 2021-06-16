@@ -5,7 +5,7 @@
   background-color: $colors-grey-warm-4;
   padding-bottom: 0 !important;
 
-  @media(min-width: 768px) {
+  @media(min-width: $tablet-screen) {
     background-color: transparent;
     position: relative;
   }
@@ -14,7 +14,7 @@
     display: none;
     background-color: $colors-grey-warm-4;
 
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       display: block;
       height: 100%;
       width: 75%;
@@ -34,14 +34,14 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin: 48px 24px 0;
+    margin-top: 40px;
 
-    @media(min-width: 768px) {
-      margin: 64px 48px 0;
+    @media(min-width: $tablet-screen) {
+      margin-top: 56px;
     }
 
     @media(min-width: $medium-large-screen) {
-      margin: 120px auto 0;
+      margin-top: 112px;
       padding: 0 48px;
     }
 
@@ -53,7 +53,7 @@
   h2 {
     margin-top: 48px;
     margin-bottom: 16px;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       margin-top: 56px;
     }
     @media(min-width: $medium-large-screen) {
@@ -110,14 +110,7 @@
       padding: 0 40px 40px;
     }
 
-    &:hover {
-      // @todo switch to a different arrow icon on hover.
-      // background-color: #f3f3f3;
-    }
-
     &:active {
-      // @todo switch to a different arrow icon when active.
-      // background-color: #f3f3f3;
       box-shadow: none;
     }
   }
@@ -138,41 +131,30 @@
     .grid-item-3-1,
     .grid-item-3-2 {
       height: 100%;
-      background-color: $colors-white;
-      box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3);
-      flex-direction: row;
-      align-items: center;
-      padding: 32px;
-      @media(min-width: $medium-large-screen) {
-        padding: 40px;
-        display: flex;
-      }
-      a {
-        width: 100%;
+      display: flex;
+        background-color: $colors-white;
+        box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3);
         text-decoration: none;
+        padding: 32px;
+        flex-direction: row;
+
         @media(min-width: $medium-large-screen) {
-          display: flex;
+          padding: 40px;
+
         }
         h3 {
-          float: left;
-          width: 87%;
+          margin: auto;
           @media(min-width: $medium-large-screen) {
             width: auto;
-            float: unset;
           }
         }
-        img {
-          float: right;
-          @media(min-width: $medium-large-screen) {
-            float: unset;
-          }
+        &:hover,
+        &:focus,
+        &:focus-within {
+          background-color: #f3f3f3;
+          text-decoration: underline;
         }
-      }
-      &:hover,
-      &:focus,
-      &:focus-within {
-        background-color: #f3f3f3;
-      }
+
     }
 
     img {
@@ -181,9 +163,6 @@
         saturate(600%) contrast(0.8);
     }
 
-    img:hover {
-      //background-color: #f3f3f3;
-    }
 
     img:active {
       background-color: #f3f3f3;
@@ -200,7 +179,7 @@
 
 
     .body {
-      padding: 0 20px 36px;
+      padding: 0 24px 36px;
     }
 
     .grid-item-3 {

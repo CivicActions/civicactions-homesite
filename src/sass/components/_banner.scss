@@ -16,10 +16,10 @@
   }
   .inner {
     max-width: $max-width;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     height: 50px;
-    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
   }

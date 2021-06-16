@@ -10,7 +10,6 @@
     @media (min-width: $medium-large-screen) {
       max-width: $max-width;
       display: flex;
-      margin: 0 auto;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
@@ -60,7 +59,7 @@
         text-decoration: none !important;
         line-height: 33px;
       }
-      @media(min-width: 768px) {
+      @media(min-width: $tablet-screen) {
         float: left;
       }
     }
@@ -70,7 +69,7 @@
       height: 50px;
       margin-right: 20px;
       float: left;
-      margin-bottom: 12px;
+      //margin-bottom: 12px;
     }
 
     .services-content--label {
@@ -79,6 +78,10 @@
       float: left;
       padding-top: 11px;
       text-transform: uppercase;
+      width: 73%;
+      @media(min-width: 392px) {
+        width: auto;
+      }
     }
 
     .title {
@@ -88,9 +91,9 @@
       font-size: 20px;
       line-height: 33px;
       font-weight: 400;
-      margin-top: 14px;
+      margin-top: 8px;
       display: inline-block;
-      @media(min-width: 768px) {
+      @media(min-width: $tablet-screen) {
         font-size: 28px;
       }
       @media(min-width: $medium-large-screen) {
@@ -102,7 +105,7 @@
     .description {
       font-size: 16px;
       line-height: 33px;
-      @media(min-width: 768px) {
+      @media(min-width: $tablet-screen) {
         font-size: 18px;
       }
       @media(min-width: $medium-large-screen) {
@@ -114,18 +117,24 @@
       color: $colors-mint-cool-60v;
       padding: 8px 0 32px;
       display: block;
+      @media(min-width: $tablet-screen) {
+        padding: 8px 0 40px;
+      }
+      @media(min-width: $medium-large-screen) {
+        padding: 8px 0 64px;
+      }
     }
     .h4 {
       font-weight: 400;
-      padding-bottom: 16px;
+      padding-bottom: 10px;
       font-size: 20px;
-      @media(min-width: 768px) {
+      @media(min-width: $tablet-screen) {
         font-size: 24px;
-        padding-bottom: 24px;
+        padding-bottom: 18px;
       }
       @media(min-width: $medium-large-screen) {
         font-size: 28px;
-        padding-bottom: 32px;
+        padding-bottom: 26px;
       }
     }
 
@@ -136,12 +145,14 @@
 
     .cta {
       background-color: #f5f5f0;
-      padding: 40px;
-      margin-top: 0;
-      margin-bottom: 48px;
+      padding: 24px;
+      //margin-top: 0;
+      //margin-bottom: 48px;
+      margin: 0 -24px 48px;
       overflow: auto;
-      @media(min-width: 768px) {
-        margin-bottom: 72px;
+      @media(min-width: $tablet-screen) {
+        margin: 0 0 72px;
+        padding: 40px;
       }
       @media(min-width: $medium-large-screen) {
         margin: 24px 0 112px;
@@ -160,7 +171,7 @@
           font-weight: 300;
           font-size: 16px;
           line-height: 22px;
-          @media(min-width: 768px) {
+          @media(min-width: $tablet-screen) {
             font-size: 20px;
             line-height: 28px;
           }
@@ -252,6 +263,13 @@
       background-color: #f5f5f0;
       padding: 20px;
       margin: 32px 0;
+    }
+  }
+}
+#product-design {
+  .cta {
+    .button a {
+      padding: 12px 10px;
     }
   }
 }

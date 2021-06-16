@@ -3,7 +3,6 @@
   margin-top: 10px;
   .inner {
     max-width:720px;
-    margin: 0 auto;
     .press-release--items {
       margin-top: 56px;
       display: grid;
@@ -19,7 +18,7 @@
         grid-area: 2/4;
         padding-bottom: 16px;
         line-height: 22px;
-        @media(min-width: 768px) {
+        @media(min-width: $tablet-screen) {
           font-size: 20px;
           line-height: 34px;
         }
@@ -55,7 +54,7 @@
 }
 .work-awards--component {
   .inner {
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       padding: 0 1.25rem !important;
     }
   }

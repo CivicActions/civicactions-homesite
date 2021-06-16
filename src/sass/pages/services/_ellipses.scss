@@ -7,13 +7,13 @@
     position: relative;
     max-width: $max-width;
     display: flex;
-    margin: 0 auto;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
 
     h2 {
       max-width: 900px;
+      font-weight: 400;
     }
 
     .body-large {
@@ -31,20 +31,18 @@
     .ellipse {
       text-transform: uppercase;
       padding: 10px 24px;
-      
       box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3);
       border-radius: 100px;
       background-color: $colors-white;
       margin-right: 16px;
       margin-bottom: 24px;
     }
-  }
-
-  @media screen and (max-width: $large-screen) {
-    .inner {
-      margin: 0 5vw;
+    .ellipse.us-design {
+      padding: 10px 23px;
     }
   }
+
+
 
   @media screen and (max-width: $medium-large-screen) {
     h2 {

@@ -1,9 +1,6 @@
 .section--case-study--approaches {
   .inner {
     overflow: auto;
-    @media(min-width: 768px) {
-      margin: 0 48px;
-    }
   }
   .first-approach {
     margin-top: 0 !important;
@@ -27,7 +24,7 @@
   }
   .approach--with-image {
     margin: 24px 0 0;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       margin: 20px 0 0;
     }
     @media(min-width: $medium-large-screen) {

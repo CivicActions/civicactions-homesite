@@ -1,6 +1,6 @@
 .home--clients-section {
   margin-bottom: 24px;
-  @media(min-width: 768px) {
+  @media(min-width: $tablet-screen) {
     margin-bottom: 29px;
   }
   @media(min-width: $medium-large-screen) {
@@ -8,7 +8,7 @@
   }
   .grid {
     margin-top: 24px;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       margin-top: 28px;
     }
     @media(min-width: $medium-large-screen) {
@@ -51,16 +51,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 0 auto;
   }
 
   @media screen and (max-width: $large-screen) {
-    .body-large {
-      margin: 0 5vw;
-    }
+
 
     .grid {
-      margin: 40px 0;
+      margin: 24px 0;
     }
   }
   @media screen and (max-width: $small-screen) {

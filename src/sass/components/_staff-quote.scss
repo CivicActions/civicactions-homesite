@@ -3,8 +3,17 @@
   color: $colors-grey-90;
   background-color: $colors-white;
   padding: 85px 0;
-  @media (min-width: $medium-large-screen) {
+  @media (min-width: 1024px) {
     background-color: $colors-grey-warm-4;
+  }
+  .inner {
+    margin: 0 24px;
+    @media(min-width: $tablet-screen) {
+      margin: 0 48px;
+    }
+    @media(min-width: $medium-large-screen) {
+      margin: 0 auto;
+    }
   }
   h4,
   .body {
@@ -25,7 +34,6 @@
     position: relative;
     max-width: 720px;
     display: flex;
-    margin: 0 auto;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +53,7 @@
     top: 5px;
     left: 0;
     max-width: 26px;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       max-width: 56px;
     }
 
@@ -55,7 +63,7 @@
     justify-content: space-between;
     align-items: flex-start;
     text-align: center;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       padding-left: 32px;
     }
     @media(min-width: $medium-large-screen) {
@@ -63,11 +71,6 @@
     }
   }
 
-  @media screen and (max-width: $large-screen) {
-    .inner {
-      margin: 0 5vw;
-    }
-  }
 
   @media screen and (max-width: $medium-large-screen) {
     .inner {
@@ -77,7 +80,7 @@
 
   @media screen and (max-width: $tablet-screen) {
     padding: 55px 0;
-    margin: 64px 0 0;
+    margin: 48px 0;
 
     .picture {
       display: none;

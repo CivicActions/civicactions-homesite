@@ -6,7 +6,7 @@
   }
   h2 {
     margin: 0 24px;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       margin: 0 36px;
     }
     @media(min-width: 1200px) {
@@ -19,7 +19,6 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 32px;
-      margin: 0;
     }
 
     & > div {

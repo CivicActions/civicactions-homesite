@@ -1,18 +1,12 @@
 .section--case-studies--teasers .inner,
 .home--case-studies-section .teasers {
 
-  //@media(min-width: 768px) {
-  //  margin: 0 20px;
-  //}
-  @media(min-width: 768px) {
+  @media(min-width: $tablet-screen) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 32px;
     max-width: $max-width;
-    margin: 40px 5vw 0;
-  }
-  @media(min-width: 1200px) {
-    margin: 0 auto ;
+    margin-top: 40px;
   }
 
   .no-img-teaser {
@@ -20,10 +14,10 @@
     height: 235px;
     background-color: #1B1B1B;
     opacity: .85;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       height: 230px;
     }
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       height: 426px;
     }
     @media(min-width: 1200px) {
@@ -55,12 +49,12 @@
         padding: 16px;
         color: $colors-white;
         height: 100%;
-        @media(min-width: 768px) {
+        @media(min-width: $tablet-screen) {
           font-size: 16px;
           line-height: 24px;
           padding: 24px;
         }
-        @media(min-width: 1024px) {
+        @media(min-width: $medium-large-screen) {
           padding: 40px;
           font-size: 20px;
           line-height: 33px;
@@ -72,10 +66,10 @@
       position: relative;
       margin-bottom: 40px;
       overflow: hidden;
-      @media(min-width: 768px) {
+      @media(min-width: $tablet-screen) {
         height: 280px;
       }
-      @media(min-width: 1024px) {
+      @media(min-width: $medium-large-screen) {
         height: 395px;
       }
 
@@ -98,7 +92,7 @@
 
       .title-wrapper {
         padding: 16px;
-        @media(min-width: 768px) {
+        @media(min-width: $tablet-screen) {
           padding: 24px;
         }
         @media(min-width: $medium-large-screen) {
@@ -123,7 +117,7 @@
         font-size: 16px;
         line-height: 22px;
         margin-bottom: 0;
-        @media(min-width: 768px) {
+        @media(min-width: $tablet-screen) {
           margin-top: 0;
         }
         @media(min-width: $medium-large-screen) {

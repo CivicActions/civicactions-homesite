@@ -5,10 +5,13 @@
 
   //=========== Mobile-first styles ============
 
-  // @todo Site-wide inner containers should be consistently sized.
+
   .inner {
     @include section-inner-padding;
-    margin-top: 0 !important; // override the section top margins in the footer.
+    padding: px-to-rem(48px) 0;
+    @media(min-width: $medium-large-screen) {
+      padding: px-to-rem(80px) 48px;
+    }
   }
 
   .footer__bottom-links {
@@ -29,7 +32,7 @@
 
     li {
       list-style: none;
-      padding: px-to-rem(16px) 0;
+      padding: px-to-rem(8px) 0;
     }
 
     a {
@@ -118,7 +121,7 @@
       }
 
       li {
-        padding: px-to-rem(14px) 0;
+        padding: px-to-rem(4px) 0;
       }
 
       &--wrapper {
@@ -140,19 +143,19 @@
 
     .footer__bottom-links {
       gap: px-to-rem(36px);
-      align-self: end;
       flex-direction: row;
       justify-content: flex-end;
+      padding-top: 0;
 
       p {
         margin: 0;
       }
     }
 
-    .footer__contact,
-    .footer__social {
-      align-self: end;
-    }
+    //.footer__contact,
+    //.footer__social {
+    //  align-self: end;
+    //}
 
     .social-icon {
       text-align: right;
@@ -172,4 +175,9 @@
   text-transform: uppercase;
   font-weight: 600;
   padding: 0;
+}
+.footer__contact {
+  .footer__about-text {
+    margin-top: 25px;
+  }
 }
