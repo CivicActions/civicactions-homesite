@@ -70,12 +70,10 @@ const TeamPage = () => {
       <SEO title='Team' description='Meet the humans of CivicActions.' />
       <section className='careers--hero-section hero-component'>
         <div className='inner'>
-          <h1>Work for the public good.</h1>
+          <h1>Meet the humans of CivicActions</h1>
           <p className='body'>
-            Join our team of talented and open-minded people working to build
-            modern and accessible government services for all.
+            People who work with us say there’s “something magical” about our team. We are good listeners, strategic thinkers, honest communicators, and problem solvers. (We’re also cheerful and kind, which is a nice bonus.) Let’s get to know each other!
           </p>
-          <LinkButton src='/careers#open-positions' text='See open positions' />
         </div>
       </section>
 
@@ -123,9 +121,9 @@ const FilterButtons = ({ team, parentCallback, filterState }) => {
 
   const category = [
     { id: 1, value: 'Leadership', name: 'Leadership' },
-    { id: 2, value: 'Growth Strategy', name: 'Growth_Strategy' },
-    { id: 3, value: 'People Operations', name: 'People_Operations' },
-    { id: 4, value: 'Product Design', name: 'Product_Design' },
+    { id: 2, value: 'Growth & Strategy', name: 'Growth_Strategy' },
+    { id: 3, value: 'People & Operations', name: 'People_Operations' },
+    { id: 4, value: 'Product & Design', name: 'Product_Design' },
     { id: 5, value: 'Engineering', name: 'Engineering' },
     { id: 6, value: 'Client Services', name: 'Client_Services' },
   ];

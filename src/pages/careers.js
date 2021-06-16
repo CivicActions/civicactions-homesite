@@ -44,7 +44,7 @@ const CareersPage = () => {
           </p>
           <LinkButton
             src='/careers#open-positions'
-            text='See all open positions'
+            text='See open positions'
           />
         </div>
       </section>
@@ -69,7 +69,7 @@ const CareersPage = () => {
                 us to care for ourselves and each other.
               </p>
               <p className='body'>
-                <Link to=''>Learn about how we bring our humanity to work</Link>
+                <Link to='https://medium.com/civicactions/improving-scrum-team-flow-on-digital-service-projects-6723d95eaad8'>Learn about how we bring our humanity to work</Link>
               </p>
             </div>
             <div className='right-aligned'>
@@ -92,7 +92,7 @@ const CareersPage = () => {
                 people who want to make a difference.
               </p>
               <p className='body'>
-                <Link to=''>Learn about our unique hiring process</Link>
+                <Link to='https://medium.com/civicactions/we-hire-people-not-resumes-and-other-quirks-to-the-civicactions-application-process-7aab30d69c1c'>Learn about our unique hiring process</Link>
               </p>
             </div>
           </div>
@@ -199,7 +199,7 @@ const CareersPage = () => {
           <p className='body'>
             Here’s what to expect from our hiring process. We do our best to
             respect your time as we explore the possibility of adding you to our
-            high-caliber team. Check out our tips on creating a noteworthy
+            high-caliber team. <br/>Check out our tips on creating a noteworthy
             application.
           </p>
           <div className='steps-grid'>
@@ -237,8 +237,7 @@ const CareersPage = () => {
             </div>
           </div>
           <p className='h5'>
-            If all goes well, we will answer any questions you may have and
-            welcome you to the CivicActions family!
+            If all goes well, we will answer any questions and welcome you to the CivicActions family!
           </p>
         </div>
       </section>
@@ -267,17 +266,17 @@ const CareersPage = () => {
                 <h3>How our distributed team makes up for a year apart</h3>
                 <img width='32px' src={arrowIcon} alt=''></img>
               </a>
-              <a href='/team' className='grid-item-3-2'>
-                <h3>Meet the humans of CivicActions</h3>
+              <a href='https://medium.com/civicactions/what-fierce-openness-can-do-for-government-dd1d3ed518af' className='grid-item-3-2'>
+                <h3>What "fierce openness" can do for government</h3>
                 <img width='32px' src={arrowIcon} alt=''></img>
               </a>
             </div>
           </div>
-          <LinkButton text='More posts & videos' />
+          <a href='https://medium.com/civicactions' className='button button__primary'>More posts and videos</a>
         </div>
       </section>
       <StaffQuote
-        image={irisIbekweProfilePicture}
+        img={irisIbekweProfilePicture}
         quote='“I love the honest, collaborative atmosphere, and the way CivicActions prioritizes the well-being of team members.”'
         name='Iris Ibekwe'
         role='Engineer'

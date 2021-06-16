@@ -89,7 +89,9 @@
     align-items: flex-start;
     justify-content: center;
   }
-
+  img {
+    max-width: 714px;
+  }
   .column {
     width: 100%;
     justify-content: start;
@@ -115,6 +117,7 @@
   @media screen and (max-width: $large-screen) {
     img {
       width: 100%;
+      max-width: 714px;
     }
 
     h2 {

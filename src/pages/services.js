@@ -34,7 +34,7 @@ const ServicesPage = ({ data }) => {
         <div className={scroll ? 'inner scroll' : 'inner'}>
           <Scrollspy
             className={'services--sidebar'}
-            items={['web-cms', 'it-service', 'product-design', 'security', 'data-services', 'development']}
+            items={['web-cms', 'service-modernization', 'product-design', 'security-compliance', 'data-services', 'workforce-development']}
             currentClassName='is-current'>
             <li>
               <Link className={`body`} to='#web-cms'>
@@ -42,7 +42,7 @@ const ServicesPage = ({ data }) => {
               </Link>
             </li>
             <li>
-              <Link className={`body`} to='#it-service'>
+              <Link className={`body`} to='#service-modernization'>
                 IT & Service Modernization
               </Link>
             </li>
@@ -52,7 +52,7 @@ const ServicesPage = ({ data }) => {
               </Link>
             </li>
             <li>
-              <Link className={`body`} to='#security'>
+              <Link className={`body`} to='#security-compliance'>
                 Security & Compliance
               </Link>
             </li>
@@ -63,7 +63,7 @@ const ServicesPage = ({ data }) => {
               </Link>
             </li>
             <li>
-              <Link className={`body`} to='#development'>
+              <Link className={`body`} to='#workforce-development'>
                 Workforce Development
               </Link>
             </li>
@@ -85,34 +85,35 @@ const ServicesPage = ({ data }) => {
                 system that will grow with you into the future.
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
-              <div className='body'>US Department of Veterans Affairs</div>
-              <Link className='body-large'>Modern CMS to support veterans</Link>
+              <div className='body'>U.S. Department of Veterans Affairs</div>
+              <Link to='/case-studies/va-cms-modernization' className='body-large'>Built a modern CMS for VA.gov</Link>
               <div className='body'>
                 Centers for Medicare and Medicaid Services
               </div>
-              <Link className='body-large'>
-                Human-centered health care online
+              <Link to='/case-studies/cms-web-experience-services' className='body-large'>
+                Designed a user-friendly health journey for seniors
               </Link>
               <div className='cta'>
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
                   <li>
-                    <Link>Research and discovery</Link>
+                    <Link to='https://accessibility.civicactions.com/posts/heart-accessibility '>Accessibility consulting and training</Link>
                   </li>
                   <li>
-                    <Link>CMS development and migration</Link>
+                    Research and discovery
                   </li>
                   <li>
-                    <Link>User experience and visual design</Link>
+                    CMS development and migration
+                  </li>
+                  <li>
+                    User experience and visual design
                   </li>
                   <li>Custom front end development</li>
                   <li>Content design and strategy</li>
                   <li>
-                    <Link>Maintenance and support</Link>
+                    Maintenance and support
                   </li>
-                  <li>
-                    <Link>Accessibility consulting and training</Link>
-                  </li>
+
                   <li>Cloud infrastructure</li>
                   <li>Product management</li>
                   <li>Agile delivery management</li>
@@ -120,7 +121,7 @@ const ServicesPage = ({ data }) => {
                 <div className='h6 button'><Link to='/contact'>IMPROVE YOUR WEBSITE</Link></div>
               </div>
             </section>
-            <section id={'it-service'}>
+            <section id={'service-modernization'}>
               <img alt='' className='services-content--icon' src={itModernizationIcon} />
               <div className='h6 services-content--label'>
                 IT & service modernization
@@ -138,15 +139,15 @@ const ServicesPage = ({ data }) => {
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
               <div className='body'>
-                California Child Welfare Digital Service
+                California Child Welfare Digital Services
               </div>
-              <Link className='body-large'>
+              <Link to='https://cwds.ca.gov/ ' className='body-large'>
                 Provided DevOps support for child welfare systems
               </Link>
               <div className='body'>
                 New York Metropolitan Transit Authority
               </div>
-              <Link className='body-large'>
+              <Link to='/case-studies/nyc-metro-transit-digital-clocks ' className='body-large'>
                 Connected Drupal and the Internet of Things to power digital
                 signage
               </Link>
@@ -189,11 +190,11 @@ const ServicesPage = ({ data }) => {
               <div className='body'>
                 Centers for Medicare and Medicaid Services
               </div>
-              <Link className='body-large'>
+              <Link to='/case-studies/cms-design-challenge-mvp' className='body-large'>
                 Designed a persona-driven strategy for Medicare benefits
               </Link>
               <div className='body'>National Science Foundation</div>
-              <Link className='body-large'>
+              <Link to='/case-studies/nsf-website-redesign' className='body-large'>
                 Improved user experience to support science research
               </Link>
               <div className='cta'>
@@ -206,13 +207,13 @@ const ServicesPage = ({ data }) => {
                   <li>User experience and visual design</li>
                   <li>Content design and strategy</li>
                   <li>Business and impact analysis</li>
-                  <li>Agile and Human Centered Design training</li>
+                  <li>Agile and Human-Centered Design training</li>
                   <li>Change management consulting</li>
                 </ul>
                 <div className='h6 button'><Link to='/contact'>Design a better future</Link></div>
               </div>
             </section>
-            <section id={'security'}>
+            <section id={'security-compliance'}>
               <img
                 alt=''
                 className='services-content--icon'
@@ -236,19 +237,19 @@ const ServicesPage = ({ data }) => {
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
               <div className='body'>Defense Security Cooperation Agency</div>
-              <Link className='body-large'>
+              <Link to='/case-studies/globalnet-platform-support' className='body-large'>
                 Supporting international peace partners with continuous
                 compliance
               </Link>
               <div className='body'>
-                Centers for Medicare and Medicaid Services
+                Various agencies
               </div>
-              <Link className='body-large'>
-                Enabling rapid ATO for federal health care websites
+              <Link to='https://www.youtube.com/watch?v=jsdUYUiKM3U&list=PLbbanFptQWaKZp8_IFnZmJbsa2UGuj3ax&index=6' className='body-large'>
+                Helping government automate federal compliance
               </Link>
 
               <div className='cta'>
-                <h3 className='h4'> How we can help you</h3>
+                <h3 className='h4'>How we can help you</h3>
                 <ul>
                   <li>DevSecOps</li>
                   <li>Continuous integration / deployment (CI / CD)</li>
@@ -282,15 +283,15 @@ const ServicesPage = ({ data }) => {
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
               <div className='body'>City of Louisville</div>
-              <Link className='body-large'>
+              <Link to='/case-studies/louisville-open-data' className='body-large'>
                 Supporting local government transparency
               </Link>
               <div className='body'>
-                Georgia Governor's Office of Student Achievement
+                Georgia Board of Healthcare Workforce
               </div>
-              <Link className='body-large'>
-                Tracking school performance in Georgia
-              </Link>
+              <div className='body-large'>
+                Open data dashboards to serve healthcare workers in Georgia
+              </div>
               <div className='cta'>
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
@@ -307,7 +308,7 @@ const ServicesPage = ({ data }) => {
                 <div className='h6 button'><Link to='/contact'>BE DATA-DRIVEN</Link></div>
               </div>
             </section>
-            <section id={'development'}>
+            <section id={'workforce-development'}>
               <img
                 alt=''
                 className='services-content--icon'
@@ -329,25 +330,15 @@ const ServicesPage = ({ data }) => {
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
               <div className='body'>Federal Acquisitions Institute</div>
-              <Link className='body-large'>
-                Digital services education for federal procurement officers
-              </Link>
-              <div className='body'>
-                California Government Operations Agency
-              </div>
-              <Link className='body-large'>
-                Helping state employees adopt open source technologies
-              </Link>
-              <div className='body'>Various clients</div>
-              <Link className='body-large'>
-                Telework training for agencies post-COVID
-              </Link>
+              <a href='https://medium.com/civicactions/what-we-learned-from-training-procurement-officers-to-buy-modern-government-it-cc6309df4103' className='body-large'>
+                DITAP program certification for federal procurement officers
+              </a>
               <div className='cta'>
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
-                  <li>DITAP program certification</li>
+                  <li><Link to='/services/ditap'>DITAP program certification</Link></li>
                   <li>Telework consulting and training</li>
-                  <li>Agile and Human Centered Design coaching</li>
+                  <li>Agile and Human-Centered Design coaching</li>
                   <li>Team culture and performance coaching</li>
                   <li>Technology strategy consulting</li>
                   <li>Free and open source software (FOSS) education</li>
@@ -368,22 +359,25 @@ const ServicesPage = ({ data }) => {
             government digital services.
           </div>
           <div className='ellipses'>
-            <span className='ellipse'>customer experience</span>
+
             <span className='ellipse'>accessibility</span>
-            <span className='ellipse'>drupal</span>
-            <span className='ellipse us-design'>u.s. web design standards</span>
             <span className='ellipse'>agile</span>
-            <span className='ellipse'>open source</span>
-            <span className='ellipse'>human centered design</span>
+            <span className='ellipse'>DevSecOps</span>
             <span className='ellipse'>distributed teams</span>
+            <span className='ellipse'>drupal</span>
+            <span className='ellipse'>human-centered design</span>
+            <span className='ellipse'>open source</span>
+            <span className='ellipse'>open data</span>
+            <span className='ellipse'>u.s. web design standards</span>
+
           </div>
         </div>
       </section>
       <PrimaryPageCTA
         title='Start building public trust.'
         subtitle='Let’s create better government services.'
+        primaryButtonText='HIRE US'
         secondaryButtonText='CONTRACTING INFO'
-        secondaryButtonLink='/contracting'
       />
     </RedLayout>
   );

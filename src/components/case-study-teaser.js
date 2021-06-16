@@ -3,32 +3,32 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-const CaseStudyTeaser = ({ img, alt, client, title, teaserLink }) => {
+const CaseStudyTeaser = ({ cases }) => {
+  return cases.map((item, index) => {
+    const { Title, Client_Name, Sort_Order, Summary, id, Cover_Image, Path } = item;
+    return (
+        <Link to={Path}>
+          <div key={id} className={`wrapper--case-study--teaser ${Sort_Order} `}>
+            {Cover_Image.url ?
+                <img src={Cover_Image.url} alt={Cover_Image.alternativeText} /> : <div className='no-img-teaser'></div>
+            }
 
-  return (
-    <Link to={teaserLink}>
-      <div className='case-study-teaser'>
-        <div className={`wrapper--case-study--teaser ${!img && 'no-img'}`}>
-          <img src={img} alt={alt} />
-          <div className='teaser-content'>
-            <div className='title-wrapper'>
-              <span aria-label='client name'>{client}</span>
-              <h2 className='h3'>{title}</h2>
+            <div className='teaser-content'>
+              <div className='title-wrapper'>
+                <span aria-label='client name'>{Client_Name}</span>
+                <h2 className='h3'>{Title}</h2>
+              </div>
             </div>
-          </div>
-        </div>
-
-      </div>
-    </Link>
-  );
+            <p aria-label='summary' className='summary body'>
+              {Summary}
+            </p>
+          </div></Link>
+    );
+  });
 };
 
 export default CaseStudyTeaser;
 
 CaseStudyTeaser.propTypes = {
-  img: PropTypes.any.isRequired,
-  alt: PropTypes.string.isRequired,
-  client: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  teaserLink: PropTypes.string,
+  cases: PropTypes.array
 };

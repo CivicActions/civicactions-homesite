@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import quotePatternGraphic from '../files/images/quote-pattern-graphic.png';
 
 const StaffQuote = ({ img, quote, name, role, classes }) => {
+
   return (
     <div className={`staff-quote quote ${classes}`}>
       <div className='inner'>

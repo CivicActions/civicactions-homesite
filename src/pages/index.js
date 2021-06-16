@@ -17,7 +17,7 @@ import caseStudyTeaserImg1 from '../files/images/case-study-teasers/case-study-t
 import caseStudyTeaserImg2 from '../files/images/case-study-teasers/case-study-teaser-img-2.png';
 import caseStudyTeaserImg3 from '../files/images/case-study-teasers/case-study-teaser-img-3.png';
 import caseStudyTeaserImg4 from '../files/images/case-study-teasers/case-study-teaser-img-4.png';
-import caseStudyTeaserImg5 from '../files/images/case-study-teasers/case-study-teaser-img-5.png';
+import caseStudyTeaserImg5 from '../files/images/case-study-teasers/blogpostimage.png';
 import dataServicesIcon from '../files/icons/data-services-icon.svg';
 import itModernizationIcon from '../files/icons/it-modernization-icon.svg';
 import productDesignIcon from '../files/icons/product-design-icon.svg';
@@ -25,6 +25,7 @@ import securityComplianceIcon from '../files/icons/security-compliance-icon.svg'
 import webCmsIcon from '../files/icons/web-cms-icon.svg';
 import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 import arrowIcon from '../files/icons/arrow-icon.svg';
+import {graphql, useStaticQuery} from "gatsby";
 
 const HomePage = () => {
   const fadersRef = useRef([]);
@@ -42,12 +43,42 @@ const HomePage = () => {
     );
     faders.forEach((fader) => appearOnScroll.observe(fader));
   }, []);
+
+  const data = useStaticQuery(graphql`
+    {
+      allStrapiCaseStudy(filter: {Featured: {eq: "True"}}, sort: {fields: Sort_Order}) {
+        nodes {
+          Title
+          Cover_Image {
+            url
+            alternativeText
+            caption
+          }
+          Client_Name
+          Path
+          Sort_Order
+          Service_Category {
+            Category
+          }
+          Featured
+          Summary
+          id
+        }
+      }
+    }
+  `);
+  const cases = data.allStrapiCaseStudy.nodes;
+  console.log(cases);
   return (
     <HomepageLayout>
       <SEO title='Home' />
       <section className='home--hero-section'>
         <div className='inner'>
-
+          <img
+            src={homeIntroGraphic}
+            alt='Image of capitol building'
+            ref={(e) => (fadersRef.current[0] = e)}
+            className='fade-in'></img>
           <div className='info-text'>
             <h1>
               We help government deliver better public services through modern
@@ -60,11 +91,6 @@ const HomePage = () => {
               text='See our work'
             />
           </div>
-          <img
-              src={homeIntroGraphic}
-              alt='image of capital building'
-              ref={(e) => (fadersRef.current[0] = e)}
-              className='fade-in'></img>
         </div>
       </section>
       {/* ======== Clients Section ========== */}
@@ -91,7 +117,7 @@ const HomePage = () => {
               <Card
                 title='IT & Service Modernization'
                 icon={itModernizationIcon}
-                link='/services#it-service'
+                link='/services#service-modernization'
               />
               <Card
                 title='Product & Design'
@@ -101,7 +127,7 @@ const HomePage = () => {
               <Card
                 title='Security & Compliance'
                 icon={securityComplianceIcon}
-                link='/services#security'
+                link='/services#security-compliance'
               />
               <Card
                 title='Data Services'
@@ -111,7 +137,7 @@ const HomePage = () => {
               <Card
                 title='Workforce Development'
                 icon={workforceDevelopmentIcon}
-                link='/services#development'
+                link='/services#workforce-development'
               />
             </div>
             <LinkButton
@@ -134,39 +160,13 @@ const HomePage = () => {
               hard problems and improve outcomes for government and the public.
             </p>
             <div className='teasers'>
-              <CaseStudyTeaser
-                img={caseStudyTeaserImg1}
-                alt={
-                  'elderly man and women leaning on each other outside in fall'
-                }
-                client={'Centers for medicare and medicaid services'}
-                title={
-                  'Improving the online experience for Medicare beneficiaries'
-                }
-                teaserLink='/'
-              />
-              <CaseStudyTeaser
-                img={caseStudyTeaserImg2}
-                alt={'veteran saluting facing a crowd'}
-                client={'US Department of veteran affairs'}
-                title={'Helping Veterans access care and benefits online'}
-                teaserLink={'/case-study/va-cms-modernization'}
-              />
-              <CaseStudyTeaser
-                img={caseStudyTeaserImg3}
-                alt={
-                  'architecture sketch with calculations and pencil on paper'
-                }
-                client={'US Department of Education'}
-                title={'Supporting and expanding adult education'}
-                teaserLink='/'
-              />
+              <CaseStudyTeaser cases={cases} />
 
               <div className='view-our-work-cta '>
                 <a href={'/case-studies/'}>
                   <img src={caseStudyTeaserImg3} alt='' className='bg'></img>
                   <div className='content'>
-                    <h3>View more work</h3>
+                    <h3>View more Work</h3>
                     <img
                       className='view-our-work-cta__icon'
                       src={arrowIcon}
@@ -184,10 +184,7 @@ const HomePage = () => {
           <img src={quotePatternGraphic} alt=''></img>
           <div className='quote'>
             <h2>
-              “It was a pleasure to work with the CivicActions team. Their
-              experience with government clients and agile processes helped us
-              reach our user base sooner than expected with a product that met
-              their needs.”
+              “It was a pleasure to work with the CivicActions team. Their experience with agile processes helped us reach our user base with a product that met their needs.”
             </h2>
             <div className='body'>
               Lisa Berry, Senior GlobalNET Liaison Officer
@@ -208,37 +205,45 @@ const HomePage = () => {
             <PressReleaseTeaser
               img={caseStudyTeaserImg4}
               title={'Government customer experience: A practical guide'}
-              description={'How to start bringing CX into the business of government'}
-              teaserlink={'https://medium.com/civicactions/government-accessibility-and-the-cms-problem-588a07088c65'}
+              description={
+                'How to start bringing CX into the business of government'
+              }
+              teaserlink={
+                'https://medium.com/civicactions/government-customer-experience-a-practical-guide-59b602815e3f'
+              }
             />
             <PressReleaseTeaser
               img={caseStudyTeaserImg5}
-              title={'WhiteHouse.gov: Beginning an accessibility journey'}
-              description={'Praise and recommendations for the new administration'}
-              teaserlink={'https://medium.com/civicactions/government-customer-experience-a-practical-guide-59b602815e3f'}
-
+              title={'Improving the ATO process with Compliance as Code'}
+              description={
+                'Better and faster security for government IT systems'
+              }
+              teaserLink={
+                'https://medium.com/civicactions/policy-recommendations-for-improving-the-ato-process-through-compliance-as-code-524e3005fceb'
+              }
             />
             <div className='grid-item-3'>
-
-                <a className='grid-item-3-1'
-                  href={'https://medium.com/civicactions/what-fierce-openness-can-do-for-government-dd1d3ed518af'}>
-                  <h3>The role of UX in an agile team</h3>
-                  <img width='32px' src={arrowIcon} alt=''></img>
-                </a>
-
-
+              <div className='grid-item-3-1'>
                 <a
-                    className='grid-item-3-2'
                   href={
-                    'https://medium.com/civicactions/policy-recommendations-for-improving-the-ato-process-through-compliance-as-code-524e3005fceb '
+                    'https://medium.com/civicactions/what-is-data-science-really-232552fc080a'
                   }>
-                  <h3>What “fierce openness” can do for government</h3>
+                  <h3>What is data science, really?</h3>
                   <img width='32px' src={arrowIcon} alt=''></img>
                 </a>
-
+              </div>
+              <div className='grid-item-3-2'>
+                <a
+                  href={
+                    'https://medium.com/civicactions/launching-a-community-of-practice-for-accessibility-in-government-services-b0b085cd90d6'
+                  }>
+                  <h3>A community of practice for government accessibility</h3>
+                  <img width='32px' src={arrowIcon} alt=''></img>
+                </a>
+              </div>
             </div>
           </div>
-          <LinkButton src='https://medium.com/civicactions' type='primary' text='Explore Posts & Videos' />
+          <LinkButton src='https://medium.com/civicactions' type='primary' text='Explore posts and videos' />
         </div>
       </section>
       {/* ======== Team Section ========== */}
@@ -264,6 +269,9 @@ const HomePage = () => {
       <PrimaryPageCTA
         title='Let’s build a public success story.'
         subtitle='Get in touch to start.'
+        primaryButtonText='Put us to work'
+        secondaryButtonText='Join our team'
+        secondaryButtonLink='/careers'
       />
     </HomepageLayout>
   );
