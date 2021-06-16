@@ -1,7 +1,13 @@
 .home--hero-section {
   position: relative;
   width: 100%;
-  margin-bottom: 0;
+  margin-bottom: 56px;
+  @media(min-width: $tablet-screen) {
+    margin-bottom: 48px;
+  }
+  @media(min-width: $medium-large-screen) {
+    margin-bottom: 100px;
+  }
 
   h1 {
     margin-bottom: 24px;
@@ -15,7 +21,7 @@
     @media(min-width: $medium-large-screen) {
       font-size: 48px;
       line-height: 67px;
-      margin-bottom: 100px;
+      margin-bottom: 32px;
     }
   }
 
@@ -54,7 +60,7 @@
       width: 62%;
     }
     .button {
-      margin-bottom: 56px;
+      margin-bottom: 0;
     }
   }
 
