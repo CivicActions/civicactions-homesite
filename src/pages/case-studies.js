@@ -12,11 +12,12 @@ import webCmsIcon from '../files/icons/web-cms-icon.svg';
 import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 import SEO from '../components/seo';
 import { Link } from 'gatsby';
+import CaseStudyTeaser from '../components/case-study-teaser.js';
 
 const CaseStudyPage = () => {
   const data = useStaticQuery(graphql`
     {
-      allStrapiCaseStudy(sort: { fields: Sort_Order }) {
+      allStrapiCaseStudy(filter: {Featured: {eq: "True"}}) {
         nodes {
           Title
           Cover_Image {
@@ -108,7 +109,7 @@ const CaseStudyPage = () => {
       });
     }
   }
-  console.log(cases);
+
   return (
     <RedLayout>
       <SEO
@@ -148,7 +149,7 @@ const CaseStudyPage = () => {
       </section>
       <section className='section--case-studies--teasers'>
         <div className='inner'>
-          <CaseStudyTeasers cases={cases} />
+          <CaseStudyTeaser cases={cases} />
         </div>
       </section>
       <section className={`section--more-clients ${filterState}`}>
@@ -258,29 +259,5 @@ const CaseStudyPage = () => {
       />
     </RedLayout>
   );
-};
-
-const CaseStudyTeasers = ({ cases }) => {
-  return cases.map((item, index) => {
-    const { Title, Client_Name, Sort_Order, Summary, id, Cover_Image, Path } = item;
-    return (
-      <Link to={Path}>
-        <div key={id} className={`wrapper--case-study--teaser ${Sort_Order} `}>
-        {Cover_Image.url ?
-          <img src={Cover_Image.url} alt={Cover_Image.alternativeText} /> : <div className='no-img-teaser'></div>
-        }
-
-        <div className='teaser-content'>
-          <div className='title-wrapper'>
-            <span aria-label='client name'>{Client_Name}</span>
-            <h2 className='h3'>{Title}</h2>
-          </div>
-        </div>
-        <p aria-label='summary' className='summary body'>
-          {Summary}
-        </p>
-      </div></Link>
-    );
-  });
 };
 export default CaseStudyPage;
