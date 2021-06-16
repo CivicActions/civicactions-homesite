@@ -22,6 +22,25 @@
 .first-quote {
   background-color: $colors-grey-warm-4 !important;
 }
+.case-studies {
+  .staff-quote.first-quote {
+    @media(min-width: $medium-large-screen) {
+      padding-top: 196px;
+    }
+    .h3 {
+      @media(min-width: $medium-large-screen) {
+        line-height: 39px;
+        margin-bottom: 0;
+      }
+    }
+    .body {
+      @media(min-width: $medium-large-screen) {
+        padding-top: 24px;
+      }
+    }
+
+  }
+}
 .section--case-study--stats {
   .stats--wrapper {
     margin-bottom: -241px;

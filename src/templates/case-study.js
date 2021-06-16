@@ -62,8 +62,8 @@ const CaseStudyTemplate = ({ data }) => {
               <div className='case-study-challenge-goal'>
                 <div className='challenge'>
                   <h2>The challenge</h2>
-                  <ReactMarkdown className='body' source={caseStudy.Challenge_Goal.Challenge} />
-                  <p className='body'>{caseStudy.Challenge_Goal.Challenge}</p>
+                  <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Challenge} />
+
                 </div>
                 <div className='goal'>
                   <h3>Client goal</h3>
@@ -113,7 +113,7 @@ const CaseStudyTemplate = ({ data }) => {
                         </img>
                       }
                       {approachItem.Image.caption &&
-                        <span className='caption'>{approachItem.Image.caption}</span>
+                        <div className='caption'>{approachItem.Image.caption}</div>
                       }
                     </div>
 

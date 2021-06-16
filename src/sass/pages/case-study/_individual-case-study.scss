@@ -1,8 +1,12 @@
 .case-studies {
   .hero-component {
     box-shadow: none;
+    margin-bottom: 0;
     .inner {
       display: grid;
+      @media(min-width: 1024px) {
+        padding-top: 22px;
+      }
       .client-name {
         font-weight: bold;
         text-transform: uppercase;
@@ -11,6 +15,8 @@
       }
       h1 {
         grid-area: 2/3;
+        padding-top: 16px;
+        padding-bottom: 24px;
       }
       p {
         grid-area: 3/3;
@@ -21,7 +27,7 @@
   .case-study--hero-image {
     img {
       width: 100%;
-      margin-bottom: 127px;
+      margin-bottom: 80px;
     }
     @media(min-width: 1200px) {
       margin: 0 20px;
@@ -40,7 +46,7 @@
       padding: 48px 0;
     }
     @media(min-width: $medium-large-screen) {
-      padding: 64px 0;
+      padding: 80px 0;
     }
     h2 {
       color: $colors-white;
