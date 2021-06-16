@@ -166,7 +166,7 @@ const HomePage = () => {
                 <a href={'/case-studies/'}>
                   <img src={caseStudyTeaserImg3} alt='' className='bg'></img>
                   <div className='content'>
-                    <h3>View more Work</h3>
+                    <h3>View more work</h3>
                     <img
                       className='view-our-work-cta__icon'
                       src={arrowIcon}
@@ -223,24 +223,24 @@ const HomePage = () => {
               }
             />
             <div className='grid-item-3'>
-              <div className='grid-item-3-1'>
-                <a
+
+                <a className='grid-item-3-1'
                   href={
                     'https://medium.com/civicactions/what-is-data-science-really-232552fc080a'
                   }>
                   <h3>What is data science, really?</h3>
                   <img width='32px' src={arrowIcon} alt=''></img>
                 </a>
-              </div>
-              <div className='grid-item-3-2'>
-                <a
+
+
+                <a className='grid-item-3-2'
                   href={
                     'https://medium.com/civicactions/launching-a-community-of-practice-for-accessibility-in-government-services-b0b085cd90d6'
                   }>
                   <h3>A community of practice for government accessibility</h3>
                   <img width='32px' src={arrowIcon} alt=''></img>
                 </a>
-              </div>
+
             </div>
           </div>
           <LinkButton src='https://medium.com/civicactions' type='primary' text='Explore posts and videos' />

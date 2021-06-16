@@ -13,7 +13,7 @@ import PrimaryPageCTA from "../components/primary-page-cta";
 const TeamPage = () => {
   const data = useStaticQuery(graphql`
     {
-      allStrapiStaffProfile {
+      allStrapiStaffProfile(sort: {order: ASC, fields: Name}) {
         nodes {
           Name
           Role

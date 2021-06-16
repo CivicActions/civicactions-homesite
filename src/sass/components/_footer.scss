@@ -8,9 +8,9 @@
 
   .inner {
     @include section-inner-padding;
-    padding: px-to-rem(48px) 0;
+    padding: 48px 0;
     @media(min-width: $medium-large-screen) {
-      padding: px-to-rem(80px) 48px;
+      padding: 96px 48px;
     }
   }
 
@@ -90,9 +90,6 @@
   //=========== Desktop Styles ===========
 
   @media (min-width: $large-screen) {
-    .inner {
-      padding: px-to-rem(120px) 0 px-to-rem(60px);
-    }
 
     .grid-container {
       grid-template-columns: 35% 1.5fr repeat(3, 1fr);
@@ -130,7 +127,7 @@
     }
 
     .footer__about-text {
-      margin-top: px-to-rem(40px); // Set to 40px isntead of 56px bc the nested paragraph has a top margin of 1rem=16px.
+      margin-top: 40px; // Set to 40px isntead of 56px bc the nested paragraph has a top margin of 1rem=16px.
 
       p {
         margin: px-to-rem(24px) 0;
@@ -175,9 +172,4 @@
   text-transform: uppercase;
   font-weight: 600;
   padding: 0;
-}
-.footer__contact {
-  .footer__about-text {
-    margin-top: 25px;
-  }
 }
