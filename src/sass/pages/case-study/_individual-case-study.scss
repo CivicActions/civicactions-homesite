@@ -76,7 +76,7 @@
     margin-bottom: 0;
     h2 {
       padding-top: 32px;
-      @media(min-width: 768px) {
+      @media(min-width: $tablet-screen) {
         padding-top: 48px;
       }
       @media(min-width: $medium-large-screen) {
@@ -85,7 +85,7 @@
       }
     }
     .related-staff--wrapper {
-      @media(min-width: 768px) {
+      @media(min-width: $tablet-screen) {
         display: flex;
         flex-flow: row wrap;
       }
@@ -94,7 +94,7 @@
       }
       .related-staff {
         padding: 20px;
-        @media(min-width: 768px) {
+        @media(min-width: $tablet-screen) {
           padding: 28px 28px 28px 0;
         }
         @media(min-width: $medium-large-screen) {
@@ -113,7 +113,7 @@
   .section--case-study--related {
     max-width: $max-width;
     margin: 32px auto;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       margin: 48px auto 56px;
     }
     @media(min-width: $medium-large-screen) {

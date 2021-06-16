@@ -27,7 +27,7 @@
     top: 120px;
     width: 100%;
     z-index: -1;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       height: 493px;
       top: 115px;
 

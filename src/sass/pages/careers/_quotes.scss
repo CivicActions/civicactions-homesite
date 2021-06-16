@@ -2,7 +2,7 @@
   background-color: $colors-white;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  @media(min-width: 1024px) {
+  @media(min-width: $medium-large-screen) {
     background-color: $colors-grey-warm-4;
     padding-top: 76px !important;
     padding-bottom: 71px !important;
@@ -10,7 +10,7 @@
 }
 .first-quote {
   background-color: $colors-grey-warm-4;
-  @media(min-width: 768px) {
+  @media(min-width: $tablet-screen) {
     background-color: $colors-white$colors-grey-warm-4;
   }
 }

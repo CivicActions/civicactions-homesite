@@ -7,7 +7,7 @@
     margin-bottom: 24px;
     font-size: 24px;
     line-height: 33px;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       font-size: 28px;
       line-height: 39px;
 
@@ -24,7 +24,7 @@
     top: 0;
     right: 0;
     display: none;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       display: block;
       width: 222px;
       height: 195px;
@@ -47,10 +47,10 @@
 
   .info-text {
     z-index: 1;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       width: 64%;
     }
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       width: 62%;
     }
     .button {

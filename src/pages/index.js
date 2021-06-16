@@ -62,7 +62,7 @@ const HomePage = () => {
           </div>
           <img
               src={homeIntroGraphic}
-              alt='Graphic image of people working together'
+              alt='image of capital building'
               ref={(e) => (fadersRef.current[0] = e)}
               className='fade-in'></img>
         </div>

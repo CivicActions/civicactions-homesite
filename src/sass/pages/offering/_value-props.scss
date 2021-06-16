@@ -4,7 +4,7 @@
   padding-bottom: 24px;
   margin-bottom: 0;
 
-  @media(min-width: 768px) {
+  @media(min-width: $tablet-screen) {
     padding-bottom: 40px;
   }
   @media(min-width: 1200px) {

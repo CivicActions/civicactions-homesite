@@ -4,8 +4,11 @@
 
   .inner {
     @include section-inner-padding;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    padding: px-to-rem(48px) 0;
+    @media(min-width: $medium-large-screen) {
+      //margin: 0 auto;
+      padding: px-to-rem(80px) 48px;
+    }
   }
 
   h2 {

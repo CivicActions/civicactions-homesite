@@ -3,7 +3,7 @@
     h2 {
       padding-bottom: 32px;
       margin: 0 20px;
-      @media(min-width: 768px) {
+      @media(min-width: $tablet-screen) {
         margin: 0;
       }
     }
@@ -29,7 +29,7 @@
           height: 56px;
           float: left;
           margin-right: 16px;
-          @media(min-width: 768px) {
+          @media(min-width: $tablet-screen) {
             width: 124px;
             height: 124px;
             margin-right: 24px;
@@ -40,7 +40,7 @@
           position: absolute;
           top: 17px;
           right: 24px;
-          @media(min-width: 768px) {
+          @media(min-width: $tablet-screen) {
             position: relative;
             margin-left: 16px;
             top: unset;

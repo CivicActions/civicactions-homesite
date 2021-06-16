@@ -3,13 +3,7 @@ section,
   margin-bottom: 48px;
 
   .inner {
-    margin: 0 24px;
-    @media(min-width: 768px) {
-      margin: 0 48px;
-    }
-    @media(min-width: 1200px) {
-      margin: 0 auto;
-    }
+    @include section-inner-padding;
 
   }
 

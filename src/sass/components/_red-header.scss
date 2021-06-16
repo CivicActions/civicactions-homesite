@@ -1,23 +1,23 @@
 .red-header {
   max-width: none;
-  @media(min-width: 768px) {
+  @media(min-width: $tablet-screen) {
     background-color: #D83933;
   }
 
   .red-logo {
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       display: none;
     }
   }
   .white-logo {
     display: none;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       display: block;
     }
   }
   .red-header--header {
     max-width: 1200px;
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       margin: 0 auto;
     }
     .bm-icon {
@@ -79,7 +79,7 @@
   height: 300px;
   z-index: -1;
   display: none;
-  @media(min-width: 768px) {
+  @media(min-width: $tablet-screen) {
     display: block;
   }
 }

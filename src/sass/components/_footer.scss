@@ -5,10 +5,13 @@
 
   //=========== Mobile-first styles ============
 
-  // @todo Site-wide inner containers should be consistently sized.
+
   .inner {
     @include section-inner-padding;
-    margin-top: 0 !important; // override the section top margins in the footer.
+    padding: px-to-rem(48px) 0;
+    @media(min-width: $medium-large-screen) {
+      padding: px-to-rem(80px) 48px;
+    }
   }
 
   .footer__bottom-links {

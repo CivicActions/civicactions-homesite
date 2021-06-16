@@ -13,7 +13,7 @@
   font-family: $secondary-font;
   text-transform: uppercase;
   text-decoration: none;
-  @media(min-width: 768px) {
+  @media(min-width: $tablet-screen) {
     font-size: 18px;
   }
 

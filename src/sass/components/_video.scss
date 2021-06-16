@@ -22,7 +22,7 @@
   }
   .video--text {
     padding: 1rem 0;
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       width: 60%;
       padding: 2rem 0;
     }

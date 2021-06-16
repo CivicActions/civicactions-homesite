@@ -5,7 +5,7 @@
   background-color: $colors-grey-warm-4;
   padding-bottom: 0 !important;
 
-  @media(min-width: 768px) {
+  @media(min-width: $tablet-screen) {
     background-color: transparent;
     position: relative;
   }
@@ -14,7 +14,7 @@
     display: none;
     background-color: $colors-grey-warm-4;
 
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       display: block;
       height: 100%;
       width: 75%;
@@ -36,7 +36,7 @@
     justify-content: center;
     margin-top: 40px;
 
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       margin-top: 56px;
     }
 
@@ -53,7 +53,7 @@
   h2 {
     margin-top: 48px;
     margin-bottom: 16px;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       margin-top: 56px;
     }
     @media(min-width: $medium-large-screen) {

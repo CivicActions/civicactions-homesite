@@ -27,7 +27,7 @@
   img {
     padding: 24px;
     max-width: 272px;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       max-width: 576px;
     }
     @media(min-width: $medium-large-screen) {

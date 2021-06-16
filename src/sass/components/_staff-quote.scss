@@ -8,10 +8,10 @@
   }
   .inner {
     margin: 0 24px;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       margin: 0 48px;
     }
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       margin: 0 auto;
     }
   }
@@ -53,7 +53,7 @@
     top: 5px;
     left: 0;
     max-width: 26px;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       max-width: 56px;
     }
 
@@ -63,7 +63,7 @@
     justify-content: space-between;
     align-items: flex-start;
     text-align: center;
-    @media(min-width: 768px) {
+    @media(min-width: $tablet-screen) {
       padding-left: 32px;
     }
     @media(min-width: $medium-large-screen) {

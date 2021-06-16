@@ -16,7 +16,7 @@
   h3 {
     padding: 20px 40px 16px;
     text-decoration: none;
-    @media(min-width: 1024px) {
+    @media(min-width: $medium-large-screen) {
       line-height: 39px;
     }
   }

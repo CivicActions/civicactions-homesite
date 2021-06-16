@@ -1,6 +1,6 @@
 .section--case-study--challenge-to-tools {
   padding: 56px 0 32px;
-  @media(min-width: 768px) {
+  @media(min-width: $tablet-screen) {
     padding: 56px 0 0;
   }
   @media(min-width: $medium-large-screen) {
@@ -34,7 +34,7 @@
         width: 100%;
         padding: 32px 24px;
         overflow: hidden;
-        @media(min-width: 768px) {
+        @media(min-width: $tablet-screen) {
           padding: 48px 0;
         }
         @media(min-width: $medium-large-screen) {
@@ -42,7 +42,7 @@
         }
         h3 {
           font-size: 24px;
-          @media(min-width: 768px) {
+          @media(min-width: $tablet-screen) {
             font-size: 28px;
             padding-left: 48px;
           }
@@ -51,7 +51,7 @@
           }
         }
         .body {
-          @media(min-width: 768px) {
+          @media(min-width: $tablet-screen) {
             padding-left: 48px;
           }
           @media (min-width: $medium-large-screen) {

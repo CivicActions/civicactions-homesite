@@ -4,7 +4,7 @@
     .team-section--title {
       margin-bottom: 14px;
       line-height: 22px;
-      @media(min-width: 768px) {
+      @media(min-width: $tablet-screen) {
         line-height: 29px;
       }
       @media(min-width: $medium-large-screen) {
