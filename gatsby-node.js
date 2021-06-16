@@ -56,6 +56,13 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+        general: allStrapiGeneral {
+          edges {
+            node {
+              Path
+            }
+          }
+        }
       }
     `
   );
@@ -87,6 +94,19 @@ exports.createPages = async ({ graphql, actions }) => {
       component: StaffProfileTemplate,
       context: {
         pagePath: profile.node.Path,
+      },
+    });
+  });
+  const generalPages = result.data.general.edges;
+  const GeneralTemplate = require.resolve(
+      './src/templates/general.js'
+  );
+  generalPages.forEach((generals, index) => {
+    createPage({
+      path: `${generals.node.Path}`,
+      component: GeneralTemplate,
+      context: {
+        pagePath: generals.node.Path,
       },
     });
   });
