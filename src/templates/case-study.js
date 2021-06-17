@@ -2,21 +2,24 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import ReactMarkdown from "react-markdown";
 import GeneralLayout from '../layouts/general';
-import { Helmet } from "react-helmet";
 import CaseStudyHero from "../components/case-study-hero";
 import Quote from "../components/quote";
 import PrimaryPageCTA from "../components/primary-page-cta";
+import SEO from "../components/seo";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const CaseStudyTemplate = ({ data }) => {
   const caseStudy = data.allStrapiCaseStudy.edges[0].node;
-  const { Client_Name, Related_Case_Studies } = caseStudy
+  const { Client_Name, Related_Case_Studies, Hero_Image } = caseStudy;
 
   return (
     <GeneralLayout>
-      <Helmet>
-        <title data-react-helmet="true">{caseStudy.Title}</title>
-      </Helmet>
+      <SEO
+        title={SEO.OGTitle}
+        description={SEO.OGDescription}
+        image={Hero_Image ? Hero_Image.url : null}
+      />
+
       <div className='case-studies'>
         <CaseStudyHero
           client={Client_Name}
@@ -24,10 +27,10 @@ const CaseStudyTemplate = ({ data }) => {
           description={caseStudy.Summary}
         />
 
-        {caseStudy.Hero_Image &&
+        {Hero_Image &&
           <div className='case-study--hero-image'>
-            <img src={caseStudy.Hero_Image.url} alt={caseStudy.Hero_Image.alternativeText}></img>
-            {caseStudy.Hero_Image.caption && <span className='caption'>{caseStudy.Hero_Image.caption}</span>}
+            <img src={Hero_Image.url} alt={Hero_Image.alternativeText}></img>
+            {Hero_Image.caption && <span className='caption'>{Hero_Image.caption}</span>}
           </div>
         }
 
@@ -153,8 +156,8 @@ const CaseStudyTemplate = ({ data }) => {
                     {/*// Unlinked for MVP soft launch*/}
                     {/*<a href={caseStudy.staff_profiles[index].Path}>*/}
                     {caseStudy.staff_profiles[index].Name}
-                  {/*</a>*/}
-                </p>
+                    {/*</a>*/}
+                  </p>
                   <p className='body staff-role'>{caseStudy.staff_profiles[index].Role}</p>
                 </div>
               ))}
@@ -256,6 +259,10 @@ query CaseStudyQuery($pagePath: String!) {
               gatsbyImageData(width: 264, height: 264, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
             }
           }
+        }
+        SEO {
+          OGTitle
+          OGDescription
         }
       }
     }
