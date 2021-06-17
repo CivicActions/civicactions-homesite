@@ -38,8 +38,8 @@
         vertical-align: middle;
         transform: rotate(270deg);
 
-        // Icons in the red header should be white
-        .red-header & {
+        // Icons in the red header should be white but should remain black when scrolled.
+        .red-header:not(.scrolled) & {
           background-image: url('../files/icons/menu-dropdown-white.svg');
         }
       }
@@ -89,15 +89,5 @@
     &:focus {
       text-decoration: underline;
     }
-
-    
   }
 }
-
-
-
-
-
-// @media screen and (min-width: $large-screen) {
-//   margin: 0 auto ;
-// }
