@@ -10,27 +10,27 @@ import MainMenu from '../components/main-menu/main-menu'
 
 const Header = () => {
 
-  const [scrolled,setScrolled]=React.useState(false);
-  const [scrolledMobile,setScrolledMobile]=React.useState(false);
-  const handleScroll=() => {
-    const offset=window.scrollY;
-    if(offset > 500 ){
+  const [scrolled, setScrolled] = React.useState(false);
+  const [scrolledMobile, setScrolledMobile] = React.useState(false);
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 500) {
       setScrolled(true);
     }
-    else if(offset > 300) {
+    else if (offset > 300) {
       setScrolledMobile(true);
     }
-    else{
+    else {
       setScrolled(false);
       setScrolledMobile(false);
     }
   }
 
   useEffect(() => {
-    window.addEventListener('scroll',handleScroll)
+    window.addEventListener('scroll', handleScroll)
   })
-  let headerClasses=['header'];
-  if(scrolled){
+  let headerClasses = ['header'];
+  if (scrolled) {
     headerClasses.push('scrolled');
   }
 
@@ -42,14 +42,15 @@ const Header = () => {
           <img src={extendedLogo} alt='Civic Actions Logo'></img>
         </Link>
         <MainMenu redHeader={false} />
-        <MobileMenu
-          right
-          noTransition
-          width={'75%'}
-          customBurgerIcon={<img alt='mobile menu navigation icon' src={menuIcon} />}
-          customCrossIcon={<img alt='mobile menu close button' src={closeIcon} />}
-        />
+
       </div>
+      <MobileMenu
+        right
+        noTransition
+        width={'75%'}
+        customBurgerIcon={<img alt='mobile menu navigation icon' src={menuIcon} />}
+        customCrossIcon={<img alt='mobile menu close button' src={closeIcon} />}
+      />
     </header>
 
   );
