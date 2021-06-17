@@ -6,8 +6,8 @@ import redLogo from '../files/icons/ca-extended-logo.svg';
 import menuIconWhite from '../files/icons/menu-icon-white.svg';
 import closeIcon from '../files/icons/close-icon.svg';
 import PropTypes from 'prop-types';
-import MainMenu from '../components/main-menu/main-menu'
-import MobileMenu from '../components/mobile-menu/mobile-menu';
+import MainMenu from './menus/main-menu/main-menu'
+import MobileMenu from './menus/mobile-menu/mobile-menu';
 
 const RedHeader = () => {
 

@@ -7,6 +7,14 @@ const MainMenu = ({ redHeader }) => {
   const headingsRef = useRef([]);
   const onCollapseClick = (index) => {
     const current = headingsRef.current[index].className;
+
+    // Close open sub-menus.
+    const keys = Object.keys(headingsRef.current);
+    keys.forEach(function (value) {
+      headingsRef.current[value].className = 'menu--list__item'
+    })
+
+    // Add/remove the expanded class from the currently clicked item.
     headingsRef.current[index].className = current.includes('expanded')
       ? 'menu--list__item'
       : 'menu--list__item expanded';
@@ -39,7 +47,23 @@ const MainMenu = ({ redHeader }) => {
           </ul>
         </li>
         <li className='menu--list__item'><Link to='/services'>Services</Link></li>
-        <li className='menu--list__item'><Link to='/case-studies/'>Our work</Link></li>
+        <li
+          className='menu--list__item'
+          ref={(e) => (headingsRef.current[1] = e)}>
+          <button
+            className="heading"
+            onKeyDown={() => { }}
+            tabIndex={0}
+            onClick={() => onCollapseClick(1)}
+          >
+            Our Work
+          </button>
+          <ul>
+            {/*<li><Link to="/">About</Link></li>*/}
+            <li><Link to="/case-studies">Case Studies</Link></li>
+            <li><Link to="/contracting">Contracting</Link></li>
+          </ul>
+        </li>
         <li className='menu--list__item'><a href='https://medium.com/civicactions'>Insights</a></li>
         <li className='menu--list__item'><Link to='/careers/'>Careers</Link></li>
         <li className='menu--list__item'>{redHeader ?
