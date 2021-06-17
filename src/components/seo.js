@@ -17,10 +17,9 @@ const SEO = ({ title, description, image, article }) => {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
+    image: image || `${siteUrl}${defaultImage}`,
     url: `${siteUrl}${pathname}`,
   };
-  console.log('Title', title);
   return (
     <Helmet
       htmlAttributes={{ lang: 'en' }}

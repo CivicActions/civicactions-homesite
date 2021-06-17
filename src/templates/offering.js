@@ -18,10 +18,12 @@ import Quote from "../components/quote";
 import PrimaryPageCTA from "../components/primary-page-cta";
 import LinkButton from "../components/link-button";
 import Bio from '../components/offering/bio'
+import TabMobile from '../components/tabmobile';
+import SEO from '../components/seo';
+
 import linkedinIcon from "../files/icons/linkedin.svg";
 import squareCircle from "../files/icons/square-circle.svg";
-import TabMobile from '../components/tabmobile';
-import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import closeButton from '../files/icons/grey-close-icon.svg';
 
 const OfferingTemplate = ({ data }) => {
@@ -71,12 +73,13 @@ const OfferingTemplate = ({ data }) => {
 
 
         )) : null;
-    
+
     return (
         <RedLayout>
-            <Helmet>
-                <title data-react-helmet="true">{offering.Title}</title>
-            </Helmet>
+            <SEO
+                title={SEO.OGTitle}
+                description={SEO.OGDescription}
+            />
             <div className='offering--content-type'>
                 <Hero
                     title={offering.Title}
@@ -96,18 +99,18 @@ const OfferingTemplate = ({ data }) => {
                     </div>
                 </section>
                 {offering.Stats.length &&
-                <section className='section--offering--stats'>
-                    <div className='stats--wrapper'>
-                        <div className='inner'>
-                            {offering.Stats.map((stat, index) => (
-                                <div className='single-stat'>
-                                    <h2 className='stat--number'>{offering.Stats[index].Numerical_Element}</h2>
-                                    <p className='body stat--text'>{offering.Stats[index].Content_Element}</p>
-                                </div>
-                            ))}
+                    <section className='section--offering--stats'>
+                        <div className='stats--wrapper'>
+                            <div className='inner'>
+                                {offering.Stats.map((stat, index) => (
+                                    <div className='single-stat'>
+                                        <h2 className='stat--number'>{offering.Stats[index].Numerical_Element}</h2>
+                                        <p className='body stat--text'>{offering.Stats[index].Content_Element}</p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                </section>}
+                    </section>}
 
                 <section className='section--offering--value-props'>
                     <div className='inner'>
@@ -144,13 +147,13 @@ const OfferingTemplate = ({ data }) => {
                                     {tab.tabs_section.map((section, index) => (
                                         <div className='tab-section' label={section.header}>
                                             <h3 className='h5'>{section.header}</h3>
-                                            <ReactMarkdown className='body' children={section.body}/>
+                                            <ReactMarkdown className='body' children={section.body} />
                                         </div>
                                     ))}
                                     <div className='cta-tab-section' label={tab.cta_tab.header}>
                                         {tab.cta_tab.header && <h3 className='h5'>{tab.cta_tab.header}</h3>}
                                         <div className='link-button'><LinkButton text={tab.cta_tab.button_text}
-                                                                                 src={tab.cta_tab.button_link}/></div>
+                                            src={tab.cta_tab.button_link} /></div>
                                     </div>
                                 </TabPanel>
                             ))}
@@ -159,36 +162,36 @@ const OfferingTemplate = ({ data }) => {
                 </section>
 
                 {offering.Quote[0] && <Quote classes='staff-quote--first'
-                                             quote={offering.Quote[0].Quote}
-                                             source={offering.Quote[0].Source}
+                    quote={offering.Quote[0].Quote}
+                    source={offering.Quote[0].Source}
                 />}
 
                 {offering.team_members.length &&
-                <section className='section--offering--staff'>
-                    <div className='inner'>
-                        <h2>Meet the team</h2>
-                        <div className='related-staff--wrapper'>
-                            {teamMemberList}
+                    <section className='section--offering--staff'>
+                        <div className='inner'>
+                            <h2>Meet the team</h2>
+                            <div className='related-staff--wrapper'>
+                                {teamMemberList}
+                            </div>
                         </div>
-                    </div>
 
-                    {/*
+                        {/*
               Load just one Modal wrapper per page and update its content with the
               clicked team member's bio.
              */}
-                    <Modal
-                        isOpen={modalIsOpen}
-                        onRequestClose={closeModal}
-                        contentLabel="Staff member modal"
-                        overlayClassName="Overlay"
-                        aria-label="staff-modal-biography"
-                    >
+                        <Modal
+                            isOpen={modalIsOpen}
+                            onRequestClose={closeModal}
+                            contentLabel="Staff member modal"
+                            overlayClassName="Overlay"
+                            aria-label="staff-modal-biography"
+                        >
 
-                        <Bio member={modalContent} closeModal={closeModal} />
-                        <button onClick={closeModal}><img alt='close modal button'src={closeButton}/><p className='visually-hidden'>Close</p></button>
+                            <Bio member={modalContent} closeModal={closeModal} />
+                            <button onClick={closeModal}><img alt='close modal button' src={closeButton} /><p className='visually-hidden'>Close</p></button>
 
-                    </Modal>
-                </section >
+                        </Modal>
+                    </section >
                 }
 
 
@@ -346,6 +349,10 @@ query offeringQuery {
           alternativeText
           url
         }
+      }
+      SEO {
+        OGDescription
+        OGTitle
       }
     }
   }

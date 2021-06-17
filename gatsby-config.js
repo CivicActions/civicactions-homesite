@@ -10,7 +10,7 @@ module.exports = {
     city: `Lafayette, CA 94549`,
     url: `https://civicactions.com/`,
     twitterUsername: '@CivicActions',
-    image: 'logo.png', // TODO Update me.
+    image: 'ca-extended-logo.svg',
   },
   pathPrefix: `/civicactions-homesite`,
   plugins: [
