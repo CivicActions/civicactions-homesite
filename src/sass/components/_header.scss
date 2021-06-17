@@ -3,12 +3,16 @@
   top: 0;
   background: $colors-white;
   z-index: 11;
+  position: relative;
+
   @media(min-width: $tablet-screen) {
     padding: 48px 48px 15px;
   }
+
   @media(min-width: $medium-large-screen) {
     padding: 45px 5vw 15px;
   }
+
   @media(min-width: 1200px) {
     padding: 45px 0 15px;
   }
@@ -26,60 +30,8 @@
     margin: 0 auto 30px;
     position: relative;
   }
-
-  .header-nav {
-    width: 650px;
-    margin-left: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    @media(min-width: $medium-large-screen) {
-      margin-left: auto;
-    }
-
-    a {
-      text-transform: uppercase;
-      color: $colors-grey-90;
-      text-decoration: none;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 34px;
-      font-family: $secondary-font;
-    }
-  }
-
-  .header-nav-mobile {
-    display: none;
-    max-width: 20px;
-  }
-
-  @media screen and (max-width: $large-screen) {
-
-
-    .header-nav {
-      display: none;
-    }
-
-    .header-nav-mobile {
-      display: flex;
-    }
-  }
-
-  @media screen and (max-width: $small-screen) {
-    img {
-      width: 159px;
-    }
-  }
-
-  @media screen and (min-width: $large-screen) {
-    margin: 0 auto ;
-  }
-
-
-
 }
+
 .header.scrolled-mobile {
   position: sticky;
   @media(min-width: $tablet-screen) {
@@ -90,15 +42,18 @@
   from {padding: 50px 0 20px;}
   to {padding: 15px 22px;}
 }
+
 .header.scrolled {
   position: sticky ;
 }
+
 .header.scrolled,
 .header.scrolled-mobile{
   padding-top: 15px;
   padding-bottom: 15px;
   box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
   animation-name: scroll;
+
   .inner {
     margin-bottom: 0;
   }
@@ -107,6 +62,7 @@
     max-width: 216px;
   }
 }
+
 html {
   scroll-padding-top: 110px;
 }

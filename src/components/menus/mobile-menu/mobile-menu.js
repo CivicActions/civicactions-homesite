@@ -3,9 +3,6 @@ import { slide as Menu } from "react-burger-menu";
 import { Link } from 'gatsby';
 
 const MobileMenu = (props) => {
-  // // @todo there has to be a better way to show child menu items without setting state for each one.
-  // const [showServicesChild, setShowServicesChild] = useState(false);
-  // const [showWorkChild, setShowWorkChild] = useState(false);
 
   const headingsRef = useRef([]);
   const onCollapseClick = (index) => {
@@ -33,7 +30,7 @@ const MobileMenu = (props) => {
             onClick={() => onCollapseClick(0)}
           >
             Company
-        </button>
+          </button>
           <ul>
             {/*<li><Link to="/">About</Link></li>*/}
             <li><Link to="/team">Team</Link></li>
@@ -56,7 +53,7 @@ const MobileMenu = (props) => {
             onClick={() => onCollapseClick(1)}
           >
             Our Work
-        </button>
+          </button>
           <ul>
             <li><Link to="/case-studies">Case Studies</Link></li>
             {/*<li><Link to="/">Approach</Link></li>*/}
@@ -64,7 +61,7 @@ const MobileMenu = (props) => {
         </li>
 
         <li className='mmenu--list__item'>
-          <Link to="/">Insights</Link>
+          <a href='https://medium.com/civicactions'>Insights</a>
         </li>
 
         <li className='mmenu--list__item'>

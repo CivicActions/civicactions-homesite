@@ -37,15 +37,18 @@
   }
 
   .header-nav {
-    a {
+    a,
+    button {
       color: $colors-white;
     }
+
     .primary-button {
       background-color: $colors-white;
       color: $colors-black;
     }
   }
 }
+
 .red-header.scrolled {
   position: sticky;
   background-color: $colors-white;
@@ -64,7 +67,8 @@
     }
   }
 
-  a {
+  a,
+  button {
     color: $colors-black;
   }
 }

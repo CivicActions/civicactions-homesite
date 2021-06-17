@@ -3,36 +3,36 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import whiteLogo from '../files/icons/CA-white.svg';
 import redLogo from '../files/icons/ca-extended-logo.svg';
-import menuIcon from '../files/icons/menu-icon.svg';
+import menuIconWhite from '../files/icons/menu-icon-white.svg';
 import closeIcon from '../files/icons/close-icon.svg';
 import PropTypes from 'prop-types';
-import MainMenu from '../components/main-menu/main-menu'
-import MobileMenu from '../components/mobile-menu/mobile-menu';
+import MainMenu from './menus/main-menu/main-menu'
+import MobileMenu from './menus/mobile-menu/mobile-menu';
 
 const RedHeader = () => {
 
 
-    const [scrolled,setScrolled]=React.useState(false);
-    const [scrolledMobile,setScrolledMobile]=React.useState(false);
-    const handleScroll=() => {
-        const offset=window.scrollY;
-        if(offset > 500 ){
+    const [scrolled, setScrolled] = React.useState(false);
+    const [scrolledMobile, setScrolledMobile] = React.useState(false);
+    const handleScroll = () => {
+        const offset = window.scrollY;
+        if (offset > 500) {
             setScrolled(true);
         }
-        else if(offset > 300) {
+        else if (offset > 300) {
             setScrolledMobile(true);
         }
-        else{
+        else {
             setScrolled(false);
             setScrolledMobile(false);
         }
     }
 
     useEffect(() => {
-        window.addEventListener('scroll',handleScroll)
+        window.addEventListener('scroll', handleScroll)
     })
-    let headerClasses=['header'];
-    if(scrolled){
+    let headerClasses = ['header'];
+    if (scrolled) {
         headerClasses.push('scrolled');
     }
 
@@ -49,7 +49,7 @@ const RedHeader = () => {
                     right
                     noTransition
                     width={'75%'}
-                    customBurgerIcon={<img alt='mobile menu navigation icon' src={menuIcon} />}
+                    customBurgerIcon={<img alt='mobile menu navigation icon' src={menuIconWhite} />}
                     customCrossIcon={<img alt='mobile menu close button' src={closeIcon} />}
                 />
             </div></div>
