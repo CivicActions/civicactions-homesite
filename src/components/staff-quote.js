@@ -10,7 +10,7 @@ const StaffQuote = ({ img, quote, name, role, classes }) => {
       <div className='inner'>
         <img src={img} alt='' className='picture'></img>
         <div className='quote'>
-          <h4>{quote}</h4>
+          <p className='h3'>{quote}</p>
           <div className='body'>{name}</div>
           <div className='body'>{role}</div>
         </div>

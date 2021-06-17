@@ -161,7 +161,7 @@ const OfferingTemplate = ({ data }) => {
                     </div>
                 </section>
 
-                {offering.Quote[0] && <Quote classes='staff-quote--first'
+                {offering.Quote[0] && <Quote classes='staff-quote--first no-img'
                     quote={offering.Quote[0].Quote}
                     source={offering.Quote[0].Source}
                 />}
@@ -245,7 +245,7 @@ const OfferingTemplate = ({ data }) => {
                 }
 
                 {
-                    offering.Quote[1] && <Quote
+                    offering.Quote[1] && <Quote classes='no-img'
                         quote={offering.Quote[1].Quote}
                         source={offering.Quote[1].Source}
                     />

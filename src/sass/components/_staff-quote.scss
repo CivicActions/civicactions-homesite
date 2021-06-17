@@ -3,17 +3,13 @@
   color: $colors-grey-90;
   background-color: $colors-white;
   padding: 85px 0;
-  @media (min-width: 1024px) {
-    background-color: $colors-grey-warm-4;
+  margin: 48px 0 0;
+  @media (min-width: $tablet-screen) {
+    margin: 56px 0 0;
   }
-  .inner {
-    margin: 0 24px;
-    @media(min-width: $tablet-screen) {
-      margin: 0 48px;
-    }
-    @media(min-width: $medium-large-screen) {
-      margin: 0 auto;
-    }
+  @media (min-width: $medium-large-screen) {
+    background-color: $colors-grey-warm-4;
+    margin: 72px 0 0;
   }
   h4,
   .body {
@@ -22,6 +18,9 @@
 
   h4 {
     margin-bottom: 32px;
+    //@media(min-width: $medium-large-screen) {
+    //  font-size: 28p;
+    //}
   }
   .h3 {
     padding: 0;
@@ -39,22 +38,33 @@
     align-items: center;
     text-align: center;
     padding: 0 20px;
+    margin: 0 24px;
+    @media(min-width: $tablet-screen) {
+      margin: 0 48px;
+    }
+    @media(min-width: $medium-large-screen) {
+      margin: 0 auto;
+    }
   }
 
   .picture {
     width: 173px;
     height: 223px;
     object-fit: cover;
-    margin-right: 32px;
+    //margin-right: 32px;
+    margin-left: 22px;
   }
 
   .pattern {
     position: absolute;
-    top: 5px;
+    top: 0;
     left: 0;
     max-width: 26px;
     @media(min-width: $tablet-screen) {
       max-width: 56px;
+    }
+    @media(min-width: $medium-large-screen) {
+      top: -9px;
     }
 
   }
@@ -63,11 +73,12 @@
     justify-content: space-between;
     align-items: flex-start;
     text-align: center;
+    margin-left: 44px;
     @media(min-width: $tablet-screen) {
-      padding-left: 32px;
+      margin-left: 64px;
     }
     @media(min-width: $medium-large-screen) {
-      padding-left: 50px;
+      margin-left: 80px;
     }
   }
 
@@ -80,14 +91,19 @@
 
   @media screen and (max-width: $tablet-screen) {
     padding: 55px 0;
-    margin: 48px 0;
+
 
     .picture {
       display: none;
     }
 
-    .quote {
-      margin-left: 20px;
+
+  }
+}
+.no-img {
+  .pattern {
+    @media(min-width: $medium-large-screen) {
+      top: 0 !important;
     }
   }
 }
