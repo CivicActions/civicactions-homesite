@@ -24,13 +24,13 @@
 
   .background-wrapper {
     position: absolute;
-    bottom: -56px;
+    bottom: -48px;
     height: 150px;
     width: 100%;
     background: $colors-mint-cool-40v;
 
     @media(min-width: $tablet-screen) {
-      bottom: -48px;
+      bottom: -8px;
     }
 
     @media(min-width: $medium-large-screen) {
@@ -46,8 +46,11 @@
   h2 {
     max-width: 1000px;
     color: $colors-grey-90;
-    margin-bottom: 32px;
     font-weight: 300;
+    margin-bottom: 24px;
+    @media(min-width: $medium-large-screen) {
+      margin-bottom: 32px;
+    }
   }
 
   h3 {
@@ -249,4 +252,11 @@
   transform: skewY(-5deg);
   content: '';
   height: 70%;
+  @media(min-width: $tablet-screen) {
+    bottom: 18%;
+    height: 62%;
+  }
+  @media(min-width: $medium-large-screen) {
+
+  }
 }

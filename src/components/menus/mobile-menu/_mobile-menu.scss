@@ -125,11 +125,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
     span,
     button {
       @extend %h2;
+      font-weight: 400 !important;
     }
 
     a {
       text-decoration: none;
       color: $colors-grey-90;
+      font-weight: 400 !important;
     }
 
     li {

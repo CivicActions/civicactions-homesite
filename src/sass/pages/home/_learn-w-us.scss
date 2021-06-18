@@ -37,7 +37,7 @@
     margin-top: 40px;
 
     @media(min-width: $tablet-screen) {
-      margin-top: 56px;
+      margin-top: 40px;
     }
 
     @media(min-width: $medium-large-screen) {
@@ -64,6 +64,12 @@
 
   .body-large {
     margin-bottom: 32px;
+    @media(min-width: $tablet-screen) {
+      margin-bottom: 40px;
+    }
+    @media(min-width: $medium-large-screen) {
+      margin-bottom: 64px;
+    }
   }
 
   .primary-button {
@@ -80,9 +86,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1.3fr;
     grid-template-rows: 500px;
-    row-gap: 40px;
+    row-gap: 16px;
     column-gap: 16px;
     margin-bottom: 50px;
+    @media(min-width: $tablet-screen) {
+      column-gap: 24px;
+      row-gap: 24px;
+    }
+    @media(min-width: $medium-large-screen) {
+      column-gap: 16px;
+      row-gap: 40px;
+    }
   }
 
   .grid-item-1,
@@ -170,16 +184,8 @@
     }
   }
   @media screen and (max-width: $large-screen) {
-
-
     .cases {
       grid-template-columns: 1fr 1fr;
-    }
-
-
-
-    .body {
-      padding: 0 24px 36px;
     }
 
     .grid-item-3 {
