@@ -22,7 +22,10 @@
     }
     .bm-icon {
       path {
-        fill: $colors-white !important;
+        @media(min-width: $tablet-screen) {
+          fill: $colors-white !important;
+        }
+
       }
     }
 

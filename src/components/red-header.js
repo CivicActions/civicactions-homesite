@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import whiteLogo from '../files/icons/CA-white.svg';
 import redLogo from '../files/icons/ca-extended-logo.svg';
-import menuIconWhite from '../files/icons/menu-icon-white.svg';
+import menuIcon from '../files/icons/menu-icon.svg';
 import closeIcon from '../files/icons/close-icon.svg';
 import PropTypes from 'prop-types';
 import MainMenu from './menus/main-menu/main-menu'
@@ -49,7 +49,7 @@ const RedHeader = () => {
                     right
                     noTransition
                     width={'75%'}
-                    customBurgerIcon={<img alt='mobile menu navigation icon' src={menuIconWhite} />}
+                    customBurgerIcon={<img alt='mobile menu navigation icon' src={menuIcon} />}
                     customCrossIcon={<img alt='mobile menu close button' src={closeIcon} />}
                 />
             </div></div>
