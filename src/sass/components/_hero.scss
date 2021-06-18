@@ -21,11 +21,11 @@
       padding: 42px 64px 67px;
     }
     h1 {
-      padding-bottom: 18px;
+      padding-bottom: 16px;
       padding-top: 24px;
       @media(min-width: $tablet-screen) {
-        padding-top: 40px;
-        padding-bottom: 35px;
+        padding-top: 0;
+
       }
     }
     .body {

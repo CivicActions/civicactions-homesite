@@ -1,7 +1,7 @@
 .staff-quote.quote {
-  padding: 228px 0 72px;
+  //padding: 228px 0 72px;
   @media(min-width: $medium-large-screen) {
-    padding: 140px 0 72px;
+    //padding: 140px 0 72px;
   }
 
   .inner {
@@ -12,12 +12,12 @@
     padding-top: 23px;
     font-weight: 300;
   }
-  .quote {
-    margin-left: 50px;
-    @media(min-width: $medium-large-screen) {
-      margin-left: 20px;
-    }
-  }
+  //.quote {
+  //  margin-left: 50px;
+  //  @media(min-width: $medium-large-screen) {
+  //    margin-left: 20px;
+  //  }
+  //}
 }
 .first-quote {
   background-color: $colors-grey-warm-4 !important;

@@ -24,11 +24,9 @@ const LicensingPage = () => {
           </p>
         </div>
       </section>
-      <section
-        className='licensing__content-section'
-        style={{ marginBottom: 80 }}>
+      <section className='licensing__content-section'>
         <div className='inner'>
-          <h3>Public license for the public good</h3>
+          <h2 className='h3'>Public license for the public good</h2>
           <p className='body'>
             As a company, and as individuals working at CivicActions, we license
             all work products (including code, text, and other creative
@@ -64,11 +62,12 @@ const LicensingPage = () => {
       and ‘people first.’”'
         name='Henry Poole'
         role='CivicActions co-founder and CEO'
+        classes='mobile-tan-bkgd'
       />
 
-      <section className='licensing__content-section' style={{ marginTop: 80 }}>
+      <section className='licensing__content-section'>
         <div className='inner'>
-          <h3>Open culture, open minds</h3>
+          <h2 className='h3'>Open culture, open minds</h2>
           <p className='body'>
             In practice, this policy supports the culture and values of
             CivicActions by allowing us to:
@@ -91,7 +90,7 @@ const LicensingPage = () => {
               work that was done in the past
             </li>
           </ul>
-          <p className='body' style={{ marginBottom: 120 }}>
+          <p className='body'>
             Our free and open licensing policies help our company grow and
             thrive, while empowering others to do the same.
           </p>
