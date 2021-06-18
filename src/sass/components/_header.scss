@@ -20,7 +20,13 @@
   &.mobile-menu-open {
     position: static;
   }
+  .logo img {
+    max-width: 159px;
+    @media(min-width: $tablet-screen) {
+      max-width: 294px;
+    }
 
+  }
   > .inner {
     display: flex;
     flex-direction: row;
@@ -60,6 +66,10 @@
   .logo img {
 
     max-width: 216px;
+  }
+  .bm-burger-button {
+    right: 30px;
+    top: 22px;
   }
 }
 

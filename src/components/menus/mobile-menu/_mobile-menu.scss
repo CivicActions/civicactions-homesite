@@ -5,7 +5,10 @@
   width: 20px;
   height: 30px;
   right: 48px;
-  top: 48px;
+  top: 40px;
+  @media(min-width: $tablet-screen) {
+    top: 62px;
+  }
 
   // Different postion for burger icon in the red header 
   .red-header & {
