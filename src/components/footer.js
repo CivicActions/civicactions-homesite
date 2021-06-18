@@ -47,8 +47,8 @@ const Footer = () => {
           <SocialIcons />
         </div>
         <div className='grid-container__item footer__bottom-links'>
-          <p>© 2010 —- 2021</p>
-          <p><Link to='/accessibility'>Accessibility</Link></p>
+          <p className='copyright'>© 2010 —- 2021</p>
+          <p><Link to='/accessibility-statement'>Accessibility</Link></p>
           <p><Link to='/privacy'>Privacy</Link></p>
           <p><Link to='/feedback'>Feedback</Link></p>
 
