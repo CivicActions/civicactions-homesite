@@ -67,8 +67,10 @@ module.exports = {
           `case-study`,
           `offering`,
           `press`,
+          `general`,
           `press-release`,
           `staff-profile`,
+
         ],
         singleTypes: [],
       },
