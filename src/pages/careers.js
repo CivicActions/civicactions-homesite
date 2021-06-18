@@ -73,12 +73,12 @@ const CareersPage = () => {
               </p>
             </div>
             <div className='right-aligned'>
-              <img src={whoWeArePicture} alt=''></img>
+              <img src={whoWeArePicture} alt='Small group of CivicActions team members smiling by a waterfall in Portland, Oregon'></img>
             </div>
           </div>
           <div className='what-we-look-for'>
             <div className='left-aligned'>
-              <img src={whatWeLookForPicture} alt=''></img>
+              <img src={whatWeLookForPicture} alt='CivicActions team members having a group discussion at a company retreat in Boulder, Colorado'></img>
             </div>
             <div className='right-aligned'>
               <h2>What we look for</h2>
@@ -155,7 +155,7 @@ const CareersPage = () => {
               on video calls are normal, too!)'
             />
           </div>
-          <img src={FamilyPhoto} alt=''></img>
+          <img src={FamilyPhoto} alt='Several CivicActions team members on a video call with their kids and pets'></img>
         </div>
       </section>
       <StaffQuote

@@ -6,7 +6,7 @@ const PressReleaseTeaser = ({ teaserlink, img, title, description }) => {
   return (
     <div className='press-release-teaser'>
       <a href={teaserlink}>
-        <img src={img} alt=''></img>
+        <img src={img} alt=""></img>
         <h3>{title}</h3>
         <p className='body'>{description}</p>
       </a>
