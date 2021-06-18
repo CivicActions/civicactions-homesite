@@ -1,30 +1,30 @@
 .section--case-studies--filter {
   padding: 40px 0 0;
+  @media(min-width: $tablet-screen) {
+    padding-top: 56px;
+    margin-bottom: 0;
+  }
   @media(min-width: $medium-large-screen) {
-    padding-top: 0;
     max-width: $max-width;
     margin: 0 auto;
-    padding: 40px 0 64px;
+    padding: 56px 0 0;
   }
   h2 {
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
-    padding-bottom: 34px;
+    padding-bottom: 24px;
     display: block;
   }
 
   .checkboxes {
-    @media(min-width: $tablet-screen) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media(min-width: $medium-large-screen) {
-      grid-template-columns: repeat(4, 1fr);
-    }
     .checkbox {
       position: relative;
       display: flex;
+      float: left;
+      padding-bottom: 32px;
+      padding-right: 56px;
+
       input {
         width: 21px;
         height: 21px;
@@ -58,6 +58,10 @@
       }
       label {
         padding-left: 6px;
+        padding-top: 4px;
+        @media(min-width: $tablet-screen) {
+          padding-top: 0;
+        }
       }
     }
   }

@@ -1,12 +1,15 @@
 .section--case-studies--teasers .inner,
 .home--case-studies-section .teasers {
-
+  clear: both;
   @media(min-width: $tablet-screen) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 32px;
     max-width: $max-width;
     margin-top: 40px;
+  }
+  @media(min-width: $medium-large-screen) {
+    margin-top: 48px;
   }
 
   @media(min-width: 1200px) {

@@ -2,19 +2,20 @@
   padding: 0;
   @media(min-width: 1200px) {
     max-width: $max-width;
-    margin: 0 auto;
+    margin: 0 auto 88px;
   }
   h2 {
     margin: 0 24px;
     @media(min-width: $tablet-screen) {
-      margin: 0 36px;
+      margin: 0 48px;
     }
     @media(min-width: 1200px) {
       margin: 0;
+      line-height: 50px;
     }
   }
   .inner {
-    padding-top: 40px;
+    padding-top: 32px;
     @media(min-width: $medium-large-screen) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -23,10 +24,10 @@
 
     & > div {
       background-color: $colors-grey-warm-4;
-      padding: 33px 20px;
+      padding: 24px;
       margin-bottom: 32px;
       @media(min-width: $medium-large-screen) {
-        padding: 53px 37px;
+        padding: 48px;
       }
     }
     .case-studies--icon {
@@ -35,12 +36,14 @@
       float: left;
     }
     label {
-      font-size: 28px;
-      padding-left: 16px;
+      font-size: 20px;
+      padding-left: 24px;
       float: left;
-      padding-top: 9px;
+      padding-top: 25px;
       font-weight: 300;
-      width: 80%;
+      @media(min-width: $tablet-screen) {
+        font-size: 28px;
+      }
     }
     ul {
       clear: both;
