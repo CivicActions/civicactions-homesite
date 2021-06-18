@@ -76,7 +76,7 @@ const HomePage = () => {
         <div className='inner'>
           <img
             src={homeIntroGraphic}
-            alt='Image of capitol building'
+            alt='Capitol building to represent government services that build public trust'
             ref={(e) => (fadersRef.current[0] = e)}
             className='fade-in'></img>
           <div className='info-text'>
@@ -261,7 +261,7 @@ const HomePage = () => {
               <LinkButton src='/team' type='primary' text='Meet our team' />
             </div>
             <div className='team-picture-column'>
-              <img src={homeTeamImage} alt=''></img>
+              <img src={homeTeamImage} alt='Large group of smiling CivicActions team members on a video call.'></img>
             </div>
           </div>
         </div>
