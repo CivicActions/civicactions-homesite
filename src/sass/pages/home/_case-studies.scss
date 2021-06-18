@@ -40,6 +40,9 @@
     @media(min-width: 1400px) {
       height: 200px;
     }
+    @media(min-width: 1844px) {
+      height: 350px;
+    }
   }
 
 
@@ -257,6 +260,9 @@
     height: 62%;
   }
   @media(min-width: $medium-large-screen) {
-
+    bottom: 0;
+  }
+  @media(min-width: 1844px) {
+    bottom: 18%;
   }
 }
