@@ -199,8 +199,8 @@ const CareersPage = () => {
           <p className='body'>
             Here’s what to expect from our hiring process. We do our best to
             respect your time as we explore the possibility of adding you to our
-            high-caliber team. <br/>Check out our tips on creating a noteworthy
-            application.
+            high-caliber team. <br/><a href='https://medium.com/civicactions/we-hire-people-not-resumes-and-other-quirks-to-the-civicactions-application-process-7aab30d69c1c'>
+            Check out our tips on creating a noteworthy application.</a>
           </p>
           <div className='steps-grid'>
             <div className='step'>

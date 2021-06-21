@@ -36,8 +36,7 @@ const FeedbackPage = () => {
         <div className='inner'>
           <h2>Get in touch with our website team.</h2>
           <p className='body'>
-            Want to let our team know about issues, ideas, or updates for the
-            site? Fill out this quick form.
+              You can fill out this quick form to let our team know about issues, updates, or ideas for the site.
           </p>
           <iframe
             src='https://docs.google.com/forms/d/e/1FAIpQLSeTBqCxx8zHegPyjg1pjWxb7nCLVdKSjeUyjHZ57VnDRO5zAQ/viewform?embedded=true'

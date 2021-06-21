@@ -13,7 +13,7 @@ const PrivacyPage = () => {
         desciption='Our privacy policy describes how we collect and use information about visitors to our website.'
       />
       <Hero
-        title='Privacy policy for civicactions.com'
+        title='Our privacy policy'
         description='This is a plain-language statement explaining how we collect
             information on our website, and how we use it. Our pledge is to be
             responsible stewards of any information we collect, and to protect
@@ -23,8 +23,9 @@ const PrivacyPage = () => {
         <div className='inner'>
           <h3>Have questions? Drop us a line.</h3>
           <p className='body'>
-            If you have any questions about this statement, feel free to send an
-            email or contact us at:
+            If you have any questions about this statement, feel free to
+            <a href='mailto:contact@civicactions.com'> send an
+            email</a> or contact us at:
           </p>
           <p className='body'>
             CivicActions
@@ -36,7 +37,7 @@ const PrivacyPage = () => {
             (510) 408-7510
           </p>
 
-          <h4>What information do we collect?</h4>
+          <h4><strong>What information do we collect?</strong></h4>
           <p className='body'>
             We collect information from you when you register on our site,
             subscribe to our newsletter, or fill out a form.
@@ -48,7 +49,7 @@ const PrivacyPage = () => {
             anonymously.
           </p>
 
-          <h4>What do we use your information for?</h4>
+          <h4><strong>What do we use your information for?</strong></h4>
           <p className='body'>
             Any of the information we collect from you may be used in one of the
             following ways:
@@ -83,7 +84,7 @@ const PrivacyPage = () => {
             bottom of each email.
           </p>
 
-          <h4>How do we protect your information?</h4>
+          <h4><strong>How do we protect your information?</strong></h4>
           <p className='body'>
             We implement a variety of security measures to maintain the safety
             of your personal information when you enter, submit, or access your
@@ -102,7 +103,7 @@ const PrivacyPage = () => {
             than 60 days.
           </p>
 
-          <h4>Do we use cookies?</h4>
+          <h4><strong>Do we use cookies?</strong></h4>
           <p className='body'>
             Yes. We use cookies to understand and save your preferences for
             future visits and compile aggregate data about site traffic and site
@@ -113,7 +114,7 @@ const PrivacyPage = () => {
             behalf except to help us conduct and improve our business.
           </p>
 
-          <h4>Do we disclose any information to outside parties?</h4>
+          <h4><strong>Do we disclose any information to outside parties?</strong></h4>
           <p className='body'>
             We do not sell, trade, or otherwise transfer to outside parties your
             personally identifiable information. This does not include trusted
@@ -127,7 +128,7 @@ const PrivacyPage = () => {
             advertising, or other uses.
           </p>
 
-          <h4>Third party links</h4>
+          <h4><strong>Third party links</strong></h4>
           <p className='body'>
             Occasionally, at our discretion, we may include or offer third party
             products or services on our website. These third party sites have
@@ -137,7 +138,7 @@ const PrivacyPage = () => {
             site and welcome any feedback about these sites.
           </p>
 
-          <h4>California Online Privacy Protection Compliance</h4>
+          <h4><strong>California Online Privacy Protection Compliance</strong></h4>
           <p className='body'>
             Because we value your privacy we have taken the necessary
             precautions to be in compliance with the California Online Privacy
@@ -151,7 +152,7 @@ const PrivacyPage = () => {
             page.
           </p>
 
-          <h4>Children’s Online Privacy Protection Act Compliance</h4>
+          <h4><strong>Children’s Online Privacy Protection Act Compliance</strong></h4>
           <p className='body'>
             We are in compliance with the requirements of COPPA (Children’s
             Online Privacy Protection Act), we do not collect any information
@@ -160,25 +161,25 @@ const PrivacyPage = () => {
             older.
           </p>
 
-          <h4>Online Privacy Policy Only</h4>
+          <h4><strong>Online Privacy Policy Only</strong></h4>
           <p className='body'>
             This online privacy policy applies only to information collected
             through our website and not to information collected offline.
           </p>
 
-          <h4>Terms and Conditions</h4>
+          <h4><strong>Terms and Conditions</strong></h4>
           <p className='body'>
             Please also visit our Terms and Conditions section establishing the
             use, disclaimers, and limitations of liability governing the use of
             our website.
           </p>
 
-          <h4>Your Consent</h4>
+          <h4><strong>Your Consent</strong></h4>
           <p className='body'>
             By using our site, you consent to our website’s privacy policy.
           </p>
 
-          <h4>Changes to our Privacy Policy</h4>
+          <h4><strong>Changes to our Privacy Policy</strong></h4>
           <p className='body'>
             If we decide to change our privacy policy, we will post those
             changes on this page.
