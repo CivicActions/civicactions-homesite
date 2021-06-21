@@ -20,14 +20,20 @@
   &.mobile-menu-open {
     position: static;
   }
+  .logo img {
+    max-width: 159px;
+    @media(min-width: $tablet-screen) {
+      max-width: 294px;
+    }
 
+  }
   > .inner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     max-width: $max-width; // TODO 3.  This will be full width once sticky at top.
-    margin: 0 auto 30px;
+    margin: 0 auto 40px;
     position: relative;
   }
 }
@@ -60,6 +66,10 @@
   .logo img {
 
     max-width: 216px;
+  }
+  .bm-burger-button {
+    right: 30px;
+    top: 22px;
   }
 }
 

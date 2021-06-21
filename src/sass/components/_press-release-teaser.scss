@@ -20,10 +20,10 @@
       line-height: 39px;
     }
   }
-
-  .body {
-    padding: 0 40px 40px;
-  }
+  //
+  //.body {
+  //  padding: 0 40px 40px;
+  //}
 
   &:hover,
   &:focus {
@@ -40,6 +40,7 @@
 }
 
   .press-release-teaser {
+
     h3 {
       padding: 24px;
     }
@@ -47,7 +48,7 @@
       text-decoration: none;
     }
     .body {
-      padding: 0 20px 36px;
+      padding: 0 24px 36px;
     }
   }
 

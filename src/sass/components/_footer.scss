@@ -28,16 +28,22 @@
   .footer__branding--logo {
     max-width: 218px;
   }
-
+  .footer__menu--list {
+    margin-bottom: 40px;
+    @media(min-width: $tablet-screen) {
+      margin-bottom: 0;
+    }
+  }
   &__menu {
     // @todo Standardize ul and li styles sitewide
     ul {
       padding-left: 0;
+
     }
 
     li {
       list-style: none;
-      padding: px-to-rem(8px) 0;
+      padding: 8px 0 0;
     }
 
     a {
@@ -175,7 +181,7 @@
       }
 
       li {
-        padding: px-to-rem(4px) 0;
+        //padding: px-to-rem(4px) 0;
       }
 
       &--wrapper {

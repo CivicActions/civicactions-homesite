@@ -5,7 +5,10 @@
   width: 20px;
   height: 30px;
   right: 48px;
-  top: 48px;
+  top: 40px;
+  @media(min-width: $tablet-screen) {
+    top: 62px;
+  }
 
   // Different postion for burger icon in the red header 
   .red-header & {
@@ -125,11 +128,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
     span,
     button {
       @extend %h2;
+      font-weight: 400 !important;
     }
 
     a {
       text-decoration: none;
       color: $colors-grey-90;
+      font-weight: 400 !important;
     }
 
     li {
