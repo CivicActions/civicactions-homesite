@@ -2,10 +2,16 @@
   .hero-component {
     box-shadow: none;
     margin-bottom: 0;
+    margin-top: 0;
     .inner {
       display: grid;
-      @media(min-width: 1024px) {
-        padding-top: 22px;
+      @media(min-width: $tablet-screen) {
+        padding: 0 0 40px;
+      }
+      @media(min-width: $medium-large-screen) {
+        padding: 0 0 64px;
+        max-width: 725px;
+        margin: 0 auto;
       }
       .client-name {
         font-weight: bold;

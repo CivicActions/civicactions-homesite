@@ -9,18 +9,19 @@
   @media(min-width: $medium-large-screen) {
     max-width: 825px;
     margin-top: 75px;
+    margin-bottom: 56px;
   }
 
   .inner {
     padding: 0 24px;
     @media(min-width: $tablet-screen) {
-      padding: 0 0 40px;
+      padding: 40px;
     }
-    @media(min-width: $medium-large-screen) {
-      padding: 42px 64px 67px;
+    @media(min-width: $large-screen) {
+      padding: 64px;
     }
     h1 {
-      padding-bottom: 16px;
+      padding-bottom: 0;
       padding-top: 16px;
       @media(min-width: $tablet-screen) {
         padding-top: 0;
