@@ -16,7 +16,6 @@
       h1 {
         grid-area: 2/3;
         padding-top: 16px;
-        padding-bottom: 24px;
       }
       p {
         grid-area: 3/3;
@@ -27,12 +26,7 @@
   .case-study--hero-image {
     img {
       width: 100%;
-      margin-bottom: 80px;
-    }
-    @media(min-width: 1200px) {
-      margin: 0 20px;
-      max-width: $max-width;
-      margin: 0 auto;
+
     }
   }
 
@@ -55,8 +49,10 @@
     }
     .inner {
       @media(min-width: $medium-large-screen) {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        //grid-template-columns: repeat(3, 1fr);
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 20px;
         margin: 0 120px !important;
       }
@@ -64,6 +60,7 @@
         background-color: #E7EFEF;
         padding: 32px 24px;
         margin-bottom: 16px;
+        flex-basis: 27.33%;
         @media(min-width: $medium-large-screen) {
           margin-bottom: 0;
         }

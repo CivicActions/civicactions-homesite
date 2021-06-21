@@ -11,7 +11,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const CaseStudyTemplate = ({ data }) => {
   const caseStudy = data.allStrapiCaseStudy.edges[0].node;
   const { Client_Name, Related_Case_Studies, Hero_Image } = caseStudy;
-
+  console.log(caseStudy);
   return (
     <GeneralLayout>
       <SEO
@@ -28,10 +28,11 @@ const CaseStudyTemplate = ({ data }) => {
         />
 
         {Hero_Image &&
-          <div className='case-study--hero-image'>
+          <section className='case-study--hero-image'><div className='inner'>
             <img src={Hero_Image.url} alt={Hero_Image.alternativeText}></img>
             {Hero_Image.caption && <span className='caption'>{Hero_Image.caption}</span>}
           </div>
+          </section>
         }
 
         <section className='section--case-study--stats'>
@@ -143,7 +144,7 @@ const CaseStudyTemplate = ({ data }) => {
         </section>}
 
 
-        <section className='section--case-study--staff'>
+        {caseStudy.staff_profiles.length > 0 && <section className='section--case-study--staff'>
           <div className='inner'>
             <h2>Meet the team</h2>
             <div className='related-staff--wrapper'>
@@ -163,7 +164,7 @@ const CaseStudyTemplate = ({ data }) => {
               ))}
             </div>
           </div>
-        </section>
+        </section>}
         {Related_Case_Studies.length > 0 &&
           <section className='section--case-study--related'>
             <h2>Related case studies</h2>

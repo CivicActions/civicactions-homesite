@@ -14,14 +14,14 @@
   .inner {
     padding: 0 24px;
     @media(min-width: $tablet-screen) {
-      padding: 40px;
+      padding: 0 0 40px;
     }
     @media(min-width: $medium-large-screen) {
       padding: 42px 64px 67px;
     }
     h1 {
       padding-bottom: 16px;
-      padding-top: 24px;
+      padding-top: 16px;
       @media(min-width: $tablet-screen) {
         padding-top: 0;
       }
