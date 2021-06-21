@@ -11,7 +11,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const CaseStudyTemplate = ({ data }) => {
   const caseStudy = data.allStrapiCaseStudy.edges[0].node;
   const { Client_Name, Related_Case_Studies, Hero_Image } = caseStudy;
-
+  console.log(caseStudy);
   return (
     <GeneralLayout>
       <SEO
@@ -28,10 +28,11 @@ const CaseStudyTemplate = ({ data }) => {
         />
 
         {Hero_Image &&
-          <div className='case-study--hero-image'>
+          <section className='case-study--hero-image'><div className='inner'>
             <img src={Hero_Image.url} alt={Hero_Image.alternativeText}></img>
             {Hero_Image.caption && <span className='caption'>{Hero_Image.caption}</span>}
           </div>
+          </section>
         }
 
         <section className='section--case-study--stats'>
@@ -52,7 +53,7 @@ const CaseStudyTemplate = ({ data }) => {
           <Quote
             quote={caseStudy.Quote.Quote}
             source={caseStudy.Quote.Source}
-            classes='first-quote'
+            classes='first-quote no-img'
           />
         }
 
@@ -62,8 +63,8 @@ const CaseStudyTemplate = ({ data }) => {
               <div className='case-study-challenge-goal'>
                 <div className='challenge'>
                   <h2>The challenge</h2>
-                  <ReactMarkdown className='body' source={caseStudy.Challenge_Goal.Challenge} />
-                  <p className='body'>{caseStudy.Challenge_Goal.Challenge}</p>
+                  <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Challenge} />
+
                 </div>
                 <div className='goal'>
                   <h3>Client goal</h3>
@@ -113,7 +114,7 @@ const CaseStudyTemplate = ({ data }) => {
                         </img>
                       }
                       {approachItem.Image.caption &&
-                        <span className='caption'>{approachItem.Image.caption}</span>
+                        <div className='caption'>{approachItem.Image.caption}</div>
                       }
                     </div>
 
@@ -143,7 +144,7 @@ const CaseStudyTemplate = ({ data }) => {
         </section>}
 
 
-        <section className='section--case-study--staff'>
+        {caseStudy.staff_profiles.length > 0 && <section className='section--case-study--staff'>
           <div className='inner'>
             <h2>Meet the team</h2>
             <div className='related-staff--wrapper'>
@@ -163,7 +164,7 @@ const CaseStudyTemplate = ({ data }) => {
               ))}
             </div>
           </div>
-        </section>
+        </section>}
         {Related_Case_Studies.length > 0 &&
           <section className='section--case-study--related'>
             <h2>Related case studies</h2>

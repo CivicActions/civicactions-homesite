@@ -12,22 +12,28 @@
     padding-top: 23px;
     font-weight: 300;
   }
-  //.quote {
-  //  margin-left: 50px;
-  //  @media(min-width: $medium-large-screen) {
-  //    margin-left: 20px;
-  //  }
-  //}
 }
 .first-quote {
   background-color: $colors-grey-warm-4 !important;
 }
-.section--case-study--stats {
-  .stats--wrapper {
-    margin-bottom: -241px;
-    @media(min-width: $medium-large-screen) {
-      margin-bottom: -100px;
-    }
-  }
+.case-studies {
+  .staff-quote.first-quote {
+    padding-top: 176px;
 
+    @media(min-width: $medium-large-screen) {
+      padding-top: 196px;
+    }
+    .h3 {
+      @media(min-width: $medium-large-screen) {
+        line-height: 39px;
+        margin-bottom: 0;
+      }
+    }
+    .body {
+      @media(min-width: $medium-large-screen) {
+        padding-top: 24px;
+      }
+    }
+
+  }
 }

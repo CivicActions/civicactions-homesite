@@ -17,8 +17,9 @@
     @media(min-width: $tablet-screen) {
       display: flex;
       justify-content: center;
+      margin: 0;
     }
-    @media(min-width: $medium-large-screen) {
+    @media(min-width: $large-screen) {
       padding: 47px 113px;
     }
     .single-stat:last-child {
@@ -47,4 +48,13 @@
       }
     }
   }
+}
+.section--case-study--stats {
+  .stats--wrapper {
+    margin-bottom: -167px;
+    @media(min-width: $medium-large-screen) {
+
+    }
+  }
+
 }
