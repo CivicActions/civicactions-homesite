@@ -24,7 +24,7 @@ const Press = () => {
               Department of Education Awards CivicActions 5-Year Contract to
               Advance Adult Literacy
             </h2>
-            <span>Press Release: May 11, 2021</span>
+            <span>News Release: May 11, 2021</span>
             <p className='body'>
               We are proud to continue our work with the Department of Education
               to modernize the online experience of thousands of educators and
@@ -74,7 +74,7 @@ const Press = () => {
             </p>
             <p className='body'>
               Full story:{' '}
-              <a href='https://gcn.com/articles/2021/02/04/accessibility-compliance-as-code.aspx'>
+              <a href='https://fcw.com/articles/2021/03/22/comment-lazzeri-ato-asap.aspx'>
                 ATO ASAP: Streamlining government security with a Federal
                 Compliance Library
               </a>

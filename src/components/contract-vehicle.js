@@ -2,7 +2,7 @@ import '../sass/styles.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ContactVehicle = ({ icon, alt, name, info, contract, link }) => {
+const ContactVehicle = ({ icon, alt, name, info, contract, link, period }) => {
     return (
         <div className='contact-vehicle--component'>
 
@@ -10,6 +10,7 @@ const ContactVehicle = ({ icon, alt, name, info, contract, link }) => {
             <h3>{name}</h3>
                 <p className='body'>{info}</p>
                 {contract && <p className='body'>{contract}</p>}
+            {period && <p className='body'>{period}</p>}
                 {link &&
                 <a href={link}>View details</a>}
 
@@ -28,4 +29,5 @@ ContactVehicle.propTypes = {
     info: PropTypes.string,
     contract: PropTypes.string,
     link: PropTypes.string,
+    period: PropTypes.string,
 };

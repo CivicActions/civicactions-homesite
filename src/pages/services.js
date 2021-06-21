@@ -337,7 +337,7 @@ const ServicesPage = ({ data }) => {
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
                   <li><Link to='/services/ditap'>DITAP program certification</Link></li>
-                  <li>Telework consulting and training</li>
+                  <li><a href='https://distributedgov.com/'>Telework consulting and training</a></li>
                   <li>Agile and Human-Centered Design coaching</li>
                   <li>Team culture and performance coaching</li>
                   <li>Technology strategy consulting</li>

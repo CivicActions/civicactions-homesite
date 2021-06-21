@@ -218,7 +218,7 @@ const HomePage = () => {
               description={
                 'Better and faster security for government IT systems'
               }
-              teaserLink={
+              teaserlink={
                 'https://medium.com/civicactions/policy-recommendations-for-improving-the-ato-process-through-compliance-as-code-524e3005fceb'
               }
             />

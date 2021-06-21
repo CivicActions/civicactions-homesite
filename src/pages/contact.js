@@ -84,10 +84,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <PrimaryPageCTA
-        title='Let’s build a public success story.'
-        subtitle='Get in touch to start.'
-      />
+
     </RedLayout>
   );
 };

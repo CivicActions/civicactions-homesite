@@ -1,29 +1,26 @@
 import '../sass/styles.scss';
 import React from 'react';
-import GeneralLayout from '../layouts/general';
+import RedLayout from '../layouts/red';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
 import StaffQuote from '../components/staff-quote.js';
 import henryPooleProfilePicture from '../files/images/henry-poole.png';
 import { Link } from 'gatsby';
 import SEO from '../components/seo';
+import Hero from "../components/hero";
 
 const LicensingPage = () => {
   return (
-    <GeneralLayout>
+    <RedLayout>
       <SEO
         title='Licensing policy'
         description='Open source is just the beginning. Our open licensing policies allow our company to thrive while helping others to do the same.'
       />
-      <section className='licensing__hero-section'>
-        <div className='inner'>
-          <h2>Licensing policy</h2>
-          <p className='body'>
-            Our licensing policy reflects our commitment to open source
+      <Hero
+          title='Licensing policy'
+          description='Our licensing policy reflects our commitment to open source
             technologies and collaborative ways of working. We believe that
-            sharing our work openly is a benefit to others and ourselves.
-          </p>
-        </div>
-      </section>
+            sharing our work openly is a benefit to others and ourselves.'
+        />
       <section className='licensing__content-section'>
         <div className='inner'>
           <h2 className='h3'>Public license for the public good</h2>
@@ -49,21 +46,20 @@ const LicensingPage = () => {
           </p>
           <p className='body'>
             All content produced, including project management methods and email
-            messages, is released under the
-            <Link to='/'>
-              Creative Commons Attribution-Share Alike License.
-            </Link>
+            messages, is released under the <a href='https://creativecommons.org/licenses/by-sa/3.0/'>
+            Creative Commons Attribution-Share Alike License.</a>
+
           </p>
         </div>
       </section>
-      <StaffQuote
-        img={henryPooleProfilePicture}
-        quote='“We have never strayed from our commitment to ‘open by default’
-      and ‘people first.’”'
-        name='Henry Poole'
-        role='CivicActions co-founder and CEO'
-        classes='mobile-tan-bkgd'
-      />
+      {/*<StaffQuote*/}
+      {/*  img={henryPooleProfilePicture}*/}
+      {/*  quote='“We have never strayed from our commitment to ‘open by default’*/}
+      {/*and ‘people first.’”'*/}
+      {/*  name='Henry Poole'*/}
+      {/*  role='CivicActions co-founder and CEO'*/}
+      {/*  classes='mobile-tan-bkgd'*/}
+      {/*/>*/}
 
       <section className='licensing__content-section'>
         <div className='inner'>
@@ -100,7 +96,7 @@ const LicensingPage = () => {
           title='Let’s build a public success story.'
           subtitle='Get in touch to start.'
       />
-    </GeneralLayout>
+    </RedLayout>
   );
 };
 

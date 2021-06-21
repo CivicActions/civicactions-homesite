@@ -216,7 +216,7 @@ const CaseStudyPage = () => {
               <li>Federal Communications Commission</li>
               <li>U.S. Department of Veterans Affairs</li>
               <li>U.S. Department of Justice</li>
-              <li>General Services Administration (data.gov</li>
+              <li>General Services Administration (data.gov)</li>
               <li>California Department of Technology</li>
             </ul>
           </div>
