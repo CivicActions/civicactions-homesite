@@ -42,9 +42,11 @@
         overflow: hidden;
         @media(min-width: $tablet-screen) {
           padding: 48px 0;
+          width: 100%;
         }
-        @media(min-width: $medium-large-screen) {
+        @media(min-width: $large-screen) {
           padding: 48px 82px;
+
         }
         ul {
           margin-bottom: 0;

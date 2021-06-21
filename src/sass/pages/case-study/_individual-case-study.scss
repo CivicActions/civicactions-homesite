@@ -3,6 +3,12 @@
     box-shadow: none;
     margin-bottom: 0;
     margin-top: 0;
+    @media(min-width: $tablet-screen) {
+      margin-top: 20px;
+    }
+    @media(min-width: $large-screen) {
+      margin-top: 0;
+    }
     .inner {
       display: grid;
       @media(min-width: $tablet-screen) {
@@ -21,7 +27,7 @@
       }
       h1 {
         grid-area: 2/3;
-        padding-top: 16px;
+        padding-bottom: 6px;
       }
       p {
         grid-area: 3/3;
@@ -30,6 +36,14 @@
 
   }
   .case-study--hero-image {
+    @media(min-width: $tablet-screen) {
+      margin-top: 24px;
+      margin-bottom: 64px;
+    }
+    @media(min-width: $large-screen) {
+      margin-bottom: 80px;
+      margin-top: 0;
+    }
     img {
       width: 100%;
 

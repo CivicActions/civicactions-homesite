@@ -50,5 +50,11 @@
   }
 }
 .section--case-study--stats {
+  .stats--wrapper {
+    margin-bottom: -167px;
+    @media(min-width: $medium-large-screen) {
+
+    }
+  }
 
 }

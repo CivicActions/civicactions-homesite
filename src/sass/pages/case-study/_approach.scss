@@ -1,6 +1,6 @@
 .section--case-study--approaches {
   @media(min-width: $medium-large-screen) {
-    margin-bottom: 88px;
+    margin-bottom: 30px;
   }
   .inner {
     overflow: auto;
@@ -13,7 +13,7 @@
   }
   .first-approach {
     @media(min-width: $medium-large-screen) {
-      margin-bottom: 126px !important;
+      margin-bottom: 80px !important;
     }
 
   }
@@ -25,9 +25,6 @@
     }
     @media(min-width: $medium-large-screen) {
       margin: 60px auto 56px;
-    }
-    h2 {
-      padding-bottom: 4px;
     }
     h3 {
       padding-bottom: 14px;
