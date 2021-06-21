@@ -1,7 +1,8 @@
 .home--team-section{
   .inner {
     margin-top: 56px !important;
-    .team-section--title {
+    .team-section--title,
+    .team-section--role {
       margin-bottom: 14px;
       line-height: 34px;
       @media(min-width: $tablet-screen) {
@@ -50,9 +51,15 @@
     font-size: 20px;
     margin-right: 20px;
     margin-bottom: 10px;
+    font-family: $secondary-font;
     &.selected {
       border: 1px solid $colors-red-50;
       color: $colors-red-50;
+    }
+    &:hover,
+    &:focus {
+      color: $colors-white;
+      background-color: $colors-grey-90;
     }
   }
 }

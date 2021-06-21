@@ -1,5 +1,6 @@
 .careers--hero-section {
   width: 100%;
+  margin-bottom: 0;
 
   .inner {
     position: relative;
@@ -9,6 +10,9 @@
     justify-content: center;
     align-items: flex-start;
     text-align: start;
+    h1 {
+      padding-bottom: 0;
+    }
   }
 
   h2 {
