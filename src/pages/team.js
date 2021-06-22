@@ -15,6 +15,7 @@ const TeamPage = () => {
     {
       allStrapiStaffProfile(sort: {order: ASC, fields: Name}) {
         nodes {
+          id
           Name
           Role
           Path
@@ -54,7 +55,6 @@ const TeamPage = () => {
   if (filterState != null) {
     team = teamDataNodes.filter((person) => {
       const checkedCategory = person.Category.map((member) => member.Category);
-      console.log(checkedCategory);
       if (!checkedCategory.indexOf(filterState)) {
         return true;
       }
@@ -68,14 +68,11 @@ const TeamPage = () => {
   return (
     <RedLayout>
       <SEO title='Team' description='Meet the humans of CivicActions.' />
-      <section className='careers--hero-section hero-component'>
-        <div className='inner'>
-          <h1>Meet the humans of CivicActions</h1>
-          <p className='body'>
-            People who work with us say there’s “something magical” about our team. We are good listeners, strategic thinkers, honest communicators, and problem solvers. (We’re also cheerful and kind, which is a nice bonus.) Let’s get to know each other!
-          </p>
-        </div>
-      </section>
+
+      <Hero
+        title='Meet the humans of CivicActions'
+        description='People who work with us say there’s “something magical” about our team. We are good listeners, strategic thinkers, honest communicators, and problem solvers. (We’re also cheerful and kind, which is a nice bonus.) Let’s get to know each other!'
+      />
 
       <section className='team--filter-btns-section'>
         <div className='inner'>
@@ -101,18 +98,20 @@ const TeamPage = () => {
         role='Technical Writer'
         img={alanaCaseyProfilePicture}
       />
+
       <PrimaryPageCTA
-          title='Let’s build a public success story.'
-          subtitle='Get in touch to start.'
+        title='Let’s build a public success story.'
+        subtitle='Get in touch to start.'
       />
+
     </RedLayout>
   );
 };
 
 const TeamTeasers = ({ team }) => {
-  return team.map((person, index) => {
-    const { Path, Name, Role, Image } = person;
-    return <TeaserGrid image={Image} name={Name} link={Path} title={Role} />;
+  return team.map((person) => {
+    const { id, Path, Name, Role, Image } = person;
+    return <TeaserGrid key={id} image={Image} name={Name} link={Path} title={Role} />;
   });
 };
 
