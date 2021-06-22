@@ -19,7 +19,7 @@ const TeaserGrid = ({ image, link, name, title }) => {
             {/*<Link to={link} title={`Link to ${name}'s profile page`}>*/}
               <div className="teaser-grid__title">{name}</div>
             {/*</Link>*/}
-            <div className="teaser-grid__title">{title}</div>
+            <div className="teaser-grid__role">{title}</div>
           </div>
         </div>
       </div>
