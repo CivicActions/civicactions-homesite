@@ -51,15 +51,32 @@
     font-size: 20px;
     margin-right: 20px;
     margin-bottom: 10px;
-    font-family: $secondary-font;
-    &.selected {
-      border: 1px solid $colors-red-50;
-      color: $colors-red-50;
-    }
-    &:hover,
+
     &:focus {
       color: $colors-white;
       background-color: $colors-grey-90;
+      border: 1px solid $colors-grey-90;
+    }
+
+    &.selected {
+      border: 1px solid $colors-red-50;
+      color: $colors-red-50;
+
+      &:focus {
+        color: $colors-white;
+      }
+
+      &:hover {
+        color: $colors-red-50;
+      }
+    }
+
+    // Keep the hover state styles at the bottom for specificity. The :hover styles override
+    // :focus and .selected.
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $colors-red-50;
+      color: $colors-red-50;
     }
   }
 }
