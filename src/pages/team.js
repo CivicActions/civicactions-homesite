@@ -93,7 +93,7 @@ const TeamPage = () => {
       </section>
 
       <StaffQuote
-        quote='My teammates are brilliant innovators, high performers, and conscientious human beings. Together we’re working to improve lives.'
+        quote='“My teammates are brilliant innovators, high performers, and conscientious human beings. Together we’re working to improve lives.”'
         name='Alanna Casey'
         role='Technical Writer'
         img={alanaCaseyProfilePicture}
