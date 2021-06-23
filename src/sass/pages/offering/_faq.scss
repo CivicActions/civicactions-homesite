@@ -1,9 +1,16 @@
 .section--offering--faqs {
   margin-bottom: 40px;
+  @media(min-width: $tablet-screen) {
+    margin-bottom: 64px;
+  }
+  @media(min-width: $large-screen) {
+    margin-bottom: 120px;
+  }
   .inner {
     @media(min-width: 845px) {
       max-width: 845px;
       padding: 40px;
+      margin: 0 auto;
     }
 
     h2 {
@@ -22,7 +29,9 @@
         @media(min-width: $medium-large-screen) {
           margin-bottom: 40px;
         }
-
+        .body {
+          margin-left: 36px;
+        }
       }
 
       .accordion__button[aria-expanded='true'] .arrow-right {

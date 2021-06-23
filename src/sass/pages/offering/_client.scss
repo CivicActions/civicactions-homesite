@@ -1,22 +1,26 @@
 .section--offering--client-logos {
-  margin-bottom: 30px;
+  margin-bottom: 48px;
   padding-top: 24px;
   @media(min-width: $tablet-screen) {
     padding-top: 35px;
+    margin-bottom: 40px;
   }
   @media(min-width: $medium-large-screen) {
     padding-top: 67px;
-    margin-bottom: 48px;
+    //margin-bottom: 0;
   }
   .inner {
     margin: 0;
+    @media(min-width: $large-screen) {
+      margin: 0 auto;
+    }
   }
   h2 {
     margin: 0 24px;
     @media(min-width: $tablet-screen) {
       margin: 0 48px;
     }
-    @media(min-width: $medium-large-screen) {
+    @media(min-width: $large-screen) {
       margin: 0;
     }
   }
