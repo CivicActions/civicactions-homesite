@@ -22,6 +22,7 @@ import TabMobile from '../components/tabmobile';
 import SEO from '../components/seo';
 
 import linkedinIcon from "../files/icons/linkedin.svg";
+import linkedinIconBlue from "../files/icons/linkedin-blue.svg";
 import squareCircle from "../files/icons/square-circle.svg";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import closeButton from '../files/icons/grey-close-icon.svg';
@@ -61,11 +62,14 @@ const OfferingTemplate = ({ data }) => {
         offering.team_members.map((member, index) => (
 
             <div key={member.id} className='related-staff'>
-                <img className='staff-image' src={member.image[0].url} alt={member.image[0].alternativeText} />
+                <img className='staff-image' src={member.image[0].url} aria-label={member.Name} />
                 <div className='staff-info'>
                     <h3 className='staff-name'>
                         {member.Name}
-                        <a className='linkedin-icon' href={member.Linkedin}><img alt={`linkedin profile for ${member.Name}`} src={linkedinIcon} /></a>
+                        <a className='linkedin-icon' href={member.Linkedin} aria-label={`linkedin profile for ${member.Name}`}>
+                            <img className='black-icon' alt='' src={linkedinIcon}/>
+                            <img className='blue-icon' alt='' src={linkedinIconBlue}/>
+                        </a>
                     </h3>
                     <p className='body staff-role'>{member.Role}</p>
                     <button className={`body open-modal--btn ${index}`} onClick={() => openModal(member.Name)}>Read bio</button>

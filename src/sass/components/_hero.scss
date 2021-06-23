@@ -32,6 +32,11 @@
       background-color: white;
       border: 1px solid $colors-black;
       color: $colors-black;
+      &:hover,
+      &:focus {
+        background-color: $colors-black;
+        color: $colors-white;
+      }
     }
     .button__primary {
       border: 1px solid $colors-red-50;

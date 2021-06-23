@@ -221,6 +221,27 @@
     .social-icon {
       text-align: right;
       padding: 0;
+      .blue-icon {
+        display: none;
+      }
+      .blue-icon,
+      .black-icon {
+        width: 40px;
+        height: 41px;
+      }
+      a {
+        &:hover,
+        &:focus,
+        &:focus-within {
+          .blue-icon {
+            display: inline-block;
+          }
+          .black-icon {
+            display: none;
+          }
+        }
+      }
+
     }
   }
 
