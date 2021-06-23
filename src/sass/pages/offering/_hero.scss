@@ -1,9 +1,20 @@
 .offering--content-type {
   .hero-component {
+    padding-top: 24px;
+    margin-bottom: 0;
+    @media(min-width: $tablet-screen) {
+      padding-top: 0;
+    }
     .button {
       width: 100%;
       @media(min-width: $tablet-screen) {
         width: auto;
+      }
+    }
+    .button-wrapper {
+      padding-top: 16px;
+      @media(min-width: $tablet-screen) {
+        overflow: auto;
       }
     }
   }

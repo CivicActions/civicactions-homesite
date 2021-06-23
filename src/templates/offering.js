@@ -30,7 +30,7 @@ const OfferingTemplate = ({ data }) => {
     Modal.setAppElement('#___gatsby')
 
     const offering = data.allStrapiOffering.nodes[0];
-
+    console.log(offering);
     const [modalIsOpen, setIsOpen] = useState(false);
     const [modalRef, setModalRef] = useState(false);
 
@@ -204,10 +204,10 @@ const OfferingTemplate = ({ data }) => {
                             <h2>{offering.text_section.Header}</h2>
                             <ReactMarkdown className='body' children={offering.text_section.body} />
                             {offering.text_section.button.map((btn, index) => (
-                                <LinkButton
+                                <div className='button-wrapper'> <LinkButton
                                     text={btn.button_text}
                                     src={btn.button_link}
-                                />
+                                /></div>
                             ))}
 
                         </div>
