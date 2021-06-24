@@ -4,15 +4,40 @@
     padding: 40px;
     background-color: $colors-white;
     box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
+    @media(min-width: $tablet-screen) {
+      overflow: auto;
+    }
     @media(min-width: 900px) {
       max-width: 845px;
+      margin: 0 auto;
     }
-    a.button__primary:nth-child(2n) {
-      margin-left: 24px;
+    .button-wrapper {
+      margin-bottom: 16px;
+      @media(min-width: $tablet-screen) {
+        float: left;
+      }
+      a {
+        padding: 12px 0;
+        width: 100%;
+        text-align: center;
+        @media(min-width: $tablet-screen) {
+          width: auto;
+          padding: 12px 24px;
+
+        }
+
+      }
+    }
+    .button-wrapper:nth-child(2n) {
+      margin-bottom: 0;
+    }
+    .button-wrapper:nth-child(2n) a {
       background-color: white;
       border: 1px solid $colors-black;
       color: $colors-black;
-      // TODO add hover styles
+      @media(min-width: $tablet-screen) {
+        margin-left: 24px;
+      }
       &:hover,
       &:focus {
         background-color: $colors-black;
@@ -22,7 +47,7 @@
   }
   .background-mint {
     background-color: $colors-mint-cool-40v;
-    height: 716px;
+    height: 75%;
     position: absolute;
     top: 120px;
     width: 100%;

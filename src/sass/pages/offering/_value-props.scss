@@ -1,6 +1,6 @@
 .section--offering--value-props {
   background-color: $colors-grey-warm-4;
-  padding-top: 48px;
+  padding-top: 15px;
   padding-bottom: 24px;
   margin-bottom: 0;
 
@@ -8,8 +8,8 @@
     padding-bottom: 40px;
   }
   @media(min-width: 1200px) {
-    padding-top: 219px;
-    padding-bottom: 64px;
+    padding-top: 192px;
+    padding-bottom: 100px;
   }
   .inner {
     @media(min-width: 1200px) {
@@ -23,14 +23,19 @@
       float: left;
     }
     h2 {
-      padding-bottom: 24px;
+      padding-bottom: 16px;
       padding-top: 32px;
       @media(min-width: 1200px) {
         padding-top: 10px;
       }
     }
     .icon {
-      margin-left: 16px;
+      margin-left: 8px;
+      width: 35px;
+      margin-top: 28px;
+      @media(min-width: $medium-large-screen) {
+        margin-left: 16px;
+      }
     }
     .value-props--left {
       @media(min-width: $medium-large-screen) {

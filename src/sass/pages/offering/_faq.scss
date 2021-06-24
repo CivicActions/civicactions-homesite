@@ -1,18 +1,37 @@
 .section--offering--faqs {
-  margin-bottom: 0;
+  margin-bottom: 40px;
+  @media(min-width: $tablet-screen) {
+    margin-bottom: 64px;
+  }
+  @media(min-width: $large-screen) {
+    margin-bottom: 120px;
+  }
   .inner {
-    max-width: 845px;
-    padding: 40px;
+    @media(min-width: 845px) {
+      max-width: 845px;
+      padding: 40px;
+      margin: 0 auto;
+    }
+
     h2 {
-      margin-bottom: 40px;
-      padding-left: 30px;
+      margin-bottom: 16px;
+      @media(min-width: $medium-large-screen) {
+        margin-bottom: 40px;
+      }
+
     }
     .accordion {
       .accordion__button {
         display: flex;
       }
       .accordion__item {
-        margin-bottom: 40px;
+        margin-bottom: 16px;
+        @media(min-width: $medium-large-screen) {
+          margin-bottom: 40px;
+        }
+        .body {
+          margin-left: 36px;
+        }
       }
 
       .accordion__button[aria-expanded='true'] .arrow-right {

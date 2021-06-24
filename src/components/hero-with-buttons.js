@@ -6,7 +6,7 @@ import LinkButton from "./link-button";
 
 const Hero = ({ title, description, button }) => {
     return (
-        <div className='hero-component'>
+        <section className='hero-component'>
             <div className='inner'>
                 <h1>{title}</h1>
                 <ReactMarkdown className='body' children={description}/>
@@ -17,7 +17,7 @@ const Hero = ({ title, description, button }) => {
                     </div> }
             </div>
 
-        </div>
+        </section>
     );
 };
 

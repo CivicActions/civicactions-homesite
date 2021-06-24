@@ -27,6 +27,9 @@
     text-align: left;
     font-weight: 300;
     margin-top: 0;
+    @media(min-width: $medium-large-screen) {
+      line-height: 39px;
+    }
   }
 
   .inner {

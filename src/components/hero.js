@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 
 const Hero = ({ title, description }) => {
     return (
-        <div className='hero-component'>
+        <section className='hero-component'>
             <div className='inner'>
                 <h1>{title}</h1>
                 <p className='body'>{description}</p>
             </div>
 
-        </div>
+        </section>
     );
 };
 
