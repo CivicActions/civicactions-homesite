@@ -41,8 +41,10 @@
       float: left;
       padding-top: 25px;
       font-weight: 300;
+      width: 70%;
       @media(min-width: $tablet-screen) {
         font-size: 28px;
+        padding-top: 17px;
       }
     }
     ul {

@@ -56,14 +56,16 @@
         background: #1B1B1B;
         opacity: 0.75;
         padding: 16px;
-        color: $colors-white;
+
         height: 100%;
         @media(min-width: $tablet-screen) {
           font-size: 16px;
           line-height: 24px;
           padding: 24px;
+          color: $colors-white;
         }
         @media(min-width: $medium-large-screen) {
+
           padding: 40px;
           font-size: 20px;
           line-height: 33px;
@@ -71,21 +73,26 @@
       }
     }
     .wrapper--case-study--teaser {
-      height: 300px;
       position: relative;
       margin-bottom: 40px;
       overflow: hidden;
       box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
-      @media(min-width: $tablet-screen) {
-        height: 280px;
-      }
-      @media(min-width: $medium-large-screen) {
-        height: 395px;
-      }
 
       img {
-        height: 100%;
+        min-height: 235px;
         width: 100%;
+        display: block;
+        position: relative;
+        object-fit: cover;
+        @media(min-width: $tablet-screen) {
+          min-height: 325px;
+        }
+        @media(min-width: $medium-large-screen) {
+          min-height: 388px;
+        }
+        @media(min-width: $large-screen) {
+          min-height: 426px;
+        }
       }
     }
 
@@ -133,6 +140,8 @@
         @media(min-width: $medium-large-screen) {
           font-size: 28px;
           line-height: 39px;
+        }
+        @media(min-width: $large-screen) {
           margin-top: 16px;
         }
 
@@ -141,8 +150,6 @@
         display: grid;
       }
       span {
-        //position: absolute;
-        //top: 40px;
         order: 1;
         text-transform: uppercase;
         font-size: 18px;
