@@ -1,7 +1,7 @@
 import '../../sass/styles.scss';
 import React from 'react';
 import RedLayout from '../../layouts/red';
-import {Helmet} from "react-helmet";
+import SEO from "../components/seo";
 import Hero from '../../components/hero.js';
 import { Link } from 'gatsby';
 import PrimaryPageCTA from "../../components/primary-page-cta";
