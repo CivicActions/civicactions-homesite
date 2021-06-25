@@ -83,6 +83,15 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     });
   });
+  const {createRedirect} = actions //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
+  createRedirect(
+      {
+        fromPath: '/case-study/globalnet-platform-support',
+        toPath: '/case-studies/globalnet-platform-support',
+        isPermanent: true
+      }
+      );
+
 
   const staffProfiles = result.data.staffProfiles.edges;
   const StaffProfileTemplate = require.resolve(
