@@ -3,6 +3,7 @@ name: Deploy to Firebase Hosting on Content Update
 # Controls when the workflow will run
 on:
   repository_dispatch:
+    types: [created]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
