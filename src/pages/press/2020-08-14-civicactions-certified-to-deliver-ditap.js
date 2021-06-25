@@ -10,9 +10,10 @@ const CertDeliverDitap = () => {
 
     return (
         <RedLayout>
-            <Helmet>
-                <title data-react-helmet="true">CivicActions certified to deliver DITAP training to federal acquisition professionals</title>
-            </Helmet>
+                <SEO
+                    title='CivicActions certified to deliver DITAP training to federal acquisition professionals'
+                    description='Press release from civicactions.com'
+                />
             <Hero
                 title='CivicActions certified to deliver DITAP training to federal acquisition professionals'
             />

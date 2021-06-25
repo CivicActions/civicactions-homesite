@@ -10,9 +10,10 @@ const NSFRecomplete = () => {
 
     return (
         <RedLayout>
-            <Helmet>
-                <title data-react-helmet="true">NSF awards CivicActions $44M contract for CMS support and improvement of federal science research website</title>
-            </Helmet>
+                <SEO
+                    title='NSF awards CivicActions $44M contract for CMS support and improvement of federal science research website'
+                    description='Press release from civicactions.com'
+                />
             <Hero
                 title='NSF awards CivicActions $44M contract for CMS support and improvement of federal science research website'
                 />

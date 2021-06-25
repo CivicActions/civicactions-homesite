@@ -10,9 +10,10 @@ const OpenConcept = () => {
 
     return (
         <RedLayout>
-            <Helmet>
-                <title data-react-helmet="true">CivicActions expands accessibility capabilities with OpenConcept</title>
-            </Helmet>
+                <SEO
+                    title='CivicActions expands accessibility capabilities with OpenConcept'
+                    description='Press release from civicactions.com'
+                />
             <Hero
                 title='CivicActions expands accessibility capabilities with OpenConcept'
                 />

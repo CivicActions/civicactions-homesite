@@ -9,9 +9,10 @@ const CMSContract = () => {
 
     return (
         <RedLayout>
-            <Helmet>
-                <title data-react-helmet="true">CivicActions wins $18M contract to redesign, migrate CMS websites</title>
-            </Helmet>
+            <SEO
+                title='CivicActions wins $18M contract to redesign, migrate CMS websites'
+                description='Press release from civicactions.com'
+            />
             <Hero
                 title='CivicActions wins $18M contract to redesign, migrate CMS websites'
                 />
