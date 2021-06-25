@@ -15,8 +15,8 @@ const CaseStudyTemplate = ({ data }) => {
   return (
     <GeneralLayout>
       <SEO
-        title={caseStudy.OGTitle}
-        description={caseStudy.OGDescription}
+        title={caseStudy.SEO.OGTitle}
+        description={caseStudy.SEO.OGDescription}
         image={Hero_Image ? Hero_Image.url : null}
       />
 
