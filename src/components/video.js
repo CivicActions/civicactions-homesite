@@ -12,7 +12,7 @@ const Video = ({
             <div className="inner">
                 <h2 className='visually-hidden'>Uploaded video from youtube or vimeo</h2>
                 <div className="video-container">
-                    <iframe title={videotitle} src={videolink} frameBorder="0" webkitallowfullscreen
+                    <iframe title={videotitle} src={videolink} webkitallowfullscreen
                         mozallowfullscreen allowFullScreen></iframe>
                 </div>
                 <div className="video--text">
