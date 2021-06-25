@@ -40,10 +40,7 @@ const FeedbackPage = () => {
           </p>
           <iframe
             src='https://docs.google.com/forms/d/e/1FAIpQLSeTBqCxx8zHegPyjg1pjWxb7nCLVdKSjeUyjHZ57VnDRO5zAQ/viewform?embedded=true'
-            width='915'
-            frameBorder='0'
-            marginHeight='0'
-            marginWidth='0'>
+            width='915'>
             Loading…
           </iframe>
         </div>
