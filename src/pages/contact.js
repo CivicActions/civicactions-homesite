@@ -29,6 +29,7 @@ const Contact = () => {
 
       <section className='contact--form'>
         <div className='inner'>
+          <h2 className='visually-hidden'>Contact form by Hubspot</h2>
           <div id='contact-hubspot-form'></div>
         </div>
       </section>

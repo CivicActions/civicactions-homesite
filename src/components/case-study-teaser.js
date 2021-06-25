@@ -19,7 +19,7 @@ const CaseStudyTeaser = ({ cases }) => {
                 <h2 className='h3'>{Title}</h2>
               </div>
             </div>
-            <p aria-label='summary' className='summary body'>
+            <p className='summary body'>
               {Summary}
             </p>
           </div></Link>

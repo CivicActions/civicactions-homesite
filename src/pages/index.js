@@ -236,7 +236,7 @@ const HomePage = () => {
                     'https://medium.com/civicactions/launching-a-community-of-practice-for-accessibility-in-government-services-b0b085cd90d6'
                   }>
                   <h3>A community of practice for government accessibility</h3>
-                  <img width='32px' src={arrowIcon} alt=''></img>
+                  <img width='32' src={arrowIcon} alt=''></img>
                 </a>
 
             </div>

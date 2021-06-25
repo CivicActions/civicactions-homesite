@@ -9,6 +9,7 @@
 
   .video-container {
     iframe {
+      width: 100%;
       height: 400px;
       @media(min-width: $medium-large-screen) {
         height: 675px;

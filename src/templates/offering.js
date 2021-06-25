@@ -148,12 +148,12 @@ const OfferingTemplate = ({ data }) => {
                                 <TabPanel>
                                     {/*// Tabs component comes from https://www.digitalocean.com/community/tutorials/react-tabs-component*/}
                                     {tab.tabs_section.map((section, index) => (
-                                        <div className='tab-section' label={section.header}>
+                                        <div className='tab-section' >
                                             <h3 className='h5'>{section.header}</h3>
                                             <ReactMarkdown className='body' children={section.body} />
                                         </div>
                                     ))}
-                                    <div className='cta-tab-section' label={tab.cta_tab.header}>
+                                    <div className='cta-tab-section' >
                                         {tab.cta_tab.header && <h3 className='h5'>{tab.cta_tab.header}</h3>}
                                         <div className='link-button'><LinkButton text={tab.cta_tab.button_text}
                                             src={tab.cta_tab.button_link} /></div>
