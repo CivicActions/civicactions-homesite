@@ -3,13 +3,12 @@ import React, { useState } from 'react';
 import Header from '../components/red-header.js';
 import Footer from '../components/footer.js';
 import Sidebar from '../components/sidebar.js';
-import redRectangle from '../files/images/red-rectangle.svg';
 import { Helmet } from 'react-helmet';
 import { SkipNavLink } from '../components/skip-nav';
 
 const RedLayout = ({ children }) => {
   const [hideSidebar, setHideSidebar] = useState(true);
-  let openSidebar = () => setHideSidebar(false);
+
   let closeSidebar = () => setHideSidebar(true);
 
   return (
@@ -24,7 +23,7 @@ const RedLayout = ({ children }) => {
         <div className='red-rectangle'></div>
         {/*<img className="red-rectangle" src={redRectangle} alt="background red color"></img>*/}
         <Header />
-        <main id='main-content'>
+        <main id='main-content' tabIndex='-1'>
           <div>{children}</div>
         </main>
         <Footer />

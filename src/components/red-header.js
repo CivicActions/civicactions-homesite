@@ -1,5 +1,5 @@
 import '../sass/styles.scss';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'gatsby';
 import whiteLogo from '../files/icons/CA-white.svg';
 import redLogo from '../files/icons/ca-extended-logo.svg';

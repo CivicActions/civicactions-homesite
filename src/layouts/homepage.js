@@ -8,7 +8,7 @@ import { SkipNavLink } from '../components/skip-nav';
 
 const HomepageLayout = ({ children }) => {
   const [hideSidebar, setHideSidebar] = useState(true);
-  let openSidebar = () => setHideSidebar(false);
+
   let closeSidebar = () => setHideSidebar(true);
   return (
     <div style={{ position: 'relative' }}>
@@ -25,7 +25,7 @@ const HomepageLayout = ({ children }) => {
         {/*  link='/careers#open-positions'*/}
         {/*/>*/}
         <Header />
-        <main id='main-content'>
+        <main id='main-content' tabIndex='-1'>
           <div>{children}</div>
         </main>
         <Footer />

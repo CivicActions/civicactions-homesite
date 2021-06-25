@@ -1,7 +1,6 @@
 import '../../../sass/styles.scss';
 import React from 'react';
 import RedLayout from '../../../layouts/red';
-import PrimaryPageCTA from '../../../components/primary-page-cta.js';
 import Hero from '../../../components/hero.js';
 import SEO from '../../../components/seo';
 

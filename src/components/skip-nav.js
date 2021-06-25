@@ -6,7 +6,7 @@ export const SkipNavLink = ({ id, children = 'Skip to content', ...props }) => {
       <a {...props} href='#main-content' className='skip-nav-link'>
         Skip to content
       </a>
-      <a {...props} href='#footer' className='skip-nav-link'>
+      <a {...props} href='#footer--section' className='skip-nav-link'>
         Skip to footer
       </a>
     </div>

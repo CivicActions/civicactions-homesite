@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 const LinkButton = ({ size, src, text, type }) => (
-  <Link className={`button ${type == 'secondary' ? 'button__secondary' : 'button__primary'} ${size ?? ' '}`}
+  <Link className={`button ${type === 'secondary' ? 'button__secondary' : 'button__primary'} ${size ?? ' '}`}
     to={src}>
     {text}
   </Link>

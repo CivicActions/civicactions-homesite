@@ -18,14 +18,17 @@
       margin: 0 auto;
     }
   }
+
   h2 {
     margin: 0 24px;
     @media(min-width: $tablet-screen) {
       margin: 0;
     }
   }
+
   .grid {
     column-gap: 24px;
+
     img {
       width: 109px;
       height: 108px;

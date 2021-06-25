@@ -23,6 +23,7 @@ h6 {
   font-family: $secondary-font;
   margin: 0;
 }
+
 body,
 .body,
 .body-large,
@@ -33,7 +34,7 @@ body,
 }
 
 h1,
-.h1{
+.h1 {
   font-style: normal;
   font-weight: 300;
   line-height: 33.6px;
@@ -51,7 +52,7 @@ h1,
 
 h2,
 %h2,
-.h2{
+.h2 {
   font-size: 24px;
   font-style: normal;
   font-weight: 300;
@@ -102,7 +103,7 @@ h4,
 }
 
 h5,
-.h5{
+.h5 {
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -155,10 +156,12 @@ a {
     line-height: 22px;
   }
 }
+
 .visually-hidden {
   visibility: hidden;
   height: 0;
 }
+
 .body-large {
   font-style: normal;
   font-size: 24px;

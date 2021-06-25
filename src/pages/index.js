@@ -13,8 +13,6 @@ import SEO from '../components/seo';
 import homeIntroGraphic from '../files/images/homepage-hero.png';
 import homeTeamImage from '../files/images/home-team-img.png';
 import quotePatternGraphic from '../files/images/quote-pattern-graphic.png';
-import caseStudyTeaserImg1 from '../files/images/case-study-teasers/case-study-teaser-img-1.png';
-import caseStudyTeaserImg2 from '../files/images/case-study-teasers/case-study-teaser-img-2.png';
 import caseStudyTeaserImg3 from '../files/images/case-study-teasers/case-study-teaser-img-3.png';
 import caseStudyTeaserImg4 from '../files/images/case-study-teasers/case-study-teaser-img-4.png';
 import caseStudyTeaserImg5 from '../files/images/case-study-teasers/blogpostimage.png';
@@ -68,7 +66,7 @@ const HomePage = () => {
     }
   `);
   const cases = data.allStrapiCaseStudy.nodes;
-  console.log(cases);
+
   return (
     <HomepageLayout>
       <SEO title='Home' />

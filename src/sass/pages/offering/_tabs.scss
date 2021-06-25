@@ -1,16 +1,19 @@
 .section--offering--tabs {
   background-color: $colors-grey-warm-4;
   margin-top: -35px;
-  padding-bottom: 32px;
+  padding-bottom: 64px;
+
   .inner {
     @media(min-width: 1200px) {
       max-width: $max-width;
     }
+
     .tab-mobile {
       @media(min-width: $tablet-screen) {
         display: none;
       }
     }
+
     .react-tabs {
       position: relative;
       padding: 0 20px;
@@ -19,6 +22,7 @@
         padding: 0 0 32px;
         display: block;
       }
+
       .react-tabs__tab-list {
         list-style-type: none;
         font-size: 18px;
@@ -35,13 +39,16 @@
         @media(min-width: $medium-large-screen) {
           font-size: 24px;
         }
+
         .react-tabs__tab.react-tabs__tab--selected {
           h2 {
             display: block;
           }
         }
+
         .react-tabs__tab {
           position: relative;
+
           h2 {
             font-size: 20px;
             line-height: 33px;
@@ -50,6 +57,7 @@
               font-size: 24px;
             }
           }
+
           @media(min-width: $tablet-screen) {
             padding: 16px 24px;
             display: block;
@@ -69,21 +77,25 @@
           &:focus {
 
             border-color: $colors-red-50;
+
             h2 {
               color: $colors-red-50;
             }
           }
         }
+
         .react-tabs__tab.react-tabs__tab--selected {
           display: flex;
           background-color: $colors-white;
           border: 0;
+
           h2 {
             color: $colors-black;
           }
 
         }
       }
+
       .react-tabs__tab-panel,
       .cta-tab-section {
         display: none;
@@ -97,12 +109,14 @@
           grid-template-columns: repeat(3, 1fr);
           padding: 48px 56px;
         }
+
         .tab-section:first-child {
           @media(min-width: $tablet-screen) {
             border-right: 1px solid #C4C4C4;
             border-bottom: 1px solid #C4C4C4;
           }
         }
+
         .tab-section:nth-child(2n) {
           @media(min-width: $tablet-screen) {
             border-bottom: 1px solid #C4C4C4;
@@ -112,6 +126,7 @@
             border-right: 1px solid #C4C4C4;
           }
         }
+
         .tab-section:nth-child(3n) {
           @media(min-width: $tablet-screen) {
             border-right: 1px solid #C4C4C4;
@@ -124,6 +139,7 @@
             padding-top: 0;
           }
         }
+
         .tab-section:nth-child(4n) {
           @media(min-width: $tablet-screen) {
             padding-top: 24px;
@@ -134,7 +150,8 @@
             padding-top: 40px;
           }
         }
-        .tab-section:nth-child(5n){
+
+        .tab-section:nth-child(5n) {
           @media(min-width: $tablet-screen) {
             border-right: 1px solid #C4C4C4;
             padding-top: 24px;
@@ -144,6 +161,7 @@
             padding-top: 40px;
           }
         }
+
         .tab-section {
           padding: 0 24px 24px;
           @media(min-width: $tablet-screen) {
@@ -156,6 +174,7 @@
             font-weight: bold;
           }
         }
+
         .cta-tab-section {
           display: none;
           position: relative;
@@ -165,6 +184,7 @@
           @media(min-width: $medium-large-screen) {
             padding: 30px;
           }
+
           .h5 {
             text-align: center;
             @media(min-width: $tablet-screen) {
@@ -173,6 +193,7 @@
               padding-top: 70px;
             }
           }
+
           .link-button {
             width: 100%;
             text-align: center;
@@ -191,6 +212,7 @@
             border-bottom: 1px solid #C4C4C4;
           }
         }
+
         .tab-section:nth-child(4n) {
           @media(min-width: $tablet-screen) {
             border-bottom: 0;
@@ -204,6 +226,7 @@
 
         }
       }
+
       .react-tabs__tab-panel.react-tabs__tab-panel--selected {
         display: grid;
       }

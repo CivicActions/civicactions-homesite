@@ -1,12 +1,11 @@
 .home--services-and-cases-bg {
-  background: linear-gradient
-    ( to bottom,
-    $colors-grey-warm-4 0%,
-    $colors-grey-warm-4 33%,
-    $colors-white 33%,
-    $colors-white 66%,
-    $colors-mint-cool-40v 66%,
-    $colors-mint-cool-40v 100% );
+  background: linear-gradient (to bottom,
+  $colors-grey-warm-4 0%,
+  $colors-grey-warm-4 33%,
+  $colors-white 33%,
+  $colors-white 66%,
+  $colors-mint-cool-40v 66%,
+  $colors-mint-cool-40v 100%);
 }
 
 .home--case-studies-section {
@@ -77,6 +76,7 @@
       .teaser-content {
         padding: 0 !important;
         width: 100%;
+
         .title-wrapper {
           padding: 16px !important;
           @media(min-width: $tablet-screen) {
@@ -87,6 +87,7 @@
           }
         }
       }
+
       a {
         &:hover,
         &:focus,
@@ -95,6 +96,7 @@
             .teaser-content {
               background: #1B1B1B;
               opacity: 1;
+
               .h3 {
                 text-decoration: underline;
               }
@@ -107,12 +109,14 @@
 
   .view-our-work-cta {
     position: relative;
+
     h3 {
       font-size: 16px;
       @media(min-width: $medium-large-screen) {
         font-size: 36px;
       }
     }
+
     a:hover,
     a:focus,
     a:focus-within {
@@ -121,6 +125,7 @@
       }
 
     }
+
     .bg {
       width: 100%;
       height: 100%;
@@ -246,6 +251,7 @@
     }
   }
 }
+
 .home--case-studies-section::before {
   position: absolute;
   right: 0;

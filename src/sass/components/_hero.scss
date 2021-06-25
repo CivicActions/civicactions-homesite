@@ -13,13 +13,14 @@
   }
 
   .inner {
-    padding: 0;
+    padding: 24px;
     @media(min-width: $tablet-screen) {
       padding: 40px;
     }
     @media(min-width: $large-screen) {
       padding: 64px;
     }
+
     h1 {
       padding-bottom: 0;
       padding-top: 16px;
@@ -27,25 +28,32 @@
         padding-top: 0;
       }
     }
+
     .button__secondary {
       margin-left: 24px;
       background-color: white;
       border: 1px solid $colors-black;
       color: $colors-black;
+
       &:hover,
       &:focus {
         background-color: $colors-black;
         color: $colors-white;
       }
     }
+
     .button__primary {
       border: 1px solid $colors-red-50;
+
       &:hover,
       &:focus {
         border-color: $colors-red-60;
       }
     }
+
     .button-wrapper {
+      overflow: auto;
+
       & > div {
         margin-bottom: 24px;
         @media(min-width: $tablet-screen) {
@@ -62,6 +70,7 @@
             padding: 12px 24px;
           }
         }
+
         a.button__secondary {
           margin-left: 0;
           @media(min-width: $tablet-screen) {

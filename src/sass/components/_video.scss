@@ -6,20 +6,24 @@
       padding: 40px 0 100px;
     }
   }
+
   .video-container {
     iframe {
-        height: 400px;
+      height: 400px;
       @media(min-width: $medium-large-screen) {
         height: 675px;
       }
+
       .vp-center {
         display: block;
+
         .player {
           max-width: 100% !important;
         }
       }
     }
   }
+
   .video--text {
     padding: 1rem 0;
     @media(min-width: $medium-large-screen) {

@@ -15,7 +15,7 @@ const CaseStudyTeaser = ({ cases }) => {
 
             <div className='teaser-content'>
               <div className='title-wrapper'>
-                <span aria-label='client name'>{Client_Name}</span>
+                <span className='client-name'>{Client_Name}</span>
                 <h2 className='h3'>{Title}</h2>
               </div>
             </div>

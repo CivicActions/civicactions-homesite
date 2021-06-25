@@ -13,7 +13,7 @@
   }
 
   .inner {
-    padding: 32px 0 ;
+    padding: 32px 0;
     @media(min-width: $tablet-screen) {
       display: flex;
       justify-content: center;
@@ -22,11 +22,13 @@
     @media(min-width: $large-screen) {
       padding: 47px 113px;
     }
+
     .single-stat:last-child {
       @media(min-width: $medium-large-screen) {
         margin-right: 0;
       }
     }
+
     .single-stat {
       text-align: center;
       margin-bottom: 32px;
@@ -34,6 +36,7 @@
         margin-right: 50px;
         margin-bottom: 0;
       }
+
       .stat--number {
         color: $colors-mint-cool-40v;
         font-size: 56px;
@@ -43,12 +46,14 @@
         line-height: 50px;
         padding-bottom: 8px;
       }
+
       .stat--text {
         margin: auto;
       }
     }
   }
 }
+
 .section--case-study--stats {
   .stats--wrapper {
     margin-bottom: -167px;

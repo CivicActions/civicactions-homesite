@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import ReactMarkdown from "react-markdown";
 import Modal from 'react-modal';
-import { Helmet } from "react-helmet";
 import {
     Accordion,
     AccordionItem,
@@ -15,7 +14,7 @@ import {
 import RedLayout from '../layouts/red';
 import Hero from "../components/hero-with-buttons";
 import Quote from "../components/quote";
-import PrimaryPageCTA from "../components/primary-page-cta";
+import PrimaryPageCTA from "../components/ditap-page-cta";
 import LinkButton from "../components/link-button";
 import Bio from '../components/offering/bio'
 import TabMobile from '../components/tabmobile';
@@ -67,8 +66,8 @@ const OfferingTemplate = ({ data }) => {
                     <h3 className='staff-name'>
                         {member.Name}
                         <a className='linkedin-icon' href={member.Linkedin} aria-label={`linkedin profile for ${member.Name}`}>
-                            <img className='black-icon' alt='' src={linkedinIcon}/>
-                            <img className='blue-icon' alt='' src={linkedinIconBlue}/>
+                            <img className='black-icon' alt='black linkedin icon' src={linkedinIcon}/>
+                            <img className='blue-icon' alt='blue linkedin icon' src={linkedinIconBlue}/>
                         </a>
                     </h3>
                     <p className='body staff-role'>{member.Role}</p>
@@ -81,8 +80,8 @@ const OfferingTemplate = ({ data }) => {
     return (
         <RedLayout>
             <SEO
-                title={SEO.OGTitle}
-                description={SEO.OGDescription}
+                title={offering.OGTitle}
+                description={offering.OGDescription}
             />
             <div className='offering--content-type'>
                 <Hero
@@ -94,7 +93,7 @@ const OfferingTemplate = ({ data }) => {
                 <section className='section--offering--client-logos'>
                     <div className='inner'>
                         <h2 className='body'>{offering.client_logo.text}</h2>
-                        <div className='grid'>
+                        <div className='grid' tabIndex='0'>
                             {offering.client_logo.client_logo.map((img) => (
                                 <img key={img.id} src={img.url} alt={img.alternativeText} />
                             ))}

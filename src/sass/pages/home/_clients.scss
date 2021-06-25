@@ -6,6 +6,7 @@
   @media(min-width: $medium-large-screen) {
     margin-bottom: 20px;
   }
+
   .grid {
     margin-top: 24px;
     @media(min-width: $tablet-screen) {
@@ -17,6 +18,7 @@
   }
 
 }
+
 .home--clients-section,
 .section--offering--client-logos {
   width: 100vw;
@@ -38,9 +40,15 @@
     overflow-x: scroll;
     scroll-snap-type: x proximity;
 
+    &:focus,
+    &:hover {
+      background-color: $colors-grey-warm-4;
+    }
+
     &::-webkit-scrollbar {
       display: none;
     }
+
     img {
       margin: auto;
     }

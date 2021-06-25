@@ -11,6 +11,7 @@
     background-color: $colors-grey-warm-4;
     margin: 72px 0 0;
   }
+
   h4,
   .body {
     text-align: left;
@@ -22,6 +23,7 @@
     //  font-size: 28p;
     //}
   }
+
   .h3 {
     padding: 0;
     text-align: left;
@@ -71,6 +73,7 @@
     }
 
   }
+
   .quote {
     flex-direction: column;
     justify-content: space-between;
@@ -103,21 +106,25 @@
 
   }
 }
+
 .mobile-tan-bkgd {
   background-color: $colors-grey-warm-4;
   @media(min-width: $medium-large-screen) {
     margin-bottom: 56px;
   }
+
   .quote {
     margin-left: 32px;
   }
 }
+
 .no-img {
   .pattern {
     @media(min-width: $medium-large-screen) {
       top: 0 !important;
     }
   }
+
   .quote {
     @media(min-width: $medium-large-screen) {
       margin-left: 80px;

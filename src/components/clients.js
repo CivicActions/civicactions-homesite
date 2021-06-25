@@ -26,7 +26,7 @@ const ClientsSection = () => {
         <div className='body-large'>
           Trusted by organizations that serve the people.
         </div>
-        <div className='grid'>
+        <div tabIndex='0' className='grid'>
           <img src={clientLogo1} alt='Logo for the State of Georgia'></img>
           <img src={clientLogo2} alt='Logo for U.S. Veterans Affairs'></img>
           <img

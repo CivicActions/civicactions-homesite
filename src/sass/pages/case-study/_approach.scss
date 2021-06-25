@@ -2,21 +2,26 @@
   @media(min-width: $medium-large-screen) {
     margin-bottom: 30px;
   }
+
   .inner {
     overflow: auto;
   }
+
   .first-approach {
     margin-top: 0 !important;
   }
+
   .caption {
     padding-top: 4px;
   }
+
   .first-approach {
     @media(min-width: $medium-large-screen) {
       margin-bottom: 80px !important;
     }
 
   }
+
   .approach,
   .first-approach {
     max-width: 720px;
@@ -26,17 +31,21 @@
     @media(min-width: $medium-large-screen) {
       margin: 60px auto 56px;
     }
+
     h3 {
       padding-bottom: 14px;
     }
+
     p {
       margin: 24px 0;
     }
+
     p:last-child {
       margin-bottom: 0;
       padding-bottom: 0;
     }
   }
+
   .approach--with-image {
     //margin: 24px 0 0;
     @media(min-width: $tablet-screen) {
@@ -46,6 +55,7 @@
       display: flex;
 
     }
+
     img {
       width: 100%;
       @media(min-width: $medium-large-screen) {
@@ -53,6 +63,7 @@
         height: 341px;
       }
     }
+
     .title-text--wrapper {
       @media(min-width: $medium-large-screen) {
         margin-right: 45px;

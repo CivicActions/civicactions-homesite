@@ -3,12 +3,14 @@
     @media(min-width: $medium-large-screen) {
       max-width: 915px;
     }
+
     iframe {
       margin-top: 48px;
       height: 650px;
       width: 100%;
+
       .freebirdFormviewerViewCenteredContent {
-        width:915px;
+        width: 915px;
         max-width: 100%;
       }
     }
