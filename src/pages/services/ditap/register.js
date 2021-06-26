@@ -21,7 +21,8 @@ const Register = () => {
           src='https://docs.google.com/forms/d/e/1FAIpQLSdKpPjmE2M1Dof9fvp6TatQxVhIaDyq33iJ6X1ucUbRIYM0LQ/viewform?embedded=true%22'
           frameborder='0'
           marginheight='0'
-          marginwidth='0'>
+          marginwidth='0'
+          title='Google form to register for the DITAP program'>
           Loading…
         </iframe>
       </section>
