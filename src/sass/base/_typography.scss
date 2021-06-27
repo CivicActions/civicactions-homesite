@@ -148,12 +148,11 @@ a {
 .body {
   font-style: normal;
   font-weight: 300;
-  font-size: 20px;
-  line-height: 34px;
-
-  @media screen and (max-width: $medium-screen) {
-    font-size: 16px;
-    line-height: 22px;
+  font-size: 16px;
+  line-height: 22px;
+  @media(min-width: $medium-large-screen) {
+    font-size: 20px;
+    line-height: 34px;
   }
 }
 

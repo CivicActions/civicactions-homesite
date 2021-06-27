@@ -37,7 +37,6 @@
     }
 
     .body {
-      max-width: 700px;
       font-weight: 300;
       padding: 6px 0;
     }
@@ -78,7 +77,6 @@
       height: 50px;
       margin-right: 20px;
       float: left;
-      //margin-bottom: 12px;
     }
 
     .services-content--label {
@@ -94,7 +92,7 @@
     }
 
     .title {
-      max-width: 640px;
+      width: 100%;
       margin-bottom: 24px;
       clear: both;
       font-size: 20px;
@@ -147,15 +145,12 @@
     }
 
     .description {
-      max-width: 640px;
       margin-bottom: 48px;
     }
 
     .cta {
       background-color: #f5f5f0;
       padding: 24px;
-      //margin-top: 0;
-      //margin-bottom: 48px;
       margin: 0 -24px 48px;
       overflow: auto;
       @media(min-width: $tablet-screen) {
@@ -196,7 +191,6 @@
       @media(min-width: $medium-large-screen) {
         padding: 0;
         margin-left: 20px;
-        //columns: 2;
         column-gap: 80px;
 
       }
@@ -249,14 +243,6 @@
       display: none;
     }
 
-    .title {
-      max-width: none;
-    }
-
-    .description {
-      max-width: none;
-    }
-
     .cta {
       background-color: #f5f5f0;
       padding: 20px;
@@ -270,9 +256,6 @@
   }
 
   @media screen and (max-width: $small-screen) {
-    h4 {
-      font-size: 22px;
-    }
 
     .cta {
       background-color: #f5f5f0;

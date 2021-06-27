@@ -88,3 +88,17 @@
   }
 
 }
+.red--header {
+  .hero-component {
+    .inner {
+      margin: 0;
+      padding: 24px 24px 0;
+      @media(min-width: $tablet-screen) {
+        padding: 40px;
+      }
+      @media(min-width: $large-screen) {
+        padding: 64px;
+      }
+    }
+  }
+}

@@ -227,7 +227,7 @@ const HomePage = () => {
                     'https://medium.com/civicactions/what-is-data-science-really-232552fc080a'
                   }>
                   <h3>What is data science, really?</h3>
-                  <img width='32px' src={arrowIcon} alt=''></img>
+                  <img src={arrowIcon} alt=''></img>
                 </a>
 
 

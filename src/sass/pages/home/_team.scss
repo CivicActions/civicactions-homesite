@@ -119,7 +119,9 @@
   }
 
   img {
-    max-width: 714px;
+    @media(min-width: $medium-large-screen){
+      max-width: 714px;
+    }
   }
 
   .column {

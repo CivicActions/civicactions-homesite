@@ -15,8 +15,16 @@
   }
 
   .footer__bottom-links {
-
     display: grid;
+    @media(min-width: $tablet-screen) {
+      margin-bottom: -17px;
+      margin-top: 15px;
+    }
+
+    @media(min-width: $medium-large-screen) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
 
     .copyright {
       order: 1;
@@ -274,7 +282,14 @@
     display: grid;
   }
 }
-
+.footer__social {
+  @media(min-width: $tablet-screen) {
+    margin-bottom: -20px;
+  }
+  @media(min-width: $medium-large-screen) {
+    margin-bottom: 0;
+  }
+}
 .parent-link {
   text-transform: uppercase;
   font-weight: 600;
