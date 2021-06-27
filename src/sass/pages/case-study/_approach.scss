@@ -41,8 +41,8 @@
     }
 
     p:last-child {
-      margin-bottom: 0;
       padding-bottom: 0;
+
     }
   }
 
@@ -55,7 +55,12 @@
       display: flex;
 
     }
-
+    .image--wrapper {
+      display: none;
+      @media(min-width: $tablet-screen) {
+        display: block;
+      }
+    }
     img {
       width: 100%;
       @media(min-width: $medium-large-screen) {
