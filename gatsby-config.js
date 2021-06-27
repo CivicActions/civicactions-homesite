@@ -9,6 +9,7 @@ module.exports = {
     address_line_2: `Unit 269,`,
     city: `Lafayette, CA 94549`,
     url: `https://civicactions.com/`,
+    siteUrl: `https://civicactions.com/`,
     twitterUsername: '@CivicActions',
     image: 'ca-extended-logo.svg',
   },
@@ -19,6 +20,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `@danbruegge/gatsby-plugin-stylelint`,
       options: {
