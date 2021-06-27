@@ -40,11 +40,6 @@
     overflow-x: scroll;
     scroll-snap-type: x proximity;
 
-    &:focus,
-    &:hover {
-      background-color: $colors-grey-warm-4;
-    }
-
     &::-webkit-scrollbar {
       display: none;
     }

@@ -18,7 +18,8 @@ const Register = () => {
       <section className='section--ditap-register--form'>
           <h2 className='visually-hidden'>Register for DITAP from google form</h2>
         <iframe
-          src='https://docs.google.com/forms/d/e/1FAIpQLSdKpPjmE2M1Dof9fvp6TatQxVhIaDyq33iJ6X1ucUbRIYM0LQ/viewform?embedded=true%22'>
+          src='https://docs.google.com/forms/d/e/1FAIpQLSdKpPjmE2M1Dof9fvp6TatQxVhIaDyq33iJ6X1ucUbRIYM0LQ/viewform?embedded=true%22'
+          title='Civicactions DITAP register form'>
 
         </iframe>
       </section>

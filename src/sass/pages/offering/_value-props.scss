@@ -1,11 +1,15 @@
 .section--offering--value-props {
   background-color: $colors-grey-warm-4;
-  padding-top: 15px;
+  padding-top: 180px;
   padding-bottom: 24px;
   margin-bottom: 0;
 
   @media(min-width: $tablet-screen) {
     padding-bottom: 40px;
+    padding-top: 175px;
+  }
+  @media(min-width: $medium-large-screen) {
+    padding-top: 200px;
   }
   @media(min-width: 1200px) {
     padding-top: 192px;

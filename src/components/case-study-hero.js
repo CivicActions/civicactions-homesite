@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 
 const CaseStudyHero = ({ client, title, description }) => {
     return (
-        <div className='hero-component'>
+        <section className='hero-component'>
             <div className='inner'>
                 <h1>{title}</h1>
                 <span className='client-name'>{client}</span>
                 <p className='body'>{description}</p>
             </div>
 
-        </div>
+        </section>
     );
 };
 

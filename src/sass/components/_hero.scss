@@ -1,10 +1,10 @@
 .hero-component {
+  margin-bottom: 24px;
   @media(min-width: $tablet-screen) {
     max-width: 672px;
-    margin: 0 auto;
+    margin: 33px auto 40px;
     background-color: $colors-white;
     box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
-    margin-top: 33px;
   }
   @media(min-width: $medium-large-screen) {
     max-width: 825px;
@@ -13,19 +13,24 @@
   }
 
   .inner {
-    padding: 24px;
+    padding: 24px 0;
     @media(min-width: $tablet-screen) {
-      padding: 40px;
+      padding: 40px 0;
     }
     @media(min-width: $large-screen) {
       padding: 64px;
     }
 
     h1 {
-      padding-bottom: 0;
+      padding-bottom: 24px;
       padding-top: 16px;
       @media(min-width: $tablet-screen) {
         padding-top: 0;
+        padding-bottom: 16px;
+      }
+      @media(min-width: $large-screen) {
+        padding-top: 0;
+        padding-bottom: 24px;
       }
     }
 

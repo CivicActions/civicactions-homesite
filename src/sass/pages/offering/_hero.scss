@@ -13,9 +13,6 @@
     }
     .button-wrapper {
       padding-top: 16px;
-      @media(min-width: $tablet-screen) {
-        overflow: auto;
-      }
     }
   }
 }

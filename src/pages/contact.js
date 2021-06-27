@@ -30,7 +30,7 @@ const Contact = () => {
       <section className='contact--form'>
         <div className='inner'>
           <h2 className='visually-hidden'>Contact form by Hubspot</h2>
-          <div id='contact-hubspot-form'></div>
+          <div id='contact-hubspot-form' aria-label='Civicactions contact us form'></div>
         </div>
       </section>
 

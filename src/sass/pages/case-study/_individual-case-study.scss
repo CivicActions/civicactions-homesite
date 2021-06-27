@@ -120,15 +120,13 @@
     }
 
     .related-staff--wrapper {
-      @media(min-width: $tablet-screen) {
-        display: flex;
-        flex-flow: row wrap;
-      }
-      @media(min-width: $medium-large-screen) {
-        justify-content: center;
-      }
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
 
       .related-staff {
+        max-width: 170px;
+        width: 100%;
         padding: 20px;
         @media(min-width: $tablet-screen) {
           padding: 28px 28px 28px 0;
