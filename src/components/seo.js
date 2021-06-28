@@ -17,7 +17,7 @@ const SEO = ({ title, description, image, article }) => {
     twitterUsername,
   } = site.siteMetadata;
   const seo = {
-    title: title || defaultTitle,
+    title: (`${title || defaultTitle} | CivicActions`),
     description: description || defaultDescription,
     image: image || `${siteUrl}${defaultImage}`,
     url: `${siteUrl}${pathname}`,
@@ -31,7 +31,7 @@ const SEO = ({ title, description, image, article }) => {
       <meta name='image' content={seo.image} />
       {seo.url && <meta property='og:url' content={seo.url} />}
       {(article ? true : null) && <meta property='og:type' content='article' />}
-      {seo.title && <meta property='og:title' content={`${seo.title} | CivicActions`} />}
+      {seo.title && <meta property='og:title' content={seo.title} />}
       {seo.description && (
         <meta property='og:description' content={seo.description} />
       )}
