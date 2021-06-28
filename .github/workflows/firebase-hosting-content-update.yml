@@ -1,0 +1,20 @@
+name: Deploy to Firebase Hosting on Content Update
+
+# Controls when the workflow will run
+on:
+  repository_dispatch:
+    types: [created]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: yarn install --frozen-lockfile && yarn build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CA_IT_PROD_HOME_5918 }}'
+          channelId: live
+          projectId: ca-it-prod-home-5918
