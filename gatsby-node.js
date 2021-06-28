@@ -71,6 +71,121 @@ exports.createPages = async ({ graphql, actions }) => {
     throw result.errors;
   }
 
+  const { createRedirect } = actions
+  createRedirect({
+    fromPath: "/case-study",
+    toPath: "/case-studies",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/case-study/cms-design-challenge-mvp",
+    toPath: "/case-studies/cms-design-challenge-mvp",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/case-study/va-cms-modernization",
+    toPath: "/case-studies/va-cms-modernization",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/case-study/digital-democracy",
+    toPath: "/case-studies",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/case-study/globalnet",
+    toPath: "/case-studies/globalnet-platform-support",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/case-study/eatfresh",
+    toPath: "/case-studies",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/case-study/fcc",
+    toPath: "/case-studies/fcc-website-modernization",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/case-study/hhs",
+    toPath: "/case-studies",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/case-study/msf",
+    toPath: "/case-studies",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/case-study/usva",
+    toPath: "/case-studies/usva-open-data",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/case-study/cdt-foss",
+    toPath: "/case-studies",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/case-study/la-business-portal",
+    toPath: "/case-studies",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/case-study/lincs",
+    toPath: "/case-studies/dept-of-education-system-lifecycle-development-management",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/case-study/mta",
+    toPath: "/case-studies/nyc-metro-transit-digital-clocks",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/values",
+    toPath: "/",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/communities",
+    toPath: "/",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/approach",
+    toPath: "/",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/talks",
+    toPath: "https://medium.com/civicactions",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: "/dkan",
+    toPath: "https://getdkan.org/",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
 
   const caseStudies = result.data.caseStudies.edges;
   const CaseStudyTemplate = require.resolve('./src/templates/case-study.js');
@@ -82,7 +197,11 @@ exports.createPages = async ({ graphql, actions }) => {
         pagePath: caseStudy.node.Path,
       },
     });
+
   });
+
+
+
 
   const staffProfiles = result.data.staffProfiles.edges;
   const StaffProfileTemplate = require.resolve(
