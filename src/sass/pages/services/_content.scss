@@ -14,9 +14,11 @@
       justify-content: space-between;
       align-items: flex-start;
     }
+
     & > div {
       max-width: 812px;
     }
+
     .services--sidebar {
       position: sticky;
       margin-bottom: 112px;
@@ -29,13 +31,12 @@
         display: block;
         margin-right: 24px;
       }
-      @media(min-width: $large-screen){
+      @media(min-width: $large-screen) {
         margin-right: 0;
       }
     }
 
     .body {
-      max-width: 700px;
       font-weight: 300;
       padding: 6px 0;
     }
@@ -51,6 +52,7 @@
     .button {
       margin-top: 24px;
       padding: 12px 0;
+
       a {
         font-size: 18px;
         text-align: center;
@@ -64,6 +66,7 @@
         text-decoration: none !important;
         line-height: 33px;
       }
+
       @media(min-width: $tablet-screen) {
         float: left;
       }
@@ -74,7 +77,6 @@
       height: 50px;
       margin-right: 20px;
       float: left;
-      //margin-bottom: 12px;
     }
 
     .services-content--label {
@@ -90,7 +92,7 @@
     }
 
     .title {
-      max-width: 640px;
+      width: 100%;
       margin-bottom: 24px;
       clear: both;
       font-size: 20px;
@@ -107,6 +109,7 @@
         line-height: 50px;
       }
     }
+
     .description {
       font-size: 16px;
       line-height: 33px;
@@ -114,6 +117,7 @@
         font-size: 20px;
       }
     }
+
     a.body-large {
       font-weight: 300;
       color: $colors-mint-cool-60v;
@@ -126,6 +130,7 @@
         padding: 8px 0 64px;
       }
     }
+
     .h4 {
       padding-bottom: 10px;
       font-size: 20px;
@@ -140,15 +145,12 @@
     }
 
     .description {
-      max-width: 640px;
       margin-bottom: 48px;
     }
 
     .cta {
       background-color: #f5f5f0;
       padding: 24px;
-      //margin-top: 0;
-      //margin-bottom: 48px;
       margin: 0 -24px 48px;
       overflow: auto;
       @media(min-width: $tablet-screen) {
@@ -158,10 +160,12 @@
       @media(min-width: $medium-large-screen) {
         margin: 24px 0 112px;
       }
+
       a {
         text-decoration: underline;
         font-weight: 300;
       }
+
       ul {
         @media(min-width: $medium-large-screen) {
           columns: 2;
@@ -187,17 +191,19 @@
       @media(min-width: $medium-large-screen) {
         padding: 0;
         margin-left: 20px;
-        //columns: 2;
         column-gap: 80px;
 
       }
 
     }
+
     li.is-current {
       position: relative;
+
       a {
         color: $colors-red-50;
       }
+
       &::before {
         content: '';
         background-color: $colors-red-50;
@@ -210,6 +216,7 @@
       }
 
     }
+
     li {
       font-family: $primary-font;
       font-style: normal;
@@ -218,6 +225,7 @@
       line-height: 28px;
       color: $colors-grey-90;
       margin-bottom: 24px;
+
       a {
         text-decoration: none;
       }
@@ -235,14 +243,6 @@
       display: none;
     }
 
-    .title {
-      max-width: none;
-    }
-
-    .description {
-      max-width: none;
-    }
-
     .cta {
       background-color: #f5f5f0;
       padding: 20px;
@@ -256,9 +256,6 @@
   }
 
   @media screen and (max-width: $small-screen) {
-    h4 {
-      font-size: 22px;
-    }
 
     .cta {
       background-color: #f5f5f0;
@@ -267,6 +264,7 @@
     }
   }
 }
+
 #product-design {
   .cta {
     .button a {

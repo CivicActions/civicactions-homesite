@@ -15,11 +15,21 @@
   }
 
   .footer__bottom-links {
-
     display: grid;
+    @media(min-width: $tablet-screen) {
+      margin-bottom: -17px;
+      margin-top: 15px;
+    }
+
+    @media(min-width: $medium-large-screen) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
     .copyright {
       order: 1;
     }
+
     p {
       margin: 12px 0;
     }
@@ -28,12 +38,14 @@
   .footer__branding--logo {
     max-width: 218px;
   }
+
   .footer__menu--list {
     margin-bottom: 40px;
     @media(min-width: $tablet-screen) {
       margin-bottom: 0;
     }
   }
+
   &__menu {
     // @todo Standardize ul and li styles sitewide
     ul {
@@ -75,6 +87,7 @@
     .footer__social {
       grid-area: about;
       align-self: end;
+
       .social-icon {
         padding-bottom: 0;
       }
@@ -87,8 +100,10 @@
     }
     .footer__menu--wrapper {
       grid-area: social_wrapper;
+
       .footer__menu--list {
         margin-top: 0;
+
         .child-menu--wrapper {
           padding-top: .5rem;
         }
@@ -96,6 +111,7 @@
     }
     .footer__bottom-links {
       grid-area: about_wrapper;
+
       p {
         margin: 4px 0;
       }
@@ -125,14 +141,22 @@
   //=========== Desktop Styles ===========
 
   @media (min-width: $large-screen) {
-    .footer__branding { grid-area: branding; }
-    .footer__social { grid-area: social; }
-    .footer__about-text { grid-area: about; }
+    .footer__branding {
+      grid-area: branding;
+    }
+    .footer__social {
+      grid-area: social;
+    }
+    .footer__about-text {
+      grid-area: about;
+    }
     .footer__contact {
       grid-area: contact;
       align-self: center;
     }
-    .footer__menu--wrapper { grid-area: menu_wrapper; }
+    .footer__menu--wrapper {
+      grid-area: menu_wrapper;
+    }
     .footer__bottom-links {
       grid-area: links;
       align-self: center;
@@ -140,7 +164,7 @@
     }
     .grid-container {
       grid-template-columns: 35% 1.5fr repeat(3, 1fr);
-      grid-template-areas :
+      grid-template-areas:
         "branding branding branding . ."
         "about menu_wrapper menu_wrapper menu_wrapper menu_wrapper"
         "about contact . social social"
@@ -154,6 +178,7 @@
 
       .footer__menu--list {
         margin-top: 0;
+
         .child-menu--wrapper {
           padding-top: 0;
         }
@@ -162,6 +187,7 @@
     .footer__bottom-links {
       padding-top: 16px;
       display: flex;
+
       .copyright {
         order: unset;
 
@@ -221,6 +247,31 @@
     .social-icon {
       text-align: right;
       padding: 0;
+
+      .blue-icon {
+        display: none;
+      }
+
+      .blue-icon,
+      .black-icon {
+        width: 40px;
+        height: 41px;
+      }
+
+      a {
+        &:hover,
+        &:focus,
+        &:focus-within {
+          .blue-icon {
+            display: inline-block;
+          }
+
+          .black-icon {
+            display: none;
+          }
+        }
+      }
+
     }
   }
 
@@ -231,7 +282,14 @@
     display: grid;
   }
 }
-
+.footer__social {
+  @media(min-width: $tablet-screen) {
+    margin-bottom: -20px;
+  }
+  @media(min-width: $medium-large-screen) {
+    margin-bottom: 0;
+  }
+}
 .parent-link {
   text-transform: uppercase;
   font-weight: 600;

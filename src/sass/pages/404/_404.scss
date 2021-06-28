@@ -5,23 +5,28 @@
     //padding-top: 52px;
     padding-bottom: 72px;
   }
+
   h1 {
     margin-top: 0;
     color: $colors-red-50;
   }
+
   h2 {
     text-align: center;
   }
 
   .not-found--body {
     padding-bottom: 24px;
+
     .list {
       padding-top: 24px;
+
       p {
         padding-bottom: 8px;
       }
     }
   }
+
   img {
     padding: 24px 0;
     max-width: 272px;

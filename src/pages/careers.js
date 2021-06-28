@@ -264,11 +264,11 @@ const CareersPage = () => {
                 href='https://medium.com/civicactions/how-our-distributed-team-makes-up-for-a-year-apart-c68503192d26 '
                 className='grid-item-3-1'>
                 <h3>How our distributed team makes up for a year apart</h3>
-                <img width='32px' src={arrowIcon} alt=''></img>
+                <img width='32' src={arrowIcon} alt=''></img>
               </a>
               <a href='https://medium.com/civicactions/what-fierce-openness-can-do-for-government-dd1d3ed518af' className='grid-item-3-2'>
                 <h3>What "fierce openness" can do for government</h3>
-                <img width='32px' src={arrowIcon} alt=''></img>
+                <img width='32' src={arrowIcon} alt=''></img>
               </a>
             </div>
           </div>

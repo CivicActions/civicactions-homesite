@@ -2,18 +2,19 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import RedLayout from '../layouts/red';
 import Hero from "../components/hero";
-import {Helmet} from "react-helmet";
 import ReactMarkdown from "react-markdown";
+import SEO from "../components/seo";
 
 const GeneralTemplate = ({ data }) => {
 
   const generals = data.allStrapiGeneral.nodes[0];
-  console.log(generals);
+
   return (
     <RedLayout>
-        <Helmet>
-            <title data-react-helmet="true">{generals.Title}</title>
-        </Helmet>
+        <SEO
+            title={generals.SEO.OGTitle}
+            description={generals.SEO.OGDescription}
+        />
       <Hero
           title={generals.Title}
           description={generals.Hero_text}
@@ -36,6 +37,10 @@ export const query = graphql`
         Body
         Path
         Title
+        SEO {
+          OGTitle
+          OGDescription
+        }
       }
     }
   }

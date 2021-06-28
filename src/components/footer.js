@@ -7,7 +7,7 @@ import FooterMenu from './menus/footer-menu';
 
 const Footer = () => {
   return (
-    <footer id='footer' className='footer'>
+    <footer id='footer--section' className='footer' tabIndex='-1'>
       <div className='inner grid-container'>
         <div className='grid-container__item footer__branding '>
           <Link to='/'>

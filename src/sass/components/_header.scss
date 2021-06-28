@@ -20,6 +20,7 @@
   &.mobile-menu-open {
     position: static;
   }
+
   .logo img {
     max-width: 159px;
     @media(min-width: $tablet-screen) {
@@ -27,6 +28,7 @@
     }
 
   }
+
   > .inner {
     display: flex;
     flex-direction: row;
@@ -44,17 +46,22 @@
     position: relative;
   }
 }
+
 @keyframes scroll {
-  from {padding: 50px 0 20px;}
-  to {padding: 15px 22px;}
+  from {
+    padding: 50px 0 20px;
+  }
+  to {
+    padding: 15px 22px;
+  }
 }
 
 .header.scrolled {
-  position: sticky ;
+  position: sticky;
 }
 
 .header.scrolled,
-.header.scrolled-mobile{
+.header.scrolled-mobile {
   padding-top: 15px;
   padding-bottom: 15px;
   box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
@@ -63,10 +70,12 @@
   .inner {
     margin-bottom: 0;
   }
+
   .logo img {
 
     max-width: 216px;
   }
+
   .bm-burger-button {
     right: 30px;
     top:7px;

@@ -4,14 +4,17 @@ import { Link } from 'gatsby';
 import GeneralLayout from '../layouts/general';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
 import FrozenImg from '../files/images/zoom-image.png';
+import SEO from "../components/seo";
 
 const NotFoundPage = () => {
   return (
     <GeneralLayout>
-
+      <SEO
+          title='Page not found'
+          description='Sorry it seems the page you were looking for was not found.'
+      />
       <section className="not-found">
         <div className='inner'>
-        <title>Page Not found</title>
         <h1>404</h1>
         <h2>Well, that's awkward.</h2>
         <img alt="Funny photo of CivicActions frozen in a Zoom call" src={FrozenImg} />

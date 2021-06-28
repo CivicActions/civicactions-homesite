@@ -4,6 +4,7 @@
     max-width: $max-width;
     margin: 0 auto 88px;
   }
+
   h2 {
     margin: 0 24px;
     @media(min-width: $tablet-screen) {
@@ -14,6 +15,7 @@
       line-height: 50px;
     }
   }
+
   .inner {
     padding-top: 32px;
     @media(min-width: $medium-large-screen) {
@@ -30,11 +32,13 @@
         padding: 48px;
       }
     }
+
     .case-studies--icon {
       width: 53px;
       height: 53px;
       float: left;
     }
+
     label {
       font-size: 20px;
       padding-left: 24px;
@@ -47,6 +51,7 @@
         padding-top: 17px;
       }
     }
+
     ul {
       clear: both;
       padding-top: 24px;
@@ -56,61 +61,73 @@
   }
 
 }
+
 .section--more-clients[class*="Web_CMS"] {
   .inner {
     & > div {
       display: none;
     }
+
     .web-cms {
       display: block;
     }
   }
 }
+
 .section--more-clients[class*="IT_Service_Modernization"] {
   .inner {
     & > div {
       display: none;
     }
+
     .it-service {
       display: block;
     }
   }
 }
+
 .section--more-clients[class*="Product_Design"] {
   .inner {
     & > div {
       display: none;
     }
+
     .product-design {
       display: block;
     }
   }
 }
+
 .section--more-clients[class*="Security_Compliance"] {
   .inner {
     & > div {
       display: none;
     }
+
     .security {
       display: block;
     }
   }
 }
+
 .section--more-clients[class*="Data_Services"] {
   .inner {
     & > div {
       display: none;
     }
+
     .data-services {
       display: block;
     }
   }
 }
+
 .section--more-clients[class*="Workforce_Development"] {
   .inner {
     & > div {
       display: none;
     }
+
     .development {
       display: block;
     }

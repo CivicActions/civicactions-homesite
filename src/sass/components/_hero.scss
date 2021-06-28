@@ -1,10 +1,10 @@
 .hero-component {
+  margin-bottom: 24px;
   @media(min-width: $tablet-screen) {
     max-width: 672px;
-    margin: 0 auto;
+    margin: 33px auto 40px;
     background-color: $colors-white;
     box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
-    margin-top: 33px;
   }
   @media(min-width: $medium-large-screen) {
     max-width: 825px;
@@ -13,34 +13,52 @@
   }
 
   .inner {
-    padding: 0;
+    padding: 24px 0;
     @media(min-width: $tablet-screen) {
-      padding: 40px;
+      padding: 40px 0;
     }
     @media(min-width: $large-screen) {
       padding: 64px;
     }
+
     h1 {
-      padding-bottom: 0;
+      padding-bottom: 24px;
       padding-top: 16px;
       @media(min-width: $tablet-screen) {
         padding-top: 0;
+        padding-bottom: 16px;
+      }
+      @media(min-width: $large-screen) {
+        padding-top: 0;
+        padding-bottom: 24px;
       }
     }
+
     .button__secondary {
       margin-left: 24px;
       background-color: white;
       border: 1px solid $colors-black;
       color: $colors-black;
+
+      &:hover,
+      &:focus {
+        background-color: $colors-black;
+        color: $colors-white;
+      }
     }
+
     .button__primary {
       border: 1px solid $colors-red-50;
+
       &:hover,
       &:focus {
         border-color: $colors-red-60;
       }
     }
+
     .button-wrapper {
+      overflow: auto;
+
       & > div {
         margin-bottom: 24px;
         @media(min-width: $tablet-screen) {
@@ -57,6 +75,7 @@
             padding: 12px 24px;
           }
         }
+
         a.button__secondary {
           margin-left: 0;
           @media(min-width: $tablet-screen) {
@@ -68,4 +87,18 @@
     }
   }
 
+}
+.red--header {
+  .hero-component {
+    .inner {
+      margin: 0;
+      padding: 24px 24px 0;
+      @media(min-width: $tablet-screen) {
+        padding: 40px;
+      }
+      @media(min-width: $large-screen) {
+        padding: 64px;
+      }
+    }
+  }
 }

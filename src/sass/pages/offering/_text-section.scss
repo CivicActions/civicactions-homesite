@@ -1,16 +1,24 @@
 .section--offering--text {
   position: relative;
+
   .inner {
-    padding: 40px;
+    padding: 24px;
     background-color: $colors-white;
     box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
+    margin: 0 24px;
     @media(min-width: $tablet-screen) {
       overflow: auto;
+      padding: 32px;
+      margin: 0 48px
     }
     @media(min-width: 900px) {
       max-width: 845px;
       margin: 0 auto;
     }
+    @media(min-width: $medium-large-screen) {
+      padding: 40px;
+    }
+
     .button-wrapper {
       margin-bottom: 16px;
       @media(min-width: $tablet-screen) {
@@ -31,7 +39,8 @@
     .button-wrapper:nth-child(2n) {
       margin-bottom: 0;
     }
-    .button-wrapper:nth-child(2n) a {
+    a.button__primary:nth-child(2n) {
+      margin-left: 24px;
       background-color: white;
       border: 1px solid $colors-black;
       color: $colors-black;
@@ -45,6 +54,7 @@
       }
     }
   }
+
   .background-mint {
     background-color: $colors-mint-cool-40v;
     height: 75%;
@@ -53,15 +63,17 @@
     width: 100%;
     z-index: -1;
     @media(min-width: $tablet-screen) {
-      height: 493px;
+      height: 70%;
       top: 115px;
-
+    }
+    @media(min-width: 900px) {
+      top: 115px;
     }
     @media(min-width: $medium-large-screen) {
-      height: 320px;
+      height: 60%;
     }
     @media(min-width: 1200px) {
-      height: 400px;
+      height: 65%;
     }
   }
 }

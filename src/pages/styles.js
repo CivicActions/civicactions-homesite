@@ -15,9 +15,6 @@ const sectionStyles = {
   marginBottom: '48px',
   background: '#ffffff', // Just for the styleguide.
 };
-const subSectionStyles = {
-  marginBottom: '32px',
-};
 
 const StyleGuidePage = () => {
   return (

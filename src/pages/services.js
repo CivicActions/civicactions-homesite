@@ -31,6 +31,7 @@ const ServicesPage = ({ data }) => {
         description='At its core, digital transformation is about improving the customer experience of government. We use thoughtful design and open source technologies to help you deliver modern public services that put people first. '
       />
       <section className='services--content-section'>
+        <h2 className='visually-hidden'>Services page sections in sidebar</h2>
         <div className={scroll ? 'inner scroll' : 'inner'}>
           <Scrollspy
             className={'services--sidebar'}

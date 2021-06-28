@@ -1,27 +1,35 @@
 .section--offering--value-props {
   background-color: $colors-grey-warm-4;
-  padding-top: 15px;
+  padding-top: 180px;
   padding-bottom: 24px;
   margin-bottom: 0;
 
   @media(min-width: $tablet-screen) {
     padding-bottom: 40px;
+    padding-top: 175px;
+  }
+  @media(min-width: $medium-large-screen) {
+    padding-top: 200px;
   }
   @media(min-width: 1200px) {
     padding-top: 192px;
     padding-bottom: 100px;
   }
+
   .inner {
     @media(min-width: 1200px) {
       max-width: $max-width;
     }
+
     .wrapper {
       display: flex;
     }
+
     h2,
     .icon {
       float: left;
     }
+
     h2 {
       padding-bottom: 16px;
       padding-top: 32px;
@@ -29,6 +37,7 @@
         padding-top: 10px;
       }
     }
+
     .icon {
       margin-left: 8px;
       width: 35px;
@@ -37,6 +46,7 @@
         margin-left: 16px;
       }
     }
+
     .value-props--left {
       @media(min-width: $medium-large-screen) {
         padding-right: 50px;
@@ -46,11 +56,13 @@
       }
 
     }
+
     .value-props--right {
       display: none;
       @media(min-width: $medium-large-screen) {
         display: block;
       }
+
       caption {
         display: inline-block;
         text-align: left;
@@ -58,6 +70,7 @@
         font-weight: 300;
       }
     }
+
     .body {
       clear: both;
     }

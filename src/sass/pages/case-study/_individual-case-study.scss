@@ -9,6 +9,7 @@
     @media(min-width: $large-screen) {
       margin-top: 0;
     }
+
     .inner {
       display: grid;
       @media(min-width: $tablet-screen) {
@@ -19,22 +20,26 @@
         max-width: 725px;
         margin: 0 auto;
       }
+
       .client-name {
         font-weight: bold;
         text-transform: uppercase;
         font-size: 18px;
         grid-area: 1/3;
       }
+
       h1 {
         grid-area: 2/3;
         padding-bottom: 6px;
       }
+
       p {
         grid-area: 3/3;
       }
     }
 
   }
+
   .case-study--hero-image {
     @media(min-width: $tablet-screen) {
       margin-top: 24px;
@@ -44,12 +49,12 @@
       margin-bottom: 80px;
       margin-top: 0;
     }
+
     img {
       width: 100%;
 
     }
   }
-
 
 
   .section--case-study--outcomes {
@@ -62,11 +67,13 @@
     @media(min-width: $medium-large-screen) {
       padding: 80px 0;
     }
+
     h2 {
       color: $colors-white;
       text-align: center;
       padding-bottom: 48px;
     }
+
     .inner {
       @media(min-width: $medium-large-screen) {
         display: flex;
@@ -76,6 +83,7 @@
         gap: 20px;
         margin: 0 120px !important;
       }
+
       .key-outcome {
         background-color: #E7EFEF;
         padding: 32px 24px;
@@ -84,6 +92,7 @@
         @media(min-width: $medium-large-screen) {
           margin-bottom: 0;
         }
+
         .label {
           font-weight: bold;
           text-transform: uppercase;
@@ -94,9 +103,11 @@
 
     }
   }
+
   .section--case-study--staff {
     background-color: #F5F5F0;
     margin-bottom: 0;
+
     h2 {
       padding-top: 32px;
       @media(min-width: $tablet-screen) {
@@ -107,15 +118,15 @@
         padding-top: 64px;
       }
     }
+
     .related-staff--wrapper {
-      @media(min-width: $tablet-screen) {
-        display: flex;
-        flex-flow: row wrap;
-      }
-      @media(min-width: $medium-large-screen) {
-        justify-content: center;
-      }
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+
       .related-staff {
+        max-width: 170px;
+        width: 100%;
         padding: 20px;
         @media(min-width: $tablet-screen) {
           padding: 28px 28px 28px 0;
@@ -123,6 +134,7 @@
         @media(min-width: $medium-large-screen) {
           padding: 48px;
         }
+
         img {
           width: 114px;
         }
@@ -133,6 +145,7 @@
       }
     }
   }
+
   .section--case-study--related {
     max-width: $max-width;
     margin: 32px auto;
@@ -142,29 +155,35 @@
     @media(min-width: $medium-large-screen) {
       margin: 64px auto 147px;
     }
+
     h2 {
       padding-bottom: 23px;
     }
+
     .inner {
       margin: 0;
-      @media(min-width:$medium-large-screen) {
+      @media(min-width: $medium-large-screen) {
         display: flex;
       }
+
       .related-case-study {
         display: grid;
         max-width: 373px;
         @media(min-width: $medium-large-screen) {
           margin-right: 35px;
         }
+
         img {
           max-width: 373px;
         }
+
         a {
           padding-top: 22px;
           font-size: 20px;
           font-weight: 300;
         }
       }
+
       .related-case-study:last-child {
         margin-right: 0;
       }

@@ -23,12 +23,14 @@
     font-weight: 300;
     color: $colors-white;
   }
+
   .jobs-grid {
     display: block !important;
     @media(min-width: $medium-large-screen) {
       display: grid !important;
     }
   }
+
   .body {
     max-width: 720px;
     font-weight: 300;
@@ -45,6 +47,7 @@
       grid-column: 1/3;
       width: 100%;
     }
+
     p {
       font-weight: 600;
       margin: 0;
@@ -70,9 +73,11 @@
     padding: 56px 32px;
     position: relative;
     margin-bottom: 20px;
+
     a {
       text-decoration: none;
       color: $colors-black;
+
       &:hover,
       &:focus {
         text-decoration: underline;
@@ -83,9 +88,10 @@
     @media(min-width: $medium-large-screen) {
       margin-bottom: 0;
     }
+
     p {
       width: 85%;
-      margin: auto 0 ;
+      margin: auto 0;
     }
 
     img {

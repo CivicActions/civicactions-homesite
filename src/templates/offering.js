@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import ReactMarkdown from "react-markdown";
 import Modal from 'react-modal';
-import { Helmet } from "react-helmet";
 import {
     Accordion,
     AccordionItem,
@@ -15,13 +14,14 @@ import {
 import RedLayout from '../layouts/red';
 import Hero from "../components/hero-with-buttons";
 import Quote from "../components/quote";
-import PrimaryPageCTA from "../components/primary-page-cta";
+import PrimaryPageCTA from "../components/ditap-page-cta";
 import LinkButton from "../components/link-button";
 import Bio from '../components/offering/bio'
 import TabMobile from '../components/tabmobile';
 import SEO from '../components/seo';
 
 import linkedinIcon from "../files/icons/linkedin.svg";
+import linkedinIconBlue from "../files/icons/linkedin-blue.svg";
 import squareCircle from "../files/icons/square-circle.svg";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import closeButton from '../files/icons/grey-close-icon.svg';
@@ -30,7 +30,7 @@ const OfferingTemplate = ({ data }) => {
     Modal.setAppElement('#___gatsby')
 
     const offering = data.allStrapiOffering.nodes[0];
-    console.log(offering);
+
     const [modalIsOpen, setIsOpen] = useState(false);
     const [modalRef, setModalRef] = useState(false);
 
@@ -61,11 +61,14 @@ const OfferingTemplate = ({ data }) => {
         offering.team_members.map((member, index) => (
 
             <div key={member.id} className='related-staff'>
-                <img className='staff-image' src={member.image[0].url} alt={member.image[0].alternativeText} />
+                <img className='staff-image' src={member.image[0].url} aria-label={member.Name} />
                 <div className='staff-info'>
                     <h3 className='staff-name'>
                         {member.Name}
-                        <a className='linkedin-icon' href={member.Linkedin}><img alt={`linkedin profile for ${member.Name}`} src={linkedinIcon} /></a>
+                        <a className='linkedin-icon' href={member.Linkedin} aria-label={`linkedin profile for ${member.Name}`}>
+                            <img className='black-icon' alt='black linkedin icon' src={linkedinIcon}/>
+                            <img className='blue-icon' alt='blue linkedin icon' src={linkedinIconBlue}/>
+                        </a>
                     </h3>
                     <p className='body staff-role'>{member.Role}</p>
                     <button className={`body open-modal--btn ${index}`} onClick={() => openModal(member.Name)}>Read bio</button>
@@ -77,8 +80,8 @@ const OfferingTemplate = ({ data }) => {
     return (
         <RedLayout>
             <SEO
-                title={SEO.OGTitle}
-                description={SEO.OGDescription}
+                title={offering.SEO.OGTitle}
+                description={offering.SEO.OGDescription}
             />
             <div className='offering--content-type'>
                 <Hero
@@ -90,7 +93,7 @@ const OfferingTemplate = ({ data }) => {
                 <section className='section--offering--client-logos'>
                     <div className='inner'>
                         <h2 className='body'>{offering.client_logo.text}</h2>
-                        <div className='grid'>
+                        <div className='grid' tabIndex='0'>
                             {offering.client_logo.client_logo.map((img) => (
                                 <img key={img.id} src={img.url} alt={img.alternativeText} />
                             ))}
@@ -145,12 +148,12 @@ const OfferingTemplate = ({ data }) => {
                                 <TabPanel>
                                     {/*// Tabs component comes from https://www.digitalocean.com/community/tutorials/react-tabs-component*/}
                                     {tab.tabs_section.map((section, index) => (
-                                        <div className='tab-section' label={section.header}>
+                                        <div className='tab-section' >
                                             <h3 className='h5'>{section.header}</h3>
                                             <ReactMarkdown className='body' children={section.body} />
                                         </div>
                                     ))}
-                                    <div className='cta-tab-section' label={tab.cta_tab.header}>
+                                    <div className='cta-tab-section' >
                                         {tab.cta_tab.header && <h3 className='h5'>{tab.cta_tab.header}</h3>}
                                         <div className='link-button'><LinkButton text={tab.cta_tab.button_text}
                                             src={tab.cta_tab.button_link} /></div>

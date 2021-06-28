@@ -146,35 +146,37 @@
     .grid-item-3-2 {
       height: 100%;
       display: flex;
-        background-color: $colors-white;
-        box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3);
-        text-decoration: none;
-        padding: 32px;
-        flex-direction: row;
+      background-color: $colors-white;
+      box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+      padding: 32px;
+      flex-direction: row;
 
+      @media(min-width: $medium-large-screen) {
+        padding: 40px;
+
+      }
+
+      h3 {
+        margin: auto;
         @media(min-width: $medium-large-screen) {
-          padding: 40px;
+          width: auto;
+        }
+      }
 
-        }
-        h3 {
-          margin: auto;
-          @media(min-width: $medium-large-screen) {
-            width: auto;
-          }
-        }
-        &:hover,
-        &:focus,
-        &:focus-within {
-          background-color: #f3f3f3;
-          text-decoration: underline;
-        }
+      &:hover,
+      &:focus,
+      &:focus-within {
+        background-color: #f3f3f3;
+        text-decoration: underline;
+      }
 
     }
 
     img {
+      width: 32px;
       margin-left: 20px;
-      filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
-        saturate(600%) contrast(0.8);
+      filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
     }
 
 
@@ -183,6 +185,7 @@
       box-shadow: none;
     }
   }
+
   @media screen and (max-width: $large-screen) {
     .cases {
       grid-template-columns: 1fr 1fr;
@@ -202,7 +205,7 @@
     h2 {
       font-size: 26px;
       margin-top: 48px;
-      font-weight: 375;
+      font-weight: 300;
     }
     .cases {
       grid-template-columns: 1fr;

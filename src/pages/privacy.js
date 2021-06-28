@@ -187,7 +187,7 @@ const PrivacyPage = () => {
           <p className='body'>
             This policy was last modified on April 25, 2014.
           </p>
-          <p className='body' style={{ marginBottom: 120 }}>
+          <p className='body'>
             It was last reviewed in March, 2021.
           </p>
         </div>

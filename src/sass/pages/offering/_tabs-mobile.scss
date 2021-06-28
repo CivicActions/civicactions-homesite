@@ -1,6 +1,7 @@
 .section--offering--tabs {
   .tab-mobile {
     position: relative;
+
     select {
       margin: 24px 0;
       background-color: $colors-white;
@@ -15,6 +16,7 @@
       position: relative;
 
     }
+
     .arrow-down {
       background-color: transparent;
       padding: 0;
@@ -23,31 +25,30 @@
       top: 34px;
       right: 0;
     }
+
     & > div {
       background-color: $colors-white;
       padding: 24px;
+
       .tab-section,
-      .cta-tab-section{
-        padding-bottom: 24px;
+      .cta-tab-section {
         .h5 {
           font-size: 20px;
-          font-family: $primary-font;
-        }
-        p {
-          padding: 8px 0 0;
-          margin: 0;
+          padding-top: 8px;
         }
       }
+
       .cta-tab-section {
-        padding-bottom: 0;
         .h5 {
           padding-top: 16px;
           padding-bottom: 16px;
           text-align: center;
         }
+
         .link-button {
           padding: 12px 24px;
           background-color: $colors-red-50;
+
           a {
             width: 100%;
             padding: 0;
@@ -56,22 +57,28 @@
         }
       }
     }
+
     & > div:first-child {
       display: block;
     }
+
     & > div:nth-of-type(2),
     & > div:last-child {
       display: none;
     }
+
     & > div._1 {
       display: none;
     }
+
     & > div._1:nth-of-type(2) {
       display: block;
     }
+
     & > div._2:last-child {
       display: block;
     }
+
     & > div._2 {
       display: none;
     }

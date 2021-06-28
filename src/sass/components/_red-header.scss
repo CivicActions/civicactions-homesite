@@ -9,17 +9,20 @@
       display: none;
     }
   }
+
   .white-logo {
     display: none;
     @media(min-width: $tablet-screen) {
       display: block;
     }
   }
+
   .red-header--header {
     max-width: 1200px;
     @media(min-width: $medium-large-screen) {
       margin: 0 auto;
     }
+
     .bm-icon {
       path {
         @media(min-width: $tablet-screen) {
@@ -30,6 +33,7 @@
     }
 
   }
+
   .inner {
     display: flex;
     flex-direction: row;
@@ -55,15 +59,19 @@
 .red-header.scrolled {
   position: sticky;
   background-color: $colors-white;
+
   .white-logo {
     display: none;
   }
+
   .red-logo {
     display: block;
   }
+
   .primary-button {
     background-color: $colors-red-50;
     color: $colors-white;
+
     &:hover,
     :focus {
       background-color: $colors-red-60;
@@ -75,6 +83,7 @@
     color: $colors-black;
   }
 }
+
 .red-rectangle {
   position: absolute;
   right: 0;
