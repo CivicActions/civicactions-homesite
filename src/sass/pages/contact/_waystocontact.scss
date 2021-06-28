@@ -1,6 +1,7 @@
 .contact--ways-to-contact--section {
   background-color: #0F6460;
-  margin-bottom: 0 ;
+  margin-bottom: 0;
+
   .inner {
     max-width: 955px;
     padding: 72px 20px;
@@ -8,35 +9,41 @@
     & > .body {
       padding: 24px 0 29px;
     }
+
     .contact-grid {
-      @media(min-width: $medium-large-screen){
+      @media(min-width: $medium-large-screen) {
         display: flex;
       }
 
     }
+
     div.grid {
       background-color: #2C7773;
       padding: 23px;
       margin-bottom: 40px;
 
-      @media(min-width: $medium-large-screen){
+      @media(min-width: $medium-large-screen) {
         width: 290px;
         margin-right: 45px;
         margin-left: 0;
         margin-bottom: 0;
 
       }
+
       .label {
         font-weight: 600;
         padding-top: 12px;
       }
+
       a {
         text-decoration: none;
       }
+
       img {
         margin-top: 20px;
       }
     }
+
     div.grid:last-child {
       margin-bottom: 0;
       @media(min-width: $medium-large-screen) {

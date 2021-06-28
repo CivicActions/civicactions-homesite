@@ -1,16 +1,17 @@
 .second-quote {
   background-color: $colors-white;
   padding-top: 0 !important;
-  padding-bottom: 0 !important;
+  padding-bottom: 48px !important;
   @media(min-width: $medium-large-screen) {
     background-color: $colors-grey-warm-4;
     padding-top: 76px !important;
     padding-bottom: 71px !important;
   }
 }
+
 .first-quote {
   background-color: $colors-grey-warm-4;
   @media(min-width: $tablet-screen) {
-    background-color: $colors-white$colors-grey-warm-4;
+    background-color: $colors-white;
   }
 }

@@ -1,7 +1,6 @@
 import '../sass/styles.scss';
-import React, { Component } from 'react';
+import React from 'react';
 import RedLayout from '../layouts/red';
-import PrimaryPageCTA from '../components/primary-page-cta.js';
 import Hero from '../components/hero.js';
 import { useHubspotForm } from '@aaronhayes/react-use-hubspot-form';
 import emailIcon from '../files/icons/email.png';
@@ -30,6 +29,7 @@ const Contact = () => {
 
       <section className='contact--form'>
         <div className='inner'>
+          <h2 className='visually-hidden'>Contact form by Hubspot</h2>
           <div id='contact-hubspot-form'></div>
         </div>
       </section>

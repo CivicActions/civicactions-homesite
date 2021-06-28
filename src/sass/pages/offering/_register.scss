@@ -1,7 +1,15 @@
 .section--ditap-register--form {
+  margin-top: 24px;
+  @media(min-width: $tablet-screen) {
+    margin-top: 48px;
+  }
+  @media(min-width: $large-screen) {
+    margin-top: 56px;
+  }
   iframe {
-    height: 1100px;
+    height: 1200px;
     width: 100%;
+    border: none;
   }
 
 }

@@ -21,6 +21,7 @@
         margin: 0;
       }
     }
+
     .related-staff--wrapper {
       margin-bottom: 16px;
       @media(min-width: $medium-large-screen) {
@@ -38,6 +39,7 @@
         @media(min-width: $medium-large-screen) {
           margin-bottom: 0;
         }
+
         .staff-image {
           width: 56px;
           height: 56px;
@@ -50,7 +52,9 @@
           }
 
         }
+
         .linkedin-icon {
+
           position: absolute;
           top: 17px;
           right: 24px;
@@ -61,13 +65,22 @@
             right: unset;
           }
 
+
+          img {
+            width: 27px;
+            height: 27px;
+          }
+
+
         }
+
         .staff-name {
           margin-bottom: 0;
           margin-top: 0;
           font-weight: 300;
 
         }
+
         .open-modal--btn {
           padding: 0;
           border: 0;
@@ -77,20 +90,27 @@
           font-weight: 300 !important;
           background: none;
           cursor: pointer;
+
+          &:hover,
+          &:focus {
+            color: $colors-mint-cool-80v;
+          }
         }
       }
     }
   }
 }
+
 .Overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(27,27,27, .85);
+  background-color: rgb(27, 27, 27, .85);
   //opacity: 0.85;
 }
+
 .Modal {
   position: absolute;
   top: 40px;
@@ -98,6 +118,7 @@
   right: 40px;
   bottom: 40px;
 }
+
 .ReactModal__Content--after-open {
   max-width: 854px;
   margin: 0 auto;
@@ -108,33 +129,56 @@
   @media(min-width: $medium-large-screen) {
     padding: 64px;
   }
+
   button {
     padding: 8px;
     background-color: transparent;
     -webkit-appearance: none;
     border: 0;
     cursor: pointer;
+
     p {
       margin: 0;
     }
   }
+
   .staff-image {
     width: 124px;
     height: 124px;
     float: left;
     margin-right: 24px;
   }
+
   .staff-name {
     float: left;
     margin-right: 16px;
   }
+
   .staff-body {
     clear: both;
     padding-top: 40px;
   }
+
   button {
     position: absolute;
     top: 20px;
     right: 20px;
   }
+}
+.linkedin-icon {
+  &:hover,
+  &:focus {
+    .blue-icon {
+      display: inline-block;
+    }
+
+    .black-icon {
+      display: none;
+    }
+  }
+}
+.blue-icon {
+  display: none;
+  width: 27px;
+  height: 27px;
 }

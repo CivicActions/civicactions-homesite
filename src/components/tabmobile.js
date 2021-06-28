@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import ReactMarkdown from "react-markdown";
 import LinkButton from "./link-button";
 import PropTypes from "prop-types";
@@ -7,9 +7,7 @@ const TabMobile = ({ tabs }) => {
 
     let check;
     const [checked,setIsChecked] = React.useState(false);
-    const toggleClass = () => {
-        setIsChecked(!checked);
-    };
+
     const callback = (e) => {
 
         if (e.target.value !== 'undefined') {
@@ -24,7 +22,6 @@ const TabMobile = ({ tabs }) => {
         }
 
     };
-    // useEffect(checked);
     return (
         <div className='tab-mobile'>
                 <select name='tabs' onChange={callback}>

@@ -2,9 +2,6 @@ import '../sass/styles.scss';
 import React from 'react';
 import RedLayout from '../layouts/red';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
-import StaffQuote from '../components/staff-quote.js';
-import henryPooleProfilePicture from '../files/images/henry-poole.png';
-import { Link } from 'gatsby';
 import SEO from '../components/seo';
 import Hero from "../components/hero";
 
@@ -52,14 +49,6 @@ const LicensingPage = () => {
           </p>
         </div>
       </section>
-      {/*<StaffQuote*/}
-      {/*  img={henryPooleProfilePicture}*/}
-      {/*  quote='“We have never strayed from our commitment to ‘open by default’*/}
-      {/*and ‘people first.’”'*/}
-      {/*  name='Henry Poole'*/}
-      {/*  role='CivicActions co-founder and CEO'*/}
-      {/*  classes='mobile-tan-bkgd'*/}
-      {/*/>*/}
 
       <section className='licensing__content-section'>
         <div className='inner'>

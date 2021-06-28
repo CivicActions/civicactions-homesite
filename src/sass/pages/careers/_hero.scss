@@ -1,6 +1,12 @@
 .careers--hero-section {
   width: 100%;
   margin-bottom: 0;
+  @media(min-width: $tablet-screen) {
+    margin-bottom: 40px;
+  }
+  @media(min-width: $large-screen) {
+    margin-bottom: 64px;
+  }
 
   .inner {
     position: relative;
@@ -10,6 +16,13 @@
     justify-content: center;
     align-items: flex-start;
     text-align: start;
+    padding: 0;
+    @media(min-width: $tablet-screen) {
+      padding: 40px;
+    }
+    @media(min-width: $large-screen) {
+      padding: 64px;
+    }
     h1 {
       padding-bottom: 0;
     }
@@ -31,6 +44,7 @@
     margin: 140px 0;
     width: 100%;
     height: 700px;
+    border: none;
   }
 
 

@@ -3,12 +3,23 @@
     @media(min-width: $medium-large-screen) {
       max-width: 915px;
     }
+    h2 {
+      font-size: 24px;
+      @media(min-width: $tablet-screen) {
+        font-size: 28px;
+      }
+      @media(min-width: $medium-large-screen) {
+        font-size: 36px;
+      }
+    }
     iframe {
       margin-top: 48px;
       height: 650px;
       width: 100%;
+      border: none;
+
       .freebirdFormviewerViewCenteredContent {
-        width:915px;
+        width: 915px;
         max-width: 100%;
       }
     }

@@ -75,6 +75,7 @@ const TeamPage = () => {
       />
 
       <section className='team--filter-btns-section'>
+        <h2 className='visually-hidden'>Team filters by role</h2>
         <div className='inner'>
           <FilterButtons
             parentCallback={callback}

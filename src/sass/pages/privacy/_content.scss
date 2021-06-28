@@ -11,51 +11,32 @@
     align-items: center;
     text-align: center;
   }
-
-  h3 {
-    width: 720px;
-    text-align: left;
-    padding-top: 64px;
-  }
-
+  h3,
   h4 {
-    width: 720px;
     text-align: left;
-    padding-top: 64px;
+    width: 100%;
+    padding-top: 24px;
+    @media(min-width: $tablet-screen) {
+      padding-top: 48px;
+    }
+    @media(min-width: $large-screen) {
+      padding-top: 64px;
+    }
   }
 
   .body {
     text-align: left;
-    width: 720px;
+    width: 100%;
     font-weight: 300;
     padding: 24px 0 0;
+    @media(min-width: $medium-large-screen) {
+      width: 720px;
+    }
   }
 
   ul {
     margin: 0;
   }
 
-  @media screen and (max-width: $large-screen) {
-    .inner {
-      margin: 0 5vw;
-    }
-  }
-  @media screen and (max-width: $medium-large-screen) {
-    .inner {
-      align-items: flex-start;
-    }
 
-    h2,
-    h3 .body {
-      text-align: left;
-      width: auto;
-    }
-  }
-  @media screen and (max-width: $tablet-screen) {
-    h3,
-    h4,
-    .body {
-      width: 100%;
-    }
-  }
 }

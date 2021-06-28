@@ -42,22 +42,26 @@
     column-gap: 30px;
     row-gap: 40px;
     justify-content: space-between;
+
     h2,
     .icon {
       float: left;
     }
+
     h2 {
       padding-bottom: 16px;
       @media(min-width: $medium-large-screen) {
         padding-bottom: 0;
       }
     }
+
     .body {
       margin: 0;
       @media(min-width: $medium-large-screen) {
         margin: 24px 0 40px;
       }
     }
+
     .icon {
       margin-top: -30px;
       @media(min-width: $medium-large-screen) {
@@ -66,6 +70,7 @@
       }
 
     }
+
     p {
       clear: both;
     }

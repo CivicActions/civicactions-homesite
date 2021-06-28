@@ -5,6 +5,7 @@
     padding-bottom: 0;
     margin-bottom: 60px;
   }
+
   .grey-background {
     background-color: $colors-grey-warm-4;
     position: absolute;
@@ -15,7 +16,7 @@
       width: 70%;
       height: 100%;
     }
-    @media(min-width: $medium-large-screen){
+    @media(min-width: $medium-large-screen) {
       height: 577px;
     }
   }

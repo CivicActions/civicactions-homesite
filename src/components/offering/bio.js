@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 import linkedinIcon from "../../files/icons/linkedin.svg";
+import linkedinIconBlue from "../../files/icons/linkedin-blue.svg";
 
 const Bio = ({ member }) => {
   let singleMember = member ? member.map((single) => {
@@ -10,8 +11,11 @@ const Bio = ({ member }) => {
     return (
       <div key={id}>
         <img className='staff-image' src={image[0].url} alt={image[0].alternativeText} />
-        <h2 className='h3 staff-name'>{Name}</h2>
-        <a className='linkedin-icon' href={Linkedin}><img src={linkedinIcon} alt=''/></a>
+        <h1 className='h3 staff-name'>{Name}</h1>
+          <a className='linkedin-icon' href={Linkedin} aria-label={`linkedin profile for ${Name}`}>
+              <img className='black-icon' alt='black linkedin icon' src={linkedinIcon}/>
+              <img className='blue-icon' alt='blue linkedin icon' src={linkedinIconBlue}/>
+          </a>
         <p className='body staff-role'>{Role}</p>
         <div><p className='body staff-body'>{Body}</p></div>
       </div>

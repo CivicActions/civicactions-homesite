@@ -11,12 +11,12 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const CaseStudyTemplate = ({ data }) => {
   const caseStudy = data.allStrapiCaseStudy.edges[0].node;
   const { Client_Name, Related_Case_Studies, Hero_Image } = caseStudy;
-  console.log(caseStudy);
+
   return (
     <GeneralLayout>
       <SEO
-        title={SEO.OGTitle}
-        description={SEO.OGDescription}
+        title={caseStudy.OGTitle}
+        description={caseStudy.OGDescription}
         image={Hero_Image ? Hero_Image.url : null}
       />
 
@@ -99,7 +99,7 @@ const CaseStudyTemplate = ({ data }) => {
                   <ReactMarkdown className='body' children={approachItem.Text} />
                 </div>
               }
-              {index != 0 &&
+              {index !== 0 &&
                 <div className={approachItem.Image ? 'approach--with-image' : 'approach'}>
 
                   <div className='title-text--wrapper'>

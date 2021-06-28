@@ -8,14 +8,17 @@
     max-width: 916px;
     padding: 0;
   }
+
   .source {
     padding-top: 24px;
     font-weight: 300;
   }
 }
+
 .first-quote {
   background-color: $colors-grey-warm-4 !important;
 }
+
 .case-studies {
   .staff-quote.first-quote {
     padding-top: 176px;
@@ -23,12 +26,14 @@
     @media(min-width: $medium-large-screen) {
       padding-top: 196px;
     }
+
     .h3 {
       @media(min-width: $medium-large-screen) {
         line-height: 39px;
         margin-bottom: 0;
       }
     }
+
     .body {
       @media(min-width: $medium-large-screen) {
         padding-top: 24px;

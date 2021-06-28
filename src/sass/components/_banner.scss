@@ -1,19 +1,22 @@
-.banner {
+.home-banner, .banner {
   background: $colors-mint-cool-60v;
   color: $colors-white;
   box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3);
   width: 100vw;
+
   &:hover,
   &:focus {
     a {
       text-decoration: underline;
     }
   }
+
   a {
     color: $colors-white;
     text-decoration: none;
 
   }
+
   .inner {
     max-width: $max-width;
     margin: 0 auto;

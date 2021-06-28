@@ -17,7 +17,8 @@
     font-size: 18px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $colors-red-60;
     color: $colors-white;
     border-color: $colors-red-60;
@@ -27,13 +28,7 @@
     background-color: #6f3331;
   }
 
-  &:focus {
-    background-color: #6f3331;
-    border-color: $colors-red-60;
-  }
-
   &.large {
-    //padding: 12px 60px;
     font-size: 18px;
     margin-bottom: 50px;
   }

@@ -25,7 +25,7 @@ const CertDeliverDitap = () => {
                     <p className='body'>CivicActions specializes in services that are central to the DITAP curriculum such as human centered design, free and open source software development, security and compliance, Agile and Lean Startup methodologies, and DevOps. By helping acquisition professionals align their contracting processes with these practices through which modern software is built, the DITAP program aims to increase the number and percentage of successful digital service acquisitions across the federal government.</p>
                     <p className='body'>Over the past 18 months, CivicActions has trained three cohorts of acquisition professionals, encompassing more than 70 learners from 20 different federal agencies. 100% of participants reported “clear takeaways from the course” and 92% would recommend the training to a colleague. DITAP alumni will continue to be supported by others in the acquisition community as leaders for change within their organizations.</p>
                     <p className='body'><ul>
-                            <li><Link to='/ditap'>Request DITAP training</Link></li>
+                            <li><Link to='/services/ditap'>Request DITAP training</Link></li>
                             <li>Reflections on DITAP: <a href='https://medium.com/civicactions/what-we-learned-from-training-procurement-officers-to-buy-modern-government-it-cc6309df4103'>What we learned from training procurement officers to buy modern government IT</a></li>
                         <li>Learn more about DITAP at the <a href='https://techfarhub.cio.gov/initiatives/ditap/'>TechFAR Hub</a></li>
                         </ul>

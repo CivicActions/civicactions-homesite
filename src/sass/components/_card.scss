@@ -1,32 +1,31 @@
 
-
-  .card {
-    background: $colors-white;
-    box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3);
-    padding: 26px 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-
-
-    h2 {
-      margin-left: 32px;
-    }
+.card {
+  background: $colors-white;
+  box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3);
+  padding: 26px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
 
 
-    @media screen and (max-width: $large-screen) {
-      img {
-        width: 52px;
-      }
-    }
+  h2 {
+    margin-left: 32px;
+  }
 
-    @media screen and (max-width: $medium-screen) {
-      img {
-        width: 38px;
-      }
+
+  @media screen and (max-width: $large-screen) {
+    img {
+      width: 52px;
     }
   }
+
+  @media screen and (max-width: $medium-screen) {
+    img {
+      width: 38px;
+    }
+  }
+}
 
 .card:hover {
   background: #f3f3f3;

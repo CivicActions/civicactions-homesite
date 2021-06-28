@@ -1,22 +1,28 @@
 import twitterIcon from './files/icons/twitter-footer-icon.svg';
+import twitterIconBlue from './files/icons/twitter-footer-icon-blue.svg';
 import facebookIcon from './files/icons/facebook-footer-icon.svg';
+import facebookIconBlue from './files/icons/facebook-footer-icon-blue.svg';
 import linkedinIcon from './files/icons/linkedin-footer-icon.svg';
+import linkedinIconBlue from './files/icons/linkedin-footer-icon-blue.svg';
 
 export const socialMediaData = [
   {
     link: "https://business.facebook.com/CivicActions/",
     alt: "Follow us on Facebook",
-    icon: facebookIcon
+    icon: facebookIcon,
+    iconHover: facebookIconBlue
   },
   {
     link: "https://twitter.com/civicactions?lang=en",
     alt: "Follow us on Twitter",
-    icon: twitterIcon
+    icon: twitterIcon,
+    iconHover: twitterIconBlue
   },
   {
     link: "https://www.linkedin.com/company/civicactions/mycompany/",
     alt: "Follow us on LinkedIn",
-    icon: linkedinIcon
+    icon: linkedinIcon,
+    iconHover: linkedinIconBlue
   },
 ]
 
