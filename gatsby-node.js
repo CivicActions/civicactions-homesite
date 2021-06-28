@@ -200,25 +200,23 @@ exports.createPages = async ({ graphql, actions }) => {
 
   });
 
+  // const staffProfiles = result.data.staffProfiles.edges;
+  // const StaffProfileTemplate = require.resolve(
+  //   './src/templates/staff-profile.js'
+  // );
+  // staffProfiles.forEach((profile, index) => {
+  //   createPage({
+  //     path: `${profile.node.Path}`,
+  //     component: StaffProfileTemplate,
+  //     context: {
+  //       pagePath: profile.node.Path,
+  //     },
+  //   });
+  // });
 
-
-
-  const staffProfiles = result.data.staffProfiles.edges;
-  const StaffProfileTemplate = require.resolve(
-    './src/templates/staff-profile.js'
-  );
-  staffProfiles.forEach((profile, index) => {
-    createPage({
-      path: `${profile.node.Path}`,
-      component: StaffProfileTemplate,
-      context: {
-        pagePath: profile.node.Path,
-      },
-    });
-  });
   const generalPages = result.data.general.edges;
   const GeneralTemplate = require.resolve(
-      './src/templates/general.js'
+    './src/templates/general.js'
   );
   generalPages.forEach((generals, index) => {
     createPage({
