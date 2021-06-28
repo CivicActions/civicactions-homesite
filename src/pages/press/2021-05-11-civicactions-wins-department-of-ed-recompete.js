@@ -1,7 +1,7 @@
 import '../../sass/styles.scss';
 import React from 'react';
 import RedLayout from '../../layouts/red';
-import {Helmet} from "react-helmet";
+import SEO from "../../components/seo";
 import Hero from '../../components/hero.js';
 import PrimaryPageCTA from "../../components/primary-page-cta";
 import { Link } from 'gatsby';
@@ -10,9 +10,11 @@ const DeptEdRecomplete = () => {
 
     return (
         <RedLayout>
-            <Helmet>
-                <title data-react-helmet="true">Department of Education awards CivicActions 5-year contract to advance adult literacy</title>
-            </Helmet>
+
+                <SEO
+                    title='Department of Education awards CivicActions 5-year contract to advance adult literacy'
+                    description='Press release from civicactions.com'
+                />
             <Hero
                 title='Department of Education awards CivicActions 5-year contract to advance adult literacy'
                 />

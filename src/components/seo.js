@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
+
+
 const SEO = ({ title, description, image, article }) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
@@ -15,16 +17,16 @@ const SEO = ({ title, description, image, article }) => {
     twitterUsername,
   } = site.siteMetadata;
   const seo = {
-    title: title || defaultTitle,
+    title: (`${title || defaultTitle} | CivicActions`),
     description: description || defaultDescription,
     image: image || `${siteUrl}${defaultImage}`,
     url: `${siteUrl}${pathname}`,
   };
+  console.log(seo);
   return (
     <Helmet
       htmlAttributes={{ lang: 'en' }}
-      title={seo.title}
-      titleTemplate={titleTemplate}>
+      title={seo.title}>
       <meta name='description' content={seo.description} />
       <meta name='image' content={seo.image} />
       {seo.url && <meta property='og:url' content={seo.url} />}
@@ -43,6 +45,7 @@ const SEO = ({ title, description, image, article }) => {
         <meta name='twitter:description' content={seo.description} />
       )}
       {seo.image && <meta name='twitter:image' content={seo.image} />}
+
     </Helmet>
   );
 };

@@ -30,7 +30,7 @@ const OfferingTemplate = ({ data }) => {
     Modal.setAppElement('#___gatsby')
 
     const offering = data.allStrapiOffering.nodes[0];
-    console.log(offering);
+
     const [modalIsOpen, setIsOpen] = useState(false);
     const [modalRef, setModalRef] = useState(false);
 
@@ -80,8 +80,8 @@ const OfferingTemplate = ({ data }) => {
     return (
         <RedLayout>
             <SEO
-                title={offering.OGTitle}
-                description={offering.OGDescription}
+                title={offering.SEO.OGTitle}
+                description={offering.SEO.OGDescription}
             />
             <div className='offering--content-type'>
                 <Hero

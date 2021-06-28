@@ -1,7 +1,7 @@
 import '../../sass/styles.scss';
 import React from 'react';
 import RedLayout from '../../layouts/red';
-import {Helmet} from "react-helmet";
+import SEO from "../../components/seo";
 import Hero from '../../components/hero.js';
 import { Link } from 'gatsby';
 import PrimaryPageCTA from "../../components/primary-page-cta";
@@ -10,9 +10,10 @@ const CertDeliverDitap = () => {
 
     return (
         <RedLayout>
-            <Helmet>
-                <title data-react-helmet="true">CivicActions certified to deliver DITAP training to federal acquisition professionals</title>
-            </Helmet>
+                <SEO
+                    title='CivicActions certified to deliver DITAP training to federal acquisition professionals'
+                    description='Press release from civicactions.com'
+                />
             <Hero
                 title='CivicActions certified to deliver DITAP training to federal acquisition professionals'
             />
