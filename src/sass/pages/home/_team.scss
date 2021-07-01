@@ -44,6 +44,7 @@
   .inner {
     max-width: $max-width;
     position: relative;
+    text-align: center;
   }
 
   button.team-filter-btn {
@@ -52,7 +53,8 @@
     padding: 10px 20px;
     background: $colors-white;
     border: 1px solid $colors-grey-90;
-    font-size: 20px;
+    font-size: 16px;
+    font-family: $primary-font;
     margin-right: 20px;
     margin-bottom: 10px;
 
