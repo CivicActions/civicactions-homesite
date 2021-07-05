@@ -1,5 +1,6 @@
 import '../sass/styles.scss';
 import React, { useEffect, useRef } from 'react';
+import { StaticImage } from "gatsby-plugin-image"
 import HomepageLayout from '../layouts/homepage';
 import Card from '../components/card.js';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
@@ -11,7 +12,6 @@ import SEO from '../components/seo';
 
 // Images
 import homeIntroGraphic from '../files/images/homepage-hero.png';
-import homeTeamImage from '../files/images/home-team-img.png';
 import quotePatternGraphic from '../files/images/quote-pattern-graphic.png';
 import caseStudyTeaserImg3 from '../files/images/case-study-teasers/case-study-teaser-img-3.png';
 import caseStudyTeaserImg4 from '../files/images/case-study-teasers/case-study-teaser-img-4.png';
@@ -261,7 +261,7 @@ const HomePage = () => {
               <LinkButton src='/team' type='primary' text='Meet our team' />
             </div>
             <div className='team-picture-column'>
-              <img src={homeTeamImage} alt='Large group of smiling CivicActions team members on a video call.'></img>
+              <StaticImage src='../files/images/home-team-img.png' alt='Large group of smiling CivicActions team members on a video call.'/>
             </div>
           </div>
         </div>
