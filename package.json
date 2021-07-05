@@ -35,6 +35,7 @@
     "gatsby-remark-autolink-headers": "^4.3.0",
     "gatsby-source-rss-feed": "^1.0.4",
     "gatsby-transformer-sharp": "^3.4.0",
+    "intersection-observer": "^0.12.0",
     "prettier": "^2.3.0",
     "react": "^17.0.1",
     "react-accessible-accordion": "^3.3.4",
