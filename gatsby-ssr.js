@@ -8,5 +8,5 @@ const React = require(`react`)
 const favicon = require(`./src/favicon-32x32.png`)
 
 exports.onRenderBody = ({ setHeadComponents }) => {
-  setHeadComponents([<link key="icon" rel="icon" href={favicon} />])
+  setHeadComponents([<link key="icon" rel="icon" href="{favicon}" />])
 }

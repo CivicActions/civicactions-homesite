@@ -22,6 +22,13 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        sitemap: 'https://civicactions.com/sitemap/sitemap-index.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    {
       resolve: `@danbruegge/gatsby-plugin-stylelint`,
       options: {
         files: [`src/**/*.(s(c|a)ss|css)`],
