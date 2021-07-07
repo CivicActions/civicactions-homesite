@@ -1,14 +1,17 @@
-import '../sass/styles.scss';
+import { graphql, useStaticQuery } from 'gatsby';
 import React, { useState } from 'react';
+
 import RedLayout from '../layouts/red';
 import TeaserGrid from '../components/teaser-grid.js';
 import StaffQuote from '../components/staff-quote.js';
 import Hero from '../components/hero.js';
-import { graphql, useStaticQuery } from 'gatsby';
-import alanaCaseyProfilePicture from '../files/images/alanna_casey_profile.jpg';
-import LinkButton from '../components/link-button';
 import SEO from '../components/seo';
 import PrimaryPageCTA from "../components/primary-page-cta";
+
+import alanaCaseyProfilePicture from '../files/images/alanna_casey_profile.jpg';
+import careersOgImage from '../../static/careers-og-image.png'
+
+import '../sass/styles.scss';
 
 const TeamPage = () => {
   const data = useStaticQuery(graphql`
@@ -67,7 +70,11 @@ const TeamPage = () => {
   }
   return (
     <RedLayout>
-      <SEO title='Team' description='Meet the humans of CivicActions.' />
+      <SEO
+        title='Team'
+        description='Meet the humans of CivicActions.'
+        image={careersOgImage}
+      />
 
       <Hero
         title='Meet the humans of CivicActions'
