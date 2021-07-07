@@ -11,7 +11,7 @@ module.exports = {
     url: `https://civicactions.com/`,
     siteUrl: `https://civicactions.com/`,
     twitterUsername: '@CivicActions',
-    image: 'ca-extended-logo.svg',
+    image: 'default-og-image.png',
   },
   pathPrefix: `/civicactions-homesite`,
   plugins: [
