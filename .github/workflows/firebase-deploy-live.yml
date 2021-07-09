@@ -4,8 +4,8 @@
 name: Deploy to Firebase Hosting on merge, content update and schedule
 'on':
   push:
-    tags:
-      - v*
+    branches:
+      - main
   repository_dispatch:
     types: [created]
   schedule:
