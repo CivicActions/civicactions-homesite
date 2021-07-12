@@ -1,3 +1,4 @@
+const siteUrl = process.env.URL || `https://civicactions.com/`;
 module.exports = {
   siteMetadata: {
     title: `CivicActions | Open and Agile Digital Government Services`,
@@ -9,7 +10,7 @@ module.exports = {
     address_line_2: `Unit 269,`,
     city: `Lafayette, CA 94549`,
     url: `https://civicactions.com/`,
-    siteUrl: `https://civicactions.com/`,
+    siteUrl: siteUrl,
     twitterUsername: '@CivicActions',
     image: 'ca-extended-logo.svg',
   },
@@ -20,7 +21,12 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        output: `./sitemap.xml`,
+      }
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
