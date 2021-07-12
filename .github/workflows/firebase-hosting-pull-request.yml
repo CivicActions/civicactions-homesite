@@ -8,9 +8,9 @@ jobs:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
-      - run: yarn pa11y-ci:home && yarn pa11y-ci:sitemap
       - uses: actions/checkout@v2
       - run: yarn install --frozen-lockfile && yarn build
+      - run: yarn pa11y-ci:home && yarn pa11y-ci:sitemap
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
