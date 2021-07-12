@@ -21,6 +21,21 @@ const Press = () => {
         <div className='inner'>
           <div className='press-release--items'>
             <h2 className='h4'>
+              GSA Engages CivicActions to Modernize VPAT to Improve Digital Accessibility
+            </h2>
+            <span>News Release: July 8, 2021</span>
+            <p className='body'>
+              By working with the General Services Administration (GSA) to create a modern, machine-readable format for the traditional Voluntary Digital Accessibility Template (VPAT), we are excited to be paving the way for making digital accessibility a meaningful part of IT procurement in government.
+            </p>
+            <p className='body'>
+              Full story:{' '}
+              <Link to='/press/2021-07-08-gsa-engages-civicactions-to-modernize-vpat'>
+                GSA Engages CivicActions to Modernize VPAT to Improve Digital Accessibility
+              </Link>
+            </p>
+          </div>
+          <div className='press-release--items'>
+            <h2 className='h4'>
               Department of Education Awards CivicActions 5-Year Contract to
               Advance Adult Literacy
             </h2>
