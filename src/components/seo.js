@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const SEO = ({ title, description, image, article }) => {
+const SEO = ({ title, description, image, article, isExternalImage }) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
   const {
@@ -15,12 +15,21 @@ const SEO = ({ title, description, image, article }) => {
     twitterUsername,
   } = site.siteMetadata;
 
-  let ogImage = image ? image.slice(1) : defaultImage;
+  // If the OG image is in the static folder, remove the first slash, 
+  // if it is an external image, print the full image URL
+  // if none of the above, use the default OG Image.
+  let ogImage =
+    image && !(isExternalImage) ? image.slice(1)
+      : image && isExternalImage ? image
+        : defaultImage;
+
+  // If the OGImage is stored externally (eg. cover images in case studies), do not add the site url to the image path.
+  let ogImagePath = image && isExternalImage ? ogImage : `${siteUrl}${ogImage}`
 
   const seo = {
     title: (`${title || defaultTitle} | CivicActions`),
     description: description || defaultDescription,
-    image: `${siteUrl}${ogImage}`,
+    image: ogImagePath,
     url: `${siteUrl}${pathname.slice(1)}`,
   };
 
