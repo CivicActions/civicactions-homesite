@@ -18,8 +18,8 @@ const SEO = ({ title, description, image, article }) => {
   const seo = {
     title: (`${title || defaultTitle} | CivicActions`),
     description: description || defaultDescription,
-    image: `${siteUrl}${image}` || `${siteUrl}${defaultImage}`,
-    url: `${siteUrl}${pathname}`,
+    image: `${siteUrl}${(image || defaultImage)}`,
+    url: `${siteUrl}${pathname.slice(1)}`,
   };
 
   return (
