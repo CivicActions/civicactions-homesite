@@ -15,10 +15,12 @@ const SEO = ({ title, description, image, article }) => {
     twitterUsername,
   } = site.siteMetadata;
 
+  let ogImage = image ? image.slice(1) : defaultImage;
+
   const seo = {
     title: (`${title || defaultTitle} | CivicActions`),
     description: description || defaultDescription,
-    image: `${siteUrl}${(image || defaultImage)}`,
+    image: `${siteUrl}${ogImage}`,
     url: `${siteUrl}${pathname.slice(1)}`,
   };
 

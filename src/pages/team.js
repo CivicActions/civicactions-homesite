@@ -9,7 +9,8 @@ import SEO from '../components/seo';
 import PrimaryPageCTA from "../components/primary-page-cta";
 
 import alanaCaseyProfilePicture from '../files/images/alanna_casey_profile.jpg';
-import careersOgImage from '../../static/careers-og-image.png'
+import teamOgImage from '../../static/team-og-image.png'
+
 
 import '../sass/styles.scss';
 
@@ -68,12 +69,13 @@ const TeamPage = () => {
   } else {
     team = teamDataNodes;
   }
+
   return (
     <RedLayout>
       <SEO
         title='Team'
         description='Meet the humans of CivicActions.'
-        image={careersOgImage}
+        image={teamOgImage}
       />
 
       <Hero

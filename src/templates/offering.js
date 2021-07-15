@@ -75,13 +75,10 @@ const OfferingTemplate = ({ data }) => {
           <button className={`body open-modal--btn ${index}`} onClick={() => openModal(member.Name)}>Read bio</button>
         </div></div>
 
-
     )) : null;
 
   // Get the OGImage
   let ogImageUrl = getSrc(offering.SEO.OGImage);
-  console.log(ogImageUrl);
-
 
   return (
     <RedLayout>

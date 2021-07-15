@@ -1,12 +1,21 @@
 import '../sass/styles.scss';
 import React from 'react';
+import { graphql, Link, useStaticQuery } from 'gatsby';
+
 import RedLayout from '../layouts/red';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
-import { graphql, Link, useStaticQuery } from 'gatsby';
 import whoWeArePicture from '../files/images/who-we-are.png';
-import whatWeLookForPicture from '../files/images/what-we-look-for.png';
 import Offering from '../components/offering.js';
 import Video from '../components/video.js';
+import StaffQuote from '../components/staff-quote.js';
+import PressReleaseTeaser from '../components/press-release-teaser.js';
+import caseStudyTeaserImg6 from '../files/images/case-study-teasers/case-study-teaser-img-6.png';
+import caseStudyTeaserImg7 from '../files/images/case-study-teasers/case-study-teaser-img-7.png';
+import LinkButton from '../components/link-button';
+import SEO from '../components/seo';
+
+// Images & icons
+import whatWeLookForPicture from '../files/images/what-we-look-for.png';
 import HealthBenefitsIcon from '../files/icons/health-benefits-icon.svg';
 import FourOneKProgramIcon from '../files/icons/401k-program-icon.svg';
 import TimeOffIcon from '../files/icons/time-off-icon.svg';
@@ -14,16 +23,11 @@ import RemoteLifeIcon from '../files/icons/remote-life-icon.svg';
 import AnnualUpgradesIcon from '../files/icons/annual-upgrades-icon.svg';
 import FamilyFriendly from '../files/icons/family-friendly-icon.svg';
 import FamilyPhoto from '../files/images/family-photo.png';
-import StaffQuote from '../components/staff-quote.js';
 import michelleKangProfilePicture from '../files/images/michelle-kang.png';
 import irisIbekweProfilePicture from '../files/images/iris-ibekwe.png';
 import arrowIcon from '../files/icons/arrow-icon.svg';
-import PressReleaseTeaser from '../components/press-release-teaser.js';
-import caseStudyTeaserImg6 from '../files/images/case-study-teasers/case-study-teaser-img-6.png';
-import caseStudyTeaserImg7 from '../files/images/case-study-teasers/case-study-teaser-img-7.png';
-import LinkButton from '../components/link-button';
 import squareCircle from '../files/icons/square-circle.svg';
-import SEO from '../components/seo';
+import careersOgImage from '../../static/careers-og-image.png'
 
 const CareersPage = () => {
   const data = useStaticQuery(query);
@@ -34,6 +38,7 @@ const CareersPage = () => {
       <SEO
         title='Careers'
         description='Work for the public good. Join our diverse and talented team of civic-minded people.'
+        image={careersOgImage}
       />
       <section className='careers--hero-section hero-component'>
         <div className='inner'>
