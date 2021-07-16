@@ -19,6 +19,21 @@ const Press = () => {
       />
       <section className='temp-press-releases--main-section'>
         <div className='inner'>
+         <div className='press-release--items'>
+            <h2 className='h4'>
+              CivicActions Announces 24 DITAP Graduates from the Department of Veterans Affairs
+            </h2>
+            <span>News Release: July 19, 2021</span>
+            <p className='body'>
+              Congratulations to the procurement staff from VA who recently completed the Digital IT Acquisition Professional (DITAP) program! We are proud to be the nation’s only small business fully certified to deliver this groundbreaking training to transform how government buys modern digital services.
+            </p>
+            <p className='body'>
+              Full story:{' '}
+              <Link to='/press/2021-07-19-civicactions-announces-va-ditap-graduation'>
+                CivicActions Announces 24 DITAP Graduates from the Department of Veterans Affairs
+              </Link>
+            </p>
+          </div>
           <div className='press-release--items'>
             <h2 className='h4'>
               GSA Engages CivicActions to Modernize VPAT to Improve Digital Accessibility
