@@ -24,7 +24,7 @@ const RedLayout = ({ children }) => {
         {/*<img className="red-rectangle" src={redRectangle} alt="background red color"></img>*/}
         <Header />
         <main id='main-content' className='red--header' tabIndex='-1'>
-          <div>{children}</div>
+          {children}
         </main>
         <Footer />
       </div>

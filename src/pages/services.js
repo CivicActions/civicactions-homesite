@@ -73,24 +73,24 @@ const ServicesPage = ({ data }) => {
           <div>
             <section id={'web-cms'}>
               <img alt='' className='services-content--icon' src={webCmsIcon} />
-              <div className='h6 services-content--label'>WEB & CMS</div>
+              <p className='h6 services-content--label'>WEB & CMS</p>
               <h2 className='title'>
                 Accessible and secure government websites at scale
               </h2>
-              <div className='body description'>
+              <p className='body description'>
                 Government websites have complex information and diverse user
                 groups, but they can be made surprisingly usable and
                 maintainable. We can help you plan a content strategy that
                 merges business goals with user needs (and makes life easier for
                 your staff!) then build a flexible and secure content management
                 system that will grow with you into the future.
-              </div>
+              </p>
               <h3 className='h4'>How we’ve helped others</h3>
-              <div className='body'>U.S. Department of Veterans Affairs</div>
+              <p className='body'>U.S. Department of Veterans Affairs</p>
               <Link to='/case-studies/va-cms-modernization' className='body-large'>Built a modern CMS for VA.gov</Link>
-              <div className='body'>
+              <p className='body'>
                 Centers for Medicare and Medicaid Services
-              </div>
+              </p>
               <Link to='/case-studies/cms-web-experience-services' className='body-large'>
                 Designed a user-friendly health journey for seniors
               </Link>
@@ -124,30 +124,30 @@ const ServicesPage = ({ data }) => {
             </section>
             <section id={'service-modernization'}>
               <img alt='' className='services-content--icon' src={itModernizationIcon} />
-              <div className='h6 services-content--label'>
+              <p className='h6 services-content--label'>
                 IT & service modernization
-              </div>
+              </p>
               <h2 className='h3 title'>
                 Modernization of legacy government systems and services
               </h2>
-              <div className='body description'>
+              <p className='body description'>
                 Outdated systems and paper-based processes make it hard for
                 agency staff to efficiently meet the needs of people who depend
                 on you for critical government services. We help you transform
                 your legacy applications and improve your workflows using
                 human-centered design, automation, and scalable, secure
                 infrastructure.
-              </div>
+              </p>
               <h3 className='h4'>How we’ve helped others</h3>
-              <div className='body'>
+              <p className='body'>
                 California Child Welfare Digital Services
-              </div>
+              </p>
               <Link to='https://cwds.ca.gov/ ' className='body-large'>
                 Provided DevOps support for child welfare systems
               </Link>
-              <div className='body'>
+              <p className='body'>
                 New York Metropolitan Transit Authority
-              </div>
+              </p>
               <Link to='/case-studies/nyc-metro-transit-digital-clocks ' className='body-large'>
                 Connected Drupal and the Internet of Things to power digital
                 signage
@@ -175,22 +175,22 @@ const ServicesPage = ({ data }) => {
                 className='services-content--icon'
                 src={productDesignIcon}
               />
-              <div className='h6 services-content--label'>Product & design</div>
+              <p className='h6 services-content--label'>Product & design</p>
               <h2 className='h3 title'>
                 Human-centered problem solving and strategy
               </h2>
-              <div className='body description'>
+              <p className='body description'>
                 No matter what the challenge is, technology is only one part of
                 the solution. Before building anything new, we work with you to
                 define problems and desired outcomes, understand the customer
                 and stakeholder ecosystem, decide on an approach that serves
                 business goals and user needs, and make plans for facilitating
                 adoption and measuring success.
-              </div>
+              </p>
               <h3 className='h4'>How we’ve helped others</h3>
-              <div className='body'>
+              <p className='body'>
                 Centers for Medicare and Medicaid Services
-              </div>
+              </p>
               <Link to='/case-studies/cms-design-challenge-mvp' className='body-large'>
                 Designed a persona-driven strategy for Medicare benefits
               </Link>
@@ -220,14 +220,14 @@ const ServicesPage = ({ data }) => {
                 className='services-content--icon'
                 src={securityComplianceIcon}
               />
-              <div className='h6 services-content--label'>
+              <p className='h6 services-content--label'>
                 SECURITY & COMPLIANCE
-              </div>
+              </p>
               <h2 className='h3 title'>
                 Modern security practices for continuous compliance and
                 reliability
               </h2>
-              <div className='body description'>
+              <p className='body description'>
                 People want to know their government will keep sensitive
                 information safe—but traditional compliance regulations are
                 cumbersome and don’t provide an accurate measure of security. We
@@ -235,16 +235,16 @@ const ServicesPage = ({ data }) => {
                 development and operations teams in sync, with security and
                 compliance woven in from the start, for faster deployment of
                 secure and stable code.
-              </div>
+              </p>
               <h3 className='h4'>How we’ve helped others</h3>
-              <div className='body'>Defense Security Cooperation Agency</div>
+              <p className='body'>Defense Security Cooperation Agency</p>
               <Link to='/case-studies/globalnet-platform-support' className='body-large'>
                 Supporting international peace partners with continuous
                 compliance
               </Link>
-              <div className='body'>
+              <p className='body'>
                 Various agencies
-              </div>
+              </p>
               <Link to='https://www.youtube.com/watch?v=jsdUYUiKM3U&list=PLbbanFptQWaKZp8_IFnZmJbsa2UGuj3ax&index=6' className='body-large'>
                 Helping government automate federal compliance
               </Link>
@@ -270,29 +270,29 @@ const ServicesPage = ({ data }) => {
                 className='services-content--icon'
                 src={dataServicesIcon}
               />
-              <div className='h6 services-content--label'>DATA SERVICES</div>
+              <p className='h6 services-content--label'>DATA SERVICES</p>
               <h2 className='h3 title'>
                 Open data sharing to drive evidence-based decisions
               </h2>
-              <div className='body description'>
+              <p className='body description'>
                 Government can serve people best when public data is open,
                 discoverable, and usable. We can help you create a data strategy
                 and comply with open data mandates using open source tools to
                 aggregate, catalog, and standardize your data. Then it’s ready
                 to use, by your staff or the public, to make informed decisions,
                 track metrics, and power useful apps.
-              </div>
+              </p>
               <h3 className='h4'>How we’ve helped others</h3>
-              <div className='body'>City of Louisville</div>
+              <p className='body'>City of Louisville</p>
               <Link to='/case-studies/louisville-open-data' className='body-large'>
                 Supporting local government transparency
               </Link>
-              <div className='body'>
+              <p className='body'>
                 Georgia Board of Healthcare Workforce
-              </div>
-              <div className='body-large'>
+              </p>
+              <p className='body-large'>
                 Open data dashboards to serve healthcare workers in Georgia
-              </div>
+              </p>
               <div className='cta'>
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
@@ -315,22 +315,22 @@ const ServicesPage = ({ data }) => {
                 className='services-content--icon'
                 src={workforceDevelopmentIcon}
               />
-              <div className='h6 services-content--label'>
+              <p className='h6 services-content--label'>
                 WORKFORCE DEVELOPMENT
-              </div>
+              </p>
               <h2 className='h3 title'>
                 Modern skills for an adaptable government workforce
               </h2>
-              <div className='body description'>
+              <p className='body description'>
                 Lasting transformation in government happens from the inside
                 out. Organizational change is hard, but not impossible. We offer
                 consulting and training to help your teams build skills in
                 modern ways of working so your agency can increase resilience,
                 save taxpayer dollars, and serve the public better in the
                 digital age.
-              </div>
+              </p>
               <h3 className='h4'>How we’ve helped others</h3>
-              <div className='body'>Federal Acquisitions Institute</div>
+              <p className='body'>Federal Acquisitions Institute</p>
               <a href='https://medium.com/civicactions/what-we-learned-from-training-procurement-officers-to-buy-modern-government-it-cc6309df4103' className='body-large'>
                 DITAP program certification for federal procurement officers
               </a>
@@ -354,11 +354,11 @@ const ServicesPage = ({ data }) => {
       <section className='services--ellipses-section'>
         <div className='inner'>
           <h2>Open Standards. Inclusive Practices. Better Outcomes.</h2>
-          <div className='body-large'>
+          <p className='body-large'>
             No matter what problem we’re solving, our core practices and
             communities power our work and align with current standards for
             government digital services.
-          </div>
+          </p>
           <div className='ellipses'>
 
             <span className='ellipse'>accessibility</span>

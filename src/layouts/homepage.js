@@ -26,7 +26,7 @@ const HomepageLayout = ({ children }) => {
         {/*/>*/}
         <Header />
         <main id='main-content' tabIndex='-1'>
-          <div>{children}</div>
+          {children}
         </main>
         <Footer />
       </div>
