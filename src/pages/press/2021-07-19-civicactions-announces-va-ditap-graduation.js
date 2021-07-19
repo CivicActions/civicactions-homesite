@@ -52,7 +52,7 @@ const VADITAPGRAD = () => {
                         <li>Yash Dega, Contract Specialist</li>
                         </ul>
                     </p>
-                    <p className='body'>CivicActions is proud to be the nation’s only small business that is fully-authorized  to provide DITAP training. For more information about our DITAP program, visit <a href='https://civicactions.com/services/ditap'>civicactions.com/ditap</a>. If you’d like to request training, please <a href='https://civicactions.com/services/ditap/register'>submit your request here</a>.</p>
+                    <p className='body'>CivicActions is proud to be the nation’s only small business that is fully-authorized  to provide DITAP training. For more information about our DITAP program, visit <a href='https://civicactions.com/services/ditap'>civicactions.com/services/ditap</a>. If you’d like to request training, please <a href='https://civicactions.com/services/ditap/register'>submit your request here</a>.</p>
                 </div>
             </div>
             <PrimaryPageCTA
