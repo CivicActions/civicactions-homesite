@@ -39,7 +39,7 @@ const ContractingPage = () => {
             name='GSA MAS'
             info='General Services Administration Multiple Award Schedule (prime)'
             contract='Contract number: GS-35F-337BA'
-            link='https://civicactions.com/static/GSA-Schedule-4e514f0b565633ef0deb324b31abb6e9.pdf'
+            link='https://civicactions.com/static/GMAS contract schedule.pdf'
           />
           <ContractVehiclePdf
             icon={dgs}
@@ -47,7 +47,7 @@ const ContractingPage = () => {
             name='CMAS'
             info='California Multiple Award Schedule (prime)'
             contract='Contract number: 3-16-70-3298A'
-            link='https://civicactions.com/static/CMAS-Schedule-9ecdcdc84c448e4141d16f6a38499073.pdf'
+            link='https://civicactions.com/static/CMAS contract schedule.pdf'
           />
           <ContractVehicle
             icon={govuk}
