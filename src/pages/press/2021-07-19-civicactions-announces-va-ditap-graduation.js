@@ -19,7 +19,7 @@ const VADITAPGRAD = () => {
             <div className='single--press-releases--main'>
                 <div className='inner'>
                     <span className='body'>Date: Monday, July 19, 2021</span>
-                    <p className='body'>CivicActions is pleased to announce the graduation of its newest <a href='https://civicactions.com/services/ditap'>Digital IT Acquistion Professional (DITAP)</a> cohort, which included 24 procurement officers from the Department of Veteran Affairs.</p>
+                    <p className='body'>CivicActions is pleased to announce the graduation of its newest <a href='https://civicactions.com/services/ditap'>Digital IT Acquisition Professional (DITAP)</a> cohort, which included 24 procurement officers from the Department of Veteran Affairs.</p>
                     <p className='body'>DITAP was created to modernize how the federal government buys digital services. Specifically, it teaches students how to build flexible contracts that keep pace with changing technologies.</p>
                     <p className='body'>The six-month program starts by covering 21st century digital services — including agile software development, human-centered design, cloud computing and data management. Students then learn how to contract these services, and ensure their projects are successful.</p>
                     <p className='body'>DITAP also enables contracting officers to be business advisors and change agents within their own agencies. This serves DITAP’s bigger goal of building a culture of innovative acquisition across the federal government.</p>
