@@ -6,6 +6,11 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "redirects": [ {
+      "source": "/ditap",
+      "destination": "/services/ditap",
+      "type": 301
+    } ],
     "headers": [
       {
         "source": "**/*",
