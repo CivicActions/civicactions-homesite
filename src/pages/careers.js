@@ -23,7 +23,7 @@ import RemoteLifeIcon from '../files/icons/remote-life-icon.svg';
 import AnnualUpgradesIcon from '../files/icons/annual-upgrades-icon.svg';
 import FamilyFriendly from '../files/icons/family-friendly-icon.svg';
 import FamilyPhoto from '../files/images/family-photo.png';
-import michelleKangProfilePicture from '../files/images/michelle-kang.png';
+import eroGrayProfilePicture from '../files/images/ero-gray.jpg';
 import irisIbekweProfilePicture from '../files/images/iris-ibekwe.png';
 import arrowIcon from '../files/icons/arrow-icon.svg';
 import squareCircle from '../files/icons/square-circle.svg';
@@ -123,10 +123,7 @@ const CareersPage = () => {
             <Offering
               icon={FourOneKProgramIcon}
               title='401k program'
-              description='CivicActions automatically contributes 3% of pre-tax salary
-              equivalent to every employee’s 401k plan, then matches up to
-              another 3% of any 401k contributions you make — with socially
-              responsible investment options to choose from.'
+              description='CivicActions’ 401k program offers a range of investment options for building out a balanced portfolio — including socially responsible investment options to choose from.'
             />
             <Offering
               icon={TimeOffIcon}
@@ -164,10 +161,10 @@ const CareersPage = () => {
         </div>
       </section>
       <StaffQuote
-        img={michelleKangProfilePicture}
-        quote='“I appreciate the kindness of people at CivicActions, no matter the role or position. We really take care of each other.”'
-        name='Michelle Kang'
-        role='Product Designer'
+        img={eroGrayProfilePicture}
+        quote='“My coworkers are some of my favorite people! I actually look forward to meetings with them.”'
+        name='Ero Gray'
+        role='Project Manager'
         classes='first-quote'
       />
 
