@@ -14,7 +14,7 @@ const DITAPSEPT2021 = () => {
                 description='Press release from civicactions.com'
             />
             <Hero
-                title='CivicActions announces 13 DITAP graduates acrross seven federal agencies'
+                title='CivicActions announces 13 DITAP graduates across seven federal agencies'
                 />
             <div className='single--press-releases--main'>
                 <div className='inner'>
