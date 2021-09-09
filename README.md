@@ -19,8 +19,9 @@ Our home site is live at https://civicactions.com please check it out and bookma
 
 ## Getting Started
 1. First follow the instructions in the [Git Workflow Doc](docs/GIT_WORKFLOW.md).
-1. Run `yarn install`
-1. Run `yarn develop`
+2. Make sure you are using a version of node that is at least 10.16 `$ node --version` — see [how to update node](https://phoenixnap.com/kb/update-node-js-version) if needed.
+3. Run `yarn install`
+4. Run `yarn develop`
 
 ## Accessibility
 
