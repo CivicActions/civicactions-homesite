@@ -19,6 +19,22 @@ const Press = () => {
       />
       <section className='temp-press-releases--main-section'>
         <div className='inner'>
+        <div className='press-release--items'>
+           <h2 className='h4'>
+              CivicActions Announces 13 DITAP Graduates Across Seven Federal Agencies
+            </h2>
+            <span>News Release: September 8, 2021</span>
+            <p className='body'>
+              Congratulations to the procurement staff across seven federal agencies who recently completed the Digital IT Acquisition Professional (DITAP) program! 
+              We are delighted to be a part of building <q>a national resource to help modernize and protect the United States government.</q>
+            </p>
+            <p className='body'>
+              Full story:{' '}
+              <Link to='/press/2021-09-08-civicactions-announces-ditap-grads-across-federal-agencies'>
+                CivicActions Announces 13 DITAP Graduates Across Seven Federal Agencies
+              </Link>
+            </p>
+          </div>
          <div className='press-release--items'>
             <h2 className='h4'>
               CivicActions Announces 24 DITAP Graduates from the Department of Veterans Affairs
