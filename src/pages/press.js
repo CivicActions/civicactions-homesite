@@ -21,6 +21,21 @@ const Press = () => {
         <div className='inner'>
         <div className='press-release--items'>
            <h2 className='h4'>
+              CivicActions Earns Placement in Colorado Agile Technology Services Vendor Pool
+            </h2>
+            <span>News Release: October 6, 2021</span>
+            <p className='body'>
+              We are thrilled to be one of a few select vendors chosen to be part of Colorado’s Agile Technology Services Vendor Pool, which empowers the state’s Office of Information Technology (OIT) to quickly procure top software development and user centered design services for IT modernization projects.</q>
+            </p>
+            <p className='body'>
+              Full story:{' '}
+              <Link to='/press/2021-10-06-civicactions-earns-placement-in-colorado-agile-vendor-pool/'>
+                CivicActions Earns Placement in Colorado Agile Technology Services Vendor Pool
+              </Link>
+            </p>
+          </div>
+        <div className='press-release--items'>
+           <h2 className='h4'>
               CivicActions Announces 13 DITAP Graduates Across Seven Federal Agencies
             </h2>
             <span>News Release: September 8, 2021</span>
