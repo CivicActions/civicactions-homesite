@@ -25,7 +25,7 @@ const Press = () => {
             </h2>
             <span>News Release: October 6, 2021</span>
             <p className='body'>
-              We are thrilled to be one of a few select vendors chosen to be part of Colorado’s Agile Technology Services Vendor Pool, which empowers the state’s Office of Information Technology (OIT) to quickly procure top software development and user centered design services for IT modernization projects.</q>
+              We are thrilled to be one of a few select vendors chosen to be part of Colorado’s Agile Technology Services Vendor Pool, which empowers the state’s Office of Information Technology (OIT) to quickly procure top software development and user centered design services for IT modernization projects.
             </p>
             <p className='body'>
               Full story:{' '}
