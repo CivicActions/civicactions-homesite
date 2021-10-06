@@ -23,7 +23,7 @@ import securityComplianceIcon from '../files/icons/security-compliance-icon.svg'
 import webCmsIcon from '../files/icons/web-cms-icon.svg';
 import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 import arrowIcon from '../files/icons/arrow-icon.svg';
-import {graphql, useStaticQuery} from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 
 const HomePage = () => {
   const fadersRef = useRef([]);
@@ -44,7 +44,7 @@ const HomePage = () => {
 
   const data = useStaticQuery(graphql`
     {
-      allStrapiCaseStudy(filter: {Featured: {eq: "True"}}, sort: {fields: Sort_Order}) {
+      allStrapiCaseStudy(filter: {Promoted_to_Homepage: {eq: "True"}}, sort: {fields: Sort_Order}) {
         nodes {
           Title
           Cover_Image {
@@ -222,24 +222,24 @@ const HomePage = () => {
             />
             <div className='grid-item-3'>
 
-                <a className='grid-item-3-1'
-                  href={
-                    'https://medium.com/civicactions/what-is-data-science-really-232552fc080a'
-                  }>
-                  <h3>What is data science, really?</h3>
-                  <img src={arrowIcon} alt=''></img>
-                </a>
+              <a className='grid-item-3-1'
+                href={
+                  'https://medium.com/civicactions/what-is-data-science-really-232552fc080a'
+                }>
+                <h3>What is data science, really?</h3>
+                <img src={arrowIcon} alt=''></img>
+              </a>
 
 
-                <a className='grid-item-3-2'
-                  href={
-                    'https://medium.com/civicactions/launching-a-community-of-practice-for-accessibility-in-government-services-b0b085cd90d6'
-                  }>
-                  <h3>A community of practice for government accessibility</h3>
+              <a className='grid-item-3-2'
+                href={
+                  'https://medium.com/civicactions/launching-a-community-of-practice-for-accessibility-in-government-services-b0b085cd90d6'
+                }>
+                <h3>A community of practice for government accessibility</h3>
 
-                  <img src={arrowIcon} alt=''></img>
+                <img src={arrowIcon} alt=''></img>
 
-                </a>
+              </a>
 
             </div>
           </div>
@@ -261,7 +261,7 @@ const HomePage = () => {
               <LinkButton src='/team' type='primary' text='Meet our team' />
             </div>
             <div className='team-picture-column'>
-              <StaticImage src='../files/images/home-team-img.png' alt='Large group of smiling CivicActions team members on a video call.'/>
+              <StaticImage src='../files/images/home-team-img.png' alt='Large group of smiling CivicActions team members on a video call.' />
             </div>
           </div>
         </div>
