@@ -23,7 +23,7 @@ import RemoteLifeIcon from '../files/icons/remote-life-icon.svg';
 import AnnualUpgradesIcon from '../files/icons/annual-upgrades-icon.svg';
 import FamilyFriendly from '../files/icons/family-friendly-icon.svg';
 import FamilyPhoto from '../files/images/family-photo.png';
-import eroGrayProfilePicture from '../files/images/ero-gray.jpg';
+import davidSumnerProfilePicture from '../files/images/david-sumner.jpg';
 import irisIbekweProfilePicture from '../files/images/iris-ibekwe.png';
 import arrowIcon from '../files/icons/arrow-icon.svg';
 import squareCircle from '../files/icons/square-circle.svg';
@@ -161,10 +161,10 @@ const CareersPage = () => {
         </div>
       </section>
       <StaffQuote
-        img={eroGrayProfilePicture}
-        quote='“My coworkers are some of my favorite people! I actually look forward to meetings with them.”'
-        name='Ero Gray'
-        role='Project Manager'
+        img={davidSumnerProfilePicture}
+        quote='“CivicActions is the most diverse tech company I have ever had the pleasure of working at.”'
+        name='David Sumner'
+        role='Associate Director of DevSecOps'
         classes='first-quote'
       />
 
