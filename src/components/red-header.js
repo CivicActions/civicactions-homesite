@@ -11,7 +11,6 @@ import MobileMenu from './menus/mobile-menu/mobile-menu';
 
 const RedHeader = () => {
 
-
     const [scrolled, setScrolled] = React.useState(false);
     const [scrolledMobile, setScrolledMobile] = React.useState(false);
     const handleScroll = () => {

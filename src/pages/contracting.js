@@ -12,6 +12,8 @@ import dgs from '../files/images/client-logos/dgs.svg';
 import doi from '../files/images/client-logos/doi.svg';
 import govuk from '../files/images/client-logos/govuk.svg';
 import gsa from '../files/images/client-logos/gsa.svg';
+import gsaPdf from '../files/GMAS-contract-schedule.pdf';
+import cmasPdf from '../files/CMAS-contract-schedule.pdf';
 import library from '../files/images/client-logos/library.svg';
 
 const ContractingPage = () => {
@@ -39,7 +41,7 @@ const ContractingPage = () => {
             name='GSA MAS'
             info='General Services Administration Multiple Award Schedule (prime)'
             contract='Contract number: GS-35F-337BA'
-            link='https://civicactions.com/static/GMAS contract schedule.pdf'
+            link={gsaPdf}
           />
           <ContractVehiclePdf
             icon={dgs}
@@ -47,7 +49,7 @@ const ContractingPage = () => {
             name='CMAS'
             info='California Multiple Award Schedule (prime)'
             contract='Contract number: 3-16-70-3298A'
-            link='https://civicactions.com/static/CMAS contract schedule.pdf'
+            link={cmasPdf}
           />
           <ContractVehicle
             icon={govuk}
