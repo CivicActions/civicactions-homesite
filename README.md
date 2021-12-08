@@ -1,6 +1,6 @@
-# civicactions.com
-CivicActions home site
-=======
+# CivicActions.com - CivicActions home site
+
+Our home site is live at https://civicactions.com please check it out and bookmark that page if you do that. 
 
 ## Related resources
 
@@ -10,7 +10,7 @@ CivicActions home site
 
 [Gatsby config](https://www.gatsbyjs.com/docs/reference/config-files/)
 
-[Using gatsby with Strapi](https://strapi.io/blog/build-a-static-blog-with-gatsby-and-strapi)
+[Using Gatsby with Strapi](https://strapi.io/blog/build-a-static-blog-with-gatsby-and-strapi)
 
 
 ## Gatsby and Strapi integration
@@ -19,6 +19,10 @@ CivicActions home site
 
 ## Getting Started
 1. First follow the instructions in the [Git Workflow Doc](docs/GIT_WORKFLOW.md).
-1. Run `yarn install`
-1. Run `yarn develop`
+2. Make sure you are using a version of node that is at least 10.16 `$ node --version` — see [how to update node](https://phoenixnap.com/kb/update-node-js-version) if needed.
+3. Run `yarn install`
+4. Run `yarn develop`
 
+## Accessibility
+
+Check out our [Accessibility statement](https://civicactions.com/accessibility-statement) on the site and feel free to reach out to us there. Alternatively since you're already on GitHub, feel free to submit an issue or a PR. Accessibility is important to us, and this means we try to go beyond WCAG 2.1 AA and build a good customer experience for our clients. 

@@ -284,15 +284,15 @@ const ServicesPage = ({ data }) => {
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
               <div className='body'>City of Louisville</div>
-              <Link to='/case-studies/louisville-open-data' className='body-large'>
+              <div className='body-large'>
                 Supporting local government transparency
-              </Link>
+              </div>
               <div className='body'>
                 Georgia Board of Healthcare Workforce
               </div>
-              <div className='body-large'>
+              <Link to='/case-studies/georgia-workforce-open-data' className='body-large'>
                 Open data dashboards to serve healthcare workers in Georgia
-              </div>
+              </Link>
               <div className='cta'>
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
@@ -379,6 +379,7 @@ const ServicesPage = ({ data }) => {
         subtitle='Let’s create better government services.'
         primaryButtonText='HIRE US'
         secondaryButtonText='CONTRACTING INFO'
+        secondaryButtonLink='/contracting'
       />
     </RedLayout>
   );
