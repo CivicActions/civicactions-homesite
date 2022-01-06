@@ -15,9 +15,9 @@ const HomepageLayout = ({ children }) => {
       <div>
         <SkipNavLink />
           <Banner
-            boldText='Looking for DITAP training?'
-            regularText='Start here.'
-            link='/services/ditap'
+            boldText='WE'RE HIRING!'
+            regularText='Come help us make an impact.'
+            link='/careers'
           />
         {/*<Banner*/}
         {/*  boldText='We’re hiring!'*/}
