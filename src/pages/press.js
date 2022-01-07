@@ -19,6 +19,21 @@ const Press = () => {
       />
       <section className='temp-press-releases--main-section'>
         <div className='inner'>
+    <div className='press-release--items'>
+           <h2 className='h4'>
+              CivicActions Named to 2022 GovTech 100 Top Government Technology Companies List
+            </h2>
+            <span>News Release: January 5, 2022</span>
+            <p className='body'>
+              For the sixth year in a row, we’re honored to be listed by Government Technology among leading companies helping state and local government agencies improve how they serve the public.
+            </p>
+            <p className='body'>
+              Full story:{' '}
+              <Link to='https://www.govtech.com/100/2022'>
+                 2022 GovTech 100 List
+              </Link>
+            </p>
+          </div>
         <div className='press-release--items'>
            <h2 className='h4'>
               CivicActions Announces 13 DITAP Graduates Across Seven Federal Agencies
