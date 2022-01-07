@@ -15,15 +15,10 @@ const HomepageLayout = ({ children }) => {
       <div>
         <SkipNavLink />
           <Banner
-            boldText='Looking for DITAP training?'
-            regularText='Start here.'
-            link='/services/ditap'
+            boldText={`WE'RE HIRING!`}
+            regularText='Come help us make an impact.'
+            link='/careers'
           />
-        {/*<Banner*/}
-        {/*  boldText='We’re hiring!'*/}
-        {/*  regularText='View open positions here'*/}
-        {/*  link='/careers#open-positions'*/}
-        {/*/>*/}
         <Header />
         <main id='main-content' tabIndex='-1'>
           <div>{children}</div>
