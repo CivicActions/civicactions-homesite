@@ -14,7 +14,7 @@ import SEO from '../components/seo';
 import homeIntroGraphic from '../files/images/homepage-hero.png';
 import quotePatternGraphic from '../files/images/quote-pattern-graphic.png';
 import caseStudyTeaserImg3 from '../files/images/case-study-teasers/case-study-teaser-img-3.png';
-import caseStudyTeaserImg4 from '../files/images/case-study-teasers/case-study-teaser-img-4.png';
+import caseStudyTeaserImg8 from '../files/images/case-study-teasers/case-study-teaser-img-8.png';
 import caseStudyTeaserImg5 from '../files/images/case-study-teasers/blogpostimage.png';
 import dataServicesIcon from '../files/icons/data-services-icon.svg';
 import itModernizationIcon from '../files/icons/it-modernization-icon.svg';
@@ -201,13 +201,13 @@ const HomePage = () => {
           </div>
           <div className='cases'>
             <PressReleaseTeaser
-              img={caseStudyTeaserImg4}
-              title={'Government customer experience: A practical guide'}
+              img={caseStudyTeaserImg8}
+              title={'Designing a Veteran-first online experience'}
               description={
-                'How to start bringing CX into the business of government'
+                'How we help VA deliver consistent and useful information'
               }
               teaserlink={
-                'https://medium.com/civicactions/government-customer-experience-a-practical-guide-59b602815e3f'
+                'https://medium.com/civicactions/designing-a-veteran-first-experience-for-va-gov-4ce3524203fb'
               }
             />
             <PressReleaseTeaser
@@ -224,9 +224,9 @@ const HomePage = () => {
 
               <a className='grid-item-3-1'
                 href={
-                  'https://medium.com/civicactions/what-is-data-science-really-232552fc080a'
+                  'https://medium.com/civicactions/one-drupal-platform-multiple-government-products-bb1c401315cc'
                 }>
-                <h3>What is data science, really?</h3>
+                <h3>One Drupal platform, multiple government products</h3>
                 <img src={arrowIcon} alt=''></img>
               </a>
 
