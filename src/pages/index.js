@@ -182,12 +182,12 @@ const HomePage = () => {
           <img src={quotePatternGraphic} alt=''></img>
           <div className='quote'>
             <h2>
-              “It was a pleasure to work with the CivicActions team. Their experience with agile processes helped us reach our user base with a product that met their needs.”
+              “CivicActions always looked for the optimal solutions to difficult problems and improved constantly on delivered functionality. They responded with agility, creativity, and skill to any challenge that was thrown at them.”
             </h2>
             <div className='body'>
-              Lisa Berry, Senior GlobalNET Liaison Officer
+              Katrina Barry, Contracting Officer
             </div>
-            <div className='body'>Defense Security Cooperation Agency</div>
+            <div className='body'>National Science Foundation</div>
           </div>
         </div>
       </section>
