@@ -14,7 +14,7 @@ import SEO from '../components/seo';
 import homeIntroGraphic from '../files/images/homepage-hero.png';
 import quotePatternGraphic from '../files/images/quote-pattern-graphic.png';
 import caseStudyTeaserImg3 from '../files/images/case-study-teasers/case-study-teaser-img-3.png';
-import caseStudyTeaserImg4 from '../files/images/case-study-teasers/case-study-teaser-img-4.png';
+import caseStudyTeaserImg8 from '../files/images/case-study-teasers/case-study-teaser-img-8.png';
 import caseStudyTeaserImg5 from '../files/images/case-study-teasers/blogpostimage.png';
 import dataServicesIcon from '../files/icons/data-services-icon.svg';
 import itModernizationIcon from '../files/icons/it-modernization-icon.svg';
