@@ -30,8 +30,9 @@ import squareCircle from '../files/icons/square-circle.svg';
 import careersOgImage from '../../static/careers-og-image.png'
 
 const CareersPage = () => {
-  const jazzData = useStaticQuery(jazzQuery);
-  const jazzJob = jazzData.allFeedJobList.edges;
+  const data = useStaticQuery(query);
+  const jazzJob = data.allFeedJobList.edges;
+  const greenhouseJob = data.allGreenhouseJob.edges;
 
   return (
     <RedLayout>
@@ -176,17 +177,25 @@ const CareersPage = () => {
             encourage people from underrepresented groups to apply.
           </p>
           <div className='jobs-grid'>
-            {!jazzJob.length && (
+            {!jazzJob.length && !greenhouseJob.length && (
               <div className='no-job'>
                 <p className='body'>
                   No positions are currently open. Please check back again soon!
                 </p>
               </div>
             )}
+            {greenhouseJob.map(({ node }, index) => (
+              <div className='body job'>
+                <a href={node.absolute_url}>
+                  <p>{node.title.replace("(Remote)", "").trim()}</p>
+                  <img src={arrowIcon} alt='red right arrow icon'></img>
+                </a>
+              </div>
+            ))}
             {jazzJob.map(({ node }, index) => (
               <div className='body job'>
                 <a href={node.link}>
-                  <p>{node.title}</p>
+                  <p>{node.title.replace("(Remote)", "").trim()}</p>
                   <img src={arrowIcon} alt='red right arrow icon'></img>
                 </a>
               </div>
@@ -296,8 +305,16 @@ const CareersPage = () => {
   );
 };
 
-export const jazzQuery = graphql`
+export const query = graphql`
   {
+    allGreenhouseJob {
+      edges {
+        node {
+          title
+          absolute_url
+        }
+      }
+    }
     allFeedJobList {
       edges {
         node {
