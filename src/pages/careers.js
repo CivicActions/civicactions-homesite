@@ -30,8 +30,8 @@ import squareCircle from '../files/icons/square-circle.svg';
 import careersOgImage from '../../static/careers-og-image.png'
 
 const CareersPage = () => {
-  const data = useStaticQuery(query);
-  const job = data.allFeedJobList.edges;
+  const jazzData = useStaticQuery(jazzQuery);
+  const jazzJob = jazzData.allFeedJobList.edges;
 
   return (
     <RedLayout>
@@ -176,14 +176,14 @@ const CareersPage = () => {
             encourage people from underrepresented groups to apply.
           </p>
           <div className='jobs-grid'>
-            {!job.length && (
+            {!jazzJob.length && (
               <div className='no-job'>
                 <p className='body'>
                   No positions are currently open. Please check back again soon!
                 </p>
               </div>
             )}
-            {job.map(({ node }, index) => (
+            {jazzJob.map(({ node }, index) => (
               <div className='body job'>
                 <a href={node.link}>
                   <p>{node.title}</p>
@@ -296,7 +296,7 @@ const CareersPage = () => {
   );
 };
 
-export const query = graphql`
+export const jazzQuery = graphql`
   {
     allFeedJobList {
       edges {
