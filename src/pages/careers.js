@@ -29,10 +29,19 @@ import arrowIcon from '../files/icons/arrow-icon.svg';
 import squareCircle from '../files/icons/square-circle.svg';
 import careersOgImage from '../../static/careers-og-image.png'
 
-const CareersPage = () => {
+const CareersPage = ({ location }) => {
   const data = useStaticQuery(query);
   const jazzJob = data.allFeedJobList.edges;
   const greenhouseJob = data.allGreenhouseJob.edges;
+
+  // Pass source back to Greenhouse so we can track this.
+  const params = new URLSearchParams(location.search);
+  const greenhouseSource = params.get("gh_src");
+  const greenhouseLink = function(jobUrl, greenhouseSource) {
+    const url = new URL(jobUrl);
+    url.searchParams.append("gh_src", greenhouseSource);
+    return url
+  }
 
   return (
     <RedLayout>
@@ -186,7 +195,7 @@ const CareersPage = () => {
             )}
             {greenhouseJob.map(({ node }, index) => (
               <div className='body job'>
-                <a href={node.absolute_url}>
+                <a href={greenhouseLink(node.absolute_url, greenhouseSource)}>
                   <p>{node.title.replace("(Remote)", "").trim()}</p>
                   <img src={arrowIcon} alt='red right arrow icon'></img>
                 </a>
