@@ -58,7 +58,7 @@ const CareersPage = ({ location }) => {
             modern and accessible government services for all.
           </p>
           <LinkButton
-            src='/careers#open-positions'
+            src={'/careers' + (greenhouseSource ? '?gh_src=' + greenhouseSource : '') + '#open-positions'}
             text='See open positions'
           />
         </div>
