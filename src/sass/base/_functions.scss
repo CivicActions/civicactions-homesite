@@ -1,5 +1,7 @@
+@use 'sass:math';
+
 // Convert pixels to rems
 @function px-to-rem($size) {
-  $rem-size: $size / 16px;
+  $rem-size: math.div($size, 16px);
   @return $rem-size * 1rem;
 }

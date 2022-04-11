@@ -1,0 +1,130 @@
+// This is used to create a standalone CSS file for use with our external Greenhouse jobs pages.
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Work+Sans:wght@300;400;600;700&display=swap');
+@import 'base/base';
+
+/* stylelint-disable selector-max-id */
+@media(min-width: $medium-large-screen) {
+  // Roughly mimic our header on desktop.
+  // We skip this on smaller screens to avoid accidentally breaking the layout or
+  // form on mobile if Greenhouse markup or base styles change.
+  #wrapper,
+  #main,
+  #app_body {
+    // Ensure we can have a full-width header.
+    max-width: 100%;
+    margin: 0;
+    padding: 0 !important;
+  }
+
+  .logo-container {
+    box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3);
+    animation-name: scroll;
+    width: 100%;
+    padding: 45px;
+    top: 0;
+  }
+
+  // Match max-widths on other top level elements.
+  #logo,
+  #header,
+  #content,
+  #application {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  #header,
+  #content,
+  #application {
+    max-width: 725px;
+  }
+
+  #header {
+    margin-top: 30px;
+
+    #apply_button {
+      right: 20%;  // Not perfect, but this isn't in the same element as the header.
+      top: 35px;
+      align-items: center;
+      padding: 12px 24px !important;
+      display: inline-block;
+    }
+  }
+
+  #application {
+    padding: 30px;
+    margin-bottom: 150px; // Important so that footer doesn't hide submit button.
+
+    .heading {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 34px;
+      text-align: left;
+      font-family: $secondary-font;
+
+      @media screen and (min-width: $medium-screen) {
+        font-size: 28px;
+        line-height: 40px;
+      }
+
+      @media screen and (min-width: $large-screen) {
+        font-size: 36px;
+        line-height: 50px;
+      }
+    }
+
+    #disability_status_header {
+      padding-bottom: 15px;
+    }
+  }
+}
+
+// Styles that don't mess with layout and apply on all media.
+#apply_button,
+#submit_buttons input {
+  font-family: $secondary-font;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  // line-height: 34px !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  @media(min-width: $tablet-screen) {
+    font-size: 18px !important;
+    line-height: 34px !important;
+  }
+  background-color: $colors-red-50 !important;
+  border: 1px solid $colors-red-50 !important;
+  color: $colors-white !important;
+
+  &:hover,
+  &:focus {
+    background-color: $colors-red-60 !important;
+    color: $colors-white !important;
+    border-color: $colors-red-60 !important;
+  }
+
+  &:active {
+    background-color: #6f3331 !important;
+  }
+}
+
+#content,
+#application,
+.field label {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  @media(min-width: $medium-large-screen) {
+    font-size: 20px !important;
+    line-height: 34px !important;
+  }
+}
+
+.field label {
+  width: 200px !important;
+}
+/* stylelint-enable selector-max-id */
