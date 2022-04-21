@@ -53,30 +53,30 @@
   }
 
   #application {
-    padding: 30px;
-    margin-bottom: 150px; // Important so that footer doesn't hide submit button.
+    padding: 30px !important;
+    margin-bottom: 150px !important; // Important so that footer doesn't hide submit button.
 
     .heading {
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 34px;
-      text-align: left;
-      font-family: $secondary-font;
+      font-size: 24px !important;
+      font-style: normal !important;
+      font-weight: 300 !important;
+      line-height: 34px !important;
+      text-align: left !important;
+      font-family: $secondary-font !important;
 
       @media screen and (min-width: $medium-screen) {
-        font-size: 28px;
-        line-height: 40px;
+        font-size: 28px !important;
+        line-height: 40px !important;
       }
 
       @media screen and (min-width: $large-screen) {
-        font-size: 36px;
-        line-height: 50px;
+        font-size: 36px !important;
+        line-height: 50px !important;
       }
     }
 
     #disability_status_header {
-      padding-bottom: 15px;
+      padding-bottom: 15px !important;
     }
   }
 }
@@ -84,12 +84,11 @@
 // Styles that don't mess with layout and apply on all media.
 #apply_button,
 #submit_buttons input {
-  font-family: $secondary-font;
+  font-family: $secondary-font !important;
   font-style: normal !important;
   font-weight: 600 !important;
   font-size: 16px !important;
-  // line-height: 34px !important;
-  text-transform: uppercase;
+  text-transform: uppercase !important;
   text-decoration: none;
   @media(min-width: $tablet-screen) {
     font-size: 18px !important;
