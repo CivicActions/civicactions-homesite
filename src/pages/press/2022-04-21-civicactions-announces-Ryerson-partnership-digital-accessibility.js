@@ -5,7 +5,7 @@ import SEO from "../../components/seo";
 import Hero from '../../components/hero.js';
 import PrimaryPageCTA from "../../components/primary-page-cta";
 
-const VADITAPGRAD = () => {
+const RyersonCivicactionsPartnership = () => {
 
     return (
         <RedLayout>
@@ -47,4 +47,4 @@ const VADITAPGRAD = () => {
 
 
 
-export default VADITAPGRAD;
+export default RyersonCivicactionsPartnership;
