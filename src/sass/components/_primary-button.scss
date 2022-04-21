@@ -1,35 +1,4 @@
 .primary-button,
 .button__primary {
-  align-items: center;
-  padding: 12px 24px;
-  background-color: $colors-red-50;
-  border: 1px solid $colors-red-50;
-  color: $colors-white;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 34px;
-  display: inline-block;
-  font-family: $secondary-font;
-  text-transform: uppercase;
-  text-decoration: none;
-  @media(min-width: $tablet-screen) {
-    font-size: 18px;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: $colors-red-60;
-    color: $colors-white;
-    border-color: $colors-red-60;
-  }
-
-  &:active {
-    background-color: #6f3331;
-  }
-
-  &.large {
-    font-size: 18px;
-    margin-bottom: 50px;
-  }
+  @include primary-button;
 }

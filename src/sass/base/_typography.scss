@@ -5,14 +5,6 @@ $medium-screen: 600px !default;
 $medium-large-screen: 1000px !default;
 $large-screen: 1201px !default;
 
-// Mixins
-@mixin small-text {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
-}
-
 h1,
 h2,
 h3,
@@ -33,91 +25,33 @@ body,
   margin: 0;
 }
 
+
 h1,
 .h1 {
-  font-style: normal;
-  font-weight: 300;
-  line-height: 33.6px;
-
-  font-size: 24px;
-  @media(min-width: $tablet-screen) {
-    font-size: 36px;
-    line-height: 50.4px;
-  }
-  @media(min-width: $medium-large-screen) {
-    font-size: 48px;
-    line-height: 78px;
-  }
+  @include header1;
 }
 
 h2,
 %h2,
 .h2 {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 34px;
-  text-align: left;
-  font-family: $secondary-font;
-
-  @media screen and (min-width: $medium-screen) {
-    font-size: 28px;
-    line-height: 40px;
-  }
-
-  @media screen and (min-width: $large-screen) {
-    font-size: 36px;
-    line-height: 50px;
-  }
+  @include header2;
 }
 
 h3,
 %h3,
 .h3 {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 22px;
-
-  @media screen and (min-width: $medium-screen) {
-    font-size: 24px;
-    line-height: 33px;
-  }
-
-  @media screen and (min-width: $large-screen) {
-    font-size: 28px;
-    line-height: 33px;
-  }
+  @include header3;
 }
 
 h4,
 %h4,
 .h4 {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  @media screen and (min-width: $medium-screen) {
-    font-size: 20px;
-    line-height: 33px;
-  }
+  @include header4;
 }
 
 h5,
 .h5 {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 34px;
-
-  @media screen and (max-width: $large-screen) {
-    font-size: 20px;
-    line-height: 34px;
-  }
-
-  @media screen and (max-width: $small-screen) {
-    font-size: 18px;
-    line-height: 22px;
-  }
+  @include header5;
 }
 
 h6,
@@ -146,14 +80,7 @@ a {
 }
 
 .body {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
-  @media(min-width: $medium-large-screen) {
-    font-size: 20px;
-    line-height: 34px;
-  }
+  @include body;
 }
 
 .visually-hidden {

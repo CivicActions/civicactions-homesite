@@ -2,11 +2,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Work+Sans:wght@300;400;600;700&display=swap');
 @import 'base/base';
 
-/* stylelint-disable selector-max-id */
+/* stylelint-disable selector-max-id,selector-no-qualifying-type */
+
+// Styles that don't mess with layout and apply on all media.
+// We take care to use the same selectors as Greenhouse to avoid !important.
+#header #apply_button,
+.accessible #submit_app,
+.accessible #apply_button,
+#apply_button,
+#submit_buttons input {
+  @include primary-button;
+  line-height: inherit;
+  padding: 12px 20px;
+  @media(min-width: $tablet-screen) {
+    font-size: 18px;
+    line-height: 34px;
+    padding: 12px 24px;
+  }
+}
+
+.accessible #content,
+#content,
+#application,
+#application div.required-fields {
+  @include body;
+}
+
+#main_fields div.field label,
+#custom_fields div.field label,
+#demographic_questions div.field label,
+#eeoc_fields div.field label {
+  @include header4;
+}
+
+// Styles to adjust layout/header on desktop.
+// We avoid layout adjustments on smaller screens to avoid accidentally breaking the layout or
+// form on mobile if Greenhouse markup or base styles change.
 @media(min-width: $medium-large-screen) {
-  // Roughly mimic our header on desktop.
-  // We skip this on smaller screens to avoid accidentally breaking the layout or
-  // form on mobile if Greenhouse markup or base styles change.
   #wrapper,
   #main,
   #app_body {
@@ -29,7 +61,7 @@
   #header,
   #content,
   #application {
-    max-width: 1200px;
+    max-width: $max-width;
     margin: 0 auto;
     padding: 0;
   }
@@ -37,7 +69,7 @@
   #header,
   #content,
   #application {
-    max-width: 725px;
+    max-width: 720px;
   }
 
   #header {
@@ -53,77 +85,35 @@
   }
 
   #application {
-    padding: 30px !important;
-    margin-bottom: 150px !important; // Important so that footer doesn't hide submit button.
+    padding: 30px;
+    margin-bottom: 150px; // Important so that footer doesn't hide submit button.
 
     .heading {
-      font-size: 24px !important;
-      font-style: normal !important;
-      font-weight: 300 !important;
-      line-height: 34px !important;
-      text-align: left !important;
-      font-family: $secondary-font !important;
+      @include header2;
+    }
 
-      @media screen and (min-width: $medium-screen) {
-        font-size: 28px !important;
-        line-height: 40px !important;
-      }
-
-      @media screen and (min-width: $large-screen) {
-        font-size: 36px !important;
-        line-height: 50px !important;
-      }
+    #eeoc_title,
+    #disability_status_header {
+      @include header3;
     }
 
     #disability_status_header {
-      padding-bottom: 15px !important;
+      padding-bottom: 15px;
+      text-align: inherit;
+      text-decoration: inherit;
     }
+
   }
 }
 
-// Styles that don't mess with layout and apply on all media.
-#apply_button,
-#submit_buttons input {
-  font-family: $secondary-font !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 16px !important;
-  text-transform: uppercase !important;
-  text-decoration: none;
+#main_fields div.field label,
+#eeoc_fields div.field label {
   @media(min-width: $tablet-screen) {
-    font-size: 18px !important;
-    line-height: 34px !important;
+    width: 120px;
   }
-  background-color: $colors-red-50 !important;
-  border: 1px solid $colors-red-50 !important;
-  color: $colors-white !important;
-
-  &:hover,
-  &:focus {
-    background-color: $colors-red-60 !important;
-    color: $colors-white !important;
-    border-color: $colors-red-60 !important;
-  }
-
-  &:active {
-    background-color: #6f3331 !important;
-  }
-}
-
-#content,
-#application,
-.field label {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px !important;
-  line-height: 22px !important;
   @media(min-width: $medium-large-screen) {
-    font-size: 20px !important;
-    line-height: 34px !important;
+    width: 200px;
   }
 }
 
-.field label {
-  width: 200px !important;
-}
-/* stylelint-enable selector-max-id */
+/* stylelint-enable selector-max-id,selector-no-qualifying-type */
