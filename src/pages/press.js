@@ -19,8 +19,6 @@ const Press = () => {
       />
       <section className='temp-press-releases--main-section'>
         <div className='inner'>
-
-    <!-- Insert new press release items here -->
     
     <div className='press-release--items'>
            <h2 className='h4'>
