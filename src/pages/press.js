@@ -19,6 +19,24 @@ const Press = () => {
       />
       <section className='temp-press-releases--main-section'>
         <div className='inner'>
+
+    <!-- Insert new press release items here -->
+    
+    <div className='press-release--items'>
+           <h2 className='h4'>
+              Ryerson University partners with CivicActions to advance digital accessibility
+            </h2>
+            <span>News Release: April 22, 2022</span>
+            <p className='body'>
+              CivicActions is pleased to announce that The G. Raymond Chang School of Continuing Education (The Chang School) at Ryerson University has partnered with us to support its Digital Accessibility Specialist Microcredential Program. 
+            </p>
+            <p className='body'>
+              Full story:{' '}
+              <Link to='/press/2022-04-21-civicactions-announces-Ryerson-partnership-digital-accessibility'>
+                Ryerson University partners with CivicActions to advance digital accessibility
+              </Link>
+            </p>
+          </div>
     <div className='press-release--items'>
            <h2 className='h4'>
               CivicActions Named to 2022 GovTech 100 Top Government Technology Companies List
