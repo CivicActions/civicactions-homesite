@@ -20,7 +20,7 @@ const RyersonCivicactionsPartnership = () => {
                 <div className='inner'>
                     <div className='body'>
                     
-                      <span>Date: Thursday, April 22, 2022</span>
+                      <span>Date: Friday, April 22, 2022</span>
                         <p>CivicActions is pleased to announce that <a href="https://continuing.ryerson.ca/">The G. Raymond Chang School of Continuing Education (The Chang School) at Ryerson University</a> has partnered with us to support its Digital Accessibility Specialist Microcredential Program.</p>
                         <p>The program includes five micocedenitals that teach students how to identify and meet online accessibility requirements.</p>
                         <p>"The Chang School approached us to do this work because we have a strong reputation as a leader in digital accessibility — and we're incredibly proud of that," says Bill Ogilvie, CivicActions Vice President of Public Sector. "We're honored to have been invited to partner on this important work, and applaud the initiative." </p>
