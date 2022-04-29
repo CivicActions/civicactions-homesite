@@ -1,3 +1,12 @@
+exports.onPreBuild = () => {
+  // This writes a CSS file for use with our external Greenhouse jobs pages.
+  // A custom prebuild step is needed so that we get a fixed URL to point to.
+  const sass = require('sass');
+  var fs = require('fs'); 
+  const result = sass.renderSync({file: "src/sass/greenhouse.scss"});
+  fs.writeFileSync('static/greenhouse.css', result.css.toString());
+}
+
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `

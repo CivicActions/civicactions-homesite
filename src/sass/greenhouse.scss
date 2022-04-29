@@ -1,0 +1,119 @@
+// This is used to create a standalone CSS file for use with our external Greenhouse jobs pages.
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Work+Sans:wght@300;400;600;700&display=swap');
+@import 'base/base';
+
+/* stylelint-disable selector-max-id,selector-no-qualifying-type */
+
+// Styles that don't mess with layout and apply on all media.
+// We take care to use the same selectors as Greenhouse to avoid !important.
+#header #apply_button,
+.accessible #submit_app,
+.accessible #apply_button,
+#apply_button,
+#submit_buttons input {
+  @include primary-button;
+  line-height: inherit;
+  padding: 12px 20px;
+  @media(min-width: $tablet-screen) {
+    font-size: 18px;
+    line-height: 34px;
+    padding: 12px 24px;
+  }
+}
+
+.accessible #content,
+#content,
+#application,
+#application div.required-fields {
+  @include body;
+}
+
+#main_fields div.field label,
+#custom_fields div.field label,
+#demographic_questions div.field label,
+#eeoc_fields div.field label {
+  @include header4;
+}
+
+// Styles to adjust layout/header on desktop.
+// We avoid layout adjustments on smaller screens to avoid accidentally breaking the layout or
+// form on mobile if Greenhouse markup or base styles change.
+@media(min-width: $medium-large-screen) {
+  #wrapper,
+  #main,
+  #app_body {
+    // Ensure we can have a full-width header.
+    max-width: 100%;
+    margin: 0;
+    padding: 0 !important;
+  }
+
+  .logo-container {
+    box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3);
+    animation-name: scroll;
+    width: 100%;
+    padding: 45px;
+    top: 0;
+  }
+
+  // Match max-widths on other top level elements.
+  #logo,
+  #header,
+  #content,
+  #application {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  #header,
+  #content,
+  #application {
+    max-width: 720px;
+  }
+
+  #header {
+    margin-top: 30px;
+
+    #apply_button {
+      right: 20%;  // Not perfect, but this isn't in the same element as the header.
+      top: 35px;
+      align-items: center;
+      padding: 12px 24px !important;
+      display: inline-block;
+    }
+  }
+
+  #application {
+    padding: 30px;
+    margin-bottom: 150px; // Important so that footer doesn't hide submit button.
+
+    .heading {
+      @include header2;
+    }
+
+    #eeoc_title,
+    #disability_status_header {
+      @include header3;
+    }
+
+    #disability_status_header {
+      padding-bottom: 15px;
+      text-align: inherit;
+      text-decoration: inherit;
+    }
+
+  }
+}
+
+#main_fields div.field label,
+#eeoc_fields div.field label {
+  @media(min-width: $tablet-screen) {
+    width: 120px;
+  }
+  @media(min-width: $medium-large-screen) {
+    width: 200px;
+  }
+}
+
+/* stylelint-enable selector-max-id,selector-no-qualifying-type */

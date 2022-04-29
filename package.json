@@ -33,6 +33,7 @@
     "gatsby-plugin-sharp": "^3.4.2",
     "gatsby-plugin-sitemap": "^4.4.0",
     "gatsby-remark-autolink-headers": "^4.3.0",
+    "gatsby-source-greenhouse-job-board": "https://github.com/justinschuldt/gatsby-source-greenhouse-job-board.git#patch-1",
     "gatsby-source-rss-feed": "^1.0.4",
     "gatsby-transformer-sharp": "^3.4.0",
     "intersection-observer": "^0.12.0",

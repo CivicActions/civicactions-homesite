@@ -29,9 +29,21 @@ import arrowIcon from '../files/icons/arrow-icon.svg';
 import squareCircle from '../files/icons/square-circle.svg';
 import careersOgImage from '../../static/careers-og-image.png'
 
-const CareersPage = () => {
+const CareersPage = ({ location }) => {
   const data = useStaticQuery(query);
-  const job = data.allFeedJobList.edges;
+  const jazzJob = data.allFeedJobList.edges;
+  const greenhouseJob = data.allGreenhouseJob.edges;
+
+  // Pass source back to Greenhouse so we can track this.
+  const params = new URLSearchParams(location.search);
+  const greenhouseSource = params.get("gh_src");
+  const greenhouseLink = function(jobUrl, greenhouseSource) {
+    const url = new URL(jobUrl);
+    if (greenhouseSource !== null) {
+      url.searchParams.append("gh_src", greenhouseSource);
+    }
+    return url
+  }
 
   return (
     <RedLayout>
@@ -48,7 +60,7 @@ const CareersPage = () => {
             modern and accessible government services for all.
           </p>
           <LinkButton
-            src='/careers#open-positions'
+            src={'/careers' + (greenhouseSource ? '?gh_src=' + greenhouseSource : '') + '#open-positions'}
             text='See open positions'
           />
         </div>
@@ -176,17 +188,25 @@ const CareersPage = () => {
             encourage people from underrepresented groups to apply.
           </p>
           <div className='jobs-grid'>
-            {!job.length && (
+            {!jazzJob.length && !greenhouseJob.length && (
               <div className='no-job'>
                 <p className='body'>
                   No positions are currently open. Please check back again soon!
                 </p>
               </div>
             )}
-            {job.map(({ node }, index) => (
+            {greenhouseJob.map(({ node }, index) => (
+              <div className='body job'>
+                <a href={greenhouseLink(node.absolute_url, greenhouseSource)}>
+                  <p>{node.title.replace("(Remote)", "").trim()}</p>
+                  <img src={arrowIcon} alt='red right arrow icon'></img>
+                </a>
+              </div>
+            ))}
+            {jazzJob.map(({ node }, index) => (
               <div className='body job'>
                 <a href={node.link}>
-                  <p>{node.title}</p>
+                  <p>{node.title.replace("(Remote)", "").trim()}</p>
                   <img src={arrowIcon} alt='red right arrow icon'></img>
                 </a>
               </div>
@@ -298,6 +318,14 @@ const CareersPage = () => {
 
 export const query = graphql`
   {
+    allGreenhouseJob {
+      edges {
+        node {
+          title
+          absolute_url
+        }
+      }
+    }
     allFeedJobList {
       edges {
         node {

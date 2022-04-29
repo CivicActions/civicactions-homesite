@@ -1,4 +1,101 @@
 //====== Typography ===========
+@mixin small-text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin body {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  @media(min-width: $medium-large-screen) {
+    font-size: 20px;
+    line-height: 34px;
+  }
+}
+
+@mixin header1 {
+  font-style: normal;
+  font-weight: 300;
+  line-height: 33.6px;
+
+  font-size: 24px;
+  @media(min-width: $tablet-screen) {
+    font-size: 36px;
+    line-height: 50.4px;
+  }
+  @media(min-width: $medium-large-screen) {
+    font-size: 48px;
+    line-height: 78px;
+  }
+}
+
+@mixin header2 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 34px;
+  text-align: left;
+  font-family: $secondary-font;
+
+  @media screen and (min-width: $medium-screen) {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  @media screen and (min-width: $large-screen) {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+@mixin header3 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+
+  @media screen and (min-width: $medium-screen) {
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  @media screen and (min-width: $large-screen) {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+@mixin header4 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  @media screen and (min-width: $medium-screen) {
+    font-size: 20px;
+    line-height: 33px;
+  }
+}
+
+@mixin header5 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 34px;
+
+  @media screen and (max-width: $large-screen) {
+    font-size: 20px;
+    line-height: 34px;
+  }
+
+  @media screen and (max-width: $small-screen) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
 @mixin header6 {
   font-style: normal;
   font-weight: 600;
@@ -37,5 +134,41 @@
   @media(min-width: $large-screen) {
     margin: 0 auto;
     //padding: px-to-rem(80px) 48px;
+  }
+}
+
+// Button
+@mixin primary-button {
+  align-items: center;
+  padding: 12px 24px;
+  background-color: $colors-red-50;
+  border: 1px solid $colors-red-50;
+  color: $colors-white;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 34px;
+  display: inline-block;
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  text-decoration: none;
+  @media(min-width: $tablet-screen) {
+    font-size: 18px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $colors-red-60;
+    color: $colors-white;
+    border-color: $colors-red-60;
+  }
+
+  &:active {
+    background-color: #6f3331;
+  }
+
+  &.large {
+    font-size: 18px;
+    margin-bottom: 50px;
   }
 }
