@@ -39,7 +39,9 @@ const CareersPage = ({ location }) => {
   const greenhouseSource = params.get("gh_src");
   const greenhouseLink = function(jobUrl, greenhouseSource) {
     const url = new URL(jobUrl);
-    url.searchParams.append("gh_src", greenhouseSource);
+    if (greenhouseSource !== null) {
+      url.searchParams.append("gh_src", greenhouseSource);
+    }
     return url
   }
 
