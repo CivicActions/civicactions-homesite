@@ -154,7 +154,7 @@ const HomePage = () => {
             <h2>Resilient agencies. Accessible services. Happier people.</h2>
             <p className='body-large'>
               Working for the greater good is in our DNA. From healthcare to
-              welfare to education and beyond, we partner with agencies to solve
+              science to education and beyond, we partner with agencies to solve
               hard problems and improve outcomes for government and the public.
             </p>
             <div className='teasers'>
