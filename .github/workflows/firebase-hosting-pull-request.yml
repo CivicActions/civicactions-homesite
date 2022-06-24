@@ -41,11 +41,12 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
+            console.log(needs.deploy.outputs);
             const fs = require("fs");
             const pages = fs.readFileSync('pages.txt', 'utf-8');
             const urls = [];
             pages.split(/\r?\n/).forEach(page =>  {
-              urls.push(${{ needs.deploy.outputs.details_url }} + page);
+              urls.push(`${{ needs.deploy.outputs.details_url }}${page}`);
             });
             console.log(urls);
             core.setOutput('urls', urls);
