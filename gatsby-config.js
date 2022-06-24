@@ -47,11 +47,21 @@ module.exports = {
     `gatsby-plugin-client-side-redirect`,
     `gatsby-remark-autolink-headers`,
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: 'gatsby-plugin-webfonts',
       options: {
-        fonts: [`Nunito\:300,400,600,700`, `Work Sans\:300,400,600,700`],
-        display: 'swap',
-      },
+          fonts: {
+              google: [
+                  {
+                      family: 'Nunito',
+                      variants: ['300', '400', '600', '700']
+                  },
+                  {
+                      family: 'Work Sans',
+                      variants: ['300', '400', '600', '700']
+                  },
+              ]
+          }
+      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
