@@ -1,0 +1,3 @@
+ci:
+  assert:
+    preset: lighthouse:recommended
