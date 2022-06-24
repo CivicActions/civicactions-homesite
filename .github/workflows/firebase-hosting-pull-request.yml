@@ -53,7 +53,6 @@ jobs:
         uses: treosh/lighthouse-ci-action@v8
         with:
           temporaryPublicStorage: true
-          budgetPath: ./.lighthouse-budget.json
           configPath: ./.lighthouserc.yml
           urls: |
             ${{ steps.urls.outputs.urls }}

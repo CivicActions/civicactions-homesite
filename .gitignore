@@ -6,3 +6,6 @@ public
 .env
 .env.*
 *.logpages.txt
+.lighthouseci
+pages.txt
+static/greenhouse.css
