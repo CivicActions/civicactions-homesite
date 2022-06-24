@@ -45,7 +45,13 @@ jobs:
             const pages = fs.readFileSync('pages.txt', 'utf-8');
             const urls = [];
             pages.split(/\r?\n/).forEach(page =>  {
-              urls.push(`${{ needs.deploy.outputs.details_url }}${page}`);
+              urls.push(`${{ steps.deploy.outputs.details_url }}${page}`);
             });
             console.log(urls);
             core.setOutput('urls', urls);
+      - name: Lighthouse CI Action
+        id: lighthouse
+        uses: treosh/lighthouse-ci-action@v8
+        with:
+          urls: |
+            ${{ steps.urls.outputs.urls }}
