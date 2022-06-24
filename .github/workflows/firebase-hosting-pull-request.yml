@@ -47,8 +47,7 @@ jobs:
             pages.split(/\r?\n/).forEach(page =>  {
               urls.push(`${{ steps.deploy.outputs.details_url }}${page}`);
             });
-            console.log(urls);
-            core.setOutput('urls', urls);
+            core.setOutput('urls', urls.join('\n'));
       - name: Lighthouse CI Action
         id: lighthouse
         uses: treosh/lighthouse-ci-action@v8
