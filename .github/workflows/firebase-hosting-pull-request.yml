@@ -31,7 +31,22 @@ jobs:
           STRAPI_API_URL: '${{ secrets.STRAPI_API_URL }}'
           STRAPI_TOKEN: '${{ secrets.STRAPI_TOKEN }}'
       - uses: FirebaseExtended/action-hosting-deploy@v0
+        id: deploy
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CA_IT_PROD_HOME_5918 }}'
           projectId: ca-it-prod-home-5918
+      - name: Generate URLs
+        id: urls
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const path = require("path");
+            const fs = require("fs");
+            const pages = fs.readFileSync(path.resolve(__dirname, "pages.txt"), 'utf-8');
+            const urls = [];
+            pages.split(/\r?\n/).forEach(page =>  {
+              urls.push(${{ needs.deploy.outputs.details_url }} + page);
+            });
+            console.log(urls);
+            core.setOutput('urls', urls);
