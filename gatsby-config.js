@@ -35,13 +35,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-rss-feed`,
-      options: {
-        url: `https://app.jazz.co/feeds/rss/jobs/civicactions`,
-        name: `JobList`,
-      },
-    },
-    {
       // This is pointing at a branch which adjusts dependencies to work with Gatsby 3+
       // Once merged (or if a stable fork emerges) we can replace
       // https://github.com/kevinbarnett/gatsby-source-greenhouse-job-board
