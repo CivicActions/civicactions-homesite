@@ -35,9 +35,6 @@ module.exports = {
       },
     },
     {
-      // This is pointing at a branch which adjusts dependencies to work with Gatsby 3+
-      // Once merged (or if a stable fork emerges) we can replace
-      // https://github.com/kevinbarnett/gatsby-source-greenhouse-job-board
       resolve: 'gatsby-source-greenhouse-job-board',
       options: {
         boardToken: 'civicactions'
