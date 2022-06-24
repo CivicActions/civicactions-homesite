@@ -1005,9 +1005,9 @@
     regenerator-runtime "^0.13.4"
 
 "@babel/runtime@^7.0.0":
-  version "7.17.9"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.9.tgz#d19fbf802d01a8cb6cf053a64e472d42c434ba72"
-  integrity sha512-lSiBBvodq29uShpWGNbgFdKYNiFDo5/HIYsaCEY9ff4sb10x9jizo2+pRrSyF4jKZCXqgzuqBOQKbUm90gQwJg==
+  version "7.18.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.3.tgz#c7b654b57f6f63cf7f8b418ac9ca04408c4579f4"
+  integrity sha512-38Y8f7YUhce/K7RMwTp7m0uCumpv9hZkitCbBClqQIow1qSbCvGkcegKOXpEWCQLfWmevgRiWokZ1GkpfhbZug==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -6152,9 +6152,10 @@ gatsby-source-filesystem@^1.5.39:
     slash "^1.0.0"
     valid-url "^1.0.9"
 
-"gatsby-source-greenhouse-job-board@https://github.com/justinschuldt/gatsby-source-greenhouse-job-board.git#patch-1":
-  version "1.0.3"
-  resolved "https://github.com/justinschuldt/gatsby-source-greenhouse-job-board.git#263c7d50427647e3b12a6a8a02b43eb283340f5b"
+gatsby-source-greenhouse-job-board@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-source-greenhouse-job-board/-/gatsby-source-greenhouse-job-board-1.0.4.tgz#1627693c06676260a8d081682019028c616ad771"
+  integrity sha512-wXDYTlQMMQvPVCscyYKF7zfPqxiaRHqq/64ZfgjkncTzAPSqM0D1TiW1ra4OOrvvbDajm3iJ6fW9NUnlwJ0Yag==
   dependencies:
     "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
