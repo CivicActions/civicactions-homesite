@@ -28,12 +28,12 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
-    {
-      resolve: `@danbruegge/gatsby-plugin-stylelint`,
-      options: {
-        files: [`src/**/*.(s(c|a)ss|css)`],
-      },
-    },
+    // {
+    //   resolve: `@danbruegge/gatsby-plugin-stylelint`,
+    //   options: {
+    //     files: [`src/**/*.(s(c|a)ss|css)`],
+    //   },
+    // },
     {
       resolve: 'gatsby-source-greenhouse-job-board',
       options: {
@@ -73,7 +73,7 @@ module.exports = {
       options: {
         apiURL: `https://civicactions-content.civicactions-content.app.civicactions.net`,
         queryLimit: 1000,
-        contentTypes: [
+        collectionTypes: [
           `case-study`,
           `offering`,
           `press`,
