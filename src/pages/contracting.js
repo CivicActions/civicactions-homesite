@@ -27,7 +27,7 @@ const ContractingPage = () => {
         <div className='inner'>
           <h1>Your strategic partner for modernizing government services</h1>
           <p className='body'>
-            We apply Agile and DevOps, open source software, and human-centered design to elevate digital platforms for organizations serving the public. As an <strong>innovative small business</strong>, we solve long-standing modernization challenges by creating automated compliance models for system security plans and bringing <strong>accessibility to the forefront</strong> of design and development. Let’s work together to make government services that <strong>build public trust.</strong>
+            We apply Agile and DevOps, open source software, and human centered design to elevate digital platforms for organizations serving the public. As an <strong>innovative small business</strong>, we solve long-standing modernization challenges by creating automated compliance models for system security plans and bringing <strong>accessibility to the forefront</strong> of design and development. Let’s work together to make government services that <strong>build public trust.</strong>
           </p>
         </div>
 
