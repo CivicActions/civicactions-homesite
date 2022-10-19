@@ -7,7 +7,7 @@ const FooterMenu = () => (
       CivicActions footer menu</h2>
     <nav aria-labelledby="footer--menu" className="footer__menu">
       <ul className="footer__menu--list">
-        <li><Link to='/about'>About</Link></li>
+        {/*<li><Link to='/about'>About</Link></li>*/}
         <li><Link to='/team'>Team</Link></li>
         <li><Link to='/press'>Press</Link></li>
         <li><Link to='/services'>Services</Link></li>
