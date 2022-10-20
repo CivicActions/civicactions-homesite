@@ -91,7 +91,7 @@ module.exports = {
         name: `CivicActions`,
         short_name: `CA`,
         start_url: `/`,
-        icon: 'src/favicon-32x32.png',
+        icon: 'src/favicon.svg',
       },
     },
   ],
