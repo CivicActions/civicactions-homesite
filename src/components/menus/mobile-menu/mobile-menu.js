@@ -49,7 +49,13 @@ const MobileMenu = (props) => {
             Services
           </button>
           <ul>
-            <li><Link to="/ditap">DITAP</Link></li>
+            <li><Link to="/services#web-cms">Web and CMS</Link></li>
+            <li><Link to="/services#service-modernization">IT Modernization</Link></li>
+            <li><Link to="/services#product-design">Product and Design</Link></li>
+            <li><Link to="/services#security-compliance">Security and Compliance</Link></li>
+            <li><Link to="/services#data-services">Data Services</Link></li>
+            <li><Link to="/services#workforce-development">Workforce Development</Link></li>
+            <li><Link to="/services/ditap">DITAP</Link></li>
           </ul>
         </li>
 
