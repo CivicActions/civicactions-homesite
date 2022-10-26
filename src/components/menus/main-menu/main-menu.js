@@ -46,7 +46,6 @@ const MainMenu = ({ redHeader }) => {
             <li><Link to="/press">Press</Link></li>
           </ul>
         </li>
-        <li className='menu--list__item'><Link to='/services'>Services</Link></li>
         <li
           className='menu--list__item'
           ref={(e) => (headingsRef.current[1] = e)}>
@@ -56,10 +55,24 @@ const MainMenu = ({ redHeader }) => {
             tabIndex={0}
             onClick={() => onCollapseClick(1)}
           >
+            Services
+          </button>
+          <ul>
+            <li><Link to="/ditap">DITAP</Link></li>
+          </ul>
+        </li>
+        <li
+          className='menu--list__item'
+          ref={(e) => (headingsRef.current[2] = e)}>
+          <button
+            className="heading"
+            onKeyDown={() => { }}
+            tabIndex={0}
+            onClick={() => onCollapseClick(2)}
+          >
             Our Work
           </button>
           <ul>
-            {/*<li><Link to="/">About</Link></li>*/}
             <li><Link to="/case-studies">Case Studies</Link></li>
             <li><Link to="/contracting">Contracting</Link></li>
           </ul>
