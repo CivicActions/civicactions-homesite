@@ -80,6 +80,14 @@
     right: 30px;
     top:7px;
   }
+  .menu--list__item {
+    &.expanded {
+      > ul {
+        top: 5rem;
+      }
+    }
+  }
+
 }
 
 html {
