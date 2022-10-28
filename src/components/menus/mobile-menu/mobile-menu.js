@@ -38,19 +38,34 @@ const MobileMenu = (props) => {
           </ul>
         </li>
 
-        <li className='mmenu--list__item'>
-          <Link className="menu-item" to="/services">
-            Services
-          </Link>
-        </li>
-
         <li className='mmenu--list__item'
-          ref={(e) => (headingsRef.current[1] = e)}>
+            ref={(e) => (headingsRef.current[1] = e)}>
           <button
             className="heading"
             onKeyDown={() => { }}
             tabIndex={0}
             onClick={() => onCollapseClick(1)}
+          >
+            Services
+          </button>
+          <ul>
+            <li><Link to="/services#web-cms">Web & CMS</Link></li>
+            <li><Link to="/services#service-modernization">IT Modernization</Link></li>
+            <li><Link to="/services#product-design">Product & Design</Link></li>
+            <li><Link to="/services#security-compliance">Security & Compliance</Link></li>
+            <li><Link to="/services#data-services">Data Services</Link></li>
+            <li><Link to="/services#workforce-development">Workforce Development</Link></li>
+            <li><Link to="/services/ditap">DITAP</Link></li>
+          </ul>
+        </li>
+
+        <li className='mmenu--list__item'
+          ref={(e) => (headingsRef.current[2] = e)}>
+          <button
+            className="heading"
+            onKeyDown={() => { }}
+            tabIndex={0}
+            onClick={() => onCollapseClick(2)}
           >
             Our Work
           </button>
