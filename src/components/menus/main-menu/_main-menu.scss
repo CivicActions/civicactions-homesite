@@ -10,21 +10,57 @@
 
     .menu--list {
       display: flex;
-      align-items: center;
+      margin-top: 0;
     }
   }
-
+  .menu--list__item:last-child {
+    padding-top: 0 !important;
+  }
   .menu--list__item {
     margin-left: px-to-rem(44px);
     position: relative;
+    padding-top: 1.5rem;
 
+    &:last-child {
+      > a{
+        padding-top: 12px;
+      }
+    }
+    &:hover,
+    &:focus,
+    &:focus-within {
+      button {
+        &::after {
+          transform:rotate(0deg);
+          vertical-align: middle;
+        }
+      }
+      > ul {
+        background-color: $colors-white;
+        margin-top: px-to-rem(14px);
+        visibility: visible;
+        box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
+
+        // Text color in the red header should remain black
+        a {
+          color: $colors-grey-90;
+        }
+      }
+
+    }
     > ul {
-      display: none;
+      visibility: hidden;
+      position: absolute;
+      top: 3rem;
+      min-width: px-to-rem(137px);
+      padding: px-to-rem(24px);
+      white-space: nowrap;
     }
 
     // Style dropdown buttons
     button {
       display: block;
+
 
       &::after {
         background-image: url('../files/icons/menu-dropdown.svg');
@@ -45,21 +81,24 @@
     }
 
     // Open submenu in expanded menu items
-    &.expanded {
+    //&.expanded {
       > ul {
-        background-color: $colors-white;
-        display: block;
-        position: fixed;
-        top: 10rem;
-        margin-top: px-to-rem(14px);
-        min-width: px-to-rem(137px);
-        padding: px-to-rem(24px);
-        box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
+        &:hover,
+        &:focus,
+        &:focus-within {
+          background-color: $colors-white;
+          visibility: visible;
+          margin-top: px-to-rem(14px);
+          min-width: px-to-rem(137px);
+          padding: px-to-rem(24px);
+          box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
 
-        // Text color in the red header should remain black
-        a {
-          color: $colors-grey-90;
+          // Text color in the red header should remain black
+          a {
+            color: $colors-grey-90;
+          }
         }
+
       }
 
       // Rotate the dropdown icon
@@ -69,7 +108,7 @@
           vertical-align: text-top;
         }
       }
-    }
+    //}
   }
 
   a,
@@ -86,6 +125,7 @@
     line-height: 34px;
     font-family: $secondary-font;
 
+
   }
 
   a {
@@ -96,6 +136,13 @@
   }
 }
 .red-header {
+  .menu--list__item {
+    padding-top: 0;
+    > button,
+    > a {
+      padding-top: 1.5rem;
+    }
+  }
   .primary-button {
     &:hover,
     &:focus {
