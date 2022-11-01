@@ -14,7 +14,7 @@ const FooterMenu = () => (
         <li><Link to='/case-studies'>Case Studies</Link></li>
         <li><Link to='/contracting'>Contracting</Link></li>
         <li><Link to='/contact'>Contact</Link></li>
-        <li><a href='https://medium.com/civicactions'>Insights</a></li>
+        <li><a href='https://medium.com/civicactions' className='external-link'>Insights</a></li>
         <li><Link to='/careers'>Careers</Link></li>
       </ul>
     </nav>

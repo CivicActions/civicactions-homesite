@@ -5,6 +5,7 @@ import RedLayout from '../layouts/red';
 import Hero from '../components/hero';
 import SEO from '../components/seo';
 import PrimaryPageCTA from "../components/primary-page-cta";
+import ExternalLink from "../files/icons/icon-external-link.svg";
 
 const Press = () => {
   return (
@@ -151,7 +152,8 @@ const Press = () => {
             </p>
             <p className='body'>
               Full story:{' '}
-              <a href='https://fcw.com/articles/2021/03/22/comment-lazzeri-ato-asap.aspx'>
+              <a href='https://fcw.com/articles/2021/03/22/comment-lazzeri-ato-asap.aspx'
+                 className='external-link'>
                 ATO ASAP: Streamlining government security with a Federal
                 Compliance Library
               </a>
@@ -170,7 +172,8 @@ const Press = () => {
             </p>
             <p className='body'>
               Full story:{' '}
-              <a href='https://fcw.com/articles/2021/02/04/comment-lazzeri-automate-ato.aspx'>
+              <a href='https://fcw.com/articles/2021/02/04/comment-lazzeri-automate-ato.aspx'
+                 className='external-link'>
                 ATO ASAP: Let’s finally fix the security compliance problem
               </a>
             </p>
@@ -189,7 +192,8 @@ const Press = () => {
             </p>
             <p className='body'>
               Full story:{' '}
-              <a href='https://www.govtech.com/100/2021/'>
+              <a href='https://www.govtech.com/100/2021/'
+                 className='external-link'>
                 2021 GovTech 100 List
               </a>
             </p>
