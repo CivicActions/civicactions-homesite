@@ -98,7 +98,7 @@ const ServicesPage = ({ data }) => {
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
                   <li>
-                    <Link to='https://accessibility.civicactions.com/posts/heart-accessibility '>Accessibility consulting and training</Link>
+                    <a className='external-link' href='https://accessibility.civicactions.com/posts/heart-accessibility '>Accessibility consulting and training</a>
                   </li>
                   <li>
                     Research and discovery
@@ -142,9 +142,9 @@ const ServicesPage = ({ data }) => {
               <div className='body'>
                 California Child Welfare Digital Services
               </div>
-              <Link to='https://cwds.ca.gov/ ' className='body-large'>
+              <a href='https://cwds.ca.gov/ ' className='external-link body-large'>
                 Provided DevOps support for child welfare systems
-              </Link>
+              </a>
               <div className='body'>
                 New York Metropolitan Transit Authority
               </div>
@@ -245,9 +245,9 @@ const ServicesPage = ({ data }) => {
               <div className='body'>
                 Various agencies
               </div>
-              <Link to='https://www.youtube.com/watch?v=jsdUYUiKM3U&list=PLbbanFptQWaKZp8_IFnZmJbsa2UGuj3ax&index=6' className='body-large'>
+              <a href='https://www.youtube.com/watch?v=jsdUYUiKM3U&list=PLbbanFptQWaKZp8_IFnZmJbsa2UGuj3ax&index=6' className='external-link body-large'>
                 Helping government automate federal compliance
-              </Link>
+              </a>
 
               <div className='cta'>
                 <h3 className='h4'>How we can help you</h3>
@@ -331,14 +331,14 @@ const ServicesPage = ({ data }) => {
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
               <div className='body'>Federal Acquisitions Institute</div>
-              <a href='https://medium.com/civicactions/what-we-learned-from-training-procurement-officers-to-buy-modern-government-it-cc6309df4103' className='body-large'>
+              <a href='https://medium.com/civicactions/what-we-learned-from-training-procurement-officers-to-buy-modern-government-it-cc6309df4103' className='external-link body-large'>
                 DITAP program certification for federal procurement officers
               </a>
               <div className='cta'>
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
                   <li><Link to='/services/ditap'>DITAP program certification</Link></li>
-                  <li><a href='https://distributedgov.com/'>Telework consulting and training</a></li>
+                  <li><a className='external-link' href='https://distributedgov.com/'>Telework consulting and training</a></li>
                   <li>Agile and Human-Centered Design coaching</li>
                   <li>Team culture and performance coaching</li>
                   <li>Technology strategy consulting</li>
