@@ -85,7 +85,7 @@ const CareersPage = ({ location }) => {
                 us to care for ourselves and each other.
               </p>
               <p className='body'>
-                <Link to='https://medium.com/civicactions/improving-scrum-team-flow-on-digital-service-projects-6723d95eaad8'>Learn about how we bring our humanity to work</Link>
+                <a className='external-link' href='https://medium.com/civicactions/improving-scrum-team-flow-on-digital-service-projects-6723d95eaad8'>Learn about how we bring our humanity to work</a>
               </p>
             </div>
             <div className='right-aligned'>
@@ -108,7 +108,7 @@ const CareersPage = ({ location }) => {
                 people who want to make a difference.
               </p>
               <p className='body'>
-                <Link to='https://medium.com/civicactions/we-hire-people-not-resumes-and-other-quirks-to-the-civicactions-application-process-7aab30d69c1c'>Learn about our unique hiring process</Link>
+                <a className='external-link' href='https://medium.com/civicactions/we-hire-people-not-resumes-and-other-quirks-to-the-civicactions-application-process-7aab30d69c1c'>Learn about our unique hiring process</a>
               </p>
             </div>
           </div>
