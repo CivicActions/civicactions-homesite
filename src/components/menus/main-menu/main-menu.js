@@ -9,12 +9,12 @@ const MainMenu = ({ redHeader }) => {
       <ul className="menu--list">
         <li
           className='menu--list__item'>
-          <button
+          <span
             className="heading"
             tabIndex={0}
           >
             Company
-          </button>
+          </span>
           <ul>
             {/*<li><Link to="/">About</Link></li>*/}
             <li><Link to="/team">Team</Link></li>
@@ -23,12 +23,12 @@ const MainMenu = ({ redHeader }) => {
         </li>
         <li
           className='menu--list__item'>
-          <button
+          <span
             className="heading"
             tabIndex={0}
           >
             Services
-          </button>
+          </span>
           <ul>
             <li><Link to="/services#web-cms">Web & CMS</Link></li>
             <li><Link to="/services#service-modernization">IT Modernization</Link></li>
@@ -41,12 +41,12 @@ const MainMenu = ({ redHeader }) => {
         </li>
         <li
           className='menu--list__item'>
-          <button
+          <span
             className="heading"
             tabIndex={0}
           >
             Our Work
-          </button>
+          </span>
           <ul>
             <li><Link to="/case-studies">Case Studies</Link></li>
             <li><Link to="/contracting">Contracting</Link></li>
