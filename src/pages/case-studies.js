@@ -102,7 +102,6 @@ const CaseStudyPage = () => {
       cases = caseStudies.filter((caseStudy) => {
         for(var i = 0; i < caseStudy.Service_Category.length; i++) {
           let category = caseStudy.Service_Category[i].Category;
-          console.log(category);
           for (let filter of filterState) {
             if (category === filter) {
               return true;
