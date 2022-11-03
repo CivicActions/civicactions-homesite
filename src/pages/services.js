@@ -142,7 +142,7 @@ const ServicesPage = ({ data }) => {
               <div className='body'>
                 California Child Welfare Digital Services
               </div>
-              <a href='https://cwds.ca.gov/ ' className='external-link body-large'>
+              <a href='https://cwds.ca.gov/' className='external-link body-large'>
                 Provided DevOps support for child welfare systems
               </a>
               <div className='body'>
