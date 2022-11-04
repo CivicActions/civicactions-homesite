@@ -75,7 +75,9 @@
 
     max-width: 216px;
   }
-
+  span {
+    color: $colors-black !important;
+  }
   .bm-burger-button {
     right: 30px;
     top:7px;
