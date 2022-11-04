@@ -45,9 +45,9 @@ const Press = () => {
             </p>
             <p className='body'>
               Full story:{' '}
-              <Link to='https://www.govtech.com/100/2022'>
+              <a className='external-link' href='https://www.govtech.com/100/2022'>
                  2022 GovTech 100 List
-              </Link>
+              </a>
             </p>
           </div>
         <div className='press-release--items'>

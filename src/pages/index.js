@@ -24,6 +24,7 @@ import webCmsIcon from '../files/icons/web-cms-icon.svg';
 import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 import arrowIcon from '../files/icons/arrow-icon.svg';
 import { graphql, useStaticQuery } from "gatsby";
+import ExternalLinkButton from "../components/external-link-button";
 
 const HomePage = () => {
   const fadersRef = useRef([]);
@@ -243,7 +244,7 @@ const HomePage = () => {
 
             </div>
           </div>
-          <LinkButton src='https://medium.com/civicactions' type='primary' text='Explore posts and videos' />
+          <ExternalLinkButton src='https://medium.com/civicactions' type='primary' text='Explore posts and videos' />
         </div>
       </section>
       {/* ======== Team Section ========== */}
