@@ -105,7 +105,7 @@ const ContractingPage = () => {
             <ul className='body'>
               <li>
                 Founding members of{' '}
-                <a href='https://digitalservicescoalition.org/#/'>
+                <a href='https://digitalservicescoalition.org/#/' className='external-link-white'>
                   Digital Services Coalition
                 </a>
               </li>
@@ -122,22 +122,22 @@ const ContractingPage = () => {
               <li>U.S. Digital Service (USDS) alumni team members</li>
               <li>
                 Co-maintainers of U.S. Web Design System (USWDS){' '}
-                <a href='https://www.drupal.org/project/uswds'>
+                <a href='https://www.drupal.org/project/uswds' className='external-link-white'>
                   base theme in Drupal
                 </a>
               </li>
               <li>
                 Founders of{' '}
-                <a href='https://www.agilegovleaders.org/'>AGL Association</a>{' '}
+                <a href='https://www.agilegovleaders.org/' className='external-link-white'>AGL Association</a>{' '}
                 to support government innovators
               </li>
               <li>
                 Core maintainers of the open source open data platform{' '}
-                <a href='https://getdkan.org/'>DKAN</a>
+                <a href='https://getdkan.org/' className='external-link'>DKAN</a>
               </li>
               <li>
                 Named to{' '}
-                <a href='https://www.govtech.com/100/2021'>GovTech 100</a> list
+                <a href='https://www.govtech.com/100/2021' className='external-link-white'>GovTech 100</a> list
                 five years in a row, 2017 - 2021
               </li>
             </ul>
@@ -169,6 +169,7 @@ const ContractingPage = () => {
                 client='DistributedGov'
                 title='Remote / telework training and consulting'
                 link='https://distributedgov.com/news/distributedgov-launches'
+                classname='external-link'
               />
               <WorkAwards
                 client='U.S. Digital Service / Office of Federal Procurement Policy'

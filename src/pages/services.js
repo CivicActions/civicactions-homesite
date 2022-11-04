@@ -331,14 +331,14 @@ const ServicesPage = ({ data }) => {
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
               <div className='body'>Federal Acquisitions Institute</div>
-              <a href='https://medium.com/civicactions/what-we-learned-from-training-procurement-officers-to-buy-modern-government-it-cc6309df4103' className='external-link body-large'>
+              <a href='https://medium.com/civicactions/what-we-learned-from-training-procurement-officers-to-buy-modern-government-it-cc6309df4103' className='body-large external-link'>
                 DITAP program certification for federal procurement officers
               </a>
               <div className='cta'>
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
                   <li><Link to='/services/ditap'>DITAP program certification</Link></li>
-                  <li><a className='external-link' href='https://distributedgov.com/'>Telework consulting and training</a></li>
+                  <li><a href='https://distributedgov.com/' className='external-link'>Telework consulting and training</a></li>
                   <li>Agile and Human-Centered Design coaching</li>
                   <li>Team culture and performance coaching</li>
                   <li>Technology strategy consulting</li>
