@@ -202,6 +202,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const caseStudies = result.data.caseStudies.edges;
   const CaseStudyTemplate = require.resolve('./src/templates/case-study.js');
+  console.log()
   caseStudies.forEach((caseStudy, index) => {
     createPage({
       path: `${caseStudy.node.Path}`,
@@ -275,6 +276,7 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 };
+
 exports.sourceNodes = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
