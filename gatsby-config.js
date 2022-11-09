@@ -15,7 +15,6 @@ module.exports = {
   },
   pathPrefix: `/civicactions-homesite`,
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
@@ -69,11 +68,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `https://civicactions-content.civicactions-content.app.civicactions.net`,
         queryLimit: 1000,
-        contentTypes: [
+        collectionTypes: [
           `case-study`,
           `offering`,
           `press`,
