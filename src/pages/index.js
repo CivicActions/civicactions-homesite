@@ -58,7 +58,7 @@ const HomePage = () => {
           Service_Category {
             Category
           }
-          Featured
+          Promoted_to_Homepage
           Summary
           id
         }

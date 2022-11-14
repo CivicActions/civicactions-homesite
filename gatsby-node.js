@@ -21,12 +21,16 @@ exports.createSchemaCustomization = ({ actions }) => {
     type RelatedStudies {
       Path: String
       Title: String
-      Cover_Image : File
+      Cover_Image: File
     }
     type File {
       url: String,
       alternativeText: String,
       caption: String
+    }
+    type FeedJobLists implements Node {
+      title: String,
+      link: String
     }
   `
   createTypes(typeDefs);
@@ -198,7 +202,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const caseStudies = result.data.caseStudies.edges;
   const CaseStudyTemplate = require.resolve('./src/templates/case-study.js');
-  console.log()
   caseStudies.forEach((caseStudy, index) => {
     createPage({
       path: `${caseStudy.node.Path}`,
@@ -235,7 +238,6 @@ exports.createPages = async ({ graphql, actions }) => {
   //     },
   //   });
   // });
-
   const generalPages = result.data.general.edges;
   const GeneralTemplate = require.resolve(
     './src/templates/general.js'
