@@ -276,21 +276,12 @@ query CaseStudyQuery($pagePath: String!) {
           Name
           Role
           Path
-          Image {
-            childImageSharp {
-              gatsbyImageData(width: 264, height: 264, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-            }
-          }
         }
         SEO {
           OGTitle
           OGDescription
           OGImage {
-            childImageSharp {
-              gatsbyImageData(
-                width: 1200
-              )
-            }
+            url
           }
         }
       }

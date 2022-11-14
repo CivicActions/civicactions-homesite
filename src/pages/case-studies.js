@@ -21,9 +21,9 @@ const CaseStudyPage = () => {
         nodes {
           Title
           Cover_Image {
-            url
-            alternativeText
-            caption
+             url
+             alternativeText
+             caption 
           }
           Client_Name
           Path

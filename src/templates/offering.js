@@ -361,11 +361,7 @@ query offeringQuery {
         OGDescription
         OGTitle
         OGImage {
-          childImageSharp {
-            gatsbyImageData(
-              width: 1200
-            )
-          }
+          url
         }
       }
     }

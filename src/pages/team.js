@@ -24,14 +24,7 @@ const TeamPage = () => {
           Role
           Path
           Image {
-            childImageSharp {
-              gatsbyImageData(
-                width: 264
-                height: 264
-                placeholder: BLURRED
-                formats: [AUTO, WEBP, AVIF]
-              )
-            }
+            url
           }
           Category {
             Category
