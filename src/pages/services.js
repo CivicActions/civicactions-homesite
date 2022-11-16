@@ -353,7 +353,7 @@ const ServicesPage = ({ data }) => {
       </section>
       <section className='services--ellipses-section'>
         <div className='inner'>
-          <h2>Open Standards. Inclusive Practices. Better Outcomes.</h2>
+          <h2>Open standards. Inclusive practices. Better outcomes.</h2>
           <div className='body-large'>
             No matter what problem we’re solving, our core practices and
             communities power our work and align with current standards for
