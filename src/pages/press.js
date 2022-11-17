@@ -16,8 +16,8 @@ const Press = () => {
         nodes {
           Title
           Path
-          Body
           Date
+          Short_Description
         }
       }
     }
@@ -35,8 +35,9 @@ const Press = () => {
         title='This work is worth talking about.'
         description='When government invests in smart technology and thoughtful design of services, millions of people stand to benefit for years to come. We are honored to be part of this work.'
       />
-      <section className='temp-press-releases--main-section'>
+      <section className='press-releases'>
         <div className='inner'>
+          <p>{pressReleases.Short_Description}</p>
           <PressTeasers presses={pressReleases} />
      </div>
       </section>
@@ -53,9 +54,9 @@ const Press = () => {
 };
 const PressTeasers = ({ presses }) => {
   return presses.map((press) => {
-    const { Path, Date, Title, Body } = press;
+    const { Path, Date, Title, Short_Description } = press;
     // Will need to update the description field to new field Short_Description
-    return <PressReleaseGrid path={Path} date={Date} title={Title} description={Body} />;
+    return <PressReleaseGrid path={Path} date={Date} title={Title} description={Short_Description} />;
   });
 };
 export default Press;

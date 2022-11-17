@@ -5,14 +5,13 @@ import Link from 'gatsby-link';
 import ReactMarkdown from "react-markdown";
 
 const PressReleaseGrid = ({ path, date, title, description }) => {
-  // Will need to change the shortDescription when we add this field in Strapi
-  const shortDescription = description.substring(0, 100);
+
   return (
     <div className='press-release--item'>
-      <span><strong>New Release: {date}</strong></span>
-      <Link to={path}><h2 className='h4'>{title}</h2></Link>
-      <ReactMarkdown className='body' children={shortDescription} />
-    <hr/>
+      <span>New Release: {date}</span>
+      <h2>{title}</h2>
+      <ReactMarkdown className='body' children={description} />
+      <p className='body'>Full Story: <Link to={path}>{title}</Link></p>
     </div>
   );
 };
