@@ -1,3 +1,5 @@
+import { paginate } from 'gatsby-awesome-pagination';
+
 exports.onPreBuild = () => {
   // This writes a CSS file for use with our external Greenhouse jobs pages.
   // A custom prebuild step is needed so that we get a fixed URL to point to.
@@ -34,6 +36,18 @@ exports.createSchemaCustomization = ({ actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
+  const pressRelease = await graphql(
+    `
+      {
+        pressReleases: allStrapiPressRelease {
+          edges {
+            node {
+              Path
+            }
+          }
+        }
+        }
+        `);
   const result = await graphql(
     `
       {
@@ -194,6 +208,15 @@ exports.createPages = async ({ graphql, actions }) => {
     toPath: "https://getdkan.org/",
     isPermanent: true,
     redirectInBrowser: true,
+  })
+
+  // Create your paginated pages for press landing page
+  paginate({
+    createPage, // The Gatsby `createPage` function
+    items: pressRelease, // An array of objects
+    itemsPerPage: 5, // How many items you want per page
+    pathPrefix: '/press', // Creates pages like `/blog`, `/blog/2`, etc
+    component: path.resolve('...'), // Just like `createPage()`
   })
 
   const caseStudies = result.data.caseStudies.edges;
