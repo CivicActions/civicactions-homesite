@@ -208,6 +208,18 @@ exports.createPages = async ({ graphql, actions }) => {
     });
 
   });
+  const pressReleases = result.data.pressReleases.edges;
+  const PressTemplate = require.resolve('./src/templates/press.js');
+  pressReleases.forEach((pressRelease, index) => {
+    createPage({
+      path: `${pressRelease.node.Path}`,
+      component: PressTemplate,
+      context: {
+        pagePath: pressRelease.node.Path,
+      },
+    });
+
+  });
 
   // const staffProfiles = result.data.staffProfiles.edges;
   // const StaffProfileTemplate = require.resolve(
