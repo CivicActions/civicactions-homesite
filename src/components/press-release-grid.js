@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import ReactMarkdown from "react-markdown";
 
-const PressReleaseGrid = ({ path, date, title, description }) => {
+const PressReleaseGrid = ({ path, date, title, description, id }) => {
 
   return (
-    <div className='press-release--item'>
+    <div className='press-release--item' key={id}>
       <span>New Release: {date}</span>
       <h2>{title}</h2>
       <ReactMarkdown className='body' children={description} />

@@ -1,10 +1,11 @@
-import { paginate } from 'gatsby-awesome-pagination';
+const path = require("path")
+const { paginate } = require('gatsby-awesome-pagination');
 
 exports.onPreBuild = () => {
   // This writes a CSS file for use with our external Greenhouse jobs pages.
   // A custom prebuild step is needed so that we get a fixed URL to point to.
   const sass = require('sass');
-  var fs = require('fs'); 
+  var fs = require('fs');
   const result = sass.renderSync({file: "src/sass/greenhouse.scss"});
   fs.writeFileSync('static/greenhouse.css', result.css.toString());
 }
@@ -36,22 +37,10 @@ exports.createSchemaCustomization = ({ actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const pressRelease = await graphql(
-    `
-      {
-        pressReleases: allStrapiPressRelease {
-          edges {
-            node {
-              Path
-            }
-          }
-        }
-        }
-        `);
   const result = await graphql(
     `
       {
-        pressReleases: allStrapiPressRelease {
+        pressReleases: allStrapiPressRelease(sort: {fields: Date, order: DESC}) {
           edges {
             node {
               Path
@@ -93,6 +82,7 @@ exports.createPages = async ({ graphql, actions }) => {
   if (result.errors) {
     throw result.errors;
   }
+
 
   const { createRedirect } = actions
   createRedirect({
@@ -210,15 +200,6 @@ exports.createPages = async ({ graphql, actions }) => {
     redirectInBrowser: true,
   })
 
-  // Create your paginated pages for press landing page
-  paginate({
-    createPage, // The Gatsby `createPage` function
-    items: pressRelease, // An array of objects
-    itemsPerPage: 5, // How many items you want per page
-    pathPrefix: '/press', // Creates pages like `/blog`, `/blog/2`, etc
-    component: path.resolve('...'), // Just like `createPage()`
-  })
-
   const caseStudies = result.data.caseStudies.edges;
   const CaseStudyTemplate = require.resolve('./src/templates/case-study.js');
   caseStudies.forEach((caseStudy, index) => {
@@ -232,7 +213,21 @@ exports.createPages = async ({ graphql, actions }) => {
 
   });
   const pressReleases = result.data.pressReleases.edges;
-  const PressTemplate = require.resolve('./src/templates/press.js');
+  // const postsPerPage = 5
+  // const numPages = Math.ceil(pressReleases.length / postsPerPage)
+  // Array.from({ length: numPages }).forEach((_, i) => {
+  //   createPage({
+  //     path: i === 0 ? `/press` : `/press/${i + 1}`,
+  //     component: path.resolve("./src/templates/pressold.js"),
+  //     context: {
+  //       limit: postsPerPage,
+  //       skip: i * postsPerPage,
+  //       numPages,
+  //       currentPage: i + 1,
+  //     },
+  //   })
+  // })
+  const PressTemplate = require.resolve('./src/templates/presses.js');
   pressReleases.forEach((pressRelease, index) => {
     createPage({
       path: `${pressRelease.node.Path}`,
@@ -243,6 +238,14 @@ exports.createPages = async ({ graphql, actions }) => {
     });
 
   });
+  // Create pagination
+  paginate({
+    createPage,
+    items: pressReleases,
+    itemsPerPage: 5,
+    pathPrefix: '/press',
+    component: path.resolve('src/templates/pressold.js')
+  })
 
   // const staffProfiles = result.data.staffProfiles.edges;
   // const StaffProfileTemplate = require.resolve(
