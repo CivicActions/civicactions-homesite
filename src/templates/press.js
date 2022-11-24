@@ -1,61 +1,79 @@
+import '../sass/styles.scss';
 import React from 'react';
-import { graphql } from 'gatsby';
-import ReactMarkdown from "react-markdown";
+import {graphql, Link, useStaticQuery} from 'gatsby';
 import RedLayout from '../layouts/red';
+import Hero from '../components/hero';
+import SEO from '../components/seo';
 import PrimaryPageCTA from "../components/primary-page-cta";
-import SEO from "../components/seo";
-import Hero from "../components/hero";
+import PressReleaseGrid from '../components/press-release-grid.js';
+import Pagination from "../components/pagination.js";
 
-const PressTemplate = ({ data }) => {
-  const press = data.allStrapiPressRelease.edges[0].node;
-  const { Title, Body } = press;
+
+const Press = ({ data, location, pageContext }) => {
+  const pressReleases = data.press.edges;
   return (
     <RedLayout>
-
       <SEO
-        title={Title}
-        description='Press release from civicactions.com'
+        title='Press'
+        description="This work is worth talking about. Learn how we've been elevating government digital services."
       />
-      <Hero title={Title}/>
-      <div className='single--press-releases--main'>
-
-
+      <Hero
+        title='This work is worth talking about.'
+        description='When government invests in smart technology and thoughtful design of services, millions of people stand to benefit for years to come. We are honored to be part of this work.'
+      />
+      <section className='press-releases'>
         <div className='inner'>
-          <div className='body'>
-            <ReactMarkdown className='body' children={Body} />
-          </div>
+
+          {pressReleases.map(({ node }) => {
+              return (
+                <PressTeasers presses={node}/>
+                )
+
+
+          })}
+          <Pagination pageContext={pageContext} />
         </div>
-      </div>
+
+      </section>
       <PrimaryPageCTA
-        title='Inspired by newsworthy work?'
-        subtitle='See what we can do together.'
-        primaryButtonText='EXPLORE SERVICES'
-        primaryButtonLink='/services'
-        secondaryButtonText='CONTRACTING INFO'
-        secondaryButtonLink='/contracting'
+          title='Inspired by newsworthy work?'
+          subtitle='See what we can do together.'
+          primaryButtonText='EXPLORE SERVICES'
+          primaryButtonLink='/services'
+          secondaryButtonText='CONTRACTING INFO'
+          secondaryButtonLink='/contracting'
       />
-
-
-
     </RedLayout>
   );
 };
 
-export const query = graphql`
-query PressQuery($pagePath: String!) {
-  allStrapiPressRelease(filter: { Path: { eq: $pagePath } }) {
-    edges {
-      node {
-        Title
-        Body
-        Date
-        Path
-      }
+const PressTeasers = ({ presses }) => {
+    return <PressReleaseGrid
+      path={presses.Path}
+      date={presses.Date}
+      title={presses.Title}
+      description={presses.Short_Description}
+      id={presses.id} />;
+
+};
+
+export const pageQuery = graphql`
+  query($skip: Int!, $limit: Int!) {
+    press: allStrapiPressRelease(
+      sort: {order: DESC, fields: Date}
+      limit: $limit
+      skip: $skip
+    ) {
+        edges {
+          node {
+            Title
+            Path
+            Date
+            Short_Description
+            id
+          }
+        }
     }
   }
-}
-
 `;
-
-export default PressTemplate;
-
+export default Press;
