@@ -25,9 +25,11 @@ const TeamPage = () => {
           Path
           Image {
             url
-          }
-          Category {
-            Category
+            localFile {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
           }
         }
       }

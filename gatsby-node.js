@@ -28,6 +28,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       alternativeText: String,
       caption: String
     }
+    type StrapiGeneral implements Node {
+      Body: String
+    }
     type FeedJobLists implements Node {
       title: String,
       link: String

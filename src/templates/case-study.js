@@ -68,24 +68,24 @@ const CaseStudyTemplate = ({ data }) => {
               <div className='case-study-challenge-goal'>
                 <div className='challenge'>
                   <h2>The challenge</h2>
-                  <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Challenge} />
+                  <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Challenge.data.Challenge} />
 
                 </div>
                 <div className='goal'>
                   <h3>Client goal</h3>
-                  <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Client_Goal} />
+                  <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Client_Goal.data.Client_Goal} />
 
                 </div>
               </div>
               <div className='case-study--expertise-tools'>
                 <div className='expertise'>
                   <h3>Expertise</h3>
-                  <ReactMarkdown className='body' children={caseStudy.Expertise[0].Expertise_Content} />
+                  <ReactMarkdown className='body' children={caseStudy.Expertise[0].Expertise_Content.data.Expertise_Content} />
                 </div>
                 <div className='tools'>
                   <h3>Tools and technologies</h3>
                   <ReactMarkdown className='body'
-                    children={caseStudy.Tools_Technologies[0].Tools_Technologies_Content} />
+                    children={caseStudy.Tools_Technologies[0].Tools_Technologies_Content.data.Tools_Technologies_Content} />
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@ const CaseStudyTemplate = ({ data }) => {
               {index === 0 &&
                 <div className='first-approach'>
                   <h2>{approachItem.Title}</h2>
-                  <ReactMarkdown className='body' children={approachItem.Text} />
+                  <ReactMarkdown className='body' children={approachItem.Text.data.Text} />
                 </div>
               }
               {index !== 0 &&
@@ -109,14 +109,12 @@ const CaseStudyTemplate = ({ data }) => {
 
                   <div className='title-text--wrapper'>
                     <h3>{approachItem.Title}</h3>
-                    <ReactMarkdown className='body' children={approachItem.Text} />
+                    <ReactMarkdown className='body' children={approachItem.Text.data.Text} />
                   </div>
                   {approachItem.Image && <div className='image--wrapper'>
                     <div>
                       {approachItem.Image.url &&
-                        <img src={approachItem.Image.url}
-                          alt={approachItem.Image.alternativeText}>
-                        </img>
+                        <GatsbyImage image={approachItem.Image} alt='' />
                       }
                       {approachItem.Image.caption &&
                         <div className='caption'>{approachItem.Image.caption}</div>
@@ -142,7 +140,7 @@ const CaseStudyTemplate = ({ data }) => {
             {caseStudy.Key_Outcome.map(({ node }, index) => (
               <div className='key-outcome'>
                 <p className='label'>{caseStudy.Key_Outcome[index].Title}</p>
-                <ReactMarkdown className='body' children={caseStudy.Key_Outcome[index].Text} />
+                <ReactMarkdown className='body' children={caseStudy.Key_Outcome[index].Text.data.Text} />
               </div>
             ))}
           </div>
@@ -156,7 +154,7 @@ const CaseStudyTemplate = ({ data }) => {
               {caseStudy.staff_profiles.map(({ node }, index) => (
                 <div className='related-staff'>
                   {caseStudy.staff_profiles[index].Image &&
-                    <GatsbyImage image={getImage(caseStudy.staff_profiles[index].Image)} alt={''} />
+                    <GatsbyImage image={caseStudy.staff_profiles[index].Image} alt={''} />
                   }
                   <p className='body staff-name'>
                     {/*// Unlinked for MVP soft launch*/}
@@ -178,8 +176,9 @@ const CaseStudyTemplate = ({ data }) => {
               {caseStudy.Related_Case_Studies.map(({ node }, index) => (
                 <div className='related-case-study'>
                   <a href={caseStudy.Related_Case_Studies[index].Path}>
-                    {caseStudy.Related_Case_Studies[index].Cover_Image[0] && <img src={caseStudy.Related_Case_Studies[index].Cover_Image[0].url} alt={caseStudy.Related_Case_Studies[index].Cover_Image[0].alternativeText} />}
-
+                    {caseStudy.Related_Case_Studies[index].Cover_Image[0] &&
+                      // <img src={caseStudy.Related_Case_Studies[index].Cover_Image[0].url} alt={caseStudy.Related_Case_Studies[index].Cover_Image[0].alternativeText} />}
+                    <GatsbyImage image={caseStudy.Related_Case_Studies[index].Cover_Image[0]} alt='' />}
                     {caseStudy.Related_Case_Studies[index].Title}
                   </a>
 
@@ -205,33 +204,56 @@ query CaseStudyQuery($pagePath: String!) {
     edges {
       node {
         Approach {
-          Text
-          Image  {
-            url
-            alternativeText
-            caption
+          Text {
+            data {
+              Text
+            }
           }
           Title
         }
         Challenge_Goal {
-          Challenge
-          Client_Goal
+          Challenge {
+            data {
+              Challenge
+            }
+          }
+          Client_Goal {
+            data {
+              Client_Goal
+            }
+          }
         }
         Client_Name
         Path
         Expertise {
-          Expertise_Content
+          Expertise_Content {
+            data {
+              Expertise_Content
+            }
+          }
         }
         Cover_Image {
           url
+          localFile {
+            url
+            childImageSharp {
+              gatsbyImageData (width: 200)
+            }
+          }
         }
         Hero_Image {
-            url
-            alternativeText
-            caption
+            localFile {
+              childImageSharp {
+                gatsbyImageData (width: 200)
+              }
+            }
           }
         Key_Outcome {
-          Text
+          Text {
+            data {
+              Text
+            }
+          }
           Title
         }
         Quote {
@@ -243,7 +265,11 @@ query CaseStudyQuery($pagePath: String!) {
           Title
           Cover_Image {
             url
-            alternativeText
+            localFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
           }
         }
         Service_Category {
@@ -257,7 +283,11 @@ query CaseStudyQuery($pagePath: String!) {
         Summary
         Title
         Tools_Technologies {
-          Tools_Technologies_Content
+          Tools_Technologies_Content {
+            data {
+              Tools_Technologies_Content
+            }
+          }
         }
         staff_profiles {
           Name
@@ -267,9 +297,6 @@ query CaseStudyQuery($pagePath: String!) {
         SEO {
           OGTitle
           OGDescription
-          OGImage {
-            url
-          }
         }
       }
     }

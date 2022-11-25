@@ -68,17 +68,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
-      },
-    },
-    {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://civicactions-content.civicactions-content.app.civicactions.net`,
+        apiURL: `http://localhost:1337`,
         queryLimit: 1000,
+        accessToken: `911eacf2f2c0cb46677da15f8e1ca865313c96d210a7dd5b36a1de0d7d7ef441b539814c4712546f7c90e9955ece64186e46526b926c3465dd6eae95e264688a755d2967ec3086ad4accf5be1ccbea55d9169c31c5184ea98567a605578fcedcc15be9e994aa81c8ec6b67c9f69075f44e68d81693a6f64d983a46f006d3e1ff`,
         collectionTypes: [
           `case-study`,
           `offering`,

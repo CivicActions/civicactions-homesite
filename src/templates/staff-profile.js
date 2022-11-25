@@ -24,15 +24,15 @@ export const query = graphql`
         Path
         Location
         Quote
-        Social {
-          Title
-          Url
-        }
         Specialty {
           Specialty
           id
         }
-        Body
+        Body {
+          data {
+            Body
+          }
+        }
       }
     }
   }

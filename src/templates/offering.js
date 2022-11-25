@@ -279,14 +279,14 @@ query offeringQuery {
   allStrapiOffering {
     nodes {
       id
-      Body
+      Body {
+        data {
+          Body
+        }
+      }
       CTA {
         Header
         body
-        cta_button {
-          button_link
-          button_text
-        }
       }
       Path
       Quote {
@@ -297,16 +297,9 @@ query offeringQuery {
         Content_Element
         Numerical_Element
       }
-      Summary
       Title
       client_logo {
         text
-        client_logo {
-          url
-          alternativeText
-          caption
-          id
-        }
       }
       hero_button {
         button_link
@@ -314,55 +307,36 @@ query offeringQuery {
       }
       text_section {
         Header
-        body
-        button {
-          button_link
-          button_text
-        }
-      }
-      FAQ_Accordion_Section {
-        list_questions {
-          body
-          question
+        body {
+          data {
+            body
+          }
         }
       }
       tabs {
-        cta_tab {
-          button_link
-          button_text
-          header
-        }
         tab_header
-        tabs_section {
-          body
-          header
-        }
       }
       value_prop {
-        body_text
-        header_text
-        image {
-          alternativeText
-          caption
-          url
+        text {
+          data {
+            text
+          }
         }
+        header_text
       }
       team_members {
-        Body
+        Body {
+          data {
+            Body
+          }
+        }
         Name
         Role
         Linkedin
-        image {
-          alternativeText
-          url
-        }
       }
       SEO {
         OGDescription
         OGTitle
-        OGImage {
-          url
-        }
       }
     }
   }

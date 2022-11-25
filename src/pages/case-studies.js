@@ -22,8 +22,11 @@ const CaseStudyPage = () => {
           Title
           Cover_Image {
              url
-             alternativeText
-             caption 
+             localFile {
+                childImageSharp {
+                  gatsbyImageData
+                }
+             }
           }
           Client_Name
           Path
