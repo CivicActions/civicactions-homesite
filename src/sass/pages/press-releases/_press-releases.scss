@@ -72,8 +72,15 @@
   margin-bottom: 120px;
 
   .inner {
-    max-width: 720px;
-    margin: 0 auto;
+    margin: 0 1.5rem;
+    @media (min-width: $tablet-screen) {
+      max-width: 674px;
+      margin: 0 auto;
+    }
+    @media (min-width: $medium-large-screen) {
+      max-width: 720px;
+    }
+
 
     span {
       display: block;

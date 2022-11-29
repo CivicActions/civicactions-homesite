@@ -1,8 +1,11 @@
+const path = require("path")
+const { paginate } = require('gatsby-awesome-pagination');
+
 exports.onPreBuild = () => {
   // This writes a CSS file for use with our external Greenhouse jobs pages.
   // A custom prebuild step is needed so that we get a fixed URL to point to.
   const sass = require('sass');
-  var fs = require('fs'); 
+  var fs = require('fs');
   const result = sass.renderSync({file: "src/sass/greenhouse.scss"});
   fs.writeFileSync('static/greenhouse.css', result.css.toString());
 }
@@ -37,7 +40,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(
     `
       {
-        pressReleases: allStrapiPressRelease {
+        pressReleases: allStrapiPressRelease(sort: {fields: Date, order: DESC}) {
           edges {
             node {
               Path
@@ -79,6 +82,7 @@ exports.createPages = async ({ graphql, actions }) => {
   if (result.errors) {
     throw result.errors;
   }
+
 
   const { createRedirect } = actions
   createRedirect({
@@ -208,8 +212,9 @@ exports.createPages = async ({ graphql, actions }) => {
     });
 
   });
+
   const pressReleases = result.data.pressReleases.edges;
-  const PressTemplate = require.resolve('./src/templates/press.js');
+  const PressTemplate = require.resolve('./src/templates/press-release.js');
   pressReleases.forEach((pressRelease, index) => {
     createPage({
       path: `${pressRelease.node.Path}`,
@@ -220,6 +225,15 @@ exports.createPages = async ({ graphql, actions }) => {
     });
 
   });
+  // Create pagination
+  paginate({
+    createPage,
+    items: pressReleases,
+    itemsPerPage: 5,
+    pathPrefix: '/press',
+    component: path.resolve('src/templates/press.js')
+  })
+
 
   // const staffProfiles = result.data.staffProfiles.edges;
   // const StaffProfileTemplate = require.resolve(
