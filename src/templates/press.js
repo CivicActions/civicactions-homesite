@@ -26,7 +26,12 @@ const Press = ({ data, location, pageContext }) => {
 
           {pressReleases.map(({ node }) => {
               return (
-                <PressTeasers presses={node}/>
+            <PressReleaseGrid
+              path={node.Path}
+              date={node.Date}
+              title={node.Title}
+              description={node.Short_Description}
+              id={node.id} />
                 )
 
 
@@ -45,16 +50,6 @@ const Press = ({ data, location, pageContext }) => {
       />
     </RedLayout>
   );
-};
-
-const PressTeasers = ({ presses }) => {
-    return <PressReleaseGrid
-      path={presses.Path}
-      date={presses.Date}
-      title={presses.Title}
-      description={presses.Short_Description}
-      id={presses.id} />;
-
 };
 
 export const pageQuery = graphql`

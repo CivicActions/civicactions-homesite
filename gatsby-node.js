@@ -214,7 +214,7 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 
   const pressReleases = result.data.pressReleases.edges;
-  const PressTemplate = require.resolve('./src/templates/presses.js');
+  const PressTemplate = require.resolve('./src/templates/press-release.js');
   pressReleases.forEach((pressRelease, index) => {
     createPage({
       path: `${pressRelease.node.Path}`,
