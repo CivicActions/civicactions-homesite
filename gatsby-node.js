@@ -141,7 +141,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
   createRedirect({
     fromPath: "/case-study/usva",
-    toPath: "/case-studies/usva-open-data",
+    toPath: "/case-studies",
     isPermanent: true,
     redirectInBrowser: true,
   })

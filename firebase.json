@@ -59,7 +59,7 @@
       },
       {
         "source": "/case-study/usva",
-        "destination": "/case-studies/usva-open-data",
+        "destination": "/case-studies",
         "type": 301
       },
       {
