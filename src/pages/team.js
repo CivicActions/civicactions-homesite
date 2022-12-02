@@ -107,6 +107,7 @@ const TeamPage = () => {
         name='Alanna Casey'
         role='Technical Writer'
         img={alanaCaseyProfilePicture}
+        alt='Headshot of Alanna Casey'
       />
 
       <PrimaryPageCTA
