@@ -12,8 +12,8 @@
     padding-top: 200px;
   }
   @media(min-width: 1200px) {
-    padding-top: 192px;
-    padding-bottom: 100px;
+    padding-top: 164px;
+    padding-bottom: 64px;
   }
 
   .inner {
@@ -68,6 +68,7 @@
         text-align: left;
         font-size: 16px;
         font-weight: 300;
+        padding-top: 8px;
       }
     }
 
