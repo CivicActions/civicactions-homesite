@@ -13,7 +13,7 @@
 
     h2 {
       max-width: 900px;
-      font-weight: 300;
+      font-weight: 400;
     }
 
     .body-large {
@@ -35,6 +35,15 @@
       background-color: $colors-white;
       margin-right: 16px;
       margin-bottom: 24px;
+      font-weight: 700;
+      font-family: $secondary-font;
+      @media(min-width: $tablet-screen) {
+        font-weight: 600;
+      }
+      @media(min-width: $medium-large-screen) {
+        font-weight: 700;
+      }
+
     }
 
     .ellipse.us-design {

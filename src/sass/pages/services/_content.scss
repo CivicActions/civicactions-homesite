@@ -3,6 +3,12 @@
   width: 100%;
   color: $colors-grey-90;
   margin-top: 48px;
+  @media (min-width: $tablet-screen) {
+    margin-top: 64px;
+  }
+  @media (min-width: $medium-large-screen) {
+    margin-top: 120px;
+  }
 
   .inner {
     position: relative;
@@ -38,7 +44,7 @@
 
     .body {
       font-weight: 300;
-      padding: 6px 0;
+      padding: 0;
     }
 
     .content {
@@ -80,7 +86,7 @@
     }
 
     .services-content--label {
-      font-weight: 600;
+      font-weight: 500;
       font-size: 18px;
       float: left;
       padding-top: 11px;
@@ -102,6 +108,7 @@
       display: inline-block;
       @media(min-width: $tablet-screen) {
         font-size: 28px;
+        line-height: 39px;
       }
       @media(min-width: $medium-large-screen) {
         display: block;
@@ -121,36 +128,42 @@
     a.body-large {
       font-weight: 300;
       color: $colors-mint-cool-60v;
-      padding: 8px 0 32px;
+      padding: 8px 0 24px;
       display: block;
       @media(min-width: $tablet-screen) {
-        padding: 8px 0 40px;
+        padding: 4px 0 40px;
       }
       @media(min-width: $medium-large-screen) {
-        padding: 8px 0 64px;
+        padding: 8px 0 32px;
       }
     }
 
     .h4 {
-      padding-bottom: 10px;
+      padding-bottom: 16px;
       font-size: 20px;
       @media(min-width: $tablet-screen) {
         font-size: 24px;
-        padding-bottom: 18px;
+        padding-bottom: 24px;
       }
       @media(min-width: $medium-large-screen) {
         font-size: 28px;
-        padding-bottom: 26px;
+        padding-bottom: 32px;
       }
     }
 
     .description {
-      margin-bottom: 48px;
+      margin-bottom: 24px;
+      @media(min-width: $tablet-screen) {
+        margin-bottom: 40px;
+      }
+      @media(min-width: $medium-large-screen) {
+        margin-bottom: 48px;
+      }
     }
 
     .cta {
       background-color: #f5f5f0;
-      padding: 24px;
+      padding: 32px 24px;
       margin: 0 -24px 48px;
       overflow: auto;
       @media(min-width: $tablet-screen) {
@@ -160,7 +173,12 @@
       @media(min-width: $medium-large-screen) {
         margin: 24px 0 112px;
       }
-
+      .h4 {
+        font-size: 20px;
+        @media(min-width: $tablet-screen) {
+          font-size: 28px;
+        }
+      }
       a {
         text-decoration: underline;
         font-weight: 300;
