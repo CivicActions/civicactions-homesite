@@ -8,7 +8,7 @@ const PressReleaseGrid = ({ path, date, title, description, id }) => {
 
   return (
     <div className='press-release--item' key={id}>
-      <span>New Release: {date}</span>
+      <span>News Release: {date}</span>
       <h2>{title}</h2>
       <ReactMarkdown className='body' children={description} />
       <p className='body'>Full Story: <Link to={path}>{title}</Link></p>
