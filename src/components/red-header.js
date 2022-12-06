@@ -41,7 +41,7 @@ const RedHeader = () => {
             <div className='red-header--header'><div className='inner'>
                 <Link to='/' className='logo'>
                     <img className='white-logo' src={whiteLogo} alt='Civic Actions home page'></img>
-                    <img className='red-logo' src={redLogo} alt='Civic Actions page'></img>
+                    <img className='red-logo' src={redLogo} alt='Civic Actions home page'></img>
                 </Link>
                 <MainMenu redHeader={true} />
                 <MobileMenu
