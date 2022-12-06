@@ -40,8 +40,8 @@ const RedHeader = () => {
         <header className={`${scrolled ? "header red-header scrolled" : "header red-header"} ${scrolledMobile ? "scrolled-mobile" : ""}`}>
             <div className='red-header--header'><div className='inner'>
                 <Link to='/' className='logo'>
-                    <img className='white-logo' src={whiteLogo} alt='Civic Actions Logo'></img>
-                    <img className='red-logo' src={redLogo} alt='Civic Actions Logo'></img>
+                    <img className='white-logo' src={whiteLogo} alt='Civic Actions home page'></img>
+                    <img className='red-logo' src={redLogo} alt='Civic Actions home page'></img>
                 </Link>
                 <MainMenu redHeader={true} />
                 <MobileMenu
