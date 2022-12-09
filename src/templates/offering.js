@@ -223,11 +223,11 @@ const OfferingTemplate = ({ data }) => {
         {/*// Accordion comes from https://www.npmjs.com/package/react-accessible-accordion*/}
         {
           offering.FAQ_Accordion_Section.list_questions.length &&
-          <section className='section--offering--faqs'>
+          <section className='section--offering--faqs' id='faq'>
             <div className='inner'>
               <h2>Frequently asked questions</h2>
               <Accordion
-                id='faq'
+                id='faqs'
                 allowZeroExpanded={true}
                 allowMultipleExpanded={true}>
                 {offering.FAQ_Accordion_Section.list_questions.map((faq, index) => (
