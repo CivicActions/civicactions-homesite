@@ -41,4 +41,10 @@
     }
 
   }
+  .staff-quote.no-stats-quote {
+    padding-top: 55px;
+    @media(min-width: $tablet-screen) {
+      padding-top: 87px;
+    }
+  }
 }
