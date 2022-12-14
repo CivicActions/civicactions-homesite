@@ -40,7 +40,7 @@ const CaseStudyTemplate = ({ data }) => {
           </section>
         }
 
-        <section className='section--case-study--stats'>
+        {caseStudy.Stats[0] && <section className='section--case-study--stats'>
           <div className='stats--wrapper'>
             <div className='inner'>
               {caseStudy.Stats.map(({ stat }, index) => (
@@ -54,11 +54,22 @@ const CaseStudyTemplate = ({ data }) => {
           </div>
 
         </section>
-        {caseStudy.Quote &&
+
+        }
+        {caseStudy.Stats &&
+        caseStudy.Quote &&
           <Quote
             quote={caseStudy.Quote.Quote}
             source={caseStudy.Quote.Source}
             classes='first-quote no-img'
+          />
+        }
+        {!caseStudy.Stats &&
+          caseStudy.Quote &&
+          <Quote
+            quote={caseStudy.Quote.Quote}
+            source={caseStudy.Quote.Source}
+            classes='no-stats-quote first-quote no-img'
           />
         }
 
