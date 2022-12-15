@@ -77,34 +77,36 @@ const CaseStudyTemplate = ({ data }) => {
           <section className='section--case-study--challenge-to-tools'>
             <div className='inner'>
               <div className='case-study-challenge-goal'>
-                <div className='challenge'>
+                {caseStudy.Challenge_Goal.Challenge && <div className='challenge'>
                   <h2>The challenge</h2>
                   <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Challenge} />
 
-                </div>
-                <div className='goal'>
+                </div>}
+                {caseStudy.Challenge_Goal.Client_Goal && <div className='goal'>
                   <h3>Client goal</h3>
                   <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Client_Goal} />
 
-                </div>
+                </div>}
               </div>
-              <div className='case-study--expertise-tools'>
+               <div className='case-study--expertise-tools'>
+                 {caseStudy.Expertise[0].Expertise_Content &&
                 <div className='expertise'>
                   <h3>Expertise</h3>
                   <ReactMarkdown className='body' children={caseStudy.Expertise[0].Expertise_Content} />
-                </div>
-                <div className='tools'>
+                </div>}
+                 {caseStudy.Tools_Technologies[0].Tools_Technologies_Content &&
+                 <div className='tools'>
                   <h3>Tools and technologies</h3>
                   <ReactMarkdown className='body'
                     children={caseStudy.Tools_Technologies[0].Tools_Technologies_Content} />
-                </div>
+                </div>}
               </div>
             </div>
           </section>
         }
 
 
-
+        {caseStudy.Approach &&
         <section className='section--case-study--approaches'>
 
           {caseStudy.Approach.map((approachItem, index) => (
@@ -143,7 +145,7 @@ const CaseStudyTemplate = ({ data }) => {
             </div>
           ))}
 
-        </section>
+        </section>}
 
         {/* Todo Key outcomes*/}
         {caseStudy.Key_Outcome && <section className='section--case-study--outcomes'>
