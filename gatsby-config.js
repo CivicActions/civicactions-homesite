@@ -68,17 +68,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
-      },
-    },
-    {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `https://v4.civicactions-content.app.civicactions.net`,
-        accessToken: `814c441d8e5bcfff3cb675db99a57b0fbbb10a95d1081e6d4a6b3732165d6cd8574b7e44e75b6c9f40760f657617ecabe20e11b77e9ca977e010ea18577a58640b00f6ce3cf6940285c1ec8083c130d636c5120ce8dda1eddcf391122e627ac529ec0c69f60568d20f6ed10e09daca1686e73f9b7e947fbabb3e5a24e8699167`,
+        accessToken: `4a58b625ec4a6fe4b913d3f2b9d6ff1e32b67b6e2be756e8415626105f03ca191b26d760828cd810fb69bc6151cf95dc82bd2c2c168965e75e641263c06b531cc7e77a3427e48aef7159aac46e7a2b1a220a58514eeee80bbf0bb056e1eb8c3b1c09613ff9b128e769cc4f4ec01ed599dd0bf2188bf7cd82d3dfaa10bc27d275`,
         queryLimit: 5000,
         collectionTypes: [
           {
