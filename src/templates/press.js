@@ -64,7 +64,6 @@ export const pageQuery = graphql`
             Title
             Path
             Date
-            Short_Description
             id
           }
         }

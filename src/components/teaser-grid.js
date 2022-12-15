@@ -11,7 +11,6 @@ const TeaserGrid = ({ image, link, name, title }) => {
           {/*// Unlinked for MVP soft launch*/}
           {/*<Link to={link} title={`Link to ${name}'s profile page`}>*/}
             <div className="teaser-grid__image">
-              {/*<img src={image.url} aria-label={name}/>*/}
               <GatsbyImage image={getImage(image)} aria-label={name} />
             </div>
           {/*</Link>*/}

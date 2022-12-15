@@ -47,7 +47,11 @@ query PressQuery($pagePath: String!) {
     edges {
       node {
         Title
-        Body
+        Body {
+          data {
+            Body
+          }
+        }
         Date
         Path
       }

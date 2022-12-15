@@ -20,6 +20,7 @@
     "@aaronhayes/react-use-hubspot-form": "^1.2.5",
     "babel-preset-gatsby": "^1.0.0",
     "gatsby": "^4.24.7",
+    "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-plugin-client-side-redirect": "^1.1.0",
     "gatsby-plugin-google-analytics": "^4.24.0",
     "gatsby-plugin-image": "^2.24.0",
@@ -51,7 +52,7 @@
   },
   "devDependencies": {
     "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
-    "gatsby-source-strapi": "^1.0.3",
+    "gatsby-source-strapi": "^2.0.0",
     "gh-pages": "^3.1.0",
     "stylelint": "^13.12.0",
     "stylelint-config-sass-guidelines": "^8.0.0",

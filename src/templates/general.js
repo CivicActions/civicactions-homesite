@@ -34,7 +34,11 @@ export const query = graphql`
     allStrapiGeneral {
       nodes {
         Hero_text
-        Body
+        Body {
+          data {
+            Body
+          }
+        }
         Path
         Title
         SEO {

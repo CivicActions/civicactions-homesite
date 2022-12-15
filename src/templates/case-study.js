@@ -218,7 +218,11 @@ query CaseStudyQuery($pagePath: String!) {
     edges {
       node {
         Approach {
-          Text
+          Text {
+            data {
+              Text
+            }
+          }
           Image  {
             url
             alternativeText
@@ -227,13 +231,25 @@ query CaseStudyQuery($pagePath: String!) {
           Title
         }
         Challenge_Goal {
-          Challenge
-          Client_Goal
+          Challenge {
+            data {
+              Challenge
+            }
+          }
+          Client_Goal  {
+            data {
+              Client_Goal
+            }
+          }
         }
         Client_Name
         Path
         Expertise {
-          Expertise_Content
+          Expertise_Content {
+            data {
+              Expertise_Content
+            }
+          }
         }
         Cover_Image {
           url
@@ -244,7 +260,11 @@ query CaseStudyQuery($pagePath: String!) {
             caption
           }
         Key_Outcome {
-          Text
+          Text {
+            data {
+              Text
+            }
+          }
           Title
         }
         Quote {
@@ -270,18 +290,31 @@ query CaseStudyQuery($pagePath: String!) {
         Summary
         Title
         Tools_Technologies {
-          Tools_Technologies_Content
+          Tools_Technologies_Content {
+            data {
+              Tools_Technologies_Content
+            }
+          }
         }
         staff_profiles {
           Name
           Role
           Path
+          Image {
+            childImageSharp {
+              gatsbyImageData(width: 264, height: 264, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            }
+          }
         }
         SEO {
           OGTitle
           OGDescription
           OGImage {
-            url
+            childImageSharp {
+              gatsbyImageData(
+                width: 1200
+              )
+            }
           }
         }
       }

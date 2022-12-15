@@ -77,15 +77,275 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://civicactions-content.civicactions-content.app.civicactions.net`,
-        queryLimit: 1000,
+        apiURL: `https://v4.civicactions-content.app.civicactions.net`,
+        accessToken: `814c441d8e5bcfff3cb675db99a57b0fbbb10a95d1081e6d4a6b3732165d6cd8574b7e44e75b6c9f40760f657617ecabe20e11b77e9ca977e010ea18577a58640b00f6ce3cf6940285c1ec8083c130d636c5120ce8dda1eddcf391122e627ac529ec0c69f60568d20f6ed10e09daca1686e73f9b7e947fbabb3e5a24e8699167`,
+        queryLimit: 5000,
         collectionTypes: [
-          `case-study`,
-          `offering`,
-          `press`,
-          `general`,
-          `press-release`,
-          `staff-profile`,
+          {
+            singularName: 'case-study',
+            queryParams: {
+              // Populate all fields even nested query field
+              populate: {
+                Title: '*',
+                Client_Name: '*',
+                Path: '*',
+                Promoted_to_Homepage: '*',
+                Related_Case_Studies: '*',
+                Cover_Image: '*',
+                Summary: '*',
+                Hero_Image: '*',
+                Stats: {
+                  populate: {
+                    Numerical_Element: '*',
+                    Content_Element: '*'
+                  },
+                },
+                Quote: {
+                  populate: {
+                    Quote: '*',
+                    Source: '*'
+                  },
+                },
+                Approach: {
+                  populate: {
+                    Title: '*',
+                    Text: '*',
+                    Image: '*'
+                  },
+                },
+                Key_Outcome: {
+                  populate: {
+                    Title: '*',
+                    Text: '*',
+                  },
+                },
+                staff_profiles: '*',
+                Challenge_Goal: {
+                  populate: {
+                    Challenge: '*',
+                    Client_Goal: '*',
+                  },
+                },
+                Expertise: {
+                  populate: {
+                    Expertise_Content: '*'
+                  },
+                },
+                Tools_Technologies: {
+                  populate: {
+                    Tools_Technologies_Content: '*'
+                  },
+                },
+                Sort_Order: '*',
+                Service_Category: {
+                  populate: {
+                    Category: '*',
+                  },
+                },
+                SEO: {
+                  populate: {
+                    OGTitle: '*',
+                    OGDescription: '*',
+                    OGImage: '*'
+                  }
+                }
+              },
+            },
+          }, {
+            singularName: 'offering',
+            queryParams: {
+              // Populate all fields even nested query field
+              populate: {
+                Title: '*',
+                hero_button: {
+                  populate: {
+                    button_text: '*',
+                    button_link: '*',
+                  },
+                },
+                client_logo: {
+                  populate: {
+                    text: '*',
+                    client_logo: '*',
+                  },
+                },
+                Stats: {
+                  populate: {
+                    Numerical_Element: '*',
+                    Content_Element: '*',
+                  },
+                },
+                value_prop: {
+                  populate: {
+                    header_text: '*',
+                    image: '*',
+                    text: '*',
+                  }
+                },
+                tabs: {
+                  populate: {
+                    tab_header: '*',
+                    tabs_section: {
+                      populate: {
+                        header: '*',
+                        body: '*',
+                      },
+                    },
+                    cta_tab: {
+                      populate: {
+                        header: '*',
+                        button_text: '*',
+                        button_link: '*',
+                      },
+                    },
+                  },
+                },
+                Quote: {
+                  populate: {
+                    Quote: '*',
+                    Source: '*',
+                  },
+                },
+                text_section: {
+                  populate: {
+                    Header: '*',
+                    button: {
+                      populate: {
+                        button_text: '*',
+                        button_link: '*',
+                      },
+                    },
+                    body: '*',
+                  },
+                },
+                FAQ_Accordion_Section: {
+                  populate: {
+                    list_questions: {
+                      populate: {
+                        questions: '*',
+                        body: '*',
+                      }
+                    },
+                  }
+
+                },
+                CTA: {
+                  populate: {
+                    Header: '*',
+                    body: '*',
+                    cta_button: {
+                      populate: {
+                        button_text: '*',
+                        button_link: '*',
+                      },
+                    },
+                  },
+                },
+                Body: '*',
+                Path: '*',
+                team_members: {
+                  populate: {
+                    Name: '*',
+                    Role: '*',
+                    Linkedin: '*',
+                    image: '*',
+                    Body: '*',
+                  },
+                },
+                SEO: {
+                  populate: {
+                    OGTitle: '*',
+                    OGDescription: '*',
+                    OGImage: '*',
+                  },
+                },
+              },
+            }
+          },
+          {
+            singularName: 'general',
+            queryParams: {
+              // Populate all fields even nested query field
+              populate: {
+                Title: '*',
+                Path: '*',
+                Hero_text: '*',
+                Body: '*',
+                SEO: {
+                  populate: {
+                    OGTitle: '*',
+                    OGDescription: '*',
+                    OGImage: '*',
+                  },
+                },
+              }
+            }
+          },
+          {
+            singularName: 'press-release',
+            queryParams: {
+              // Populate all fields even nested query field
+              populate: {
+                Title: '*',
+                Path: '*',
+                Body: '*',
+                Date: '*',
+                Link: '*',
+                Link_Text: '*',
+                Publication: '*',
+                Short_Description: '*',
+                SEO: {
+                  populate: {
+                    OGTitle: '*',
+                    OGDescription: '*',
+                    OGImage: '*',
+                  },
+                },
+              }
+            }
+          },
+          {
+            singularName: 'staff-profile',
+            queryParams: {
+              // Populate all fields even nested query field
+              populate: {
+                Path: '*',
+                Name: '*',
+                Personal_Pronouns: '*',
+                Image: '*',
+                Audio: '*',
+                Pronunciation: '*',
+                Role: '*',
+                Location: '*',
+                Quote: '*',
+                Social: {
+                  populate: {
+                    Title: '*',
+                    Url: '*'
+                  },
+                },
+                Specialty: {
+                  populate: {
+                    Specialty: '*',
+                  },
+                },
+                Body: '*',
+                case_study: '*',
+                Category: {
+                  populate: {
+                    Category: '*',
+                  },
+                },
+                SEO: {
+                  populate: {
+                    OGTitle: '*',
+                    OGDescription: '*',
+                    OGImage: '*',
+                  },
+                },
+              }
+            }
+          },
 
         ],
         singleTypes: [],

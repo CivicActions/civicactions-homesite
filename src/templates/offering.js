@@ -279,7 +279,11 @@ query offeringQuery {
   allStrapiOffering {
     nodes {
       id
-      Body
+      Body {
+        data {
+            Body
+        }
+      }
       CTA {
         Header
         body
@@ -297,7 +301,6 @@ query offeringQuery {
         Content_Element
         Numerical_Element
       }
-      Summary
       Title
       client_logo {
         text
@@ -314,7 +317,11 @@ query offeringQuery {
       }
       text_section {
         Header
-        body
+        body {
+          data {
+            body
+          }
+        }
         button {
           button_link
           button_text
@@ -322,7 +329,11 @@ query offeringQuery {
       }
       FAQ_Accordion_Section {
         list_questions {
-          body
+          body {
+            data {
+              body
+            }
+          }
           question
         }
       }
@@ -348,7 +359,11 @@ query offeringQuery {
         }
       }
       team_members {
-        Body
+        Body {
+          data {
+            Body
+          }
+        }
         Name
         Role
         Linkedin
@@ -361,7 +376,11 @@ query offeringQuery {
         OGDescription
         OGTitle
         OGImage {
-          url
+          childImageSharp {
+            gatsbyImageData(
+              width: 1200
+            )
+          }
         }
       }
     }

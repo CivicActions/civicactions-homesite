@@ -1,5 +1,6 @@
 import '../sass/styles.scss';
 import React, { useEffect, useRef } from 'react';
+import { StaticImage } from "gatsby-plugin-image";
 import HomepageLayout from '../layouts/homepage';
 import Card from '../components/card.js';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
@@ -261,7 +262,7 @@ const HomePage = () => {
               <LinkButton src='/team' type='primary' text='Meet our team' />
             </div>
             <div className='team-picture-column'>
-              <img src='../files/images/home-team-img.webp' alt='Large group of smiling CivicActions team members on a video call.' />
+              <StaticImage src='../files/images/home-team-img.webp' alt='Large group of smiling CivicActions team members on a video call.' />
             </div>
           </div>
         </div>

@@ -1,3 +1,6 @@
+const path = require("path")
+const { paginate } = require('gatsby-awesome-pagination');
+
 exports.onPreBuild = () => {
   // This writes a CSS file for use with our external Greenhouse jobs pages.
   // A custom prebuild step is needed so that we get a fixed URL to point to.
@@ -41,7 +44,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(
     `
       {
-        pressReleases: allStrapiPressRelease {
+        pressReleases: allStrapiPressRelease(sort: {fields: Date, order: DESC}) {
           edges {
             node {
               Path
@@ -141,7 +144,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
   createRedirect({
     fromPath: "/case-study/usva",
-    toPath: "/case-studies/usva-open-data",
+    toPath: "/case-studies",
     isPermanent: true,
     redirectInBrowser: true,
   })
@@ -212,6 +215,26 @@ exports.createPages = async ({ graphql, actions }) => {
     });
 
   });
+  const pressReleases = result.data.pressReleases.edges;
+  const PressTemplate = require.resolve('./src/templates/press-release.js');
+  pressReleases.forEach((pressRelease, index) => {
+    createPage({
+      path: `${pressRelease.node.Path}`,
+      component: PressTemplate,
+      context: {
+        pagePath: pressRelease.node.Path,
+      },
+    });
+
+  });
+  // Create pagination
+  paginate({
+    createPage,
+    items: pressReleases,
+    itemsPerPage: 5,
+    pathPrefix: '/press',
+    component: path.resolve('src/templates/press.js')
+  })
   // const staffProfiles = result.data.staffProfiles.edges;
   // const StaffProfileTemplate = require.resolve(
   //   './src/templates/staff-profile.js'
