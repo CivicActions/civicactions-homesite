@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `CivicActions | Open and Agile Digital Government Services`,
@@ -70,8 +74,8 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://v4.civicactions-content.app.civicactions.net`,
-        accessToken: `4a58b625ec4a6fe4b913d3f2b9d6ff1e32b67b6e2be756e8415626105f03ca191b26d760828cd810fb69bc6151cf95dc82bd2c2c168965e75e641263c06b531cc7e77a3427e48aef7159aac46e7a2b1a220a58514eeee80bbf0bb056e1eb8c3b1c09613ff9b128e769cc4f4ec01ed599dd0bf2188bf7cd82d3dfaa10bc27d275`,
+        apiURL: process.env.STRAPI_API_URL,
+        accessToken: process.env.STRAPI_TOKEN,
         queryLimit: 5000,
         collectionTypes: [
           {
