@@ -18,11 +18,11 @@ jobs:
         with:
           name: sbom.json
       - name: Upload SBOM to DependencyTrack
-        run: |
-          curl -sS -X "POST" "https://dependencytrack.cicd.civicactions.net/api/v1/bom" \
-              -H "Content-Type: multipart/form-data" \
-              -H "X-Api-Key: ${{ secrets.DEPENDENCYTRACK_APIKEY }}" \
-              -F "projectName=CivicActions Homesite" \
-              -F "projectVersion=main" \
-              -F "bom=@sbom.json" > /dev/null
-        shell: bash
+        uses: DependencyTrack/gh-upload-sbom@v1.0.0
+        with:
+          serverhostname: 'dependencytrack.cicd.civicactions.net'
+          apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
+          projectname: 'CivicActions Homesite'
+          projectversion: 'main'
+          bomfilename: sbom.json
+
