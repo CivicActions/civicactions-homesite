@@ -16,10 +16,11 @@ jobs:
           artifact-name: sbom.json
       - uses: actions/upload-artifact@v3
         with:
+          name: sbom
           path: sbom.json
       - uses: actions/download-artifact@v3
         with:
-          path: sbom.json
+          name: sbom
       - name: Upload SBOM to DependencyTrack
         uses: DependencyTrack/gh-upload-sbom@v1.0.0
         with:
