@@ -22,6 +22,7 @@ jobs:
         with:
           serverhostname: 'dependencytrack.cicd.civicactions.net'
           apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
-          project: '1990d0fd-1aa5-47c5-9875-ae0ccf48e4ce'
+          projectname: 'CivicActions Homesite'
+          projectversion: 'main'
           bomfilename: sbom.json
 
