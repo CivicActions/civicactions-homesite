@@ -283,7 +283,7 @@ const ServicesPage = ({ data }) => {
                 track metrics, and power useful apps.
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
-              <div className='body'>Centers for Medicare and Medicaid Services</div>
+              <div className='body'>Centers for Medicare and Medicaid Services (CMS)</div>
               <div className='body-large'>
                 Supporting government transparency
               </div>
