@@ -283,15 +283,15 @@ const ServicesPage = ({ data }) => {
                 track metrics, and power useful apps.
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
-              <div className='body'>City of Louisville</div>
+              <div className='body'>Centers for Medicare and Medicaid Services (CMS)</div>
               <div className='body-large'>
-                Supporting local government transparency
+                Supporting government transparency
               </div>
               <div className='body'>
-                Georgia Board of Healthcare Workforce
+                We empower federal agencies like CMS to reinstate ownership of their data on open data platforms and are working toward a future in which more public data accessibility can become a reality.
               </div>
-              <Link to='/case-studies/georgia-workforce-open-data' className='body-large'>
-                Open data dashboards to serve healthcare workers in Georgia
+              <Link to='https://openpaymentsdata.cms.gov/' className='body-large'>
+                Open data to search payments made by drug and medical device companies to medical providers
               </Link>
               <div className='cta'>
                 <h3 className='h4'> How we can help you</h3>
