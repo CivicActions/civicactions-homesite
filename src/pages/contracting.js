@@ -5,8 +5,15 @@ import PrimaryPageCTA from '../components/primary-page-cta.js';
 import ContractVehicle from '../components/contract-vehicle';
 import ContractVehiclePdf from '../components/contract-vehicle-pdf';
 import WorkAwards from '../components/work-awards';
+import Card from '../components/card.js';
 import { Link } from 'gatsby';
 import SEO from '../components/seo';
+import dataServicesIcon from '../files/icons/data-services-icon.svg';
+import itModernizationIcon from '../files/icons/it-modernization-icon.svg';
+import productDesignIcon from '../files/icons/product-design-icon.svg';
+import securityComplianceIcon from '../files/icons/security-compliance-icon.svg';
+import webCmsIcon from '../files/icons/web-cms-icon.svg';
+import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 import cio from '../files/images/client-logos/cio.svg';
 import dgs from '../files/images/client-logos/dgs.svg';
 import doi from '../files/images/client-logos/doi.svg';
@@ -27,19 +34,55 @@ const ContractingPage = () => {
         <div className='inner'>
           <h1>Your strategic partner for modernizing government services</h1>
           <p className='body'>
-            We apply Agile and DevOps, open source software, and human-centered design to elevate digital platforms for organizations serving the public. As an <strong>innovative small business</strong>, we solve long-standing modernization challenges by creating automated compliance models for system security plans and bringing <strong>accessibility to the forefront</strong> of design and development. Let’s work together to make government services that <strong>build public trust.</strong>
+            We help the government deliver better public services through <strong>open technology and design</strong>. With expertise in digital accessibility, free and open source software, and human-centered design, we are committed to using technology to help <strong>build a world that works for all</strong>.
           </p>
         </div>
-
       </div>
+      <section className='contracting--services-section'>
+        <div className='inner'>
+          <h2>Our Expertise</h2>
+          <div className='service-cards-grid'>
+            <Card
+              title='Web & CMS'
+              icon={webCmsIcon}
+              link='/services#web-cms'
+            />
+            <Card
+              title='IT & Service Modernization'
+              icon={itModernizationIcon}
+              link='/services#service-modernization'
+            />
+            <Card
+              title='Product & Design'
+              icon={productDesignIcon}
+              link='/services#product-design'
+            />
+            <Card
+              title='Security & Compliance'
+              icon={securityComplianceIcon}
+              link='/services#security-compliance'
+            />
+            <Card
+              title='Data Services'
+              icon={dataServicesIcon}
+              link='/services#data-services'
+            />
+            <Card
+              title='Workforce Development'
+              icon={workforceDevelopmentIcon}
+              link='/services#workforce-development'
+            />
+          </div>
+        </div>
+      </section>
       <section className='section--contracting-vehicles'>
         <h2>Contracting vehicles</h2>
         <div className='inner'>
           <ContractVehiclePdf
             icon={gsa}
             alt='GSA logo'
-            name='GSA MAS'
-            info='General Services Administration Multiple Award Schedule (prime)'
+            name='GSA Multiple Award Schedule'
+            info='<ul><li>IT Professional Services (SIN 54151S)</li><li>Health IT Services (SIN 54151HEAL)</li><li>Cloud Computing and Cloud Related IT Professional Services (SIN 518210C)</li></ul>'
             contract='Contract number: GS-35F-337BA'
             link={gsaPdf}
           />
@@ -53,9 +96,9 @@ const ContractingPage = () => {
           />
           <ContractVehicle
             icon={govuk}
-            alt='GOV.UK logo'
-            name='GOV.UK Digital Marketplace G-Cloud'
-            info='Framework agreement: RM1557.12'
+            alt='Department of the Interior logo'
+            name='Department of the Interior, Drupal Developer Support Services BPA'
+            info=''
             link='https://www.digitalmarketplace.service.gov.uk/g-cloud/supplier/708558'
           />
           <ContractVehicle
@@ -88,21 +131,34 @@ const ContractingPage = () => {
           <div className='company-data list--wrapper'>
             <h2>Company data</h2>
             <ul className='body'>
-              <li>DUNS: 022112930</li>
+              <li>CivicActions, Inc.</li>
+              <li>GSA Schedule: GS-35F-337BA</li>
+              <ul>
+                <li>Professional Services, Health IT and Cloud</li>
+              </ul>
+              <li>UEI: XSZFHRS5QFL5</li>
               <li>CAGE Code: 65FK1</li>
-              <li>NAICS Codes: 519190, 541511, 541512, 541513, 541519</li>
+              <li>NAICS Codes: 541511, 541512, 541513, 541519</li>
+              <li>Founded: 2004 (California)</li>
+              <li>Incorporated: 2010 (California)</li>
+              <li>Partnership POC: <a href="mailto:sales@civicactions.com">sales@civicactions.com</a></li>
               <li>Standard Product Code: 80101507</li>
               <li>
                 Certified Small Business (Micro), State of California DGS, No.
                 2003474
               </li>
-              <li>Incorporated: 2004 (California)</li>
-              <li>CivicActions Digital Service ULC (Canadian entity)</li>
+              <li>Canadian</li>
+              <ul>
+                <li>CivicActions Digital Service ULC (Canadian entity)</li>
+                <li>Canadian POC: <a href="mailto:ca-canada@civicactions.com">ca-canada@civicactions.com</a></li>
+              </ul>
             </ul>
           </div>
           <div className='differentiators list--wrapper'>
             <h2>Differentiators</h2>
             <ul className='body'>
+              <li>65 Drupal developers, with 16 Acquia certifications</li>
+              <li>20 W3C edX Accessibility certifications</li>
               <li>
                 Founding members of{' '}
                 <a href='https://digitalservicescoalition.org/#/' className='external-link-white'>
@@ -134,11 +190,6 @@ const ContractingPage = () => {
               <li>
                 Core maintainers of the open source open data platform{' '}
                 <a href='https://getdkan.org/' className='external-link'>DKAN</a>
-              </li>
-              <li>
-                Named to{' '}
-                <a href='https://www.govtech.com/100/2021' className='external-link-white'>GovTech 100</a> list
-                five years in a row, 2017 - 2021
               </li>
             </ul>
           </div>

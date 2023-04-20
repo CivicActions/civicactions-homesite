@@ -8,7 +8,7 @@ const ContactVehiclePdf = ({ icon, alt, name, info, contract, period, link }) =>
 
             <div className='contracting--logo'><img src={icon} alt={alt}/></div>
                 <h3>{name}</h3>
-                <p className='body'>{info}</p>
+                <p className='body' dangerouslySetInnerHTML={{__html: info}}></p>
                 {contract && <p className='body'>{contract}</p>}
                 {period && <p className='body'>{period}</p>}
                 {link && <a href={link}>View details (PDF)</a>}
