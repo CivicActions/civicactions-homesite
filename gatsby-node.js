@@ -282,6 +282,10 @@ exports.sourceNodes = ({ actions }) => {
       title: String,
       link: String
     }
+    type GreenhouseJob implements Node {
+      title: String,
+      absolute_url: String
+    }
   `
   createTypes(typeDefs)
 }
