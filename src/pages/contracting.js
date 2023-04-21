@@ -14,14 +14,7 @@ import productDesignIcon from '../files/icons/product-design-icon.svg';
 import securityComplianceIcon from '../files/icons/security-compliance-icon.svg';
 import webCmsIcon from '../files/icons/web-cms-icon.svg';
 import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
-import cio from '../files/images/client-logos/cio.svg';
-import dgs from '../files/images/client-logos/dgs.svg';
-import doi from '../files/images/client-logos/doi.svg';
-import govuk from '../files/images/client-logos/govuk.svg';
-import gsa from '../files/images/client-logos/gsa.svg';
-import gsaPdf from '../files/GMAS-contract-schedule.pdf';
-import cmasPdf from '../files/CMAS-contract-schedule.pdf';
-import library from '../files/images/client-logos/library.svg';
+// import library from '../files/images/client-logos/library.svg';
 
 const ContractingPage = () => {
   return (
@@ -73,57 +66,6 @@ const ContractingPage = () => {
               link='/services#workforce-development'
             />
           </div>
-        </div>
-      </section>
-      <section className='section--contracting-vehicles'>
-        <h2>Contracting vehicles</h2>
-        <div className='inner'>
-          <ContractVehiclePdf
-            icon={gsa}
-            alt='GSA logo'
-            name='GSA Multiple Award Schedule'
-            info='<ul><li>IT Professional Services (SIN 54151S)</li><li>Health IT Services (SIN 54151HEAL)</li><li>Cloud Computing and Cloud Related IT Professional Services (SIN 518210C)</li></ul>'
-            contract='Contract number: GS-35F-337BA'
-            link={gsaPdf}
-          />
-          <ContractVehiclePdf
-            icon={dgs}
-            alt='California Department of General Services logo'
-            name='CMAS'
-            info='California Multiple Award Schedule (prime)'
-            contract='Contract number: 3-16-70-3298A'
-            link={cmasPdf}
-          />
-          <ContractVehicle
-            icon={govuk}
-            alt='Department of the Interior logo'
-            name='Department of the Interior, Drupal Developer Support Services BPA'
-            info=''
-            link='https://www.digitalmarketplace.service.gov.uk/g-cloud/supplier/708558'
-          />
-          <ContractVehicle
-            icon={doi}
-            alt='Library of Congress logo'
-            name='LOC IDIQ'
-            info='Library of Congress Agile Development and System Integration Modernization (subcontractor to Ad Hoc)'
-            contract='Contract number: LCLOC20D0013'
-          />
-          <ContractVehicle
-            icon={cio}
-            alt='NIH Information Technology Acquisition and Assessment Center and Chief Information Officer Solutions and Partners 3 logo'
-            name='CIO SP3 (RIVA)'
-            info='Chief Information Officer - Solutions and Partners 3'
-            contract='Contract number: 75N98120D00070'
-            link='https://nitaac.nih.gov/services/cio-sp3'
-          />
-          <ContractVehicle
-            icon={library}
-            alt='U.S. Department of the Interior logo'
-            name='DOI IDIQ'
-            info='Drupal Web Developer BPA'
-            contract='Contract number: 140D0419A0010'
-            period='Contract period: 02/06/2019  - 11/30/2023'
-          />
         </div>
       </section>
       <section className='section--company-data-diff'>
@@ -184,7 +126,7 @@ const ContractingPage = () => {
               </li>
               <li>
                 Founders of{' '}
-                <a href='https://www.agilegovleaders.org/' className='external-link-white'>AGL Association</a>{' '}
+                <a href='https://www.publicgood.tech/' className='external-link-white'>Technologists for the Public Good</a>{' '}
                 to support government innovators
               </li>
               <li>
@@ -195,63 +137,27 @@ const ContractingPage = () => {
           </div>
         </div>
       </section>
-      <section className='section--recent-work-awards'>
+      <div className='hero-component'>
         <div className='inner'>
-          <h2>Recent work and contract awards</h2>
-          <div>
-            <div className='year'>2021</div>
-            <div className='content'>
-              <WorkAwards
-                client='U.S. Department of Education'
-                title='Improvement of systems for advancing adult literacy'
-                link='/press/2021-05-11-civicactions-wins-department-of-ed-recompete'
-              />
-              <WorkAwards
-                client='National Science Foundation'
-                title='Ongoing support and improvement of federal science research website'
-                link='/press/2021-05-03-civicactions-wins-nsf-recompete'
-              />
-            </div>
-          </div>
-          <div>
-            <div className='year'>2020</div>
-            <div className='content'>
-              <WorkAwards
-                client='DistributedGov'
-                title='Remote / telework training and consulting'
-                link='https://distributedgov.com/news/distributedgov-launches'
-                classname='external-link'
-              />
-              <WorkAwards
-                client='U.S. Digital Service / Office of Federal Procurement Policy'
-                title='Certified small business provider of DITAP program training'
-                link='/press/2020-08-14-civicactions-certified-to-deliver-ditap'
-              />
-              <WorkAwards
-                client='Centers for Medicare and Medicaid Services'
-                title='Agile development website modernization and open data migration'
-                link='/press/2020-03-02-civicactions-wins-cms-contract'
-              />
-            </div>
-          </div>
-          <div>
-            <div className='year'>2019</div>
-            <div className='content'>
-              <WorkAwards
-                client='Centers for Medicare and Medicaid Services'
-                title='Design challenge to improve health care experience for seniors'
-                link='/case-studies/cms-design-challenge-mvp'
-              />
-              <WorkAwards
-                client='U.S. Department of Veterans Affairs'
-                title='VA.gov modernization using Drupal and human-centered design'
-                link='/case-studies/va-cms-modernization'
-              />
-            </div>
-          </div>
+          <h2>Contracting Vehicles (Prime)</h2>
+          <p className='body'>
+          <ul>
+            <li>GSA Multiple Award Schedule
+              <ul>
+                <li>IT Professional Services (SIN 54151S)</li>
+                <li>Health IT Services (SIN 54151HEAL)</li>
+                <li>Cloud Computing and Cloud Related IT Professional Services (SIN 518210C)</li>
+              </ul>
+            </li>
+            <li>State of California, Technology, Digital and Data Consulting Master Service Agreement</li>
+            <li>State of California Multiple Award Schedule</li>
+            <li>Department of the Interior, Drupal Developer Support Services BPA</li>
+            <li>State of Colorado, Agile Vendor Pool</li>
+            <li>Department of Veterans Affairs, Federal Acquisition Certification IDIQ</li>
+          </ul>
+          </p>
         </div>
-      </section>
-
+      </div>
       <PrimaryPageCTA
         title='Let’s build a public success story.'
         subtitle='Get in touch to start.'
