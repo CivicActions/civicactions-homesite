@@ -2,9 +2,7 @@ import '../sass/styles.scss';
 import React from 'react';
 import RedLayout from '../layouts/red';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
-import ContractVehicle from '../components/contract-vehicle';
-import ContractVehiclePdf from '../components/contract-vehicle-pdf';
-import WorkAwards from '../components/work-awards';
+import ClientsSection from '../components/clients.js';
 import Card from '../components/card.js';
 import { Link } from 'gatsby';
 import SEO from '../components/seo';
@@ -14,7 +12,6 @@ import productDesignIcon from '../files/icons/product-design-icon.svg';
 import securityComplianceIcon from '../files/icons/security-compliance-icon.svg';
 import webCmsIcon from '../files/icons/web-cms-icon.svg';
 import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
-// import library from '../files/images/client-logos/library.svg';
 
 const ContractingPage = () => {
   return (
@@ -137,6 +134,7 @@ const ContractingPage = () => {
           </div>
         </div>
       </section>
+      <ClientsSection />
       <div className='hero-component'>
         <div className='inner'>
           <h2>Contracting Vehicles (Prime)</h2>
