@@ -2,7 +2,7 @@ name: Scan packages and upload SBOM
 'on':
   push:
     branches:
-      #      - main
+      - main
 
 jobs:
   upload_sbom:
@@ -25,4 +25,3 @@ jobs:
           projectname: 'CivicActions Homesite'
           projectversion: 'main'
           bomfilename: sbom.json
-
