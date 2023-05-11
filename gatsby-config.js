@@ -25,8 +25,8 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         sitemap: 'https://civicactions.com/sitemap/sitemap-index.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
     },
     {
       resolve: `@danbruegge/gatsby-plugin-stylelint`,
@@ -37,7 +37,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-greenhouse-job-board',
       options: {
-        boardToken: 'civicactions'
+        boardToken: 'civicactions',
       },
     },
     `gatsby-plugin-node-fields`,
@@ -46,26 +46,36 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-webfonts',
       options: {
-          fonts: {
-              google: [
-                  {
-                      family: 'Nunito',
-                      variants: ['300', '400', '600', '700']
-                  },
-                  {
-                      family: 'Work Sans',
-                      variants: ['300', '400', '600', '700']
-                  },
-              ]
-          }
-      }
+        fonts: {
+          google: [
+            {
+              family: 'Nunito',
+              variants: ['300', '400', '600', '700'],
+            },
+            {
+              family: 'Work Sans',
+              variants: ['300', '400', '600', '700'],
+            },
+          ],
+        },
+      },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: 'UA-1170467-1',
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          'UA-1170467-1', // Old UA ID - can be removed at some point in the future
+          '5201178813', // GA4 Stream ID
+          'G-Y5EFTNKK2G', // GA4 Measurement ID
+        ],
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: false,
+          // Setting this parameter is also optional
+          respectDNT: true,
+        },
       },
     },
     {
@@ -80,7 +90,6 @@ module.exports = {
           `general`,
           `press-release`,
           `staff-profile`,
-
         ],
         singleTypes: [],
       },
