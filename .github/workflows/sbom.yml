@@ -1,0 +1,28 @@
+name: Scan packages and upload SBOM
+'on':
+  push:
+    branches:
+      - main
+
+jobs:
+  upload_sbom:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Generate SBOM using Syft
+        uses: anchore/sbom-action@v0.13.3
+        with:
+          format: cyclonedx-json
+          artifact-name: sbom.json
+      - uses: actions/download-artifact@v3
+        with:
+          name: sbom.json
+      - name: Upload SBOM to DependencyTrack
+        run: |
+          curl -sS -X "POST" "https://dependencytrack.cicd.civicactions.net/api/v1/bom" \
+            -H "Content-Type: multipart/form-data" \
+            -H "X-Api-Key: ${{ secrets.DEPENDENCYTRACK_APIKEY }}" \
+            -F "projectName=CivicActions Homesite" \
+            -F "projectVersion=main" \
+            -F "bom=@sbom.json" > /dev/null
+        shell: bash
