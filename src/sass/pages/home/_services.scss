@@ -1,16 +1,10 @@
-.home--services-section {
+.home--services-section,
+.contracting--services-section {
   position: relative;
   background-color: white;
 
   .background-wrapper {
-    height: 250px;
     background: $colors-grey-warm-4;
-  }
-
-  h2 {
-    color: $colors-grey-90;
-    margin-bottom: 32px;
-    padding-top: 64px;
   }
 
   .inner {
@@ -19,9 +13,14 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: -250px;
-
   }
+
+  h2 {
+    color: $colors-grey-90;
+    margin-bottom: 32px;
+    padding-top: 64px;
+  }
+
 
   .body-large {
     max-width: 780px;
@@ -101,6 +100,17 @@
     .primary-button {
       display: none;
     }
+  }
+}
+
+// Specific styles for the home page that relate to the inter-section design
+.home--services-section {
+  .background-wrapper {
+    height: 250px;
+  }
+
+  .inner {
+    margin-top: -250px;
   }
 }
 
