@@ -22,9 +22,9 @@ const ContractingPage = () => {
       />
       <div className='hero-component'>
         <div className='inner'>
-          <h1>Your strategic partner for modernizing government services</h1>
+          <h1>Let’s build a world that works for all.</h1>
           <p className='body'>
-            We help the government deliver better public services through <strong>open technology and design</strong>. With expertise in digital accessibility, free and open source software, and human-centered design, we are committed to using technology to help <strong>build a world that works for all</strong>.
+            We envision and deliver open source technology solutions enabling accessible, human-centered government services. With thought leaders in agile development, engineering, compliance and design, we invite you to join us in transforming enterprise digital platforms and creating modern applications impacting millions of Americans.
           </p>
         </div>
       </div>
