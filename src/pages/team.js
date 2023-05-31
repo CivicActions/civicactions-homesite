@@ -16,14 +16,15 @@ import '../sass/styles.scss';
 
 const TeamPage = () => {
   const data = useStaticQuery(graphql`
-    {
-      allStrapiStaffProfile(sort: {order: ASC, fields: Name}) {
-        nodes {
-          id
-          Name
-          Role
-          Path
-          Image {
+  {
+    allStrapiStaffProfile(sort: {order: ASC, fields: Name}) {
+      nodes {
+        id
+        Name
+        Role
+        Path
+        Image {
+          localFile {
             childImageSharp {
               gatsbyImageData(
                 width: 264
@@ -33,13 +34,14 @@ const TeamPage = () => {
               )
             }
           }
-          Category {
-            Category
-          }
+        }
+        Category {
+          Category
         }
       }
     }
-  `);
+  }
+`);
 
   const teamDataNodes = data.allStrapiStaffProfile.nodes;
   const [filterState, setFilterState] = useState(null);
