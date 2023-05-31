@@ -21,7 +21,8 @@ import FourOneKProgramIcon from '../files/icons/401k-program-icon.svg';
 import TimeOffIcon from '../files/icons/time-off-icon.svg';
 import RemoteLifeIcon from '../files/icons/remote-life-icon.svg';
 import AnnualUpgradesIcon from '../files/icons/annual-upgrades-icon.svg';
-import FamilyFriendly from '../files/icons/family-friendly-icon.svg';
+import 
+Friendly from '../files/icons/family-friendly-icon.svg';
 import FamilyPhoto from '../files/images/family-photo.png';
 import davidSumnerProfilePicture from '../files/images/david-sumner.jpg';
 import irisIbekweProfilePicture from '../files/images/iris-ibekwe.png';
@@ -251,7 +252,7 @@ const CareersPage = ({ location }) => {
             </div>
           </div>
           <p className='h5'>
-            If all goes well, we will answer any questions and welcome you to the CivicActions family!
+            If all goes well, we will answer any questions and welcome you to the CivicActions team!
           </p>
         </div>
       </section>
