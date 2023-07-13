@@ -185,7 +185,7 @@ const CareersPage = ({ location }) => {
           <h2 id='open-positions'>Open positions</h2>
           <p className='body'>
             We actively seek to broaden the diversity of our team, and strongly
-            encourage people from underrepresented groups to apply. Learn more about our non-discrimination policy <a href='/non-discrimination-policy-statement.pdf'>here. (PDF, 138 KB)</a>
+            encourage people from underrepresented groups to apply. Learn more about our <a className="policy-link" href='/non-discrimination-policy-statement.pdf'>non-discrimination policy. (PDF, 138 KB)</a>
           </p>
           <div className='jobs-grid'>
             {!greenhouseJob.length && (
