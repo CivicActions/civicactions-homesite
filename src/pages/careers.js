@@ -36,7 +36,7 @@ const CareersPage = ({ location }) => {
   // Pass source back to Greenhouse so we can track this.
   const params = new URLSearchParams(location.search);
   const greenhouseSource = params.get("gh_src");
-  const greenhouseLink = function(jobUrl, greenhouseSource) {
+  const greenhouseLink = function (jobUrl, greenhouseSource) {
     const url = new URL(jobUrl);
     if (greenhouseSource !== null) {
       url.searchParams.append("gh_src", greenhouseSource);
@@ -185,7 +185,7 @@ const CareersPage = ({ location }) => {
           <h2 id='open-positions'>Open positions</h2>
           <p className='body'>
             We actively seek to broaden the diversity of our team, and strongly
-            encourage people from underrepresented groups to apply.
+            encourage people from underrepresented groups to apply. Learn more about our non-discrimination policy <a href='/non-discrimination-policy-statement.pdf'>here. (PDF, 138 KB)</a>
           </p>
           <div className='jobs-grid'>
             {!greenhouseJob.length && (
