@@ -159,7 +159,7 @@ const HomePage = () => {
               hard problems and improve outcomes for government and the public.
             </p>
             <div className='teasers'>
-              <CaseStudyTeaser cases={cases} />
+              {/* <CaseStudyTeaser cases={cases} /> */}
 
               <div className='view-our-work-cta '>
                 <a href={'/case-studies/'}>

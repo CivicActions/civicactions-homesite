@@ -5,7 +5,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import RedLayout from '../layouts/red';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
 import whoWeArePicture from '../files/images/who-we-are.png';
-import Offering from '../components/offering.js';
+// import Offering from '../components/offering.js';
 import Video from '../components/video.js';
 import StaffQuote from '../components/staff-quote.js';
 import PressReleaseTeaser from '../components/press-release-teaser.js';
@@ -122,7 +122,7 @@ const CareersPage = ({ location }) => {
             healthy, and happy. Our work environment is designed to support your
             personal and professional growth.
           </p>
-          <div className='offerings-grid'>
+          {/* <div className='offerings-grid'>
             <Offering
               icon={HealthBenefitsIcon}
               title='Health benefits'
@@ -167,7 +167,7 @@ const CareersPage = ({ location }) => {
               responsibilities of working from home. (Kid and pet appearances
               on video calls are normal, too!)'
             />
-          </div>
+          </div> */}
           <img src={FamilyPhoto} alt='Several CivicActions team members on a video call with their kids and pets'></img>
         </div>
       </section>

@@ -81,6 +81,7 @@ module.exports = {
           {
             singularName: 'case-study',
             queryParams: {
+              publicationState: 'preview',
               // Populate all fields even nested query field
               populate: {
                 Title: '*',

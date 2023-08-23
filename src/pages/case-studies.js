@@ -21,7 +21,16 @@ const CaseStudyPage = () => {
         nodes {
           Title
           Cover_Image {
-            url
+            localFile {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 584
+                  height: 426
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
             alternativeText
             caption
           }

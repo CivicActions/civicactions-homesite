@@ -2,6 +2,7 @@ import '../sass/styles.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const CaseStudyTeaser = ({ cases }) => {
   return cases.map((item) => {
@@ -9,10 +10,7 @@ const CaseStudyTeaser = ({ cases }) => {
     return (
       <Link key={id} to={Path}>
         <div className={`wrapper--case-study--teaser ${Sort_Order} `}>
-          {Cover_Image.url ?
-            <img src={Cover_Image.url} alt={Cover_Image.alternativeText} /> : <div className='no-img-teaser'></div>
-          }
-
+          <GatsbyImage image={getImage(Cover_Image.localFile.childImageSharp.gatsbyImageData)} aria-label={Cover_Image.alternativeText} />
           <div className='teaser-content'>
             <div className='title-wrapper'>
               <span className='client-name'>{Client_Name}</span>

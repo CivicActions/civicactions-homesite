@@ -252,7 +252,13 @@ query CaseStudyQuery($pagePath: String!) {
           }
         }
         Cover_Image {
-          url
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                  width: 426
+              )
+            }
+          }
         }
         Hero_Image {
             url
@@ -301,8 +307,10 @@ query CaseStudyQuery($pagePath: String!) {
           Role
           Path
           Image {
-            childImageSharp {
-              gatsbyImageData(width: 264, height: 264, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            localFile {
+              childImageSharp {
+                gatsbyImageData(width: 264, height: 264, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+              }
             }
           }
         }
@@ -310,10 +318,12 @@ query CaseStudyQuery($pagePath: String!) {
           OGTitle
           OGDescription
           OGImage {
-            childImageSharp {
-              gatsbyImageData(
-                width: 1200
-              )
+            localFile {
+              childImageSharp {
+                gatsbyImageData(
+                    width: 1200
+                )
+              }
             }
           }
         }
