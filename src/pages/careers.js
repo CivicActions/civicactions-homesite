@@ -23,6 +23,9 @@ import RemoteLifeIcon from '../files/icons/remote-life-icon.svg';
 import AnnualUpgradesIcon from '../files/icons/annual-upgrades-icon.svg';
 import FamilyFriendly from '../files/icons/family-friendly-icon.svg';
 import FamilyPhoto from '../files/images/family-photo.png';
+import Award1 from '../files/images/compensation-2023-small.svg';
+import Award2 from '../files/images/happiness-2023-small.svg';
+import Award3 from '../files/images/perks-benefits-2023-small.svg';
 import davidSumnerProfilePicture from '../files/images/david-sumner.jpg';
 import irisIbekweProfilePicture from '../files/images/iris-ibekwe.png';
 import arrowIcon from '../files/icons/arrow-icon.svg';
@@ -167,6 +170,16 @@ const CareersPage = ({ location }) => {
               responsibilities of working from home. (Kid and pet appearances
               on video calls are normal, too!)'
             />
+            {/* If we continue to add/update these, it's probably worth making a new component for them. */}
+            <a class="award" href="https://www.comparably.com/companies/civicactions">
+              <img src={Award1} alt='CivicActions was named one of the top companies for compensation in 2023 by Comparably'></img>
+            </a>
+            <a class="award" href="https://www.comparably.com/companies/civicactions">
+              <img src={Award2} alt='CivicActions was named one of the top companies for happiness in 2023 by Comparably'></img>
+            </a>
+            <a class="award" href="https://www.comparably.com/companies/civicactions">
+              <img src={Award3} alt='CivicActions was named one of the top companies for perks and benefits in 2023 by Comparably'></img>
+            </a>
           </div>
           <img src={FamilyPhoto} alt='Several CivicActions team members on a video call with their kids and pets'></img>
         </div>
