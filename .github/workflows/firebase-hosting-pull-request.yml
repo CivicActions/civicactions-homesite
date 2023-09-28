@@ -32,7 +32,7 @@ jobs:
       - name: Yarn install
         run: 'yarn install --frozen-lockfile'
       - name: Build
-        run: yarn build
+        run: yarn build --verbose
         env:
           NODE_OPTIONS: '--max-old-space-size=4096 --openssl-legacy-provider'
       - uses: FirebaseExtended/action-hosting-deploy@v0
