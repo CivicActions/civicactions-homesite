@@ -30,7 +30,7 @@
     "gatsby-plugin-react-helmet": "^4.0.0",
     "gatsby-plugin-robots-txt": "^1.6.8",
     "gatsby-plugin-sass": "^4.0.1",
-    "gatsby-plugin-sharp": "^3.4.2",
+    "gatsby-plugin-sharp": "^3.14.2",
     "gatsby-plugin-sitemap": "^4.4.0",
     "gatsby-plugin-webfonts": "^2.2.2",
     "gatsby-remark-autolink-headers": "^4.3.0",
