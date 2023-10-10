@@ -290,9 +290,9 @@ const ServicesPage = ({ data }) => {
               <div className='body'>
                 We empower federal agencies like CMS to reinstate ownership of their data on open data platforms and are working toward a future in which more public data accessibility can become a reality.
               </div>
-              <Link to='https://openpaymentsdata.cms.gov/' className='body-large'>
+              <a href='https://openpaymentsdata.cms.gov/' className='body-large external-link'>
                 Open data to search payments made by drug and medical device companies to medical providers
-              </Link>
+              </a>
               <div className='cta'>
                 <h3 className='h4'> How we can help you</h3>
                 <ul>

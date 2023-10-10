@@ -1,3 +1,17 @@
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
+ */
+
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `CivicActions | Open and Agile Digital Government Services`,
@@ -15,12 +29,14 @@ module.exports = {
   },
   pathPrefix: `/civicactions-homesite`,
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-node-fields`,
+    `gatsby-plugin-client-side-redirect`,
+    `gatsby-remark-autolink-headers`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
@@ -38,26 +54,6 @@ module.exports = {
       resolve: 'gatsby-source-greenhouse-job-board',
       options: {
         boardToken: 'civicactions',
-      },
-    },
-    `gatsby-plugin-node-fields`,
-    `gatsby-plugin-client-side-redirect`,
-    `gatsby-remark-autolink-headers`,
-    {
-      resolve: 'gatsby-plugin-webfonts',
-      options: {
-        fonts: {
-          google: [
-            {
-              family: 'Nunito',
-              variants: ['300', '400', '600', '700'],
-            },
-            {
-              family: 'Work Sans',
-              variants: ['300', '400', '600', '700'],
-            },
-          ],
-        },
       },
     },
     {
@@ -79,19 +75,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-strapi`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        apiURL: `https://civicactions-content.civicactions-content.app.civicactions.net`,
-        queryLimit: 1000,
-        contentTypes: [
-          `case-study`,
-          `offering`,
-          `press`,
-          `general`,
-          `press-release`,
-          `staff-profile`,
-        ],
-        singleTypes: [],
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -103,5 +90,300 @@ module.exports = {
         icon: 'src/favicon.svg',
       },
     },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: process.env.STRAPI_API_URL,
+        accessToken: process.env.STRAPI_TOKEN,
+        queryLimit: 5000,
+        // https://docs.strapi.io/dev-docs/api/rest/populate-select#components--dynamic-zones
+        collectionTypes: [
+          {
+            singularName: 'case-study',
+            queryParams: {
+              publicationState: 'preview',
+              // Populate all fields even nested query field
+              populate: {
+                Title: '*',
+                Client_Name: '*',
+                Path: '*',
+                Promoted_to_Homepage: '*',
+                Related_Case_Studies: '*',
+                Cover_Image: '*',
+                Summary: '*',
+                Hero_Image: '*',
+                Stats: {
+                  populate: {
+                    Numerical_Element: '*',
+                    Content_Element: '*'
+                  },
+                },
+                Quote: {
+                  populate: {
+                    Quote: '*',
+                    Source: '*'
+                  },
+                },
+                Approach: {
+                  populate: {
+                    Title: '*',
+                    Text: '*',
+                    Image: '*'
+                  },
+                },
+                Key_Outcome: {
+                  populate: {
+                    Title: '*',
+                    Text: '*',
+                  },
+                },
+                staff_profiles: '*',
+                Challenge_Goal: {
+                  populate: {
+                    Challenge: '*',
+                    Client_Goal: '*',
+                  },
+                },
+                Expertise: {
+                  populate: {
+                    Expertise_Content: '*'
+                  },
+                },
+                Tools_Technologies: {
+                  populate: {
+                    Tools_Technologies_Content: '*'
+                  },
+                },
+                Sort_Order: '*',
+                Service_Category: {
+                  populate: {
+                    Category: '*',
+                  },
+                },
+                SEO: {
+                  populate: {
+                    OGTitle: '*',
+                    OGDescription: '*',
+                    OGImage: '*'
+                  }
+                }
+              },
+            },
+          }, {
+            singularName: 'offering',
+            queryParams: {
+              // Populate all fields even nested query field
+              populate: {
+                Title: '*',
+                hero_button: {
+                  populate: {
+                    button_text: '*',
+                    button_link: '*',
+                  },
+                },
+                client_logo: {
+                  populate: {
+                    text: '*',
+                    client_logo: '*',
+                  },
+                },
+                Stats: {
+                  populate: {
+                    Numerical_Element: '*',
+                    Content_Element: '*',
+                  },
+                },
+                value_prop: {
+                  populate: {
+                    header_text: '*',
+                    image: '*',
+                    text: '*',
+                  }
+                },
+                tabs: {
+                  populate: {
+                    tab_header: '*',
+                    tabs_section: {
+                      populate: {
+                        header: '*',
+                        body: '*',
+                      },
+                    },
+                    cta_tab: {
+                      populate: {
+                        header: '*',
+                        button_text: '*',
+                        button_link: '*',
+                      },
+                    },
+                  },
+                },
+                Quote: {
+                  populate: {
+                    Quote: '*',
+                    Source: '*',
+                  },
+                },
+                text_section: {
+                  populate: {
+                    Header: '*',
+                    button: {
+                      populate: {
+                        button_text: '*',
+                        button_link: '*',
+                      },
+                    },
+                    body: '*',
+                  },
+                },
+                FAQ_Accordion_Section: {
+                  populate: {
+                    list_questions: {
+                      populate: {
+                        questions: '*',
+                        body: '*',
+                      }
+                    },
+                  }
+
+                },
+                CTA: {
+                  populate: {
+                    Header: '*',
+                    body: '*',
+                    cta_button: {
+                      populate: {
+                        button_text: '*',
+                        button_link: '*',
+                      },
+                    },
+                  },
+                },
+                Body: '*',
+                Path: '*',
+                team_members: {
+                  populate: {
+                    Name: '*',
+                    Role: '*',
+                    Linkedin: '*',
+                    image: '*',
+                    Body: '*',
+                  },
+                },
+                SEO: {
+                  populate: {
+                    OGTitle: '*',
+                    OGDescription: '*',
+                    OGImage: '*',
+                  },
+                },
+              },
+            }
+          },
+          {
+            singularName: 'general',
+            queryParams: {
+              // Populate all fields even nested query field
+              populate: {
+                Title: '*',
+                Path: '*',
+                Hero_text: '*',
+                Body: '*',
+                SEO: {
+                  populate: {
+                    OGTitle: '*',
+                    OGDescription: '*',
+                    OGImage: '*',
+                  },
+                },
+              }
+            }
+          },
+          {
+            singularName: 'press-release',
+            queryParams: {
+              // Populate all fields even nested query field
+              populate: {
+                Title: '*',
+                Path: '*',
+                Body: '*',
+                Date: '*',
+                Link: '*',
+                Link_Text: '*',
+                Publication: '*',
+                Short_Description: '*',
+                SEO: {
+                  populate: {
+                    OGTitle: '*',
+                    OGDescription: '*',
+                    OGImage: '*',
+                  },
+                },
+              }
+            }
+          },
+          {
+            singularName: 'staff-profile',
+            queryParams: {
+              // Populate all fields even nested query field
+              populate: {
+                Path: '*',
+                Name: '*',
+                Personal_Pronouns: '*',
+                Image: '*',
+                Audio: '*',
+                Pronunciation: '*',
+                Role: '*',
+                Location: '*',
+                Quote: '*',
+                Social: {
+                  populate: {
+                    Title: '*',
+                    Url: '*'
+                  },
+                },
+                Specialty: {
+                  populate: {
+                    Specialty: '*',
+                  },
+                },
+                Body: '*',
+                case_study: '*',
+                Category: {
+                  populate: {
+                    Category: '*',
+                  },
+                },
+                SEO: {
+                  populate: {
+                    OGTitle: '*',
+                    OGDescription: '*',
+                    OGImage: '*',
+                  },
+                },
+              }
+            }
+          },
+        ],
+        singleTypes: []
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-webfonts',
+      options: {
+        fonts: {
+          google: [
+            {
+              family: 'Nunito',
+              variants: ['300', '400', '600', '700']
+            },
+            {
+              family: 'Work Sans',
+              variants: ['300', '400', '600', '700']
+            },
+          ]
+        }
+      }
+    },
   ],
-};
+}

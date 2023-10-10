@@ -17,20 +17,22 @@ import '../sass/styles.scss';
 const TeamPage = () => {
   const data = useStaticQuery(graphql`
     {
-      allStrapiStaffProfile(sort: {order: ASC, fields: Name}) {
+      allStrapiStaffProfile(sort: {Name: ASC}) {
         nodes {
           id
           Name
           Role
           Path
           Image {
-            childImageSharp {
-              gatsbyImageData(
-                width: 264
-                height: 264
-                placeholder: BLURRED
-                formats: [AUTO, WEBP, AVIF]
-              )
+            localFile {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 264
+                  height: 264
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
             }
           }
           Category {
@@ -122,7 +124,7 @@ const TeamPage = () => {
 const TeamTeasers = ({ team }) => {
   return team.map((person) => {
     const { id, Path, Name, Role, Image } = person;
-    return <TeaserGrid key={id} image={Image} name={Name} link={Path} title={Role} />;
+    return <TeaserGrid key={id} image={Image?.localFile} name={Name} link={Path} title={Role} />;
   });
 };
 
