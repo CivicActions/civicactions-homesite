@@ -2,10 +2,10 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on PR
-'on': pull_request
+"on": pull_request
 jobs:
   build_and_preview:
-    if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
+    if: "${{ github.event.pull_request.head.repo.full_name == github.repository }}"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -30,13 +30,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - name: Yarn install
-        run: 'yarn install --frozen-lockfile'
+        run: "yarn install --frozen-lockfile"
       - name: Build
         run: yarn build
         env:
-          NODE_OPTIONS: '--max-old-space-size=4096 --openssl-legacy-provider'
+          STRAPI_API_URL: "${{ secrets.STRAPI_API_URL }}"
+          STRAPI_TOKEN: "${{ secrets.STRAPI_TOKEN }}"
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CA_IT_PROD_HOME_5918 }}'
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_CA_IT_PROD_HOME_5918 }}"
           projectId: ca-it-prod-home-5918
