@@ -31,7 +31,7 @@ const Press = ({ data, location, pageContext }) => {
                 path={node.Path}
                 date={node.Date}
                 title={node.Title}
-                description={node.Short_Description}
+                description={node.Short_Description.data.Short_Description}
                 id={node.id}
               />
             )
@@ -61,6 +61,11 @@ export const pageQuery = graphql`
           Path
           Date
           id
+          Short_Description {
+            data {
+              Short_Description
+            }
+          }
         }
       }
     }
