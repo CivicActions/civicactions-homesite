@@ -60,8 +60,7 @@ const OfferingTemplate = ({ data }) => {
   //=== Get the list of all team members. (@todo: Place in a new component) ====
   let teamMemberList = offering.team_members.length ?
     offering.team_members.map((member, index) => (
-
-      <div key={member.id} className='related-staff'>
+      <div key={index} className='related-staff'>
         <img className='staff-image' src={member.image[0].url} aria-label={member.Name} />
         <div className='staff-info'>
           <h3 className='staff-name'>
@@ -98,8 +97,8 @@ const OfferingTemplate = ({ data }) => {
           <div className='inner'>
             <h2 className='body'>{offering.client_logo.text}</h2>
             <div className='grid' tabIndex='0'>
-              {offering.client_logo.client_logo.map((img) => (
-                <img key={img.id} src={img.url} alt={img.alternativeText} />
+              {offering.client_logo.client_logo.map((img, index) => (
+                <img key={index} src={img.url} alt={img.alternativeText} />
               ))}
             </div>
 
