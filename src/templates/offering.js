@@ -154,7 +154,7 @@ const OfferingTemplate = ({ data }) => {
                   {tab.tabs_section.map((section, index) => (
                     <div className='tab-section' key={index}>
                       <h3 className='h5'>{section.header}</h3>
-                      <ReactMarkdown className='body' children={section.body} />
+                      <ReactMarkdown className='body' children={section.body.data.body} />
                     </div>
                   ))}
                   <div className='cta-tab-section' >
@@ -347,7 +347,11 @@ query offeringQuery {
         }
         tab_header
         tabs_section {
-          body
+          body {
+            data {
+              body
+            }
+          }
           header
         }
       }
