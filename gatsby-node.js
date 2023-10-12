@@ -218,7 +218,7 @@ exports.createPages = async ({ graphql, actions }) => {
     component: path.resolve('src/templates/press.js')
   })
 
-  const staffProfiles = result.data.staffProfiles.edges;
+  /* const staffProfiles = result.data.staffProfiles.edges;
   const StaffProfileTemplate = require.resolve(
     './src/templates/staff-profile.js'
   );
@@ -230,7 +230,7 @@ exports.createPages = async ({ graphql, actions }) => {
         pagePath: profile.node.Path,
       },
     });
-  });
+  }); */
 
   const generalPages = result.data.general.edges;
   const GeneralTemplate = require.resolve(
