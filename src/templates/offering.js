@@ -347,11 +347,7 @@ query offeringQuery {
         }
         tab_header
         tabs_section {
-          body {
-            data {
-              body
-            }
-          }
+          body
           header
         }
       }
