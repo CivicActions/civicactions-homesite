@@ -101,8 +101,7 @@ module.exports = {
           {
             singularName: 'case-study',
             queryParams: {
-              publicationState: 'live', // only query published data
-              //publicationState: 'preview', // Populate all fields even nested query field
+              publicationState: process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
               populate: {
                 Title: '*',
                 Client_Name: '*',
@@ -171,6 +170,7 @@ module.exports = {
             },
           }, {
             singularName: 'offering',
+            publicationState: process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
             queryParams: {
               // Populate all fields even nested query field
               populate: {
@@ -282,6 +282,7 @@ module.exports = {
           },
           {
             singularName: 'general',
+            publicationState: process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
             queryParams: {
               // Populate all fields even nested query field
               populate: {
@@ -301,6 +302,7 @@ module.exports = {
           },
           {
             singularName: 'press-release',
+            publicationState: process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
             queryParams: {
               // Populate all fields even nested query field
               populate: {
@@ -324,6 +326,7 @@ module.exports = {
           },
           {
             singularName: 'staff-profile',
+            publicationState: process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
             queryParams: {
               // Populate all fields even nested query field
               populate: {
