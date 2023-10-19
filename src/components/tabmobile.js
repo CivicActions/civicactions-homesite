@@ -38,7 +38,7 @@ const TabMobile = ({ tabs }) => {
                     {tab.tabs_section.map((section, index) => (
                         <div className='tab-section' label={section.header} key={index}>
                             <h3 className='h5'>{section.header}</h3>
-                            <ReactMarkdown className='body' children={section.body}/>
+                            <ReactMarkdown className='body' children={section.body.data.body}/>
                         </div>
                     ))}
                     <div className='cta-tab-section' label={tab.cta_tab.header}>
