@@ -22,7 +22,7 @@ const PressTemplate = ({ data }) => {
 
         <div className='inner'>
           <div className='body'>
-            <ReactMarkdown className='body' children={Body} />
+            <ReactMarkdown className='body' children={Body.data.Body} />
           </div>
         </div>
       </div>
