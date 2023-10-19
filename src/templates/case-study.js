@@ -169,7 +169,7 @@ const CaseStudyTemplate = ({ data }) => {
           <div className='inner'>
             <h2>Meet the team</h2>
             <div className='related-staff--wrapper'>
-              {caseStudy.staff_profiles.map(({ node }, index) => (
+              {caseStudy.staff_profiles.sort((a, b) => a.Name.localeCompare(b.Name)).map(({ node }, index) => (
                 <div className='related-staff' key={index}>
                   {caseStudy.staff_profiles[index].Image &&
                     <GatsbyImage image={getImage(caseStudy.staff_profiles[index].Image.localFile)} alt={''} />
