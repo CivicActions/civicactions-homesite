@@ -1,6 +1,6 @@
 import '../sass/styles.scss';
 import React, { useEffect, useRef } from 'react';
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image";
 import HomepageLayout from '../layouts/homepage';
 import Card from '../components/card.js';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
@@ -9,6 +9,8 @@ import CaseStudyTeaser from '../components/case-study-teaser.js';
 import PressReleaseTeaser from '../components/press-release-teaser.js';
 import LinkButton from '../components/link-button';
 import SEO from '../components/seo';
+import { graphql, useStaticQuery } from "gatsby";
+import ExternalLinkButton from "../components/external-link-button";
 
 // Images
 import homeIntroGraphic from '../files/images/homepage-hero.png';
@@ -23,8 +25,6 @@ import securityComplianceIcon from '../files/icons/security-compliance-icon.svg'
 import webCmsIcon from '../files/icons/web-cms-icon.svg';
 import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 import arrowIcon from '../files/icons/arrow-icon.svg';
-import { graphql, useStaticQuery } from "gatsby";
-import ExternalLinkButton from "../components/external-link-button";
 
 const HomePage = () => {
   const fadersRef = useRef([]);
@@ -45,7 +45,10 @@ const HomePage = () => {
 
   const data = useStaticQuery(graphql`
     {
-      allStrapiCaseStudy(filter: {Promoted_to_Homepage: {eq: "True"}}, sort: {fields: Sort_Order}) {
+      allStrapiCaseStudy(
+        filter: {Promoted_to_Homepage: {eq: "True"}}
+        sort: {Sort_Order: ASC}
+      ) {
         nodes {
           Title
           Cover_Image {
@@ -59,7 +62,7 @@ const HomePage = () => {
           Service_Category {
             Category
           }
-          Featured
+          Promoted_to_Homepage
           Summary
           id
         }
@@ -160,7 +163,6 @@ const HomePage = () => {
             </p>
             <div className='teasers'>
               <CaseStudyTeaser cases={cases} />
-
               <div className='view-our-work-cta '>
                 <a href={'/case-studies/'}>
                   <img src={caseStudyTeaserImg3} alt='' className='bg'></img>

@@ -1,7 +1,7 @@
 import '../sass/styles.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby-link';
 import ReactMarkdown from "react-markdown";
 
 const PressReleaseGrid = ({ path, date, title, description, id }) => {

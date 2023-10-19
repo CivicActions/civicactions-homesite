@@ -24,17 +24,17 @@ const Press = ({ data, location, pageContext }) => {
       <section className='press-releases'>
         <div className='inner'>
 
-          {pressReleases.map(({ node }) => {
-              return (
-            <PressReleaseGrid
-              path={node.Path}
-              date={node.Date}
-              title={node.Title}
-              description={node.Short_Description}
-              id={node.id} />
-                )
-
-
+          {pressReleases.map(({ node }, index) => {
+            return (
+              <PressReleaseGrid
+                key={index}
+                path={node.Path}
+                date={node.Date}
+                title={node.Title}
+                description={node.Short_Description.data.Short_Description}
+                id={node.id}
+              />
+            )
           })}
           <Pagination pageContext={pageContext} />
         </div>
@@ -54,20 +54,20 @@ const Press = ({ data, location, pageContext }) => {
 
 export const pageQuery = graphql`
   query($skip: Int!, $limit: Int!) {
-    press: allStrapiPressRelease(
-      sort: {order: DESC, fields: Date}
-      limit: $limit
-      skip: $skip
-    ) {
-        edges {
-          node {
-            Title
-            Path
-            Date
-            Short_Description
-            id
+    press: allStrapiPressRelease(sort: {Date: DESC}, limit: $limit, skip: $skip) {
+      edges {
+        node {
+          Title
+          Path
+          Date
+          id
+          Short_Description {
+            data {
+              Short_Description
+            }
           }
         }
+      }
     }
   }
 `;

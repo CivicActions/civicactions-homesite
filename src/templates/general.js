@@ -12,8 +12,8 @@ const GeneralTemplate = ({ data }) => {
   return (
     <RedLayout>
         <SEO
-            title={generals.SEO.OGTitle}
-            description={generals.SEO.OGDescription}
+          title={generals.SEO.OGTitle}
+          description={generals.SEO.OGDescription}
         />
       <Hero
           title={generals.Title}
@@ -21,7 +21,7 @@ const GeneralTemplate = ({ data }) => {
       />
       <section className='section--general--body'>
           <div className='inner'>
-              <ReactMarkdown className='body' children={generals.Body}/>
+            <ReactMarkdown className='body' children={generals.Body.data.Body}/>
           </div>
       </section>
 
@@ -34,7 +34,11 @@ export const query = graphql`
     allStrapiGeneral {
       nodes {
         Hero_text
-        Body
+        Body {
+          data {
+            Body
+          }
+        }
         Path
         Title
         SEO {

@@ -171,13 +171,13 @@ const CareersPage = ({ location }) => {
               on video calls are normal, too!)'
             />
             {/* If we continue to add/update these, it's probably worth making a new component for them. */}
-            <a class="award" href="https://www.comparably.com/companies/civicactions">
+            <a className="award" href="https://www.comparably.com/companies/civicactions">
               <img src={Award1} alt='CivicActions was named one of the top companies for compensation in 2023 by Comparably'></img>
             </a>
-            <a class="award" href="https://www.comparably.com/companies/civicactions">
+            <a className="award" href="https://www.comparably.com/companies/civicactions">
               <img src={Award2} alt='CivicActions was named one of the top companies for happiness in 2023 by Comparably'></img>
             </a>
-            <a class="award" href="https://www.comparably.com/companies/civicactions">
+            <a className="award" href="https://www.comparably.com/companies/civicactions">
               <img src={Award3} alt='CivicActions was named one of the top companies for perks and benefits in 2023 by Comparably'></img>
             </a>
           </div>
@@ -209,7 +209,7 @@ const CareersPage = ({ location }) => {
               </div>
             )}
             {greenhouseJob.map(({ node }, index) => (
-              <div className='body job'>
+              <div className='body job' key={index}>
                 <a href={greenhouseLink(node.absolute_url, greenhouseSource)}>
                   <p>{node.title.replace("(Remote)", "").trim()}</p>
                   <img src={arrowIcon} alt='red right arrow icon'></img>

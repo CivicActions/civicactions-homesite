@@ -23,8 +23,7 @@ const Contact = () => {
       <SEO title='Contact' description='Get in touch.' />
       <Hero
         title='Put us to work'
-        description='We love solving hard problems. Tell us about your challenge or idea,
-                            and we’ll get in touch to discuss a plan of action.'
+        description='We love solving hard problems. Tell us about your challenge or idea, and we’ll get in touch to discuss a plan of action.'
       />
 
       <section className='contact--form'>

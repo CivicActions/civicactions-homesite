@@ -22,7 +22,7 @@ const PressTemplate = ({ data }) => {
 
         <div className='inner'>
           <div className='body'>
-            <ReactMarkdown className='body' children={Body} />
+            <ReactMarkdown className='body' children={Body.data.Body} />
           </div>
         </div>
       </div>
@@ -47,7 +47,11 @@ query PressQuery($pagePath: String!) {
     edges {
       node {
         Title
-        Body
+        Body {
+          data {
+            Body
+          }
+        }
         Date
         Path
       }
