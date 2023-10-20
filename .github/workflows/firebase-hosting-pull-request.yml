@@ -52,6 +52,7 @@ jobs:
       - build_and_deploy
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Lighthouse CI Action
         id: lighthouse
         uses: treosh/lighthouse-ci-action@v8
