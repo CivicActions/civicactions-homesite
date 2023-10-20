@@ -48,8 +48,7 @@ jobs:
             });
             core.setOutput('urls', urls.join('\n'));
   lighthouse:
-    needs:
-      - build_and_deploy
+    needs: build_and_deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -60,4 +59,4 @@ jobs:
           temporaryPublicStorage: true
           configPath: ./.lighthouserc.yml
           urls: |
-            ${{ steps.urls.outputs.urls }}
+            ${{ needs.build_and_deploy.outputs.urls }}
