@@ -269,6 +269,7 @@ const HomePage = () => {
         </div>
       </section>
       <PrimaryPageCTA
+        isHomePage={true}
         title='Let’s build a public success story.'
         subtitle='Get in touch to start.'
         primaryButtonText='Put us to work'

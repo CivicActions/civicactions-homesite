@@ -33,6 +33,8 @@ const Press = ({ data, location, pageContext }) => {
                 title={node.Title}
                 description={node.Short_Description.data.Short_Description}
                 id={node.id}
+                first={index === 0}
+                last={index === pressReleases.length - 1}
               />
             )
           })}

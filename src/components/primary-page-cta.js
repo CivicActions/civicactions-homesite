@@ -4,13 +4,14 @@ import PropTypes from 'prop-types';
 import LinkButton from '../components/link-button';
 
 const PrimaryPageCTA = ({
+  isHomePage = false,
   title,
   subtitle,
   primaryButtonText, primaryButtonLink,
   secondaryButtonText, secondaryButtonLink,
 }) => {
   return (
-      <section className='primary-page-cta'>
+      <section className={`primary-page-cta${isHomePage ? ' home' : ''}`}>
         <div className='inner'>
           <div className='cta-column primary-page-cta__text'>
 
@@ -38,6 +39,7 @@ const PrimaryPageCTA = ({
 export default PrimaryPageCTA;
 
 PrimaryPageCTA.propTypes = {
+  isHomePage: PropTypes.bool,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   primaryButtonText: PropTypes.string,

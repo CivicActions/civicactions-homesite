@@ -1,6 +1,20 @@
 .primary-page-cta {
   color: $colors-white;
-  background: $primary-red;
+  background: $primary-blue;
+
+  &.home {
+    background: $primary-red;
+
+    .button {
+      &:first-child {
+        @include primary-button($colors-white, $primary-red, $primary-red, $primary-red, $colors-white, $colors-white);
+      }
+  
+      &:last-child {
+        @include primary-button($primary-red, $colors-white, $colors-white, $colors-white, $primary-red, $primary-red);
+      }
+    }
+  }
 
   .inner {
     @include section-inner-padding;
@@ -32,11 +46,11 @@
     font-size: 18px;
 
     &:first-child {
-      @include primary-button($colors-white, $primary-red, $primary-red, $primary-red, $colors-white, $colors-white);
+      @include primary-button($colors-white, $primary-blue, $primary-blue, $primary-blue, $colors-white, $colors-white);
     }
 
     &:last-child {
-      @include primary-button($primary-red, $colors-white, $colors-white, $colors-white, $primary-red, $primary-red);
+      @include primary-button($primary-blue, $colors-white, $colors-white, $colors-white, $primary-blue, $primary-blue);
       margin-top: $small-spacing;
     }
   }

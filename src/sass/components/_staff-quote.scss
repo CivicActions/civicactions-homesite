@@ -29,6 +29,8 @@
     text-align: left;
     font-weight: 300;
     margin-top: 0;
+    color: $primary-blue;
+    font-weight: 700;
     @media(min-width: $medium-large-screen) {
       line-height: 39px;
     }
@@ -36,7 +38,7 @@
 
   .inner {
     position: relative;
-    max-width: 720px;
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
     //justify-content: space-between;
@@ -85,6 +87,12 @@
     }
     @media(min-width: $medium-large-screen) {
       margin-left: 32px;
+    }
+  }
+
+  &.no-img {
+    .quote {
+      margin-left: 0;
     }
   }
 
