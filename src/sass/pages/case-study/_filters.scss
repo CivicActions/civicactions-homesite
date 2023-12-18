@@ -43,7 +43,7 @@
         height: 21px;
         border: 1px solid #1B1B1B;
         content: "";
-        background: #FFF;
+        background: $colors-white;
       }
 
       input:checked::after {

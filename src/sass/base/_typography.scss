@@ -66,16 +66,16 @@ h6,
 }
 
 a {
-  color: $colors-mint-cool-60v;
+  color: $primary-red;
   text-decoration: underline;
   cursor: pointer;
 
   &:hover {
-    color: $colors-mint-cool-80v;
+    color: $gray-90;
   }
 
   &:active {
-    color: $colors-mint-cool-100v;
+    color: $primary-red;
   }
 }
 

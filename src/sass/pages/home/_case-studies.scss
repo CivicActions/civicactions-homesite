@@ -27,7 +27,7 @@
     bottom: -48px;
     height: 150px;
     width: 100%;
-    background: $colors-mint-cool-40v;
+    background: $colors-white;
 
     @media(min-width: $tablet-screen) {
       bottom: -8px;
@@ -48,8 +48,9 @@
 
   h2 {
     max-width: 1000px;
-    color: $colors-grey-90;
+    color: $primary-blue;
     font-weight: 300;
+    font-family: $primary-font;
     margin-bottom: 24px;
     @media(min-width: $medium-large-screen) {
       margin-bottom: 32px;
@@ -145,7 +146,7 @@
       padding: 40px;
       color: $colors-white;
       transition: 0.5s ease;
-      background-color: rgba(27, 27, 27, 0.8);
+      background-color: $primary-blue;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -153,19 +154,29 @@
       @media(min-width: $tablet-screen) {
         margin-bottom: 40px;
       }
+
+      &:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color .4s ease 0s;
+      }
+
+      &:hover:before {
+        background-color: rgba(0, 0, 0, 0.35);
+      }
     }
 
     &__icon {
       width: 50px;
       height: auto;
+      position: relative;
     }
 
     h3 {
       margin-right: 15px;
-    }
-
-    .content:hover {
-      background-color: rgba(27, 27, 27, 0.9);
+      position: relative;
     }
   }
 
@@ -254,6 +265,7 @@
 }
 
 .home--case-studies-section::before {
+  display: none;
   position: absolute;
   right: 0;
   left: 0;

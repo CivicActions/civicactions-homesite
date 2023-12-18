@@ -1,21 +1,16 @@
 .home--quote-section {
   color: $colors-grey-90;
   margin: 0;
-  padding-top: 48px;
-  @media(min-width: $tablet-screen) {
-    padding-top: 64px;
-  }
-  @media(min-width: $medium-large-screen) {
-    padding-top: 120px;
-  }
+  padding-top: 0px;
 
   .inner {
-    max-width: 750px;
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: 0 45px;
+    box-sizing: border-box;
   }
 
   img {
@@ -34,9 +29,10 @@
     h2 {
       font-size: 16px;
       line-height: 22px;
-      font-weight: 300;
-      font-family: $secondary-font;
+      font-weight: 700;
+      font-family: $primary-font;
       padding-bottom: 24px;
+      color: $primary-blue;
       @media(min-width: $tablet-screen) {
         font-size: 24px;
         line-height: 33px;
@@ -48,8 +44,9 @@
     }
 
     .body {
-      padding-bottom: 8px;
       font-weight: 300;
+      color: $primary-blue;
+      line-height: normal;
     }
   }
 

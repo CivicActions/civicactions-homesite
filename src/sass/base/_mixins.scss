@@ -138,12 +138,12 @@
 }
 
 // Button
-@mixin primary-button {
+@mixin primary-button($bg-color: $colors-red-50, $border-color: $colors-red-50, $txt-color: $colors-white, $hover-bg-color: $gray-90, $hover-border-color: $gray-90, $hover-txt-color: $colors-white) {
   align-items: center;
   padding: 12px 24px;
-  background-color: $colors-red-50;
-  border: 1px solid $colors-red-50;
-  color: $colors-white;
+  background-color: $bg-color;
+  border: 1px solid $border-color;
+  color: $txt-color;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -152,19 +152,21 @@
   font-family: $primary-font;
   text-transform: uppercase;
   text-decoration: none;
+  transition: background-color .4s ease 0s, color .4s ease 0s, border .4s ease 0s;
+
   @media(min-width: $tablet-screen) {
     font-size: 18px;
   }
 
   &:hover,
   &:focus {
-    background-color: $colors-red-60;
-    color: $colors-white;
-    border-color: $colors-red-60;
+    background-color: $hover-bg-color;
+    color: $hover-txt-color;
+    border-color: $hover-border-color;
   }
 
   &:active {
-    background-color: #6f3331;
+    /* background-color: #6f3331; */
   }
 
   &.large {

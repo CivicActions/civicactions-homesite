@@ -9,7 +9,7 @@
 //-- General Home page styles--
 .home--section {
   .button__primary {
-    //padding: 12px 44px;
+    @include primary-button($primary-blue, $colors-white, $colors-white, $colors-white, $primary-blue, $primary-blue);
     margin-bottom: 60px;
   }
 }

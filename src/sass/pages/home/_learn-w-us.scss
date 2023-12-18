@@ -2,11 +2,11 @@
   color: $colors-grey-90;
   margin-bottom: 60px;
   width: 100%;
-  background-color: $colors-grey-warm-4;
+  background-color: $primary-blue;
   padding-bottom: 0 !important;
 
   @media(min-width: $tablet-screen) {
-    background-color: transparent;
+    background-color: $primary-blue;
     position: relative;
   }
 
@@ -15,7 +15,7 @@
     background-color: $colors-grey-warm-4;
 
     @media(min-width: $tablet-screen) {
-      display: block;
+      display: none;
       height: 100%;
       width: 75%;
       position: absolute;
@@ -53,6 +53,7 @@
   h2 {
     margin-top: 48px;
     margin-bottom: 16px;
+    color: $colors-white;
     @media(min-width: $tablet-screen) {
       margin-top: 56px;
     }
@@ -64,6 +65,7 @@
 
   .body-large {
     margin-bottom: 32px;
+    color: $colors-white;
     @media(min-width: $tablet-screen) {
       margin-bottom: 40px;
     }
@@ -159,6 +161,7 @@
 
       h3 {
         margin: auto;
+        font-family: $primary-font;
         @media(min-width: $medium-large-screen) {
           width: auto;
         }

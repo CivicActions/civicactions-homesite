@@ -1,6 +1,6 @@
 .primary-page-cta {
   color: $colors-white;
-  background: #2d2e2f;
+  background: $primary-red;
 
   .inner {
     @include section-inner-padding;
@@ -31,7 +31,12 @@
     max-width: fit-content;
     font-size: 18px;
 
+    &:first-child {
+      @include primary-button($colors-white, $primary-red, $primary-red, $primary-red, $colors-white, $colors-white);
+    }
+
     &:last-child {
+      @include primary-button($primary-red, $colors-white, $colors-white, $colors-white, $primary-red, $primary-red);
       margin-top: $small-spacing;
     }
   }
