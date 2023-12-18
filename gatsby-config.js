@@ -381,8 +381,8 @@ module.exports = {
               variants: ['300', '400', '600', '700']
             },
             {
-              family: 'Work Sans',
-              variants: ['300', '400', '600', '700']
+              family: 'Merriweather',
+              variants: ['400', '700']
             },
           ]
         }
