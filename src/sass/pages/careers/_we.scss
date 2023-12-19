@@ -1,13 +1,13 @@
 .careers--we-section {
   width: 100%;
-  background-color: $colors-grey-warm-4;
+  background-color: $gray-10;
   margin-bottom: 0;
   padding-bottom: 48px;
   @media(min-width: $medium-large-screen) {
     background: linear-gradient(
                     $colors-white 15%,
-                    $colors-grey-warm-4 15%,
-                    $colors-grey-warm-4 75%,
+                    $gray-10 15%,
+                    $gray-10 75%,
                     $colors-white 75%);
   }
 
