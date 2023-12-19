@@ -5,7 +5,6 @@ import linkedinIcon from "../../files/icons/linkedin.svg";
 import linkedinIconBlue from "../../files/icons/linkedin-blue.svg";
 
 const Bio = ({ member }) => {
-  console.log(member)
   let singleMember = member ? member.map((single) => {
 
     let { id, image, Name, Role, Body, Linkedin } = single

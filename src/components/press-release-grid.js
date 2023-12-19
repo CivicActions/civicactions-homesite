@@ -5,7 +5,6 @@ import { Link } from 'gatsby-link';
 import ReactMarkdown from "react-markdown";
 
 const PressReleaseGrid = ({ path, date, title, description, id, first, last }) => {
-  console.log(last)
   return (
     <div className={`press-release--item${first ? ' first' : ''}${last ? ' last' : ''}`} key={id}>
       <span>News Release: {date}</span>
