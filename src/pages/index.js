@@ -182,7 +182,6 @@ const HomePage = () => {
       {/* ======== Quote Section ========== */}
       <section className='home--section home--quote-section'>
         <div className='inner'>
-          <img src={quotePatternGraphic} alt=''></img>
           <div className='quote'>
             <h2>
               “CivicActions always looked for the optimal solutions to difficult problems and improved constantly on delivered functionality. They responded with agility, creativity, and skill to any challenge that was thrown at them.”
@@ -270,6 +269,7 @@ const HomePage = () => {
         </div>
       </section>
       <PrimaryPageCTA
+        isHomePage={true}
         title='Let’s build a public success story.'
         subtitle='Get in touch to start.'
         primaryButtonText='Put us to work'

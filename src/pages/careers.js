@@ -269,7 +269,6 @@ const CareersPage = ({ location }) => {
         </div>
       </section>
       <section className='home--learn-w-us-section'>
-        <div className='grey-background'></div>
         <div className='inner'>
           <h2 style={{ marginBottom: 56 }}>Explore our culture</h2>
 

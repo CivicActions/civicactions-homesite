@@ -19,7 +19,7 @@
 
 @mixin header1 {
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 33.6px;
 
   font-size: 24px;
@@ -36,7 +36,7 @@
 @mixin header2 {
   font-size: 24px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 34px;
   text-align: left;
   font-family: $secondary-font;
@@ -54,7 +54,7 @@
 
 @mixin header3 {
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
 
@@ -71,7 +71,7 @@
 
 @mixin header4 {
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   @media screen and (min-width: $medium-screen) {
     font-size: 20px;
@@ -81,7 +81,7 @@
 
 @mixin header5 {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
   font-size: 24px;
   line-height: 34px;
 
@@ -98,7 +98,7 @@
 
 @mixin header6 {
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   line-height: 34px;
   font-family: $secondary-font;
@@ -138,33 +138,35 @@
 }
 
 // Button
-@mixin primary-button {
+@mixin primary-button($bg-color: $colors-red-50, $border-color: $colors-red-50, $txt-color: $colors-white, $hover-bg-color: $gray-90, $hover-border-color: $gray-90, $hover-txt-color: $colors-white) {
   align-items: center;
   padding: 12px 24px;
-  background-color: $colors-red-50;
-  border: 1px solid $colors-red-50;
-  color: $colors-white;
+  background-color: $bg-color;
+  border: 1px solid $border-color;
+  color: $txt-color;
   font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 18px;
   line-height: 34px;
   display: inline-block;
-  font-family: $secondary-font;
+  font-family: $primary-font;
   text-transform: uppercase;
   text-decoration: none;
+  transition: background-color .4s ease 0s, color .4s ease 0s, border .4s ease 0s;
+
   @media(min-width: $tablet-screen) {
     font-size: 18px;
   }
 
   &:hover,
   &:focus {
-    background-color: $colors-red-60;
-    color: $colors-white;
-    border-color: $colors-red-60;
+    background-color: $hover-bg-color;
+    color: $hover-txt-color;
+    border-color: $hover-border-color;
   }
 
   &:active {
-    background-color: #6f3331;
+    /* background-color: #6f3331; */
   }
 
   &.large {
