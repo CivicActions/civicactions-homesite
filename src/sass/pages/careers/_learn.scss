@@ -20,4 +20,8 @@
       height: 577px;
     }
   }
+
+  .button__primary {
+    @include primary-button($primary-blue, $colors-white, $colors-white, $colors-white, $primary-blue, $primary-blue)
+  }
 }

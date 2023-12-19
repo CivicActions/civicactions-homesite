@@ -90,7 +90,7 @@
           padding: 0;
           border: 0;
           font-size: 20px;
-          color: $colors-mint-cool-60v;
+          color: $primary-blue;
           text-decoration: underline;
           font-weight: 300 !important;
           background: none;
@@ -98,7 +98,7 @@
 
           &:hover,
           &:focus {
-            color: $colors-mint-cool-80v;
+            color: $secondary-blue;
           }
         }
       }

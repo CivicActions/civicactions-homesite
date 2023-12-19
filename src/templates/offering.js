@@ -193,10 +193,11 @@ const OfferingTemplate = ({ data }) => {
               overlayClassName="Overlay"
               aria-label="staff-modal-biography"
             >
-
               <Bio member={modalContent} closeModal={closeModal} />
-              <button onClick={closeModal}><img alt='close modal button' src={closeButton} /><p className='visually-hidden'>Close</p></button>
-
+              <button onClick={closeModal}>
+                <img alt='close modal button' src={closeButton} />
+                <p className='visually-hidden'>Close</p>
+              </button>
             </Modal>
           </section >
         }
