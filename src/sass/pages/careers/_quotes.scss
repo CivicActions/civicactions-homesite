@@ -3,14 +3,14 @@
   padding-top: 0 !important;
   padding-bottom: 48px !important;
   @media(min-width: $medium-large-screen) {
-    background-color: $gray-10;
+    background-color: $gray-05;
     padding-top: 76px !important;
     padding-bottom: 71px !important;
   }
 }
 
 .first-quote {
-  background-color: $gray-10;
+  background-color: $gray-05;
   @media(min-width: $tablet-screen) {
     background-color: $colors-white;
   }

@@ -12,7 +12,7 @@
 
   .background-color--wrapper {
     display: none;
-    background-color: $gray-10;
+    background-color: $gray-05;
 
     @media(min-width: $tablet-screen) {
       display: none;
@@ -204,7 +204,7 @@
     }
   }
   @media screen and (max-width: $medium-screen) {
-    background: $gray-10;
+    background: $gray-05;
     h2 {
       font-size: 26px;
       margin-top: 48px;
