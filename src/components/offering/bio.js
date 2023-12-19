@@ -5,6 +5,7 @@ import linkedinIcon from "../../files/icons/linkedin.svg";
 import linkedinIconBlue from "../../files/icons/linkedin-blue.svg";
 
 const Bio = ({ member }) => {
+  console.log(member)
   let singleMember = member ? member.map((single) => {
 
     let { id, image, Name, Role, Body, Linkedin } = single
@@ -19,7 +20,7 @@ const Bio = ({ member }) => {
               <img className='blue-icon' alt='blue linkedin icon' src={linkedinIconBlue}/>
           </a>
           <p className='body staff-role'>{Role}</p></div></div>
-        <div className='staff-body--wrapper'><p className='body staff-body'>{Body}</p></div>
+        <div className='staff-body--wrapper'><p className='body staff-body'>{Body.data.Body}</p></div>
       </div>
     )
   }) : null
