@@ -63,7 +63,7 @@ export const Head = ({ data }) => {
   const press = data.allStrapiPressRelease.edges[0].node;
   return (
     <SEO
-      title={Title}
+      title={press.Title}
       description='Press release from CivicActions'
     />
   )
