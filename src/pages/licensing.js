@@ -90,3 +90,7 @@ const LicensingPage = () => {
 };
 
 export default LicensingPage;
+
+export const Head = () => (
+  <SEO />
+);

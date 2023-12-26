@@ -263,3 +263,7 @@ const CaseStudyPage = () => {
   );
 };
 export default CaseStudyPage;
+
+export const Head = () => (
+  <SEO />
+);

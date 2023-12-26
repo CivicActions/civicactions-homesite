@@ -73,7 +73,6 @@ const HomePage = () => {
 
   return (
     <HomepageLayout>
-      <SEO title='Home' />
       <section className='home--hero-section'>
         <div className='inner'>
           <img
@@ -281,3 +280,7 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+export const Head = () => (
+  <SEO title='Home' />
+)

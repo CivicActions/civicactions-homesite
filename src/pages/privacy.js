@@ -201,3 +201,7 @@ const PrivacyPage = () => {
 };
 
 export default PrivacyPage;
+
+export const Head = () => (
+  <SEO />
+);

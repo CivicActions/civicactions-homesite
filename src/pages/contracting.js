@@ -167,3 +167,7 @@ const ContractingPage = () => {
 };
 
 export default ContractingPage;
+
+export const Head = () => (
+  <SEO />
+);

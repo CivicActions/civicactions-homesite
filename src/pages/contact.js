@@ -20,7 +20,6 @@ const Contact = () => {
 
   return (
     <RedLayout>
-      <SEO title='Contact' description='Get in touch.' />
       <Hero
         title='Put us to work'
         description='We love solving hard problems. Tell us about your challenge or idea, and we’ll get in touch to discuss a plan of action.'
@@ -89,3 +88,7 @@ const Contact = () => {
 };
 
 export default Contact;
+
+export const Head = () => (
+  <SEO title='Contact' description='Get in touch.' />
+);
