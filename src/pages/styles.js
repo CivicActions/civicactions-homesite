@@ -1,6 +1,7 @@
 import React from 'react';
 import '../sass/styles.scss';
 import GeneralLayout from '../layouts/general';
+import SEO from '../components/seo';
 
 // Styles just for the styleguide.
 const styleGuideStyles = {
