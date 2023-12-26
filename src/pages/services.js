@@ -22,10 +22,6 @@ const ServicesPage = ({ data }) => {
   }, []);
   return (
     <RedLayout>
-      <SEO
-        title='Services'
-        description='We use Agile and DevOps, open source software, and human-centered design to elevate government digital services.'
-      />
       <Hero
         title='Government services that build public trust'
         description='At its core, digital transformation is about improving the customer experience of government. We use thoughtful design and open source technologies to help you deliver modern public services that put people first. '
@@ -388,5 +384,8 @@ const ServicesPage = ({ data }) => {
 export default ServicesPage;
 
 export const Head = () => (
-  <SEO />
+  <SEO
+    title='Services'
+    description='We use Agile and DevOps, open source software, and human-centered design to elevate government digital services.'
+  />
 );

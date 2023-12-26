@@ -16,10 +16,6 @@ import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 const ContractingPage = () => {
   return (
     <RedLayout className='contracting-page'>
-      <SEO
-        title='Contracting information'
-        description='We are a Small Business helping government agencies make digital services that build public trust. Learn about contracting with us.'
-      />
       <div className='hero-component'>
         <div className='inner'>
           <h1>Let’s build a world<br />that works for all.</h1>
@@ -169,5 +165,8 @@ const ContractingPage = () => {
 export default ContractingPage;
 
 export const Head = () => (
-  <SEO />
+  <SEO
+    title='Contracting information'
+    description='We are a Small Business helping government agencies make digital services that build public trust. Learn about contracting with us.'
+  />
 );

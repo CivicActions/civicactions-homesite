@@ -9,10 +9,6 @@ import SEO from "../components/seo";
 const NotFoundPage = () => {
   return (
     <GeneralLayout>
-      <SEO
-          title='Page not found'
-          description='Sorry it seems the page you were looking for was not found.'
-      />
       <section className="not-found">
         <div className='inner'>
         <h1>404</h1>
@@ -48,5 +44,8 @@ const NotFoundPage = () => {
 export default NotFoundPage;
 
 export const Head = () => (
-  <SEO />
+  <SEO
+      title='Page not found'
+      description='Sorry it seems the page you were looking for was not found.'
+  />
 );
