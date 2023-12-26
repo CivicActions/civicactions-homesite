@@ -386,3 +386,7 @@ const ServicesPage = ({ data }) => {
 };
 
 export default ServicesPage;
+
+export const Head = () => (
+  <SEO />
+);

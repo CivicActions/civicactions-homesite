@@ -57,11 +57,6 @@ const SEO = ({ title, description, image, article, isExternalImage }) => {
 };
 
 export default SEO;
-
-export const Head = () => (
-  <SEO />
-)
-
 SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,

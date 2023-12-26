@@ -55,3 +55,7 @@ const FeedbackPage = () => {
 };
 
 export default FeedbackPage;
+
+export const Head = () => (
+  <SEO />
+);

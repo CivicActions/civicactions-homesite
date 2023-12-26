@@ -156,3 +156,7 @@ const FilterButtons = ({ team, parentCallback, filterState }) => {
 };
 
 export default TeamPage;
+
+export const Head = () => (
+  <SEO />
+);

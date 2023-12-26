@@ -28,3 +28,7 @@ const Register = () => {
 };
 
 export default Register;
+
+export const Head = () => (
+  <SEO />
+);

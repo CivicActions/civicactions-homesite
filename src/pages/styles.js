@@ -42,3 +42,7 @@ const StyleGuidePage = () => {
 };
 
 export default StyleGuidePage;
+
+export const Head = () => (
+  <SEO />
+);
