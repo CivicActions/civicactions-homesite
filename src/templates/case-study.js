@@ -10,21 +10,10 @@ import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image";
 
 const CaseStudyTemplate = ({ data }) => {
   const caseStudy = data.allStrapiCaseStudy.edges[0].node;
-  const { Client_Name, Related_Case_Studies, Hero_Image, Cover_Image } = caseStudy;
-
-  // If an og image is uploaded in strapi use it, otherwise default to the cover image.
-  let ogImage = caseStudy.SEO.OGImage ? getSrc(caseStudy.SEO.OGImage) : Cover_Image.url;
+  const { Client_Name, Related_Case_Studies, Hero_Image } = caseStudy;
 
   return (
     <GeneralLayout>
-      <SEO
-        title={caseStudy.SEO.OGTitle}
-        description={caseStudy.SEO.OGDescription}
-        image={ogImage}
-        // Indicates that the cover_image url is an external link. If it is return true.
-        isExternalImage={ogImage === Cover_Image.url}
-      />
-
       <div className='case-studies'>
         <CaseStudyHero
           client={Client_Name}
@@ -339,3 +328,16 @@ query CaseStudyQuery($pagePath: String!) {
 
 export default CaseStudyTemplate;
 
+export const Head = ({ data }) => {
+  const caseStudy = data.allStrapiCaseStudy.edges[0].node;
+  // If an og image is uploaded in strapi use it, otherwise default to the cover image.
+  let ogImage = caseStudy.SEO.OGImage ? getSrc(caseStudy.SEO.OGImage.localFile) : getSrc(caseStudy.Cover_Image.localFile);
+
+  return (
+    <SEO
+      title={caseStudy.SEO.OGTitle}
+      description={caseStudy.SEO.OGDescription}
+      image={ogImage}
+    />
+  )
+};

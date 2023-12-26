@@ -13,10 +13,6 @@ const Press = ({ data, location, pageContext }) => {
   const pressReleases = data.press.edges;
   return (
     <RedLayout>
-      <SEO
-        title='Press'
-        description="This work is worth talking about. Learn how we've been elevating government digital services."
-      />
       <Hero
         title='This work is worth talking about.'
         description='When government invests in smart technology and thoughtful design of services, millions of people stand to benefit for years to come. We are honored to be part of this work.'
@@ -74,3 +70,13 @@ export const pageQuery = graphql`
   }
 `;
 export default Press;
+
+export const Head = ({ data }) => {
+  const pressReleases = data.press.edges;
+  return (
+    <SEO
+      title='Press'
+      description="This work is worth talking about. Learn how we've been elevating government digital services."
+    />
+  )
+};

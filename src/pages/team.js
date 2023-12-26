@@ -74,12 +74,6 @@ const TeamPage = () => {
 
   return (
     <RedLayout>
-      <SEO
-        title='Team'
-        description='Meet the humans of CivicActions.'
-        image={teamOgImage}
-      />
-
       <Hero
         title='Meet the humans of CivicActions'
         description='People who work with us say there’s “something magical” about our team. We are good listeners, strategic thinkers, honest communicators, and problem solvers. (We’re also cheerful and kind, which is a nice bonus.) Let’s get to know each other!'
@@ -158,5 +152,9 @@ const FilterButtons = ({ team, parentCallback, filterState }) => {
 export default TeamPage;
 
 export const Head = () => (
-  <SEO />
+  <SEO
+    title='Team'
+    description='Meet the humans of CivicActions.'
+    image={teamOgImage}
+  />
 );

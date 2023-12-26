@@ -114,10 +114,6 @@ const CaseStudyPage = () => {
 
   return (
     <RedLayout>
-      <SEO
-        title='Case Studies'
-        description="From large-scale federal CMS modernization to automating security compliance, see how we've helped government deliver better services to the public."
-      />
       <Hero
         title='Work that makes a difference'
         description='Our work impacts the daily lives of millions of people. See how we’ve helped agencies build resilient services at scale.'
@@ -265,5 +261,8 @@ const CaseStudyPage = () => {
 export default CaseStudyPage;
 
 export const Head = () => (
-  <SEO />
+  <SEO
+    title='Case Studies'
+    description="From large-scale federal CMS modernization to automating security compliance, see how we've helped government deliver better services to the public."
+  />
 );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { graphql } from 'gatsby';
-import { GatsbyImage, getSrc } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image';
 import ReactMarkdown from "react-markdown";
 import Modal from 'react-modal';
 import {
@@ -76,16 +76,8 @@ const OfferingTemplate = ({ data }) => {
 
     )) : null;
 
-  // Get the OGImage
-  let ogImageUrl = getSrc(offering.SEO.OGImage);
-
   return (
     <RedLayout>
-      <SEO
-        title={offering.SEO.OGTitle}
-        description={offering.SEO.OGDescription}
-        image={ogImageUrl}
-      />
       <div className='offering--content-type'>
         <Hero
           title={offering.Title}
@@ -402,3 +394,14 @@ query offeringQuery {
 `;
 
 export default OfferingTemplate;
+
+export const Head = ({ data }) => {
+  const offering = data.allStrapiOffering.nodes[0];
+  return (
+    <SEO
+      title={offering.SEO.OGTitle}
+      description={offering.SEO.OGDescription}
+      image={getSrc(offering.SEO.OGImage.localFile)}
+    />
+  )
+};

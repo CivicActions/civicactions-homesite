@@ -11,11 +11,6 @@ const PressTemplate = ({ data }) => {
   const { Title, Body } = press;
   return (
     <RedLayout>
-
-      <SEO
-        title={Title}
-        description='Press release from civicactions.com'
-      />
       <Hero title={Title}/>
       <div className='single--press-releases--main'>
 
@@ -63,3 +58,13 @@ query PressQuery($pagePath: String!) {
 
 export default PressTemplate;
 
+
+export const Head = ({ data }) => {
+  const press = data.allStrapiPressRelease.edges[0].node;
+  return (
+    <SEO
+      title={Title}
+      description='Press release from CivicActions'
+    />
+  )
+};

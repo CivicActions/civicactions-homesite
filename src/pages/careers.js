@@ -49,11 +49,6 @@ const CareersPage = ({ location }) => {
 
   return (
     <RedLayout>
-      <SEO
-        title='Careers'
-        description='Work for the public good. Join our diverse and talented team of civic-minded people.'
-        image={careersOgImage}
-      />
       <section className='careers--hero-section hero-component'>
         <div className='inner'>
           <h1>Work for the public good.</h1>
@@ -337,5 +332,9 @@ export const query = graphql`
 export default CareersPage;
 
 export const Head = () => (
-  <SEO />
+  <SEO
+    title='Careers'
+    description='Work for the public good. Join our diverse and talented team of civic-minded people.'
+    image={careersOgImage}
+  />
 );

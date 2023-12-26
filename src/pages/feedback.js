@@ -8,10 +8,6 @@ import SEO from '../components/seo';
 const FeedbackPage = () => {
   return (
     <RedLayout>
-      <SEO
-        title='Feedback or update requests'
-        description='Bugs? Comments? Updates? We welcome your feedback and contributions to the site.'
-      />
       <Hero
         title='Feedback'
         description='Bugs? Comments? Suggestions? We welcome your feedback and ideas for our site.'
@@ -57,5 +53,8 @@ const FeedbackPage = () => {
 export default FeedbackPage;
 
 export const Head = () => (
-  <SEO />
+  <SEO
+    title='Feedback or update requests'
+    description='Bugs? Comments? Updates? We welcome your feedback and contributions to the site.'
+  />
 );

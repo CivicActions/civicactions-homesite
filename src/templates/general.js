@@ -11,10 +11,6 @@ const GeneralTemplate = ({ data }) => {
 
   return (
     <RedLayout>
-        <SEO
-          title={generals.SEO.OGTitle}
-          description={generals.SEO.OGDescription}
-        />
       <Hero
           title={generals.Title}
           description={generals.Hero_text}
@@ -51,3 +47,14 @@ export const query = graphql`
 `;
 
 export default GeneralTemplate;
+
+export const Head = ({ data }) => {
+  const generals = data.allStrapiGeneral.nodes[0];
+
+  return (
+    <SEO
+      title={generals.SEO.OGTitle}
+      description={generals.SEO.OGDescription}
+    />
+  );
+};
