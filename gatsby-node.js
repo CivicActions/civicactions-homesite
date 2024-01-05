@@ -317,3 +317,22 @@ exports.createResolvers = ({ createResolvers }) => {
     }
   })
 }
+
+exports.onPostBuild = async ({ graphql }) => {
+  const path = require("path")
+  const fs = require("fs").promises
+  const { data } = await graphql(`
+    {
+      pages: allSitePage {
+        nodes {
+          path
+        }
+      }
+    }
+  `)
+
+  return fs.writeFile(
+    path.resolve(__dirname, "pages.txt"),
+    data.pages.nodes.map(node => node.path).join("\n")
+  )
+}
