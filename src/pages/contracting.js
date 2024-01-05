@@ -68,9 +68,11 @@ const ContractingPage = () => {
             <ul className='body'>
               <li>CivicActions, Inc.</li>
               <li>GSA Schedule: GS-35F-337BA</li>
-              <ul>
-                <li>Professional Services, Health IT and Cloud</li>
-              </ul>
+              <li>
+                <ul>
+                  <li>Professional Services, Health IT and Cloud</li>
+                </ul>
+              </li>
               <li>UEI: XSZFHRS5QFL5</li>
               <li>CAGE Code: 65FK1</li>
               <li>NAICS Codes: 541511, 541512, 541513, 541519</li>
@@ -83,10 +85,12 @@ const ContractingPage = () => {
                 2003474
               </li>
               <li>Canadian</li>
-              <ul>
-                <li>CivicActions Digital Service ULC (Canadian entity)</li>
-                <li>Canadian POC: <a href="mailto:ca-canada@civicactions.com">ca-canada@civicactions.com</a></li>
-              </ul>
+              <li>
+                <ul>
+                  <li>CivicActions Digital Service ULC (Canadian entity)</li>
+                  <li>Canadian POC: <a href="mailto:ca-canada@civicactions.com">ca-canada@civicactions.com</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
           <div className='differentiators list--wrapper'>
