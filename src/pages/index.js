@@ -75,11 +75,13 @@ const HomePage = () => {
     <HomepageLayout>
       <section className='home--hero-section'>
         <div className='inner'>
-          <img
-            src={homeIntroGraphic}
-            alt='Capitol building to represent government services that build public trust'
-            ref={(e) => (fadersRef.current[0] = e)}
-            className='fade-in'></img>
+          <div ref={(e) => (fadersRef.current[0] = e)} className='hero-image fade-in'>
+            <StaticImage src={'../files/images/homepage-hero.png'}
+              loading='eager'
+              alt='Capitol building to represent government services that build public trust'
+              placeholder="none"
+            />
+          </div>
           <div className='info-text'>
             <h1>
               We help government deliver better public services through modern
