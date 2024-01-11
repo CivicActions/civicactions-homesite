@@ -35,6 +35,7 @@ const MobileMenu = (props) => {
             {/*<li><Link to="/">About</Link></li>*/}
             <li><Link to="/team">Team</Link></li>
             <li><Link to="/press">Press</Link></li>
+            <li><a href='https://reports.civicactions.com/impact' className='external-link'>Impact</a></li>
           </ul>
         </li>
 
