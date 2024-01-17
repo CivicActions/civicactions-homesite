@@ -183,6 +183,12 @@ exports.createPages = async ({ graphql, actions }) => {
     isPermanent: true,
     redirectInBrowser: true,
   })
+  createRedirect({
+    fromPath: "/press/2024-01-16-CivicActions-Announces-Impact-Report/reports.civicactions.com/impact",
+    toPath: "/press/2024-01-16-CivicActions-Announces-Impact-Report",
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
 
   const caseStudies = result.data.caseStudies.edges;
   const CaseStudyTemplate = require.resolve('./src/templates/case-study.js');
