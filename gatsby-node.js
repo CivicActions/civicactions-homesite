@@ -185,7 +185,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
   createRedirect({
     fromPath: "/press/2024-01-16-CivicActions-Announces-Impact-Report/reports.civicactions.com/impact",
-    toPath: "/press/2024-01-16-CivicActions-Announces-Impact-Report",
+    toPath: "https://reports.civicactions.com/impact",
     isPermanent: true,
     redirectInBrowser: true,
   })
