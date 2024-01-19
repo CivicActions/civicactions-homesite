@@ -79,6 +79,28 @@
     margin-bottom: px-to-rem(32px);
   }
 
+  .social-icon {
+    display: flex;
+
+    .twitter {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 48px;
+      height: 48px;
+      background: #000;
+      border-radius: 50%;
+      box-sizing: border-box;
+      padding: 0;
+
+      .blue-icon,
+      .black-icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
   //=========== Tablet styles ============
 
   @media (min-width: $tablet-screen) {
@@ -92,6 +114,19 @@
 
       .social-icon {
         padding-bottom: 0;
+        display: flex;
+        justify-content: flex-start;
+
+        .twitter {
+          width: 48px;
+          height: 48px;
+
+          .blue-icon,
+          .black-icon {
+            width: 24px;
+            height: 24px;
+          }
+        }
       }
     }
     .footer__about-text {
@@ -287,34 +322,56 @@
       }
     }
 
-    .social-icon {
-      text-align: right;
-      padding: 0;
+    .footer__social {
+      .social-icon {
+        text-align: right;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
 
-      .blue-icon {
-        display: none;
-      }
+        .blue-icon {
+          display: none;
+        }
 
-      .blue-icon,
-      .black-icon {
-        width: 40px;
-        height: 41px;
-      }
+        .blue-icon,
+        .black-icon {
+          width: 40px;
+          height: 41px;
+        }
 
-      a {
-        &:hover,
-        &:focus,
-        &:focus-within {
-          .blue-icon {
-            display: inline-block;
-          }
+        .twitter {
+          width: 40px;
+          height: 40px;
 
+          .blue-icon,
           .black-icon {
-            display: none;
+            width: 20px;
+            height: 20px;
           }
         }
-      }
 
+        a {
+          &:hover,
+          &:focus,
+          &:focus-within {
+            .blue-icon {
+              display: inline-block;
+            }
+
+            .black-icon {
+              display: none;
+            }
+          }
+
+          &.twitter:hover,
+          &.twitter:focus,
+          &.twitter:focus-within {
+            background: none;
+            border: solid 1px #000;
+          }
+        }
+
+      }
     }
   }
 

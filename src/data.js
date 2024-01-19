@@ -1,32 +1,27 @@
-import twitterIcon from './files/icons/twitter-footer-icon.svg';
-import twitterIconBlue from './files/icons/twitter-footer-icon-blue.svg';
+import twitterIcon from './files/icons/twitter-footer-icon-x.svg';
+import twitterIconHover from './files/icons/twitter-footer-icon-x-hover.svg';
 import vimeoIcon from './files/icons/vimeo-black.svg';
 import vimeoIconBlue from './files/icons/vimeo-blue.svg';
-import instagramIcon from './files/icons/instagram-black.svg';
-import instagramIconBlue from './files/icons/instragram-color.svg';
 import linkedinIcon from './files/icons/linkedin-footer-icon.svg';
 import linkedinIconBlue from './files/icons/linkedin-footer-icon-blue.svg';
 
 export const socialMediaData = [
   {
-    link: "https://www.instagram.com/civicactions/",
-    alt: "Follow us on Instagram",
-    icon: instagramIcon,
-    iconHover: instagramIconBlue
-  },
-  {
+    platform: "vimeo",
     link: "https://vimeo.com/civicactions",
     alt: "Watch our videos on Vimeo",
     icon: vimeoIcon,
     iconHover: vimeoIconBlue
   },
   {
+    platform: "twitter",
     link: "https://twitter.com/civicactions?lang=en",
     alt: "Follow us on Twitter",
     icon: twitterIcon,
-    iconHover: twitterIconBlue
+    iconHover: twitterIconHover
   },
   {
+    platform: "linkedin",
     link: "https://www.linkedin.com/company/civicactions/mycompany/",
     alt: "Follow us on LinkedIn",
     icon: linkedinIcon,
