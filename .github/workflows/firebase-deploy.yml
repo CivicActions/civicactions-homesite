@@ -6,6 +6,7 @@ name: Deploy to Firebase Hosting on merge, content update and schedule
   push:
     branches:
       - main
+      - drafts
   repository_dispatch:
     types: [created]
   schedule:
@@ -33,7 +34,7 @@ jobs:
             ${{ runner.os }}-gatsby-build-
       - name: Yarn install
         run: 'yarn install --frozen-lockfile'
-      - name: Build
+      - name: Build production
         run: yarn build
         env:
           STRAPI_API_URL: '${{ secrets.STRAPI_API_URL }}'
@@ -41,6 +42,18 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CA_IT_PROD_HOME_5918 }}'
+          firebaseSeviceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CA_IT_PROD_HOME_5918 }}'
           channelId: live
+          projectId: ca-it-prod-home-5918
+      - name: Build staging
+        run: yarn build
+        env:
+          STRAPI_API_URL: '${{ secrets.STRAPI_API_URL }}'
+          STRAPI_TOKEN: '${{ secrets.STRAPI_TOKEN }}'
+          GATSBY_IS_PREVIEW: true
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CA_IT_PROD_HOME_5918 }}'
+          channelId: preview
           projectId: ca-it-prod-home-5918
