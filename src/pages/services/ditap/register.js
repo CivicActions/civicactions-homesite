@@ -8,7 +8,7 @@ const Register = () => {
   return (
     <RedLayout>
       <Hero
-        title='Request DITAP training'
+        title='Get Started with DITAP training'
         description='CivicActions is a certified Small Business provider of the Digital IT Acquisition Professional (DITAP) training program.'
       />
       <section className='section--ditap-register--form'>
