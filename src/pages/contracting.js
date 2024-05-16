@@ -96,8 +96,8 @@ const ContractingPage = () => {
           <div className='differentiators list--wrapper'>
             <h2>Differentiators</h2>
             <ul className='body'>
-              <li>65 Drupal developers, with 16 Acquia certifications</li>
-              <li>20 W3C edX Accessibility certifications</li>
+              <li>54 Drupal developers, with 16 Acquia certifications</li>
+              <li>75 W3C edX Accessibility certifications</li>
               <li>
                 Founding members of{' '}
                 <a href='https://digitalservicescoalition.org/#/' className='external-link-white'>
