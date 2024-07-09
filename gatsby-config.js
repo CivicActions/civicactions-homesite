@@ -8,6 +8,10 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
+/* Set some default environment variables that apply to every environment */
+process.env.GATSBY_STALL_TIMEOUT=120000
+process.env.GATSBY_CONNECTION_TIMEOUT=120000
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
