@@ -11,7 +11,7 @@ const SustainabilityPage = () => {
         <div className='inner'>
           <h1>Sustainability</h1>
           <p className='body'>
-            The team at CivicActions understands the importance of building environmentally sustainable digital products and services. Every business, and every role, needs to understand how it impacts our climate. As a distributed company, we have lightened our footprint, but this doesn’t make us carbon-neutral. Since our inception, our team has taken on projects to make a positive difference on our environment. 
+            The team at CivicActions understands the importance of building environmentally sustainable digital products and services. Every business, and every role, needs to understand how it impacts our climate. As a distributed company, we have lightened our footprint, but this doesn’t make us carbon-neutral. Since our inception, our team has taken on projects to make a positive difference on our environment.
           </p>
           <p className='body'>
             We are working to align with the Paris Agreement, and reduce our footprint. We must all work to see that the world stays below a 2° C increase by the end of this century and that we avoid the worst impacts of climate change. As part of our commitment, we  have a  Sustainability Policy, which includes our Sustainable Procurement Policy in our guidebook and a pledge (below) that helps us prioritize how to approach the impact we want to have.
@@ -19,13 +19,13 @@ const SustainabilityPage = () => {
         </div>
       </div>
       <section className='section--sustainability-pledge'>
-        <h2>2024 Sustainability Pledge</h2>
-        <p className='body'>
-          The pledge focuses on three key areas: Measurement & Monitoring, Education & Engagement, and Public Reporting. Let's dive into the details of our plan for a more sustainable future!
-        </p>
         <div className='inner'>
+          <h2>2024 Sustainability Pledge</h2>
+          <p className='body'>
+            The pledge focuses on three key areas: Measurement & Monitoring, Education & Engagement, and Public Reporting. Let's dive into the details of our plan for a more sustainable future!
+          </p>
           <div className='list--wrapper'>
-            <h2>Measurement & Monitoring: Data-Driven Sustainability</h2>
+            <h3>Measurement & Monitoring: Data-Driven Sustainability</h2>
             <p className='body'>Measurement & Monitoring: Data-Driven Sustainability</p>
             <ul className='body'>
               <li>Establishing baseline performance budgets for websites and client projects</li>
@@ -35,7 +35,7 @@ const SustainabilityPage = () => {
             </ul>
           </div>
           <div className='list--wrapper'>
-            <h2>Education & Engagement: Fostering a Culture of Sustainability</h2>
+            <h3>Education & Engagement: Fostering a Culture of Sustainability</h2>
             <p className='body'>In 2024, CivicActions will focus on:</p>
             <ul className='body'>
               <li>Integrating environmental sustainability into onboarding processes</li>
@@ -47,7 +47,7 @@ const SustainabilityPage = () => {
             </ul>
           </div>
           <div className='list--wrapper'>
-            <h2>Public Reporting: Transparency and Accountability</h2>
+            <h3>Public Reporting: Transparency and Accountability</h2>
             <p className='body'>For 2024, CivicActions commits to:</p>
             <ul className='body'>
               <li>Launching CivicActions.com/sustainability to share progress on key goals</li>
@@ -56,10 +56,10 @@ const SustainabilityPage = () => {
               <li>Counting and estimating CO2 emissions from company flights</li>
             </ul>
           </div>
+          <p className='body'>
+            The pledge focuses on three key areas: Measurement & Monitoring, Education & Engagement, and Public Reporting. Let's dive into the details of our plan for a more sustainable future!
+          </p>
         </div>
-        <p className='body'>
-          The pledge focuses on three key areas: Measurement & Monitoring, Education & Engagement, and Public Reporting. Let's dive into the details of our plan for a more sustainable future!
-        </p>
       </section>
     </RedLayout>
   );
