@@ -56,9 +56,10 @@ const SustainabilityPage = () => {
               <li>Counting and estimating CO₂ emissions from company flights</li>
             </ul>
           </div>
-        <p className='body'>
-         CivicActions' sustainability pledge for 2024 sets a new standard for environmental responsibility in the digital sector. By focusing on measurable outcomes, fostering a culture of sustainability, and maintaining transparency, CivicActions is not just talking about change – we’re actively working towards it.
-        </p>
+          <p className='body'>
+            CivicActions' sustainability pledge for 2024 sets a new standard for environmental responsibility in the digital sector. By focusing on measurable outcomes, fostering a culture of sustainability, and maintaining transparency, CivicActions is not just talking about change – we’re actively working towards it.
+          </p>
+        </div>
       </section>
     </RedLayout>
   );
