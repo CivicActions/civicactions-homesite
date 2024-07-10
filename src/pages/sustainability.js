@@ -25,7 +25,7 @@ const SustainabilityPage = () => {
             The pledge focuses on three key areas: Measurement & Monitoring, Education & Engagement, and Public Reporting. Let's dive into the details of our plan for a more sustainable future!
           </p>
           <div className='list--wrapper'>
-            <h3>Measurement & Monitoring: Data-Driven Sustainability</h2>
+            <h3>Measurement & Monitoring: Data-Driven Sustainability</h3>
             <p className='body'>Measurement & Monitoring: Data-Driven Sustainability</p>
             <ul className='body'>
               <li>Establishing baseline performance budgets for websites and client projects</li>
@@ -35,7 +35,7 @@ const SustainabilityPage = () => {
             </ul>
           </div>
           <div className='list--wrapper'>
-            <h3>Education & Engagement: Fostering a Culture of Sustainability</h2>
+            <h3>Education & Engagement: Fostering a Culture of Sustainability</h3>
             <p className='body'>In 2024, CivicActions will focus on:</p>
             <ul className='body'>
               <li>Integrating environmental sustainability into onboarding processes</li>
@@ -47,7 +47,7 @@ const SustainabilityPage = () => {
             </ul>
           </div>
           <div className='list--wrapper'>
-            <h3>Public Reporting: Transparency and Accountability</h2>
+            <h3>Public Reporting: Transparency and Accountability</h3>
             <p className='body'>For 2024, CivicActions commits to:</p>
             <ul className='body'>
               <li>Launching CivicActions.com/sustainability to share progress on key goals</li>
