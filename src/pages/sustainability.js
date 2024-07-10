@@ -14,7 +14,7 @@ const SustainabilityPage = () => {
             The team at CivicActions understands the importance of building environmentally sustainable digital products and services. Every business, and every role, needs to understand how it impacts our climate. As a distributed company, we have lightened our footprint, but this doesn’t make us carbon-neutral. Since our inception, our team has taken on projects to make a positive difference on our environment.
           </p>
           <p className='body'>
-            We are working to align with the Paris Agreement, and reduce our footprint. We must all work to see that the world stays below a 2° C increase by the end of this century and that we avoid the worst impacts of climate change. As part of our commitment, we  have a  Sustainability Policy, which includes our Sustainable Procurement Policy in our guidebook and a pledge (below) that helps us prioritize how to approach the impact we want to have.
+            We are working to align with the <a href='https://unfccc.int/process-and-meetings/the-paris-agreement' className='external-link-white'>Paris Agreement</a>, and reduce our footprint. We must all work to see that the world stays below a 2° C increase by the end of this century and that we avoid the worst impacts of climate change. As part of our commitment, we  have a  <a href='https://guidebook.civicactions.com/en/latest/company-policies/sustainability/' className='external-link-white'>Sustainability Policy</a>, which includes our Sustainable Procurement Policy in our guidebook and a pledge (below) that helps us prioritize how to approach the impact we want to have.
           </p>
         </div>
       </div>
@@ -42,7 +42,7 @@ const SustainabilityPage = () => {
               <li>Engaging clients on environmental action plan alignment</li>
               <li>Developing sustainability language for project charters</li>
               <li>Establishing a sustainable procurement policy</li>
-              <li>Contributing to W3C's Draft Web Sustainability Guidelines</li>
+              <li>Contributing to <a href='https://www.w3.org/blog/2023/introducing-web-sustainability-guidelines/' className='external-link-white'>W3C's Draft Web Sustainability Guidelines</a></li>
               <li>Tracking and offsetting employee business travel</li>
             </ul>
           </div>
@@ -52,8 +52,8 @@ const SustainabilityPage = () => {
             <ul className='body'>
               <li>Launching CivicActions.com/sustainability to share progress on key goals</li>
               <li>Tracking Google Lighthouse scores as a proxy for Customer Experience, accessibility, and sustainability</li>
-              <li>Purchasing ENERGY STAR® rated devices made with partially recycled materials</li>
               <li>Counting and estimating CO2 emissions from company flights</li>
+              <li>Purchasing <a href='https://www.energystar.gov/products/computers' className='external-link-white'>ENERGY STAR®</a> rated devices made with partially recycled materials</li>
             </ul>
           </div>
           <p className='body'>
