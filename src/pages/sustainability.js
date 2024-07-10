@@ -29,7 +29,7 @@ const SustainabilityPage = () => {
             <p className='body'>Measurement & Monitoring: Data-Driven Sustainability</p>
             <ul className='body'>
               <li>Establishing baseline performance budgets for websites and client projects</li>
-              <li>Implementing cloud-based tools to measure server-side CO2 emissions</li>
+              <li>Implementing cloud-based tools to measure server-side CO₂ emissions</li>
               <li>Conducting an inventory of infrastructure assets for optimization</li>
               <li>Introducing per-sprint front-end performance score reviews</li>
             </ul>
@@ -52,8 +52,8 @@ const SustainabilityPage = () => {
             <ul className='body'>
               <li>Launching CivicActions.com/sustainability to share progress on key goals</li>
               <li>Tracking Google Lighthouse scores as a proxy for Customer Experience, accessibility, and sustainability</li>
-              <li>Counting and estimating CO2 emissions from company flights</li>
               <li>Purchasing <a href='https://www.energystar.gov/products/computers' className='external-link-white'>ENERGY STAR®</a> rated devices made with partially recycled materials</li>
+              <li>Counting and estimating CO₂ emissions from company flights</li>
             </ul>
           </div>
           <p className='body'>
