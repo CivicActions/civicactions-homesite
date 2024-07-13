@@ -1,8 +1,8 @@
 import '../sass/styles.scss';
 import React from 'react';
 import RedLayout from '../layouts/red';
-import { Link } from 'gatsby';
 import SEO from '../components/seo';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const SustainabilityPage = () => {
   return (
@@ -21,21 +21,22 @@ const SustainabilityPage = () => {
       <section className='section--sustainability-pledge'>
         <div className='inner'>
           <h2>2024 Sustainability Pledge</h2>
+          <h2 className='h3'>Public license for the public good</h2>
           <p className='body'>
             The pledge focuses on three key areas: Measurement & Monitoring, Education & Engagement, and Public Reporting. Let's dive into the details of our plan for a more sustainable future!
           </p>
           <div className='list--wrapper'>
-            <h3>Measurement & Monitoring: Data-Driven Sustainability</h3>
+            <h3 className='h3'>Measurement & Monitoring: Data-Driven Sustainability</h3>
             <p className='body'>Measurement & Monitoring: Data-Driven Sustainability</p>
             <ul className='body'>
               <li>Establishing baseline performance budgets for websites and client projects</li>
-              <li>Implementing cloud-based tools to measure server-side CO₂ emissions</li>
+              <li>Implementing cloud-based tools to measure server-side related greenhouse gas emissions</li>
               <li>Conducting an inventory of infrastructure assets for optimization</li>
               <li>Introducing per-sprint front-end performance score reviews</li>
             </ul>
           </div>
           <div className='list--wrapper'>
-            <h3>Education & Engagement: Fostering a Culture of Sustainability</h3>
+            <h3 className='h3'>Education & Engagement: Fostering a Culture of Sustainability</h3>
             <p className='body'>In 2024, CivicActions will focus on:</p>
             <ul className='body'>
               <li>Integrating environmental sustainability into onboarding processes</li>
@@ -47,18 +48,27 @@ const SustainabilityPage = () => {
             </ul>
           </div>
           <div className='list--wrapper'>
-            <h3>Public Reporting: Transparency and Accountability</h3>
+            <h3 className='h3'>Public Reporting: Transparency and Accountability</h3>
             <p className='body'>For 2024, CivicActions commits to:</p>
             <ul className='body'>
               <li>Launching CivicActions.com/sustainability to share progress on key goals</li>
               <li>Tracking Google Lighthouse scores as a proxy for Customer Experience, accessibility, and sustainability</li>
               <li>Purchasing <a href='https://www.energystar.gov/products/computers' className='external-link-white'>ENERGY STAR®</a> rated devices made with partially recycled materials</li>
-              <li>Counting and estimating CO₂ emissions from company flights</li>
+              <li>Counting and estimating greenhouse gas emissions from company flights</li>
             </ul>
           </div>
           <p className='body'>
             CivicActions' sustainability pledge for 2024 sets a new standard for environmental responsibility in the digital sector. By focusing on measurable outcomes, fostering a culture of sustainability, and maintaining transparency, CivicActions is not just talking about change – we’re actively working towards it.
           </p>
+        </div>
+      </section>
+      <section className='section--emissions'>
+        <div className='inner'>
+          <h2 className='h3'>Greenhouse Gas Emissions Audit</h2>
+          <div className='body'>
+            Our team  worked with <a href='https://www.offsetalliance.co/' className='external-link-white'>Offset Alliance</a> to calculate our Scope 1, 2 and 3 emissions:
+            <StaticImage src='../files/images/sustainability-emissions.png' alt='Chart of greenhouse gas emissions: Scope 1: 0, Scope 2: 0, Scope 3:  233.3 mT CO2e, 44.90 mT CO2e - Business Flights & Hotels, 76.96 mT CO2e - Facilities Energy Use, 111.44 mT CO2e - Purchased Goods & Services' />
+          </div>
         </div>
       </section>
     </RedLayout>
