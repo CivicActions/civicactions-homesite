@@ -11,6 +11,9 @@ name: Deploy to Firebase Hosting on merge, content update and schedule
   schedule:
     # Deploy every hour
     - cron: '0 * * * *'
+  # deploy manually
+  workflow_dispatch:
+
 
 jobs:
   build_and_deploy:

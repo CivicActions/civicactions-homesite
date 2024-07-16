@@ -4,6 +4,10 @@ name: Scan packages and upload SBOM
     branches:
       - main
 
+  # deploy manually
+  workflow_dispatch:
+
+
 jobs:
   upload_sbom:
     runs-on: ubuntu-latest
