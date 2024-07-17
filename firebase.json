@@ -106,7 +106,13 @@
         "source": "/dkan",
         "destination": "https://getdkan.org/",
         "type": 301
+      },
+      {
+        "source": "/estimating-worksheet",
+        "destination": "https://docs.google.com/spreadsheets/d/1FrPU7I_VeeCZxRkATyLrP_VbXGBdYn3qXcCu1VtMx_o",
+        "type": 301
       }
+      
     ],
     "headers": [
       {
