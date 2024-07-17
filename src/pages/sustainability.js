@@ -66,7 +66,7 @@ const SustainabilityPage = () => {
         <div className='inner'>
           <h2 className='h3'>Greenhouse Gas Emissions Audit</h2>
           <div className='body'>
-            Our team  worked with <a href='https://www.offsetalliance.co/' className='external-link-white'>Offset Alliance</a> to calculate our Scope 1, 2 and 3 emissions:
+            Our team  worked with <a href='https://www.offsetalliance.co/civicactions-2023' className='external-link-white'>Offset Alliance to calculate our Scope 1, 2 and 3 emissions</a>. Our total contributions are estimated at 233.3 mT CO2e as outlined below:
             <StaticImage src='../files/images/sustainability-emissions.png' alt='Chart of greenhouse gas emissions: Scope 1: 0, Scope 2: 0, Scope 3:  233.3 mT CO2e, 44.90 mT CO2e - Business Flights & Hotels, 76.96 mT CO2e - Facilities Energy Use, 111.44 mT CO2e - Purchased Goods & Services' />
           </div>
         </div>
