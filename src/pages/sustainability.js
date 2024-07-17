@@ -15,12 +15,12 @@ const SustainabilityPage = () => {
           </p>
           <p className='body'>
             We are working to align with the <a href='https://unfccc.int/process-and-meetings/the-paris-agreement' className='external-link-white'>Paris Agreement</a>, and reduce our footprint. We must all work to see that the world stays below a 2° C increase by the end of this century and that we avoid the worst impacts of climate change. As part of our commitment, we  have a  <a href='https://guidebook.civicactions.com/en/latest/company-policies/sustainability/' className='external-link-white'>Sustainability Policy</a>, which includes our Sustainable Procurement Policy in our guidebook and a pledge (below) that helps us prioritize how to approach the impact we want to have.
-          </p>
+          </p> <br>
         </div>
       </div>
       <section className='section--sustainability-pledge'>
         <div className='inner'>
-          <h2>2024 Sustainability Pledge</h2>
+          <h2>2024 Sustainability Pledge</h2> <br>
           <h2 className='h3'>Public license for the public good</h2>
           <p className='body'>
             The pledge focuses on three key areas: Measurement & Monitoring, Education & Engagement, and Public Reporting. Let's dive into the details of our plan for a more sustainable future!
@@ -61,7 +61,6 @@ const SustainabilityPage = () => {
             CivicActions' sustainability pledge for 2024 sets a new standard for environmental responsibility in the digital sector. By focusing on measurable outcomes, fostering a culture of sustainability, and maintaining transparency, CivicActions is not just talking about change – we’re actively working towards it.
           </p>
         </div>
-      </section>
       <section className='section--emissions'>
         <div className='inner'>
           <h2 className='h3'>Greenhouse Gas Emissions Audit</h2>
