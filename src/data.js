@@ -1,11 +1,13 @@
-import twitterIcon from './files/icons/twitter-footer-icon-x.svg';
-import twitterIconHover from './files/icons/twitter-footer-icon-x-hover.svg';
+import twitterIcon from './files/icons/twitter-x-footer-icon.svg';
+import twitterIconHover from './files/icons/twitter-x-footer-icon-hover.svg';
 import vimeoIcon from './files/icons/vimeo-black.svg';
 import vimeoIconBlue from './files/icons/vimeo-blue.svg';
 import linkedinIcon from './files/icons/linkedin-footer-icon.svg';
 import linkedinIconBlue from './files/icons/linkedin-footer-icon-blue.svg';
 import blueskyIcon from './files/icons/bluesky-footer-icon.svg';
 import blueskyIconBlue from './files/icons/bluesky-footer-icon-blue.svg';
+
+
 
 export const socialMediaData = [
   {
