@@ -81,6 +81,8 @@
 
   .social-icon {
     display: flex;
+    justify-content: flex-end;
+    gap: 12px;
 
     .twitter {
       display: inline-flex;
