@@ -16,6 +16,13 @@ export const socialMediaData = [
     iconHover: vimeoIconBlue
   },
   {
+    platform: "bluesky",
+    link: "https://bsky.app/profile/civicactions.com",
+    alt: "Follow us on Bluesky",
+    icon: blueskyIcon,
+    iconHover: blueskyIconBlue
+  },
+  {
     platform: "twitter",
     link: "https://twitter.com/civicactions?lang=en",
     alt: "Follow us on Twitter",
@@ -29,13 +36,7 @@ export const socialMediaData = [
     icon: linkedinIcon,
     iconHover: linkedinIconBlue
   },
-  {
-    platform: "bluesky",
-    link: "https://bsky.app/profile/civicactions.com",
-    alt: "Follow us on Bluesky",
-    icon: blueskyIcon,
-    iconHover: blueskyIconBlue
-  },
+
 ]
 
 export const servicesData = [
