@@ -36,7 +36,6 @@ export const socialMediaData = [
     icon: linkedinIcon,
     iconHover: linkedinIconBlue
   },
-
 ]
 
 export const servicesData = [
