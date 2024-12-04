@@ -4,6 +4,8 @@ import vimeoIcon from './files/icons/vimeo-black.svg';
 import vimeoIconBlue from './files/icons/vimeo-blue.svg';
 import linkedinIcon from './files/icons/linkedin-footer-icon.svg';
 import linkedinIconBlue from './files/icons/linkedin-footer-icon-blue.svg';
+import blueskyIcon from './files/icons/bluesky-footer-icon.svg';
+import blueskyIconBlue from './files/icons/bluesky-footer-icon-blue.svg';
 
 export const socialMediaData = [
   {
@@ -26,6 +28,13 @@ export const socialMediaData = [
     alt: "Follow us on LinkedIn",
     icon: linkedinIcon,
     iconHover: linkedinIconBlue
+  },
+  {
+    platform: "bluesky",
+    link: "https://bsky.app/profile/civicactions.com",
+    alt: "Follow us on Bluesky",
+    icon: blueskyIcon,
+    iconHover: blueskyIconBlue
   },
 ]
 
