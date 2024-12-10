@@ -1,0 +1,16 @@
+name: 🧟 Keepalive Workflow
+on:
+  schedule:
+    - cron: "0 0 * * *"
+permissions:
+  actions: write
+jobs:
+  cronjob-based-github-action:
+    name: Keepalive Workflow
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gautamkrishnar/keepalive-workflow@v2
+        with:
+          workflow_files: "firebase-deploy-live.yml, firebase-hosting-pull-request.yml, sbom.yml "
+          time_elapsed: "0"
