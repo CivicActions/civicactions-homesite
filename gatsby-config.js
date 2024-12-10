@@ -35,7 +35,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-node-fields`,
-    `gatsby-plugin-client-side-redirect`,
     `gatsby-remark-autolink-headers`,
     {
       resolve: 'gatsby-plugin-robots-txt',
