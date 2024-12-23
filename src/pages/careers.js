@@ -64,7 +64,7 @@ const CareersPage = ({ location }) => {
       </section>
 
       <Video
-        videolink='https://player.vimeo.com/video/310174855'
+        videolink='https://player.vimeo.com/video/1040145692'
         videotitle='Why join Civicactions video'
         videotext='CivicActions is a place to learn and grow with others who are passionate about putting people first. Learn how our multi-disciplinary teams use technology and design to bring government services up to today’s standards.'
       />
