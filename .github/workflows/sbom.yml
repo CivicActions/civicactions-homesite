@@ -30,3 +30,4 @@ jobs:
             -F "projectVersion=main" \
             -F "bom=@sbom.json" > /dev/null
         shell: bash
+        #
