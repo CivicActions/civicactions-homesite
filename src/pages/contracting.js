@@ -81,8 +81,7 @@ const ContractingPage = () => {
               <li>Partnership POC: <a href="mailto:sales@civicactions.com">sales@civicactions.com</a></li>
               <li>Standard Product Code: 80101507</li>
               <li>
-                Certified Small Business (Micro), State of California DGS, No.
-                2003474
+                California Multiple Award Schedule (CMAS) Number: 3-25-04-1042
               </li>
               <li>Canadian</li>
               <li>
