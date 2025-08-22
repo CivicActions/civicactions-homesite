@@ -192,8 +192,7 @@ const CareersPage = ({ location }) => {
         <div className='inner'>
           <h2 id='open-positions'>Open positions</h2>
           <p className='body'>
-            We actively seek to broaden the diversity of our team, and strongly
-            encourage people from underrepresented groups to apply. Learn more about our <a className="policy-link" href='/non-discrimination-policy-statement.pdf'>non-discrimination policy. (PDF, 138 KB)</a>
+            CivicActions is an equal opportunity employer. We do not discriminate on the basis of race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or veteran status.
           </p>
           <div className='jobs-grid'>
             {!greenhouseJob.length && (
