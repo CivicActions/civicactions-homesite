@@ -182,7 +182,7 @@ const CareersPage = ({ location }) => {
       <StaffQuote
         img={davidSumnerProfilePicture}
         alt='Headshot of David Sumner'
-        quote='“CivicActions is the most diverse tech company I have ever had the pleasure of working at.”'
+        quote='“I love the camaraderie at CivicActions. We share and learn from each other constantly. Instead of competition, it’s collaboration.”'
         name='David Sumner'
         role='Associate Director of DevSecOps'
         classes='first-quote'
