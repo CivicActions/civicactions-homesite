@@ -153,9 +153,7 @@ const CareersPage = ({ location }) => {
             <Offering
               icon={AnnualUpgradesIcon}
               title='Annual upgrades'
-              description='We provide $1027 annually for you to spend on technology or
-              tools needed for your work, and $1200 per year for professional
-              development courses or resources to grow in your career path.'
+              description='We provide you with two annual stipends: a tech stipend to use on tools or equipment needed to perform your job and a professional development stipend for courses or resources that help you grow in your career.'
             />
             <Offering
               icon={FamilyFriendly}
