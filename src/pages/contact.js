@@ -1,5 +1,5 @@
 import "../sass/styles.scss";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import RedLayout from "../layouts/red";
 import Hero from "../components/hero.js";
 import emailIcon from "../files/icons/email.png";
@@ -16,6 +16,21 @@ const Contact = () => {
 
   const [status, setStatus] = useState("idle");
   const [errorMsg, setErrorMsg] = useState("");
+
+  /*
+   * LOAD TURNSTILE ONLY ONCE
+   */
+  useEffect(() => {
+
+    if (!document.querySelector('script[src*="turnstile"]')) {
+      const script = document.createElement("script");
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+
+  }, []);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -42,11 +57,10 @@ const Contact = () => {
     };
 
     try {
+
       const res = await fetch(WORKER_ENDPOINT, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
       });
 
@@ -69,6 +83,7 @@ const Contact = () => {
 
   return (
     <RedLayout>
+
       <Hero
         title="Put us to work"
         description="We love solving hard problems. Tell us about your challenge or idea, and we’ll get in touch."
@@ -83,46 +98,22 @@ const Contact = () => {
 
             <div className="form-group">
               <label htmlFor="name">Name</label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                required
-                autoComplete="name"
-              />
+              <input id="name" name="name" type="text" required autoComplete="name"/>
             </div>
 
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                autoComplete="email"
-              />
+              <input id="email" name="email" type="email" required autoComplete="email"/>
             </div>
 
             <div className="form-group">
-              <label htmlFor="organization">
-                Organization (optional)
-              </label>
-              <input
-                id="organization"
-                name="organization"
-                type="text"
-                autoComplete="organization"
-              />
+              <label htmlFor="organization">Organization (optional)</label>
+              <input id="organization" name="organization" type="text" autoComplete="organization"/>
             </div>
 
             <div className="form-group">
               <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows={6}
-              />
+              <textarea id="message" name="message" required rows={6}/>
             </div>
 
             <div
@@ -150,11 +141,13 @@ const Contact = () => {
             </button>
 
           </form>
+
         </div>
       </section>
 
       <section className="contact--ways-to-contact--section">
         <div className="inner">
+
           <h2 className="h3" style={fontStyles}>
             More ways to reach us
           </h2>
@@ -165,14 +158,11 @@ const Contact = () => {
           </p>
 
           <div className="contact-grid">
+
             <div className="grid">
               <img src={emailIcon} alt="" />
               <p className="label body" style={fontStyles}>EMAIL</p>
-              <a
-                href="mailto:contact@civicactions.com"
-                className="link body"
-                style={fontStyles}
-              >
+              <a href="mailto:contact@civicactions.com" className="link body" style={fontStyles}>
                 contact@civicactions.com
               </a>
             </div>
@@ -180,11 +170,7 @@ const Contact = () => {
             <div className="grid">
               <img src={mailIcon} alt="" />
               <p className="label body" style={fontStyles}>MAIL</p>
-              <a
-                href="https://www.google.com/maps/place/3527+Mt+Diablo+Blvd+%23269,+Lafayette,+CA+94549"
-                className="link body"
-                style={fontStyles}
-              >
+              <a href="https://www.google.com/maps/place/3527+Mt+Diablo+Blvd+%23269,+Lafayette,+CA+94549" className="link body" style={fontStyles}>
                 3527 Mt Diablo Blvd #269 Lafayette, CA 94549
               </a>
             </div>
@@ -192,17 +178,15 @@ const Contact = () => {
             <div className="grid">
               <img src={phoneIcon} alt="" />
               <p className="label body" style={fontStyles}>PHONE</p>
-              <a
-                href="tel:510-408-7510"
-                className="link body"
-                style={fontStyles}
-              >
+              <a href="tel:510-408-7510" className="link body" style={fontStyles}>
                 (510) 408-7510
               </a>
             </div>
+
           </div>
         </div>
       </section>
+
     </RedLayout>
   );
 };
@@ -210,12 +194,5 @@ const Contact = () => {
 export default Contact;
 
 export const Head = () => (
-  <>
-    <SEO title="Contact" description="Get in touch." />
-    <script
-      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-      async
-      defer
-    />
-  </>
+  <SEO title="Contact" description="Get in touch." />
 );
