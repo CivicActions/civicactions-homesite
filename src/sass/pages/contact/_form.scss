@@ -48,7 +48,7 @@
 
     label {
       font-size: 18px;
-      color: #27555F;
+      color: $colors-text-secondary;
       font-weight: 500;
     }
 
@@ -62,15 +62,15 @@
       padding: 16px 20px;
       font-size: 16px;
       border-radius: 28px;
-      border: 2px solid #B8C7CE;
-      background: #F7FAFC;
+      border: 2px solid $colors-border;
+      background: $colors-input-bg;
       transition: all 0.2s ease;
 
       &:focus {
         outline: none;
-        border-color: #C8473C;
-        background: white;
-        box-shadow: 0 0 0 3px rgba(200, 71, 60, 0.15);
+        border-color: $colors-primary;
+        background: $colors-white;
+        box-shadow: 0 0 0 3px rgba($colors-primary, 0.15);
       }
     }
 
@@ -96,8 +96,8 @@
       justify-self: start;
       margin-top: 12px;
 
-      background-color: #C8473C;
-      color: white;
+      background-color: $colors-primary;
+      color: $colors-white;
       border: none;
       border-radius: 30px;
       padding: 14px 28px;
@@ -108,7 +108,7 @@
 
       &:hover,
       &:focus {
-        background-color: #A23737;
+        background-color: $colors-primary-dark;
         transform: translateY(-1px);
       }
 
@@ -130,7 +130,7 @@
     [role="status"] {
       padding: 16px;
       border-radius: 10px;
-      background: white;
+      background: $colors-white;
       box-shadow: 0px 5px 25px -10px rgba(0,0,0,0.3);
       font-size: 18px;
     }
