@@ -20,19 +20,11 @@
       }
     }
 
-    /*
-     * FORM GROUP
-     */
-
     .form-group {
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
-
-    /*
-     * FULL WIDTH FIELDS
-     */
 
     textarea,
     .cf-turnstile,
@@ -42,19 +34,10 @@
       grid-column: 1 / -1;
     }
 
-    /*
-     * LABELS
-     */
-
     label {
-      font-size: 18px;
-      color: $colors-text-secondary;
-      font-weight: 500;
+      font-size: 20px;
+      color: $colors-white;
     }
-
-    /*
-     * INPUTS
-     */
 
     input,
     textarea {
@@ -62,15 +45,14 @@
       padding: 16px 20px;
       font-size: 16px;
       border-radius: 28px;
-      border: 2px solid $colors-border;
-      background: $colors-input-bg;
+      border: 1px solid #1B1B1B;
+      background-color: $colors-white;
       transition: all 0.2s ease;
 
       &:focus {
         outline: none;
-        border-color: $colors-primary;
-        background: $colors-white;
-        box-shadow: 0 0 0 3px rgba($colors-primary, 0.15);
+        border-color: #C8473C;
+        box-shadow: 0 0 0 3px rgba(200,71,60,0.15);
       }
     }
 
@@ -80,24 +62,16 @@
       resize: vertical;
     }
 
-    /*
-     * TURNSTILE
-     */
-
     .cf-turnstile {
       margin-top: 8px;
     }
-
-    /*
-     * BUTTON
-     */
 
     button[type="submit"] {
       justify-self: start;
       margin-top: 12px;
 
-      background-color: $colors-primary;
-      color: $colors-white;
+      background-color: #C8473C;
+      color: white;
       border: none;
       border-radius: 30px;
       padding: 14px 28px;
@@ -108,31 +82,17 @@
 
       &:hover,
       &:focus {
-        background-color: $colors-primary-dark;
-        transform: translateY(-1px);
-      }
-
-      &:active {
-        transform: translateY(0);
-      }
-
-      &:disabled {
-        opacity: 0.6;
-        cursor: not-allowed;
+        background-color: #A23737;
       }
     }
-
-    /*
-     * STATUS MESSAGES
-     */
 
     [role="alert"],
     [role="status"] {
       padding: 16px;
       border-radius: 10px;
-      background: $colors-white;
+      background: white;
       box-shadow: 0px 5px 25px -10px rgba(0,0,0,0.3);
-      font-size: 18px;
+      font-size: 20px;
     }
 
   }
