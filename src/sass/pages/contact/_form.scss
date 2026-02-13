@@ -2,6 +2,10 @@
 
   .inner {
 
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
     @media (min-width: $medium-large-screen) {
       max-width: 955px;
     }
@@ -17,12 +21,13 @@
     form {
       display: grid;
       grid-template-columns: 1fr;
-      column-gap: 40px;
       row-gap: 32px;
+      column-gap: 24px; // mobile safe
       align-items: start;
 
       @media (min-width: $tablet-screen) {
         grid-template-columns: 1fr 1fr;
+        column-gap: 48px; // desktop spacing fix
       }
     }
 
@@ -34,11 +39,24 @@
       display: flex;
       flex-direction: column;
       gap: 6px;
+      width: 100%;
     }
 
     /*
-     * DESKTOP GRID LAYOUT ONLY
-     * (prevents mobile breakage)
+     * ===== MOBILE (DEFAULT)
+     * single column stack
+     */
+
+    .form-group:nth-of-type(1),
+    .form-group:nth-of-type(2),
+    .form-group:nth-of-type(3),
+    .form-group:nth-of-type(4) {
+      grid-column: 1;
+      grid-row: auto;
+    }
+
+    /*
+     * ===== TABLET+ LAYOUT
      */
 
     @media (min-width: $tablet-screen) {
@@ -46,6 +64,7 @@
       /* Name */
       .form-group:nth-of-type(1) {
         grid-column: 1;
+        grid-row: 1;
       }
 
       /* Organization */
@@ -57,38 +76,74 @@
       /* Email full width */
       .form-group:nth-of-type(2) {
         grid-column: 1 / -1;
+        grid-row: 2;
       }
 
       /* Message full width */
       .form-group:nth-of-type(4) {
         grid-column: 1 / -1;
+        grid-row: 3;
       }
 
-      /*
-       * TURNSTILE + SUBMIT SAME ROW
-       */
-
+      /* Turnstile */
       .cf-turnstile {
         grid-column: 1;
+        grid-row: 4;
         align-self: center;
+        margin-top: 12px;
       }
 
+      /* Submit */
       button[type="submit"] {
         grid-column: 2;
+        grid-row: 4;
         justify-self: end;
         align-self: center;
       }
-
     }
 
     /*
-     * MOBILE DEFAULTS
-     * (stack naturally)
+     * LABELS
      */
 
-    .cf-turnstile {
-      margin-top: 12px;
+    label {
+      font-size: 18px;
+      color: $colors-mint-cool-80v;
+      font-weight: 500;
     }
+
+    /*
+     * INPUTS
+     */
+
+    input,
+    textarea {
+      width: 100%;
+      max-width: 100%;
+      padding: 16px 20px;
+      font-size: 16px;
+      border-radius: 28px;
+      border: 2px solid $light-gray;
+      background: $gray-05;
+      transition: all 0.2s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-red;
+        background: $colors-white;
+        box-shadow: 0 0 0 3px rgba(216, 57, 51, 0.15);
+      }
+    }
+
+    textarea {
+      border-radius: 20px;
+      min-height: 180px;
+      resize: vertical;
+    }
+
+    /*
+     * BUTTON STYLE
+     */
 
     button[type="submit"] {
 
@@ -116,44 +171,6 @@
         opacity: 0.6;
         cursor: not-allowed;
       }
-    }
-
-    /*
-     * LABELS
-     */
-
-    label {
-      font-size: 18px;
-      color: $colors-mint-cool-80v;
-      font-weight: 500;
-    }
-
-    /*
-     * INPUTS
-     */
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 16px 20px;
-      font-size: 16px;
-      border-radius: 28px;
-      border: 2px solid $light-gray;
-      background: $gray-05;
-      transition: all 0.2s ease;
-
-      &:focus {
-        outline: none;
-        border-color: $primary-red;
-        background: $colors-white;
-        box-shadow: 0 0 0 3px rgba(216, 57, 51, 0.15);
-      }
-    }
-
-    textarea {
-      border-radius: 20px;
-      min-height: 180px;
-      resize: vertical;
     }
 
     /*
