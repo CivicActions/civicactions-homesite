@@ -8,36 +8,36 @@
 
     h2 {
       margin-bottom: 32px;
-      color: $colors-grey-90;
     }
 
     /*
-    ==================================================
-    FORM LAYOUT
-    ==================================================
-    */
+     * FORM GRID
+     */
 
     form {
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
+      align-items: start;
 
       @media (min-width: $tablet-screen) {
         grid-template-columns: 1fr 1fr;
       }
     }
 
+    /*
+     * FORM GROUP
+     */
+
     .form-group {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 6px;
     }
 
     /*
-    ==================================================
-    FULL WIDTH ITEMS
-    ==================================================
-    */
+     * FULL WIDTH ELEMENTS
+     */
 
     textarea,
     .cf-turnstile,
@@ -48,81 +48,67 @@
     }
 
     /*
-    ==================================================
-    LABELS
-    ==================================================
-    */
+     * LABELS
+     */
 
     label {
       font-size: 18px;
-      color: $colors-mint-cool-100v;
+      color: $colors-mint-cool-80v;
       font-weight: 500;
     }
 
     /*
-    ==================================================
-    INPUTS — match screenshot style
-    ==================================================
-    */
+     * INPUTS
+     */
 
     input,
     textarea {
       width: 100%;
       padding: 16px 20px;
       font-size: 16px;
-
       border-radius: 28px;
-      border: 2px solid $gray-10;
+      border: 2px solid $light-gray;
       background: $gray-05;
-      color: $colors-grey-90;
-
       transition: all 0.2s ease;
 
       &:focus {
         outline: none;
-        border-color: $colors-red-50;
+        border-color: $primary-red;
         background: $colors-white;
-        box-shadow: 0 0 0 3px rgba(216,57,51,0.15);
+        box-shadow: 0 0 0 3px rgba(216, 57, 51, 0.15);
       }
     }
 
     textarea {
       border-radius: 20px;
-      min-height: 160px;
+      min-height: 180px;
       resize: vertical;
     }
 
     /*
-    ==================================================
-    TURNSTILE
-    ==================================================
-    */
+     * TURNSTILE
+     */
 
     .cf-turnstile {
-      margin-top: 8px;
+      margin-top: 12px;
+      margin-bottom: -8px;
     }
 
     /*
-    ==================================================
-    BUTTON
-    ==================================================
-    */
+     * SUBMIT BUTTON
+     */
 
     button[type="submit"] {
-
       justify-self: start;
-      margin-top: 12px;
+      margin-top: 20px;
 
-      background-color: $colors-red-50;
+      background-color: $primary-red;
       color: $colors-white;
-
       border: none;
       border-radius: 30px;
-
       padding: 14px 28px;
       font-weight: 600;
       font-size: 16px;
-
       cursor: pointer;
       transition: all 0.2s ease;
 
@@ -143,10 +129,8 @@
     }
 
     /*
-    ==================================================
-    STATUS MESSAGES
-    ==================================================
-    */
+     * STATUS MESSAGES
+     */
 
     [role="alert"],
     [role="status"] {
@@ -155,7 +139,6 @@
       background: $colors-white;
       box-shadow: 0px 5px 25px -10px rgba(0,0,0,0.3);
       font-size: 18px;
-      color: $colors-grey-90;
     }
 
   }
