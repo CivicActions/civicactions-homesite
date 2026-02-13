@@ -1,47 +1,139 @@
 .contact--form {
+
   .inner {
-    @media(min-width: $medium-large-screen) {
+
+    @media (min-width: $medium-large-screen) {
       max-width: 955px;
     }
 
-    #contact-hubspot-form {
-      padding-bottom: 103px;
+    h2 {
+      margin-bottom: 32px;
+    }
 
-      iframe {
-        width: 100%;
-      }
+    form {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
 
-      label {
-        font-size: 20px;
-        color: $colors-white;
-      }
-
-      .submitted-message {
-        font-size: 20px;
-        box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
-      }
-
-      .hs_submit hs-submit {
-        input {
-          text-transform: uppercase;
-          font-size: 14px;
-          font-weight: 600;
-          border: none;
-          background-color: #C8473C;
-
-          &:hover,
-          &:focus {
-            background-color: #A23737
-          }
-        }
-
-      }
-
-      input {
-        background-color: $colors-white;
-        border: 1px solid #1B1B1B;
-        border-radius: 0;
+      @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
       }
     }
+
+    /*
+     * FORM GROUP
+     */
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /*
+     * FULL WIDTH FIELDS
+     */
+
+    textarea,
+    .cf-turnstile,
+    button[type="submit"],
+    [role="alert"],
+    [role="status"] {
+      grid-column: 1 / -1;
+    }
+
+    /*
+     * LABELS
+     */
+
+    label {
+      font-size: 18px;
+      color: #27555F;
+      font-weight: 500;
+    }
+
+    /*
+     * INPUTS
+     */
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 16px 20px;
+      font-size: 16px;
+      border-radius: 28px;
+      border: 2px solid #B8C7CE;
+      background: #F7FAFC;
+      transition: all 0.2s ease;
+
+      &:focus {
+        outline: none;
+        border-color: #C8473C;
+        background: white;
+        box-shadow: 0 0 0 3px rgba(200, 71, 60, 0.15);
+      }
+    }
+
+    textarea {
+      border-radius: 20px;
+      min-height: 160px;
+      resize: vertical;
+    }
+
+    /*
+     * TURNSTILE
+     */
+
+    .cf-turnstile {
+      margin-top: 8px;
+    }
+
+    /*
+     * BUTTON
+     */
+
+    button[type="submit"] {
+      justify-self: start;
+      margin-top: 12px;
+
+      background-color: #C8473C;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 14px 28px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover,
+      &:focus {
+        background-color: #A23737;
+        transform: translateY(-1px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+
+    /*
+     * STATUS MESSAGES
+     */
+
+    [role="alert"],
+    [role="status"] {
+      padding: 16px;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0px 5px 25px -10px rgba(0,0,0,0.3);
+      font-size: 18px;
+    }
+
   }
 }
