@@ -8,14 +8,21 @@
 
     h2 {
       margin-bottom: 32px;
+      color: $colors-grey-90;
     }
+
+    /*
+    ==================================================
+    FORM LAYOUT
+    ==================================================
+    */
 
     form {
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
 
-      @media (min-width: 768px) {
+      @media (min-width: $tablet-screen) {
         grid-template-columns: 1fr 1fr;
       }
     }
@@ -26,6 +33,12 @@
       gap: 10px;
     }
 
+    /*
+    ==================================================
+    FULL WIDTH ITEMS
+    ==================================================
+    */
+
     textarea,
     .cf-turnstile,
     button[type="submit"],
@@ -34,25 +47,42 @@
       grid-column: 1 / -1;
     }
 
+    /*
+    ==================================================
+    LABELS
+    ==================================================
+    */
+
     label {
-      font-size: 20px;
-      color: $colors-white;
+      font-size: 18px;
+      color: $colors-mint-cool-100v;
+      font-weight: 500;
     }
+
+    /*
+    ==================================================
+    INPUTS — match screenshot style
+    ==================================================
+    */
 
     input,
     textarea {
       width: 100%;
       padding: 16px 20px;
       font-size: 16px;
+
       border-radius: 28px;
-      border: 1px solid #1B1B1B;
-      background-color: $colors-white;
+      border: 2px solid $gray-10;
+      background: $gray-05;
+      color: $colors-grey-90;
+
       transition: all 0.2s ease;
 
       &:focus {
         outline: none;
-        border-color: #C8473C;
-        box-shadow: 0 0 0 3px rgba(200,71,60,0.15);
+        border-color: $colors-red-50;
+        background: $colors-white;
+        box-shadow: 0 0 0 3px rgba(216,57,51,0.15);
       }
     }
 
@@ -62,37 +92,70 @@
       resize: vertical;
     }
 
+    /*
+    ==================================================
+    TURNSTILE
+    ==================================================
+    */
+
     .cf-turnstile {
       margin-top: 8px;
     }
 
+    /*
+    ==================================================
+    BUTTON
+    ==================================================
+    */
+
     button[type="submit"] {
+
       justify-self: start;
       margin-top: 12px;
 
-      background-color: #C8473C;
-      color: white;
+      background-color: $colors-red-50;
+      color: $colors-white;
+
       border: none;
       border-radius: 30px;
+
       padding: 14px 28px;
       font-weight: 600;
       font-size: 16px;
+
       cursor: pointer;
       transition: all 0.2s ease;
 
       &:hover,
       &:focus {
-        background-color: #A23737;
+        background-color: $colors-red-60;
+        transform: translateY(-1px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
       }
     }
+
+    /*
+    ==================================================
+    STATUS MESSAGES
+    ==================================================
+    */
 
     [role="alert"],
     [role="status"] {
       padding: 16px;
       border-radius: 10px;
-      background: white;
+      background: $colors-white;
       box-shadow: 0px 5px 25px -10px rgba(0,0,0,0.3);
-      font-size: 20px;
+      font-size: 18px;
+      color: $colors-grey-90;
     }
 
   }
