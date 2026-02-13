@@ -36,15 +36,68 @@
     }
 
     /*
-     * FULL WIDTH ELEMENTS
+     * GRID POSITIONING (MINIMAL FIX)
      */
 
-    textarea,
-    .cf-turnstile,
-    button[type="submit"],
-    [role="alert"],
-    [role="status"] {
+    /* Name = left */
+    .form-group:has(#name) {
+      grid-column: 1;
+    }
+
+    /* Organization = right */
+    .form-group:has(#organization) {
+      grid-column: 2;
+    }
+
+    /* Email full width */
+    .form-group:has(#email) {
       grid-column: 1 / -1;
+    }
+
+    /* Message full width */
+    .form-group:has(#message) {
+      grid-column: 1 / -1;
+    }
+
+    /*
+     * TURNSTILE + BUTTON SAME ROW
+     */
+
+    .cf-turnstile {
+      grid-column: 1;
+      align-self: center;
+      margin-top: 8px;
+    }
+
+    button[type="submit"] {
+      grid-column: 2;
+      justify-self: end;
+      align-self: center;
+
+      background-color: $primary-red;
+      color: $colors-white;
+      border: none;
+      border-radius: 30px;
+      padding: 14px 28px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover,
+      &:focus {
+        background-color: $colors-red-60;
+        transform: translateY(-1px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
     }
 
     /*
@@ -86,54 +139,12 @@
     }
 
     /*
-     * TURNSTILE
-     */
-
-    .cf-turnstile {
-      margin-top: 12px;
-      margin-bottom: -8px;
-    }
-
-    /*
-     * SUBMIT BUTTON
-     */
-
-    button[type="submit"] {
-      justify-self: start;
-      margin-top: 20px;
-
-      background-color: $primary-red;
-      color: $colors-white;
-      border: none;
-      border-radius: 30px;
-      padding: 14px 28px;
-      font-weight: 600;
-      font-size: 16px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-
-      &:hover,
-      &:focus {
-        background-color: $colors-red-60;
-        transform: translateY(-1px);
-      }
-
-      &:active {
-        transform: translateY(0);
-      }
-
-      &:disabled {
-        opacity: 0.6;
-        cursor: not-allowed;
-      }
-    }
-
-    /*
      * STATUS MESSAGES
      */
 
     [role="alert"],
     [role="status"] {
+      grid-column: 1 / -1;
       padding: 16px;
       border-radius: 10px;
       background: $colors-white;
