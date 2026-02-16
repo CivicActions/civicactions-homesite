@@ -1,47 +1,192 @@
 .contact--form {
+
   .inner {
-    @media(min-width: $medium-large-screen) {
+
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (min-width: $medium-large-screen) {
       max-width: 955px;
     }
 
-    #contact-hubspot-form {
-      padding-bottom: 103px;
+    h2 {
+      margin-bottom: 32px;
+    }
 
-      iframe {
-        width: 100%;
-      }
+    /*
+     * FORM GRID
+     */
 
-      label {
-        font-size: 20px;
-        color: $colors-white;
-      }
+    form {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 32px;
+      column-gap: 24px; // mobile safe
+      align-items: start;
 
-      .submitted-message {
-        font-size: 20px;
-        box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
-      }
-
-      .hs_submit hs-submit {
-        input {
-          text-transform: uppercase;
-          font-size: 14px;
-          font-weight: 600;
-          border: none;
-          background-color: #C8473C;
-
-          &:hover,
-          &:focus {
-            background-color: #A23737
-          }
-        }
-
-      }
-
-      input {
-        background-color: $colors-white;
-        border: 1px solid #1B1B1B;
-        border-radius: 0;
+      @media (min-width: $tablet-screen) {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 48px; // desktop spacing fix
       }
     }
+
+    /*
+     * FORM GROUP
+     */
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      width: 100%;
+    }
+
+    /*
+     * ===== MOBILE (DEFAULT)
+     * single column stack
+     */
+
+    .form-group:nth-of-type(1),
+    .form-group:nth-of-type(2),
+    .form-group:nth-of-type(3),
+    .form-group:nth-of-type(4) {
+      grid-column: 1;
+      grid-row: auto;
+    }
+
+    /*
+     * ===== TABLET+ LAYOUT
+     */
+
+    @media (min-width: $tablet-screen) {
+
+      /* Name */
+      .form-group:nth-of-type(1) {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      /* Organization */
+      .form-group:nth-of-type(3) {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      /* Email full width */
+      .form-group:nth-of-type(2) {
+        grid-column: 1 / -1;
+        grid-row: 2;
+      }
+
+      /* Message full width */
+      .form-group:nth-of-type(4) {
+        grid-column: 1 / -1;
+        grid-row: 3;
+      }
+
+      /* Turnstile */
+      .cf-turnstile {
+        grid-column: 1;
+        grid-row: 4;
+        align-self: center;
+        margin-top: 12px;
+      }
+
+      /* Submit */
+      button[type="submit"] {
+        grid-column: 2;
+        grid-row: 4;
+        justify-self: end;
+        align-self: center;
+      }
+    }
+
+    /*
+     * LABELS
+     */
+
+    label {
+      font-size: 18px;
+      color: $colors-mint-cool-80v;
+      font-weight: 500;
+    }
+
+    /*
+     * INPUTS
+     */
+
+    input,
+    textarea {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 16px 20px;
+      font-size: 16px;
+      border-radius: 28px;
+      border: 2px solid $light-gray;
+      background: $gray-05;
+      transition: all 0.2s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-red;
+        background: $colors-white;
+        box-shadow: 0 0 0 3px rgba(216, 57, 51, 0.15);
+      }
+    }
+
+    textarea {
+      border-radius: 20px;
+      min-height: 180px;
+      resize: vertical;
+    }
+
+    /*
+     * BUTTON STYLE
+     */
+
+    button[type="submit"] {
+
+      background-color: $primary-red;
+      color: $colors-white;
+      border: none;
+      border-radius: 30px;
+      padding: 14px 28px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover,
+      &:focus {
+        background-color: $colors-red-60;
+        transform: translateY(-1px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+
+    /*
+     * STATUS MESSAGES
+     */
+
+    [role="alert"],
+    [role="status"] {
+      grid-column: 1 / -1;
+      padding: 16px;
+      border-radius: 10px;
+      background: $colors-white;
+      box-shadow: 0px 5px 25px -10px rgba(0,0,0,0.3);
+      font-size: 18px;
+    }
+
   }
 }
