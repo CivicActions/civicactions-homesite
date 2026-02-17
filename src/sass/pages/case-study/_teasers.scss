@@ -57,8 +57,7 @@
         display: block;
         top: 0;
         position: absolute;
-        background: #1B1B1B;
-        opacity: 0.75;
+        background: rgba(27, 27, 27, 0.8);
         padding: 16px;
 
         height: 100%;
@@ -67,6 +66,7 @@
           line-height: 24px;
           padding: 24px;
           color: $colors-white;
+          opacity: 1; 
         }
         @media(min-width: $medium-large-screen) {
 
