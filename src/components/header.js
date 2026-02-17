@@ -16,8 +16,10 @@ const Header = () => {
     const offset = window.scrollY;
     if (offset > 500) {
       setScrolled(true);
+      setScrolledMobile(true);
     }
     else if (offset > 300) {
+      setScrolled(false);
       setScrolledMobile(true);
     }
     else {
