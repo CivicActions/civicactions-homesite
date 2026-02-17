@@ -20,13 +20,13 @@ const SustainabilityPage = () => {
       </div>
       <section className='section--sustainability-pledge'>
         <div className='inner'>
-          <h2 id="Pledge">2024 Sustainability Pledge</h2>
+          <h2 id="pledge">2024 Sustainability Pledge</h2>
           <h2 className='h3'>Public license for the public good</h2>
           <p className='body'>
             The pledge focuses on three key areas: Measurement & Monitoring, Education & Engagement, and Public Reporting. Let's dive into the details of our plan for a more sustainable future!
           </p>
           <div className='list--wrapper'>
-            <h3 className='h3' id="Monitor">Measurement & Monitoring: Data-Driven Sustainability</h3>
+            <h3 className='h3' id="monitor">Measurement & Monitoring: Data-Driven Sustainability</h3>
             <p className='body'>Measurement & Monitoring: Data-Driven Sustainability</p>
             <ul className='body'>
               <li>Establishing baseline performance budgets for websites and client projects</li>
@@ -36,7 +36,7 @@ const SustainabilityPage = () => {
             </ul>
           </div>
           <div className='list--wrapper'>
-            <h3 className='h3' id="Educate">Education & Engagement: Fostering a Culture of Sustainability</h3>
+            <h3 className='h3' id="educate">Education & Engagement: Fostering a Culture of Sustainability</h3>
             <p className='body'>In 2024, CivicActions will focus on:</p>
             <ul className='body'>
               <li>Integrating environmental sustainability into onboarding processes</li>
@@ -48,7 +48,7 @@ const SustainabilityPage = () => {
             </ul>
           </div>
           <div className='list--wrapper'>
-            <h3 className='h3' id="Reporting">Public Reporting: Transparency and Accountability</h3>
+            <h3 className='h3' id="reporting">Public Reporting: Transparency and Accountability</h3>
             <p className='body'>For 2024, CivicActions commits to:</p>
             <ul className='body'>
               <li>Launching CivicActions.com/sustainability to share progress on key goals</li>
@@ -64,7 +64,7 @@ const SustainabilityPage = () => {
       </section>
       <section className='section--emissions'>
         <div className='inner'>
-          <h2 className='h3' id="Audit">Greenhouse Gas Emissions Audit</h2>
+          <h2 className='h3' id="audit">Greenhouse Gas Emissions Audit</h2>
           <div className='body'>
             Our team  worked with <a href='https://www.offsetalliance.co/civicactions-2023' className='external-link-white'>Offset Alliance to calculate our Scope 1, 2 and 3 emissions</a>. Our total contributions are estimated at 233.3 mT CO2e as outlined below:
             <StaticImage src='../files/images/sustainability-emissions.png' alt='Chart of greenhouse gas emissions: Scope 1: 0, Scope 2: 0, Scope 3:  233.3 mT CO2e, 44.90 mT CO2e - Business Flights & Hotels, 76.96 mT CO2e - Facilities Energy Use, 111.44 mT CO2e - Purchased Goods & Services' />
