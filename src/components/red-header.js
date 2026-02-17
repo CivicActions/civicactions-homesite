@@ -18,9 +18,9 @@ const RedHeader = () => {
         if (offset > 500) {
             setScrolled(true);
         }
-        else if (offset > 300) {
+        /*else if (offset > 300) {
             setScrolledMobile(true);
-        }
+        }*/
         else {
             setScrolled(false);
             setScrolledMobile(false);
