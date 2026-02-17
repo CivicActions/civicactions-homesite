@@ -108,8 +108,7 @@
     .teaser-content {
       position: absolute;
       bottom: 0;
-      background: #1B1B1B;
-      opacity: 0.75;
+      background: rgba(27, 27, 27, 0.8);
       width: 100%;
       box-shadow: 0px 5px 25px -10px rgba(0, 0, 0, 0.3);
 
@@ -127,6 +126,7 @@
       span,
       .summary {
         color: $colors-white;
+        opacity: 1; // Solid foreground for better contrast
       }
 
       .client-name {
