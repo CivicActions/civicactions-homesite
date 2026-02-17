@@ -6,7 +6,7 @@ const Pagination = ({ pageContext }) => {
   const { previousPagePath, nextPagePath, humanPageNumber, numberOfPages } = pageContext
 
   return (
-    <nav className="pagination" role="navigation">
+    <nav className="pagination" aria-label="Pagination">
       <div className='inner'>
         <div className='pager--previous'>
           {previousPagePath && (
