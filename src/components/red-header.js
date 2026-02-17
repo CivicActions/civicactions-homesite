@@ -15,7 +15,6 @@ const RedHeader = () => {
     const [scrolledMobile, setScrolledMobile] = React.useState(false);
     const handleScroll = () => {
         const offset = window.scrollY;
-        console.log(offset);
         if (offset > 500) {
             setScrolled(true);
         }
