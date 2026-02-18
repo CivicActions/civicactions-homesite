@@ -2,6 +2,10 @@
   .inner {
     margin-top: 56px !important;
 
+    .team-section--title {
+      color: $primary-blue;
+    }
+
     .team-section--title,
     .team-section--role {
       margin-bottom: 14px;
@@ -36,6 +40,10 @@
       h3 {
         margin-bottom: 26px; // TODO global.
       }
+    }
+
+    .button__primary {
+      @include primary-button($colors-white, $primary-blue, $primary-blue, $primary-blue, $colors-white, $colors-white);
     }
   }
 }

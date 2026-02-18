@@ -6,11 +6,118 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "redirects": [ {
-      "source": "/ditap",
-      "destination": "/services/ditap",
-      "type": 301
-    } ],
+    "redirects": [
+      {
+        "source": "/ditap",
+        "destination": "/services/ditap",
+        "type": 301
+      },
+      {
+        "source": "/case-study",
+        "destination": "/case-studies",
+        "type": 301
+      },
+      {
+        "source": "/case-study/cms-design-challenge-mvp",
+        "destination": "/case-studies/cms-design-challenge-mvp",
+        "type": 301
+      },
+      {
+        "source": "/case-study/va-cms-modernization",
+        "destination": "/case-studies/va-cms-modernization",
+        "type": 301
+      },
+      {
+        "source": "/case-study/digital-democracy",
+        "destination": "/case-studies",
+        "type": 301
+      },
+      {
+        "source": "/case-study/globalnet",
+        "destination": "/case-studies/globalnet-platform-support",
+        "type": 301
+      },
+      {
+        "source": "/case-study/eatfresh",
+        "destination": "/case-studies",
+        "type": 301
+      },
+      {
+        "source": "/case-study/fcc",
+        "destination": "/case-studies/fcc-website-modernization",
+        "type": 301
+      },
+      {
+        "source": "/case-study/hhs",
+        "destination": "/case-studies",
+        "type": 301
+      },
+      {
+        "source": "/case-study/msf",
+        "destination": "/case-studies",
+        "type": 301
+      },
+      {
+        "source": "/case-study/usva",
+        "destination": "/case-studies",
+        "type": 301
+      },
+      {
+        "source": "/case-study/cdt-foss",
+        "destination": "/case-studies",
+        "type": 301
+      },
+      {
+        "source": "/case-study/la-business-portal",
+        "destination": "/case-studies",
+        "type": 301
+      },
+      {
+        "source": "/case-study/lincs",
+        "destination": "/case-studies/dept-of-education-system-lifecycle-development-management",
+        "type": 301
+      },
+      {
+        "source": "/case-study/mta",
+        "destination": "/case-studies/nyc-metro-transit-digital-clocks",
+        "type": 301
+      },
+      {
+        "source": "/values",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/communities",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/approach",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/talks",
+        "destination": "https://medium.com/civicactions",
+        "type": 301
+      },
+      {
+        "source": "/dkan",
+        "destination": "https://getdkan.org/",
+        "type": 301
+      },
+      {
+        "source": "/estimating-worksheet",
+        "destination": "https://docs.google.com/spreadsheets/d/1FrPU7I_VeeCZxRkATyLrP_VbXGBdYn3qXcCu1VtMx_o",
+        "type": 301
+      },
+      {
+        "source": "/press/2024-01-16-CivicActions-Announces-Impact-Report/reports.civicactions.com/impact",
+        "destination": "https://reports.civicactions.com/impact",
+        "type": 301
+      }
+    ],
     "headers": [
       {
         "source": "**/*",

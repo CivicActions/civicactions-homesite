@@ -1,7 +1,6 @@
 import '../sass/styles.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
-import quotePatternGraphic from '../files/images/quote-pattern-graphic.png';
 
 const Quote = ({ classes, quote, source }) => {
   return (
@@ -11,7 +10,6 @@ const Quote = ({ classes, quote, source }) => {
           <p className='h3'>{quote}</p>
           <p className='body source'>{source}</p>
         </div>
-        <img src={quotePatternGraphic} alt='' className='pattern'></img>
       </div>
     </div>
   );

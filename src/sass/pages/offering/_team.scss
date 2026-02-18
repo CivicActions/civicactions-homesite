@@ -31,8 +31,9 @@
       }
 
       .related-staff {
+        display: flex;
         padding: 24px;
-        background-color: $colors-grey-warm-4;
+        background-color: $gray-05;
         margin-bottom: 16px;
         overflow: auto;
         position: relative;
@@ -51,6 +52,9 @@
             margin-right: 24px;
           }
 
+        }
+        .staff-info {
+          margin: auto 0;
         }
 
         .linkedin-icon {
@@ -78,6 +82,7 @@
           margin-bottom: 0;
           margin-top: 0;
           font-weight: 300;
+          display: flex;
 
         }
 
@@ -85,7 +90,7 @@
           padding: 0;
           border: 0;
           font-size: 20px;
-          color: $colors-mint-cool-60v;
+          color: $primary-blue;
           text-decoration: underline;
           font-weight: 300 !important;
           background: none;
@@ -93,7 +98,7 @@
 
           &:hover,
           &:focus {
-            color: $colors-mint-cool-80v;
+            color: $secondary-blue;
           }
         }
       }
@@ -121,11 +126,12 @@
 
 .ReactModal__Content--after-open {
   max-width: 854px;
-  margin: 0 auto;
+  margin: auto;
   border: 0;
   padding: 20px;
   position: absolute;
   top: 120px !important;
+  height: max-content;
   @media(min-width: $medium-large-screen) {
     padding: 64px;
   }
@@ -141,18 +147,47 @@
       margin: 0;
     }
   }
+  .staff-details--wrapper {
+    @media (min-width: 500px) {
+      display: flex;
+    }
 
-  .staff-image {
-    width: 124px;
-    height: 124px;
-    float: left;
-    margin-right: 24px;
+    .staff-image {
+      width: 124px;
+      height: 124px;
+      margin-right: 24px;
+    }
+    .staff-info--wrapper {
+      .staff-name {
+        margin-right: 16px;
+        float: left;
+        padding-top: 5px;
+        font-weight: 400;
+        font-size: 24px;
+        @media (min-width: 500px) {
+          padding-top: 0;
+          font-size: 28px;
+        }
+      }
+      .staff-role {
+        clear: both;
+      }
+      .linkedin-icon {
+        float: left;
+        margin-top: 3px;
+        @media (min-width: 500px) {
+          margin-top: 0;
+        }
+        @media (min-width: 600px) {
+          margin-top: 3px;
+        }
+      }
+    }
+
   }
 
-  .staff-name {
-    float: left;
-    margin-right: 16px;
-  }
+
+
 
   .staff-body {
     clear: both;
@@ -166,6 +201,8 @@
   }
 }
 .linkedin-icon {
+  float: left;
+  margin-top: 3px;
   &:hover,
   &:focus {
     .blue-icon {

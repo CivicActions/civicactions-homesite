@@ -1,24 +1,38 @@
-import twitterIcon from './files/icons/twitter-footer-icon.svg';
-import twitterIconBlue from './files/icons/twitter-footer-icon-blue.svg';
-import facebookIcon from './files/icons/facebook-footer-icon.svg';
-import facebookIconBlue from './files/icons/facebook-footer-icon-blue.svg';
+import twitterIcon from './files/icons/twitter-x-footer-icon.svg';
+import twitterIconHover from './files/icons/twitter-x-footer-icon-hover.svg';
+import vimeoIcon from './files/icons/vimeo-black.svg';
+import vimeoIconBlue from './files/icons/vimeo-blue.svg';
 import linkedinIcon from './files/icons/linkedin-footer-icon.svg';
 import linkedinIconBlue from './files/icons/linkedin-footer-icon-blue.svg';
+import blueskyIcon from './files/icons/bluesky-footer-icon.svg';
+import blueskyIconBlue from './files/icons/bluesky-footer-icon-blue.svg';
+
+
 
 export const socialMediaData = [
   {
-    link: "https://business.facebook.com/CivicActions/",
-    alt: "Follow us on Facebook",
-    icon: facebookIcon,
-    iconHover: facebookIconBlue
+    platform: "vimeo",
+    link: "https://vimeo.com/civicactions",
+    alt: "Watch our videos on Vimeo",
+    icon: vimeoIcon,
+    iconHover: vimeoIconBlue
   },
   {
+    platform: "bluesky",
+    link: "https://bsky.app/profile/civicactions.com",
+    alt: "Follow us on Bluesky",
+    icon: blueskyIcon,
+    iconHover: blueskyIconBlue
+  },
+  {
+    platform: "twitter",
     link: "https://twitter.com/civicactions?lang=en",
     alt: "Follow us on Twitter",
     icon: twitterIcon,
-    iconHover: twitterIconBlue
+    iconHover: twitterIconHover
   },
   {
+    platform: "linkedin",
     link: "https://www.linkedin.com/company/civicactions/mycompany/",
     alt: "Follow us on LinkedIn",
     icon: linkedinIcon,

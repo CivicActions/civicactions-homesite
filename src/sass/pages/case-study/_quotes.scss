@@ -4,11 +4,6 @@
     //padding: 140px 0 72px;
   }
 
-  .inner {
-    max-width: 916px;
-    padding: 0;
-  }
-
   .source {
     padding-top: 24px;
     font-weight: 300;
@@ -16,7 +11,7 @@
 }
 
 .first-quote {
-  background-color: $colors-grey-warm-4 !important;
+  background-color: $gray-05 !important;
 }
 
 .case-studies {
@@ -40,5 +35,11 @@
       }
     }
 
+  }
+  .staff-quote.no-stats-quote {
+    padding-top: 55px;
+    @media(min-width: $tablet-screen) {
+      padding-top: 87px;
+    }
   }
 }

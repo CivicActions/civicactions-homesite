@@ -27,7 +27,7 @@ const Header = () => {
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scrollend', handleScroll)
   })
   let headerClasses = ['header'];
   if (scrolled) {
@@ -39,7 +39,7 @@ const Header = () => {
     <header className={`${scrolled ? "header scrolled" : "header"} ${scrolledMobile ? "scrolled-mobile" : ""}`}>
       <div className='inner'>
         <Link to='/' className='logo'>
-          <img src={extendedLogo} alt='Civic Actions Logo'></img>
+          <img src={extendedLogo} alt='Civic Actions home page'></img>
         </Link>
         <MainMenu redHeader={false} />
 

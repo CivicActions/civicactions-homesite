@@ -10,14 +10,16 @@ const Bio = ({ member }) => {
     let { id, image, Name, Role, Body, Linkedin } = single
     return (
       <div key={id}>
-        <img className='staff-image' src={image[0].url} alt={image[0].alternativeText} />
+        <div className='staff-details--wrapper'><div className='staff-image--wrapper'>
+        <img className='staff-image' src={image[0].url} alt={image[0].alternativeText} /></div>
+        <div className='staff-info--wrapper'>
         <h1 className='h3 staff-name'>{Name}</h1>
           <a className='linkedin-icon' href={Linkedin} aria-label={`linkedin profile for ${Name}`}>
               <img className='black-icon' alt='black linkedin icon' src={linkedinIcon}/>
               <img className='blue-icon' alt='blue linkedin icon' src={linkedinIconBlue}/>
           </a>
-        <p className='body staff-role'>{Role}</p>
-        <div><p className='body staff-body'>{Body}</p></div>
+          <p className='body staff-role'>{Role}</p></div></div>
+        <div className='staff-body--wrapper'><p className='body staff-body'>{Body.data.Body}</p></div>
       </div>
     )
   }) : null

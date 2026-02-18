@@ -26,11 +26,6 @@
       padding-top: 16px;
       @media(min-width: $tablet-screen) {
         padding-top: 0;
-        padding-bottom: 16px;
-      }
-      @media(min-width: $large-screen) {
-        padding-top: 0;
-        padding-bottom: 24px;
       }
     }
 
@@ -57,7 +52,6 @@
     }
 
     .button-wrapper {
-      overflow: auto;
 
       & > div {
         margin-bottom: 24px;

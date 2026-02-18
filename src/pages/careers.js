@@ -23,6 +23,9 @@ import RemoteLifeIcon from '../files/icons/remote-life-icon.svg';
 import AnnualUpgradesIcon from '../files/icons/annual-upgrades-icon.svg';
 import FamilyFriendly from '../files/icons/family-friendly-icon.svg';
 import FamilyPhoto from '../files/images/family-photo.png';
+import Award1 from '../files/images/compensation-2023-small.svg';
+import Award2 from '../files/images/happiness-2023-small.svg';
+import Award3 from '../files/images/perks-benefits-2023-small.svg';
 import davidSumnerProfilePicture from '../files/images/david-sumner.jpg';
 import irisIbekweProfilePicture from '../files/images/iris-ibekwe.png';
 import arrowIcon from '../files/icons/arrow-icon.svg';
@@ -31,13 +34,12 @@ import careersOgImage from '../../static/careers-og-image.png'
 
 const CareersPage = ({ location }) => {
   const data = useStaticQuery(query);
-  const jazzJob = data.allFeedJobList.edges;
   const greenhouseJob = data.allGreenhouseJob.edges;
 
   // Pass source back to Greenhouse so we can track this.
   const params = new URLSearchParams(location.search);
   const greenhouseSource = params.get("gh_src");
-  const greenhouseLink = function(jobUrl, greenhouseSource) {
+  const greenhouseLink = function (jobUrl, greenhouseSource) {
     const url = new URL(jobUrl);
     if (greenhouseSource !== null) {
       url.searchParams.append("gh_src", greenhouseSource);
@@ -47,11 +49,6 @@ const CareersPage = ({ location }) => {
 
   return (
     <RedLayout>
-      <SEO
-        title='Careers'
-        description='Work for the public good. Join our diverse and talented team of civic-minded people.'
-        image={careersOgImage}
-      />
       <section className='careers--hero-section hero-component'>
         <div className='inner'>
           <h1>Work for the public good.</h1>
@@ -67,7 +64,7 @@ const CareersPage = ({ location }) => {
       </section>
 
       <Video
-        videolink='https://player.vimeo.com/video/310174855'
+        videolink='https://player.vimeo.com/video/1040145692'
         videotitle='Why join Civicactions video'
         videotext='CivicActions is a place to learn and grow with others who are passionate about putting people first. Learn how our multi-disciplinary teams use technology and design to bring government services up to today’s standards.'
       />
@@ -86,7 +83,7 @@ const CareersPage = ({ location }) => {
                 us to care for ourselves and each other.
               </p>
               <p className='body'>
-                <Link to='https://medium.com/civicactions/improving-scrum-team-flow-on-digital-service-projects-6723d95eaad8'>Learn about how we bring our humanity to work</Link>
+                <a className='external-link' href='https://medium.com/civicactions/improving-scrum-team-flow-on-digital-service-projects-6723d95eaad8'>Learn about how we bring our humanity to work</a>
               </p>
             </div>
             <div className='right-aligned'>
@@ -109,7 +106,7 @@ const CareersPage = ({ location }) => {
                 people who want to make a difference.
               </p>
               <p className='body'>
-                <Link to='https://medium.com/civicactions/we-hire-people-not-resumes-and-other-quirks-to-the-civicactions-application-process-7aab30d69c1c'>Learn about our unique hiring process</Link>
+                <a className='external-link' href='https://medium.com/civicactions/we-hire-people-not-resumes-and-other-quirks-to-the-civicactions-application-process-7aab30d69c1c'>Learn about our unique hiring process</a>
               </p>
             </div>
           </div>
@@ -156,9 +153,7 @@ const CareersPage = ({ location }) => {
             <Offering
               icon={AnnualUpgradesIcon}
               title='Annual upgrades'
-              description='We provide $1027 annually for you to spend on technology or
-              tools needed for your work, and $1200 per year for professional
-              development courses or resources to grow in your career path.'
+              description='We provide you with two annual stipends: a tech stipend to use on tools or equipment needed to perform your job and a professional development stipend for courses or resources that help you grow in your career.'
             />
             <Offering
               icon={FamilyFriendly}
@@ -168,13 +163,24 @@ const CareersPage = ({ location }) => {
               responsibilities of working from home. (Kid and pet appearances
               on video calls are normal, too!)'
             />
+            {/* If we continue to add/update these, it's probably worth making a new component for them. */}
+            <a className="award" href="https://www.comparably.com/companies/civicactions">
+              <img src={Award1} alt='CivicActions was named one of the top companies for compensation in 2023 by Comparably'></img>
+            </a>
+            <a className="award" href="https://www.comparably.com/companies/civicactions">
+              <img src={Award2} alt='CivicActions was named one of the top companies for happiness in 2023 by Comparably'></img>
+            </a>
+            <a className="award" href="https://www.comparably.com/companies/civicactions">
+              <img src={Award3} alt='CivicActions was named one of the top companies for perks and benefits in 2023 by Comparably'></img>
+            </a>
           </div>
           <img src={FamilyPhoto} alt='Several CivicActions team members on a video call with their kids and pets'></img>
         </div>
       </section>
       <StaffQuote
         img={davidSumnerProfilePicture}
-        quote='“CivicActions is the most diverse tech company I have ever had the pleasure of working at.”'
+        alt='Headshot of David Sumner'
+        quote='“I love the camaraderie at CivicActions. We share and learn from each other constantly. Instead of competition, it’s collaboration.”'
         name='David Sumner'
         role='Associate Director of DevSecOps'
         classes='first-quote'
@@ -184,11 +190,10 @@ const CareersPage = ({ location }) => {
         <div className='inner'>
           <h2 id='open-positions'>Open positions</h2>
           <p className='body'>
-            We actively seek to broaden the diversity of our team, and strongly
-            encourage people from underrepresented groups to apply.
+            CivicActions is an equal opportunity employer. We do not discriminate on the basis of race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or veteran status.
           </p>
           <div className='jobs-grid'>
-            {!jazzJob.length && !greenhouseJob.length && (
+            {!greenhouseJob.length && (
               <div className='no-job'>
                 <p className='body'>
                   No positions are currently open. Please check back again soon!
@@ -196,16 +201,8 @@ const CareersPage = ({ location }) => {
               </div>
             )}
             {greenhouseJob.map(({ node }, index) => (
-              <div className='body job'>
+              <div className='body job' key={index}>
                 <a href={greenhouseLink(node.absolute_url, greenhouseSource)}>
-                  <p>{node.title.replace("(Remote)", "").trim()}</p>
-                  <img src={arrowIcon} alt='red right arrow icon'></img>
-                </a>
-              </div>
-            ))}
-            {jazzJob.map(({ node }, index) => (
-              <div className='body job'>
-                <a href={node.link}>
                   <p>{node.title.replace("(Remote)", "").trim()}</p>
                   <img src={arrowIcon} alt='red right arrow icon'></img>
                 </a>
@@ -259,12 +256,11 @@ const CareersPage = ({ location }) => {
             </div>
           </div>
           <p className='h5'>
-            If all goes well, we will answer any questions and welcome you to the CivicActions family!
+            If all goes well, we will answer any questions and welcome you to the CivicActions team!
           </p>
         </div>
       </section>
       <section className='home--learn-w-us-section'>
-        <div className='grey-background'></div>
         <div className='inner'>
           <h2 style={{ marginBottom: 56 }}>Explore our culture</h2>
 
@@ -299,6 +295,7 @@ const CareersPage = ({ location }) => {
       </section>
       <StaffQuote
         img={irisIbekweProfilePicture}
+        alt='Headshot of Iris Ibekwe'
         quote='“I love the honest, collaborative atmosphere, and the way CivicActions prioritizes the well-being of team members.”'
         name='Iris Ibekwe'
         role='Engineer'
@@ -326,15 +323,15 @@ export const query = graphql`
         }
       }
     }
-    allFeedJobList {
-      edges {
-        node {
-          title
-          link
-        }
-      }
-    }
   }
 `;
 
 export default CareersPage;
+
+export const Head = () => (
+  <SEO
+    title='Careers'
+    description='Work for the public good. Join our diverse and talented team of civic-minded people.'
+    image={careersOgImage}
+  />
+);

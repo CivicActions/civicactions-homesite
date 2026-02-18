@@ -1,6 +1,6 @@
 import '../sass/styles.scss';
 import React, { useEffect, useRef } from 'react';
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image";
 import HomepageLayout from '../layouts/homepage';
 import Card from '../components/card.js';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
@@ -9,6 +9,8 @@ import CaseStudyTeaser from '../components/case-study-teaser.js';
 import PressReleaseTeaser from '../components/press-release-teaser.js';
 import LinkButton from '../components/link-button';
 import SEO from '../components/seo';
+import { graphql, useStaticQuery } from "gatsby";
+import ExternalLinkButton from "../components/external-link-button";
 
 // Images
 import homeIntroGraphic from '../files/images/homepage-hero.png';
@@ -23,7 +25,6 @@ import securityComplianceIcon from '../files/icons/security-compliance-icon.svg'
 import webCmsIcon from '../files/icons/web-cms-icon.svg';
 import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 import arrowIcon from '../files/icons/arrow-icon.svg';
-import { graphql, useStaticQuery } from "gatsby";
 
 const HomePage = () => {
   const fadersRef = useRef([]);
@@ -44,7 +45,10 @@ const HomePage = () => {
 
   const data = useStaticQuery(graphql`
     {
-      allStrapiCaseStudy(filter: {Promoted_to_Homepage: {eq: "True"}}, sort: {fields: Sort_Order}) {
+      allStrapiCaseStudy(
+        filter: {Promoted_to_Homepage: {eq: "True"}}
+        sort: {Sort_Order: ASC}
+      ) {
         nodes {
           Title
           Cover_Image {
@@ -58,7 +62,7 @@ const HomePage = () => {
           Service_Category {
             Category
           }
-          Featured
+          Promoted_to_Homepage
           Summary
           id
         }
@@ -69,7 +73,6 @@ const HomePage = () => {
 
   return (
     <HomepageLayout>
-      <SEO title='Home' />
       <section className='home--hero-section'>
         <div className='inner'>
           <img
@@ -79,7 +82,7 @@ const HomePage = () => {
             className='fade-in'></img>
           <div className='info-text'>
             <h1>
-              We help government deliver better public services through modern
+              We help government deliver better public services through open
               technology and design.
             </h1>
             <LinkButton
@@ -154,12 +157,11 @@ const HomePage = () => {
             <h2>Resilient agencies. Accessible services. Happier people.</h2>
             <p className='body-large'>
               Working for the greater good is in our DNA. From healthcare to
-              welfare to education and beyond, we partner with agencies to solve
+              science to education and beyond, we partner with agencies to solve
               hard problems and improve outcomes for government and the public.
             </p>
             <div className='teasers'>
               <CaseStudyTeaser cases={cases} />
-
               <div className='view-our-work-cta '>
                 <a href={'/case-studies/'}>
                   <img src={caseStudyTeaserImg3} alt='' className='bg'></img>
@@ -179,7 +181,6 @@ const HomePage = () => {
       {/* ======== Quote Section ========== */}
       <section className='home--section home--quote-section'>
         <div className='inner'>
-          <img src={quotePatternGraphic} alt=''></img>
           <div className='quote'>
             <h2>
               “CivicActions always looked for the optimal solutions to difficult problems and improved constantly on delivered functionality. They responded with agility, creativity, and skill to any challenge that was thrown at them.”
@@ -243,7 +244,7 @@ const HomePage = () => {
 
             </div>
           </div>
-          <LinkButton src='https://medium.com/civicactions' type='primary' text='Explore posts and videos' />
+          <ExternalLinkButton src='https://medium.com/civicactions' type='primary' text='Explore posts and videos' />
         </div>
       </section>
       {/* ======== Team Section ========== */}
@@ -267,6 +268,7 @@ const HomePage = () => {
         </div>
       </section>
       <PrimaryPageCTA
+        isHomePage={true}
         title='Let’s build a public success story.'
         subtitle='Get in touch to start.'
         primaryButtonText='Put us to work'
@@ -278,3 +280,7 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+export const Head = () => (
+  <SEO title='Home' />
+)

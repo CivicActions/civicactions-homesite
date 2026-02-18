@@ -1,0 +1,27 @@
+a.external-link,
+a.external-link-white,
+.case-studies .hero-component a,
+.case-studies .section--case-study--stats a,
+.case-studies .section--case-study--challenge-to-tools a,
+.case-studies .section--case-study--approaches a,
+.case-studies .section--case-study--outcomes a,
+.case-studies .staff-quote a {
+  &::after {
+    content: '';
+    background-image: url('../files/icons/icon-external-link.svg');
+    background-position: center 1px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    content: '';
+    min-width: 18px;
+    height: 19px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+}
+a.external-link-white {
+  &::after {
+    // Need to change this
+    background-color: white;
+  }
+}

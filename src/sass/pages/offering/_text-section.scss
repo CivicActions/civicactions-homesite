@@ -1,6 +1,12 @@
 .section--offering--text {
   position: relative;
-
+  margin-bottom: 40px;
+  @media (min-width: $tablet-screen) {
+    margin-bottom: 48px;
+  }
+  @media (min-width: $medium-large-screen) {
+    margin-bottom: 64px;
+  }
   .inner {
     padding: 24px;
     background-color: $colors-white;
@@ -21,8 +27,13 @@
 
     .button-wrapper {
       margin-bottom: 16px;
+      margin-top: 32px;
       @media(min-width: $tablet-screen) {
         float: left;
+        margin-top: 24px;
+      }
+      @media (min-width: $large-screen) {
+        margin-top: 28px;
       }
       a {
         padding: 12px 0;
@@ -56,7 +67,7 @@
   }
 
   .background-mint {
-    background-color: $colors-mint-cool-40v;
+    background-color: $primary-blue;
     height: 75%;
     position: absolute;
     top: 120px;

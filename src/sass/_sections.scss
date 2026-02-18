@@ -1,6 +1,6 @@
 section,
 .section {
-  margin-bottom: 48px;
+  margin-bottom: 134px;
 
   .inner {
     @include section-inner-padding;
@@ -17,7 +17,7 @@ section,
   }
 
   @media screen and (min-width: $large-screen) {
-    margin-bottom: 64px;
+    margin-bottom: 150px;
   }
 
 }

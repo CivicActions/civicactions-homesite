@@ -2,85 +2,63 @@ import '../sass/styles.scss';
 import React from 'react';
 import RedLayout from '../layouts/red';
 import PrimaryPageCTA from '../components/primary-page-cta.js';
-import ContractVehicle from '../components/contract-vehicle';
-import ContractVehiclePdf from '../components/contract-vehicle-pdf';
-import WorkAwards from '../components/work-awards';
+import ClientsSection from '../components/clients.js';
+import Card from '../components/card.js';
 import { Link } from 'gatsby';
 import SEO from '../components/seo';
-import cio from '../files/images/client-logos/cio.svg';
-import dgs from '../files/images/client-logos/dgs.svg';
-import doi from '../files/images/client-logos/doi.svg';
-import govuk from '../files/images/client-logos/govuk.svg';
-import gsa from '../files/images/client-logos/gsa.svg';
-import gsaPdf from '../files/GMAS-contract-schedule.pdf';
-import cmasPdf from '../files/CMAS-contract-schedule.pdf';
-import library from '../files/images/client-logos/library.svg';
+import dataServicesIcon from '../files/icons/data-services-icon.svg';
+import itModernizationIcon from '../files/icons/it-modernization-icon.svg';
+import productDesignIcon from '../files/icons/product-design-icon.svg';
+import securityComplianceIcon from '../files/icons/security-compliance-icon.svg';
+import webCmsIcon from '../files/icons/web-cms-icon.svg';
+import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 
 const ContractingPage = () => {
   return (
     <RedLayout className='contracting-page'>
-      <SEO
-        title='Contracting information'
-        description='We are a Small Business helping government agencies make digital services that build public trust. Learn about contracting with us.'
-      />
       <div className='hero-component'>
         <div className='inner'>
-          <h1>Your strategic partner for modernizing government services</h1>
+          <h1>Let’s build a world<br />that works for all.</h1>
           <p className='body'>
-            We apply Agile and DevOps, open source software, and human-centered design to elevate digital platforms for organizations serving the public. As an <strong>innovative small business</strong>, we solve long-standing modernization challenges by creating automated compliance models for system security plans and bringing <strong>accessibility to the forefront</strong> of design and development. Let’s work together to make government services that <strong>build public trust.</strong>
+            We envision and deliver open source technology solutions enabling accessible, human-centered government services. With thought leaders in agile development, engineering, compliance and design, we invite you to join us in transforming enterprise digital platforms and creating modern applications impacting millions of Americans.
           </p>
         </div>
-
       </div>
-      <section className='section--contracting-vehicles'>
-        <h2>Contracting vehicles</h2>
+      <section className='contracting--services-section'>
         <div className='inner'>
-          <ContractVehiclePdf
-            icon={gsa}
-            alt='GSA logo'
-            name='GSA MAS'
-            info='General Services Administration Multiple Award Schedule (prime)'
-            contract='Contract number: GS-35F-337BA'
-            link={gsaPdf}
-          />
-          <ContractVehiclePdf
-            icon={dgs}
-            alt='California Department of General Services logo'
-            name='CMAS'
-            info='California Multiple Award Schedule (prime)'
-            contract='Contract number: 3-16-70-3298A'
-            link={cmasPdf}
-          />
-          <ContractVehicle
-            icon={govuk}
-            alt='GOV.UK logo'
-            name='GOV.UK Digital Marketplace G-Cloud'
-            info='Framework agreement: RM1557.12'
-            link='https://www.digitalmarketplace.service.gov.uk/g-cloud/supplier/708558'
-          />
-          <ContractVehicle
-            icon={doi}
-            alt='Library of Congress logo'
-            name='LOC IDIQ'
-            info='Library of Congress Agile Development and System Integration Modernization (subcontractor to Ad Hoc)'
-            contract='Contract number: LCLOC20D0013'
-          />
-          <ContractVehicle
-            icon={cio}
-            alt='NIH Information Technology Acquisition and Assessment Center and Chief Information Officer Solutions and Partners 3 logo'
-            name='CIO SP3 (RIVA)'
-            info='Chief Information Officer - Solutions and Partners 3'
-            contract='Contract number: 75N98120D00070'
-            link='https://nitaac.nih.gov/services/cio-sp3'
-          />
-          <ContractVehicle
-            icon={library}
-            alt='U.S. Department of the Interior logo'
-            name='DOI IDIQ'
-            info='Drupal Web Developer BPA'
-            contract='Contract number: 140D0419A0010'
-            period='Contract period: 02/06/2019  - 11/30/2023'
-          />
+          <h2>Our Expertise</h2>
+          <div className='service-cards-grid'>
+            <Card
+              title='Web & CMS'
+              icon={webCmsIcon}
+              link='/services#web-cms'
+            />
+            <Card
+              title='IT & Service Modernization'
+              icon={itModernizationIcon}
+              link='/services#service-modernization'
+            />
+            <Card
+              title='Product & Design'
+              icon={productDesignIcon}
+              link='/services#product-design'
+            />
+            <Card
+              title='Security & Compliance'
+              icon={securityComplianceIcon}
+              link='/services#security-compliance'
+            />
+            <Card
+              title='Data Services'
+              icon={dataServicesIcon}
+              link='/services#data-services'
+            />
+            <Card
+              title='Workforce Development'
+              icon={workforceDevelopmentIcon}
+              link='/services#workforce-development'
+            />
+          </div>
         </div>
       </section>
       <section className='section--company-data-diff'>
@@ -88,24 +66,40 @@ const ContractingPage = () => {
           <div className='company-data list--wrapper'>
             <h2>Company data</h2>
             <ul className='body'>
-              <li>DUNS: 022112930</li>
+              <li>CivicActions, Inc.</li>
+              <li>GSA Schedule: GS-35F-337BA</li>
+              <li>
+                <ul>
+                  <li>Professional Services, Health IT and Cloud</li>
+                </ul>
+              </li>
+              <li>UEI: XSZFHRS5QFL5</li>
               <li>CAGE Code: 65FK1</li>
-              <li>NAICS Codes: 519190, 541511, 541512, 541513, 541519</li>
+              <li>NAICS Codes: 541511, 541512, 541513, 541519</li>
+              <li>Founded: 2004 (California)</li>
+              <li>Incorporated: 2010 (California)</li>
+              <li>Partnership POC: <a href="mailto:sales@civicactions.com">sales@civicactions.com</a></li>
               <li>Standard Product Code: 80101507</li>
               <li>
-                Certified Small Business (Micro), State of California DGS, No.
-                2003474
+                California Multiple Award Schedule (CMAS) Number: 3-25-04-1042
               </li>
-              <li>Incorporated: 2004 (California)</li>
-              <li>CivicActions Digital Service ULC (Canadian entity)</li>
+              <li>Canadian</li>
+              <li>
+                <ul>
+                  <li>CivicActions Digital Service ULC (Canadian entity)</li>
+                  <li>Canadian POC: <a href="mailto:ca-canada@civicactions.com">ca-canada@civicactions.com</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
           <div className='differentiators list--wrapper'>
             <h2>Differentiators</h2>
             <ul className='body'>
+              <li>50+ Drupal developers, with 15+ Acquia certifications</li>
+              <li>75 W3C edX Accessibility certifications</li>
               <li>
                 Founding members of{' '}
-                <a href='https://digitalservicescoalition.org/#/'>
+                <a href='https://digitalservicescoalition.org/#/' className='external-link-white'>
                   Digital Services Coalition
                 </a>
               </li>
@@ -122,84 +116,45 @@ const ContractingPage = () => {
               <li>U.S. Digital Service (USDS) alumni team members</li>
               <li>
                 Co-maintainers of U.S. Web Design System (USWDS){' '}
-                <a href='https://www.drupal.org/project/uswds'>
+                <a href='https://www.drupal.org/project/uswds' className='external-link-white'>
                   base theme in Drupal
                 </a>
               </li>
               <li>
                 Founders of{' '}
-                <a href='https://www.agilegovleaders.org/'>AGL Association</a>{' '}
+                <a href='https://www.publicgood.tech/' className='external-link-white'>Technologists for the Public Good</a>{' '}
                 to support government innovators
               </li>
               <li>
                 Core maintainers of the open source open data platform{' '}
-                <a href='https://getdkan.org/'>DKAN</a>
-              </li>
-              <li>
-                Named to{' '}
-                <a href='https://www.govtech.com/100/2021'>GovTech 100</a> list
-                five years in a row, 2017 - 2021
+                <a href='https://getdkan.org/' className='external-link'>DKAN</a>
               </li>
             </ul>
           </div>
         </div>
       </section>
-      <section className='section--recent-work-awards'>
+      <ClientsSection />
+      <div className='hero-component'>
         <div className='inner'>
-          <h2>Recent work and contract awards</h2>
-          <div>
-            <div className='year'>2021</div>
-            <div className='content'>
-              <WorkAwards
-                client='U.S. Department of Education'
-                title='Improvement of systems for advancing adult literacy'
-                link='/press/2021-05-11-civicactions-wins-department-of-ed-recompete'
-              />
-              <WorkAwards
-                client='National Science Foundation'
-                title='Ongoing support and improvement of federal science research website'
-                link='/press/2021-05-03-civicactions-wins-nsf-recompete'
-              />
-            </div>
-          </div>
-          <div>
-            <div className='year'>2020</div>
-            <div className='content'>
-              <WorkAwards
-                client='DistributedGov'
-                title='Remote / telework training and consulting'
-                link='https://distributedgov.com/news/distributedgov-launches'
-              />
-              <WorkAwards
-                client='U.S. Digital Service / Office of Federal Procurement Policy'
-                title='Certified small business provider of DITAP program training'
-                link='/press/2020-08-14-civicactions-certified-to-deliver-ditap'
-              />
-              <WorkAwards
-                client='Centers for Medicare and Medicaid Services'
-                title='Agile development website modernization and open data migration'
-                link='/press/2020-03-02-civicactions-wins-cms-contract'
-              />
-            </div>
-          </div>
-          <div>
-            <div className='year'>2019</div>
-            <div className='content'>
-              <WorkAwards
-                client='Centers for Medicare and Medicaid Services'
-                title='Design challenge to improve health care experience for seniors'
-                link='/case-studies/cms-design-challenge-mvp'
-              />
-              <WorkAwards
-                client='U.S. Department of Veterans Affairs'
-                title='VA.gov modernization using Drupal and human-centered design'
-                link='/case-studies/va-cms-modernization'
-              />
-            </div>
-          </div>
+          <h2>Contracting Vehicles (Prime)</h2>
+          <p className='body'>
+          <ul>
+            <li>GSA Multiple Award Schedule
+              <ul>
+                <li>IT Professional Services (SIN 54151S)</li>
+                <li>Health IT Services (SIN 54151HEAL)</li>
+                <li>Cloud Computing and Cloud Related IT Professional Services (SIN 518210C)</li>
+              </ul>
+            </li>
+            <li>State of California, Technology, Digital and Data Consulting Master Service Agreement</li>
+            <li>State of California Multiple Award Schedule</li>
+            <li>Department of the Interior, Drupal Developer Support Services BPA</li>
+            <li>State of Colorado, Agile Vendor Pool</li>
+            <li>Department of Veterans Affairs, Federal Acquisition Certification IDIQ</li>
+          </ul>
+          </p>
         </div>
-      </section>
-
+      </div>
       <PrimaryPageCTA
         title='Let’s build a public success story.'
         subtitle='Get in touch to start.'
@@ -211,3 +166,10 @@ const ContractingPage = () => {
 };
 
 export default ContractingPage;
+
+export const Head = () => (
+  <SEO
+    title='Contracting information'
+    description='We are a Small Business helping government agencies make digital services that build public trust. Learn about contracting with us.'
+  />
+);

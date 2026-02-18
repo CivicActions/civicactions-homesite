@@ -22,10 +22,6 @@ const ServicesPage = ({ data }) => {
   }, []);
   return (
     <RedLayout>
-      <SEO
-        title='Services'
-        description='We use Agile and DevOps, open source software, and human-centered design to elevate government digital services.'
-      />
       <Hero
         title='Government services that build public trust'
         description='At its core, digital transformation is about improving the customer experience of government. We use thoughtful design and open source technologies to help you deliver modern public services that put people first. '
@@ -98,7 +94,7 @@ const ServicesPage = ({ data }) => {
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
                   <li>
-                    <Link to='https://accessibility.civicactions.com/posts/heart-accessibility '>Accessibility consulting and training</Link>
+                    <a className='external-link' href='https://accessibility.civicactions.com/posts/heart-accessibility '>Accessibility consulting and training</a>
                   </li>
                   <li>
                     Research and discovery
@@ -142,9 +138,9 @@ const ServicesPage = ({ data }) => {
               <div className='body'>
                 California Child Welfare Digital Services
               </div>
-              <Link to='https://cwds.ca.gov/ ' className='body-large'>
+              <a href='https://cwds.ca.gov/' className='external-link body-large'>
                 Provided DevOps support for child welfare systems
-              </Link>
+              </a>
               <div className='body'>
                 New York Metropolitan Transit Authority
               </div>
@@ -245,9 +241,9 @@ const ServicesPage = ({ data }) => {
               <div className='body'>
                 Various agencies
               </div>
-              <Link to='https://www.youtube.com/watch?v=jsdUYUiKM3U&list=PLbbanFptQWaKZp8_IFnZmJbsa2UGuj3ax&index=6' className='body-large'>
+              <a href='https://www.youtube.com/watch?v=jsdUYUiKM3U&list=PLbbanFptQWaKZp8_IFnZmJbsa2UGuj3ax&index=6' className='external-link body-large'>
                 Helping government automate federal compliance
-              </Link>
+              </a>
 
               <div className='cta'>
                 <h3 className='h4'>How we can help you</h3>
@@ -283,16 +279,16 @@ const ServicesPage = ({ data }) => {
                 track metrics, and power useful apps.
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
-              <div className='body'>City of Louisville</div>
+              <div className='body'>Centers for Medicare and Medicaid Services (CMS)</div>
               <div className='body-large'>
-                Supporting local government transparency
+                Supporting government transparency
               </div>
               <div className='body'>
-                Georgia Board of Healthcare Workforce
+                We empower federal agencies like CMS to reinstate ownership of their data on open data platforms and are working toward a future in which more public data accessibility can become a reality.
               </div>
-              <Link to='/case-studies/georgia-workforce-open-data' className='body-large'>
-                Open data dashboards to serve healthcare workers in Georgia
-              </Link>
+              <a href='https://openpaymentsdata.cms.gov/' className='body-large external-link'>
+                Open data to search payments made by drug and medical device companies to medical providers
+              </a>
               <div className='cta'>
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
@@ -331,14 +327,14 @@ const ServicesPage = ({ data }) => {
               </div>
               <h3 className='h4'>How we’ve helped others</h3>
               <div className='body'>Federal Acquisitions Institute</div>
-              <a href='https://medium.com/civicactions/what-we-learned-from-training-procurement-officers-to-buy-modern-government-it-cc6309df4103' className='body-large'>
+              <a href='https://medium.com/civicactions/what-we-learned-from-training-procurement-officers-to-buy-modern-government-it-cc6309df4103' className='body-large external-link'>
                 DITAP program certification for federal procurement officers
               </a>
               <div className='cta'>
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
                   <li><Link to='/services/ditap'>DITAP program certification</Link></li>
-                  <li><a href='https://distributedgov.com/'>Telework consulting and training</a></li>
+                  <li><a href='https://distributedgov.com/' className='external-link'>Telework consulting and training</a></li>
                   <li>Agile and Human-Centered Design coaching</li>
                   <li>Team culture and performance coaching</li>
                   <li>Technology strategy consulting</li>
@@ -353,7 +349,7 @@ const ServicesPage = ({ data }) => {
       </section>
       <section className='services--ellipses-section'>
         <div className='inner'>
-          <h2>Open Standards. Inclusive Practices. Better Outcomes.</h2>
+          <h2>Open standards. Inclusive practices. Better outcomes.</h2>
           <div className='body-large'>
             No matter what problem we’re solving, our core practices and
             communities power our work and align with current standards for
@@ -386,3 +382,10 @@ const ServicesPage = ({ data }) => {
 };
 
 export default ServicesPage;
+
+export const Head = () => (
+  <SEO
+    title='Services'
+    description='We use Agile and DevOps, open source software, and human-centered design to elevate government digital services.'
+  />
+);

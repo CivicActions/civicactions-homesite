@@ -17,7 +17,7 @@ import CaseStudyTeaser from '../components/case-study-teaser.js';
 const CaseStudyPage = () => {
   const data = useStaticQuery(graphql`
     {
-      allStrapiCaseStudy(sort: { fields: Sort_Order }) {
+      allStrapiCaseStudy(sort: {Sort_Order: ASC}) {
         nodes {
           Title
           Cover_Image {
@@ -97,13 +97,15 @@ const CaseStudyPage = () => {
     if (!filterState.length) {
       cases = caseStudies;
     } else {
+      /// For each case study, loop through the selected filters and only
+      // return results that match the selected categories.
       cases = caseStudies.filter((caseStudy) => {
-        let category = caseStudy.Service_Category[0].Category;
-        // For each case study, loop through the selected filters and only
-        // return results that match the selected categories.
-        for (let filter of filterState) {
-          if (category === filter) {
-            return true;
+        for(var i = 0; i < caseStudy.Service_Category.length; i++) {
+          let category = caseStudy.Service_Category[i].Category;
+          for (let filter of filterState) {
+            if (category === filter) {
+              return true;
+            }
           }
         }
       });
@@ -112,10 +114,6 @@ const CaseStudyPage = () => {
 
   return (
     <RedLayout>
-      <SEO
-        title='Case Studies'
-        description="From large-scale federal CMS modernization to automating security compliance, see how we've helped government deliver better services to the public."
-      />
       <Hero
         title='Work that makes a difference'
         description='Our work impacts the daily lives of millions of people. See how we’ve helped agencies build resilient services at scale.'
@@ -261,3 +259,10 @@ const CaseStudyPage = () => {
   );
 };
 export default CaseStudyPage;
+
+export const Head = () => (
+  <SEO
+    title='Case Studies'
+    description="From large-scale federal CMS modernization to automating security compliance, see how we've helped government deliver better services to the public."
+  />
+);

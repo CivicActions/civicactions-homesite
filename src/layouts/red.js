@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Header from '../components/red-header.js';
 import Footer from '../components/footer.js';
 import Sidebar from '../components/sidebar.js';
-import { Helmet } from 'react-helmet';
 import { SkipNavLink } from '../components/skip-nav';
 
 const RedLayout = ({ children }) => {
@@ -13,11 +12,6 @@ const RedLayout = ({ children }) => {
 
   return (
     <div style={{ position: 'relative' }}>
-      <Helmet
-        htmlAttributes={{
-          lang: 'en',
-        }}
-      />
       <div>
         <SkipNavLink />
         <div className='red-rectangle'></div>

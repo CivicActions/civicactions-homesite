@@ -2,20 +2,39 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on PR
-'on': pull_request
+
+'on':
+  pull_request:
+  # deploy manually
+  workflow_dispatch:
+
 jobs:
   build_and_preview:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: c-hive/gha-yarn-cache@v2
-      - name: Install JS dependencies
-        run: yarn install --frozen-lockfile
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn'
+      - name: Caching Gatsby
+        id: gatsby-cache-build
+        uses: actions/cache@v4
+        with:
+          path: |
+            public
+            .cache
+          key: ${{ runner.os }}-gatsby-build-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-gatsby-build-
+      - name: Yarn install
+        run: 'yarn install --frozen-lockfile'
       - name: Build
         run: yarn build
         env:
-          NODE_OPTIONS: '--max-old-space-size=4096'
+          STRAPI_API_URL: '${{ secrets.STRAPI_API_URL }}'
+          STRAPI_TOKEN: '${{ secrets.STRAPI_TOKEN }}'
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'

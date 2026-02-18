@@ -60,9 +60,9 @@ const ClientsSection = () => {
           <img
             src={clientLogo13}
             alt='Logo for the U.S. Federal Communications Commission'></img>
-          <img
+          {/*<img
             src={clientLogo14}
-            alt='Logo for the U.S. Department of Education'></img>
+            alt='Logo for the U.S. Department of Education'></img>*/}
           <img src={clientLogo15} alt='Logo for the Smithsonian'></img>
           <img
             src={clientLogo16}

@@ -3,6 +3,7 @@ import '../sass/styles.scss';
 import GeneralLayout from '../layouts/general';
 import { servicesData } from '../data';
 import { Sections } from '../components/sections';
+import SEO from '../components/seo';
 
 const sectionClasses = {
   sectionClasses: 'services--section',
@@ -18,3 +19,7 @@ const Services2Page = () => {
 };
 
 export default Services2Page;
+
+export const Head = () => (
+  <SEO />
+);

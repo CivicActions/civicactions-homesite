@@ -10,21 +10,10 @@ import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image";
 
 const CaseStudyTemplate = ({ data }) => {
   const caseStudy = data.allStrapiCaseStudy.edges[0].node;
-  const { Client_Name, Related_Case_Studies, Hero_Image, Cover_Image } = caseStudy;
-
-  // If an og image is uploaded in strapi use it, otherwise default to the cover image.
-  let ogImage = caseStudy.SEO.OGImage ? getSrc(caseStudy.SEO.OGImage) : Cover_Image.url;
+  const { Client_Name, Related_Case_Studies, Hero_Image } = caseStudy;
 
   return (
     <GeneralLayout>
-      <SEO
-        title={caseStudy.SEO.OGTitle}
-        description={caseStudy.SEO.OGDescription}
-        image={ogImage}
-        // Indicates that the cover_image url is an external link. If it is return true.
-        isExternalImage={ogImage === Cover_Image.url}
-      />
-
       <div className='case-studies'>
         <CaseStudyHero
           client={Client_Name}
@@ -40,11 +29,11 @@ const CaseStudyTemplate = ({ data }) => {
           </section>
         }
 
-        <section className='section--case-study--stats'>
+        {caseStudy.Stats[0] && <section className='section--case-study--stats'>
           <div className='stats--wrapper'>
             <div className='inner'>
               {caseStudy.Stats.map(({ stat }, index) => (
-                <div className='single-stat'>
+                <div className='single-stat' key={index}>
                   <h2 className='stat--number'>{caseStudy.Stats[index].Numerical_Element}</h2>
                   <p className='body stat--text'>{caseStudy.Stats[index].Content_Element}</p>
                 </div>
@@ -54,11 +43,22 @@ const CaseStudyTemplate = ({ data }) => {
           </div>
 
         </section>
-        {caseStudy.Quote &&
+
+        }
+        {caseStudy.Stats &&
+        caseStudy.Quote &&
           <Quote
             quote={caseStudy.Quote.Quote}
             source={caseStudy.Quote.Source}
             classes='first-quote no-img'
+          />
+        }
+        {!caseStudy.Stats &&
+          caseStudy.Quote &&
+          <Quote
+            quote={caseStudy.Quote.Quote}
+            source={caseStudy.Quote.Source}
+            classes='no-stats-quote first-quote no-img'
           />
         }
 
@@ -66,42 +66,47 @@ const CaseStudyTemplate = ({ data }) => {
           <section className='section--case-study--challenge-to-tools'>
             <div className='inner'>
               <div className='case-study-challenge-goal'>
-                <div className='challenge'>
-                  <h2>The challenge</h2>
-                  <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Challenge} />
-
-                </div>
-                <div className='goal'>
-                  <h3>Client goal</h3>
-                  <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Client_Goal} />
-
-                </div>
+                {caseStudy.Challenge_Goal.Challenge.data.Challenge && (
+                  <div className='challenge'>
+                    <h2>The challenge</h2>
+                    <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Challenge.data.Challenge} />
+                  </div>
+                )}
+                {caseStudy.Challenge_Goal.Client_Goal.data.Client_Goal && (
+                  <div className='goal'>
+                    <h3>Client goal</h3>
+                    <ReactMarkdown className='body' children={caseStudy.Challenge_Goal.Client_Goal.data.Client_Goal} />
+                  </div>
+                )}
               </div>
-              <div className='case-study--expertise-tools'>
-                <div className='expertise'>
-                  <h3>Expertise</h3>
-                  <ReactMarkdown className='body' children={caseStudy.Expertise[0].Expertise_Content} />
-                </div>
-                <div className='tools'>
-                  <h3>Tools and technologies</h3>
-                  <ReactMarkdown className='body'
-                    children={caseStudy.Tools_Technologies[0].Tools_Technologies_Content} />
-                </div>
+               <div className='case-study--expertise-tools'>
+                 {caseStudy.Expertise[0].Expertise_Content.data.Expertise_Content && (
+                    <div className='expertise'>
+                      <h3>Expertise</h3>
+                      <ReactMarkdown className='body' children={caseStudy.Expertise[0].Expertise_Content.data.Expertise_Content} />
+                    </div>
+                  )}
+                  {caseStudy.Tools_Technologies[0].Tools_Technologies_Content.data.Tools_Technologies_Content && (
+                    <div className='tools'>
+                      <h3>Tools and technologies</h3>
+                      <ReactMarkdown className='body'
+                        children={caseStudy.Tools_Technologies[0].Tools_Technologies_Content.data.Tools_Technologies_Content} />
+                    </div>
+                  )}
               </div>
             </div>
           </section>
         }
 
-
-
+        {caseStudy.Approach &&
         <section className='section--case-study--approaches'>
 
           {caseStudy.Approach.map((approachItem, index) => (
-            <div className='inner'>
+            <div className='inner' key={index}>
               {index === 0 &&
                 <div className='first-approach'>
                   <h2>{approachItem.Title}</h2>
-                  <ReactMarkdown className='body' children={approachItem.Text} />
+                  <ReactMarkdown className='body' children={approachItem.Text.data.Text} />
                 </div>
               }
               {index !== 0 &&
@@ -109,7 +114,7 @@ const CaseStudyTemplate = ({ data }) => {
 
                   <div className='title-text--wrapper'>
                     <h3>{approachItem.Title}</h3>
-                    <ReactMarkdown className='body' children={approachItem.Text} />
+                    <ReactMarkdown className='body' children={approachItem.Text.data.Text} />
                   </div>
                   {approachItem.Image && <div className='image--wrapper'>
                     <div>
@@ -132,7 +137,7 @@ const CaseStudyTemplate = ({ data }) => {
             </div>
           ))}
 
-        </section>
+        </section>}
 
         {/* Todo Key outcomes*/}
         {caseStudy.Key_Outcome && <section className='section--case-study--outcomes'>
@@ -140,9 +145,9 @@ const CaseStudyTemplate = ({ data }) => {
           <div className='inner'>
 
             {caseStudy.Key_Outcome.map(({ node }, index) => (
-              <div className='key-outcome'>
+              <div className='key-outcome' key={index}>
                 <p className='label'>{caseStudy.Key_Outcome[index].Title}</p>
-                <ReactMarkdown className='body' children={caseStudy.Key_Outcome[index].Text} />
+                <ReactMarkdown className='body' children={caseStudy.Key_Outcome[index].Text.data.Text} />
               </div>
             ))}
           </div>
@@ -153,10 +158,10 @@ const CaseStudyTemplate = ({ data }) => {
           <div className='inner'>
             <h2>Meet the team</h2>
             <div className='related-staff--wrapper'>
-              {caseStudy.staff_profiles.map(({ node }, index) => (
-                <div className='related-staff'>
+              {caseStudy.staff_profiles.sort((a, b) => a.Name.localeCompare(b.Name)).map(({ node }, index) => (
+                <div className='related-staff' key={index}>
                   {caseStudy.staff_profiles[index].Image &&
-                    <GatsbyImage image={getImage(caseStudy.staff_profiles[index].Image)} alt={''} />
+                    <GatsbyImage image={getImage(caseStudy.staff_profiles[index].Image.localFile)} alt={''} />
                   }
                   <p className='body staff-name'>
                     {/*// Unlinked for MVP soft launch*/}
@@ -176,7 +181,7 @@ const CaseStudyTemplate = ({ data }) => {
             <div className='inner'>
 
               {caseStudy.Related_Case_Studies.map(({ node }, index) => (
-                <div className='related-case-study'>
+                <div className='related-case-study' key={index}>
                   <a href={caseStudy.Related_Case_Studies[index].Path}>
                     {caseStudy.Related_Case_Studies[index].Cover_Image[0] && <img src={caseStudy.Related_Case_Studies[index].Cover_Image[0].url} alt={caseStudy.Related_Case_Studies[index].Cover_Image[0].alternativeText} />}
 
@@ -205,7 +210,11 @@ query CaseStudyQuery($pagePath: String!) {
     edges {
       node {
         Approach {
-          Text
+          Text {
+            data {
+              Text
+            }
+          }
           Image  {
             url
             alternativeText
@@ -214,16 +223,34 @@ query CaseStudyQuery($pagePath: String!) {
           Title
         }
         Challenge_Goal {
-          Challenge
-          Client_Goal
+          Challenge {
+            data {
+              Challenge
+            }
+          }
+          Client_Goal  {
+            data {
+              Client_Goal
+            }
+          }
         }
         Client_Name
         Path
         Expertise {
-          Expertise_Content
+          Expertise_Content {
+            data {
+              Expertise_Content
+            }
+          }
         }
         Cover_Image {
-          url
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                  width: 426
+              )
+            }
+          }
         }
         Hero_Image {
             url
@@ -231,7 +258,11 @@ query CaseStudyQuery($pagePath: String!) {
             caption
           }
         Key_Outcome {
-          Text
+          Text {
+            data {
+              Text
+            }
+          }
           Title
         }
         Quote {
@@ -257,15 +288,21 @@ query CaseStudyQuery($pagePath: String!) {
         Summary
         Title
         Tools_Technologies {
-          Tools_Technologies_Content
+          Tools_Technologies_Content {
+            data {
+              Tools_Technologies_Content
+            }
+          }
         }
         staff_profiles {
           Name
           Role
           Path
           Image {
-            childImageSharp {
-              gatsbyImageData(width: 264, height: 264, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            localFile {
+              childImageSharp {
+                gatsbyImageData(width: 264, height: 264, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+              }
             }
           }
         }
@@ -273,10 +310,12 @@ query CaseStudyQuery($pagePath: String!) {
           OGTitle
           OGDescription
           OGImage {
-            childImageSharp {
-              gatsbyImageData(
-                width: 1200
-              )
+            localFile {
+              childImageSharp {
+                gatsbyImageData(
+                    width: 1200
+                )
+              }
             }
           }
         }
@@ -289,3 +328,16 @@ query CaseStudyQuery($pagePath: String!) {
 
 export default CaseStudyTemplate;
 
+export const Head = ({ data }) => {
+  const caseStudy = data.allStrapiCaseStudy.edges[0].node;
+  // If an og image is uploaded in strapi use it, otherwise default to the cover image.
+  let ogImage = caseStudy.SEO.OGImage ? getSrc(caseStudy.SEO.OGImage.localFile) : getSrc(caseStudy.Cover_Image.localFile);
+
+  return (
+    <SEO
+      title={caseStudy.SEO.OGTitle}
+      description={caseStudy.SEO.OGDescription}
+      image={ogImage}
+    />
+  )
+};

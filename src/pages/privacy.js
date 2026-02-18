@@ -8,10 +8,6 @@ import SEO from '../components/seo';
 const PrivacyPage = () => {
   return (
     <RedLayout>
-      <SEO
-        title='Privacy policy'
-        desciption='Our privacy policy describes how we collect and use information about visitors to our website.'
-      />
       <Hero
         title='Our privacy policy'
         description='This is a plain-language statement explaining how we collect
@@ -201,3 +197,10 @@ const PrivacyPage = () => {
 };
 
 export default PrivacyPage;
+
+export const Head = () => (
+  <SEO
+    title='Privacy policy'
+    desciption='Our privacy policy describes how we collect and use information about visitors to our website.'
+  />
+);

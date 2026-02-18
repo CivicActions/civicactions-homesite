@@ -7,12 +7,8 @@ import SEO from '../../../components/seo';
 const Register = () => {
   return (
     <RedLayout>
-      <SEO
-        title='Digital IT Acquisition Professional (DITAP) certification program'
-        description='Register for the Digital IT Acquisition Professional (DITAP) certification program.'
-      />
       <Hero
-        title='Request DITAP training'
+        title='Get Started with DITAP training'
         description='CivicActions is a certified Small Business provider of the Digital IT Acquisition Professional (DITAP) training program.'
       />
       <section className='section--ditap-register--form'>
@@ -28,3 +24,10 @@ const Register = () => {
 };
 
 export default Register;
+
+export const Head = () => (
+  <SEO
+    title='Digital IT Acquisition Professional (DITAP) certification program'
+    description='Register for the Digital IT Acquisition Professional (DITAP) certification program.'
+  />
+);

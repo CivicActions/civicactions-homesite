@@ -8,10 +8,6 @@ import Hero from "../components/hero";
 const LicensingPage = () => {
   return (
     <RedLayout>
-      <SEO
-        title='Licensing policy'
-        description='Open source is just the beginning. Our open licensing policies allow our company to thrive while helping others to do the same.'
-      />
       <Hero
           title='Licensing policy'
           description='Our licensing policy reflects our commitment to open source
@@ -90,3 +86,10 @@ const LicensingPage = () => {
 };
 
 export default LicensingPage;
+
+export const Head = () => (
+  <SEO
+    title='Licensing policy'
+    description='Open source is just the beginning. Our open licensing policies allow our company to thrive while helping others to do the same.'
+  />
+);

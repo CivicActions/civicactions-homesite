@@ -26,19 +26,19 @@ const TabMobile = ({ tabs }) => {
         <div className='tab-mobile'>
                 <select name='tabs' onChange={callback}>
                     {tabs.map((tab, index) => (
-                        <option value={index}>{tab.tab_header}</option>
+                        <option value={index} key={index}>{tab.tab_header}</option>
                     ))}
 
                 </select>
                  <div className='arrow-down'></div>
 
             {tabs.map((tab, index) => (
-                <div className={checked ? checked : '_0'}>
+                <div className={checked ? checked : '_0'} key={index}>
                     {/*// Tabs component comes from https://www.digitalocean.com/community/tutorials/react-tabs-component*/}
                     {tab.tabs_section.map((section, index) => (
-                        <div className='tab-section' label={section.header}>
+                        <div className='tab-section' label={section.header} key={index}>
                             <h3 className='h5'>{section.header}</h3>
-                            <ReactMarkdown className='body' children={section.body}/>
+                            <ReactMarkdown className='body' children={section.body.data.body}/>
                         </div>
                     ))}
                     <div className='cta-tab-section' label={tab.cta_tab.header}>
