@@ -21,8 +21,7 @@ import FourOneKProgramIcon from '../files/icons/401k-program-icon.svg';
 import TimeOffIcon from '../files/icons/time-off-icon.svg';
 import RemoteLifeIcon from '../files/icons/remote-life-icon.svg';
 import AnnualUpgradesIcon from '../files/icons/annual-upgrades-icon.svg';
-import 
-Friendly from '../files/icons/family-friendly-icon.svg';
+import FamilyFriendly from '../files/icons/family-friendly-icon.svg';
 import FamilyPhoto from '../files/images/family-photo.png';
 import Award1 from '../files/images/compensation-2023-small.svg';
 import Award2 from '../files/images/happiness-2023-small.svg';
