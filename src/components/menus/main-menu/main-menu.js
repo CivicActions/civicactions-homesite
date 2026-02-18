@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 const MainMenu = ({ redHeader }) => {
 
   return (
-    <nav className='header-nav'>
+    <nav className='header-nav' aria-label="Main navigation">
       <ul className="menu--list">
         <li
           className='menu--list__item'>
