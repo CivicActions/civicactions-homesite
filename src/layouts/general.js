@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Header from '../components/header.js';
 import Footer from '../components/footer.js';
 import Sidebar from '../components/sidebar.js';
-import { Helmet } from 'react-helmet';
 import { SkipNavLink } from '../components/skip-nav';
 
 const GeneralLayout = ({ children }) => {
@@ -12,11 +11,6 @@ const GeneralLayout = ({ children }) => {
   let closeSidebar = () => setHideSidebar(true);
   return (
     <div style={{ position: 'relative' }}>
-      <Helmet
-        htmlAttributes={{
-          lang: 'en',
-        }}
-      />
       <div>
         <SkipNavLink />
         <Header />

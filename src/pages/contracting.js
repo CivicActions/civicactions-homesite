@@ -16,13 +16,9 @@ import workforceDevelopmentIcon from '../files/icons/workforce-dev-icon.svg';
 const ContractingPage = () => {
   return (
     <RedLayout className='contracting-page'>
-      <SEO
-        title='Contracting information'
-        description='We are a Small Business helping government agencies make digital services that build public trust. Learn about contracting with us.'
-      />
       <div className='hero-component'>
         <div className='inner'>
-          <h1>Let’s build a world that works for all.</h1>
+          <h1>Let’s build a world<br />that works for all.</h1>
           <p className='body'>
             We envision and deliver open source technology solutions enabling accessible, human-centered government services. With thought leaders in agile development, engineering, compliance and design, we invite you to join us in transforming enterprise digital platforms and creating modern applications impacting millions of Americans.
           </p>
@@ -72,9 +68,11 @@ const ContractingPage = () => {
             <ul className='body'>
               <li>CivicActions, Inc.</li>
               <li>GSA Schedule: GS-35F-337BA</li>
-              <ul>
-                <li>Professional Services, Health IT and Cloud</li>
-              </ul>
+              <li>
+                <ul>
+                  <li>Professional Services, Health IT and Cloud</li>
+                </ul>
+              </li>
               <li>UEI: XSZFHRS5QFL5</li>
               <li>CAGE Code: 65FK1</li>
               <li>NAICS Codes: 541511, 541512, 541513, 541519</li>
@@ -83,21 +81,22 @@ const ContractingPage = () => {
               <li>Partnership POC: <a href="mailto:sales@civicactions.com">sales@civicactions.com</a></li>
               <li>Standard Product Code: 80101507</li>
               <li>
-                Certified Small Business (Micro), State of California DGS, No.
-                2003474
+                California Multiple Award Schedule (CMAS) Number: 3-25-04-1042
               </li>
               <li>Canadian</li>
-              <ul>
-                <li>CivicActions Digital Service ULC (Canadian entity)</li>
-                <li>Canadian POC: <a href="mailto:ca-canada@civicactions.com">ca-canada@civicactions.com</a></li>
-              </ul>
+              <li>
+                <ul>
+                  <li>CivicActions Digital Service ULC (Canadian entity)</li>
+                  <li>Canadian POC: <a href="mailto:ca-canada@civicactions.com">ca-canada@civicactions.com</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
           <div className='differentiators list--wrapper'>
             <h2>Differentiators</h2>
             <ul className='body'>
-              <li>65 Drupal developers, with 16 Acquia certifications</li>
-              <li>20 W3C edX Accessibility certifications</li>
+              <li>50+ Drupal developers, with 15+ Acquia certifications</li>
+              <li>75 W3C edX Accessibility certifications</li>
               <li>
                 Founding members of{' '}
                 <a href='https://digitalservicescoalition.org/#/' className='external-link-white'>
@@ -167,3 +166,10 @@ const ContractingPage = () => {
 };
 
 export default ContractingPage;
+
+export const Head = () => (
+  <SEO
+    title='Contracting information'
+    description='We are a Small Business helping government agencies make digital services that build public trust. Learn about contracting with us.'
+  />
+);

@@ -21,7 +21,7 @@ const Footer = () => {
               technology, consulting, and training services to government.</p>
 
             <p>Want to help us make an impact?<br />
-            <Link to='/careers'>Check out our open positions.</Link></p>
+              <Link to='/careers'>Check out our open positions.</Link></p>
 
 
           </div>
@@ -49,10 +49,11 @@ const Footer = () => {
         </div>
         <div className='grid-container__item footer__bottom-links'>
           <div className='footer__bottom-links--wrapper'>
-            <p className='copyright'>© 2010 —- 2021</p>
+            <p className='copyright'>© 2010 —- {new Date().getFullYear()}</p>
             <p className='accessibility'><Link to='/accessibility-statement'>Accessibility</Link></p>
             <p className='licensing'><Link to='/licensing'>Licensing</Link></p>
             <p className='privacy'><Link to='/privacy'>Privacy</Link></p>
+            <p className='sustainability'><Link to='/sustainability'>Sustainability</Link></p>
             <p className='feedback'><Link to='/feedback'>Feedback</Link></p>
           </div>
 

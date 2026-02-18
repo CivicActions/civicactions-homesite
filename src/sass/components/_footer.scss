@@ -1,7 +1,7 @@
 .footer {
   @include small-text;
 
-  background-color: #f5f5f0;
+  background-color: #FFF;
 
   //=========== Mobile-first styles ============
 
@@ -79,6 +79,10 @@
     margin-bottom: px-to-rem(32px);
   }
 
+  .social-icon {
+    display: flex;
+  }
+
   //=========== Tablet styles ============
 
   @media (min-width: $tablet-screen) {
@@ -92,6 +96,9 @@
 
       .social-icon {
         padding-bottom: 0;
+        display: flex;
+        justify-content: flex-start;
+
       }
     }
     .footer__about-text {
@@ -287,34 +294,39 @@
       }
     }
 
-    .social-icon {
-      text-align: right;
-      padding: 0;
+    .footer__social {
+      .social-icon {
+        text-align: right;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
 
-      .blue-icon {
-        display: none;
-      }
-
-      .blue-icon,
-      .black-icon {
-        width: 40px;
-        height: 41px;
-      }
-
-      a {
-        &:hover,
-        &:focus,
-        &:focus-within {
-          .blue-icon {
-            display: inline-block;
-          }
-
-          .black-icon {
-            display: none;
-          }
+        .blue-icon {
+          display: none;
         }
-      }
 
+        .blue-icon,
+        .black-icon {
+          width: 40px;
+          height: 41px;
+        }
+
+        a {
+          &:hover,
+          &:focus,
+          &:focus-within {
+            .blue-icon {
+              display: inline-block;
+            }
+
+            .black-icon {
+              display: none;
+            }
+          }
+
+        }
+
+      }
     }
   }
 

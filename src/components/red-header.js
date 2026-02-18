@@ -28,7 +28,7 @@ const RedHeader = () => {
     }
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
+        window.addEventListener('scrollend', handleScroll)
     })
     let headerClasses = ['header'];
     if (scrolled) {

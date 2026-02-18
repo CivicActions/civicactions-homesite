@@ -19,7 +19,7 @@ const Bio = ({ member }) => {
               <img className='blue-icon' alt='blue linkedin icon' src={linkedinIconBlue}/>
           </a>
           <p className='body staff-role'>{Role}</p></div></div>
-        <div className='staff-body--wrapper'><p className='body staff-body'>{Body}</p></div>
+        <div className='staff-body--wrapper'><p className='body staff-body'>{Body.data.Body}</p></div>
       </div>
     )
   }) : null

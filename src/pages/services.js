@@ -22,10 +22,6 @@ const ServicesPage = ({ data }) => {
   }, []);
   return (
     <RedLayout>
-      <SEO
-        title='Services'
-        description='We use Agile and DevOps, open source software, and human-centered design to elevate government digital services.'
-      />
       <Hero
         title='Government services that build public trust'
         description='At its core, digital transformation is about improving the customer experience of government. We use thoughtful design and open source technologies to help you deliver modern public services that put people first. '
@@ -290,9 +286,9 @@ const ServicesPage = ({ data }) => {
               <div className='body'>
                 We empower federal agencies like CMS to reinstate ownership of their data on open data platforms and are working toward a future in which more public data accessibility can become a reality.
               </div>
-              <Link to='https://openpaymentsdata.cms.gov/' className='body-large'>
+              <a href='https://openpaymentsdata.cms.gov/' className='body-large external-link'>
                 Open data to search payments made by drug and medical device companies to medical providers
-              </Link>
+              </a>
               <div className='cta'>
                 <h3 className='h4'> How we can help you</h3>
                 <ul>
@@ -386,3 +382,10 @@ const ServicesPage = ({ data }) => {
 };
 
 export default ServicesPage;
+
+export const Head = () => (
+  <SEO
+    title='Services'
+    description='We use Agile and DevOps, open source software, and human-centered design to elevate government digital services.'
+  />
+);

@@ -6,7 +6,15 @@
   .inner {
     max-width: 720px;
     .press-release--item {
-      margin-top: 56px;
+      margin-top: 55px;
+      border-bottom: dashed 1px $primary-red;
+      padding-bottom: 45px;
+
+      &.last {
+        border: 0;
+        padding-bottom: 0;
+      }
+
       h2 {
         font-size: 18px;
         padding-bottom: 16px;

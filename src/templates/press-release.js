@@ -11,18 +11,13 @@ const PressTemplate = ({ data }) => {
   const { Title, Body } = press;
   return (
     <RedLayout>
-
-      <SEO
-        title={Title}
-        description='Press release from civicactions.com'
-      />
       <Hero title={Title}/>
       <div className='single--press-releases--main'>
 
 
         <div className='inner'>
           <div className='body'>
-            <ReactMarkdown className='body' children={Body} />
+            <ReactMarkdown className='body' children={Body.data.Body} />
           </div>
         </div>
       </div>
@@ -47,7 +42,11 @@ query PressQuery($pagePath: String!) {
     edges {
       node {
         Title
-        Body
+        Body {
+          data {
+            Body
+          }
+        }
         Date
         Path
       }
@@ -59,3 +58,13 @@ query PressQuery($pagePath: String!) {
 
 export default PressTemplate;
 
+
+export const Head = ({ data }) => {
+  const press = data.allStrapiPressRelease.edges[0].node;
+  return (
+    <SEO
+      title={press.Title}
+      description='Press release from CivicActions'
+    />
+  )
+};

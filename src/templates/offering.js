@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { graphql } from 'gatsby';
-import { GatsbyImage, getSrc } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image';
 import ReactMarkdown from "react-markdown";
 import Modal from 'react-modal';
 import {
@@ -20,11 +20,11 @@ import LinkButton from "../components/link-button";
 import Bio from '../components/offering/bio'
 import TabMobile from '../components/tabmobile';
 import SEO from '../components/seo';
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 
 import linkedinIcon from "../files/icons/linkedin.svg";
 import linkedinIconBlue from "../files/icons/linkedin-blue.svg";
 import squareCircle from "../files/icons/square-circle.svg";
-import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import closeButton from '../files/icons/grey-close-icon.svg';
 
 const OfferingTemplate = ({ data }) => {
@@ -60,8 +60,7 @@ const OfferingTemplate = ({ data }) => {
   //=== Get the list of all team members. (@todo: Place in a new component) ====
   let teamMemberList = offering.team_members.length ?
     offering.team_members.map((member, index) => (
-
-      <div key={member.id} className='related-staff'>
+      <div key={index} className='related-staff'>
         <img className='staff-image' src={member.image[0].url} aria-label={member.Name} />
         <div className='staff-info'>
           <h3 className='staff-name'>
@@ -77,20 +76,12 @@ const OfferingTemplate = ({ data }) => {
 
     )) : null;
 
-  // Get the OGImage
-  let ogImageUrl = getSrc(offering.SEO.OGImage);
-
   return (
     <RedLayout>
-      <SEO
-        title={offering.SEO.OGTitle}
-        description={offering.SEO.OGDescription}
-        image={ogImageUrl}
-      />
       <div className='offering--content-type'>
         <Hero
           title={offering.Title}
-          description={offering.Body}
+          description={offering.Body.data.Body}
           button={offering.hero_button}
         />
 
@@ -98,8 +89,8 @@ const OfferingTemplate = ({ data }) => {
           <div className='inner'>
             <h2 className='body'>{offering.client_logo.text}</h2>
             <div className='grid' tabIndex='0'>
-              {offering.client_logo.client_logo.map((img) => (
-                <img key={img.id} src={img.url} alt={img.alternativeText} />
+              {offering.client_logo.client_logo.map((img, index) => (
+                <img key={index} src={img.url} alt={img.alternativeText} />
               ))}
             </div>
 
@@ -110,7 +101,7 @@ const OfferingTemplate = ({ data }) => {
             <div className='stats--wrapper'>
               <div className='inner'>
                 {offering.Stats.map((stat, index) => (
-                  <div className='single-stat'>
+                  <div className='single-stat' key={index}>
                     <h2 className='stat--number'>{offering.Stats[index].Numerical_Element}</h2>
                     <p className='body stat--text'>{offering.Stats[index].Content_Element}</p>
                   </div>
@@ -125,7 +116,7 @@ const OfferingTemplate = ({ data }) => {
               <div className='value-props--left'>
                 <h2>{offering.value_prop.header_text}</h2>
                 <img className='icon' src={squareCircle} alt='' />
-                <ReactMarkdown className='body' children={offering.value_prop.body_text} />
+                <ReactMarkdown className='body' children={offering.value_prop.text.data.text} />
 
               </div>
               <div className='value-props--right'>
@@ -143,18 +134,19 @@ const OfferingTemplate = ({ data }) => {
             <Tabs>
               <TabList >
                 {offering.tabs.map((tab, index) => (
-                  <Tab><h2>{tab.tab_header}</h2>
+                  <Tab key={index}>
+                    <h2>{tab.tab_header}</h2>
                   </Tab>
                 ))}
 
               </TabList>
               {offering.tabs.map((tab, index) => (
-                <TabPanel>
+                <TabPanel key={index}>
                   {/*// Tabs component comes from https://www.digitalocean.com/community/tutorials/react-tabs-component*/}
                   {tab.tabs_section.map((section, index) => (
-                    <div className='tab-section' >
+                    <div className='tab-section' key={index}>
                       <h3 className='h5'>{section.header}</h3>
-                      <ReactMarkdown className='body' children={section.body} />
+                      <ReactMarkdown className='body' children={section.body.data.body} />
                     </div>
                   ))}
                   <div className='cta-tab-section' >
@@ -193,10 +185,11 @@ const OfferingTemplate = ({ data }) => {
               overlayClassName="Overlay"
               aria-label="staff-modal-biography"
             >
-
               <Bio member={modalContent} closeModal={closeModal} />
-              <button onClick={closeModal}><img alt='close modal button' src={closeButton} /><p className='visually-hidden'>Close</p></button>
-
+              <button onClick={closeModal}>
+                <img alt='close modal button' src={closeButton} />
+                <p className='visually-hidden'>Close</p>
+              </button>
             </Modal>
           </section >
         }
@@ -209,12 +202,14 @@ const OfferingTemplate = ({ data }) => {
             <div className='inner'>
 
               <h2>{offering.text_section.Header}</h2>
-              <ReactMarkdown className='body' children={offering.text_section.body} />
+              <ReactMarkdown className='body' children={offering.text_section.body.data.body} />
               {offering.text_section.button.map((btn, index) => (
-                <div className='button-wrapper'> <LinkButton
-                  text={btn.button_text}
-                  src={btn.button_link}
-                /></div>
+                <div className='button-wrapper' key={index}>
+                  <LinkButton
+                    text={btn.button_text}
+                    src={btn.button_link}
+                  />
+                </div>
               ))}
 
             </div>
@@ -231,7 +226,7 @@ const OfferingTemplate = ({ data }) => {
                 allowZeroExpanded={true}
                 allowMultipleExpanded={true}>
                 {offering.FAQ_Accordion_Section.list_questions.map((faq, index) => (
-                  <AccordionItem>
+                  <AccordionItem key={index}>
                     <AccordionItemHeading>
                       <AccordionItemButton>
                         <div className="arrow-down"></div>
@@ -241,7 +236,7 @@ const OfferingTemplate = ({ data }) => {
                       </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>
-                      <ReactMarkdown className='body' children={faq.body} />
+                      <ReactMarkdown className='body' children={faq.body.data.body} />
                     </AccordionItemPanel>
                   </AccordionItem>
                 ))}
@@ -279,7 +274,11 @@ query offeringQuery {
   allStrapiOffering {
     nodes {
       id
-      Body
+      Body {
+        data {
+            Body
+        }
+      }
       CTA {
         Header
         body
@@ -297,7 +296,6 @@ query offeringQuery {
         Content_Element
         Numerical_Element
       }
-      Summary
       Title
       client_logo {
         text
@@ -314,7 +312,11 @@ query offeringQuery {
       }
       text_section {
         Header
-        body
+        body {
+          data {
+            body
+          }
+        }
         button {
           button_link
           button_text
@@ -322,7 +324,11 @@ query offeringQuery {
       }
       FAQ_Accordion_Section {
         list_questions {
-          body
+          body {
+            data {
+              body
+            }
+          }
           question
         }
       }
@@ -334,12 +340,20 @@ query offeringQuery {
         }
         tab_header
         tabs_section {
-          body
+          body {
+            data {
+              body
+            }
+          }
           header
         }
       }
       value_prop {
-        body_text
+        text {
+          data {
+            text
+          }
+        }
         header_text
         image {
           alternativeText
@@ -348,7 +362,11 @@ query offeringQuery {
         }
       }
       team_members {
-        Body
+        Body {
+          data {
+            Body
+          }
+        }
         Name
         Role
         Linkedin
@@ -361,10 +379,12 @@ query offeringQuery {
         OGDescription
         OGTitle
         OGImage {
-          childImageSharp {
-            gatsbyImageData(
-              width: 1200
-            )
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                width: 1200
+              )
+            }
           }
         }
       }
@@ -374,3 +394,14 @@ query offeringQuery {
 `;
 
 export default OfferingTemplate;
+
+export const Head = ({ data }) => {
+  const offering = data.allStrapiOffering.nodes[0];
+  return (
+    <SEO
+      title={offering.SEO.OGTitle}
+      description={offering.SEO.OGDescription}
+      image={getSrc(offering.SEO.OGImage.localFile)}
+    />
+  )
+};

@@ -43,7 +43,7 @@
         height: 21px;
         border: 1px solid #1B1B1B;
         content: "";
-        background: #FFF;
+        background: $colors-white;
       }
 
       input:checked::after {
@@ -53,7 +53,7 @@
         top: -22px;
         width: 21px;
         height: 21px;
-        background-color: $colors-mint-cool-60v;
+        background-color: $primary-blue;
         background-image: url("../files/icons/checkmark.svg");
         content: "";
         background-repeat: no-repeat;

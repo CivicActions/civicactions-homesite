@@ -39,9 +39,10 @@ const Sidebar = ({ hidden, close }) => {
                   Company
                 </span>
                 <ul>
-                  <li>About</li>
+                  {/* <li>About</li> */}
                   <li>Team</li>
                   <li>Press</li>
+                  <li>Impact</li>
                 </ul>
               </li>
               <li className='page-bundle'>

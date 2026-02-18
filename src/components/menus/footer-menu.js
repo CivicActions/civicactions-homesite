@@ -10,6 +10,7 @@ const FooterMenu = () => (
         {/*<li><Link to='/about'>About</Link></li>*/}
         <li><Link to='/team'>Team</Link></li>
         <li><Link to='/press'>Press</Link></li>
+        <li><a href='https://reports.civicactions.com/2025' className='external-link'>Impact</a></li>
         <li><Link to='/services'>Services</Link></li>
         <li><Link to='/case-studies'>Case Studies</Link></li>
         <li><Link to='/contracting'>Contracting</Link></li>

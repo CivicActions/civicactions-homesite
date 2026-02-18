@@ -17,20 +17,22 @@ import '../sass/styles.scss';
 const TeamPage = () => {
   const data = useStaticQuery(graphql`
     {
-      allStrapiStaffProfile(sort: {order: ASC, fields: Name}) {
+      allStrapiStaffProfile(sort: {Name: ASC}) {
         nodes {
           id
           Name
           Role
           Path
           Image {
-            childImageSharp {
-              gatsbyImageData(
-                width: 264
-                height: 264
-                placeholder: BLURRED
-                formats: [AUTO, WEBP, AVIF]
-              )
+            localFile {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 264
+                  height: 264
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
             }
           }
           Category {
@@ -72,12 +74,6 @@ const TeamPage = () => {
 
   return (
     <RedLayout>
-      <SEO
-        title='Team'
-        description='Meet the humans of CivicActions.'
-        image={teamOgImage}
-      />
-
       <Hero
         title='Meet the humans of CivicActions'
         description='People who work with us say there’s “something magical” about our team. We are good listeners, strategic thinkers, honest communicators, and problem solvers. (We’re also cheerful and kind, which is a nice bonus.) Let’s get to know each other!'
@@ -122,7 +118,7 @@ const TeamPage = () => {
 const TeamTeasers = ({ team }) => {
   return team.map((person) => {
     const { id, Path, Name, Role, Image } = person;
-    return <TeaserGrid key={id} image={Image} name={Name} link={Path} title={Role} />;
+    return <TeaserGrid key={id} image={Image?.localFile} name={Name} link={Path} title={Role} />;
   });
 };
 
@@ -154,3 +150,11 @@ const FilterButtons = ({ team, parentCallback, filterState }) => {
 };
 
 export default TeamPage;
+
+export const Head = () => (
+  <SEO
+    title='Team'
+    description='Meet the humans of CivicActions.'
+    image={teamOgImage}
+  />
+);

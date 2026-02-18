@@ -32,7 +32,11 @@ export const query = graphql`
           Specialty
           id
         }
-        Body
+        Body {
+          data {
+            Body
+          }
+        }
       }
     }
   }
