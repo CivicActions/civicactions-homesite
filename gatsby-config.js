@@ -8,7 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
@@ -35,12 +35,11 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-node-fields`,
-    `gatsby-plugin-client-side-redirect`,
     `gatsby-remark-autolink-headers`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        sitemap: 'https://civicactions.com/sitemap/sitemap-index.xml',
+        sitemap: 'https://civicactions.com/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
@@ -101,7 +100,8 @@ module.exports = {
           {
             singularName: 'case-study',
             queryParams: {
-              publicationState: process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
+              publicationState:
+                process.env.GATSBY_IS_PREVIEW === 'true' ? 'preview' : 'live',
               populate: {
                 Title: '*',
                 Client_Name: '*',
@@ -114,20 +114,20 @@ module.exports = {
                 Stats: {
                   populate: {
                     Numerical_Element: '*',
-                    Content_Element: '*'
+                    Content_Element: '*',
                   },
                 },
                 Quote: {
                   populate: {
                     Quote: '*',
-                    Source: '*'
+                    Source: '*',
                   },
                 },
                 Approach: {
                   populate: {
                     Title: '*',
                     Text: '*',
-                    Image: '*'
+                    Image: '*',
                   },
                 },
                 Key_Outcome: {
@@ -145,12 +145,12 @@ module.exports = {
                 },
                 Expertise: {
                   populate: {
-                    Expertise_Content: '*'
+                    Expertise_Content: '*',
                   },
                 },
                 Tools_Technologies: {
                   populate: {
-                    Tools_Technologies_Content: '*'
+                    Tools_Technologies_Content: '*',
                   },
                 },
                 Sort_Order: '*',
@@ -163,14 +163,16 @@ module.exports = {
                   populate: {
                     OGTitle: '*',
                     OGDescription: '*',
-                    OGImage: '*'
-                  }
-                }
+                    OGImage: '*',
+                  },
+                },
               },
             },
-          }, {
+          },
+          {
             singularName: 'offering',
-            publicationState: process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
+            publicationState:
+              process.env.GATSBY_IS_PREVIEW === 'true' ? 'preview' : 'live',
             queryParams: {
               // Populate all fields even nested query field
               populate: {
@@ -198,7 +200,7 @@ module.exports = {
                     header_text: '*',
                     image: '*',
                     text: '*',
-                  }
+                  },
                 },
                 tabs: {
                   populate: {
@@ -242,10 +244,9 @@ module.exports = {
                       populate: {
                         questions: '*',
                         body: '*',
-                      }
+                      },
                     },
-                  }
-
+                  },
                 },
                 CTA: {
                   populate: {
@@ -278,11 +279,12 @@ module.exports = {
                   },
                 },
               },
-            }
+            },
           },
           {
             singularName: 'general',
-            publicationState: process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
+            publicationState:
+              process.env.GATSBY_IS_PREVIEW === 'true' ? 'preview' : 'live',
             queryParams: {
               // Populate all fields even nested query field
               populate: {
@@ -297,12 +299,13 @@ module.exports = {
                     OGImage: '*',
                   },
                 },
-              }
-            }
+              },
+            },
           },
           {
             singularName: 'press-release',
-            publicationState: process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
+            publicationState:
+              process.env.GATSBY_IS_PREVIEW === 'true' ? 'preview' : 'live',
             queryParams: {
               // Populate all fields even nested query field
               populate: {
@@ -321,12 +324,13 @@ module.exports = {
                     OGImage: '*',
                   },
                 },
-              }
-            }
+              },
+            },
           },
           {
             singularName: 'staff-profile',
-            publicationState: process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
+            publicationState:
+              process.env.GATSBY_IS_PREVIEW === 'true' ? 'preview' : 'live',
             queryParams: {
               // Populate all fields even nested query field
               populate: {
@@ -342,7 +346,7 @@ module.exports = {
                 Social: {
                   populate: {
                     Title: '*',
-                    Url: '*'
+                    Url: '*',
                   },
                 },
                 Specialty: {
@@ -364,12 +368,12 @@ module.exports = {
                     OGImage: '*',
                   },
                 },
-              }
-            }
+              },
+            },
           },
         ],
-        singleTypes: []
-      }
+        singleTypes: [],
+      },
     },
     {
       resolve: 'gatsby-plugin-webfonts',
@@ -378,15 +382,15 @@ module.exports = {
           google: [
             {
               family: 'Nunito',
-              variants: ['300', '400', '600', '700']
+              variants: ['300', '400', '600', '700'],
             },
             {
               family: 'Merriweather',
-              variants: ['400', '700']
+              variants: ['400', '700'],
             },
-          ]
-        }
-      }
+          ],
+        },
+      },
     },
   ],
-}
+};

@@ -1,0 +1,35 @@
+.section--sustainability-pledge,
+.section--emissions {
+  width: 100%;
+  color: $colors-grey-90;
+  margin-top: 32px;
+  display: inline-block;
+
+  @media(min-width: $medium-large-screen) {
+    margin-top: 64px;
+    margin-bottom: 104px;
+  }
+
+  .inner {
+    position: relative;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+
+    @media(min-width: $medium-large-screen) {}
+  }
+
+  h2,
+  h3,
+  .body {
+    padding-bottom: 16px;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  .gatsby-image-wrapper {
+    margin: 16px 0;
+  }
+}

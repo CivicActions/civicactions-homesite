@@ -64,7 +64,7 @@ const CareersPage = ({ location }) => {
       </section>
 
       <Video
-        videolink='https://player.vimeo.com/video/310174855'
+        videolink='https://player.vimeo.com/video/1040145692'
         videotitle='Why join Civicactions video'
         videotext='CivicActions is a place to learn and grow with others who are passionate about putting people first. Learn how our multi-disciplinary teams use technology and design to bring government services up to today’s standards.'
       />
@@ -153,9 +153,7 @@ const CareersPage = ({ location }) => {
             <Offering
               icon={AnnualUpgradesIcon}
               title='Annual upgrades'
-              description='We provide $1027 annually for you to spend on technology or
-              tools needed for your work, and $1200 per year for professional
-              development courses or resources to grow in your career path.'
+              description='We provide you with two annual stipends: a tech stipend to use on tools or equipment needed to perform your job and a professional development stipend for courses or resources that help you grow in your career.'
             />
             <Offering
               icon={FamilyFriendly}
@@ -182,7 +180,7 @@ const CareersPage = ({ location }) => {
       <StaffQuote
         img={davidSumnerProfilePicture}
         alt='Headshot of David Sumner'
-        quote='“CivicActions is the most diverse tech company I have ever had the pleasure of working at.”'
+        quote='“I love the camaraderie at CivicActions. We share and learn from each other constantly. Instead of competition, it’s collaboration.”'
         name='David Sumner'
         role='Associate Director of DevSecOps'
         classes='first-quote'
@@ -192,8 +190,7 @@ const CareersPage = ({ location }) => {
         <div className='inner'>
           <h2 id='open-positions'>Open positions</h2>
           <p className='body'>
-            We actively seek to broaden the diversity of our team, and strongly
-            encourage people from underrepresented groups to apply. Learn more about our <a className="policy-link" href='/non-discrimination-policy-statement.pdf'>non-discrimination policy. (PDF, 138 KB)</a>
+            CivicActions is an equal opportunity employer. We do not discriminate on the basis of race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or veteran status.
           </p>
           <div className='jobs-grid'>
             {!greenhouseJob.length && (

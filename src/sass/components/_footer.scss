@@ -81,24 +81,6 @@
 
   .social-icon {
     display: flex;
-
-    .twitter {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 48px;
-      height: 48px;
-      background: #000;
-      border-radius: 50%;
-      box-sizing: border-box;
-      padding: 0;
-
-      .blue-icon,
-      .black-icon {
-        width: 24px;
-        height: 24px;
-      }
-    }
   }
 
   //=========== Tablet styles ============
@@ -117,16 +99,6 @@
         display: flex;
         justify-content: flex-start;
 
-        .twitter {
-          width: 48px;
-          height: 48px;
-
-          .blue-icon,
-          .black-icon {
-            width: 24px;
-            height: 24px;
-          }
-        }
       }
     }
     .footer__about-text {
@@ -339,17 +311,6 @@
           height: 41px;
         }
 
-        .twitter {
-          width: 40px;
-          height: 40px;
-
-          .blue-icon,
-          .black-icon {
-            width: 20px;
-            height: 20px;
-          }
-        }
-
         a {
           &:hover,
           &:focus,
@@ -363,12 +324,6 @@
             }
           }
 
-          &.twitter:hover,
-          &.twitter:focus,
-          &.twitter:focus-within {
-            background: none;
-            border: solid 1px #000;
-          }
         }
 
       }
