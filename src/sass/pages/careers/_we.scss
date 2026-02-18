@@ -11,6 +11,9 @@
                     $colors-white 75%);
   }
 
+  a {
+    color: #be2419; // Darker red for sufficient contrast on gray background (4.8:1 ratio)
+  }
 
   .inner {
     position: relative;
