@@ -18,7 +18,7 @@ const SEO = ({ title, description, image, article }) => {
     title: (`${title || defaultTitle} | CivicActions`),
     description: description || defaultDescription,
     image: image ? image : defaultImage,
-    url: `${siteUrl}${pathname.slice(1)}`,
+    url: `${siteUrl.replace(/\/$/, '')}${pathname}`,
   };
 
   return (
@@ -41,6 +41,7 @@ const SEO = ({ title, description, image, article }) => {
         <meta name='twitter:description' content={seo.description} />
       )}
       {seo.image && <meta name='twitter:image' content={seo.image} />}
+      <link rel="canonical" href={seo.url} />
     </>
   )
 };

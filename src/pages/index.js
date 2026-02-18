@@ -82,7 +82,7 @@ const HomePage = () => {
             className='fade-in'></img>
           <div className='info-text'>
             <h1>
-              We help government deliver better public services through modern
+              We help government deliver better public services through open
               technology and design.
             </h1>
             <LinkButton

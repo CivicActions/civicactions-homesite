@@ -12,13 +12,13 @@ jobs:
   upload_sbom:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
       - name: Generate SBOM using Syft
-        uses: anchore/sbom-action@v0.13.3
+        uses: anchore/sbom-action@v0
         with:
           format: cyclonedx-json
           artifact-name: sbom.json
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v5
         with:
           name: sbom.json
       - name: Upload SBOM to DependencyTrack
@@ -30,3 +30,4 @@ jobs:
             -F "projectVersion=main" \
             -F "bom=@sbom.json" > /dev/null
         shell: bash
+        #
