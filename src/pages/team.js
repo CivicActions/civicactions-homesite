@@ -100,10 +100,10 @@ const TeamPage = () => {
 
       <StaffQuote
         quote='“My teammates are brilliant innovators, high performers, and conscientious human beings. Together we’re working to improve lives.”'
-        name='Alanna Casey'
+        name='Alanna Blinn'
         role='Technical Writer'
         img={alanaCaseyProfilePicture}
-        alt='Headshot of Alanna Casey'
+        alt='Headshot of Alanna Blinn'
       />
 
       <PrimaryPageCTA
