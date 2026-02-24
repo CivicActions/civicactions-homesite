@@ -8,7 +8,7 @@ import Hero from '../components/hero.js';
 import SEO from '../components/seo';
 import PrimaryPageCTA from "../components/primary-page-cta";
 
-import alanaCaseyProfilePicture from '../files/images/alanna_casey_profile.jpg';
+import alannaBlinnProfilePicture from '../files/images/alanna_blinn_profile.jpg';
 import teamOgImage from '../../static/team-og-image.png'
 
 
@@ -100,10 +100,10 @@ const TeamPage = () => {
 
       <StaffQuote
         quote='“My teammates are brilliant innovators, high performers, and conscientious human beings. Together we’re working to improve lives.”'
-        name='Alanna Casey'
+        name='Alanna Blinn'
         role='Technical Writer'
-        img={alanaCaseyProfilePicture}
-        alt='Headshot of Alanna Casey'
+        img={alannaBlinnProfilePicture}
+        alt='Headshot of Alanna Blinn'
       />
 
       <PrimaryPageCTA
