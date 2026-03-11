@@ -27,7 +27,7 @@ const ContractingPage = () => {
       <section className='contracting--services-section'>
         <div className='background-wrapper'></div>
         <div className='inner'>
-          <h2 >Our Expertise</h2>
+          <h2>Our Expertise</h2>
           <div className='service-cards-grid'>
             <Card
               title='Web & CMS'
