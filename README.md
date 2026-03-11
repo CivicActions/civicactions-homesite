@@ -23,10 +23,10 @@ Our home site is live at https://civicactions.com please check it out and bookma
 3. Run `yarn install`
 4. Confirm `.env.development` exists with the correct credentials from Owen.
 
-```dotenv
-STRAPI_TOKEN=your_strapi_token_here
-STRAPI_API_URL=https://your-strapi-instance.example.com
-```
+   ```dotenv
+   STRAPI_TOKEN=your_strapi_token_here
+   STRAPI_API_URL=https://your-strapi-instance.example.com
+   ```
 
 5. Run `yarn start`.
 
