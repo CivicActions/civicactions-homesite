@@ -30,7 +30,6 @@
 
 
   .primary-button {
-    //padding: 12px 60px;
     font-size: 18px;
     margin-bottom: 50px;
   }
@@ -76,9 +75,6 @@
     .service-cards-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      //grid-column-gap: 32px;
-      //grid-row-gap: 32px;
-      //margin: 24px 0 48px;
       a {
         color: $colors-grey-90;
         text-decoration: none;
@@ -95,12 +91,17 @@
     .service-cards-grid {
       display: grid;
       grid-template-columns: 100%;
-      //grid-row-gap: 32px;
     }
 
     .primary-button {
       display: none;
     }
+  }
+}
+
+.contracting--services-section {
+  h2 {
+    color: $primary-blue;
   }
 }
 
