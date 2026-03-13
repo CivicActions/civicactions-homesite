@@ -21,8 +21,14 @@ Our home site is live at https://civicactions.com please check it out and bookma
 1. First follow the instructions in the [Git Workflow Doc](docs/GIT_WORKFLOW.md).
 2. Make sure you are using a version of node that is at least 18.0.0 `$ node --version` — see [how to update node](https://phoenixnap.com/kb/update-node-js-version) if needed.
 3. Run `yarn install`
-4. Confirm that .env file exists with correct credentials from Owen. Then run `source .env`.
-5. Run `npm run start`.
+4. Confirm `.env.development` exists with the correct credentials from Owen.
+
+   ```dotenv
+   STRAPI_TOKEN=your_strapi_token_here
+   STRAPI_API_URL=https://your-strapi-instance.example.com
+   ```
+
+5. Run `yarn start`.
 
 ## Accessibility
 
