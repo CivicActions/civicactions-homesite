@@ -78,6 +78,7 @@ describe('Contact page form', () => {
   });
 
   test('shows a generic error when API returns non-OK', async () => {
+    // Mock console.error to suppress error output during the test
     const consoleErrorSpy = jest
       .spyOn(console, 'error')
       .mockImplementation(() => {});
