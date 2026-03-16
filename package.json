@@ -43,8 +43,8 @@
   "devDependencies": {
     "@babel/core": "^7.28.4",
     "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
-    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "babel-jest": "^30.0.5",
     "gh-pages": "^6.0.0",
