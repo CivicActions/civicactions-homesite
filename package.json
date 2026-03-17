@@ -65,9 +65,6 @@
     "clean": "gatsby clean",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "lint:lockfile": "lockfile-lint --path yarn.lock --type yarn --allowed-hosts registry.yarnpkg.com registry.npmjs.org --validate-https",
-    "preinstall": "npm run lint:lockfile"
-
-
+    "lint:lockfile": "lockfile-lint --path yarn.lock --type yarn --allowed-hosts registry.yarnpkg.com registry.npmjs.org --validate-https"
   }
 }
