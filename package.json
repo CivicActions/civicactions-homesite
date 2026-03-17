@@ -50,6 +50,7 @@
     "gh-pages": "^6.0.0",
     "jest": "^30.0.5",
     "jest-environment-jsdom": "^30.0.5",
+    "lockfile-lint": "^5.0.0",
     "prettier": "^3.0.3",
     "stylelint": "^15.10.3",
     "stylelint-config-sass-guidelines": "^10.0.0",
@@ -63,6 +64,10 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "lint:lockfile": "lockfile-lint --path yarn.lock --type yarn --allowed-hosts registry.yarnpkg.com registry.npmjs.org --validate-https",
+    "preinstall": "npm run lint:lockfile"
+
+
   }
 }
