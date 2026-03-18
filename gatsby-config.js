@@ -74,12 +74,6 @@ module.exports = {
       },
     },
     {
-      resolve: `@danbruegge/gatsby-plugin-stylelint`,
-      options: {
-        files: [`src/**/*.(s(c|a)ss|css)`],
-      },
-    },
-    {
       resolve: 'gatsby-source-greenhouse-job-board',
       options: {
         boardToken: 'civicactions',
