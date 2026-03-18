@@ -8,9 +8,14 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
+// Load environment variables from .env files only in local development.
+// In CI/production, STRAPI_API_URL and STRAPI_TOKEN are injected as environment
+// variables, so dotenv is skipped to avoid unintended fallback behavior.
+if (!process.env.STRAPI_API_URL || !process.env.STRAPI_TOKEN) {
+  require('dotenv').config({
+    path: `.env.${process.env.NODE_ENV}`,
+  });
+}
 
 module.exports = {
   siteMetadata: {
