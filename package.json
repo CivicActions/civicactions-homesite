@@ -41,8 +41,16 @@
     "sass": "^1.67.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.4",
     "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "babel-jest": "^30.0.5",
     "gh-pages": "^6.0.0",
+    "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5",
+    "lockfile-lint": "^5.0.0",
     "prettier": "^3.0.3",
     "stylelint": "^15.10.3",
     "stylelint-config-sass-guidelines": "^10.0.0",
@@ -55,6 +63,8 @@
     "start": "gatsby clean && gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint:lockfile": "lockfile-lint --path yarn.lock --type yarn --allowed-hosts registry.yarnpkg.com registry.npmjs.org --validate-https"
   }
 }
