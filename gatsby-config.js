@@ -92,6 +92,10 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
+        // Explicitly target the Strapi v4 API. The plugin defaults to v5, which
+        // uses different query parameters and response shapes. Omitting this
+        // would cause incorrect requests against the v4 backend.
+        version: 4,
         apiURL: process.env.STRAPI_API_URL,
         accessToken: process.env.STRAPI_TOKEN,
         queryLimit: 5000,
