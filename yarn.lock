@@ -1380,13 +1380,6 @@
   resolved "https://registry.yarnpkg.com/@csstools/selector-specificity/-/selector-specificity-3.0.0.tgz#798622546b63847e82389e473fd67f2707d82247"
   integrity sha512-hBI9tfBtuPIi885ZsZ32IMEU/5nlZH/KOVYJCOh7gyMxaVLGmLedYqFN6Ui1LXkI8JlC8IsuC0rF0btcRZKd5g==
 
-"@danbruegge/gatsby-plugin-stylelint@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@danbruegge/gatsby-plugin-stylelint/-/gatsby-plugin-stylelint-4.1.0.tgz#fac008a170a7694fdc04932249cbfec24b270ea2"
-  integrity sha512-g8z0B9umjGRyVJoek5ZRY/JYiye9wdmh4gNUUSOqlhaG2Uiyk9crYoMUUX+P6UqPWQj+QiR1EmyU5mQkVLACdA==
-  dependencies:
-    stylelint-bare-webpack-plugin "^2.0.0"
-
 "@emnapi/core@^1.4.3":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@emnapi/core/-/core-1.9.0.tgz#4a54213b208fcf288cce25076c74e0f7613e6100"
@@ -7637,13 +7630,6 @@ get-symbol-description@^1.1.0:
     es-errors "^1.3.0"
     get-intrinsic "^1.2.6"
 
-get-value@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/get-value/-/get-value-3.0.1.tgz#5efd2a157f1d6a516d7524e124ac52d0a39ef5a8"
-  integrity sha512-mKZj9JLQrwMBtj5wxi6MH8Z5eSKaERpAwjg43dPtlGI1ZVEgH/qC7T8/6R2OBSUA+zzHBZgICsVJaEIV2tKTDA==
-  dependencies:
-    isobject "^3.0.1"
-
 gh-pages@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/gh-pages/-/gh-pages-6.0.0.tgz#3bb46ea13dc7cee306662db0d3f02bf05635cdc1"
@@ -10632,11 +10618,6 @@ mkdirp-classic@^0.5.2, mkdirp-classic@^0.5.3:
   resolved "https://registry.yarnpkg.com/mkdirp-classic/-/mkdirp-classic-0.5.3.tgz#fa10c9115cc6d8865be221ba47ee9bed78601113"
   integrity sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==
 
-module-available@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/module-available/-/module-available-1.0.6.tgz#dd7265eeec1158791ea5305a16c1ac6731980f44"
-  integrity sha512-GE0FSljZJyPOVJI+yTA5CpLarEvRTol9EiRHLLvAi1E4uwLdVhph02UI8JCRkys5JAiv6R+VoPkVjcL1hEOu5Q==
-
 moment@^2.29.4:
   version "2.29.4"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
@@ -13611,18 +13592,6 @@ stylehacks@^5.1.1:
     browserslist "^4.21.4"
     postcss-selector-parser "^6.0.4"
 
-stylelint-bare-webpack-plugin@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/stylelint-bare-webpack-plugin/-/stylelint-bare-webpack-plugin-2.1.0.tgz#6b28ee4a364c39986a10652d5b8094382fa1eb1a"
-  integrity sha512-R0fIhBLJ5sKQ+J1VzLzlsrrB3+n8MHtcVGyCwtOEVLafdWLWwVEw9ck7RJ01GqeHpXPUrVaaUWN1VDkSHqgRpg==
-  dependencies:
-    chalk "^4.1.0"
-    get-value "^3.0.1"
-    is-plain-object "^5.0.0"
-    lodash "^4.17.20"
-    module-available "^1.0.6"
-    webpack-merge "^5.3.0"
-
 stylelint-config-sass-guidelines@^10.0.0:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/stylelint-config-sass-guidelines/-/stylelint-config-sass-guidelines-10.0.0.tgz#ace99689eb6769534c9b40d62e2a8562b1ddc9f2"
@@ -14727,7 +14696,7 @@ webpack-dev-middleware@^5.3.4:
     range-parser "^1.2.1"
     schema-utils "^4.0.0"
 
-webpack-merge@^5.3.0, webpack-merge@^5.9.0:
+webpack-merge@^5.9.0:
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-5.9.0.tgz#dc160a1c4cf512ceca515cc231669e9ddb133826"
   integrity sha512-6NbRQw4+Sy50vYNTw7EyOn41OZItPiXB8GNv3INSoe3PSFaHJEz3SHTrYVaRm2LilNGnFUzh0FAwqPEmU/CwDg==
