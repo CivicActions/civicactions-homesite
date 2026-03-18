@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap");
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.with-flex {
+  display: flex;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 300ms ease-in, transform 400ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #162e51;
+  font-family: "Merriweather";
+  margin: 0;
+}
+
+body,
+.body,
+.body-large,
+.body-small {
+  color: #1b1b1b;
+  font-family: "Nunito";
+  margin: 0;
+}
+
+h1,
+.h1 {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33.6px;
+  font-size: 24px;
+}
+@media (min-width: 768px) {
+  h1,
+  .h1 {
+    font-size: 36px;
+    line-height: 50.4px;
+  }
+}
+@media (min-width: 1024px) {
+  h1,
+  .h1 {
+    font-size: 48px;
+    line-height: 78px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  text-align: left;
+  font-family: "Merriweather";
+}
+@media screen and (min-width: 600px) {
+  h2,
+  .h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 1201px) {
+  h2,
+  .h2 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+h3,
+.h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+@media screen and (min-width: 600px) {
+  h3,
+  .h3 {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+@media screen and (min-width: 1201px) {
+  h3,
+  .h3 {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+h4,
+.h4 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+@media screen and (min-width: 600px) {
+  h4,
+  .h4 {
+    font-size: 20px;
+    line-height: 33px;
+  }
+}
+
+h5,
+.h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+}
+@media screen and (max-width: 1201px) {
+  h5,
+  .h5 {
+    font-size: 20px;
+    line-height: 34px;
+  }
+}
+@media screen and (max-width: 481px) {
+  h5,
+  .h5 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+h6,
+.h6 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 34px;
+  font-family: "Merriweather";
+}
+@media screen and (max-width: 1201px) {
+  h6,
+  .h6 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.header--small {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 34px;
+  font-family: "Merriweather";
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1201px) {
+  .header--small {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+a {
+  color: #d83933;
+  text-decoration: underline;
+  cursor: pointer;
+}
+a:hover {
+  color: #171717;
+}
+a:active {
+  color: #d83933;
+}
+
+.body {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+@media (min-width: 1024px) {
+  .body {
+    font-size: 20px;
+    line-height: 34px;
+  }
+}
+
+.visually-hidden {
+  visibility: hidden;
+  height: 0;
+}
+
+.body-large {
+  font-style: normal;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 300;
+}
+@media screen and (max-width: 1201px) {
+  .body-large {
+    font-size: 20px;
+    line-height: 33px;
+  }
+}
+@media screen and (max-width: 481px) {
+  .body-large {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.body-small {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* stylelint-disable selector-max-id,selector-no-qualifying-type */
+#header #apply_button,
+.accessible #submit_app,
+.accessible #apply_button,
+#apply_button,
+#submit_buttons input {
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #d83933;
+  border: 1px solid #d83933;
+  color: #fff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 34px;
+  display: inline-block;
+  font-family: "Nunito";
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.4s ease 0s, color 0.4s ease 0s, border 0.4s ease 0s;
+  line-height: inherit;
+  padding: 12px 20px;
+}
+@media (min-width: 768px) {
+  #header #apply_button,
+  .accessible #submit_app,
+  .accessible #apply_button,
+  #apply_button,
+  #submit_buttons input {
+    font-size: 18px;
+  }
+}
+#header #apply_button:hover, #header #apply_button:focus,
+.accessible #submit_app:hover,
+.accessible #submit_app:focus,
+.accessible #apply_button:hover,
+.accessible #apply_button:focus,
+#apply_button:hover,
+#apply_button:focus,
+#submit_buttons input:hover,
+#submit_buttons input:focus {
+  background-color: #171717;
+  color: #fff;
+  border-color: #171717;
+}
+#header #apply_button:active,
+.accessible #submit_app:active,
+.accessible #apply_button:active,
+#apply_button:active,
+#submit_buttons input:active {
+  /* background-color: #6f3331; */
+}
+#header #apply_button.large,
+.accessible #submit_app.large,
+.accessible #apply_button.large,
+#apply_button.large,
+#submit_buttons input.large {
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  #header #apply_button,
+  .accessible #submit_app,
+  .accessible #apply_button,
+  #apply_button,
+  #submit_buttons input {
+    font-size: 18px;
+    line-height: 34px;
+    padding: 12px 24px;
+  }
+}
+
+.accessible #content,
+#content,
+#application,
+#application div.required-fields {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+@media (min-width: 1024px) {
+  .accessible #content,
+  #content,
+  #application,
+  #application div.required-fields {
+    font-size: 20px;
+    line-height: 34px;
+  }
+}
+
+#main_fields div.field label,
+#custom_fields div.field label,
+#demographic_questions div.field label,
+#eeoc_fields div.field label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+@media screen and (min-width: 600px) {
+  #main_fields div.field label,
+  #custom_fields div.field label,
+  #demographic_questions div.field label,
+  #eeoc_fields div.field label {
+    font-size: 20px;
+    line-height: 33px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #wrapper,
+  #main,
+  #app_body {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 !important;
+  }
+  .logo-container {
+    box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.3);
+    animation-name: scroll;
+    width: 100%;
+    padding: 45px;
+    top: 0;
+  }
+  #logo,
+  #header,
+  #content,
+  #application {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  #header,
+  #content,
+  #application {
+    max-width: 720px;
+  }
+  #header {
+    margin-top: 30px;
+  }
+  #header #apply_button {
+    right: 20%;
+    top: 35px;
+    align-items: center;
+    padding: 12px 24px !important;
+    display: inline-block;
+  }
+  #application {
+    padding: 30px;
+    margin-bottom: 150px;
+  }
+  #application .heading {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    text-align: left;
+    font-family: "Merriweather";
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 600px) {
+  #application .heading {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1201px) {
+  #application .heading {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  #application #eeoc_title,
+  #application #disability_status_header {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 600px) {
+  #application #eeoc_title,
+  #application #disability_status_header {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1201px) {
+  #application #eeoc_title,
+  #application #disability_status_header {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+@media (min-width: 1024px) {
+  #application #disability_status_header {
+    padding-bottom: 15px;
+    text-align: inherit;
+    text-decoration: inherit;
+  }
+}
+@media (min-width: 768px) {
+  #main_fields div.field label,
+  #eeoc_fields div.field label {
+    width: 120px;
+  }
+}
+@media (min-width: 1024px) {
+  #main_fields div.field label,
+  #eeoc_fields div.field label {
+    width: 200px;
+  }
+}
+
+/* stylelint-enable selector-max-id,selector-no-qualifying-type */

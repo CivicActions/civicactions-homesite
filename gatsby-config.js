@@ -8,9 +8,39 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
+var fs = require('fs');
+var path = require('path');
+
+// Load environment variables from the file matching the current NODE_ENV
+// (e.g. .env.production during `gatsby build`, .env.development during `gatsby develop`).
+// If that file does not exist — for example when building locally without a .env.production —
+// fall back to .env.development so the build can still reach the Strapi API.
+var nodeEnv = process.env.NODE_ENV || 'development';
+var envPath = path.resolve(__dirname, '.env.' + nodeEnv);
+var fallbackEnvPath = path.resolve(__dirname, '.env.development');
+
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: fs.existsSync(envPath) ? envPath : fallbackEnvPath,
 });
+
+// Fail early with a clear message if the required Strapi variables are absent.
+// Without these checks, gatsby-source-strapi throws a vague "Invalid URL" error
+// because it receives an undefined base URL when building.
+if (!process.env.STRAPI_API_URL) {
+  throw new Error(
+    'Missing STRAPI_API_URL. Set it in the environment or in ' +
+      path.basename(envPath) +
+      '.',
+  );
+}
+
+if (!process.env.STRAPI_TOKEN) {
+  throw new Error(
+    'Missing STRAPI_TOKEN. Set it in the environment or in ' +
+      path.basename(envPath) +
+      '.',
+  );
+}
 
 module.exports = {
   siteMetadata: {
@@ -92,6 +122,10 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
+        // Explicitly target the Strapi v4 API. The plugin defaults to v5, which
+        // uses different query parameters and response shapes. Omitting this
+        // would cause incorrect requests against the v4 backend.
+        version: 4,
         apiURL: process.env.STRAPI_API_URL,
         accessToken: process.env.STRAPI_TOKEN,
         queryLimit: 5000,
