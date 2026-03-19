@@ -29,6 +29,16 @@ Our home site is live at https://civicactions.com please check it out and bookma
    STRAPI_API_URL=https://your-strapi-instance.example.com
    ```
 
+1. `yarn build` runs Gatsby in the production environment (`NODE_ENV=production`), so local builds read from `.env.production`. If you want to use the same local Strapi credentials as development, you can copy `.env.development` to `.env.production`.
+
+1. Run `yarn build`.
+
+   If the build fails due to stale Gatsby artifacts, run a clean build instead:
+
+   ```bash
+   yarn clean && yarn build
+   ```
+
 1. Run `yarn start`.
 
 ## Managing Dependencies
