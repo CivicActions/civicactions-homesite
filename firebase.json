@@ -108,6 +108,11 @@
         "type": 301
       },
       {
+        "source": "/estimating-worksheet",
+        "destination": "https://docs.google.com/spreadsheets/d/1FrPU7I_VeeCZxRkATyLrP_VbXGBdYn3qXcCu1VtMx_o",
+        "type": 301
+      },
+      {
         "source": "/press/2024-01-16-CivicActions-Announces-Impact-Report/reports.civicactions.com/impact",
         "destination": "https://reports.civicactions.com/impact",
         "type": 301

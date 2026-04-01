@@ -256,7 +256,7 @@ const CareersPage = ({ location }) => {
             </div>
           </div>
           <p className='h5'>
-            If all goes well, we will answer any questions and welcome you to the CivicActions family!
+            If all goes well, we will answer any questions and welcome you to the CivicActions team!
           </p>
         </div>
       </section>
