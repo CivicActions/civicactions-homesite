@@ -8,9 +8,14 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
+// Load environment variables from .env files only in local development.
+// In CI/production, STRAPI_API_URL and STRAPI_TOKEN are injected as environment
+// variables, so dotenv is skipped to avoid unintended fallback behavior.
+if (!process.env.STRAPI_API_URL || !process.env.STRAPI_TOKEN) {
+  require('dotenv').config({
+    path: `.env.${process.env.NODE_ENV}`,
+  });
+}
 
 module.exports = {
   siteMetadata: {
@@ -41,12 +46,6 @@ module.exports = {
       options: {
         sitemap: 'https://civicactions.com/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }],
-      },
-    },
-    {
-      resolve: `@danbruegge/gatsby-plugin-stylelint`,
-      options: {
-        files: [`src/**/*.(s(c|a)ss|css)`],
       },
     },
     {
@@ -92,6 +91,10 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
+        // Explicitly target the Strapi v4 API. The plugin defaults to v5, which
+        // uses different query parameters and response shapes. Omitting this
+        // would cause incorrect requests against the v4 backend.
+        version: 4,
         apiURL: process.env.STRAPI_API_URL,
         accessToken: process.env.STRAPI_TOKEN,
         queryLimit: 5000,
