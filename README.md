@@ -4,7 +4,7 @@ Our home site is live at https://civicactions.com please check it out and bookma
 
 ## Related resources
 
-[The official react docs](https://reactjs.org/docs/getting-started.html)
+[The official react docs](https://react.dev/learn)
 
 [Intro to Gatsby](https://www.gatsbyjs.com/docs/tutorial/)
 
