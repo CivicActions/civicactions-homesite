@@ -331,7 +331,7 @@ export default CaseStudyTemplate;
 export const Head = ({ data }) => {
   const caseStudy = data.allStrapiCaseStudy.edges[0].node;
   // If an og image is uploaded in strapi use it, otherwise default to the cover image.
-  let ogImage = caseStudy.SEO.OGImage ? getSrc(caseStudy.SEO.OGImage.localFile) : getSrc(caseStudy.Cover_Image.localFile);
+  let ogImage = caseStudy.SEO?.OGImage ? getSrc(caseStudy.SEO.OGImage.localFile) : getSrc(caseStudy.Cover_Image?.localFile);
 
   return (
     <SEO

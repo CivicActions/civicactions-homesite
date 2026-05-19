@@ -28,7 +28,9 @@ import squareCircle from "../files/icons/square-circle.svg";
 import closeButton from '../files/icons/grey-close-icon.svg';
 
 const OfferingTemplate = ({ data }) => {
-  Modal.setAppElement('#___gatsby')
+  if (typeof document !== 'undefined') {
+    Modal.setAppElement('#___gatsby')
+  }
 
   const offering = data.allStrapiOffering.nodes[0];
 

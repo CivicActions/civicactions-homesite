@@ -9,7 +9,7 @@ const CaseStudyTeaser = ({ cases }) => {
     return (
       <Link key={id} to={Path}>
         <div className={`wrapper--case-study--teaser ${Sort_Order} `}>
-          {Cover_Image.url ?
+          {Cover_Image?.url ?
             <img src={Cover_Image.url} alt={Cover_Image.alternativeText} /> : <div className='no-img-teaser'></div>
           }
 
