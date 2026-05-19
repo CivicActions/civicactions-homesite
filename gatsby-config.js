@@ -174,9 +174,9 @@ module.exports = {
           },
           {
             singularName: 'offering',
-            publicationState:
-              process.env.GATSBY_IS_PREVIEW === 'true' ? 'preview' : 'live',
             queryParams: {
+              publicationState:
+                process.env.GATSBY_IS_PREVIEW === 'true' ? 'preview' : 'live',
               // Populate all fields even nested query field
               populate: {
                 Title: '*',
@@ -286,9 +286,9 @@ module.exports = {
           },
           {
             singularName: 'general',
-            publicationState:
-              process.env.GATSBY_IS_PREVIEW === 'true' ? 'preview' : 'live',
             queryParams: {
+              publicationState:
+                process.env.GATSBY_IS_PREVIEW === 'true' ? 'preview' : 'live',
               // Populate all fields even nested query field
               populate: {
                 Title: '*',
@@ -307,9 +307,9 @@ module.exports = {
           },
           {
             singularName: 'press-release',
-            publicationState:
-              process.env.GATSBY_IS_PREVIEW === 'true' ? 'preview' : 'live',
             queryParams: {
+              publicationState:
+                process.env.GATSBY_IS_PREVIEW === 'true' ? 'preview' : 'live',
               // Populate all fields even nested query field
               populate: {
                 Title: '*',
@@ -332,9 +332,9 @@ module.exports = {
           },
           {
             singularName: 'staff-profile',
-            publicationState:
-              process.env.GATSBY_IS_PREVIEW === 'true' ? 'preview' : 'live',
             queryParams: {
+              publicationState:
+                process.env.GATSBY_IS_PREVIEW === 'true' ? 'preview' : 'live',
               // Populate all fields even nested query field
               populate: {
                 Path: '*',
