@@ -73,6 +73,7 @@ const MobileMenu = (props) => {
           <ul>
             <li><Link to="/case-studies">Case Studies</Link></li>
             <li><Link to="/contracting">Contracting</Link></li>
+            <li><a href='https://github.com/CivicActions/open-practice/blob/main/README.md' className='external-link'>Open Practices</a></li>
           </ul>
         </li>
 
