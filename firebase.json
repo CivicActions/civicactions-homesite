@@ -116,6 +116,11 @@
         "source": "/press/2024-01-16-CivicActions-Announces-Impact-Report/reports.civicactions.com/impact",
         "destination": "https://reports.civicactions.com/impact",
         "type": 301
+      },
+      {
+        "source": "/register",
+        "destination": "/services/ditap/register",
+        "type": 301
       }
     ],
     "headers": [
