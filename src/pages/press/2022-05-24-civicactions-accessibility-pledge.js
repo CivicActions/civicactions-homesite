@@ -22,12 +22,13 @@ const CivicactionsAccessibilityPledge = () => {
                     
                       <span>Date: Tuesday, May 24, 2022</span>
                         <p>On Global Accessibility Awareness Day, CivicActions announce our <a href="https://accessibility.civicactions.com/posts/CivicActions-Accessibility-Pledge">Accessibility Pledge</a>.</p>
-                        <p>As part of our committment to accessibility, our team is pledging to:</p>
-                         <ul><li>build systems to continuously monitor our owrk
-                             <li>actively engage new teams, partners, and clients in why accessibility matters
-                             <li>set annual goals and report against publicly
+                        <p>As part of our commitment to accessibility, our team is pledging to:</p>
+                         <ul>
+                             <li>build systems to continuously monitor our work</li>
+                             <li>actively engage new teams, partners, and clients in why accessibility matters</li>
+                             <li>set annual goals and report against publicly</li>
                          </ul>
-                        <p>As part of this we have also created a new Accessessibility Champions Program in which we will work to strengthen our approach to accessibility across all aspects of our work.  </p>
+                        <p>As part of this we have also created a new Accessibility Champions Program in which we will work to strengthen our approach to accessibility across all aspects of our work.  </p>
       
                         <p>To learn more about CivicActions' work, visit our <a href="https://accessibility.civicactions.com/">accessibility website</a>. To see how we're advancing public service, read our latest <a href="https://civicactions.com/case-studies">case studies</a>. </p>
                         
