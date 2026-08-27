@@ -10,24 +10,22 @@ const Banner = ({ boldText, regularText, link }) => {
   return hide ? (
     <div></div>
   ) : (
-    <div role='alert' aria-label='homepage-banner' className='banner body-small'>
-
+    <div
+      role='alert'
+      aria-label='homepage-banner'
+      className='banner body-small'>
       <div className='inner'>
         <a href={link}>
-        <p className='banner-text'>
-          <strong>{boldText}</strong> <span>{regularText}</span>
-        </p>
+          <p className='banner-text'>
+            <strong>{boldText}</strong> <span>{regularText}</span>
+          </p>
         </a>
-        <div
-          onKeyDown={() => {}}
-          tabIndex={0}
-          role='button'
+        <button
           className='close-icon'
           onClick={close}>
           <img src={closeIcon} alt='Close'></img>
-        </div>
+        </button>
       </div>
-
     </div>
   );
 };

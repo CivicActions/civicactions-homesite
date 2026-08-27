@@ -32,7 +32,8 @@
   }
 
   .close-icon {
-    cursor: pointer;
+    background: none;
+    border: none;
   }
 
   @media screen and (max-width: $large-screen) {
