@@ -26,8 +26,8 @@ const GeneralTemplate = ({ data }) => {
 };
 
 export const query = graphql`
-  query generalContent {
-    allStrapiGeneral {
+  query generalContent($pagePath: String!) {
+    allStrapiGeneral(filter: { Path: { eq: $pagePath } }) {
       nodes {
         Hero_text
         Body {
