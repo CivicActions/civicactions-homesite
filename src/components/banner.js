@@ -12,7 +12,6 @@ const Banner = ({ boldText, regularText, link }) => {
   ) : (
     <div
       role='alert'
-      aria-label='homepage-banner'
       className='banner body-small'>
       <div className='inner'>
         <a href={link}>
