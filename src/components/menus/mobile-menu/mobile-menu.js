@@ -73,6 +73,7 @@ const MobileMenu = (props) => {
           <ul>
             <li><Link to="/case-studies">Case Studies</Link></li>
             <li><Link to="/contracting">Contracting</Link></li>
+            <li><Link to="/sewp-vi">SEWP VI</Link></li>
           </ul>
         </li>
 
