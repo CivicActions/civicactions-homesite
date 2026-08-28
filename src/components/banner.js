@@ -10,8 +10,8 @@ const Banner = ({ boldText, regularText, link }) => {
   return hide ? (
     <div></div>
   ) : (
-    <div
-      role='alert'
+    <section
+      aria-label='Informational banner'
       className='banner body-small'>
       <div className='inner'>
         <a href={link}>
@@ -25,7 +25,7 @@ const Banner = ({ boldText, regularText, link }) => {
           <img src={closeIcon} alt='Close'></img>
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
