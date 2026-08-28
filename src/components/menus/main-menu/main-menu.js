@@ -51,7 +51,7 @@ const MainMenu = ({ redHeader }) => {
           <ul>
             <li><Link to="/case-studies">Case Studies</Link></li>
             <li><Link to="/contracting">Contracting</Link></li>
-            <li><Link to="/sewp-vi">SEWP VI</Link></li>
+            <li><Link to="/contracting/sewp-vi">SEWP VI</Link></li>
           </ul>
         </li>
         <li className='menu--list__item'><a href='https://medium.com/civicactions'>Insights</a></li>
