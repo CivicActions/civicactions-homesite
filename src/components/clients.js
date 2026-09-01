@@ -27,52 +27,52 @@ const ClientsSection = () => {
           Trusted by organizations that serve the people.
         </h2>
         <div tabIndex='0' className='grid'>
-          <img src={clientLogo1} alt='Logo for the State of Georgia'></img>
-          <img src={clientLogo2} alt='Logo for U.S. Veterans Affairs'></img>
+          <img src={clientLogo1} alt='State of Georgia'></img>
+          <img src={clientLogo2} alt='U.S. Veterans Affairs'></img>
           <img
             src={clientLogo3}
-            alt='Logo for the Executive Office of the President of the United States'></img>
+            alt='Executive Office of the President of the United States'></img>
           <img
             src={clientLogo4}
-            alt='Logo for the U.S. House of Representatives'></img>
+            alt='U.S. House of Representatives'></img>
           <img
             src={clientLogo5}
-            alt='Logo for the Department of Health & Human Services'></img>
+            alt='U.S. Department of Health & Human Services'></img>
           <img
             src={clientLogo6}
-            alt='Logo for the National Science Foundation'></img>
+            alt='National Science Foundation'></img>
           <img
             src={clientLogo7}
-            alt='Logo for the U.S. Justice Department Drug Enforcement Administration'></img>
+            alt='U.S. Justice Department Drug Enforcement Administration'></img>
           <img
             src={clientLogo8}
-            alt='Logo for the City of Louisville of Jefferson County'></img>
+            alt='City of Louisville of Jefferson County'></img>
           <img
             src={clientLogo9}
-            alt='Logo for the Freedom of Information Act'></img>
+            alt='Freedom of Information Act'></img>
           <img
             src={clientLogo10}
-            alt='Logo for the Metropolitan Transportation Authority'></img>
-          <img src={clientLogo11} alt='Logo for the City of Los Angeles'></img>
+            alt='Metropolitan Transportation Authority'></img>
+          <img src={clientLogo11} alt='City of Los Angeles'></img>
           <img
             src={clientLogo12}
-            alt='Logo for the U.S. Department of Agriculture'></img>
+            alt='U.S. Department of Agriculture'></img>
           <img
             src={clientLogo13}
-            alt='Logo for the U.S. Federal Communications Commission'></img>
+            alt='U.S. Federal Communications Commission'></img>
           {/*<img
             src={clientLogo14}
-            alt='Logo for the U.S. Department of Education'></img>*/}
-          <img src={clientLogo15} alt='Logo for the Smithsonian'></img>
+            alt='U.S. Department of Education'></img>*/}
+          <img src={clientLogo15} alt='Smithsonian'></img>
           <img
             src={clientLogo16}
-            alt='Logo for the U.S. Department of Defense'></img>
+            alt='U.S. Department of Defense'></img>
           <img
             src={clientLogo17}
-            alt='Logo for San Francisco Environment'></img>
+            alt='San Francisco Environment'></img>
           <img
             src={clientLogo18}
-            alt='Logo for the California Child Welfare Digital Services'></img>
+            alt='California Child Welfare Digital Services'></img>
         </div>
       </div>
     </section>
