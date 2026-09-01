@@ -26,7 +26,7 @@ const ClientsSection = () => {
         <h2 className='body-large'>
           Trusted by organizations that serve the people.
         </h2>
-        <div tabIndex='0' className='grid'>
+        <div tabIndex='0' className='grid' aria-label='Clients'>
           <img src={clientLogo1} alt='State of Georgia'></img>
           <img src={clientLogo2} alt='U.S. Veterans Affairs'></img>
           <img
