@@ -121,10 +121,13 @@ const OfferingTemplate = ({ data }) => {
                 <ReactMarkdown className='body' children={offering.value_prop.text.data.text} />
 
               </div>
-              <div className='value-props--right'>
+              <figure className='value-props--right'>
                 <img src={offering.value_prop.image[0].url} alt={offering.value_prop.image[0].alternativeText} />
-                <caption>{offering.value_prop.image[0].caption}</caption>
-              </div>
+                
+                { offering.value_prop.image[0].caption ?  
+                  <figcaption>{offering.value_prop.image[0].caption}</figcaption> : null
+                }
+              </figure>
             </div>
           </div>
         </section>
