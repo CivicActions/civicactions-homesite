@@ -67,9 +67,9 @@ const OfferingTemplate = ({ data }) => {
         <div className='staff-info'>
           <h3 className='staff-name'>
             {member.Name}
-            <a className='linkedin-icon' href={member.Linkedin} aria-label={`linkedin profile for ${member.Name}`}>
-              <img className='black-icon' alt='black linkedin icon' src={linkedinIcon} />
-              <img className='blue-icon' alt='blue linkedin icon' src={linkedinIconBlue} />
+            <a className='linkedin-icon' href={member.Linkedin}>
+              <img className='black-icon' alt={`linkedin profile for ${member.Name}`} src={linkedinIcon} />
+              <img className='blue-icon' alt={`linkedin profile for ${member.Name}`} src={linkedinIconBlue} />
             </a>
           </h3>
           <p className='body staff-role'>{member.Role}</p>
