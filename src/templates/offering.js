@@ -73,7 +73,7 @@ const OfferingTemplate = ({ data }) => {
             </a>
           </h3>
           <p className='body staff-role'>{member.Role}</p>
-          <button className={`body open-modal--btn ${index}`} onClick={() => openModal(member.Name)}>Read bio</button>
+          <button className={`body open-modal--btn ${index}`} onClick={() => openModal(member.Name)}>Read bio<span className='visually-hidden'> for {member.Name}</span></button>
         </div></div>
 
     )) : null;
