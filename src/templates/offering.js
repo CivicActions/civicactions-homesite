@@ -63,7 +63,7 @@ const OfferingTemplate = ({ data }) => {
   let teamMemberList = offering.team_members.length ?
     offering.team_members.map((member, index) => (
       <div key={index} className='related-staff'>
-        <img className='staff-image' src={member.image[0].url} aria-label={member.Name} />
+        <img className='staff-image' src={member.image[0].url} alt={member.Name} />
         <div className='staff-info'>
           <h3 className='staff-name'>
             {member.Name}
