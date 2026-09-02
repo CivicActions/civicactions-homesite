@@ -1,30 +1,30 @@
 .section--offering--staff {
   margin-bottom: 40px;
-  @media(min-width: $tablet-screen) {
+  @media (min-width: $tablet-screen) {
     margin-bottom: 64px;
   }
-  @media(min-width: $large-screen) {
+  @media (min-width: $large-screen) {
     margin-bottom: 80px;
   }
   .inner {
     margin: 0;
-    @media(min-width: $tablet-screen) {
+    @media (min-width: $tablet-screen) {
       margin: 48px;
     }
-    @media(min-width: $large-screen) {
+    @media (min-width: $large-screen) {
       margin: 0 auto;
     }
     h2 {
       padding-bottom: 32px;
       margin: 0 24px;
-      @media(min-width: $tablet-screen) {
+      @media (min-width: $tablet-screen) {
         margin: 0;
       }
     }
 
     .related-staff--wrapper {
       margin-bottom: 16px;
-      @media(min-width: $medium-large-screen) {
+      @media (min-width: $medium-large-screen) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
@@ -37,7 +37,7 @@
         margin-bottom: 16px;
         overflow: auto;
         position: relative;
-        @media(min-width: $medium-large-screen) {
+        @media (min-width: $medium-large-screen) {
           margin-bottom: 0;
         }
 
@@ -46,36 +46,26 @@
           height: 56px;
           float: left;
           margin-right: 16px;
-          @media(min-width: $tablet-screen) {
+          @media (min-width: $tablet-screen) {
             width: 124px;
             height: 124px;
             margin-right: 24px;
           }
-
         }
         .staff-info {
           margin: auto 0;
         }
 
         .linkedin-icon {
-
           position: absolute;
           top: 17px;
           right: 24px;
-          @media(min-width: $tablet-screen) {
-            position: relative;
+          @media (min-width: $tablet-screen) {
+            position: unset;
             margin-left: 16px;
             top: unset;
             right: unset;
           }
-
-
-          img {
-            width: 27px;
-            height: 27px;
-          }
-
-
         }
 
         .staff-name {
@@ -84,6 +74,9 @@
           font-weight: 300;
           display: flex;
 
+          @media (min-width: $tablet-screen) {
+            float: left;
+          }
         }
 
         .open-modal--btn {
@@ -112,7 +105,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(27, 27, 27, .85);
+  background-color: rgb(27, 27, 27, 0.85);
   //opacity: 0.85;
 }
 
@@ -132,7 +125,7 @@
   position: absolute;
   top: 120px !important;
   height: max-content;
-  @media(min-width: $medium-large-screen) {
+  @media (min-width: $medium-large-screen) {
     padding: 64px;
   }
 
@@ -183,11 +176,7 @@
         }
       }
     }
-
   }
-
-
-
 
   .staff-body {
     clear: both;
@@ -203,6 +192,14 @@
 .linkedin-icon {
   float: left;
   margin-top: 3px;
+
+  img {
+    width: 27px;
+    height: 27px;
+  }
+  .blue-icon {
+    display: none;
+  }
   &:hover,
   &:focus {
     .blue-icon {
@@ -213,9 +210,4 @@
       display: none;
     }
   }
-}
-.blue-icon {
-  display: none;
-  width: 27px;
-  height: 27px;
 }

@@ -65,13 +65,11 @@ const OfferingTemplate = ({ data }) => {
       <div key={index} className='related-staff'>
         <img className='staff-image' src={member.image[0].url} alt={member.Name} />
         <div className='staff-info'>
-          <h3 className='staff-name'>
-            {member.Name}
-            <a className='linkedin-icon' href={member.Linkedin}>
-              <img className='black-icon' alt={`linkedin profile for ${member.Name}`} src={linkedinIcon} />
-              <img className='blue-icon' alt={`linkedin profile for ${member.Name}`} src={linkedinIconBlue} />
-            </a>
-          </h3>
+          <h3 className='staff-name'>{member.Name}</h3>
+          <a className='linkedin-icon' href={member.Linkedin}>
+            <img className='black-icon' alt={`linkedin profile for ${member.Name}`} src={linkedinIcon} />
+            <img className='blue-icon' alt={`linkedin profile for ${member.Name}`} src={linkedinIconBlue} />
+          </a>
           <p className='body staff-role'>{member.Role}</p>
           <button className={`body open-modal--btn ${index}`} onClick={() => openModal(member.Name)}>Read bio<span className='visually-hidden'> for {member.Name}</span></button>
         </div></div>
