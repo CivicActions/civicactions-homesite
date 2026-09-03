@@ -48,8 +48,8 @@ const Header = () => {
         right
         noTransition
         width={'75%'}
-        customBurgerIcon={<img alt='mobile menu navigation icon' src={menuIcon} />}
-        customCrossIcon={<img alt='mobile menu close button' src={closeIcon} />}
+        customBurgerIcon={<img alt='' src={menuIcon} />}
+        customCrossIcon={<img alt='' src={closeIcon} />}
       />
     </header>
 
