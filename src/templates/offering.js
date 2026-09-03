@@ -63,17 +63,15 @@ const OfferingTemplate = ({ data }) => {
   let teamMemberList = offering.team_members.length ?
     offering.team_members.map((member, index) => (
       <div key={index} className='related-staff'>
-        <img className='staff-image' src={member.image[0].url} aria-label={member.Name} />
+        <img className='staff-image' src={member.image[0].url} alt={member.Name} />
         <div className='staff-info'>
-          <h3 className='staff-name'>
-            {member.Name}
-            <a className='linkedin-icon' href={member.Linkedin} aria-label={`linkedin profile for ${member.Name}`}>
-              <img className='black-icon' alt='black linkedin icon' src={linkedinIcon} />
-              <img className='blue-icon' alt='blue linkedin icon' src={linkedinIconBlue} />
-            </a>
-          </h3>
+          <h3 className='staff-name'>{member.Name}</h3>
+          <a className='linkedin-icon' href={member.Linkedin}>
+            <img className='black-icon' alt={`linkedin profile for ${member.Name}`} src={linkedinIcon} />
+            <img className='blue-icon' alt={`linkedin profile for ${member.Name}`} src={linkedinIconBlue} />
+          </a>
           <p className='body staff-role'>{member.Role}</p>
-          <button className={`body open-modal--btn ${index}`} onClick={() => openModal(member.Name)}>Read bio</button>
+          <button className={`body open-modal--btn ${index}`} onClick={() => openModal(member.Name)}>Read bio<span className='visually-hidden'> for {member.Name}</span></button>
         </div></div>
 
     )) : null;
@@ -121,10 +119,13 @@ const OfferingTemplate = ({ data }) => {
                 <ReactMarkdown className='body' children={offering.value_prop.text.data.text} />
 
               </div>
-              <div className='value-props--right'>
+              <figure className='value-props--right'>
                 <img src={offering.value_prop.image[0].url} alt={offering.value_prop.image[0].alternativeText} />
-                <caption>{offering.value_prop.image[0].caption}</caption>
-              </div>
+                
+                { offering.value_prop.image[0].caption ?  
+                  <figcaption>{offering.value_prop.image[0].caption}</figcaption> : null
+                }
+              </figure>
             </div>
           </div>
         </section>
