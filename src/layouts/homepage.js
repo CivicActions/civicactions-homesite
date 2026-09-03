@@ -15,7 +15,7 @@ const HomepageLayout = ({ children }) => {
       <div>
         <SkipNavLink />
           <Banner
-            boldText={`LOOKING FOR DITAP TRAINING?`}
+            boldText={`Looking for DITAP Training?`}
             regularText='Start here.'
             link='/services/ditap'
           />

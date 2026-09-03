@@ -16,16 +16,6 @@ h6 {
   margin: 0;
 }
 
-body,
-.body,
-.body-large,
-.body-small {
-  color: $colors-grey-90;
-  font-family: $primary-font;
-  margin: 0;
-}
-
-
 h1,
 .h1 {
   @include header1;
@@ -79,13 +69,18 @@ a {
   }
 }
 
+body, 
 .body {
   @include body;
 }
 
-.visually-hidden {
-  visibility: hidden;
-  height: 0;
+body,
+.body,
+.body-large,
+.body-small {
+  color: $colors-grey-90;
+  font-family: $primary-font;
+  margin: 0;
 }
 
 .body-large {
@@ -107,4 +102,19 @@ a {
 
 .body-small {
   @include small-text
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+.visually-hidden {
+  visibility: hidden;
+  height: 0;
 }
