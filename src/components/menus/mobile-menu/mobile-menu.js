@@ -19,14 +19,13 @@ const MobileMenu = (props) => {
   };
 
   return (
-    <Menu {...props}>
+    <Menu {...props} id={'mobile-menu-wrapper'}>
       <ul className="mmenu--list">
         <li className='mmenu--list__item'
           ref={(e) => (headingsRef.current[0] = e)}>
           <button
             className="heading"
             onKeyDown={() => { }}
-            tabIndex={0}
             onClick={() => onCollapseClick(0)}
           >
             Company
@@ -44,7 +43,6 @@ const MobileMenu = (props) => {
           <button
             className="heading"
             onKeyDown={() => { }}
-            tabIndex={0}
             onClick={() => onCollapseClick(1)}
           >
             Services
@@ -65,7 +63,6 @@ const MobileMenu = (props) => {
           <button
             className="heading"
             onKeyDown={() => { }}
-            tabIndex={0}
             onClick={() => onCollapseClick(2)}
           >
             Our Work
