@@ -88,7 +88,7 @@ const OfferingTemplate = ({ data }) => {
         <section className='section--offering--client-logos'>
           <div className='inner'>
             <h2 className='body'>{offering.client_logo.text}</h2>
-            <div className='grid' tabIndex='0'>
+            <div className='grid' tabIndex='0' aria-label='Clients'>
               {offering.client_logo.client_logo.map((img, index) => (
                 <img key={index} src={img.url} alt={img.alternativeText} />
               ))}
