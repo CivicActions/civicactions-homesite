@@ -19,7 +19,7 @@ const MobileMenu = (props) => {
   };
 
   return (
-    <Menu {...props} id={'mobile-menu-wrapper'}>
+    <Menu {...props} >
       <ul className="mmenu--list">
         <li className='mmenu--list__item'
           ref={(e) => (headingsRef.current[0] = e)}>
