@@ -25,19 +25,31 @@ const RedHeader = (state) => {
   };
 
   const headerRef = useRef(null);
+  const menuBurgerButton = headerRef.current?.querySelector(
+    '#react-burger-menu-btn',
+  );
 
   const addAttributes = function (state) {
     // Add aria-attributes to react-burger-menu hamburger menu button
-    const burgerButton = headerRef.current?.querySelector(
-      '#react-burger-menu-btn',
-    );
-
-    burgerButton?.setAttribute('aria-controls', 'mobile-menu-wrapper');
+    menuBurgerButton?.setAttribute('aria-controls', 'mobile-menu-wrapper');
 
     if (state.isOpen) {
-      burgerButton?.setAttribute('aria-expanded', 'true');
+      menuBurgerButton?.setAttribute('aria-expanded', 'true');
     } else {
-      burgerButton?.setAttribute('aria-expanded', 'false');
+      menuBurgerButton?.setAttribute('aria-expanded', 'false');
+    }
+  };
+
+  const setFocus = function (state) {
+    if (state.isOpen) {
+      // Set focus to first menu item or close button
+      const menuCloseButton = headerRef.current?.querySelector(
+        '#react-burger-cross-btn',
+      );
+      menuCloseButton?.focus({ focusVisible: true });
+    } else {
+      // Set focus back on burger button when menu closes
+      menuBurgerButton?.focus({ focusVisible: true });
     }
   };
 
@@ -53,6 +65,22 @@ const RedHeader = (state) => {
   if (scrolled) {
     headerClasses.push('scrolled');
   }
+
+  const handleStateChange = function (state) {
+    addAttributes(state); // Update burger button attributes on change
+
+    setTimeout(() => {
+      setFocus(state);
+    }, 0);
+  };
+
+  // document.addEventListener('click', (event) => {
+  //   // Give the browser a tiny moment to update focus state if needed,
+  //   // or check immediately depending on the event phase
+  //   setTimeout(() => {
+  //     console.log(document.activeElement);
+  //   }, 100);
+  // });
 
   return (
     <header
@@ -75,7 +103,8 @@ const RedHeader = (state) => {
           <MainMenu redHeader={true} />
           <MobileMenu
             id={'mobile-menu-wrapper'}
-            onStateChange={addAttributes} 
+            onStateChange={handleStateChange}
+            disableAutoFocus // Auto focus is busted
             right
             noTransition
             width={'75%'}
