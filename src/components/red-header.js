@@ -8,10 +8,19 @@ import closeIcon from '../files/icons/close-icon.svg';
 import PropTypes from 'prop-types';
 import MainMenu from './menus/main-menu/main-menu';
 import MobileMenu from './menus/mobile-menu/mobile-menu';
+import FocusLock from 'react-focus-lock';
 
-const RedHeader = (state) => {
+const RedHeader = (props) => {
+  const headerRef = useRef(null);
+  const menuBurgerButton = headerRef.current?.querySelector(
+    '#react-burger-menu-btn',
+  );
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const isMenuOpenRef = useRef(null);
+
   const [scrolled, setScrolled] = React.useState(false);
   const [scrolledMobile, setScrolledMobile] = React.useState(false);
+
   const handleScroll = () => {
     const offset = window.scrollY;
     if (offset > 500) {
@@ -24,25 +33,35 @@ const RedHeader = (state) => {
     }
   };
 
-  const headerRef = useRef(null);
-  const menuBurgerButton = headerRef.current?.querySelector(
-    '#react-burger-menu-btn',
-  );
+  let headerClasses = ['header'];
+  if (scrolled) {
+    headerClasses.push('scrolled');
+  }
 
-  const addAttributes = function (state) {
+  const handleMenuOpen = (props) => {
+    isMenuOpenRef.current = props.isOpen ? true : false;
+
+    if (isMenuOpenRef.current) {
+      setIsMenuOpen(true);
+    } else {
+      setIsMenuOpen(false);
+    }
+  };
+
+  const addAttributes = function () {
     // Add aria-attributes to react-burger-menu hamburger menu button
     menuBurgerButton?.setAttribute('aria-controls', 'mobile-menu-wrapper');
 
-    if (state.isOpen) {
+    if (isMenuOpenRef.current) {
       menuBurgerButton?.setAttribute('aria-expanded', 'true');
     } else {
       menuBurgerButton?.setAttribute('aria-expanded', 'false');
     }
   };
 
-  const setFocus = function (state) {
-    if (state.isOpen) {
-      // Set focus to first menu item or close button
+  const setFocus = function (props) {
+    if (isMenuOpenRef.current) {
+      // Set focus to close button on menu open
       const menuCloseButton = headerRef.current?.querySelector(
         '#react-burger-cross-btn',
       );
@@ -53,33 +72,32 @@ const RedHeader = (state) => {
     }
   };
 
-  useLayoutEffect(() => {
-    addAttributes(state); // Update burger button attributes on inital render
-  }, [state]);
-
   useEffect(() => {
     window.addEventListener('scrollend', handleScroll);
-  });
+    handleMenuOpen(props);
+    addAttributes(props); // Update burger button attributes on inital render
+  }, [props]);
 
-  let headerClasses = ['header'];
-  if (scrolled) {
-    headerClasses.push('scrolled');
-  }
+  useLayoutEffect(() => {
+    // addAttributes(props); // Update burger button attributes on inital render
+  }, [props]);
 
-  const handleStateChange = function (state) {
-    addAttributes(state); // Update burger button attributes on change
+  const handleStateChange = function (props) {
+    handleMenuOpen(props);
+    addAttributes(props); // Update burger button attributes on change
 
     setTimeout(() => {
-      setFocus(state);
+      //   setFocus(props);
     }, 0);
   };
 
-  // document.addEventListener('click', (event) => {
-  //   // Give the browser a tiny moment to update focus state if needed,
-  //   // or check immediately depending on the event phase
+  // document.addEventListener('focusin', (event) => {
+  //   //   // Give the browser a tiny moment to update focus state if needed,
+  //   //   // or check immediately depending on the event phase
   //   setTimeout(() => {
-  //     console.log(document.activeElement);
-  //   }, 100);
+  //     // console.log('focused: ');
+  //     // console.log(document.activeElement);
+  //   }, 10);
   // });
 
   return (
@@ -101,25 +119,27 @@ const RedHeader = (state) => {
               alt='Civic Actions home page'></img>
           </Link>
           <MainMenu redHeader={true} />
-          <MobileMenu
-            id={'mobile-menu-wrapper'}
-            onStateChange={handleStateChange}
-            disableAutoFocus // Auto focus is busted
-            right
-            noTransition
-            width={'75%'}
-            customBurgerIcon={
-              <svg
-                alt=''
-                width='20'
-                height='15'
-                fill='%23FFF'
-                xmlns='http://www.w3.org/2000/svg'>
-                <path d='M0 0h20v2H0zM0 7h20v2H0zM0 13h20v2H0z' />
-              </svg>
-            }
-            customCrossIcon={<img alt='' src={closeIcon} />}
-          />
+          <FocusLock disabled={!isMenuOpen}>
+            <MobileMenu
+              id={'mobile-menu-wrapper'}
+              onStateChange={handleStateChange}
+              disableAutoFocus // Auto focus is busted
+              right
+              noTransition
+              width={'75%'}
+              customBurgerIcon={
+                <svg
+                  alt=''
+                  width='20'
+                  height='15'
+                  fill='%23FFF'
+                  xmlns='http://www.w3.org/2000/svg'>
+                  <path d='M0 0h20v2H0zM0 7h20v2H0zM0 13h20v2H0z' />
+                </svg>
+              }
+              customCrossIcon={<img alt='' src={closeIcon} />}
+            />
+          </FocusLock>
         </div>
       </div>
     </header>
