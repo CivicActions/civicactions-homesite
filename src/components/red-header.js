@@ -1,5 +1,5 @@
 import '../sass/styles.scss';
-import React, { useEffect, useRef, useLayoutEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
 import whiteLogo from '../files/icons/CA-white.svg';
 import redLogo from '../files/icons/ca-extended-logo.svg';
@@ -32,11 +32,6 @@ const RedHeader = (props) => {
       setScrolledMobile(false);
     }
   };
-
-  let headerClasses = ['header'];
-  if (scrolled) {
-    headerClasses.push('scrolled');
-  }
 
   const handleMenuOpen = (props) => {
     isMenuOpenRef.current = props.isOpen ? true : false;
@@ -85,11 +80,13 @@ const RedHeader = (props) => {
   const handleStateChange = function (props) {
     handleMenuOpen(props);
     addAttributes(); // Update burger button attributes on change
-
-    setTimeout(() => {
-        setFocus();
-    }, 0);
+    setFocus();
   };
+
+  let headerClasses = ['header'];
+  if (scrolled) {
+    headerClasses.push('scrolled');
+  }
 
   return (
     <header
