@@ -54,12 +54,16 @@ const RedHeader = (props) => {
 
     if (isMenuOpenRef.current) {
       menuBurgerButton?.setAttribute('aria-expanded', 'true');
+      menuBurgerButton?.setAttribute('tabindex', '-1'); // Button remains tabbable with FocusLock without this.
     } else {
       menuBurgerButton?.setAttribute('aria-expanded', 'false');
+      menuBurgerButton?.tabIndex === -1
+        ? menuBurgerButton.removeAttribute('tabindex')
+        : null;
     }
   };
 
-  const setFocus = function (props) {
+  const setFocus = function () {
     if (isMenuOpenRef.current) {
       // Set focus to close button on menu open
       const menuCloseButton = headerRef.current?.querySelector(
@@ -75,30 +79,17 @@ const RedHeader = (props) => {
   useEffect(() => {
     window.addEventListener('scrollend', handleScroll);
     handleMenuOpen(props);
-    addAttributes(props); // Update burger button attributes on inital render
-  }, [props]);
-
-  useLayoutEffect(() => {
-    // addAttributes(props); // Update burger button attributes on inital render
+    addAttributes(); // Update burger button attributes on inital render
   }, [props]);
 
   const handleStateChange = function (props) {
     handleMenuOpen(props);
-    addAttributes(props); // Update burger button attributes on change
+    addAttributes(); // Update burger button attributes on change
 
     setTimeout(() => {
-      //   setFocus(props);
+        setFocus();
     }, 0);
   };
-
-  // document.addEventListener('focusin', (event) => {
-  //   //   // Give the browser a tiny moment to update focus state if needed,
-  //   //   // or check immediately depending on the event phase
-  //   setTimeout(() => {
-  //     // console.log('focused: ');
-  //     // console.log(document.activeElement);
-  //   }, 10);
-  // });
 
   return (
     <header
