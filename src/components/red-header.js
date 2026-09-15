@@ -12,9 +12,6 @@ import FocusLock from 'react-focus-lock';
 
 const RedHeader = (props) => {
   const headerRef = useRef(null);
-  const menuBurgerButton = headerRef.current?.querySelector(
-    '#react-burger-menu-btn',
-  );
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const isMenuOpenRef = useRef(null);
 
@@ -34,17 +31,15 @@ const RedHeader = (props) => {
   };
 
   const handleMenuOpen = (props) => {
-    isMenuOpenRef.current = props.isOpen ? true : false;
-
-    if (isMenuOpenRef.current) {
-      setIsMenuOpen(true);
-    } else {
-      setIsMenuOpen(false);
-    }
+    isMenuOpenRef.current = props.isOpen;
+    setIsMenuOpen(props.isOpen);
   };
 
-  const addAttributes = function () {
+  const addAttributes = () => {
     // Add aria-attributes to react-burger-menu hamburger menu button
+    const menuBurgerButton = headerRef.current?.querySelector(
+      '#react-burger-menu-btn',
+    );
     menuBurgerButton?.setAttribute('aria-controls', 'mobile-menu-wrapper');
 
     if (isMenuOpenRef.current) {
@@ -58,28 +53,32 @@ const RedHeader = (props) => {
     }
   };
 
-  const setFocus = function () {
+  const setFocus = () => {
     if (isMenuOpenRef.current) {
-      // Set focus to close button on menu open
+      // Set focus to close button on menu open.
       const menuCloseButton = headerRef.current?.querySelector(
         '#react-burger-cross-btn',
       );
       menuCloseButton?.focus({ focusVisible: true });
     } else {
-      // Set focus back on burger button when menu closes
-      menuBurgerButton?.focus({ focusVisible: true });
+      // If menu not open, check if it has been open. isMenuOpen gets flipped to true only after interacting with the menu.
+      // This prevents this focus call from running on page load.
+      if (isMenuOpen) {
+        const menuBurgerButton = headerRef.current?.querySelector(
+          '#react-burger-menu-btn',
+        );
+        menuBurgerButton?.focus({ focusVisible: true });
+      }
     }
   };
 
   useEffect(() => {
     window.addEventListener('scrollend', handleScroll);
-    handleMenuOpen(props);
-    addAttributes(); // Update burger button attributes on inital render
-  }, [props]);
+  });
 
-  const handleStateChange = function (props) {
+  const handleStateChange = (props) => {
     handleMenuOpen(props);
-    addAttributes(); // Update burger button attributes on change
+    addAttributes();
     setFocus();
   };
 
