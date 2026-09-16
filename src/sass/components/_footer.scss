@@ -1,40 +1,41 @@
 .footer {
   @include small-text;
 
-  background-color: #FFF;
+  background-color: #fff;
 
   //=========== Mobile-first styles ============
-
 
   .inner {
     @include section-inner-padding;
     padding: 48px 0;
-    @media(min-width: $medium-large-screen) {
+    @media (min-width: $medium-large-screen) {
       padding: 96px 48px;
     }
   }
 
   .footer__bottom-links {
-
-    @media(min-width: $tablet-screen) {
+    @media (min-width: $tablet-screen) {
       display: grid;
       margin-bottom: -17px;
       margin-top: 15px;
     }
 
-    @media(min-width: $medium-large-screen) {
+    @media (min-width: $medium-large-screen) {
       margin-top: 0;
       margin-bottom: 0;
     }
     .footer__bottom-links--wrapper {
       display: flex;
       flex-direction: column;
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
     }
     .copyright {
       order: 1;
     }
 
-    p {
+    li {
       margin: 12px 0;
     }
   }
@@ -45,7 +46,7 @@
 
   .footer__menu--list {
     margin-bottom: 40px;
-    @media(min-width: $tablet-screen) {
+    @media (min-width: $tablet-screen) {
       margin-bottom: 0;
     }
   }
@@ -54,11 +55,10 @@
     // @todo Standardize ul and li styles sitewide
     ul {
       padding-left: 0;
-
+      list-style: none;
     }
 
     li {
-      list-style: none;
       padding: 1rem 0 0;
       min-width: 100px;
       li {
@@ -81,6 +81,8 @@
 
   .social-icon {
     display: flex;
+    list-style: none;
+    margin: 0;
   }
 
   //=========== Tablet styles ============
@@ -98,7 +100,6 @@
         padding-bottom: 0;
         display: flex;
         justify-content: flex-start;
-
       }
     }
     .footer__about-text {
@@ -114,7 +115,7 @@
         margin-top: 0;
 
         .child-menu--wrapper {
-          padding-top: .5rem;
+          padding-top: 0.5rem;
         }
       }
     }
@@ -137,7 +138,7 @@
           grid-row: 1;
         }
       }
-      p {
+      li {
         margin: 4px 0;
       }
     }
@@ -146,11 +147,11 @@
       grid-template-columns: 1fr 40%;
       grid-template-rows: auto;
       grid-template-areas:
-      "branding branding_wrapper"
-      "about about_wrapper"
-      "social about_wrapper"
-      "contact contact_wrapper"
-      "link link_wrapper";
+        'branding branding_wrapper'
+        'about about_wrapper'
+        'social about_wrapper'
+        'contact contact_wrapper'
+        'link link_wrapper';
     }
 
     .footer__menu {
@@ -205,7 +206,7 @@
       .footer__bottom-links--wrapper {
         display: flex;
         flex-direction: row;
-        p {
+        li {
           padding: 0 1rem;
         }
       }
@@ -213,18 +214,17 @@
     .grid-container {
       grid-template-columns: 35% 1.5fr repeat(3, 1fr);
       grid-template-areas:
-        "branding branding branding . ."
-        "about contact menu_wrapper menu_wrapper menu_wrapper"
-        ". . . . . "
-        ". . . social social"
-        ". links links links links"
+        'branding branding branding . .'
+        'about contact menu_wrapper menu_wrapper menu_wrapper'
+        '. . . . . '
+        '. . . social social'
+        '. links links links links';
     }
 
     .footer__branding--logo {
       max-width: 300px;
     }
     .footer__menu--wrapper {
-
       .footer__menu--list {
         margin-top: 0;
 
@@ -239,7 +239,6 @@
 
       .copyright {
         order: unset;
-
       }
     }
     .footer__menu {
@@ -266,20 +265,11 @@
           }
         }
       }
-
-
-      &--wrapper {
-        //margin-top: px-to-rem(56px);
-      }
     }
 
-
     .footer__about-text {
-      //margin-top: 33px; // Set to 40px isntead of 56px bc the nested paragraph has a top margin of 1rem=16px.
-
       p {
         margin: px-to-rem(24px) 0;
-
       }
     }
 
@@ -323,13 +313,10 @@
               display: none;
             }
           }
-
         }
-
       }
     }
   }
-
 }
 
 .grid-container {
@@ -338,10 +325,10 @@
   }
 }
 .footer__social {
-  @media(min-width: $tablet-screen) {
+  @media (min-width: $tablet-screen) {
     margin-bottom: -20px;
   }
-  @media(min-width: $medium-large-screen) {
+  @media (min-width: $medium-large-screen) {
     margin-bottom: 5px;
   }
 }
