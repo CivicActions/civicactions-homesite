@@ -14,7 +14,7 @@ const Footer = () => {
             <img
               className='footer__branding--logo'
               src={extendedLogo}
-              alt='Civic Actions Logo'></img>
+              alt='Civic Actions home page'></img>
           </Link>
         </div>
 
