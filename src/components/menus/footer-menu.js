@@ -3,8 +3,7 @@ import { Link } from 'gatsby';
 
 const FooterMenu = () => (
   <>
-    <h2 className="visually-hidden" id="footer--menu">
-      CivicActions footer menu</h2>
+    <h2 id="footer--menu" className="visually-hidden">footer</h2>
     <nav aria-labelledby="footer--menu" className="footer__menu">
       <ul className="footer__menu--list">
         {/*<li><Link to='/about'>About</Link></li>*/}
