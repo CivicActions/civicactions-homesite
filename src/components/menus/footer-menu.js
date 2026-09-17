@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby';
 
-const FooterMenu = () => (
+const FooterMenu = () => ( 
   <>
     <h2 id="footer--menu" className="visually-hidden">footer</h2>
     <nav aria-labelledby="footer--menu" className="footer__menu">

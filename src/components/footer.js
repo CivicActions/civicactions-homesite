@@ -1,4 +1,4 @@
-import '../sass/styles.scss';
+import '../sass/styles.scss'; 
 import React from 'react';
 import { Link } from 'gatsby';
 import SocialIcons from './social-icons/social-icons';

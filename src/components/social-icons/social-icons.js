@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import SocialIcon from './social-icon';
 import { socialMediaData } from '../../data';
 

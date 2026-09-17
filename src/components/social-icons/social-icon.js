@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 
 const SocialIcon = ({ link, icon, iconHover, alt, platform }) => (
   <li>
