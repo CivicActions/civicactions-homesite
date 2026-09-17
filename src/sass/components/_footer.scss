@@ -4,7 +4,6 @@
   background-color: #fff;
 
   //=========== Mobile-first styles ============
-
   .inner {
     @include section-inner-padding;
     padding: 48px 0;
@@ -15,7 +14,6 @@
 
   .footer__bottom-links {
     @media (min-width: $tablet-screen) {
-      display: grid;
       margin-bottom: -17px;
       margin-top: 15px;
     }
@@ -24,19 +22,17 @@
       margin-top: 0;
       margin-bottom: 0;
     }
-    .footer__bottom-links--wrapper {
-      display: flex;
-      flex-direction: column;
+    &--wrapper {
       list-style: none;
       padding-left: 0;
       margin: 0;
     }
-    .copyright {
-      order: 1;
-    }
 
     li {
-      margin: 12px 0;
+      margin: 1rem 0 0;
+      a {
+        padding: 0.5rem 0;
+      }
     }
   }
 
@@ -55,20 +51,22 @@
     // @todo Standardize ul and li styles sitewide
     ul {
       padding-left: 0;
+      margin-top: 2em;
       list-style: none;
     }
 
     li {
-      padding: 1rem 0 0;
-      min-width: 100px;
-      li {
-        padding-top: 1.5rem;
+      margin: 1rem 0 0;
+
+      a {
+        padding: 0.5rem 0;
       }
     }
 
     .child-menu--wrapper {
       padding: 0;
       break-inside: avoid;
+      border: 4px dashed lime;
     }
   }
 
@@ -86,14 +84,13 @@
   }
 
   //=========== Tablet styles ============
-
   @media (min-width: $tablet-screen) {
-    // Name the footer areas.
+    // Name the footer grid areas.
     .footer__branding {
       grid-area: branding;
     }
     .footer__social {
-      grid-area: contact;
+      grid-area: social;
       align-self: end;
 
       .social-icon {
@@ -104,42 +101,36 @@
     }
     .footer__about-text {
       grid-area: about;
+      p:first-child {
+        margin-top: 0;
+      }
     }
     .footer__contact {
-      grid-area: social;
+      grid-area: contact;
     }
     .footer__menu--wrapper {
-      grid-area: about_wrapper;
+      grid-area: menu;
 
       .footer__menu--list {
         margin-top: 0;
 
-        .child-menu--wrapper {
-          padding-top: 0.5rem;
+        li:first-child {
+          margin-top: 0;
         }
       }
     }
     .footer__bottom-links {
-      grid-area: contact_wrapper;
+      grid-area: links;
 
-      .footer__bottom-links--wrapper {
-        display: inline-grid;
-        .accessibility,
-        .privacy,
-        .licensing {
-          grid-column: 1;
-        }
-        .copyright {
-          grid-column: 2;
-          grid-row: 2;
-        }
-        .feedback {
-          grid-column: 2;
-          grid-row: 1;
-        }
+      &--wrapper {
+        columns: 2;
+        column-gap: 5rem;
       }
       li {
-        margin: 4px 0;
+        margin-top: 0.25rem;
+        &:first-child {
+          margin-top: 0;
+        }
       }
     }
 
@@ -147,21 +138,15 @@
       grid-template-columns: 1fr 40%;
       grid-template-rows: auto;
       grid-template-areas:
-        'branding branding_wrapper'
-        'about about_wrapper'
-        'social about_wrapper'
-        'contact contact_wrapper'
-        'link link_wrapper';
+        'branding branding'
+        'about menu'
+        'contact menu'
+        'social links';
     }
 
     .footer__menu {
       columns: 2;
-
-      .footer__menu--list {
-        columns: 2;
-        column-gap: 5rem;
-        display: inline-block;
-      }
+      column-gap: 5rem;
     }
   }
   @media (min-width: $medium-large-screen) {
@@ -170,101 +155,22 @@
     }
   }
   //=========== Desktop Styles ===========
-
   @media (min-width: $large-screen) {
+    .grid-container {
+      grid-template-columns: auto 1fr 2fr;
+      column-gap: 6rem;
+      grid-template-areas:
+        'branding branding branding'
+        'about contact menu'
+        '. social social'
+        '. links links';
+    }
+
     .footer__branding {
-      grid-area: branding;
       margin-bottom: px-to-rem(66px);
     }
-    .footer__social {
-      grid-area: social;
-      margin-top: 1rem;
-    }
-    .footer__about-text {
-      grid-area: about;
-    }
-    .footer__contact {
-      grid-area: contact;
-      .footer__contact-text {
-        padding-top: 8px;
-      }
-    }
-    .footer__menu--wrapper {
-      grid-area: menu_wrapper;
-      margin-top: 0;
-
-      a {
-        font-size: 20px;
-        line-height: 33.6px;
-      }
-    }
-    .footer__bottom-links {
-      grid-area: links;
-      align-self: center;
-      margin-bottom: 6px;
-      margin-top: px-to-rem(27px);
-      .footer__bottom-links--wrapper {
-        display: flex;
-        flex-direction: row;
-        li {
-          padding: 0 1rem;
-        }
-      }
-    }
-    .grid-container {
-      grid-template-columns: 35% 1.5fr repeat(3, 1fr);
-      grid-template-areas:
-        'branding branding branding . .'
-        'about contact menu_wrapper menu_wrapper menu_wrapper'
-        '. . . . . '
-        '. . . social social'
-        '. links links links links';
-    }
-
     .footer__branding--logo {
       max-width: 300px;
-    }
-    .footer__menu--wrapper {
-      .footer__menu--list {
-        margin-top: 0;
-
-        .child-menu--wrapper {
-          padding-top: 0;
-        }
-      }
-    }
-    .footer__bottom-links {
-      padding-top: 16px;
-      display: flex;
-
-      .copyright {
-        order: unset;
-      }
-    }
-    .footer__menu {
-      columns: 1;
-      float: right;
-      margin-right: -2rem;
-      &--list {
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-
-        .top-link {
-          padding: 0;
-        }
-      }
-      .footer__menu--list {
-        columns: 3;
-        column-gap: 4rem;
-        li:first-child,
-        li:nth-child(2),
-        li:nth-child(3) {
-          a {
-            padding-left: 2rem;
-          }
-        }
-      }
     }
 
     .footer__about-text {
@@ -272,19 +178,54 @@
         margin: px-to-rem(24px) 0;
       }
     }
+    .footer__contact {
+      p:first-child {
+        margin-top: 0;
+      }
+    }
+    .footer__menu--wrapper {
+      margin-top: 0;
+
+      a {
+        font-size: 20px;
+        line-height: 33.6px;
+      }
+    }
+
+    .footer__bottom-links--wrapper {
+      columns: unset;
+      text-align: right;
+    }
 
     .footer__bottom-links {
-      gap: px-to-rem(32px);
-      flex-direction: row;
-      justify-content: flex-end;
-      padding-top: 0;
+      padding-top: 16px;
+      margin-bottom: 6px;
 
-      p {
+      li {
+        display: inline-block;
+        margin-top: 0;
+
+        a {
+          padding: 0.5rem 1rem;
+        }
+        &:last-child a {
+          padding-right: 0;
+        }
+      }
+    }
+
+    .footer__menu {
+      columns: 3;
+      column-gap: 4rem;
+
+      &--list {
         margin: 0;
       }
     }
 
     .footer__social {
+      margin-top: 1rem;
+
       .social-icon {
         text-align: right;
         padding: 0;

@@ -59,7 +59,6 @@ const Footer = () => {
         </div>
         <div className='grid-container__item footer__bottom-links'>
           <ul className='footer__bottom-links--wrapper'>
-            <li className='copyright'>&copy; {new Date().getFullYear()}</li>
             <li className='accessibility'>
               <Link to='/accessibility-statement'>Accessibility</Link>
             </li>
@@ -75,6 +74,7 @@ const Footer = () => {
             <li className='feedback'>
               <Link to='/feedback'>Feedback</Link>
             </li>
+            <li className='copyright'>&copy; {new Date().getFullYear()}</li>
           </ul>
         </div>
       </div>
