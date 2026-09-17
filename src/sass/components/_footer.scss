@@ -62,12 +62,6 @@
         padding: 0.5rem 0;
       }
     }
-
-    .child-menu--wrapper {
-      padding: 0;
-      break-inside: avoid;
-      border: 4px dashed lime;
-    }
   }
 
   .footer__about-text {
@@ -81,6 +75,30 @@
     display: flex;
     list-style: none;
     margin: 0;
+
+    .blue-icon {
+      display: none;
+    }
+
+    .blue-icon,
+    .black-icon {
+      width: 40px;
+      height: 41px;
+    }
+
+    a {
+      &:hover,
+      &:focus,
+      &:focus-within {
+        .blue-icon {
+          display: inline-block;
+        }
+
+        .black-icon {
+          display: none;
+        }
+      }
+    }
   }
 
   //=========== Tablet styles ============
@@ -89,14 +107,14 @@
     .footer__branding {
       grid-area: branding;
     }
+
     .footer__social {
       grid-area: social;
       align-self: end;
+      margin-bottom: -20px;
 
       .social-icon {
         padding-bottom: 0;
-        display: flex;
-        justify-content: flex-start;
       }
     }
     .footer__about-text {
@@ -116,7 +134,6 @@
     }
     .footer__menu--list {
       margin-top: 0;
-
       columns: 2;
       column-gap: 5rem;
 
@@ -151,6 +168,9 @@
     }
   }
   @media (min-width: $medium-large-screen) {
+    .footer__social {
+      margin-bottom: 5px;
+    }
     .footer__bottom-links {
       padding-top: 16px;
     }
@@ -232,30 +252,6 @@
         padding: 0;
         display: flex;
         justify-content: flex-end;
-
-        .blue-icon {
-          display: none;
-        }
-
-        .blue-icon,
-        .black-icon {
-          width: 40px;
-          height: 41px;
-        }
-
-        a {
-          &:hover,
-          &:focus,
-          &:focus-within {
-            .blue-icon {
-              display: inline-block;
-            }
-
-            .black-icon {
-              display: none;
-            }
-          }
-        }
       }
     }
   }
@@ -265,17 +261,4 @@
   @media (min-width: $tablet-screen) {
     display: grid;
   }
-}
-.footer__social {
-  @media (min-width: $tablet-screen) {
-    margin-bottom: -20px;
-  }
-  @media (min-width: $medium-large-screen) {
-    margin-bottom: 5px;
-  }
-}
-.parent-link {
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 0;
 }
